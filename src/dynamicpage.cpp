@@ -29,12 +29,12 @@
 #include <KLocalizedTranslator>
 #include <QCoreApplication>
 
-DynamicPage::DynamicPage(const QString &uiFile, KAssistantDialog *parent) : Page(parent),
-    m_dynamicWidget(Q_NULLPTR)
+DynamicPage::DynamicPage(const QString &uiFile, KAssistantDialog *parent)
+    : Page(parent),
+      m_dynamicWidget(Q_NULLPTR)
 {
-    QVBoxLayout *layout = new QVBoxLayout;
+    QVBoxLayout *layout = new QVBoxLayout(this);
     layout->setMargin(0);
-    setLayout(layout);
 
     QWidget *pageParent = this;
 
