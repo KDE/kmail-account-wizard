@@ -78,6 +78,7 @@ void Page::leavePageBackRequested()
 {
     Q_EMIT leavePageBackOk();
 }
+
 void Page::leavePageNextRequested()
 {
     Q_EMIT leavePageNextOk();
