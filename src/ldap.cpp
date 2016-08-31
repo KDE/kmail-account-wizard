@@ -80,12 +80,6 @@ void Ldap::create()
             }
         }
     }
-    if (!host.isEmpty()) {
-        // while we're here, write default domain
-        KConfig c(QStringLiteral("kmail2rc"));
-        KConfigGroup group = c.group("General");
-        group.writeEntry(QStringLiteral("Default domain"), host);
-    }
 
     basedn.replace(QLatin1Char('.'), QStringLiteral(",dc="));
 
