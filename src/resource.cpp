@@ -36,7 +36,8 @@ using namespace Akonadi;
 static QVariant::Type argumentType(const QMetaObject *mo, const QString &method)
 {
     QMetaMethod m;
-    for (int i = 0; i < mo->methodCount(); ++i) {
+    const int numberOfMethod(mo->methodCount());
+    for (int i = 0; i < numberOfMethod; ++i) {
         const QString signature = QLatin1String(mo->method(i).methodSignature());
         if (signature.contains(method + QLatin1Char('('))) {
             m = mo->method(i);
@@ -46,7 +47,8 @@ static QVariant::Type argumentType(const QMetaObject *mo, const QString &method)
 
     if (m.methodSignature().isEmpty()) {
         qCWarning(ACCOUNTWIZARD_LOG) << "Did not find D-Bus method: " << method << " available methods are:";
-        for (int i = 0; i < mo->methodCount(); ++i) {
+        const int numberOfMethod(mo->methodCount());
+        for (int i = 0; i < numberOfMethod; ++i) {
             qCWarning(ACCOUNTWIZARD_LOG) << mo->method(i).methodSignature();
         }
         return QVariant::Invalid;
