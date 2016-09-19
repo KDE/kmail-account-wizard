@@ -117,6 +117,6 @@ endif ()
 
 
 add_subdirectory(src)
-install( FILES accountwizard.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
+install( FILES accountwizard.renamecategories accountwizard.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

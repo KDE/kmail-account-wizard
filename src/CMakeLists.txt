@@ -34,7 +34,7 @@ ki18n_wrap_ui(accountwizard_srcs
     ui/personaldatapage.ui
     ui/cryptopage.ui
     )
-ecm_qt_declare_logging_category(accountwizard_srcs HEADER accountwizard_debug.h IDENTIFIER ACCOUNTWIZARD_LOG CATEGORY_NAME log_accountwizard)
+ecm_qt_declare_logging_category(accountwizard_srcs HEADER accountwizard_debug.h IDENTIFIER ACCOUNTWIZARD_LOG CATEGORY_NAME org.kde.pim.accountwizard)
 
 set(accountwizard_libs
     KF5::AkonadiCore
