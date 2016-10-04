@@ -40,6 +40,7 @@ SetupManager::SetupManager(QWidget *parent) :
     m_currentSetupObject(Q_NULLPTR),
     m_page(Q_NULLPTR),
     m_wallet(Q_NULLPTR),
+    m_keyProtocol(GpgME::UnknownProtocol),
     m_personalDataAvailable(false),
     m_rollbackRequested(false),
     m_pgpAutoSign(false),
@@ -87,8 +88,18 @@ QObject *SetupManager::createIdentity()
     identity->setRealName(m_name);
     identity->setPgpAutoSign(m_pgpAutoSign);
     identity->setPgpAutoEncrypt(m_pgpAutoEncrypt);
-    identity->setKey(m_key);
+    identity->setKey(m_keyProtocol, m_keyFingerprint);
     return connectObject(identity);
+}
+
+QList<SetupObject *> SetupManager::objectsToSetup() const
+{
+    return m_objectToSetup;
+}
+
+QList<SetupObject *> SetupManager::setupObjects() const
+{
+    return m_setupObjects;
 }
 
 static bool dependencyCompare(SetupObject *left, SetupObject *right)
@@ -235,9 +246,10 @@ void SetupManager::setPgpAutoSign(bool autosign)
     m_pgpAutoSign = autosign;
 }
 
-void SetupManager::setKey(const GpgME::Key &key)
+void SetupManager::setKey(GpgME::Protocol protocol, const QByteArray &fingerprint)
 {
-    m_key = key;
+    m_keyProtocol = protocol;
+    m_keyFingerprint = fingerprint;
 }
 
 void SetupManager::openWallet()

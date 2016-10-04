@@ -20,8 +20,6 @@
 #include "identity.h"
 #include "transport.h"
 
-#include <gpgme++/key.h>
-
 #include <kidentitymanagement/identitymanager.h>
 #include <kidentitymanagement/identity.h>
 
@@ -155,18 +153,18 @@ void Identity::setPgpAutoSign(bool autosign)
     m_identity->setPgpAutoSign(autosign);
 }
 
-void Identity::setKey(const GpgME::Key &key)
+void Identity::setKey(GpgME::Protocol protocol, const QByteArray &fingerprint)
 {
-    if (key.isNull()) {
+    if (fingerprint.isEmpty()) {
         m_identity->setPGPEncryptionKey(QByteArray());
         m_identity->setPGPSigningKey(QByteArray());
         m_identity->setSMIMEEncryptionKey(QByteArray());
         m_identity->setSMIMESigningKey(QByteArray());
-    } else if (key.protocol() == GpgME::OpenPGP) {
-        m_identity->setPGPSigningKey(key.primaryFingerprint());
-        m_identity->setPGPEncryptionKey(key.primaryFingerprint());
-    } else if (key.protocol() == GpgME::CMS) {
-        m_identity->setSMIMESigningKey(key.primaryFingerprint());
-        m_identity->setSMIMEEncryptionKey(key.primaryFingerprint());
+    } else if (protocol == GpgME::OpenPGP) {
+        m_identity->setPGPSigningKey(fingerprint);
+        m_identity->setPGPEncryptionKey(fingerprint);
+    } else if (protocol == GpgME::CMS) {
+        m_identity->setSMIMESigningKey(fingerprint);
+        m_identity->setSMIMEEncryptionKey(fingerprint);
     }
 }

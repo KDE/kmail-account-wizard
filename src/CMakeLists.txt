@@ -54,6 +54,7 @@ set(accountwizard_libs
     KF5::AkonadiWidgets
     KF5::Crash
     KF5::Libkleo
+    KF5::Notifications
     )
 
 if ( NOT ACCOUNTWIZARD_NO_GHNS )

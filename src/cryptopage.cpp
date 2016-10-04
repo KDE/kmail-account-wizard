@@ -19,6 +19,8 @@
 
 #include "cryptopage.h"
 #include "dialog.h"
+#include "identity.h"
+#include "accountwizard_debug.h"
 
 #include <Libkleo/DefaultKeyFilter>
 #include <Libkleo/Job>
@@ -33,64 +35,131 @@
 #include <gpgme++/importresult.h>
 
 #include <KMessageBox>
+#include <KNotifications/KNotification>
+#include <KNewPasswordDialog>
+
+#include <KIdentityManagement/IdentityManager>
+#include <KIdentityManagement/Identity>
 
 #include <QFileDialog>
+#include <QEventLoopLocker>
+#include <QPointer>
+#include <QTimer>
 
-class KeyGenerationJob : public Kleo::Job
+class DeleteLaterRAII
+{
+public:
+    DeleteLaterRAII(QObject *obj) : mObj(obj)
+    {}
+    ~DeleteLaterRAII()
+    {
+        if (mObj) mObj->deleteLater();
+    }
+private:
+    Q_DISABLE_COPY(DeleteLaterRAII)
+    QPointer<QObject> mObj;
+};
+
+class KeyGenerationJob : public QObject
 {
     Q_OBJECT
 
 public:
-    KeyGenerationJob(const QString &name, const QString &email, Kleo::KeySelectionCombo *parent)
-        : Kleo::Job(parent)
-        , mName(name)
-        , mEmail(email)
-        , mJob(Q_NULLPTR)
+    KeyGenerationJob(SetupManager *setupManager, const QString &passphrase)
+        : mSetupManager(setupManager)
+        , mEmail(setupManager->email())
     {
+        qCDebug(ACCOUNTWIZARD_LOG) << "Starting key generation";
+        auto job = new Kleo::DefaultKeyGenerationJob(this);
+        job->setPassphrase(passphrase);
+        connect(job, &Kleo::DefaultKeyGenerationJob::result,
+                this, [this](const GpgME::KeyGenerationResult &result) {
+                    QTimer::singleShot(60000, this, [this, result]() {
+                        keyGenerated(result);
+                    });
+                });
+        job->start(setupManager->name(), setupManager->email());
     }
 
     ~KeyGenerationJob()
     {
     }
 
-    void slotCancel() Q_DECL_OVERRIDE {
-        if (mJob)
-        {
-            mJob->slotCancel();
-        }
-    }
-
-    void start()
-    {
-        auto job = new Kleo::DefaultKeyGenerationJob(this);
-        connect(job, &Kleo::DefaultKeyGenerationJob::result,
-                this, &KeyGenerationJob::keyGenerated);
-        job->start(mEmail, mName);
-        mJob = job;
-    }
-
+private Q_SLOTS:
     void keyGenerated(const GpgME::KeyGenerationResult &result)
     {
-        mJob = Q_NULLPTR;
+        DeleteLaterRAII deleter(this);
+
         if (result.error()) {
-            KMessageBox::error(qobject_cast<QWidget *>(parent()),
-                               i18n("Error while generating new key pair: %1", QString::fromUtf8(result.error().asString())),
-                               i18n("Key Generation Error"));
-            Q_EMIT done();
+            qCWarning(ACCOUNTWIZARD_LOG) << "Key generation finished with error:" << result.error().asString();
+            KNotification::event(KNotification::Error,
+                                 i18n("Account Wizard"),
+                                 i18n("Error while generating new key pair for your account %1: %2",
+                                      mEmail, QString::fromUtf8(result.error().asString())),
+                                 QStringLiteral("akonadi"));
             return;
         }
 
-        auto combo = qobject_cast<Kleo::KeySelectionCombo *>(parent());
-        combo->setDefaultKey(QLatin1String(result.fingerprint()));
-        connect(combo, &Kleo::KeySelectionCombo::keyListingFinished,
-                this, &KeyGenerationJob::done);
-        combo->refreshKeys();
+        qCDebug(ACCOUNTWIZARD_LOG) << "Finished generating key" << result.fingerprint();
+
+        // SetupManager no longer exists -> all is set up, so we need to modify
+        // the Identity ourselves
+        if (!mSetupManager) {
+            qDebug(ACCOUNTWIZARD_LOG) << "SetupManager no longer exists!";
+            updateIdentity(mEmail, result.fingerprint());
+            return;
+        }
+
+        // SetupManager still lives, see if Identity has already been set up.
+        // If not then pass it the new key and let it to set up everything
+        const auto objectsToSetup = mSetupManager->objectsToSetup();
+        for (auto object : objectsToSetup) {
+            if (Identity *identity = qobject_cast<Identity*>(object)) {
+                qCDebug(ACCOUNTWIZARD_LOG) << "Identity not set up yet, less work for us";
+                identity->setKey(GpgME::OpenPGP, result.fingerprint());
+                return;
+            }
+        }
+
+        // SetupManager still lives, but Identity either was not even created yet
+        // or has already been set up
+        const auto setupObjects = mSetupManager->setupObjects();
+        for (auto object : setupObjects) {
+            if (qobject_cast<Identity*>(object)) {
+                qCDebug(ACCOUNTWIZARD_LOG) << "Identity already set up, will modify existing Identity";
+                updateIdentity(mEmail, result.fingerprint());
+                return;
+            }
+        }
+
+        // SetupManager still lives, but Identity is not pending nor finished,
+        // which means it was not even prepared yet in SetupManager.
+        qCDebug(ACCOUNTWIZARD_LOG) << "Identity not ready yet, passing the key to SetupManager";
+        mSetupManager->setKey(GpgME::OpenPGP, result.fingerprint());
+    }
+
+    void updateIdentity(const QString &email, const QByteArray &fingerprint)
+    {
+        auto manager = KIdentityManagement::IdentityManager::self();
+        for (auto it = manager->modifyBegin(), end = manager->modifyEnd(); it != end; ++it) {
+            if (it->primaryEmailAddress() == email) {
+                qCDebug(ACCOUNTWIZARD_LOG) << "Found matching identity for" << email <<":" << it->uoid();
+                it->setPGPSigningKey(fingerprint);
+                it->setPGPEncryptionKey(fingerprint);
+                manager->commit();
+                return;
+            }
+        }
+
+        qCWarning(ACCOUNTWIZARD_LOG) << "What? Could not find a matching identity for" << email << "!";
     }
 
 private:
-    QString mName;
+    // This job may outlive the application, make sure QApplication won't
+    // quit before we are done
+    QEventLoopLocker mLocker;
+    QPointer<SetupManager> mSetupManager;
     QString mEmail;
-    Kleo::Job *mJob;
 };
 
 class KeyImportJob : public Kleo::Job
@@ -176,7 +245,7 @@ public:
         auto combo = qobject_cast<Kleo::KeySelectionCombo *>(parent());
         combo->setDefaultKey(QLatin1String(result.import(0).fingerprint()));
         connect(combo, &Kleo::KeySelectionCombo::keyListingFinished,
-                this, &KeyGenerationJob::done);
+                this, &KeyImportJob::done);
         combo->refreshKeys();
     }
 
@@ -220,7 +289,8 @@ void CryptoPage::enterPageNext()
 
 void CryptoPage::leavePageNext()
 {
-    mSetupManager->setKey(ui.keyCombo->currentKey());
+    const auto key = ui.keyCombo->currentKey();
+    mSetupManager->setKey(key.protocol(), key.primaryFingerprint());
 }
 
 void CryptoPage::customItemSelected(const QVariant &data)
@@ -240,28 +310,14 @@ void CryptoPage::customItemSelected(const QVariant &data)
     }
 }
 
-namespace
-{
-
-template<typename T, typename ... Args>
-void runJob(Kleo::KeySelectionCombo *combo, const QString &title, const Args   &... args)
-{
-    auto job = new T(args ..., combo);
-    new Kleo::ProgressDialog(job, title, combo->parentWidget());
-    combo->setEnabled(false);
-    QObject::connect(job, &KeyGenerationJob::done,
-    combo, [combo]() {
-        combo->setEnabled(true);
-    });
-    job->start();
-}
-
-}
-
 void CryptoPage::generateKeyPair()
 {
-    runJob<KeyGenerationJob>(ui.keyCombo, i18n("Generating new key pair..."),
-                             mSetupManager->name(), mSetupManager->email());
+    QScopedPointer<KNewPasswordDialog> dlg(new KNewPasswordDialog);
+    dlg->setAllowEmptyPasswords(true);
+    if (dlg->exec()) {
+        new KeyGenerationJob(mSetupManager, dlg->password());
+        nextPage();
+    }
 }
 
 void CryptoPage::importKey()
@@ -276,7 +332,14 @@ void CryptoPage::importKey()
         return;
     }
 
-    runJob<KeyImportJob>(ui.keyCombo, i18n("Importing key..."), file);
+    auto job = new KeyImportJob(file, ui.keyCombo);
+    new Kleo::ProgressDialog(job, i18n("Importing key..."), ui.keyCombo->parentWidget());
+    ui.keyCombo->setEnabled(false);
+    QObject::connect(job, &KeyImportJob::done,
+                     ui.keyCombo, [this]() {
+                        ui.keyCombo->setEnabled(true);
+                     });
+    job->start();
 }
 
 #include "cryptopage.moc"

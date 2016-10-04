@@ -44,6 +44,7 @@
 #include <KHelpMenu>
 
 #include <gpgme++/engineinfo.h>
+#include <gpgme++/error.h>
 
 Dialog::Dialog(QWidget *parent)
     : KAssistantDialog(parent)
