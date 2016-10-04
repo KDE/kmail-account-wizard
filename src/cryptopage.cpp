@@ -44,7 +44,6 @@
 #include <QFileDialog>
 #include <QEventLoopLocker>
 #include <QPointer>
-#include <QTimer>
 
 class DeleteLaterRAII
 {
@@ -73,11 +72,7 @@ public:
         auto job = new Kleo::DefaultKeyGenerationJob(this);
         job->setPassphrase(passphrase);
         connect(job, &Kleo::DefaultKeyGenerationJob::result,
-                this, [this](const GpgME::KeyGenerationResult &result) {
-                    QTimer::singleShot(60000, this, [this, result]() {
-                        keyGenerated(result);
-                    });
-                });
+                this, &KeyGenerationJob::keyGenerated);
         job->start(setupManager->name(), setupManager->email());
     }
 
