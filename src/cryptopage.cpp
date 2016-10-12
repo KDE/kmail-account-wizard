@@ -23,12 +23,12 @@
 #include "accountwizard_debug.h"
 
 #include <Libkleo/DefaultKeyFilter>
-#include <Libkleo/Job>
-#include <Libkleo/ImportJob>
-#include <Libkleo/CryptoBackendFactory>
 #include <Libkleo/DefaultKeyGenerationJob>
 #include <Libkleo/ProgressDialog>
 #include <Libkleo/Classify>
+#include <QGpgME/Job>
+#include <QGpgME/ImportJob>
+#include <QGpgME/Protocol>
 
 #include <gpgme++/context.h>
 #include <gpgme++/keygenerationresult.h>
@@ -157,12 +157,12 @@ private:
     QString mEmail;
 };
 
-class KeyImportJob : public Kleo::Job
+class KeyImportJob : public QGpgME::Job
 {
     Q_OBJECT
 public:
     KeyImportJob(const QString &file, Kleo::KeySelectionCombo *parent)
-        : Kleo::Job(parent)
+        : QGpgME::Job(parent)
         , mFile(file)
         , mJob(Q_NULLPTR)
     {
@@ -181,13 +181,13 @@ public:
 
     void start()
     {
-        Kleo::ImportJob *job = Q_NULLPTR;
+        QGpgME::ImportJob *job = Q_NULLPTR;
         switch (Kleo::findProtocol(mFile)) {
         case GpgME::OpenPGP:
-            job = Kleo::CryptoBackendFactory::instance()->openpgp()->importJob();
+            job = QGpgME::openpgp()->importJob();
             break;
         case GpgME::CMS:
-            job = Kleo::CryptoBackendFactory::instance()->smime()->importJob();
+            job = QGpgME::smime()->importJob();
             break;
         default:
             job = Q_NULLPTR;
@@ -211,7 +211,7 @@ public:
             return;
         }
 
-        connect(job, &Kleo::ImportJob::result,
+        connect(job, &QGpgME::ImportJob::result,
                 this, &KeyImportJob::keyImported);
         job->start(keyFile.readAll());
         mJob = job;
@@ -246,7 +246,7 @@ public:
 
 private:
     QString mFile;
-    Kleo::Job *mJob;
+    QGpgME::Job *mJob;
 };
 
 CryptoPage::CryptoPage(Dialog *parent)
@@ -258,7 +258,7 @@ CryptoPage::CryptoPage(Dialog *parent)
     ui.publishCheckbox->setChecked(false);
     ui.publishCheckbox->setEnabled(false);
 
-    boost::shared_ptr<Kleo::DefaultKeyFilter> filter(new Kleo::DefaultKeyFilter);
+    std::shared_ptr<Kleo::DefaultKeyFilter> filter(new Kleo::DefaultKeyFilter);
     filter->setCanSign(Kleo::DefaultKeyFilter::Set);
     filter->setCanEncrypt(Kleo::DefaultKeyFilter::Set);
     filter->setHasSecret(Kleo::DefaultKeyFilter::Set);

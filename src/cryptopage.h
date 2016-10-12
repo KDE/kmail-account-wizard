@@ -26,7 +26,7 @@
 class Dialog;
 class SetupManager;
 
-namespace Kleo
+namespace QGpgME
 {
 class Job;
 }
