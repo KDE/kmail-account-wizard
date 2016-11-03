@@ -6,6 +6,7 @@ set(accountwizard_srcs
     loadpage.cpp
     global.cpp
     page.cpp
+    key.cpp
     dynamicpage.cpp
     setupmanager.cpp
     setuppage.cpp

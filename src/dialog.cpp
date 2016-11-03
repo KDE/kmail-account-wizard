@@ -49,6 +49,7 @@
 Dialog::Dialog(QWidget *parent)
     : KAssistantDialog(parent)
 {
+    resize(480, 600);
     mSetupManager = new SetupManager(this);
     const bool showPersonalDataPage = Global::typeFilter().size() == 1 && Global::typeFilter().at(0) == KMime::Message::mimeType();
 

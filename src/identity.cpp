@@ -28,14 +28,12 @@
 Identity::Identity(QObject *parent)
     : SetupObject(parent)
 {
-    m_manager = new KIdentityManagement::IdentityManager(false, this, "mIdentityManager");
-    m_identity = &m_manager->newFromScratch(QString());
+     m_identity = &KIdentityManagement::IdentityManager::self()->newFromScratch(QString());
     Q_ASSERT(m_identity != 0);
 }
 
 Identity::~Identity()
 {
-    delete m_manager;
 }
 
 void Identity::create()
@@ -45,8 +43,9 @@ void Identity::create()
     // store identity information
     m_identity->setIdentityName(identityName());
 
-    m_manager->setAsDefault(m_identity->uoid());
-    m_manager->commit();
+    auto manager = KIdentityManagement::IdentityManager::self();
+    manager->setAsDefault(m_identity->uoid());
+    manager->commit();
 
     Q_EMIT finished(i18n("Identity set up."));
 }
@@ -73,16 +72,18 @@ QString Identity::identityName() const
         name[ 0 ] = name[ 0 ].toUpper();
     }
 
-    if (!m_manager->isUnique(name)) {
-        name = m_manager->makeUnique(name);
+    auto manager = KIdentityManagement::IdentityManager::self();
+    if (!manager->isUnique(name)) {
+        name = manager->makeUnique(name);
     }
     return name;
 }
 
 void Identity::destroy()
 {
-    m_manager->removeIdentityForced(m_identity->identityName());
-    m_manager->commit();
+    auto manager = KIdentityManagement::IdentityManager::self();
+    manager->removeIdentityForced(m_identity->identityName());
+    manager->commit();
     m_identity = 0;
     Q_EMIT info(i18n("Identity removed."));
 }

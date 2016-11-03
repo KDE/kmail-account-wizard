@@ -22,6 +22,7 @@
 
 #include "page.h"
 #include "ui_cryptopage.h"
+#include "key.h"
 
 class Dialog;
 class SetupManager;
@@ -43,16 +44,24 @@ public:
 
 private Q_SLOTS:
     void customItemSelected(const QVariant &data);
+    void keySelected(const GpgME::Key &key);
 
 private:
+    enum PublishingOptionPage {
+        CheckingkWKSPage,
+        WKSPage,
+        PKSPage
+    };
+
     enum Action {
         NoKey = 1,
         GenerateKey,
         ImportKey
     };
 
-    void generateKeyPair();
+    void setPublishingEnabled(bool enabled);
     void importKey();
+    Key::PublishingMethod currentPublishingMethod() const;
 
     Ui::CryptoPage ui;
     SetupManager *mSetupManager;

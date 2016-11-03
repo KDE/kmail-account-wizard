@@ -81,6 +81,9 @@ int main(int argc, char **argv)
 
     Dialog dlg(0);
     dlg.show();
+    // Unregister once the UI is closed, even if the app will continue running
+    // and generating keys in the background.
+    QObject::connect(&dlg, &Dialog::accepted, &service, &KDBusService::unregister);
 
     return app.exec();
 }

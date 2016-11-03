@@ -22,7 +22,8 @@
 
 #include <QObject>
 
-#include <gpgme++/global.h>
+#include "key.h"
+#include <gpgme++/key.h>
 
 namespace KWallet
 {
@@ -46,7 +47,8 @@ public:
     void setPersonalDataAvailable(bool available);
     void setPgpAutoSign(bool autosign);
     void setPgpAutoEncrypt(bool autoencrypt);
-    void setKey(GpgME::Protocol protocol, const QByteArray &fingerprint);
+    void setKey(const GpgME::Key &key);
+    void setKeyPublishingMethod(Key::PublishingMethod method);
 
     QList<SetupObject *> objectsToSetup() const;
     QList<SetupObject *> setupObjects() const;
@@ -64,6 +66,7 @@ public Q_SLOTS:
     Q_SCRIPTABLE QObject *createConfigFile(const QString &configName);
     Q_SCRIPTABLE QObject *createLdap();
     Q_SCRIPTABLE QObject *createIdentity();
+    Q_SCRIPTABLE QObject *createKey();
     Q_SCRIPTABLE void execute();
     Q_SCRIPTABLE void setupInfo(const QString &msg);
     Q_SCRIPTABLE QObject *ispDB(const QString &type);
@@ -72,6 +75,7 @@ public Q_SLOTS:
 
 Q_SIGNALS:
     void rollbackComplete();
+    void setupFinished(SetupObject *obj);
 
 private:
     void setupNext();
@@ -84,13 +88,13 @@ private Q_SLOTS:
 
 private:
     QString m_name, m_email, m_password;
-    QByteArray m_keyFingerprint;
     QList<SetupObject *> m_objectToSetup;
     QList<SetupObject *> m_setupObjects;
     SetupObject *m_currentSetupObject;
     SetupPage *m_page;
     KWallet::Wallet *m_wallet;
-    GpgME::Protocol m_keyProtocol;
+    GpgME::Key m_key;
+    Key::PublishingMethod m_keyPublishingMethod;
     bool m_personalDataAvailable;
     bool m_rollbackRequested;
     bool m_pgpAutoSign;

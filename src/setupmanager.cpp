@@ -28,6 +28,7 @@
 #include "setupautoconfigkolabmail.h"
 #include "setupautoconfigkolabldap.h"
 #include "setupautoconfigkolabfreebusy.h"
+#include "key.h"
 
 #include <kemailsettings.h>
 #include <kwallet.h>
@@ -40,7 +41,7 @@ SetupManager::SetupManager(QWidget *parent) :
     m_currentSetupObject(Q_NULLPTR),
     m_page(Q_NULLPTR),
     m_wallet(Q_NULLPTR),
-    m_keyProtocol(GpgME::UnknownProtocol),
+    m_keyPublishingMethod(Key::NoPublishing),
     m_personalDataAvailable(false),
     m_rollbackRequested(false),
     m_pgpAutoSign(false),
@@ -88,8 +89,17 @@ QObject *SetupManager::createIdentity()
     identity->setRealName(m_name);
     identity->setPgpAutoSign(m_pgpAutoSign);
     identity->setPgpAutoEncrypt(m_pgpAutoEncrypt);
-    identity->setKey(m_keyProtocol, m_keyFingerprint);
+    identity->setKey(m_key.protocol(), m_key.primaryFingerprint());
     return connectObject(identity);
+}
+
+QObject *SetupManager::createKey()
+{
+    Key *key = new Key(this);
+    key->setKey(m_key);
+    key->setMailBox(m_email);
+    key->setPublishingMethod(m_keyPublishingMethod);
+    return connectObject(key);
 }
 
 QList<SetupObject *> SetupManager::objectsToSetup() const
@@ -112,6 +122,15 @@ static bool dependencyCompare(SetupObject *left, SetupObject *right)
 
 void SetupManager::execute()
 {
+    if (m_keyPublishingMethod != Key::NoPublishing) {
+        auto key = qobject_cast<Key*>(createKey());
+        auto it = std::find_if(m_setupObjects.cbegin(), m_setupObjects.cend(),
+                               [](SetupObject *obj) -> bool { return qobject_cast<Transport*>(obj); });
+        if (it != m_setupObjects.cend()) {
+            key->setDependsOn(*it);
+        }
+    }
+
     m_page->setStatus(i18n("Setting up account..."));
     m_page->setValid(false);
     m_page->assistantDialog()->backButton()->setEnabled(false);
@@ -127,6 +146,7 @@ void SetupManager::setupSucceeded(const QString &msg)
     Q_ASSERT(m_page);
     m_page->addMessage(SetupPage::Success, msg);
     if (m_currentSetupObject) {
+        Q_EMIT setupFinished(m_currentSetupObject);
         m_setupObjects.append(m_currentSetupObject);
         m_currentSetupObject = 0;
     }
@@ -246,10 +266,14 @@ void SetupManager::setPgpAutoSign(bool autosign)
     m_pgpAutoSign = autosign;
 }
 
-void SetupManager::setKey(GpgME::Protocol protocol, const QByteArray &fingerprint)
+void SetupManager::setKey(const GpgME::Key &key)
 {
-    m_keyProtocol = protocol;
-    m_keyFingerprint = fingerprint;
+    m_key = key;
+}
+
+void SetupManager::setKeyPublishingMethod(Key::PublishingMethod method)
+{
+    m_keyPublishingMethod = method;
 }
 
 void SetupManager::openWallet()

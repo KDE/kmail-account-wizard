@@ -60,7 +60,6 @@ protected:
 
 private:
     QString m_identityName;
-    KIdentityManagement::IdentityManager *m_manager;
     KIdentityManagement::Identity *m_identity;
 };
 
