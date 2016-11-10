@@ -28,7 +28,7 @@
 Identity::Identity(QObject *parent)
     : SetupObject(parent)
 {
-     m_identity = &KIdentityManagement::IdentityManager::self()->newFromScratch(QString());
+    m_identity = &KIdentityManagement::IdentityManager::self()->newFromScratch(QString());
     Q_ASSERT(m_identity != 0);
 }
 

@@ -47,8 +47,7 @@
 
 #include "accountwizard_debug.h"
 
-
-Key::Key(QObject* parent)
+Key::Key(QObject *parent)
     : SetupObject(parent)
     , m_transportId(0)
     , m_publishingMethod(NoPublishing)
@@ -79,14 +78,13 @@ void Key::setPublishingMethod(PublishingMethod method)
     m_publishingMethod = method;
 }
 
-
 void Key::create()
 {
     switch (m_publishingMethod) {
     case NoPublishing:
         QTimer::singleShot(0, this, [this]() {
-                            Q_EMIT finished(i18n("Skipping key publishing"));
-                           });
+            Q_EMIT finished(i18n("Skipping key publishing"));
+        });
         break;
     case WKS:
         publishWKS();
@@ -155,13 +153,13 @@ void Key::onWKSPublishingRequestCreated(const GpgME::Error &error,
         return;
     }
 
-    if (m_transportId == 0 && qobject_cast<SetupManager*>(parent())) {
-        const auto setupManager = qobject_cast<SetupManager*>(parent());
+    if (m_transportId == 0 && qobject_cast<SetupManager *>(parent())) {
+        const auto setupManager = qobject_cast<SetupManager *>(parent());
         const auto setupObjects = setupManager->setupObjects();
         auto it = std::find_if(setupObjects.cbegin(), setupObjects.cend(),
-                            [](SetupObject *obj) -> bool { return qobject_cast<Transport*>(obj);} );
+                               [](SetupObject * obj) -> bool { return qobject_cast<Transport *>(obj);});
         if (it != setupObjects.cend()) {
-            m_transportId = qobject_cast<Transport*>(*it)->transportId();
+            m_transportId = qobject_cast<Transport *>(*it)->transportId();
         }
     } else if (m_transportId) {
         auto ident = KIdentityManagement::IdentityManager::self()->identityForAddress(m_mailbox);
@@ -245,14 +243,15 @@ void Key::publishPKS()
     connect(gpgProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
             this, &Key::onPKSPublishingFinished);
     mJob = gpgProcess;
-    gpgProcess->start(QString::fromLatin1(gpgName),
-                      { QStringLiteral("--keyserver"), keyServer,
-                        QStringLiteral("--send-keys"), QString::fromLatin1(m_key.primaryFingerprint()) });
+    gpgProcess->start(QString::fromLatin1(gpgName), {
+        QStringLiteral("--keyserver"), keyServer,
+        QStringLiteral("--send-keys"), QString::fromLatin1(m_key.primaryFingerprint())
+    });
 }
 
 void Key::onPKSPublishingFinished(int code, QProcess::ExitStatus status)
 {
-    auto process = qobject_cast<QProcess*>(mJob);
+    auto process = qobject_cast<QProcess *>(mJob);
     mJob = Q_NULLPTR;
     process->deleteLater();
 
@@ -267,15 +266,14 @@ void Key::onPKSPublishingFinished(int code, QProcess::ExitStatus status)
     Q_EMIT finished(i18n("Key has been published on %1", keyServer));
 }
 
-
 void Key::destroy()
 {
     // This is all we can do, there's no unpublish...
-    if (auto job = qobject_cast<QGpgME::Job*>(mJob)) {
+    if (auto job = qobject_cast<QGpgME::Job *>(mJob)) {
         job->slotCancel();
-    } else if (auto job = qobject_cast<KJob*>(mJob)) {
+    } else if (auto job = qobject_cast<KJob *>(mJob)) {
         job->kill();
-    } else if (auto job = qobject_cast<QProcess*>(mJob)) {
+    } else if (auto job = qobject_cast<QProcess *>(mJob)) {
         job->kill();
     }
 }

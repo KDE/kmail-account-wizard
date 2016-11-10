@@ -123,9 +123,9 @@ static bool dependencyCompare(SetupObject *left, SetupObject *right)
 void SetupManager::execute()
 {
     if (m_keyPublishingMethod != Key::NoPublishing) {
-        auto key = qobject_cast<Key*>(createKey());
+        auto key = qobject_cast<Key *>(createKey());
         auto it = std::find_if(m_setupObjects.cbegin(), m_setupObjects.cend(),
-                               [](SetupObject *obj) -> bool { return qobject_cast<Transport*>(obj); });
+                               [](SetupObject * obj) -> bool { return qobject_cast<Transport *>(obj); });
         if (it != m_setupObjects.cend()) {
             key->setDependsOn(*it);
         }
