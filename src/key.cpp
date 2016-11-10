@@ -240,7 +240,7 @@ void Key::publishPKS()
     const char *gpgName = GpgME::engineInfo(GpgME::OpenPGP).fileName();
     auto gpgProcess = new QProcess;
     gpgProcess->setProperty("keyServer", keyServer);
-    connect(gpgProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
+    connect(gpgProcess, static_cast<void(QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished),
             this, &Key::onPKSPublishingFinished);
     mJob = gpgProcess;
     gpgProcess->start(QString::fromLatin1(gpgName), {
