@@ -82,7 +82,7 @@ public:
     {
         // Listen for when setup of Transport is finished so we can snatch
         // the transport ID
-        connect(mSetupManager, &SetupManager::setupFinished,
+        connect(mSetupManager.data(), &SetupManager::setupFinished,
                 this, &KeyGenerationJob::onObjectSetupFinished);
 
         qCDebug(ACCOUNTWIZARD_LOG) << "Starting key generation";
