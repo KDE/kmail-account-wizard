@@ -107,6 +107,6 @@ private Q_SLOTS:
     }
 };
 
-QTEST_MAIN(LdapTest)
+QTEST_GUILESS_MAIN(LdapTest)
 
 #include "ldaptest.moc"
