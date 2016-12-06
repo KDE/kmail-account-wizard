@@ -97,6 +97,9 @@ public:
     {
     }
 
+Q_SIGNALS:
+    void result(const QString &fingerprint);
+
 private Q_SLOTS:
     void onObjectSetupFinished(SetupObject *obj)
     {
@@ -118,12 +121,14 @@ private Q_SLOTS:
             return;
         }
 
-        qCDebug(ACCOUNTWIZARD_LOG) << "Finished generating key" << result.fingerprint();
+        const QString fpr = QString::fromLatin1(result.fingerprint());
+        qCDebug(ACCOUNTWIZARD_LOG) << "Finished generating key" << fpr;
+        Q_EMIT this->result(fpr);
 
         auto listJob = QGpgME::openpgp()->keyListJob(false, true, true);
         connect(listJob, &QGpgME::KeyListJob::result,
                 this, &KeyGenerationJob::keyRetrieved);
-        listJob->start({ QString::fromLatin1(result.fingerprint()) }, true);
+        listJob->start({ fpr }, true);
     }
 
     void keyRetrieved(const GpgME::KeyListResult &result,
@@ -402,8 +407,19 @@ void CryptoPage::leavePageNext()
         mSetupManager->setKey(key);
         mSetupManager->setKeyPublishingMethod(currentPublishingMethod());
     } else if (ui.keyCombo->currentData(Qt::UserRole).toInt() == GenerateKey) {
-        new KeyGenerationJob(mSetupManager, ui.passwordWidget->password(),
-                             currentPublishingMethod());
+        if (!mKeyGenerationJob) {
+            mKeyGenerationJob = new KeyGenerationJob(mSetupManager, ui.passwordWidget->password(),
+                                                     currentPublishingMethod());
+            ui.keyCombo->setEnabled(false); // disable until key is generated
+            ui.passwordWidget->setEnabled(false);
+            connect(mKeyGenerationJob, &KeyGenerationJob::result,
+                    this, [this](const QString &fpr) {
+                        ui.keyCombo->setEnabled(true);
+                        ui.passwordWidget->setEnabled(true);
+                        ui.keyCombo->setDefaultKey(fpr);
+                        ui.keyCombo->refreshKeys();
+                    });
+        }
     }
     mSetupManager->setPgpAutoEncrypt(ui.enableCryptoCheckBox->isChecked());
     mSetupManager->setPgpAutoSign(ui.enableCryptoCheckBox->isChecked());
