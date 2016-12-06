@@ -371,6 +371,16 @@ CryptoPage::CryptoPage(Dialog *parent)
 void CryptoPage::enterPageNext()
 {
     ui.keyCombo->setIdFilter(mSetupManager->email());
+    if (ui.keyCombo->count() == 3) {
+        // No key + Generate key + Import key options, no actual keys, so
+        // pre-select the "Generate key" option
+        const int idx = ui.keyCombo->findData(GenerateKey, Qt::UserRole);
+        ui.keyCombo->setCurrentIndex(idx);
+    } else {
+        // We have at least one key, pre-select it
+        // Index 0 is "No key" option, so index 1 will be a key
+        ui.keyCombo->setCurrentIndex(1);
+    }
 
     ui.stackedWidget->setCurrentIndex(CheckingkWKSPage);
     auto job = QGpgME::openpgp()->wksPublishJob();
