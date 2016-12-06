@@ -50,22 +50,6 @@
 #include <QEventLoopLocker>
 #include <QPointer>
 
-class DeleteLaterRAII
-{
-public:
-    DeleteLaterRAII(QObject *obj) : mObj(obj)
-    {}
-    ~DeleteLaterRAII()
-    {
-        if (mObj) {
-            mObj->deleteLater();
-        }
-    }
-private:
-    Q_DISABLE_COPY(DeleteLaterRAII)
-    QPointer<QObject> mObj;
-};
-
 class KeyGenerationJob : public QObject
 {
     Q_OBJECT
