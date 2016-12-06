@@ -24,8 +24,11 @@
 #include "ui_cryptopage.h"
 #include "key.h"
 
+#include <QPointer>
+
 class Dialog;
 class SetupManager;
+class KeyGenerationJob;
 
 namespace QGpgME
 {
@@ -65,6 +68,7 @@ private:
 
     Ui::CryptoPage ui;
     SetupManager *mSetupManager;
+    QPointer<KeyGenerationJob> mKeyGenerationJob;
 };
 
 #endif // CRYPTOPAGE_H
