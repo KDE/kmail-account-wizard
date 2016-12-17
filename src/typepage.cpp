@@ -48,13 +48,13 @@ TypePage::TypePage(KAssistantDialog *parent) :
 
     QStringList list;
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("akonadi/accountwizard/"), QStandardPaths::LocateDirectory);
-    Q_FOREACH (const QString &dir, dirs) {
+    for (const QString &dir : dirs) {
         const QStringList directories = QDir(dir).entryList(QDir::AllDirs);
-        Q_FOREACH (const QString &directory, directories) {
+        for (const QString &directory : directories) {
             const QString fullPath = dir + QLatin1Char('/') + directory;
             const QStringList fileNames = QDir(fullPath).entryList(QStringList() << QStringLiteral("*.desktop"));
             list.reserve(fileNames.count());
-            Q_FOREACH (const QString &file, fileNames) {
+            for (const QString &file : fileNames) {
                 list.append(fullPath + QLatin1Char('/') + file);
 
             }

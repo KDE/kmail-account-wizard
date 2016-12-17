@@ -69,7 +69,7 @@ void ProviderPage::fillModel(const KNS3::Entry::List &list)
     // we can not use a QHash or whatever, as that needs that constructor...
     m_providerEntries = list;
 
-    foreach (const KNS3::Entry &e, list) {
+    for (const KNS3::Entry &e : list) {
         qCDebug(ACCOUNTWIZARD_LOG) << "Found Entry: " << e.name();
 
         QStandardItem *item = new QStandardItem(e.name());
@@ -138,7 +138,7 @@ void ProviderPage::providerStatusChanged(const KNS3::Entry &e)
 
 void ProviderPage::findDesktopAndSetAssistant(const QStringList &list)
 {
-    foreach (const QString &file, list) {
+    for (const QString &file : list) {
         qCDebug(ACCOUNTWIZARD_LOG) << file;
         if (file.endsWith(QStringLiteral(".desktop"))) {
             qCDebug(ACCOUNTWIZARD_LOG) << "Yay, a desktop file!" << file;
