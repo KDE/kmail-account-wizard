@@ -90,7 +90,8 @@ void Resource::create()
     // check if unique instance already exists
     qCDebug(ACCOUNTWIZARD_LOG) << type.capabilities();
     if (type.capabilities().contains(QStringLiteral("Unique"))) {
-        foreach (const AgentInstance &instance, AgentManager::self()->instances()) {
+        const Akonadi::AgentInstance::List lstAgent = AgentManager::self()->instances();
+        for (const AgentInstance &instance : lstAgent) {
             qCDebug(ACCOUNTWIZARD_LOG) << instance.type().identifier() << (instance.type() == type);
             if (instance.type() == type) {
                 if (m_editMode) {

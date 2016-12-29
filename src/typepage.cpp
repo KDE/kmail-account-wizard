@@ -74,12 +74,12 @@ TypePage::TypePage(KAssistantDialog *parent) :
         if (!filter.isEmpty()) {
             // stolen from agentfilterproxymodel
             bool found = false;
-            foreach (const QString &mimeType, lstType) {
+            for (const QString &mimeType : lstType) {
                 if (filter.contains(mimeType)) {
                     found = true;
                     break;
                 } else {
-                    foreach (const QString &type, filter) {
+                    for (const QString &type : filter) {
                         QMimeDatabase db;
                         QMimeType typePtr = db.mimeTypeForName(type);
                         if (typePtr.isValid() && typePtr.inherits(mimeType)) {
