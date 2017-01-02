@@ -249,7 +249,7 @@ public:
     KeyImportJob(const QString &file, Kleo::KeySelectionCombo *parent)
         : QGpgME::Job(parent)
         , mFile(file)
-        , mJob(Q_NULLPTR)
+        , mJob(nullptr)
     {
     }
 
@@ -266,7 +266,7 @@ public:
 
     void start()
     {
-        QGpgME::ImportJob *job = Q_NULLPTR;
+        QGpgME::ImportJob *job = nullptr;
         switch (Kleo::findProtocol(mFile)) {
         case GpgME::OpenPGP:
             job = QGpgME::openpgp()->importJob();
@@ -275,7 +275,7 @@ public:
             job = QGpgME::smime()->importJob();
             break;
         default:
-            job = Q_NULLPTR;
+            job = nullptr;
             break;
         }
 
@@ -304,7 +304,7 @@ public:
 
     void keyImported(const GpgME::ImportResult &result)
     {
-        mJob = Q_NULLPTR;
+        mJob = nullptr;
         if (result.error()) {
             KMessageBox::error(qobject_cast<QWidget *>(parent()),
                                i18n("Failed to import key: %1", QString::fromUtf8(result.error().asString())),

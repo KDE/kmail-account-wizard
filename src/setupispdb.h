@@ -30,7 +30,7 @@ class SetupIspdb : public SetupObject
     Q_OBJECT
 public:
     /** Constructor */
-    explicit SetupIspdb(QObject *parent = Q_NULLPTR);
+    explicit SetupIspdb(QObject *parent = nullptr);
     SetupIspdb(QObject *parent, Ispdb *ispdb);
     ~SetupIspdb();
 

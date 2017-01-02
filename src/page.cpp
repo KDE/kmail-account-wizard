@@ -23,7 +23,7 @@
 
 Page::Page(KAssistantDialog *parent):
     QWidget(parent),
-    m_item(Q_NULLPTR),
+    m_item(nullptr),
     m_parent(parent),
     m_valid(false)
 {

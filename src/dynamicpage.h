@@ -26,7 +26,7 @@ class DynamicPage : public Page
 {
     Q_OBJECT
 public:
-    explicit DynamicPage(const QString &uiFile, KAssistantDialog *parent = Q_NULLPTR);
+    explicit DynamicPage(const QString &uiFile, KAssistantDialog *parent = nullptr);
 
 public Q_SLOTS:
     /// returns the top-level widget of the UI file

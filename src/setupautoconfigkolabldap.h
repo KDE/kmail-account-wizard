@@ -29,7 +29,7 @@ class SetupAutoconfigKolabLdap : public SetupObject
     Q_OBJECT
 public:
     /** Constructor */
-    explicit SetupAutoconfigKolabLdap(QObject *parent = Q_NULLPTR);
+    explicit SetupAutoconfigKolabLdap(QObject *parent = nullptr);
     ~SetupAutoconfigKolabLdap();
 
     void create() Q_DECL_OVERRIDE;

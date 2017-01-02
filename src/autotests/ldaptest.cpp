@@ -32,7 +32,7 @@ class TLdap : public Ldap
 {
     Q_OBJECT
 public:
-    explicit TLdap(QObject *parent = Q_NULLPTR)
+    explicit TLdap(QObject *parent = nullptr)
         : Ldap(parent)
     {
         mTempFile.open();

@@ -35,7 +35,7 @@ class Ldap : public SetupObject
 {
     Q_OBJECT
 public:
-    explicit Ldap(QObject *parent = Q_NULLPTR);
+    explicit Ldap(QObject *parent = nullptr);
     ~Ldap();
     void create() Q_DECL_OVERRIDE;
     void destroy() Q_DECL_OVERRIDE;

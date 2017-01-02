@@ -30,7 +30,7 @@ class Dialog : public KAssistantDialog
 {
     Q_OBJECT
 public:
-    explicit Dialog(QWidget *parent = Q_NULLPTR);
+    explicit Dialog(QWidget *parent = nullptr);
 
     void next() Q_DECL_OVERRIDE;
     void back() Q_DECL_OVERRIDE;

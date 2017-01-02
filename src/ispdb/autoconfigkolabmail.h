@@ -26,7 +26,7 @@ class AutoconfigKolabMail :  public Ispdb
     Q_OBJECT
 public:
     /** Constructor */
-    explicit AutoconfigKolabMail(QObject *parent = Q_NULLPTR);
+    explicit AutoconfigKolabMail(QObject *parent = nullptr);
 
     void startJob(const QUrl &url) Q_DECL_OVERRIDE;
 

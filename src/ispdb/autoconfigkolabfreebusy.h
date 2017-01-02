@@ -28,7 +28,7 @@ class AutoconfigKolabFreebusy : public AutoconfigKolabMail
     Q_OBJECT
 public:
     /** Constructor */
-    explicit AutoconfigKolabFreebusy(QObject *parent = Q_NULLPTR);
+    explicit AutoconfigKolabFreebusy(QObject *parent = nullptr);
 
     QHash<QString, freebusy> freebusyServers() const;
 

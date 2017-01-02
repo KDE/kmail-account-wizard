@@ -62,7 +62,7 @@ void ProviderPage::fillModel(const KNS3::Entry::List &list)
 {
     if (m_fetchItem) {
         m_model->removeRows(m_model->indexFromItem(m_fetchItem).row(), 1);
-        m_fetchItem = Q_NULLPTR;
+        m_fetchItem = nullptr;
     }
 
     // KNS3::Entry::Entry() is private, so we need to save the whole list.

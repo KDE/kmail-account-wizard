@@ -110,7 +110,7 @@ void Key::onWKSPublishingCheckDone(const GpgME::Error &error,
                                    const QByteArray &,
                                    const QByteArray &returnedError)
 {
-    mJob = Q_NULLPTR;
+    mJob = nullptr;
 
     if (error) {
         if (error.isCanceled()) {
@@ -140,7 +140,7 @@ void Key::onWKSPublishingRequestCreated(const GpgME::Error &error,
                                         const QByteArray &returnedData,
                                         const QByteArray &returnedError)
 {
-    mJob = Q_NULLPTR;
+    mJob = nullptr;
 
     if (error) {
         if (error.isCanceled()) {
@@ -212,7 +212,7 @@ void Key::onWKSPublishingRequestCreated(const GpgME::Error &error,
 
 void Key::onWKSPublishingRequestSent(KJob *job)
 {
-    mJob = Q_NULLPTR;
+    mJob = nullptr;
     if (job->error() == KJob::KilledJobError) {
         Q_EMIT error(i18n("Key publishing was canceled."));
     } else if (job->error()) {
@@ -252,7 +252,7 @@ void Key::publishPKS()
 void Key::onPKSPublishingFinished(int code, QProcess::ExitStatus status)
 {
     auto process = qobject_cast<QProcess *>(mJob);
-    mJob = Q_NULLPTR;
+    mJob = nullptr;
     process->deleteLater();
 
     if (status != QProcess::NormalExit || code != 0) {

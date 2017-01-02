@@ -34,7 +34,7 @@ class PersonalDataPage : public Page
 {
     Q_OBJECT
 public:
-    explicit PersonalDataPage(Dialog *parent = Q_NULLPTR);
+    explicit PersonalDataPage(Dialog *parent = nullptr);
     void setHideOptionInternetSearch(bool);
 
     void leavePageNext() Q_DECL_OVERRIDE;

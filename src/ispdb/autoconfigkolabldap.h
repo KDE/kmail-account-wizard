@@ -29,7 +29,7 @@ class AutoconfigKolabLdap : public AutoconfigKolabMail
     Q_OBJECT
 public:
     /** Constructor */
-    explicit AutoconfigKolabLdap(QObject *parent = Q_NULLPTR);
+    explicit AutoconfigKolabLdap(QObject *parent = nullptr);
 
     QHash<QString, ldapServer> ldapServers() const;
 

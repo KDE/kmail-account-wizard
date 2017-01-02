@@ -27,7 +27,7 @@ class SetupAutoconfigKolabMail : public SetupIspdb
     Q_OBJECT
 public:
     /** Constructor */
-    explicit SetupAutoconfigKolabMail(QObject *parent = Q_NULLPTR);
+    explicit SetupAutoconfigKolabMail(QObject *parent = nullptr);
 };
 
 #endif

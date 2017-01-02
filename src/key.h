@@ -48,7 +48,7 @@ public:
         PKS
     };
 
-    explicit Key(QObject *parent = Q_NULLPTR);
+    explicit Key(QObject *parent = nullptr);
     ~Key();
 
     void create() Q_DECL_OVERRIDE;

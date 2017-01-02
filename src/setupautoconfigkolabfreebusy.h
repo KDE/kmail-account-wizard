@@ -29,7 +29,7 @@ class SetupAutoconfigKolabFreebusy : public SetupObject
     Q_OBJECT
 public:
     /** Constructor */
-    explicit SetupAutoconfigKolabFreebusy(QObject *parent = Q_NULLPTR);
+    explicit SetupAutoconfigKolabFreebusy(QObject *parent = nullptr);
     ~SetupAutoconfigKolabFreebusy();
 
     void create() Q_DECL_OVERRIDE;
