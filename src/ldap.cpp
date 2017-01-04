@@ -70,7 +70,7 @@ void Ldap::create()
         // If the user gave a full email address, the domain name
         // of that overrides the server name for the ldap dn
         const QString user = m_user;
-        int pos = user.indexOf(QStringLiteral("@"));
+        int pos = user.indexOf(QLatin1Char('@'));
         if (pos > 0) {
             const QString h = user.mid(pos + 1);
             if (!h.isEmpty()) {
