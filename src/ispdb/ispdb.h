@@ -53,7 +53,7 @@ public:
      In particular, note that Ispdb's Plain represents both Cleartext and AUTH Plain
      We will always treat it as Cleartext
      */
-    enum authType { Plain = 0, CramMD5, NTLM, GSSAPI, ClientIP, NoAuth, Basic };
+    enum authType { Plain = 0, CramMD5, NTLM, GSSAPI, ClientIP, NoAuth, Basic, OAuth2 };
     enum length { Long = 0, Short };
 
     /** Constructor */

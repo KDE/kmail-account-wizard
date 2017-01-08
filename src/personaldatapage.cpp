@@ -217,6 +217,7 @@ void PersonalDataPage::configureImapAccount()
         case Ispdb::GSSAPI: t->setOption(QStringLiteral("Authentication"), MailTransport::Transport::EnumAuthenticationType::GSSAPI); break;
         case Ispdb::ClientIP: break;
         case Ispdb::NoAuth: break;
+        case Ispdb::OAuth2: t->setOption(QStringLiteral("Authentication"), MailTransport::Transport::EnumAuthenticationType::XOAUTH2); break;
         default: break;
         }
         switch (s.socketType) {

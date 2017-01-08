@@ -249,7 +249,7 @@ Server Ispdb::createServer(const QDomElement &n)
                 }
             } else if (tagName == QLatin1String("username")) {
                 s.username = replacePlaceholders(f.text());
-            } else if (tagName == QLatin1String("authentication")) {
+            } else if (tagName == QLatin1String("authentication") && s.authentication == 0) {
                 const QString type(f.text());
                 if (type == QLatin1String("password-cleartext")
                         || type == QLatin1String("plain")) {
@@ -265,6 +265,8 @@ Server Ispdb::createServer(const QDomElement &n)
                     s.authentication = ClientIP;
                 } else if (type == QLatin1String("none")) {
                     s.authentication = NoAuth;
+                } else if (n.attribute(QStringLiteral("type")) == QLatin1String("imap") && type == QLatin1String("OAuth2")) {
+                    s.authentication = OAuth2;
                 }
             }
         }
