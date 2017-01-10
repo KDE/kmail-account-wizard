@@ -29,7 +29,7 @@ Identity::Identity(QObject *parent)
     : SetupObject(parent)
 {
     m_identity = &KIdentityManagement::IdentityManager::self()->newFromScratch(QString());
-    Q_ASSERT(m_identity != 0);
+    Q_ASSERT(m_identity != nullptr);
 }
 
 Identity::~Identity()
@@ -84,7 +84,7 @@ void Identity::destroy()
     auto manager = KIdentityManagement::IdentityManager::self();
     manager->removeIdentityForced(m_identity->identityName());
     manager->commit();
-    m_identity = 0;
+    m_identity = nullptr;
     Q_EMIT info(i18n("Identity removed."));
 }
 

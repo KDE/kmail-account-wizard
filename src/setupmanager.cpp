@@ -148,7 +148,7 @@ void SetupManager::setupSucceeded(const QString &msg)
     if (m_currentSetupObject) {
         Q_EMIT setupFinished(m_currentSetupObject);
         m_setupObjects.append(m_currentSetupObject);
-        m_currentSetupObject = 0;
+        m_currentSetupObject = nullptr;
     }
     setupNext();
 }
@@ -159,7 +159,7 @@ void SetupManager::setupFailed(const QString &msg)
     m_page->addMessage(SetupPage::Error, msg);
     if (m_currentSetupObject) {
         m_setupObjects.append(m_currentSetupObject);
-        m_currentSetupObject = 0;
+        m_currentSetupObject = nullptr;
     }
     rollback();
 }

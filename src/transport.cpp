@@ -125,7 +125,7 @@ void Transport::edit()
     if (!mt) {
         Q_EMIT error(i18n("Could not load config dialog for UID '%1'", m_transportId));
     } else {
-        MailTransport::TransportManager::self()->configureTransport(mt, 0);
+        MailTransport::TransportManager::self()->configureTransport(mt, nullptr);
     }
 }
 

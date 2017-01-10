@@ -28,7 +28,7 @@
 
 LoadPage::LoadPage(KAssistantDialog *parent) :
     Page(parent),
-    m_action(0)
+    m_action(nullptr)
 {
     ui.setupUi(this);
     setValid(false);
@@ -39,7 +39,7 @@ void LoadPage::enterPageNext()
     setValid(false);
     // FIXME: deletion seems to delete the exported objects as well, killing the entire wizard...
     //delete m_action;
-    m_action = 0;
+    m_action = nullptr;
     Q_EMIT aboutToStart();
 
     const KConfig f(Global::assistant());

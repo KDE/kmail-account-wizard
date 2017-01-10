@@ -65,7 +65,7 @@ int main(int argc, char **argv)
     aboutData.processCommandLine(&parser);
     KDBusService service(KDBusService::Unique);
 
-    Akonadi::ControlGui::start(0);
+    Akonadi::ControlGui::start(nullptr);
 
     const QString packageArgument = parser.value(QStringLiteral("package"));
     if (!packageArgument.isEmpty()) {
@@ -79,7 +79,7 @@ int main(int argc, char **argv)
         Global::setTypeFilter(typeValue.split(QLatin1Char(',')));
     }
 
-    Dialog dlg(0);
+    Dialog dlg(nullptr);
     dlg.show();
     // Unregister once the UI is closed, even if the app will continue running
     // and generating keys in the background.
