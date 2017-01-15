@@ -412,7 +412,7 @@ void CryptoPage::leavePageNext()
                                                      currentPublishingMethod());
             ui.keyCombo->setEnabled(false); // disable until key is generated
             ui.passwordWidget->setEnabled(false);
-            connect(mKeyGenerationJob, &KeyGenerationJob::result,
+            connect(mKeyGenerationJob.data(), &KeyGenerationJob::result,
                     this, [this](const QString &fpr) {
                         ui.keyCombo->setEnabled(true);
                         ui.passwordWidget->setEnabled(true);
