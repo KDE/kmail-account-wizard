@@ -62,6 +62,12 @@ QString authTypeToStr(Ispdb::authType authType)
     case Ispdb::NoAuth:
         auth = QStringLiteral("NoAuth");
         break;
+    case Ispdb::Basic:
+        auth = QStringLiteral("Basic");
+        break;
+    case Ispdb::OAuth2:
+        auth = QStringLiteral("OAuth2");
+        break;
     }
     return auth;
 }
