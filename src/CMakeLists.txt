@@ -56,6 +56,7 @@ set(accountwizard_libs
     KF5::Crash
     KF5::Libkleo
     KF5::Notifications
+    KF5::PimCommon
     )
 
 if ( NOT ACCOUNTWIZARD_NO_GHNS )

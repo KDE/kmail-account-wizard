@@ -53,6 +53,7 @@ private Q_SLOTS:
     void slotNextOk();
     void slotBackOk();
     void clearDynamicPages();
+    void slotOpenHelp();
 
 private:
     KPageWidgetItem *addPage(Page *page, const QString &title);

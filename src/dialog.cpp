@@ -40,6 +40,7 @@
 #include <kmessagebox.h>
 #include <qplatformdefs.h>
 #include <KAboutData>
+#include <PimCommon/PimUtil>
 
 #include <KHelpMenu>
 
@@ -109,6 +110,8 @@ Dialog::Dialog(QWidget *parent)
     //Initialize menu
     QMenu *menu = helpMenu->menu();
     helpMenu->action(KHelpMenu::menuAboutApp)->setIcon(QIcon::fromTheme(QStringLiteral("akonadi")));
+    disconnect(helpMenu->action(KHelpMenu::menuHelpContents), 0, helpMenu, 0);
+    connect(helpMenu->action(KHelpMenu::menuHelpContents), &QAction::triggered, this, &Dialog::slotOpenHelp);
     button(QDialogButtonBox::Help)->setMenu(menu);
 }
 
@@ -213,3 +216,7 @@ void Dialog::reject()
     mSetupManager->requestRollback();
 }
 
+void Dialog::slotOpenHelp()
+{
+    PimCommon::Util::invokeHelp(QStringLiteral("kmail2/getting-started.html"), QStringLiteral("account-wizard"));
+}
