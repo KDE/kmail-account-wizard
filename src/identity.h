@@ -29,7 +29,6 @@ class Transport;
 namespace KIdentityManagement
 {
 class Identity;
-class IdentityManager;
 }
 
 class Identity : public SetupObject

@@ -34,7 +34,6 @@ class Error;
 
 namespace QGpgME
 {
-class WKSPublishJob;
 }
 
 class Key : public SetupObject
