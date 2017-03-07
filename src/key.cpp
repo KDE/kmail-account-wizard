@@ -32,7 +32,7 @@
 
 #include <MailTransport/TransportManager>
 #include <MailTransport/Transport>
-#include <MailTransport/MessageQueueJob>
+#include <MailTransportAkonadi/MessageQueueJob>
 
 #include <KIdentityManagement/IdentityManager>
 #include <KIdentityManagement/Identity>
