@@ -50,7 +50,7 @@ void ServerTest::test(const QString &server, const QString &protocol)
     m_serverTest->start();
 }
 
-void ServerTest::testFinished(const QList< int > &list)
+void ServerTest::testFinished(const QVector<int> &list)
 {
     qCDebug(ACCOUNTWIZARD_LOG) << "types: " << list;
     if (list.contains(MailTransport::Transport::EnumEncryption::TLS)) {

@@ -46,7 +46,7 @@ Q_SIGNALS:
     void testFail();
 
 private Q_SLOTS:
-    void testFinished(const QList< int > &list);
+    void testFinished(const QVector<int> &list);
 
 private:
     MailTransport::ServerTest *m_serverTest;
