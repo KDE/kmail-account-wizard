@@ -112,7 +112,7 @@ QString Global::unpackAssistant(const QUrl &remotePackageUrl)
     const QUrl file(QLatin1String("tar://") + localPackageFile);
     const QFileInfo fi(localPackageFile);
     const QString assistant = fi.baseName();
-    const QString dest = QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + QLatin1String("/");
+    const QString dest = QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + QLatin1Char('/');
     QDir().mkpath(dest + file.fileName());
     KIO::Job *getJob = KIO::copy(file, QUrl::fromLocalFile(dest), KIO::Overwrite | KIO::HideProgressInfo);
     if (getJob->exec()) {
