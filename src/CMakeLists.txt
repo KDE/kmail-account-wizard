@@ -46,7 +46,6 @@ set(accountwizard_libs
     KF5::Mime
     KF5::IdentityManagement
     KF5::WidgetsAddons
-    KF5::NewStuff
     Qt5::UiTools
     KF5::Libkdepim
     KF5::ItemViews
@@ -57,6 +56,7 @@ set(accountwizard_libs
     KF5::Libkleo
     KF5::Notifications
     KF5::PimCommon
+    KF5::XmlGui
     )
 
 if ( NOT ACCOUNTWIZARD_NO_GHNS )
