@@ -35,7 +35,6 @@
 #include <KMime/Message>
 
 #include <klocalizedstring.h>
-#include <kross/core/action.h>
 #include "accountwizard_debug.h"
 #include <kmessagebox.h>
 #include <qplatformdefs.h>
