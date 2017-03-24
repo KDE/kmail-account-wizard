@@ -26,8 +26,7 @@
 class LdapTest;
 class KConfig;
 
-namespace KLDAP
-{
+namespace KLDAP {
 class LdapClientSearchConfig;
 }
 

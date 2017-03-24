@@ -25,8 +25,7 @@
 #include "key.h"
 #include <gpgme++/key.h>
 
-namespace KWallet
-{
+namespace KWallet {
 class Wallet;
 }
 

@@ -26,9 +26,9 @@
 #include <qfile.h>
 #include <KLocalizedString>
 
-LoadPage::LoadPage(KAssistantDialog *parent) :
-    Page(parent),
-    m_action(nullptr)
+LoadPage::LoadPage(KAssistantDialog *parent)
+    : Page(parent)
+    , m_action(nullptr)
 {
     ui.setupUi(this);
     setValid(false);
@@ -87,4 +87,3 @@ void LoadPage::exportObject(QObject *object, const QString &name)
 {
     m_exportedObjects.push_back(qMakePair(object, name));
 }
-

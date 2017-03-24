@@ -55,8 +55,7 @@ class KeyGenerationJob : public QObject
     Q_OBJECT
 
 public:
-    KeyGenerationJob(SetupManager *setupManager, const QString &passphrase,
-                     Key::PublishingMethod publishingMethod)
+    KeyGenerationJob(SetupManager *setupManager, const QString &passphrase, Key::PublishingMethod publishingMethod)
         : mSetupManager(setupManager)
         , mName(setupManager->name())
         , mEmail(setupManager->email())
@@ -115,8 +114,7 @@ private Q_SLOTS:
         listJob->start({ fpr }, true);
     }
 
-    void keyRetrieved(const GpgME::KeyListResult &result,
-                      const std::vector<GpgME::Key> &keys)
+    void keyRetrieved(const GpgME::KeyListResult &result, const std::vector<GpgME::Key> &keys)
     {
         if (result.error() || keys.size() != 1) {
             qCWarning(ACCOUNTWIZARD_LOG) << "Key listing finished with error;" << result.error().asString();
@@ -147,9 +145,13 @@ private Q_SLOTS:
             // If not then pass it the new key and let it set up everything
             const auto objectsToSetup = mSetupManager->objectsToSetup();
             const auto identIt = std::find_if(objectsToSetup.cbegin(), objectsToSetup.cend(),
-                                              [](SetupObject * obj) -> bool { return qobject_cast<Identity *>(obj); });
+                                              [](SetupObject *obj) -> bool {
+                return qobject_cast<Identity *>(obj);
+            });
             const auto keyIt = std::find_if(objectsToSetup.cbegin(), objectsToSetup.cend(),
-                                            [](SetupObject * obj) -> bool { return qobject_cast<Key *>(obj); });
+                                            [](SetupObject *obj) -> bool {
+                return qobject_cast<Key *>(obj);
+            });
             if (identIt != objectsToSetup.cend()) {
                 qCDebug(ACCOUNTWIZARD_LOG) << "Identity not set up yet, less work for us";
                 qobject_cast<Identity *>(*identIt)->setKey(GpgME::OpenPGP, key.primaryFingerprint());
@@ -170,7 +172,9 @@ private Q_SLOTS:
             // so update it.
             const auto setupObjects = mSetupManager->setupObjects();
             const auto it = std::find_if(setupObjects.cbegin(), setupObjects.cend(),
-                                         [](SetupObject * obj) -> bool { return qobject_cast<Identity *>(obj); });
+                                         [](SetupObject *obj) -> bool {
+                return qobject_cast<Identity *>(obj);
+            });
             if (it != setupObjects.cend()) {
                 qCDebug(ACCOUNTWIZARD_LOG) << "Identity already set up, will modify existing Identity";
                 updateIdentity(mEmail, key.primaryFingerprint());
@@ -220,7 +224,7 @@ private Q_SLOTS:
         keyObj->setMailBox(mEmail);
         keyObj->setTransportId(mTransportId);
         connect(keyObj, &Key::error,
-        [this](const QString & msg) {
+                [this](const QString &msg) {
             KNotification::event(KNotification::Error, i18n("Account Wizard"),
                                  msg, QStringLiteral("akonadi"));
             deleteLater();
@@ -257,9 +261,9 @@ public:
     {
     }
 
-    void slotCancel() Q_DECL_OVERRIDE {
-        if (mJob)
-        {
+    void slotCancel() Q_DECL_OVERRIDE
+    {
+        if (mJob) {
             mJob->slotCancel();
         }
     }
@@ -374,7 +378,7 @@ void CryptoPage::enterPageNext()
     ui.stackedWidget->setCurrentIndex(CheckingkWKSPage);
     auto job = QGpgME::openpgp()->wksPublishJob();
     connect(job, &QGpgME::WKSPublishJob::result,
-    this, [this](const GpgME::Error & error) {
+            this, [this](const GpgME::Error &error) {
         if (error) {
             ui.stackedWidget->setCurrentIndex(PKSPage);
         } else {
@@ -398,11 +402,11 @@ void CryptoPage::leavePageNext()
             ui.passwordWidget->setEnabled(false);
             connect(mKeyGenerationJob.data(), &KeyGenerationJob::result,
                     this, [this](const QString &fpr) {
-                        ui.keyCombo->setEnabled(true);
-                        ui.passwordWidget->setEnabled(true);
-                        ui.keyCombo->setDefaultKey(fpr);
-                        ui.keyCombo->refreshKeys();
-                    });
+                ui.keyCombo->setEnabled(true);
+                ui.passwordWidget->setEnabled(true);
+                ui.keyCombo->setDefaultKey(fpr);
+                ui.keyCombo->refreshKeys();
+            });
         }
     }
     mSetupManager->setPgpAutoEncrypt(ui.enableCryptoCheckBox->isChecked());
@@ -465,8 +469,8 @@ void CryptoPage::importKey()
     const QString anyFilesFilter = i18n("Any files") + QLatin1String(" (*)");
 
     const QString file = QFileDialog::getOpenFileName(this, i18n("Select Certificate File"),
-                         QString(),
-                         certificateFilter + QLatin1String(";;") + anyFilesFilter);
+                                                      QString(),
+                                                      certificateFilter + QLatin1String(";;") + anyFilesFilter);
     if (file.isEmpty()) {
         return;
     }
@@ -475,7 +479,7 @@ void CryptoPage::importKey()
     new Kleo::ProgressDialog(job, i18n("Importing key..."), ui.keyCombo->parentWidget());
     ui.keyCombo->setEnabled(false);
     QObject::connect(job, &KeyImportJob::done,
-    ui.keyCombo, [this]() {
+                     ui.keyCombo, [this]() {
         ui.keyCombo->setEnabled(true);
     });
     job->start();

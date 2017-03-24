@@ -25,8 +25,9 @@
 #include <kmessagebox.h>
 #include <KLocalizedString>
 
-ServerTest::ServerTest(QObject *parent) :
-    QObject(parent), m_serverTest(new MailTransport::ServerTest(nullptr))
+ServerTest::ServerTest(QObject *parent)
+    : QObject(parent)
+    , m_serverTest(new MailTransport::ServerTest(nullptr))
 {
     qCDebug(ACCOUNTWIZARD_LOG) << "Welcome!";
     connect(m_serverTest, &MailTransport::ServerTest::finished, this, &ServerTest::testFinished);
@@ -59,10 +60,9 @@ void ServerTest::testFinished(const QVector<int> &list)
         Q_EMIT testResult(QStringLiteral("ssl"));
     } else {
         KMessageBox::information(nullptr, i18n("There seems to be a problem in reaching this server "
-                                         "or choosing a safe way to sent the credentials to server. We advise you to "
-                                         "check the settings of the account and adjust it manually if needed."),
+                                               "or choosing a safe way to sent the credentials to server. We advise you to "
+                                               "check the settings of the account and adjust it manually if needed."),
                                  i18n("Autodetecting settings failed"));
         Q_EMIT testFail();
     }
 }
-

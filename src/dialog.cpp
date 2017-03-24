@@ -194,6 +194,7 @@ void Dialog::slotGhnsNotWanted()
     Q_ASSERT(mProviderPage);
     setAppropriate(mProviderPage, false);
 }
+
 #endif
 
 SetupManager *Dialog::setupManager()

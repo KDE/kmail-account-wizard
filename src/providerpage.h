@@ -32,8 +32,7 @@ struct Provider {
     QString entryProviderId;
 };
 
-namespace KNS3
-{
+namespace KNS3 {
 class DownloadManager;
 }
 

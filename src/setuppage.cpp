@@ -21,9 +21,9 @@
 #include <QIcon>
 #include <qstandarditemmodel.h>
 
-SetupPage::SetupPage(KAssistantDialog *parent) :
-    Page(parent),
-    m_msgModel(new QStandardItemModel(this))
+SetupPage::SetupPage(KAssistantDialog *parent)
+    : Page(parent)
+    , m_msgModel(new QStandardItemModel(this))
 {
     ui.setupUi(this);
     ui.detailView->setModel(m_msgModel);
@@ -68,4 +68,3 @@ void SetupPage::setProgress(int percent)
 {
     ui.progressBar->setValue(percent);
 }
-

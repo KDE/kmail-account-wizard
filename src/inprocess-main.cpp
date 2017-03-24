@@ -38,4 +38,3 @@ void AccountWizard::run(const QStringList &types, QWidget *parent)
     Dialog dlg(parent);
     dlg.exec();
 }
-

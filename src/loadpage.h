@@ -24,8 +24,7 @@
 
 #include "ui_loadpage.h"
 
-namespace Kross
-{
+namespace Kross {
 class Action;
 }
 

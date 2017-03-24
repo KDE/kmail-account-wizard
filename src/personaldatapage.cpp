@@ -42,8 +42,10 @@ QString accountName(Ispdb *ispdb, QString username)
     return ispdb->name(Ispdb::Long) + QStringLiteral(" (%1)").arg(username);
 }
 
-PersonalDataPage::PersonalDataPage(Dialog *parent) :
-    Page(parent), mIspdb(nullptr), mSetupManager(parent->setupManager())
+PersonalDataPage::PersonalDataPage(Dialog *parent)
+    : Page(parent)
+    , mIspdb(nullptr)
+    , mSetupManager(parent->setupManager())
 {
     QWidget *pageParent = this;
 
@@ -79,7 +81,7 @@ void PersonalDataPage::slotRadioButtonClicked(QAbstractButton *button)
         smptHostname = s.hostname;
     }
     ui.outgoingLabel->setText(i18n("SMTP, %1", smptHostname));
-    if (button ==  ui.imapAccount) {
+    if (button == ui.imapAccount) {
         Server simap = mIspdb->imapServers().at(0); // should be ok.
         ui.incommingLabel->setText(i18n("IMAP, %1", simap.hostname));
         ui.usernameLabel->setText(simap.username);
@@ -105,9 +107,9 @@ void PersonalDataPage::slotCreateAccountClicked()
 void PersonalDataPage::slotTextChanged()
 {
     // Ignore the password field, as that can be empty when auth is based on ip-address.
-    setValid(!ui.emailEdit->text().isEmpty() &&
-             !ui.nameEdit->text().isEmpty()  &&
-             KEmailAddress::isValidSimpleAddress(ui.emailEdit->text()));
+    setValid(!ui.emailEdit->text().isEmpty()
+             && !ui.nameEdit->text().isEmpty()
+             && KEmailAddress::isValidSimpleAddress(ui.emailEdit->text()));
 }
 
 void PersonalDataPage::leavePageNext()
@@ -145,14 +147,12 @@ void PersonalDataPage::ispdbSearchFinished(bool ok)
     unsetCursor();
     ui.mProgress->stop();
     if (ok) {
-
         if (!mIspdb->imapServers().isEmpty() && !mIspdb->pop3Servers().isEmpty()) {
             ui.stackedPage->setCurrentIndex(1);
             slotRadioButtonClicked(ui.imapAccount);
         } else {
             automaticConfigureAccount();
         }
-
     } else {
         Q_EMIT manualWanted(true);       // enable the manual page
         Q_EMIT leavePageNextOk();
@@ -178,19 +178,37 @@ void PersonalDataPage::configureSmtpAccount()
         t->setUsername(s.username);
         t->setPassword(ui.passwordEdit->text());
         switch (s.authentication) {
-        case Ispdb::Plain: t->setAuthenticationType(QStringLiteral("plain")); break;
-        case Ispdb::CramMD5: t->setAuthenticationType(QStringLiteral("cram-md5")); break;
-        case Ispdb::NTLM: t->setAuthenticationType(QStringLiteral("ntlm")); break;
-        case Ispdb::GSSAPI: t->setAuthenticationType(QStringLiteral("gssapi")); break;
-        case Ispdb::ClientIP: break;
-        case Ispdb::NoAuth: break;
-        default: break;
+        case Ispdb::Plain:
+            t->setAuthenticationType(QStringLiteral("plain"));
+            break;
+        case Ispdb::CramMD5:
+            t->setAuthenticationType(QStringLiteral("cram-md5"));
+            break;
+        case Ispdb::NTLM:
+            t->setAuthenticationType(QStringLiteral("ntlm"));
+            break;
+        case Ispdb::GSSAPI:
+            t->setAuthenticationType(QStringLiteral("gssapi"));
+            break;
+        case Ispdb::ClientIP:
+            break;
+        case Ispdb::NoAuth:
+            break;
+        default:
+            break;
         }
         switch (s.socketType) {
-        case Ispdb::None: t->setEncryption(QStringLiteral("none")); break;
-        case Ispdb::SSL: t->setEncryption(QStringLiteral("ssl")); break;
-        case Ispdb::StartTLS: t->setEncryption(QStringLiteral("tls")); break;
-        default: break;
+        case Ispdb::None:
+            t->setEncryption(QStringLiteral("none"));
+            break;
+        case Ispdb::SSL:
+            t->setEncryption(QStringLiteral("ssl"));
+            break;
+        case Ispdb::StartTLS:
+            t->setEncryption(QStringLiteral("tls"));
+            break;
+        default:
+            break;
         }
     } else {
         qCDebug(ACCOUNTWIZARD_LOG) << "No transport to be created....";
@@ -211,20 +229,40 @@ void PersonalDataPage::configureImapAccount()
         t->setOption(QStringLiteral("UserName"), s.username);
         t->setOption(QStringLiteral("Password"), ui.passwordEdit->text());
         switch (s.authentication) {
-        case Ispdb::Plain: t->setOption(QStringLiteral("Authentication"), MailTransport::Transport::EnumAuthenticationType::CLEAR); break;
-        case Ispdb::CramMD5: t->setOption(QStringLiteral("Authentication"), MailTransport::Transport::EnumAuthenticationType::CRAM_MD5); break;
-        case Ispdb::NTLM: t->setOption(QStringLiteral("Authentication"), MailTransport::Transport::EnumAuthenticationType::NTLM); break;
-        case Ispdb::GSSAPI: t->setOption(QStringLiteral("Authentication"), MailTransport::Transport::EnumAuthenticationType::GSSAPI); break;
-        case Ispdb::ClientIP: break;
-        case Ispdb::NoAuth: break;
-        case Ispdb::OAuth2: t->setOption(QStringLiteral("Authentication"), MailTransport::Transport::EnumAuthenticationType::XOAUTH2); break;
-        default: break;
+        case Ispdb::Plain:
+            t->setOption(QStringLiteral("Authentication"), MailTransport::Transport::EnumAuthenticationType::CLEAR);
+            break;
+        case Ispdb::CramMD5:
+            t->setOption(QStringLiteral("Authentication"), MailTransport::Transport::EnumAuthenticationType::CRAM_MD5);
+            break;
+        case Ispdb::NTLM:
+            t->setOption(QStringLiteral("Authentication"), MailTransport::Transport::EnumAuthenticationType::NTLM);
+            break;
+        case Ispdb::GSSAPI:
+            t->setOption(QStringLiteral("Authentication"), MailTransport::Transport::EnumAuthenticationType::GSSAPI);
+            break;
+        case Ispdb::ClientIP:
+            break;
+        case Ispdb::NoAuth:
+            break;
+        case Ispdb::OAuth2:
+            t->setOption(QStringLiteral("Authentication"), MailTransport::Transport::EnumAuthenticationType::XOAUTH2);
+            break;
+        default:
+            break;
         }
         switch (s.socketType) {
-        case Ispdb::None: t->setOption(QStringLiteral("Safety"), QStringLiteral("None")); break;
-        case Ispdb::SSL: t->setOption(QStringLiteral("Safety"), QStringLiteral("SSL")); break;
-        case Ispdb::StartTLS: t->setOption(QStringLiteral("Safety"), QStringLiteral("STARTTLS")); break;
-        default: break;
+        case Ispdb::None:
+            t->setOption(QStringLiteral("Safety"), QStringLiteral("None"));
+            break;
+        case Ispdb::SSL:
+            t->setOption(QStringLiteral("Safety"), QStringLiteral("SSL"));
+            break;
+        case Ispdb::StartTLS:
+            t->setOption(QStringLiteral("Safety"), QStringLiteral("STARTTLS"));
+            break;
+        default:
+            break;
         }
     }
 }
@@ -243,19 +281,35 @@ void PersonalDataPage::configurePop3Account()
         t->setOption(QStringLiteral("Login"), s.username);
         t->setOption(QStringLiteral("Password"), ui.passwordEdit->text());
         switch (s.authentication) {
-        case Ispdb::Plain: t->setOption(QStringLiteral("AuthenticationMethod"), MailTransport::Transport::EnumAuthenticationType::PLAIN); break;
-        case Ispdb::CramMD5: t->setOption(QStringLiteral("AuthenticationMethod"), MailTransport::Transport::EnumAuthenticationType::CRAM_MD5); break;
-        case Ispdb::NTLM: t->setOption(QStringLiteral("AuthenticationMethod"), MailTransport::Transport::EnumAuthenticationType::NTLM); break;
-        case Ispdb::GSSAPI: t->setOption(QStringLiteral("AuthenticationMethod"), MailTransport::Transport::EnumAuthenticationType::GSSAPI); break;
+        case Ispdb::Plain:
+            t->setOption(QStringLiteral("AuthenticationMethod"), MailTransport::Transport::EnumAuthenticationType::PLAIN);
+            break;
+        case Ispdb::CramMD5:
+            t->setOption(QStringLiteral("AuthenticationMethod"), MailTransport::Transport::EnumAuthenticationType::CRAM_MD5);
+            break;
+        case Ispdb::NTLM:
+            t->setOption(QStringLiteral("AuthenticationMethod"), MailTransport::Transport::EnumAuthenticationType::NTLM);
+            break;
+        case Ispdb::GSSAPI:
+            t->setOption(QStringLiteral("AuthenticationMethod"), MailTransport::Transport::EnumAuthenticationType::GSSAPI);
+            break;
         case Ispdb::ClientIP:
         case Ispdb::NoAuth:
-        default: t->setOption(QStringLiteral("AuthenticationMethod"), MailTransport::Transport::EnumAuthenticationType::CLEAR); break;
+        default:
+            t->setOption(QStringLiteral("AuthenticationMethod"), MailTransport::Transport::EnumAuthenticationType::CLEAR);
+            break;
         }
         switch (s.socketType) {
-        case Ispdb::SSL: t->setOption(QStringLiteral("UseSSL"), 1); break;
-        case Ispdb::StartTLS: t->setOption(QStringLiteral("UseTLS"), 1); break;
+        case Ispdb::SSL:
+            t->setOption(QStringLiteral("UseSSL"), 1);
+            break;
+        case Ispdb::StartTLS:
+            t->setOption(QStringLiteral("UseTLS"), 1);
+            break;
         case Ispdb::None:
-        default: t->setOption(QStringLiteral("UseTLS"), 1); break;
+        default:
+            t->setOption(QStringLiteral("UseTLS"), 1);
+            break;
         }
     }
 }
@@ -273,4 +327,3 @@ void PersonalDataPage::leavePageNextRequested()
 {
     // Q_DECL_OVERRIDE base class with doing nothing...
 }
-

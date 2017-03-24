@@ -36,16 +36,16 @@
 
 #include <QLocale>
 
-SetupManager::SetupManager(QWidget *parent) :
-    QObject(parent),
-    m_currentSetupObject(nullptr),
-    m_page(nullptr),
-    m_wallet(nullptr),
-    m_keyPublishingMethod(Key::NoPublishing),
-    m_personalDataAvailable(false),
-    m_rollbackRequested(false),
-    m_pgpAutoSign(false),
-    m_pgpAutoEncrypt(false)
+SetupManager::SetupManager(QWidget *parent)
+    : QObject(parent)
+    , m_currentSetupObject(nullptr)
+    , m_page(nullptr)
+    , m_wallet(nullptr)
+    , m_keyPublishingMethod(Key::NoPublishing)
+    , m_personalDataAvailable(false)
+    , m_rollbackRequested(false)
+    , m_pgpAutoSign(false)
+    , m_pgpAutoEncrypt(false)
 {
     KEMailSettings e;
     m_name = e.getSetting(KEMailSettings::RealName);
@@ -125,7 +125,9 @@ void SetupManager::execute()
     if (m_keyPublishingMethod != Key::NoPublishing) {
         auto key = qobject_cast<Key *>(createKey());
         auto it = std::find_if(m_setupObjects.cbegin(), m_setupObjects.cend(),
-                               [](SetupObject * obj) -> bool { return qobject_cast<Transport *>(obj); });
+                               [](SetupObject *obj) -> bool {
+            return qobject_cast<Transport *>(obj);
+        });
         if (it != m_setupObjects.cend()) {
             key->setDependsOn(*it);
         }
@@ -327,4 +329,3 @@ void SetupManager::requestRollback()
         }
     }
 }
-

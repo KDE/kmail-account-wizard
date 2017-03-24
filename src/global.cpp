@@ -59,7 +59,6 @@ void Global::setAssistant(const QString &assistant)
             list.reserve(fileNames.count());
             for (const QString &file : fileNames) {
                 list.append(fullPath + QLatin1Char('/') + file);
-
             }
         }
     }

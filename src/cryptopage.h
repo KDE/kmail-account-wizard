@@ -30,8 +30,7 @@ class Dialog;
 class SetupManager;
 class KeyGenerationJob;
 
-namespace QGpgME
-{
+namespace QGpgME {
 class Job;
 }
 
