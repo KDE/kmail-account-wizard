@@ -31,9 +31,9 @@
 #include <QStandardPaths>
 #include <QDir>
 
-TypePage::TypePage(KAssistantDialog *parent) :
-    Page(parent),
-    m_model(new QStandardItemModel(this))
+TypePage::TypePage(KAssistantDialog *parent)
+    : Page(parent)
+    , m_model(new QStandardItemModel(this))
 {
     ui.setupUi(this);
 
@@ -56,7 +56,6 @@ TypePage::TypePage(KAssistantDialog *parent) :
             list.reserve(fileNames.count());
             for (const QString &file : fileNames) {
                 list.append(fullPath + QLatin1Char('/') + file);
-
             }
         }
     }
@@ -132,4 +131,3 @@ QTreeView *TypePage::treeview() const
 {
     return ui.listView;
 }
-

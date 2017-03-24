@@ -19,7 +19,8 @@
 
 #include "setupobject.h"
 
-SetupObject::SetupObject(QObject *parent): QObject(parent), m_dependsOn(nullptr)
+SetupObject::SetupObject(QObject *parent) : QObject(parent)
+    , m_dependsOn(nullptr)
 {
 }
 
@@ -32,4 +33,3 @@ void SetupObject::setDependsOn(SetupObject *obj)
 {
     m_dependsOn = obj;
 }
-

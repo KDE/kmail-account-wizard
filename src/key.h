@@ -27,13 +27,11 @@
 #include <gpgme++/key.h>
 
 class KJob;
-namespace GpgME
-{
+namespace GpgME {
 class Error;
 }
 
-namespace QGpgME
-{
+namespace QGpgME {
 }
 
 class Key : public SetupObject
@@ -64,12 +62,8 @@ private:
     void publishPKS();
 
 private Q_SLOTS:
-    void onWKSPublishingCheckDone(const GpgME::Error &error,
-                                  const QByteArray &returnedData,
-                                  const QByteArray &returnedError);
-    void onWKSPublishingRequestCreated(const GpgME::Error &error,
-                                       const QByteArray &returnedData,
-                                       const QByteArray &returnedError);
+    void onWKSPublishingCheckDone(const GpgME::Error &error, const QByteArray &returnedData, const QByteArray &returnedError);
+    void onWKSPublishingRequestCreated(const GpgME::Error &error, const QByteArray &returnedData, const QByteArray &returnedError);
     void onWKSPublishingRequestSent(KJob *job);
 
     void onPKSPublishingFinished(int result, QProcess::ExitStatus status);

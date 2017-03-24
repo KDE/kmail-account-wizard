@@ -47,7 +47,7 @@ int main(int argc, char **argv)
                          KAboutLicense::LGPL,
                          i18n("(c) 2009-2017 the Akonadi developers"),
                          QStringLiteral("http://pim.kde.org/akonadi/"));
-    aboutData.addAuthor(i18n("Volker Krause"),  i18n("Author"), QStringLiteral("vkrause@kde.org"));
+    aboutData.addAuthor(i18n("Volker Krause"), i18n("Author"), QStringLiteral("vkrause@kde.org"));
     aboutData.addAuthor(i18n("Laurent Montel"), QString(), QStringLiteral("montel@kde.org"));
 
     app.setOrganizationDomain(QStringLiteral("kde.org"));

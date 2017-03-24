@@ -62,9 +62,8 @@ Q_SIGNALS:
 protected Q_SLOTS:
     void onIspdbFinished(bool);
 
-protected :
+protected:
     Ispdb *mIspdb;
-
 };
 
 #endif

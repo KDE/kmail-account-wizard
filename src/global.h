@@ -23,8 +23,7 @@
 #include <QUrl>
 #include <QStringList>
 
-namespace Global
-{
+namespace Global {
 QStringList typeFilter();
 void setTypeFilter(const QStringList &filter);
 void setPoFileName(const QString &poFileName);

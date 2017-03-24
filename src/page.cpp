@@ -21,11 +21,11 @@
 #include <kpagewidgetmodel.h>
 #include <kassistantdialog.h>
 
-Page::Page(KAssistantDialog *parent):
-    QWidget(parent),
-    m_item(nullptr),
-    m_parent(parent),
-    m_valid(false)
+Page::Page(KAssistantDialog *parent)
+    : QWidget(parent)
+    , m_item(nullptr)
+    , m_parent(parent)
+    , m_valid(false)
 {
 }
 
@@ -56,22 +56,18 @@ KAssistantDialog *Page::assistantDialog() const
 
 void Page::enterPageBack()
 {
-
 }
 
 void Page::enterPageNext()
 {
-
 }
 
 void Page::leavePageBack()
 {
-
 }
 
 void Page::leavePageNext()
 {
-
 }
 
 void Page::leavePageBackRequested()
@@ -83,4 +79,3 @@ void Page::leavePageNextRequested()
 {
     Q_EMIT leavePageNextOk();
 }
-

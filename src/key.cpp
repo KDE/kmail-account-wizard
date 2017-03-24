@@ -106,9 +106,7 @@ void Key::publishWKS()
     job->startCheck(m_mailbox);
 }
 
-void Key::onWKSPublishingCheckDone(const GpgME::Error &error,
-                                   const QByteArray &,
-                                   const QByteArray &returnedError)
+void Key::onWKSPublishingCheckDone(const GpgME::Error &error, const QByteArray &, const QByteArray &returnedError)
 {
     mJob = nullptr;
 
@@ -136,9 +134,7 @@ void Key::onWKSPublishingCheckDone(const GpgME::Error &error,
     job->startCreate(m_key.primaryFingerprint(), m_mailbox);
 }
 
-void Key::onWKSPublishingRequestCreated(const GpgME::Error &error,
-                                        const QByteArray &returnedData,
-                                        const QByteArray &returnedError)
+void Key::onWKSPublishingRequestCreated(const GpgME::Error &error, const QByteArray &returnedData, const QByteArray &returnedError)
 {
     mJob = nullptr;
 
@@ -157,7 +153,9 @@ void Key::onWKSPublishingRequestCreated(const GpgME::Error &error,
         const auto setupManager = qobject_cast<SetupManager *>(parent());
         const auto setupObjects = setupManager->setupObjects();
         auto it = std::find_if(setupObjects.cbegin(), setupObjects.cend(),
-                               [](SetupObject * obj) -> bool { return qobject_cast<Transport *>(obj);});
+                               [](SetupObject *obj) -> bool {
+            return qobject_cast<Transport *>(obj);
+        });
         if (it != setupObjects.cend()) {
             m_transportId = qobject_cast<Transport *>(*it)->transportId();
         }
@@ -240,7 +238,7 @@ void Key::publishPKS()
     const char *gpgName = GpgME::engineInfo(GpgME::OpenPGP).fileName();
     auto gpgProcess = new QProcess;
     gpgProcess->setProperty("keyServer", keyServer);
-    connect(gpgProcess, static_cast<void(QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished),
+    connect(gpgProcess, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished),
             this, &Key::onPKSPublishingFinished);
     mJob = gpgProcess;
     gpgProcess->start(QString::fromLatin1(gpgName), {

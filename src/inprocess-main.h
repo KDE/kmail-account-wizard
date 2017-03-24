@@ -35,4 +35,3 @@ public:
 public Q_SLOTS:
     void run(const QStringList &types, QWidget *parent);
 };
-

@@ -50,9 +50,8 @@ Q_SIGNALS:
 private Q_SLOTS:
     void onIspdbFinished(bool);
 
-private :
+private:
     AutoconfigKolabFreebusy *mIspdb;
-
 };
 
 #endif

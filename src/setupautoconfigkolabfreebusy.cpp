@@ -71,7 +71,7 @@ void SetupAutoconfigKolabFreebusy::fillFreebusyServer(int i, QObject *o) const
 
     QString group(QStringLiteral("FreeBusy Retrieve"));
 
-    korganizer->setConfig(group, QStringLiteral("FreeBusyFullDomainRetrieval"),  fullDomainRetrieval ? QStringLiteral("true") : QStringLiteral("false"));
+    korganizer->setConfig(group, QStringLiteral("FreeBusyFullDomainRetrieval"), fullDomainRetrieval ? QStringLiteral("true") : QStringLiteral("false"));
     korganizer->setConfig(group, QStringLiteral("FreeBusyRetrieveAuto"), QStringLiteral("true"));
     korganizer->setConfig(group, QStringLiteral("FreeBusyRetrieveUrl"), url);
     korganizer->setConfig(group, QStringLiteral("FreeBusyRetrieverUser"), isp.username);

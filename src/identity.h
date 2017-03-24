@@ -26,8 +26,7 @@
 
 class Transport;
 
-namespace KIdentityManagement
-{
+namespace KIdentityManagement {
 class Identity;
 }
 

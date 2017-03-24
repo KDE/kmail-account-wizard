@@ -26,12 +26,12 @@
 #include <kns3/downloadmanager.h>
 #include <KLocalizedString>
 
-ProviderPage::ProviderPage(KAssistantDialog *parent) :
-    Page(parent),
-    m_model(new QStandardItemModel(this)),
-    m_downloadManager(new KNS3::DownloadManager(this)),
-    m_newPageWanted(false),
-    m_newPageReady(false)
+ProviderPage::ProviderPage(KAssistantDialog *parent)
+    : Page(parent)
+    , m_model(new QStandardItemModel(this))
+    , m_downloadManager(new KNS3::DownloadManager(this))
+    , m_newPageWanted(false)
+    , m_newPageReady(false)
 {
     ui.setupUi(this);
 
@@ -102,14 +102,13 @@ void ProviderPage::leavePageNext()
     }
 
     const QSortFilterProxyModel *proxy = static_cast<const QSortFilterProxyModel *>(ui.listView->model());
-    const QStandardItem *item =  m_model->itemFromIndex(proxy->mapToSource(index));
+    const QStandardItem *item = m_model->itemFromIndex(proxy->mapToSource(index));
     qCDebug(ACCOUNTWIZARD_LOG) << "Item selected:" << item->text();
 
     // download and execute it...
     foreach (const KNS3::Entry &e, m_providerEntries) {
-        if (e.id() == item->data(Qt::UserRole) &&
-                e.providerId() == item->data(Qt::UserRole + 1)) {
-
+        if (e.id() == item->data(Qt::UserRole)
+            && e.providerId() == item->data(Qt::UserRole + 1)) {
             m_wantedProvider.entryId = e.id();
             m_wantedProvider.entryProviderId = e.providerId();
 
@@ -129,9 +128,9 @@ void ProviderPage::leavePageNext()
 void ProviderPage::providerStatusChanged(const KNS3::Entry &e)
 {
     qCDebug(ACCOUNTWIZARD_LOG) << e.name();
-    if (e.id() == m_wantedProvider.entryId &&
-            e.providerId() == m_wantedProvider.entryProviderId &&
-            e.status() == KNS3::Entry::Installed) {
+    if (e.id() == m_wantedProvider.entryId
+        && e.providerId() == m_wantedProvider.entryProviderId
+        && e.status() == KNS3::Entry::Installed) {
         findDesktopAndSetAssistant(e.installedFiles());
     }
 }
@@ -174,4 +173,3 @@ void ProviderPage::leavePageNextRequested()
         qCDebug(ACCOUNTWIZARD_LOG) << "New page requested, but we are not done yet...";
     }
 }
-
