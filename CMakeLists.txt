@@ -96,6 +96,7 @@ find_package( SharedMimeInfo REQUIRED )
 
 add_definitions( -DQT_NO_CAST_FROM_ASCII )
 add_definitions( -DQT_NO_CAST_TO_ASCII )
+add_definitions( -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT )
 
 # allow to disable GHNS support on resource-constrained systems
 option( ACCOUNTWIZARD_NO_GHNS "Disable GHNS support in the account wizard" FALSE )
