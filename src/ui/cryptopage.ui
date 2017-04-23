@@ -49,7 +49,7 @@
    <item>
     <widget class="QCheckBox" name="enableCryptoCheckBox">
      <property name="toolTip">
-      <string>When sending mails KMail automatically looks for encryption keys of your recipients and secures the mail when keys for each recipient can be found. It also signs your mails cryptographically so that it can be verified that your messages have not been tampered with.</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When sending mails KMail automatically looks for encryption keys of your recipients and secures the mail when keys for each recipient can be found.&lt;/p&gt;&lt;p&gt;It also signs your mails cryptographically so that it can be verified that your messages have not been tampered with.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="text">
       <string>Secure outgoing emails, if possible</string>
