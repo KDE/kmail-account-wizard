@@ -57,7 +57,7 @@ void LoadPage::enterPageNext()
 
     m_action = new Kross::Action(this, QStringLiteral("AccountWizard"));
     typedef QPair<QObject *, QString> ObjectStringPair;
-    foreach (const ObjectStringPair &exportedObject, m_exportedObjects) {
+    for (const ObjectStringPair &exportedObject : qAsConst(m_exportedObjects)) {
         m_action->addQObject(exportedObject.first, exportedObject.second);
     }
 
