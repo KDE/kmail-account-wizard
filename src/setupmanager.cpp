@@ -139,7 +139,7 @@ void SetupManager::execute()
 
     // ### FIXME this is a bad over-simplification and would need a real topological sort
     // but for current usage it is good enough
-    qStableSort(m_objectToSetup.begin(), m_objectToSetup.end(), dependencyCompare);
+    std::stable_sort(m_objectToSetup.begin(), m_objectToSetup.end(), dependencyCompare);
     setupNext();
 }
 

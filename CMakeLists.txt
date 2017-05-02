@@ -109,6 +109,7 @@ configure_file(src/config-enterprise.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/src/con
 if ( ACCOUNTWIZARD_NO_GHNS )
     add_definitions( -DACCOUNTWIZARD_NO_GHNS )
 endif ()
+add_definitions( -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 )
 
 
 
