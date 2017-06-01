@@ -94,9 +94,9 @@ find_package(KF5NewStuff ${KF5_VERSION} CONFIG REQUIRED)
 set( SHARED_MIME_INFO_MINIMUM_VERSION "0.40" )
 find_package( SharedMimeInfo REQUIRED )
 
-add_definitions( -DQT_NO_CAST_FROM_ASCII )
-add_definitions( -DQT_NO_CAST_TO_ASCII )
-add_definitions( -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT )
+add_definitions(-DQT_NO_CAST_FROM_ASCII)
+add_definitions(-DQT_NO_CAST_TO_ASCII)
+add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
 
 # allow to disable GHNS support on resource-constrained systems
 option( ACCOUNTWIZARD_NO_GHNS "Disable GHNS support in the account wizard" FALSE )
@@ -109,7 +109,7 @@ configure_file(src/config-enterprise.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/src/con
 if ( ACCOUNTWIZARD_NO_GHNS )
     add_definitions( -DACCOUNTWIZARD_NO_GHNS )
 endif ()
-add_definitions( -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 )
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
 
 
 
