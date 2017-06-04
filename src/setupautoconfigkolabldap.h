@@ -32,8 +32,8 @@ public:
     explicit SetupAutoconfigKolabLdap(QObject *parent = nullptr);
     ~SetupAutoconfigKolabLdap();
 
-    void create() Q_DECL_OVERRIDE;
-    void destroy() Q_DECL_OVERRIDE;
+    void create() override;
+    void destroy() override;
 
 public Q_SLOTS:
     Q_SCRIPTABLE void fillLdapServer(int i, QObject *) const;

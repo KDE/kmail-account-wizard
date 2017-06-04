@@ -47,7 +47,7 @@ public:
         delete mConfig;
     }
 
-    KConfig *config() const Q_DECL_OVERRIDE
+    KConfig *config() const override
     {
         mConfig->reparseConfiguration();
         return mConfig;

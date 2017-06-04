@@ -31,7 +31,7 @@ class TypePage : public Page
 public:
     explicit TypePage(KAssistantDialog *parent = nullptr);
 
-    void leavePageNext() Q_DECL_OVERRIDE;
+    void leavePageNext() override;
     QTreeView *treeview() const;
 
 Q_SIGNALS:

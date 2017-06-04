@@ -325,5 +325,5 @@ void PersonalDataPage::automaticConfigureAccount()
 
 void PersonalDataPage::leavePageNextRequested()
 {
-    // Q_DECL_OVERRIDE base class with doing nothing...
+    // override base class with doing nothing...
 }

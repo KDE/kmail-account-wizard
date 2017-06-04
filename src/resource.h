@@ -31,8 +31,8 @@ class Resource : public SetupObject
     Q_OBJECT
 public:
     explicit Resource(const QString &type, QObject *parent = nullptr);
-    void create() Q_DECL_OVERRIDE;
-    void destroy() Q_DECL_OVERRIDE;
+    void create() override;
+    void destroy() override;
     void edit();
 
 public Q_SLOTS:

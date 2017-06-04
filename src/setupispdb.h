@@ -34,8 +34,8 @@ public:
     SetupIspdb(QObject *parent, Ispdb *ispdb);
     ~SetupIspdb();
 
-    void create() Q_DECL_OVERRIDE;
-    void destroy() Q_DECL_OVERRIDE;
+    void create() override;
+    void destroy() override;
 
 public Q_SLOTS:
     Q_SCRIPTABLE QStringList relevantDomains() const;

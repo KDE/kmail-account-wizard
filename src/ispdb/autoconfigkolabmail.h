@@ -28,7 +28,7 @@ public:
     /** Constructor */
     explicit AutoconfigKolabMail(QObject *parent = nullptr);
 
-    void startJob(const QUrl &url) Q_DECL_OVERRIDE;
+    void startJob(const QUrl &url) override;
 
 private Q_SLOTS:
     void slotResult(KJob *);

@@ -41,8 +41,8 @@ class CryptoPage : public Page
 public:
     explicit CryptoPage(Dialog *parent);
 
-    void enterPageNext() Q_DECL_OVERRIDE;
-    void leavePageNext() Q_DECL_OVERRIDE;
+    void enterPageNext() override;
+    void leavePageNext() override;
 
 private Q_SLOTS:
     void customItemSelected(const QVariant &data);

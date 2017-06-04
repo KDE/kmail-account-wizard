@@ -36,8 +36,8 @@ class Ldap : public SetupObject
 public:
     explicit Ldap(QObject *parent = nullptr);
     ~Ldap();
-    void create() Q_DECL_OVERRIDE;
-    void destroy() Q_DECL_OVERRIDE;
+    void create() override;
+    void destroy() override;
     void edit();
 public Q_SLOTS:
     Q_SCRIPTABLE void setUser(const QString &name);

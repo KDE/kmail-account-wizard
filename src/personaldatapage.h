@@ -37,8 +37,8 @@ public:
     explicit PersonalDataPage(Dialog *parent = nullptr);
     void setHideOptionInternetSearch(bool);
 
-    void leavePageNext() Q_DECL_OVERRIDE;
-    void leavePageNextRequested() Q_DECL_OVERRIDE;
+    void leavePageNext() override;
+    void leavePageNextRequested() override;
 
 private Q_SLOTS:
     void ispdbSearchFinished(bool ok);

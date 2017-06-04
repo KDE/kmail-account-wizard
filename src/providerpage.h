@@ -42,9 +42,9 @@ class ProviderPage : public Page
 public:
     explicit ProviderPage(KAssistantDialog *parent = nullptr);
 
-    void leavePageNext() Q_DECL_OVERRIDE;
-    void leavePageNextRequested() Q_DECL_OVERRIDE;
-    void leavePageBackRequested() Q_DECL_OVERRIDE;
+    void leavePageNext() override;
+    void leavePageNextRequested() override;
+    void leavePageBackRequested() override;
 
     QTreeView *treeview() const;
 

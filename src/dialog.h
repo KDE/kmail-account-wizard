@@ -32,8 +32,8 @@ class Dialog : public KAssistantDialog
 public:
     explicit Dialog(QWidget *parent = nullptr);
 
-    void next() Q_DECL_OVERRIDE;
-    void back() Q_DECL_OVERRIDE;
+    void next() override;
+    void back() override;
 
     // give room for certain pages to create objects too.
     SetupManager *setupManager();
@@ -41,7 +41,7 @@ public:
 public Q_SLOTS:
     Q_SCRIPTABLE QObject *addPage(const QString &uiFile, const QString &title);
 
-    void reject() Q_DECL_OVERRIDE;
+    void reject() override;
 
 private Q_SLOTS:
     void slotNextPage();

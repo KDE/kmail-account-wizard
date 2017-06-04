@@ -32,8 +32,8 @@ public:
     explicit SetupAutoconfigKolabFreebusy(QObject *parent = nullptr);
     ~SetupAutoconfigKolabFreebusy();
 
-    void create() Q_DECL_OVERRIDE;
-    void destroy() Q_DECL_OVERRIDE;
+    void create() override;
+    void destroy() override;
 
 public Q_SLOTS:
     Q_SCRIPTABLE void fillFreebusyServer(int i, QObject *) const;
