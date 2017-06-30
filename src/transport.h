@@ -50,7 +50,6 @@ private:
 
 private:
     int m_transportId;
-    MailTransport::Transport::EnumType::type m_transportType;
     QString m_name;
     QString m_host;
     int m_port;

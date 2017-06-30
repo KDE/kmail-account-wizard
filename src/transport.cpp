@@ -32,12 +32,6 @@ struct StringValueTable {
     typedef typename T::type value_type;
 };
 
-static const StringValueTable<MailTransport::Transport::EnumType> transportTypeEnums[] = {
-    { "smtp", MailTransport::Transport::EnumType::SMTP },
-    { "akonadi", MailTransport::Transport::EnumType::Akonadi }
-};
-static const int transportTypeEnumsSize = sizeof(transportTypeEnums) / sizeof(*transportTypeEnums);
-
 static const StringValueTable<MailTransport::Transport::EnumEncryption> encryptionEnum[] = {
     { "none", MailTransport::Transport::EnumEncryption::None },
     { "ssl", MailTransport::Transport::EnumEncryption::SSL },
@@ -78,8 +72,7 @@ Transport::Transport(const QString &type, QObject *parent)
     , m_auth(MailTransport::Transport::EnumAuthenticationType::PLAIN)
     , m_editMode(false)
 {
-    m_transportType = stringToValue(transportTypeEnums, transportTypeEnumsSize, type);
-    if (m_transportType == MailTransport::Transport::EnumType::SMTP) {
+    if (type == QLatin1String("smtp")) {
         m_port = 25;
     }
 }
@@ -125,7 +118,7 @@ void Transport::edit()
     if (!mt) {
         Q_EMIT error(i18n("Could not load config dialog for UID '%1'", m_transportId));
     } else {
-        MailTransport::TransportManager::self()->configureTransport(mt, nullptr);
+        MailTransport::TransportManager::self()->configureTransport(mt->identifier(), mt, nullptr);
     }
 }
 
