@@ -89,7 +89,7 @@ find_package(Qt5UiTools ${QT_REQUIRED_VERSION} CONFIG REQUIRED)
 find_package(KF5Kross ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5NewStuff ${KF5_VERSION} CONFIG REQUIRED)
 
-set( SHARED_MIME_INFO_MINIMUM_VERSION "0.40" )
+set( SHARED_MIME_INFO_MINIMUM_VERSION "1.0" )
 find_package( SharedMimeInfo REQUIRED )
 
 add_definitions(-DQT_NO_CAST_FROM_ASCII)
