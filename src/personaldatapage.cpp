@@ -61,7 +61,7 @@ PersonalDataPage::PersonalDataPage(Dialog *parent)
     connect(ui.emailEdit, &QLineEdit::textChanged, this, &PersonalDataPage::slotTextChanged);
     connect(ui.nameEdit, &QLineEdit::textChanged, this, &PersonalDataPage::slotTextChanged);
     connect(ui.createAccountPb, &QPushButton::clicked, this, &PersonalDataPage::slotCreateAccountClicked);
-    connect(ui.buttonGroup, static_cast<void (QButtonGroup::*)(QAbstractButton *)>(&QButtonGroup::buttonClicked), this, &PersonalDataPage::slotRadioButtonClicked);
+    connect(ui.buttonGroup, QOverload<QAbstractButton *>::of(&QButtonGroup::buttonClicked), this, &PersonalDataPage::slotRadioButtonClicked);
 #ifdef KDEPIM_ENTERPRISE_BUILD
     ui.checkOnlineGroupBox->setChecked(false);
 #endif
