@@ -3,7 +3,7 @@ add_definitions (-DTEST_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data")
 add_definitions (-DCURRENT_SOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}")
 
 add_executable(ldaptest ldaptest.cpp ../ldap.cpp ../setupobject.cpp)
-add_test(ldaptest ldaptest)
+add_test(NAME ldaptest COMMAND ldaptest)
 ecm_mark_as_test(ldaptest)
 
 target_link_libraries(ldaptest
