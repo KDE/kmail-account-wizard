@@ -66,7 +66,7 @@ private:
     Key::PublishingMethod currentPublishingMethod() const;
 
     Ui::CryptoPage ui;
-    SetupManager *mSetupManager;
+    SetupManager *mSetupManager = nullptr;
     QPointer<KeyGenerationJob> mKeyGenerationJob;
 };
 

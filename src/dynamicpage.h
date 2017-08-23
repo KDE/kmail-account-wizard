@@ -33,7 +33,7 @@ public Q_SLOTS:
     Q_SCRIPTABLE QObject *widget() const;
 
 private:
-    QWidget *m_dynamicWidget;
+    QWidget *m_dynamicWidget = nullptr;
 };
 
 #endif

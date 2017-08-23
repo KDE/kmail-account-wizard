@@ -195,7 +195,6 @@ struct Server {
 
 struct identity {
     identity()
-        : mDefault(false)
     {
     }
 
@@ -213,7 +212,7 @@ struct identity {
     QString name;
     QString organization;
     QString signature;
-    bool mDefault;
+    bool mDefault = false;
 };
 
 #endif

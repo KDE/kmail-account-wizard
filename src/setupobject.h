@@ -40,7 +40,7 @@ Q_SIGNALS:
     void finished(const QString &msg);
 
 private:
-    SetupObject *m_dependsOn;
+    SetupObject *m_dependsOn = nullptr;
 };
 
 #endif

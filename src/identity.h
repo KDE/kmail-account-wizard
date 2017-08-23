@@ -58,7 +58,7 @@ protected:
 
 private:
     QString m_identityName;
-    KIdentityManagement::Identity *m_identity;
+    KIdentityManagement::Identity *m_identity = nullptr;
 };
 
 #endif

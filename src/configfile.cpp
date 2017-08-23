@@ -27,7 +27,6 @@
 
 ConfigFile::ConfigFile(const QString &configName, QObject *parent)
     : SetupObject(parent)
-    , m_editMode(false)
 {
     m_name = configName;
     m_config = new KConfig(configName);

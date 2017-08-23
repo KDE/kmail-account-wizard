@@ -51,7 +51,7 @@ private Q_SLOTS:
     void onIspdbFinished(bool);
 
 private:
-    AutoconfigKolabFreebusy *mIspdb;
+    AutoconfigKolabFreebusy *mIspdb = nullptr;
 };
 
 #endif

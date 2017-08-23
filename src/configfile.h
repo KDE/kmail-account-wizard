@@ -50,9 +50,9 @@ public Q_SLOTS:
 private:
     QVector<Config> m_configData;
     QString m_name;
-    KConfig *m_config;
+    KConfig *m_config = nullptr;
     QString m_editName;
-    bool m_editMode;
+    bool m_editMode = false;
 };
 
 #endif

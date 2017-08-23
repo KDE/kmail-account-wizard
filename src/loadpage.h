@@ -45,7 +45,7 @@ Q_SIGNALS:
 private:
     Ui::LoadPage ui;
     QVector< QPair< QObject *, QString > > m_exportedObjects;
-    Kross::Action *m_action;
+    Kross::Action *m_action = nullptr;
 };
 
 #endif

@@ -89,9 +89,9 @@ private:
     QString m_name, m_email, m_password;
     QList<SetupObject *> m_objectToSetup;
     QList<SetupObject *> m_setupObjects;
-    SetupObject *m_currentSetupObject;
-    SetupPage *m_page;
-    KWallet::Wallet *m_wallet;
+    SetupObject *m_currentSetupObject = nullptr;
+    SetupPage *m_page = nullptr;
+    KWallet::Wallet *m_wallet = nullptr;
     GpgME::Key m_key;
     Key::PublishingMethod m_keyPublishingMethod;
     bool m_personalDataAvailable;

@@ -63,9 +63,9 @@ private:
     void findDesktopAndSetAssistant(const QStringList &list);
 
     Ui::ProviderPage ui;
-    QStandardItemModel *m_model;
-    QStandardItem *m_fetchItem;
-    KNS3::DownloadManager *m_downloadManager;
+    QStandardItemModel *m_model = nullptr;
+    QStandardItem *m_fetchItem = nullptr;
+    KNS3::DownloadManager *m_downloadManager = nullptr;
     KNS3::Entry::List m_providerEntries;
     Provider m_wantedProvider;
     bool m_newPageWanted;

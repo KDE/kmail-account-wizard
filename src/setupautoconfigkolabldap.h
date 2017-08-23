@@ -51,7 +51,7 @@ private Q_SLOTS:
     void onIspdbFinished(bool);
 
 private:
-    AutoconfigKolabLdap *mIspdb;
+    AutoconfigKolabLdap *mIspdb = nullptr;
 };
 
 #endif

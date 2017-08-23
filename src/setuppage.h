@@ -46,7 +46,7 @@ private Q_SLOTS:
 
 private:
     Ui::SetupPage ui;
-    QStandardItemModel *m_msgModel;
+    QStandardItemModel *m_msgModel = nullptr;
 };
 
 #endif

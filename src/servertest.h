@@ -48,7 +48,7 @@ private Q_SLOTS:
     void testFinished(const QVector<int> &list);
 
 private:
-    MailTransport::ServerTest *m_serverTest;
+    MailTransport::ServerTest *m_serverTest = nullptr;
 };
 
 #endif

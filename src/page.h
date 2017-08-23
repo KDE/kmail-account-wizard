@@ -55,12 +55,12 @@ public Q_SLOTS:
     Q_SCRIPTABLE void nextPage();
 
 protected:
-    KPageWidgetItem *m_item;
-    KAssistantDialog *m_parent;
+    KPageWidgetItem *m_item = nullptr;
+    KAssistantDialog *m_parent = nullptr;
 
 private:
     friend class Dialog;
-    bool m_valid;
+    bool m_valid = false;
 };
 
 #endif // PAGE_H

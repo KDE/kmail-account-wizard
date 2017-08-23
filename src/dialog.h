@@ -59,11 +59,11 @@ private:
     KPageWidgetItem *addPage(Page *page, const QString &title);
 
 private:
-    SetupManager *mSetupManager;
-    KPageWidgetItem *mLastPage;
-    KPageWidgetItem *mProviderPage;
-    KPageWidgetItem *mTypePage;
-    KPageWidgetItem *mLoadPage;
+    SetupManager *mSetupManager = nullptr;
+    KPageWidgetItem *mLastPage = nullptr;
+    KPageWidgetItem *mProviderPage = nullptr;
+    KPageWidgetItem *mTypePage = nullptr;
+    KPageWidgetItem *mLoadPage = nullptr;
     QVector<KPageWidgetItem *> mDynamicPages;
 };
 

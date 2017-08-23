@@ -57,8 +57,8 @@ private:
     void configurePop3Account();
 
     Ui::PersonalDataPage ui;
-    Ispdb *mIspdb;
-    SetupManager *mSetupManager;
+    Ispdb *mIspdb = nullptr;
+    SetupManager *mSetupManager = nullptr;
 };
 
 #endif

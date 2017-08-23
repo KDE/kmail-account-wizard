@@ -63,7 +63,7 @@ protected Q_SLOTS:
     void onIspdbFinished(bool);
 
 protected:
-    Ispdb *mIspdb;
+    Ispdb *mIspdb = nullptr;
 };
 
 #endif

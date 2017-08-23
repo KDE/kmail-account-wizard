@@ -41,7 +41,7 @@ private Q_SLOTS:
     void selectionChanged();
 private:
     Ui::TypePage ui;
-    QStandardItemModel *m_model;
+    QStandardItemModel *m_model = nullptr;
 };
 
 #endif
