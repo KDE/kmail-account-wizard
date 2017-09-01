@@ -335,7 +335,7 @@ public:
 
 private:
     QString mFile;
-    QGpgME::Job *mJob;
+    QGpgME::Job *mJob = nullptr;
 };
 
 CryptoPage::CryptoPage(Dialog *parent)

@@ -59,7 +59,7 @@ public Q_SLOTS:
 protected:
     virtual KConfig *config() const;
 
-    KLDAP::LdapClientSearchConfig *m_clientSearchConfig;
+    KLDAP::LdapClientSearchConfig *m_clientSearchConfig = nullptr;
 private:
     friend class LdapTest;
     QString securityString();

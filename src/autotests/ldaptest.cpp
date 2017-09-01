@@ -54,7 +54,7 @@ public:
     }
 
     QTemporaryFile mTempFile;
-    KConfig *mConfig;
+    KConfig *mConfig = nullptr;
 };
 
 class LdapTest : public QObject
