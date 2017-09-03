@@ -1,6 +1,7 @@
-project(kmail-account-wizard)
-
+set(KDEPIM_VERSION_NUMBER "5.6.40")
 cmake_minimum_required(VERSION 3.1)
+project(kmail-account-wizard VERSION ${KDEPIM_VERSION_NUMBER})
+
 
 set(LIBRARY_NAMELINK LIBRARY NAMELINK_SKIP)
 
@@ -42,7 +43,6 @@ if(DEFINED KDEPIM_DEV_VERSION)
 endif()
 
 
-set(KDEPIM_VERSION_NUMBER "5.6.40")
 set(KDEPIM_VERSION "${KDEPIM_VERSION_NUMBER}${KDEPIM_DEV_VERSION}")
 
 set(AKONADI_MIMELIB_VERSION "5.6.40")
