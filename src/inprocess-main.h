@@ -21,7 +21,6 @@
 #include "global.h"
 
 #include <QObject>
-#include <QtPlugin>
 #include <QStringList>
 
 class AccountWizard : public QObject

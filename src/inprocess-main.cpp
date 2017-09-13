@@ -22,7 +22,6 @@
 #include "global.h"
 
 #include <QObject>
-#include <QtPlugin>
 #include <QStringList>
 
 AccountWizard::AccountWizard(QObject *parent)

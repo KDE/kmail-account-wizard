@@ -18,7 +18,6 @@
 */
 
 #include <QObject>
-#include <QDir>
 #include <QProcess>
 #include <QTest>
 #include <QTcpSocket>
