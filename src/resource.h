@@ -42,14 +42,13 @@ public Q_SLOTS:
     Q_SCRIPTABLE void reconfigure();
     Q_SCRIPTABLE void setEditMode(const bool editMode);
 
-private Q_SLOTS:
+private:
     void instanceCreateResult(KJob *job);
 
-private:
     QString m_typeIdentifier, m_name;
     QMap<QString, QVariant> m_settings;
     Akonadi::AgentInstance m_instance;
 
-    bool m_editMode;
+    bool m_editMode = false;
 };
 #endif

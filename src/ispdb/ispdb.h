@@ -96,7 +96,7 @@ public Q_SLOTS:
     /** Starts looking up the servers which belong to the e-mailaddress */
     void start();
 
-private Q_SLOTS:
+private:
     void slotResult(KJob *);
 
 Q_SIGNALS:

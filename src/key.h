@@ -61,7 +61,6 @@ private:
     void publishWKS();
     void publishPKS();
 
-private Q_SLOTS:
     void onWKSPublishingCheckDone(const GpgME::Error &error, const QByteArray &returnedData, const QByteArray &returnedError);
     void onWKSPublishingRequestCreated(const GpgME::Error &error, const QByteArray &returnedData, const QByteArray &returnedError);
     void onWKSPublishingRequestSent(KJob *job);

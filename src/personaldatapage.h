@@ -40,17 +40,15 @@ public:
     void leavePageNext() override;
     void leavePageNextRequested() override;
 
-private Q_SLOTS:
+Q_SIGNALS:
+    void manualWanted(bool);
+
+private:
     void ispdbSearchFinished(bool ok);
     void slotTextChanged();
     void slotCreateAccountClicked();
     void slotRadioButtonClicked(QAbstractButton *button);
     void slotSearchType(const QString &);
-
-Q_SIGNALS:
-    void manualWanted(bool);
-
-private:
     void automaticConfigureAccount();
     void configureSmtpAccount();
     void configureImapAccount();

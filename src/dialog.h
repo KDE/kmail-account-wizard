@@ -43,7 +43,7 @@ public Q_SLOTS:
 
     void reject() override;
 
-private Q_SLOTS:
+private:
     void slotNextPage();
 #ifndef ACCOUNTWIZARD_NO_GHNS
     void slotGhnsWanted();

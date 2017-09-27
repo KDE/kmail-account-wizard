@@ -30,7 +30,7 @@ public:
 
     void startJob(const QUrl &url) override;
 
-private Q_SLOTS:
+private:
     void slotResult(KJob *);
 };
 

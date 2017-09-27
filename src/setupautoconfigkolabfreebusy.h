@@ -47,10 +47,9 @@ public Q_SLOTS:
 Q_SIGNALS:
     void ispdbFinished(bool);
 
-private Q_SLOTS:
+private:
     void onIspdbFinished(bool);
 
-private:
     AutoconfigKolabFreebusy *mIspdb = nullptr;
 };
 

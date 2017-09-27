@@ -54,12 +54,12 @@ Q_SIGNALS:
 public Q_SLOTS:
     void startFetchingData();
 
-private Q_SLOTS:
+private:
     void fillModel(const KNS3::Entry::List &);
     void selectionChanged();
     void providerStatusChanged(const KNS3::Entry &);
 
-private:
+
     void findDesktopAndSetAssistant(const QStringList &list);
 
     Ui::ProviderPage ui;

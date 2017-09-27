@@ -41,10 +41,8 @@ public:
     void setStatus(const QString &msg);
     void setProgress(int percent);
 
-private Q_SLOTS:
-    void detailsClicked();
-
 private:
+    void detailsClicked();
     Ui::SetupPage ui;
     QStandardItemModel *m_msgModel = nullptr;
 };

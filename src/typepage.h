@@ -37,9 +37,9 @@ public:
 Q_SIGNALS:
     void ghnsWanted();
 
-private Q_SLOTS:
-    void selectionChanged();
 private:
+    void selectionChanged();
+
     Ui::TypePage ui;
     QStandardItemModel *m_model = nullptr;
 };
