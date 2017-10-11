@@ -54,8 +54,6 @@ int main(int argc, char **argv)
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("kontact")));
     QCommandLineParser parser;
     KAboutData::setApplicationData(aboutData);
-    parser.addVersionOption();
-    parser.addHelpOption();
     parser.addOption(QCommandLineOption(QStringList() <<  QStringLiteral("type"), i18n("Only offer accounts that support the given type."), QStringLiteral("type")));
     parser.addOption(QCommandLineOption(QStringList() <<  QStringLiteral("assistant"), i18n("Run the specified assistant."), QStringLiteral("assistant")));
     parser.addOption(QCommandLineOption(QStringList() <<  QStringLiteral("package"), i18n("unpack fullpath on startup and launch that assistant"), QStringLiteral("fullpath")));

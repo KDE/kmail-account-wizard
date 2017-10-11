@@ -88,8 +88,6 @@ int main(int argc, char **argv)
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("akonadi")));
     QCommandLineParser parser;
     KAboutData::setApplicationData(aboutData);
-    parser.addVersionOption();
-    parser.addHelpOption();
     aboutData.setupCommandLine(&parser);
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("email"), i18n("Tries to fetch the settings for that email address"), QStringLiteral("emailaddress")));
 
