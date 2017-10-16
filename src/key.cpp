@@ -106,18 +106,18 @@ void Key::publishWKS()
     job->startCheck(m_mailbox);
 }
 
-void Key::onWKSPublishingCheckDone(const GpgME::Error &error, const QByteArray &, const QByteArray &returnedError)
+void Key::onWKSPublishingCheckDone(const GpgME::Error &gpgMeError, const QByteArray &, const QByteArray &returnedError)
 {
     mJob = nullptr;
 
-    if (error) {
-        if (error.isCanceled()) {
-            Q_EMIT this->error(i18n("Key publishing was canceled."));
+    if (gpgMeError) {
+        if (gpgMeError.isCanceled()) {
+            Q_EMIT error(i18n("Key publishing was canceled."));
             return;
         }
 
         qCWarning(ACCOUNTWIZARD_LOG) << "Check error:" << returnedError;
-        if (error.code() == GPG_ERR_NOT_SUPPORTED) {
+        if (gpgMeError.code() == GPG_ERR_NOT_SUPPORTED) {
             Q_EMIT info(i18n("Key publishing failed: not online, or GnuPG too old."));
             Q_EMIT finished(QString());
         } else {
@@ -134,18 +134,18 @@ void Key::onWKSPublishingCheckDone(const GpgME::Error &error, const QByteArray &
     job->startCreate(m_key.primaryFingerprint(), m_mailbox);
 }
 
-void Key::onWKSPublishingRequestCreated(const GpgME::Error &error, const QByteArray &returnedData, const QByteArray &returnedError)
+void Key::onWKSPublishingRequestCreated(const GpgME::Error &gpgMeError, const QByteArray &returnedData, const QByteArray &returnedError)
 {
     mJob = nullptr;
 
-    if (error) {
-        if (error.isCanceled()) {
-            Q_EMIT this->error(i18n("Key publishing was canceled."));
+    if (gpgMeError) {
+        if (gpgMeError.isCanceled()) {
+            Q_EMIT error(i18n("Key publishing was canceled."));
             return;
         }
 
         qCWarning(ACCOUNTWIZARD_LOG) << "Publishing error:" << returnedData << returnedError;
-        Q_EMIT this->error(i18n("An error occurred while creating key publishing request."));
+        Q_EMIT error(i18n("An error occurred while creating key publishing request."));
         return;
     }
 
@@ -169,7 +169,7 @@ void Key::onWKSPublishingRequestCreated(const GpgME::Error &error, const QByteAr
     auto transport = MailTransport::TransportManager::self()->transportById(m_transportId, true);
     if (!transport) {
         qCWarning(ACCOUNTWIZARD_LOG) << "No MailTransport::Transport available?!?!?!";
-        Q_EMIT this->error(i18n("Key publishing error: mail transport is not configured"));
+        Q_EMIT error(i18n("Key publishing error: mail transport is not configured"));
         return;
     }
 
@@ -182,7 +182,7 @@ void Key::onWKSPublishingRequestCreated(const GpgME::Error &error, const QByteAr
 
     if (!msg->from(false) || !msg->to(false)) {
         qCWarning(ACCOUNTWIZARD_LOG) << "No FROM or TO in parsed message, source data were:" << returnedData;
-        Q_EMIT this->error(i18n("Key publishing error: failed to create request email"));
+        Q_EMIT error(i18n("Key publishing error: failed to create request email"));
         return;
     }
 

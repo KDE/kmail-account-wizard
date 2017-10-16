@@ -68,7 +68,7 @@ private:
     void onPKSPublishingFinished(int result, QProcess::ExitStatus status);
 
 private:
-    int m_transportId;
+    int m_transportId = 0;
     GpgME::Key m_key;
     QString m_mailbox;
     QPointer<QObject> mJob;
