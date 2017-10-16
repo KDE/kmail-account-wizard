@@ -223,7 +223,7 @@ private Q_SLOTS:
         keyObj->setPublishingMethod(mPublishingMethod);
         keyObj->setMailBox(mEmail);
         keyObj->setTransportId(mTransportId);
-        connect(keyObj, &Key::error,
+        connect(keyObj, &Key::error, this,
                 [this](const QString &msg) {
             KNotification::event(KNotification::Error, i18n("Account Wizard"),
                                  msg, QStringLiteral("akonadi"));
