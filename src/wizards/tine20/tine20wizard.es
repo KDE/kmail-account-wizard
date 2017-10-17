@@ -26,7 +26,7 @@ var userChangedServerAddress = false;
 
 page.widget().nameEdit.text = SetupManager.name()
 page.widget().emailEdit.text = SetupManager.email()
-page.widget().passwordEdit.text = SetupManager.password()
+page.widget().passwordEdit.password = SetupManager.password()
 guessServerName();
 
 if ( SetupManager.personalDataAvailable() ) {
@@ -105,7 +105,7 @@ function setup()
     smtp.setEncryption( "TLS" );
     smtp.setAuthenticationType( "plain" );
     smtp.setUsername( page.widget().emailEdit.text );
-    smtp.setPassword( page.widget().passwordEdit.text );
+    smtp.setPassword( page.widget().passwordEdit.password );
     identity.setTransport( smtp );
 
     var dav = SetupManager.createResource( "akonadi_davgroupware_resource" );
@@ -137,7 +137,7 @@ function testOk( arg )
     imapRes.setName( page.widget().serverAddress.text.trim() );
     imapRes.setOption( "ImapServer", page.widget().serverAddress.text.trim() );
     imapRes.setOption( "UserName", page.widget().emailEdit.text.trim() );
-    imapRes.setOption( "Password", page.widget().passwordEdit.text.trim() );
+    imapRes.setOption( "Password", page.widget().passwordEdit.password.trim() );
     imapRes.setOption( "UseDefaultIdentity", false );
     imapRes.setOption( "AccountIdentity", identity.uoid() );
     imapRes.setOption( "DisconnectedModeEnabled", true );
