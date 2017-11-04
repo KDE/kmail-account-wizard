@@ -41,7 +41,6 @@ private:
     ldapServer createLdapServer(const QDomElement &n);
 
     QHash<QString, ldapServer> mLdapServers;
-
 };
 
 struct ldapServer {
@@ -55,6 +54,7 @@ struct ldapServer {
         , sizeLimit(-1)
     {
     }
+
     bool isValid() const;
     QString hostname;
     QString bindDn;

@@ -81,18 +81,15 @@ QUrl Ispdb::lookupUrl(const QString &type, const QString &version, bool auth, bo
     QUrl url;
     const QString path = type + QStringLiteral("/config-v") + version + QStringLiteral(".xml");
     switch (mServerType) {
-    case IspAutoConfig: {
+    case IspAutoConfig:
         url = QUrl(QStringLiteral("http://autoconfig.") + mAddr.domain.toLower() + QLatin1Char('/') + path);
         break;
-    }
-    case IspWellKnow: {
+    case IspWellKnow:
         url = QUrl(QStringLiteral("http://") + mAddr.domain.toLower() + QStringLiteral("/.well-known/autoconfig/") + path);
         break;
-    }
-    case DataBase: {
+    case DataBase:
         url = QUrl(QStringLiteral("https://autoconfig.thunderbird.net/v1.1/") + mAddr.domain.toLower());
         break;
-    }
     }
     if (mServerType != DataBase) {
         if (crypt) {
@@ -114,18 +111,15 @@ void Ispdb::slotResult(KJob *job)
         bool lookupFinished = false;
 
         switch (mServerType) {
-        case IspAutoConfig: {
+        case IspAutoConfig:
             mServerType = IspWellKnow;
             break;
-        }
-        case IspWellKnow: {
+        case IspWellKnow:
             lookupFinished = true;
             break;
-        }
-        case DataBase: {
+        case DataBase:
             mServerType = IspAutoConfig;
             break;
-        }
         }
 
         if (lookupFinished) {
@@ -162,7 +156,6 @@ void Ispdb::parseResult(const QDomDocument &document)
     QDomNode firstProvider = l.at(0);
     QDomNode n = firstProvider.firstChild();
     while (!n.isNull()) {
-
         QDomElement e = n.toElement();
         if (!e.isNull()) {
             //qCDebug(ACCOUNTWIZARD_LOG)  << qPrintable(e.tagName());
@@ -252,7 +245,7 @@ Server Ispdb::createServer(const QDomElement &n)
             } else if (tagName == QLatin1String("authentication") && s.authentication == 0) {
                 const QString type(f.text());
                 if (type == QLatin1String("password-cleartext")
-                        || type == QLatin1String("plain")) {
+                    || type == QLatin1String("plain")) {
                     s.authentication = Plain;
                 } else if (type == QLatin1String("password-encrypted")
                            || type == QLatin1String("secure")) {
@@ -282,7 +275,7 @@ identity Ispdb::createIdentity(const QDomElement &n)
 
     //type="kolab" version="1.0" is the only identity that is defined
     if (n.attribute(QStringLiteral("type")) != QStringLiteral("kolab")
-            || n.attribute(QStringLiteral("version")) != QStringLiteral("1.0")) {
+        || n.attribute(QStringLiteral("version")) != QStringLiteral("1.0")) {
         qCDebug(ACCOUNTWIZARD_LOG) << "unknown type of identity element.";
     }
 
@@ -340,7 +333,7 @@ QString Ispdb::name(length l) const
     if (l == Long) {
         return mDisplayName;
     } else if (l == Short) {
-        return  mDisplayShortName;
+        return mDisplayShortName;
     } else {
         return QString();    //make compiler happy. Not me.
     }
@@ -375,20 +368,17 @@ void Ispdb::setServerType(Ispdb::searchServerType type)
 {
     if (type != mServerType || mStart) {
         mServerType = type;
-        mStart  = false;
+        mStart = false;
         switch (mServerType) {
-        case IspAutoConfig: {
+        case IspAutoConfig:
             Q_EMIT searchType(i18n("Lookup configuration: Email provider"));
             break;
-        }
-        case IspWellKnow: {
+        case IspWellKnow:
             Q_EMIT searchType(i18n("Lookup configuration: Trying common server name"));
             break;
-        }
-        case DataBase: {
+        case DataBase:
             Q_EMIT searchType(i18n("Lookup configuration: Mozilla database"));
             break;
-        }
         }
     }
 }

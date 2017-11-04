@@ -21,7 +21,7 @@
 
 #include "ispdb.h"
 
-class AutoconfigKolabMail :  public Ispdb
+class AutoconfigKolabMail : public Ispdb
 {
     Q_OBJECT
 public:

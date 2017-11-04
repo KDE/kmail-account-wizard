@@ -71,6 +71,7 @@ QString authTypeToStr(Ispdb::authType authType)
     }
     return auth;
 }
+
 int main(int argc, char **argv)
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
@@ -83,7 +84,7 @@ int main(int argc, char **argv)
                          KAboutLicense::LGPL,
                          i18n("(c) 2010 Omat Holding B.V."),
                          QStringLiteral("https://community.kde.org/KDE_PIM/Akonadi"));
-    aboutData.addAuthor(i18n("Tom Albers"),  i18n("Author"), QStringLiteral("toma@kde.org"));
+    aboutData.addAuthor(i18n("Tom Albers"), i18n("Author"), QStringLiteral("toma@kde.org"));
 
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("akonadi")));
     QCommandLineParser parser;

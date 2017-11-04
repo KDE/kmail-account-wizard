@@ -45,7 +45,9 @@ class Ispdb : public QObject
 {
     Q_OBJECT
 public:
-    enum socketType { None = 0, SSL, StartTLS };
+    enum socketType {
+        None = 0, SSL, StartTLS
+    };
 
     /**
      Ispdb uses custom authtyps, hence the enum here.
@@ -53,8 +55,12 @@ public:
      In particular, note that Ispdb's Plain represents both Cleartext and AUTH Plain
      We will always treat it as Cleartext
      */
-    enum authType { Plain = 0, CramMD5, NTLM, GSSAPI, ClientIP, NoAuth, Basic, OAuth2 };
-    enum length { Long = 0, Short };
+    enum authType {
+        Plain = 0, CramMD5, NTLM, GSSAPI, ClientIP, NoAuth, Basic, OAuth2
+    };
+    enum length {
+        Long = 0, Short
+    };
 
     /** Constructor */
     explicit Ispdb(QObject *parent = nullptr);
@@ -182,10 +188,12 @@ struct Server {
         authentication = Ispdb::Plain;
         socketType = Ispdb::None;
     }
+
     bool isValid() const
     {
-        return (port != -1);
+        return port != -1;
     }
+
     Ispdb::authType authentication;
     Ispdb::socketType socketType;
     QString hostname;

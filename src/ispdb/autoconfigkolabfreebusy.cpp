@@ -23,7 +23,6 @@
 AutoconfigKolabFreebusy::AutoconfigKolabFreebusy(QObject *parent)
     : AutoconfigKolabMail(parent)
 {
-
 }
 
 void AutoconfigKolabFreebusy::lookupInDb(bool auth, bool crypt)
@@ -85,7 +84,7 @@ freebusy AutoconfigKolabFreebusy::createFreebusyServer(const QDomElement &n)
             } else if (tagName == QLatin1String("authentication")) {
                 const QString type(f.text());
                 if (type == QLatin1String("none")
-                        || type == QLatin1String("plain")) {
+                    || type == QLatin1String("plain")) {
                     s.authentication = Plain;
                 } else if (type == QLatin1String("basic")) {
                     s.authentication = Basic;

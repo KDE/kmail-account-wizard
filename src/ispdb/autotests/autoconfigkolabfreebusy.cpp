@@ -27,10 +27,10 @@
 class TAutoconfFreebusy : public AutoconfigKolabFreebusy
 {
 public:
-    void startJob(const QUrl &url) Q_DECL_OVERRIDE {
+    void startJob(const QUrl &url) Q_DECL_OVERRIDE
+    {
         QCOMPARE(url, expectedUrls.takeFirst());
-        if (replace.contains(url))
-        {
+        if (replace.contains(url)) {
             AutoconfigKolabFreebusy::startJob(replace[url]);
         } else {
             AutoconfigKolabFreebusy::startJob(url);
@@ -48,9 +48,9 @@ public:
     AutoconfigKolabFreebusy *execIspdb(const QString &file)
     {
         const QString filePath = QStringLiteral(AUTOCONFIG_DATA_DIR) + QLatin1Char('/') + file;
-        [](const QString & file) {
+        [](const QString &file) {
             QVERIFY(QFile(file).exists());
-        }(filePath);
+        } (filePath);
 
         QEventLoop loop;
         TAutoconfFreebusy *ispdb = new TAutoconfFreebusy();
@@ -177,6 +177,7 @@ private Q_SLOTS:
         process.terminate();
         process.waitForFinished();
     }
+
 public:
     bool mReturn;
     QProcess process;

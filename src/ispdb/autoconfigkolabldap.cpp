@@ -24,7 +24,6 @@
 AutoconfigKolabLdap::AutoconfigKolabLdap(QObject *parent)
     : AutoconfigKolabMail(parent)
 {
-
 }
 
 void AutoconfigKolabLdap::lookupInDb(bool auth, bool crypt)
@@ -74,7 +73,7 @@ ldapServer AutoconfigKolabLdap::createLdapServer(const QDomElement &n)
                 if (type == QLatin1String("plain")) {
                     s.socketType = KLDAP::LdapServer::None;
                 } else if (type == QLatin1String("SSL")) {
-                    s.socketType =  KLDAP::LdapServer::SSL;
+                    s.socketType = KLDAP::LdapServer::SSL;
                 } else if (type == QLatin1String("TLS")) {
                     s.socketType = KLDAP::LdapServer::TLS;
                 }
@@ -132,5 +131,5 @@ QHash< QString, ldapServer > AutoconfigKolabLdap::ldapServers() const
 
 bool ldapServer::isValid() const
 {
-    return (port != -1);
+    return port != -1;
 }

@@ -49,10 +49,12 @@ struct freebusy {
         , authentication(Ispdb::Plain)
     {
     }
+
     bool isValid() const
     {
-        return (port != -1);
+        return port != -1;
     }
+
     QString hostname;
     QString username;
     QString password;

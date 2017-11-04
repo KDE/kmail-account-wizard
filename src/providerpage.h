@@ -59,7 +59,6 @@ private:
     void selectionChanged();
     void providerStatusChanged(const KNS3::Entry &);
 
-
     void findDesktopAndSetAssistant(const QStringList &list);
 
     Ui::ProviderPage ui;

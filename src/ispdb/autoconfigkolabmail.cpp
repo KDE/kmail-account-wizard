@@ -23,7 +23,6 @@
 AutoconfigKolabMail::AutoconfigKolabMail(QObject *parent)
     : Ispdb(parent)
 {
-
 }
 
 void AutoconfigKolabMail::startJob(const QUrl &url)
@@ -43,10 +42,10 @@ void AutoconfigKolabMail::startJob(const QUrl &url)
 void AutoconfigKolabMail::slotResult(KJob *job)
 {
     if (job->error()) {
-        if (job->error() == KIO::ERR_INTERNAL_SERVER ||   // error 500
-                job->error() == KIO::ERR_UNKNOWN_HOST ||  // unknown host
-                job->error() == KIO::ERR_COULD_NOT_CONNECT ||
-                job->error() == KIO::ERR_DOES_NOT_EXIST) {    // error 404
+        if (job->error() == KIO::ERR_INTERNAL_SERVER      // error 500
+            || job->error() == KIO::ERR_UNKNOWN_HOST      // unknown host
+            || job->error() == KIO::ERR_COULD_NOT_CONNECT
+            || job->error() == KIO::ERR_DOES_NOT_EXIST) {     // error 404
             if (serverType() == DataBase) {
                 setServerType(IspAutoConfig);
                 lookupInDb(false, false);
@@ -70,7 +69,7 @@ void AutoconfigKolabMail::slotResult(KJob *job)
     if (responsecode == 401) {
         lookupInDb(true, true);
         return;
-    } else if (responsecode != 200  && responsecode != 0 && responsecode != 304) {
+    } else if (responsecode != 200 && responsecode != 0 && responsecode != 304) {
         //qCDebug(ACCOUNTWIZARD_LOG) << "Fetching failed with" << responsecode;
         Q_EMIT finished(false);
         return;
