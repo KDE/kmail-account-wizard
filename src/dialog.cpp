@@ -103,6 +103,7 @@ Dialog::Dialog(QWidget *parent)
 
     Page *page = qobject_cast<Page *>(currentPage()->widget());
     page->enterPageNext();
+    //TODO ? necessary ???
     Q_EMIT page->pageEnteredNext();
     connect(button(QDialogButtonBox::Cancel), &QPushButton::clicked, this, &Dialog::accept);
     KHelpMenu *helpMenu = new KHelpMenu(this, KAboutData::applicationData(), true);

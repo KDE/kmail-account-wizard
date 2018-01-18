@@ -176,17 +176,14 @@ private:
     QVector< Server > mSmtpServers;
     QVector< identity > mIdentities;
 
-    int mDefaultIdentity;
+    int mDefaultIdentity = -1;
     Ispdb::searchServerType mServerType;
-    bool mStart;
+    bool mStart = true;
 };
 
 struct Server {
     Server()
     {
-        port = -1;
-        authentication = Ispdb::Plain;
-        socketType = Ispdb::None;
     }
 
     bool isValid() const
@@ -194,11 +191,11 @@ struct Server {
         return port != -1;
     }
 
-    Ispdb::authType authentication;
-    Ispdb::socketType socketType;
+    Ispdb::authType authentication = Ispdb::Plain;
+    Ispdb::socketType socketType = Ispdb::None;
     QString hostname;
     QString username;
-    int port;
+    int port = -1;
 };
 
 struct identity {
