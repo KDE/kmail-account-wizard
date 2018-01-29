@@ -102,9 +102,10 @@ void ConfigFile::edit()
     }
 
     if (m_editName == QLatin1String("freebusy")) {
-        KCMultiDialog *dialog = new KCMultiDialog();
+        QPointer<KCMultiDialog> dialog = new KCMultiDialog();
         dialog->addModule(QStringLiteral("korganizer_configfreebusy.desktop"));
-        dialog->show();
+        dialog->exec();
+        delete dialog;
         return;
     }
 
