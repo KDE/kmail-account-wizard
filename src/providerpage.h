@@ -25,14 +25,13 @@
 #include <QStandardItemModel>
 
 #include "ui_providerpage.h"
-#include <kns3/entry.h>
-
+#include <KNSCore/DownloadManager>
 struct Provider {
     QString entryId;
     QString entryProviderId;
 };
 
-namespace KNS3 {
+namespace KNSCore {
 class DownloadManager;
 }
 
@@ -55,17 +54,17 @@ public Q_SLOTS:
     void startFetchingData();
 
 private:
-    void fillModel(const KNS3::Entry::List &);
+    void fillModel(const KNSCore::EntryInternal::List &);
     void selectionChanged();
-    void providerStatusChanged(const KNS3::Entry &);
+    void providerStatusChanged(const KNSCore::EntryInternal &);
 
     void findDesktopAndSetAssistant(const QStringList &list);
 
     Ui::ProviderPage ui;
     QStandardItemModel *m_model = nullptr;
     QStandardItem *m_fetchItem = nullptr;
-    KNS3::DownloadManager *m_downloadManager = nullptr;
-    KNS3::Entry::List m_providerEntries;
+    KNSCore::DownloadManager *m_downloadManager = nullptr;
+    KNSCore::EntryInternal::List m_providerEntries;
     Provider m_wantedProvider;
     bool m_newPageWanted;
     bool m_newPageReady;

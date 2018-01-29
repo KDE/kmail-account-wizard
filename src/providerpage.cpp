@@ -23,13 +23,13 @@
 
 #include "accountwizard_debug.h"
 #include <QSortFilterProxyModel>
-#include <kns3/downloadmanager.h>
+#include <KNSCore/DownloadManager>
 #include <KLocalizedString>
 
 ProviderPage::ProviderPage(KAssistantDialog *parent)
     : Page(parent)
     , m_model(new QStandardItemModel(this))
-    , m_downloadManager(new KNS3::DownloadManager(this))
+    , m_downloadManager(new KNSCore::DownloadManager(this))
     , m_newPageWanted(false)
     , m_newPageReady(false)
 {
@@ -46,9 +46,9 @@ ProviderPage::ProviderPage(KAssistantDialog *parent)
 
     // we can start the search, whenever the user reaches this page, chances
     // are we have the full list.
-    connect(m_downloadManager, &KNS3::DownloadManager::searchResult, this, &ProviderPage::fillModel);
-    connect(m_downloadManager, &KNS3::DownloadManager::entryStatusChanged, this, &ProviderPage::providerStatusChanged);
-    m_downloadManager->setSearchOrder(KNS3::DownloadManager::Alphabetical);
+    connect(m_downloadManager, &KNSCore::DownloadManager::searchResult, this, &ProviderPage::fillModel);
+    connect(m_downloadManager, &KNSCore::DownloadManager::entryStatusChanged, this, &ProviderPage::providerStatusChanged);
+    m_downloadManager->setSearchOrder(KNSCore::DownloadManager::Alphabetical);
 
     connect(ui.listView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &ProviderPage::selectionChanged);
 }
@@ -58,7 +58,7 @@ void ProviderPage::startFetchingData()
     m_downloadManager->search(0, 100000);
 }
 
-void ProviderPage::fillModel(const KNS3::Entry::List &list)
+void ProviderPage::fillModel(const KNSCore::EntryInternal::List &list)
 {
     if (m_fetchItem) {
         m_model->removeRows(m_model->indexFromItem(m_fetchItem).row(), 1);
@@ -69,13 +69,13 @@ void ProviderPage::fillModel(const KNS3::Entry::List &list)
     // we can not use a QHash or whatever, as that needs that constructor...
     m_providerEntries = list;
 
-    for (const KNS3::Entry &e : list) {
+    for (const KNSCore::EntryInternal &e : list) {
         qCDebug(ACCOUNTWIZARD_LOG) << "Found Entry: " << e.name();
 
         QStandardItem *item = new QStandardItem(e.name());
         item->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
         item->setData(e.name(), Qt::ToolTipRole);
-        item->setData(e.id(), Qt::UserRole);
+        item->setData(e.uniqueId(), Qt::UserRole);
         item->setData(e.providerId(), Qt::UserRole + 1);
         m_model->appendRow(item);
     }
@@ -106,10 +106,10 @@ void ProviderPage::leavePageNext()
     qCDebug(ACCOUNTWIZARD_LOG) << "Item selected:" << item->text();
 
     // download and execute it...
-    foreach (const KNS3::Entry &e, m_providerEntries) {
-        if (e.id() == item->data(Qt::UserRole)
+    foreach (const KNSCore::EntryInternal &e, m_providerEntries) {
+        if (e.uniqueId() == item->data(Qt::UserRole)
             && e.providerId() == item->data(Qt::UserRole + 1)) {
-            m_wantedProvider.entryId = e.id();
+            m_wantedProvider.entryId = e.uniqueId();
             m_wantedProvider.entryProviderId = e.providerId();
 
             if (e.status() == KNS3::Entry::Installed) {
@@ -125,10 +125,10 @@ void ProviderPage::leavePageNext()
     }
 }
 
-void ProviderPage::providerStatusChanged(const KNS3::Entry &e)
+void ProviderPage::providerStatusChanged(const KNSCore::EntryInternal &e)
 {
     qCDebug(ACCOUNTWIZARD_LOG) << e.name();
-    if (e.id() == m_wantedProvider.entryId
+    if (e.uniqueId() == m_wantedProvider.entryId
         && e.providerId() == m_wantedProvider.entryProviderId
         && e.status() == KNS3::Entry::Installed) {
         findDesktopAndSetAssistant(e.installedFiles());
