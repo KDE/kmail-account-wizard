@@ -295,7 +295,7 @@ identity Ispdb::createIdentity(const QDomElement &n)
                 QTextStream stream(&i.signature);
                 f.save(stream, 0);
                 i.signature = i.signature.trimmed();
-                if (i.signature.startsWith(QStringLiteral("<signature>"))) {
+                if (i.signature.startsWith(QLatin1String("<signature>"))) {
                     i.signature = i.signature.mid(11, i.signature.length() - 23);
                     i.signature = i.signature.trimmed();
                 }
