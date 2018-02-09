@@ -310,9 +310,9 @@ identity Ispdb::createIdentity(const QDomElement &n)
 QString Ispdb::replacePlaceholders(const QString &in)
 {
     QString out(in);
-    out.replace(QStringLiteral("%EMAILLOCALPART%"), mAddr.localPart);
-    out.replace(QStringLiteral("%EMAILADDRESS%"), mAddr.asString());
-    out.replace(QStringLiteral("%EMAILDOMAIN%"), mAddr.domain);
+    out.replace(QLatin1String("%EMAILLOCALPART%"), mAddr.localPart);
+    out.replace(QLatin1String("%EMAILADDRESS%"), mAddr.asString());
+    out.replace(QLatin1String("%EMAILDOMAIN%"), mAddr.domain);
     return out;
 }
 
