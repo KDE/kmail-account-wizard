@@ -46,7 +46,7 @@ public:
     };
 
     explicit Key(QObject *parent = nullptr);
-    ~Key();
+    ~Key() override;
 
     void create() override;
     void destroy() override;

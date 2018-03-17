@@ -30,7 +30,7 @@ class SetupAutoconfigKolabFreebusy : public SetupObject
 public:
     /** Constructor */
     explicit SetupAutoconfigKolabFreebusy(QObject *parent = nullptr);
-    ~SetupAutoconfigKolabFreebusy();
+    ~SetupAutoconfigKolabFreebusy() override;
 
     void create() override;
     void destroy() override;

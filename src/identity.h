@@ -35,7 +35,7 @@ class Identity : public SetupObject
     Q_OBJECT
 public:
     explicit Identity(QObject *parent = nullptr);
-    ~Identity();
+    ~Identity() override;
     void create() override;
     void destroy() override;
 

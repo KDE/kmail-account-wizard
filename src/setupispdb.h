@@ -32,7 +32,7 @@ public:
     /** Constructor */
     explicit SetupIspdb(QObject *parent = nullptr);
     SetupIspdb(QObject *parent, Ispdb *ispdb);
-    ~SetupIspdb();
+    ~SetupIspdb() override;
 
     void create() override;
     void destroy() override;

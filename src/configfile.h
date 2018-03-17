@@ -36,7 +36,7 @@ class ConfigFile : public SetupObject
     Q_OBJECT
 public:
     explicit ConfigFile(const QString &configName, QObject *parent = nullptr);
-    ~ConfigFile();
+    ~ConfigFile() override;
     void create() override;
     void destroy() override;
     void edit();
