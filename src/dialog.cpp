@@ -32,6 +32,8 @@
 #include "setuppage.h"
 #include "cryptopage.h"
 
+#include <QAction>
+
 #include <KMime/Message>
 
 #include <klocalizedstring.h>
