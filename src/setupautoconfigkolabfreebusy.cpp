@@ -45,7 +45,7 @@ int SetupAutoconfigKolabFreebusy::countFreebusyServers() const
 
 void SetupAutoconfigKolabFreebusy::fillFreebusyServer(int i, QObject *o) const
 {
-    freebusy isp = mIspdb->freebusyServers().values()[i];
+    const freebusy isp = mIspdb->freebusyServers().values().at(i);
     ConfigFile *korganizer = qobject_cast<ConfigFile *>(o);
     QFileInfo path(isp.path);
     QString url(QStringLiteral("https://"));

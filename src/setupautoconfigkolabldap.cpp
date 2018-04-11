@@ -38,7 +38,7 @@ SetupAutoconfigKolabLdap::~SetupAutoconfigKolabLdap()
 
 void SetupAutoconfigKolabLdap::fillLdapServer(int i, QObject *o) const
 {
-    ldapServer isp = mIspdb->ldapServers().values()[i];
+    const ldapServer isp = mIspdb->ldapServers().values().at(i);
     Ldap *ldapRes = qobject_cast<Ldap *>(o);
 
     //TODO: setting filter
