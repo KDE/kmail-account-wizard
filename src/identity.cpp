@@ -22,6 +22,7 @@
 
 #include <kidentitymanagement/identitymanager.h>
 #include <kidentitymanagement/identity.h>
+#include "accountwizard_debug.h"
 
 #include <KLocalizedString>
 
@@ -44,7 +45,9 @@ void Identity::create()
     m_identity->setIdentityName(identityName());
 
     auto manager = KIdentityManagement::IdentityManager::self();
-    manager->setAsDefault(m_identity->uoid());
+    if (!manager->setAsDefault(m_identity->uoid())) {
+        qCWarning(ACCOUNTWIZARD_LOG) << "Impossible to find identity";
+    }
     manager->commit();
 
     Q_EMIT finished(i18n("Identity set up."));
@@ -82,7 +85,9 @@ QString Identity::identityName() const
 void Identity::destroy()
 {
     auto manager = KIdentityManagement::IdentityManager::self();
-    manager->removeIdentityForced(m_identity->identityName());
+    if (!manager->removeIdentityForced(m_identity->identityName())) {
+        qCWarning(ACCOUNTWIZARD_LOG) << " impossible to remove identity " << m_identity->identityName();
+    }
     manager->commit();
     m_identity = nullptr;
     Q_EMIT info(i18n("Identity removed."));

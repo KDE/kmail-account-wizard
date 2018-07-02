@@ -46,7 +46,7 @@ QStringList SetupIspdb::relevantDomains() const
 
 QString SetupIspdb::name(int l) const
 {
-    return mIspdb->name((Ispdb::length)l);
+    return mIspdb->name(static_cast<Ispdb::length>(l));
 }
 
 int SetupIspdb::defaultIdentity() const
@@ -136,8 +136,6 @@ void SetupIspdb::fillSmtpServer(int i, QObject *o) const
         break;
     case Ispdb::StartTLS:
         smtpRes->setEncryption(QStringLiteral("tls"));
-        break;
-    default:
         break;
     }
 }
