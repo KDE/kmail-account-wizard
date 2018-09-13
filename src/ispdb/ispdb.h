@@ -141,7 +141,7 @@ protected:
         @return the standard url for autoconfig depends on serverType
         @param type of request (ex. "mail")
         @param version of the file (example for mail "1.1")
-        @param auth use authentification with username & password to access autoconfig file
+        @param auth use authentication with username & password to access autoconfig file
                     (username is the emailaddress)
         @param crypt use https
      */

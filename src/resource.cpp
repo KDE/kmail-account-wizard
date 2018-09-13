@@ -28,8 +28,8 @@
 
 #include <QMetaMethod>
 #include <QVariant>
-#include <QtDBus/qdbusinterface.h>
-#include <QtDBus/qdbusreply.h>
+#include <QDBusInterface>
+#include <QDBusReply>
 
 using namespace Akonadi;
 

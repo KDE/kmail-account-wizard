@@ -17,6 +17,9 @@
     02110-1301, USA.
 */
 
+#ifndef INPROCESS_MAIN_H
+#define INPROCESS_MAIN_H
+
 #include "dialog.h"
 #include "global.h"
 
@@ -34,3 +37,5 @@ public:
 public Q_SLOTS:
     void run(const QStringList &types, QWidget *parent);
 };
+
+#endif

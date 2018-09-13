@@ -23,7 +23,6 @@
 #include <qfileinfo.h>
 #include <QDir>
 #include <kio/copyjob.h>
-#include <QDir>
 #include <QStandardPaths>
 
 class GlobalPrivate

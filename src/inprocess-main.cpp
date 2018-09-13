@@ -17,8 +17,8 @@
     02110-1301, USA.
 */
 
-#include "dialog.h"
 #include "inprocess-main.h"
+#include "dialog.h"
 #include "global.h"
 
 #include <QObject>

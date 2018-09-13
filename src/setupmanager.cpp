@@ -174,7 +174,7 @@ void SetupManager::setupInfo(const QString &msg)
 
 void SetupManager::setupNext()
 {
-    // user canceld during the previous setup step
+    // user canceled during the previous setup step
     if (m_rollbackRequested) {
         rollback();
         return;

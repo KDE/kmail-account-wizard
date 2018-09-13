@@ -84,7 +84,7 @@ void SetupIspdb::fillImapServer(int i, QObject *o) const
     imapRes->setOption(QStringLiteral("ImapServer"), isp.hostname);
     imapRes->setOption(QStringLiteral("UserName"), isp.username);
     imapRes->setOption(QStringLiteral("ImapPort"), isp.port);
-    imapRes->setOption(QStringLiteral("Authentication"), isp.authentication);  //TODO: setup with right authentification
+    imapRes->setOption(QStringLiteral("Authentication"), isp.authentication);  //TODO: setup with right authentication
     if (isp.socketType == Ispdb::None) {
         imapRes->setOption(QStringLiteral("Safety"), QStringLiteral("NONE"));
     } else if (isp.socketType == Ispdb::SSL) {
