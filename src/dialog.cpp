@@ -112,7 +112,7 @@ Dialog::Dialog(QWidget *parent)
     //Initialize menu
     QMenu *menu = helpMenu->menu();
     helpMenu->action(KHelpMenu::menuAboutApp)->setIcon(QIcon::fromTheme(QStringLiteral("akonadi")));
-    disconnect(helpMenu->action(KHelpMenu::menuHelpContents), 0, helpMenu, 0);
+    disconnect(helpMenu->action(KHelpMenu::menuHelpContents), nullptr, helpMenu, nullptr);
     connect(helpMenu->action(KHelpMenu::menuHelpContents), &QAction::triggered, this, &Dialog::slotOpenHelp);
     button(QDialogButtonBox::Help)->setMenu(menu);
 }
