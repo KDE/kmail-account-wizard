@@ -1,5 +1,11 @@
 [KNewStuff3]
 Name=Email Providers
+Name[ca]=Proveïdors de correu electrònic
+Name[gl]=Fornecedores de correo electrónico
+Name[nl]=E-mailleveranciers
+Name[pt]=Fornecedores de E-Mail
+Name[uk]=Надавачі послуг електронної пошти
+Name[x-test]=xxEmail Providersxx
 ProvidersUrl=https://download.kde.org/ocs/providers.xml
 Categories=Akonadi Email Providers
 TargetDir=akonadi/accountwizard
