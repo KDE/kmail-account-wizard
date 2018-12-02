@@ -1,5 +1,5 @@
 set(KDEPIM_VERSION_NUMBER "5.10.40")
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.5)
 project(kmail-account-wizard VERSION ${KDEPIM_VERSION_NUMBER})
 
 
