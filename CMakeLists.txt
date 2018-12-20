@@ -5,9 +5,9 @@ project(kmail-account-wizard VERSION ${KDEPIM_VERSION_NUMBER})
 
 set(LIBRARY_NAMELINK LIBRARY NAMELINK_SKIP)
 
-set(KF5_VERSION "5.53.0")
+set(KF5_MIN_VERSION "5.53.0")
 
-find_package(ECM ${KF5_VERSION} CONFIG REQUIRED)
+find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 include(ECMInstallIcons)
@@ -55,17 +55,17 @@ set(LIBKDEPIM_LIB_VERSION_LIB "5.10.40")
 set(LIBKLEO_LIB_VERSION_LIB "5.10.40")
 
 # Find KF5 package
-find_package(KF5Wallet ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5KCMUtils ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5NotifyConfig ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5Config ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5Service ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5DBusAddons ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5DocTools ${KF5_VERSION} REQUIRED)
-find_package(KF5TextEditor ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5Codecs ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5Crash ${KF5_VERSION} REQUIRED)
-find_package(KF5Notifications ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5Wallet ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5KCMUtils ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5NotifyConfig ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5Config ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5Service ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5DBusAddons ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5DocTools ${KF5_MIN_VERSION} REQUIRED)
+find_package(KF5TextEditor ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5Codecs ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5Crash ${KF5_MIN_VERSION} REQUIRED)
+find_package(KF5Notifications ${KF5_MIN_VERSION} CONFIG REQUIRED)
 
 find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 find_package(KF5IdentityManagement ${IDENTITYMANAGEMENT_LIB_VERSION} CONFIG REQUIRED)
@@ -85,8 +85,8 @@ include_directories(${kmail-account-wizard_SOURCE_DIR} ${kmail-account-wizard_BI
 # Qt5 package
 find_package(Qt5UiTools ${QT_REQUIRED_VERSION} CONFIG REQUIRED)
 
-find_package(KF5Kross ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5NewStuff ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5Kross ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5NewStuff ${KF5_MIN_VERSION} CONFIG REQUIRED)
 
 set( SharedMimeInfo_MINIMUM_VERSION "1.3" )
 find_package(SharedMimeInfo ${SharedMimeInfo_MINIMUM_VERSION} REQUIRED)
