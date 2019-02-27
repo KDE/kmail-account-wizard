@@ -34,7 +34,7 @@ DynamicPage::DynamicPage(const QString &uiFile, KAssistantDialog *parent)
     , m_dynamicWidget(nullptr)
 {
     QVBoxLayout *layout = new QVBoxLayout(this);
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
 
     QWidget *pageParent = this;
 
