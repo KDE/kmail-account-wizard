@@ -61,7 +61,7 @@ void Global::setAssistant(const QString &assistant)
             }
         }
     }
-    foreach (const QString &entry, list) {
+    for (const QString &entry : qAsConst(list)) {
         const QFileInfo info(entry);
         const QDir dir(info.absolutePath());
         if (dir.dirName() == assistant) {
