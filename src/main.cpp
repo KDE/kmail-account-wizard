@@ -23,7 +23,7 @@
 #include <controlgui.h>
 
 #include <kaboutdata.h>
-#include <qapplication.h>
+#include <QApplication>
 #include <QUrl>
 
 #include <KDBusService>

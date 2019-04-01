@@ -23,8 +23,8 @@
 
 #include <QUiLoader>
 #include <QFile>
-#include <qboxlayout.h>
-#include <qscrollarea.h>
+#include <QBoxLayout>
+#include <QScrollArea>
 #include "global.h"
 #include <KLocalizedTranslator>
 #include <QCoreApplication>

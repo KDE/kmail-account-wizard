@@ -20,7 +20,7 @@
 #include "global.h"
 
 #include "accountwizard_debug.h"
-#include <qfileinfo.h>
+#include <QFileInfo>
 #include <QDir>
 #include <kio/copyjob.h>
 #include <QStandardPaths>

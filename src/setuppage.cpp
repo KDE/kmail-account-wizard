@@ -19,7 +19,7 @@
 
 #include "setuppage.h"
 #include <QIcon>
-#include <qstandarditemmodel.h>
+#include <QStandardItemModel>
 
 SetupPage::SetupPage(KAssistantDialog *parent)
     : Page(parent)

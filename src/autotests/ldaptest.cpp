@@ -19,7 +19,7 @@
 
 #include <QObject>
 #include <QDir>
-#include <qtest.h>
+#include <QTest>
 
 #include <KConfig>
 #include <KConfigGroup>
