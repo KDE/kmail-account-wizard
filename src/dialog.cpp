@@ -54,7 +54,6 @@ Dialog::Dialog(QWidget *parent)
     resize(480, 600);
     mSetupManager = new SetupManager(this);
     const bool showPersonalDataPage = Global::typeFilter().size() == 1 && Global::typeFilter().at(0) == KMime::Message::mimeType();
-
     if (showPersonalDataPage) {
         // todo: don't ask these details based on a setting of the desktop file.
         PersonalDataPage *pdpage = new PersonalDataPage(this);
@@ -179,8 +178,9 @@ QObject *Dialog::addPage(const QString &uiFile, const QString &title)
 
 void Dialog::slotManualConfigWanted(bool show)
 {
-    Q_ASSERT(mTypePage);
-    setAppropriate(mTypePage, show);
+    if (mTypePage) {
+        setAppropriate(mTypePage, show);
+    }
     setAppropriate(mLoadPage, show);
 }
 
