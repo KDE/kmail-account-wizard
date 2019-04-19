@@ -30,7 +30,7 @@ struct Provider {
     QString entryId;
     QString entryProviderId;
 };
-
+class QSortFilterProxyModel;
 namespace KNSCore {
 class DownloadManager;
 }
@@ -57,6 +57,7 @@ private:
     void fillModel(const KNSCore::EntryInternal::List &);
     void selectionChanged();
     void providerStatusChanged(const KNSCore::EntryInternal &);
+    void slotTextChanged(const QString &str);
 
     void findDesktopAndSetAssistant(const QStringList &list);
 
@@ -64,6 +65,7 @@ private:
     QStandardItemModel *m_model = nullptr;
     QStandardItem *m_fetchItem = nullptr;
     KNSCore::DownloadManager *m_downloadManager = nullptr;
+    QSortFilterProxyModel *mProxy;
     KNSCore::EntryInternal::List m_providerEntries;
     Provider m_wantedProvider;
     bool m_newPageWanted;

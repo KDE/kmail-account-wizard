@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>151</height>
+    <height>197</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -19,7 +19,11 @@
     </widget>
    </item>
    <item>
-    <widget class="KFilterProxySearchLine" name="searchLine"/>
+    <widget class="QLineEdit" name="searchLine">
+     <property name="clearButtonEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
    <item>
     <widget class="QTreeView" name="listView">
@@ -38,9 +42,6 @@
      <property name="headerHidden">
       <bool>true</bool>
      </property>
-     <attribute name="headerShowSortIndicator" stdset="0">
-      <bool>true</bool>
-     </attribute>
      <attribute name="headerShowSortIndicator" stdset="0">
       <bool>true</bool>
      </attribute>
@@ -72,13 +73,6 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>KFilterProxySearchLine</class>
-   <extends>QWidget</extends>
-   <header>kfilterproxysearchline.h</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>

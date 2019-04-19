@@ -25,6 +25,7 @@
 #include <QSortFilterProxyModel>
 #include <KNSCore/DownloadManager>
 #include <KLocalizedString>
+#include <QLineEdit>
 
 ProviderPage::ProviderPage(KAssistantDialog *parent)
     : Page(parent)
@@ -35,11 +36,12 @@ ProviderPage::ProviderPage(KAssistantDialog *parent)
 {
     ui.setupUi(this);
 
-    QSortFilterProxyModel *proxy = new QSortFilterProxyModel(this);
-    proxy->setSourceModel(m_model);
-    ui.listView->setModel(proxy);
-    ui.searchLine->setProxy(proxy);
-
+    mProxy = new QSortFilterProxyModel(this);
+    mProxy->setSourceModel(m_model);
+    mProxy->setFilterKeyColumn(-1);
+    mProxy->setFilterCaseSensitivity(Qt::CaseInsensitive);
+    ui.listView->setModel(mProxy);
+    connect(ui.searchLine, &QLineEdit::textChanged, this, &ProviderPage::slotTextChanged);
     m_fetchItem = new QStandardItem(i18n("Fetching provider list..."));
     m_model->appendRow(m_fetchItem);
     m_fetchItem->setFlags(Qt::NoItemFlags);
@@ -56,6 +58,11 @@ ProviderPage::ProviderPage(KAssistantDialog *parent)
 void ProviderPage::startFetchingData()
 {
     m_downloadManager->search(0, 100000);
+}
+
+void ProviderPage::slotTextChanged(const QString &str)
+{
+    mProxy->setFilterFixedString(str);
 }
 
 void ProviderPage::fillModel(const KNSCore::EntryInternal::List &list)

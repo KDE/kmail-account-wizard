@@ -23,6 +23,7 @@
 #include <KDesktopFile>
 #include <KConfigGroup>
 #include <QIcon>
+#include <QLineEdit>
 
 #include <QSortFilterProxyModel>
 #include <QMimeDatabase>
@@ -41,10 +42,13 @@ TypePage::TypePage(KAssistantDialog *parent)
     ui.ghnsButton->hide();
 #endif
 
-    QSortFilterProxyModel *proxy = new QSortFilterProxyModel(this);
-    proxy->setSourceModel(m_model);
-    ui.listView->setModel(proxy);
-    ui.searchLine->setProxy(proxy);
+    mProxy = new QSortFilterProxyModel(this);
+    mProxy->setSourceModel(m_model);
+    mProxy->setFilterKeyColumn(-1);
+    mProxy->setFilterCaseSensitivity(Qt::CaseInsensitive);
+
+    ui.listView->setModel(mProxy);
+    connect(ui.searchLine, &QLineEdit::textChanged, this, &TypePage::slotTextChanged);
 
     QStringList list;
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("akonadi/accountwizard/"), QStandardPaths::LocateDirectory);
@@ -107,6 +111,11 @@ TypePage::TypePage(KAssistantDialog *parent)
 
     connect(ui.listView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &TypePage::selectionChanged);
     connect(ui.ghnsButton, &QPushButton::clicked, this, &TypePage::ghnsWanted);
+}
+
+void TypePage::slotTextChanged(const QString &text)
+{
+    mProxy->setFilterFixedString(text);
 }
 
 void TypePage::selectionChanged()
