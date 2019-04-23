@@ -43,12 +43,11 @@ void Identity::create()
 
     // store identity information
     m_identity->setIdentityName(identityName());
-
     auto manager = KIdentityManagement::IdentityManager::self();
+    manager->commit();
     if (!manager->setAsDefault(m_identity->uoid())) {
         qCWarning(ACCOUNTWIZARD_LOG) << "Impossible to find identity";
     }
-    manager->commit();
 
     Q_EMIT finished(i18n("Identity set up."));
 }
@@ -60,7 +59,7 @@ QString Identity::identityName() const
     if (name.isEmpty()) {
         name = i18nc("Default name for new email accounts/identities.", "Unnamed");
 
-        QString idName = m_identity->primaryEmailAddress();
+        const QString idName = m_identity->primaryEmailAddress();
         int pos = idName.indexOf(QLatin1Char('@'));
         if (pos != -1) {
             name = idName.mid(0, pos);
