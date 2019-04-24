@@ -63,16 +63,16 @@ int main(int argc, char **argv)
     parser.addOption(QCommandLineOption(QStringList() <<  QStringLiteral("type"), i18n("Only offer accounts that support the given type."), QStringLiteral("type")));
     parser.addOption(QCommandLineOption(QStringList() <<  QStringLiteral("assistant"), i18n("Run the specified assistant."), QStringLiteral("assistant")));
     parser.addOption(QCommandLineOption(QStringList() <<  QStringLiteral("package"), i18n("unpack fullpath on startup and launch that assistant"), QStringLiteral("fullpath")));
-    parser.addOption(QCommandLineOption(QStringList() <<  QStringLiteral("types"), i18n("Returns types of accounts")));
+    parser.addOption(QCommandLineOption(QStringList() <<  QStringLiteral("assistants"), i18n("Returns types of assistants")));
 
 
     aboutData.setupCommandLine(&parser);
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
-    if (parser.isSet(QStringLiteral("types"))) {
+    if (parser.isSet(QStringLiteral("assistants"))) {
         const QStringList lst = Global::assistants();
-        std::cout << i18n("The following account type are available:").toLocal8Bit().data() << std::endl;
+        std::cout << i18n("The following assistants are available:").toLocal8Bit().data() << std::endl;
         for (const QString &val : lst) {
             std::cout << "\t" << val.toLocal8Bit().constData() << std::endl;
         }
