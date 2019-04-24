@@ -53,10 +53,8 @@ public Q_SLOTS:
     Q_SCRIPTABLE void setPgpAutoEncrypt(bool autoencrypt);
     Q_SCRIPTABLE void setKey(GpgME::Protocol protocol, const QByteArray &fingerprint);
 
-protected:
-    QString identityName() const;
-
 private:
+    QString identityName() const;
     QString m_identityName;
     KIdentityManagement::Identity *m_identity = nullptr;
 };

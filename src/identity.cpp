@@ -42,12 +42,13 @@ void Identity::create()
     Q_EMIT info(i18n("Setting up identity..."));
 
     // store identity information
-    m_identity->setIdentityName(identityName());
+    m_identityName = identityName();
+    m_identity->setIdentityName(m_identityName);
     auto manager = KIdentityManagement::IdentityManager::self();
-    manager->commit();
     if (!manager->setAsDefault(m_identity->uoid())) {
         qCWarning(ACCOUNTWIZARD_LOG) << "Impossible to find identity";
     }
+    manager->commit();
 
     Q_EMIT finished(i18n("Identity set up."));
 }
@@ -84,8 +85,8 @@ QString Identity::identityName() const
 void Identity::destroy()
 {
     auto manager = KIdentityManagement::IdentityManager::self();
-    if (!manager->removeIdentityForced(m_identity->identityName())) {
-        qCWarning(ACCOUNTWIZARD_LOG) << " impossible to remove identity " << m_identity->identityName();
+    if (!manager->removeIdentityForced(m_identityName)) {
+        qCWarning(ACCOUNTWIZARD_LOG) << " impossible to remove identity " << m_identityName;
     }
     manager->commit();
     m_identity = nullptr;
