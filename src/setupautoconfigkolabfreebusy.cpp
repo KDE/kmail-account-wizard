@@ -69,7 +69,7 @@ void SetupAutoconfigKolabFreebusy::fillFreebusyServer(int i, QObject *o) const
 
     bool fullDomainRetrieval = (path.baseName() == QLatin1String("$EMAIL$"));
 
-    QString group(QStringLiteral("FreeBusy Retrieve"));
+    const QString group(QStringLiteral("FreeBusy Retrieve"));
 
     korganizer->setConfig(group, QStringLiteral("FreeBusyFullDomainRetrieval"), fullDomainRetrieval ? QStringLiteral("true") : QStringLiteral("false"));
     korganizer->setConfig(group, QStringLiteral("FreeBusyRetrieveAuto"), QStringLiteral("true"));
