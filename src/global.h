@@ -32,6 +32,7 @@ QString assistant();
 void setAssistant(const QString &assistant);
 
 QString assistantBasePath();
+QStringList assistants();
 
 QString unpackAssistant(const QUrl &remotePackageUrl);
 }

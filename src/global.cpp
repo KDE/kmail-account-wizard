@@ -40,6 +40,30 @@ QString Global::assistant()
     return sInstance->assistant;
 }
 
+QStringList Global::assistants()
+{
+    QStringList list;
+    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("akonadi/accountwizard/"), QStandardPaths::LocateDirectory);
+    for (const QString &dir : dirs) {
+        const QStringList directories = QDir(dir).entryList(QDir::AllDirs);
+        for (const QString &directory : directories) {
+            const QString fullPath = dir + QLatin1Char('/') + directory;
+            const QStringList fileNames = QDir(fullPath).entryList(QStringList() << QStringLiteral("*.desktop"));
+            list.reserve(fileNames.count());
+            for (const QString &file : fileNames) {
+                list.append(fullPath + QLatin1Char('/') + file);
+            }
+        }
+    }
+    QStringList lstAssistants;
+    for (const QString &entry : qAsConst(list)) {
+        const QFileInfo info(entry);
+        const QDir dir(info.absolutePath());
+        lstAssistants.append(dir.dirName());
+    }
+    return lstAssistants;
+}
+
 void Global::setAssistant(const QString &assistant)
 {
     const QFileInfo info(assistant);
