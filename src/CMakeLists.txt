@@ -72,7 +72,7 @@ add_library(accountwizard_plugin MODULE ${accountwizard_srcs} inprocess-main.cpp
 target_link_libraries(accountwizard_plugin ${accountwizard_libs})
 
 if ( NOT ACCOUNTWIZARD_NO_GHNS )
-    install(FILES accountwizard.knsrc DESTINATION ${KDE_INSTALL_CONFDIR})
+    install(FILES accountwizard.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 endif ()
 install(TARGETS accountwizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(TARGETS accountwizard_plugin DESTINATION ${KDE_INSTALL_PLUGINDIR})
