@@ -118,7 +118,7 @@ void PersonalDataPage::leavePageNext()
     ui.imapAccount->setChecked(true);
     mSetupManager->setPersonalDataAvailable(true);
     mSetupManager->setName(ui.nameEdit->text());
-    mSetupManager->setPassword(ui.passwordEdit->text());
+    mSetupManager->setPassword(ui.passwordEdit->password());
     mSetupManager->setEmail(ui.emailEdit->text().trimmed());
 
     if (ui.checkOnlineGroupBox->isChecked()) {
@@ -176,7 +176,7 @@ void PersonalDataPage::configureSmtpAccount()
         t->setHost(s.hostname);
         t->setPort(s.port);
         t->setUsername(s.username);
-        t->setPassword(ui.passwordEdit->text());
+        t->setPassword(ui.passwordEdit->password());
         switch (s.authentication) {
         case Ispdb::Plain:
             t->setAuthenticationType(QStringLiteral("plain"));
@@ -227,7 +227,7 @@ void PersonalDataPage::configureImapAccount()
         t->setOption(QStringLiteral("ImapServer"), s.hostname);
         t->setOption(QStringLiteral("ImapPort"), s.port);
         t->setOption(QStringLiteral("UserName"), s.username);
-        t->setOption(QStringLiteral("Password"), ui.passwordEdit->text());
+        t->setOption(QStringLiteral("Password"), ui.passwordEdit->password());
         switch (s.authentication) {
         case Ispdb::Plain:
             t->setOption(QStringLiteral("Authentication"), MailTransport::Transport::EnumAuthenticationType::CLEAR);
@@ -279,7 +279,7 @@ void PersonalDataPage::configurePop3Account()
         t->setOption(QStringLiteral("Host"), s.hostname);
         t->setOption(QStringLiteral("Port"), s.port);
         t->setOption(QStringLiteral("Login"), s.username);
-        t->setOption(QStringLiteral("Password"), ui.passwordEdit->text());
+        t->setOption(QStringLiteral("Password"), ui.passwordEdit->password());
         switch (s.authentication) {
         case Ispdb::Plain:
             t->setOption(QStringLiteral("AuthenticationMethod"), MailTransport::Transport::EnumAuthenticationType::PLAIN);
