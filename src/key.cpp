@@ -49,8 +49,6 @@
 
 Key::Key(QObject *parent)
     : SetupObject(parent)
-    , m_transportId(0)
-    , m_publishingMethod(NoPublishing)
 {
 }
 

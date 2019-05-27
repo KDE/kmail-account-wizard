@@ -72,7 +72,7 @@ private:
     GpgME::Key m_key;
     QString m_mailbox;
     QPointer<QObject> mJob;
-    PublishingMethod m_publishingMethod;
+    PublishingMethod m_publishingMethod = NoPublishing;
 };
 
 #endif

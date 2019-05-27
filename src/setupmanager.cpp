@@ -38,14 +38,7 @@
 
 SetupManager::SetupManager(QWidget *parent)
     : QObject(parent)
-    , m_currentSetupObject(nullptr)
-    , m_page(nullptr)
-    , m_wallet(nullptr)
     , m_keyPublishingMethod(Key::NoPublishing)
-    , m_personalDataAvailable(false)
-    , m_rollbackRequested(false)
-    , m_pgpAutoSign(false)
-    , m_pgpAutoEncrypt(false)
 {
     KEMailSettings e;
     m_name = e.getSetting(KEMailSettings::RealName);

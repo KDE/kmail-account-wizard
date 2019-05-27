@@ -94,10 +94,10 @@ private:
     KWallet::Wallet *m_wallet = nullptr;
     GpgME::Key m_key;
     Key::PublishingMethod m_keyPublishingMethod;
-    bool m_personalDataAvailable;
-    bool m_rollbackRequested;
-    bool m_pgpAutoSign;
-    bool m_pgpAutoEncrypt;
+    bool m_personalDataAvailable = false;
+    bool m_rollbackRequested = false;
+    bool m_pgpAutoSign = false;
+    bool m_pgpAutoEncrypt = false;
 };
 
 #endif

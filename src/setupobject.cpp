@@ -20,7 +20,6 @@
 #include "setupobject.h"
 
 SetupObject::SetupObject(QObject *parent) : QObject(parent)
-    , m_dependsOn(nullptr)
 {
 }
 
