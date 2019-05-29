@@ -95,12 +95,12 @@ QObject *SetupManager::createKey()
     return connectObject(key);
 }
 
-QList<SetupObject *> SetupManager::objectsToSetup() const
+QVector<SetupObject *> SetupManager::objectsToSetup() const
 {
     return m_objectToSetup;
 }
 
-QList<SetupObject *> SetupManager::setupObjects() const
+QVector<SetupObject *> SetupManager::setupObjects() const
 {
     return m_setupObjects;
 }
