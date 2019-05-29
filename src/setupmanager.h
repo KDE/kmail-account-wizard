@@ -21,7 +21,7 @@
 #define SETUPMANAGER_H
 
 #include <QObject>
-
+#include <QVector>
 #include "key.h"
 #include <gpgme++/key.h>
 
