@@ -106,7 +106,7 @@ Dialog::Dialog(QWidget *parent)
     page->enterPageNext();
     //TODO ? necessary ???
     Q_EMIT page->pageEnteredNext();
-    connect(button(QDialogButtonBox::Cancel), &QPushButton::clicked, this, &Dialog::accept);
+    connect(button(QDialogButtonBox::Cancel), &QPushButton::clicked, this, &Dialog::reject);
     KHelpMenu *helpMenu = new KHelpMenu(this, KAboutData::applicationData(), true);
     //Initialize menu
     QMenu *menu = helpMenu->menu();
@@ -215,7 +215,7 @@ void Dialog::clearDynamicPages()
 
 void Dialog::reject()
 {
-    connect(mSetupManager, &SetupManager::rollbackComplete, this, &Dialog::close);
+    connect(mSetupManager, &SetupManager::rollbackComplete, this, [this]() { KAssistantDialog::reject();} );
     mSetupManager->requestRollback();
 }
 
