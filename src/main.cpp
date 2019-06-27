@@ -32,7 +32,7 @@
 #include <stdio.h>
 #include <iostream>
 
-#include <KCrash/KCrash>
+#include <KCrash>
 #include <QCommandLineParser>
 #include <QCommandLineOption>
 #include <QIcon>
