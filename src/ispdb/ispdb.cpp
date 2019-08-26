@@ -274,8 +274,8 @@ identity Ispdb::createIdentity(const QDomElement &n)
     identity i;
 
     //type="kolab" version="1.0" is the only identity that is defined
-    if (n.attribute(QStringLiteral("type")) != QStringLiteral("kolab")
-        || n.attribute(QStringLiteral("version")) != QStringLiteral("1.0")) {
+    if (n.attribute(QStringLiteral("type")) != QLatin1String("kolab")
+        || n.attribute(QStringLiteral("version")) != QLatin1String("1.0")) {
         qCDebug(ACCOUNTWIZARD_LOG) << "unknown type of identity element.";
     }
 
