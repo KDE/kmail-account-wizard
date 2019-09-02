@@ -50,6 +50,7 @@ PersonalDataPage::PersonalDataPage(Dialog *parent)
     QWidget *pageParent = this;
 
     ui.setupUi(pageParent);
+    ui.mProgress->stop();
 
     KPIM::EmailValidator *emailValidator = new KPIM::EmailValidator(this);
     ui.emailEdit->setValidator(emailValidator);
