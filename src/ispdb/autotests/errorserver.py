@@ -21,7 +21,7 @@ import BaseHTTPServer
 import os.path
 
 class ErrorServer(BaseHTTPServer.BaseHTTPRequestHandler):
-    '''a simple server that always anwsers with the corresponding error code:
+    '''a simple server that always answers with the corresponding error code:
     /500 -> error 500
     '''
     def do_GET(self):

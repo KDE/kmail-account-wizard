@@ -30,7 +30,7 @@ void AutoconfigKolabMail::startJob(const QUrl &url)
     mData.clear();
     QMap< QString, QVariant > map;
     map[QStringLiteral("errorPage")] = false;
-    map[QStringLiteral("no-auth-promt")] = true;
+    map[QStringLiteral("no-auth-prompt")] = true;
     map[QStringLiteral("no-www-auth")] = true;
 
     KIO::TransferJob *job = KIO::get(url, KIO::NoReload, KIO::HideProgressInfo);

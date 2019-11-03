@@ -112,7 +112,7 @@ Q_SIGNALS:
 
 protected:
     /** search types, where to search for autoconfig
-        @see lookupUrl to geneerate a url base on this type
+        @see lookupUrl to generate a url base on this type
      */
     enum searchServerType {
         IspAutoConfig = 0,                  /**< http://autoconfig.example.com/mail/config-v1.1.xml */
