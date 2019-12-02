@@ -21,7 +21,7 @@
 #define DIALOG_H
 
 #include "setupmanager.h"
-#include <kassistantdialog.h>
+#include <KAssistantDialog>
 
 class Page;
 class TypePage;

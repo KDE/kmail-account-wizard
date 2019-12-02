@@ -20,7 +20,7 @@
 #include "ispdb.h"
 #include "../accountwizard_debug.h"
 
-#include <kaboutdata.h>
+#include <KAboutData>
 
 #include <KLocalizedString>
 #include <QIcon>

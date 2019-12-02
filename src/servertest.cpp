@@ -22,7 +22,7 @@
 #include <mailtransport/servertest.h>
 
 #include "accountwizard_debug.h"
-#include <kmessagebox.h>
+#include <KMessageBox>
 #include <KLocalizedString>
 
 ServerTest::ServerTest(QObject *parent)

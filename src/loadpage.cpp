@@ -19,9 +19,9 @@
 
 #include "loadpage.h"
 #include "global.h"
-#include <kassistantdialog.h>
-#include <kconfig.h>
-#include <kconfiggroup.h>
+#include <KAssistantDialog>
+#include <KConfig>
+#include <KConfigGroup>
 #include <kross/core/action.h>
 #include <QFile>
 #include <KLocalizedString>

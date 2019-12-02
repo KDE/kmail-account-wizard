@@ -30,7 +30,7 @@
 #include "setupautoconfigkolabfreebusy.h"
 #include "key.h"
 
-#include <kemailsettings.h>
+#include <KEMailSettings>
 #include <kwallet.h>
 #include <KAssistantDialog>
 

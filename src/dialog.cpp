@@ -36,9 +36,9 @@
 
 #include <KMime/Message>
 
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 #include "accountwizard_debug.h"
-#include <kmessagebox.h>
+#include <KMessageBox>
 #include <qplatformdefs.h>
 #include <KAboutData>
 #include <PimCommon/PimUtil>

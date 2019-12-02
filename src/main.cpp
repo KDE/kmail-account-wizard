@@ -22,7 +22,7 @@
 
 #include <controlgui.h>
 
-#include <kaboutdata.h>
+#include <KAboutData>
 #include <QApplication>
 #include <QUrl>
 #include <QDebug>
