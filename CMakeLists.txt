@@ -1,4 +1,4 @@
-set(KDEPIM_VERSION_NUMBER "5.13.1")
+set(KDEPIM_VERSION_NUMBER "5.13.2")
 cmake_minimum_required(VERSION 3.5)
 project(kmail-account-wizard VERSION ${KDEPIM_VERSION_NUMBER})
 
