@@ -138,6 +138,7 @@ void Resource::instanceCreateResult(KJob *job)
             const QVariant::Type targetType = argumentType(iface.metaObject(), methodName);
             if (!arg.canConvert(targetType)) {
                 Q_EMIT error(i18n("Could not convert value of setting '%1' to required type %2.", it.key(), QLatin1String(QVariant::typeToName(targetType))));
+                qCWarning(ACCOUNTWIZARD_LOG) << "Impossible to convert argument : " << arg;
                 return;
             }
             arg.convert(targetType);
