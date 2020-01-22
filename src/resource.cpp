@@ -39,11 +39,17 @@ static QVariant::Type argumentType(const QMetaObject *mo, const QString &method)
     const int numberOfMethod(mo->methodCount());
     for (int i = 0; i < numberOfMethod; ++i) {
         const QString signature = QLatin1String(mo->method(i).methodSignature());
+	qDebug() << "signature************* : "<<signature;
         if (signature.contains(method + QLatin1Char('('))) {
             m = mo->method(i);
             break;
         }
     }
+    QStringList properties;
+    for(int i = mo->propertyOffset(); i < mo->propertyCount(); ++i) {
+        properties << QString::fromLatin1(mo->property(i).name());
+    }
+    qDebug() << " properties" << properties;
 
     if (m.methodSignature().isEmpty()) {
         qCWarning(ACCOUNTWIZARD_LOG) << "Did not find D-Bus method: " << method << " available methods are:";
@@ -120,7 +126,7 @@ void Resource::instanceCreateResult(KJob *job)
 
     if (!m_settings.isEmpty()) {
         Q_EMIT info(i18n("Configuring resource instance..."));
-        QDBusInterface iface(QStringLiteral("org.freedesktop.Akonadi.Resource.") + m_instance.identifier(), QStringLiteral("/Settings"));
+        QDBusInterface iface(QStringLiteral("org.freedesktop.Akonadi.Resource.") + m_instance.identifier(), QStringLiteral("/Settins"), QStringLiteral("org.kde.Akonadi.Imap.Settings"));
         if (!iface.isValid()) {
             Q_EMIT error(i18n("Unable to configure resource instance."));
             return;
@@ -135,7 +141,11 @@ void Resource::instanceCreateResult(KJob *job)
             qCDebug(ACCOUNTWIZARD_LOG) << "Setting up " << it.key() << " for agent " << m_instance.identifier();
             const QString methodName = QStringLiteral("set%1").arg(it.key());
             QVariant arg = it.value();
+            qDebug() << " iface.metaObject() " << iface.metaObject()->className();
             const QVariant::Type targetType = argumentType(iface.metaObject(), methodName);
+	    qDebug() << " methodName : "<< methodName;
+	    qDebug() << " argumentType : "<< argumentType;
+	    qDebug() << " targetType : "<< targetType;
             if (!arg.canConvert(targetType)) {
                 Q_EMIT error(i18n("Could not convert value of setting '%1' to required type %2.", it.key(), QLatin1String(QVariant::typeToName(targetType))));
                 qCWarning(ACCOUNTWIZARD_LOG) << "Impossible to convert argument : " << arg;
