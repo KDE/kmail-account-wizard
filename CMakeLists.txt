@@ -1,4 +1,4 @@
-set(KDEPIM_VERSION_NUMBER "5.13.80")
+set(KDEPIM_VERSION_NUMBER "5.13.90")
 cmake_minimum_required(VERSION 3.5)
 project(kmail-account-wizard VERSION ${KDEPIM_VERSION_NUMBER})
 
@@ -28,8 +28,8 @@ include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 
 # Do NOT add quote
-set(KDEPIM_DEV_VERSION beta1)
-set(RELEASE_SERVICE_VERSION "20.03.80")
+set(KDEPIM_DEV_VERSION rc)
+set(RELEASE_SERVICE_VERSION "20.03.90")
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
