@@ -31,7 +31,7 @@
 #include <Libkdepim/EmailValidator>
 #include <KEmailAddress>
 
-#include <mailtransport/transport.h>
+#include <MailTransport/Transport>
 
 #include "accountwizard_debug.h"
 

@@ -18,8 +18,8 @@
 */
 
 #include "servertest.h"
-#include <mailtransport/transport.h>
-#include <mailtransport/servertest.h>
+#include <MailTransport/Transport>
+#include <MailTransport/ServerTest>
 
 #include "accountwizard_debug.h"
 #include <KMessageBox>

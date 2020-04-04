@@ -19,7 +19,7 @@
 
 #include "transport.h"
 
-#include <mailtransport/transportmanager.h>
+#include <MailTransport/TransportManager>
 
 #include <KLocalizedString>
 
