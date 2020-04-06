@@ -22,6 +22,7 @@
 #include <agenttype.h>
 #include <agentmanager.h>
 #include <agentinstancecreatejob.h>
+#include <AkonadiCore/ServerManager>
 
 #include "accountwizard_debug.h"
 #include <KLocalizedString>
@@ -120,7 +121,8 @@ void Resource::instanceCreateResult(KJob *job)
 
     if (!m_settings.isEmpty()) {
         Q_EMIT info(i18n("Configuring resource instance..."));
-        QDBusInterface iface(QStringLiteral("org.freedesktop.Akonadi.Resource.") + m_instance.identifier(), QStringLiteral("/Settings"));
+        const auto service = ServerManager::agentServiceName(ServerManager::Resource, m_instance.identifier());
+        QDBusInterface iface(service, QStringLiteral("/Settings"));
         if (!iface.isValid()) {
             Q_EMIT error(i18n("Unable to configure resource instance."));
             return;
