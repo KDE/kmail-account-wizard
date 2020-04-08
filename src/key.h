@@ -53,7 +53,7 @@ public:
 
 public Q_SLOTS:
     Q_SCRIPTABLE void setKey(const GpgME::Key &key);
-    Q_SCRIPTABLE void setPublishingMethod(PublishingMethod method);
+    Q_SCRIPTABLE void setPublishingMethod(Key::PublishingMethod method);
     Q_SCRIPTABLE void setMailBox(const QString &mailbox);
     Q_SCRIPTABLE void setTransportId(int transportId);
 
