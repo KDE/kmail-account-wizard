@@ -65,7 +65,7 @@ TypePage::TypePage(KAssistantDialog *parent)
     }
 
     const QStringList filter = Global::typeFilter();
-    foreach (const QString &entry, list) {
+    for (const QString &entry : qAsConst(list)) {
         KDesktopFile f(entry);
         qCDebug(ACCOUNTWIZARD_LOG) << entry << f.readName();
         const KConfig configWizard(entry);
