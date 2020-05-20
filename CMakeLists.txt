@@ -29,7 +29,7 @@ include(ECMQtDeclareLoggingCategory)
 
 # Do NOT add quote
 set(KDEPIM_DEV_VERSION )
-set(RELEASE_SERVICE_VERSION "20.04.0")
+set(RELEASE_SERVICE_VERSION "20.04.2")
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
