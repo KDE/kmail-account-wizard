@@ -56,6 +56,7 @@ QStringList Global::assistants()
         }
     }
     QStringList lstAssistants;
+    lstAssistants.reserve(list.count());
     for (const QString &entry : qAsConst(list)) {
         const QFileInfo info(entry);
         const QDir dir(info.absolutePath());
