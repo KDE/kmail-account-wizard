@@ -25,7 +25,7 @@
 #include <KConfigGroup>
 #include <QTemporaryFile>
 
-#include <Libkdepim/LdapClientSearchConfig>
+#include <KLDAP/LdapClientSearchConfig>
 #include "../ldap.h"
 
 class TLdap : public Ldap

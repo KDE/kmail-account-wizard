@@ -18,8 +18,8 @@
 */
 
 #include "ldap.h"
-#include <Libkdepim/LdapClientSearchConfig>
-#include <Libkdepim/AddHostDialog>
+#include <KLDAP/LdapClientSearchConfig>
+#include <KLDAP/AddHostDialog>
 
 #include <KConfig>
 #include <KConfigGroup>
