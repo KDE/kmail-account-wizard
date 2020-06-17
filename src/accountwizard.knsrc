@@ -21,7 +21,6 @@ Name[ru]=Почтовые службы
 Name[sk]=Poskytovatelia mailu
 Name[sv]=E-postleverantörer
 Name[uk]=Надавачі послуг електронної пошти
-Name[x-test]=xxEmail Providersxx
 Name[zh_CN]=电子邮件供应商
 Name[zh_TW]=信箱提供者
 ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
