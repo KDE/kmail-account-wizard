@@ -45,10 +45,6 @@ public Q_SLOTS:
     Q_SCRIPTABLE void setEditMode(const bool editMode);
 
 private:
-    MailTransport::Transport::EnumEncryption stringToEncryption(const QString &encryptionString);
-    MailTransport::Transport::EnumAuthenticationType stringToAuthType(const QString &authString);
-
-private:
     int m_transportId;
     QString m_name;
     QString m_host;
