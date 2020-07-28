@@ -387,3 +387,23 @@ Ispdb::searchServerType Ispdb::serverType() const
 {
     return mServerType;
 }
+
+QDebug operator <<(QDebug d, const Server &t)
+{
+    d << "authentication " << t.authentication;
+    d << "socketType " << t.socketType;
+    d << "hostname " << t.hostname;
+    d << "username " << t.username;
+    d << "port " << t.port;
+    return d;
+}
+
+QDebug operator <<(QDebug d, const identity &t)
+{
+    d << " email "  << t.email;
+    d << " name "  << t.name;
+    d << " organization "  << t.organization;
+    d << " signature "  << t.signature;
+    d << " isDefault "  << t.mDefault;
+    return d;
+}

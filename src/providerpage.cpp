@@ -31,8 +31,6 @@ ProviderPage::ProviderPage(KAssistantDialog *parent)
     : Page(parent)
     , m_model(new QStandardItemModel(this))
     , m_downloadManager(new KNSCore::DownloadManager(this))
-    , m_newPageWanted(false)
-    , m_newPageReady(false)
 {
     ui.setupUi(this);
 

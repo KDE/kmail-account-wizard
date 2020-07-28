@@ -68,8 +68,8 @@ private:
     QSortFilterProxyModel *mProxy;
     KNSCore::EntryInternal::List m_providerEntries;
     Provider m_wantedProvider;
-    bool m_newPageWanted;
-    bool m_newPageReady;
+    bool m_newPageWanted = false;
+    bool m_newPageReady = false;
 };
 
 #endif
