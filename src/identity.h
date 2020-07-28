@@ -54,7 +54,7 @@ public Q_SLOTS:
     Q_SCRIPTABLE void setKey(GpgME::Protocol protocol, const QByteArray &fingerprint);
 
 private:
-    QString identityName() const;
+    Q_REQUIRED_RESULT QString identityName() const;
     QString m_identityName;
     KIdentityManagement::Identity *m_identity = nullptr;
 };

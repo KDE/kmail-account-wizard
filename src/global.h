@@ -24,17 +24,17 @@
 #include <QStringList>
 
 namespace Global {
-QStringList typeFilter();
+Q_REQUIRED_RESULT QStringList typeFilter();
 void setTypeFilter(const QStringList &filter);
 void setPoFileName(const QString &poFileName);
-QString poFileName();
-QString assistant();
+Q_REQUIRED_RESULT QString poFileName();
+Q_REQUIRED_RESULT QString assistant();
 void setAssistant(const QString &assistant);
 
-QString assistantBasePath();
-QStringList assistants();
+Q_REQUIRED_RESULT QString assistantBasePath();
+Q_REQUIRED_RESULT QStringList assistants();
 
-QString unpackAssistant(const QUrl &remotePackageUrl);
+Q_REQUIRED_RESULT QString unpackAssistant(const QUrl &remotePackageUrl);
 }
 
 #endif

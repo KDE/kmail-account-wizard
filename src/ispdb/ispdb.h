@@ -197,6 +197,7 @@ struct Server {
     QString username;
     int port = -1;
 };
+QDebug operator <<(QDebug d, const Server &t);
 
 struct identity {
     identity()
@@ -219,5 +220,6 @@ struct identity {
     QString signature;
     bool mDefault = false;
 };
+QDebug operator <<(QDebug d, const identity &t);
 
 #endif
