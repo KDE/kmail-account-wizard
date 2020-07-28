@@ -53,14 +53,16 @@ static const StringValueTable<MailTransport::Transport::EnumAuthenticationType> 
 static const int authenticationTypeEnumSize = sizeof(authenticationTypeEnum) / sizeof(*authenticationTypeEnum);
 
 template<typename T>
-static typename T::value_type stringToValue(const T *table, const int tableSize, const QString &string)
+static typename T::value_type stringToValue(const T *table, const int tableSize, const QString &string, bool &valid)
 {
     const QString ref = string.toLower();
     for (int i = 0; i < tableSize; ++i) {
         if (ref == QLatin1String(table[i].name)) {
+            valid = true;
             return table[i].value;
         }
     }
+    valid = false;
     return table[0].value; // TODO: error handling
 }
 
@@ -98,6 +100,7 @@ void Transport::create()
     mt->setAuthenticationType(m_auth);
     m_transportId = mt->id();
     mt->save();
+    Q_EMIT info(i18n("Mail transport uses '%1' encryption and '%2' authentication.", m_encrStr, m_authStr));
     MailTransport::TransportManager::self()->addTransport(mt);
     MailTransport::TransportManager::self()->setDefaultTransport(mt->id());
     if (m_editMode) {
@@ -154,12 +157,21 @@ void Transport::setPassword(const QString &password)
 
 void Transport::setEncryption(const QString &encryption)
 {
-    m_encr = stringToValue(encryptionEnum, encryptionEnumSize, encryption);
+    bool valid;
+    m_encr = stringToValue(encryptionEnum, encryptionEnumSize, encryption, valid);
+    if (valid) {
+        m_encrStr = encryption;
+    }
 }
 
 void Transport::setAuthenticationType(const QString &authType)
 {
-    m_auth = stringToValue(authenticationTypeEnum, authenticationTypeEnumSize, authType);
+    bool valid;
+    m_auth = stringToValue(authenticationTypeEnum, authenticationTypeEnumSize, authType, valid);
+    if (valid) {
+        m_authStr = authType;
+    }
+
 }
 
 int Transport::transportId() const
