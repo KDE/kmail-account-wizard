@@ -53,6 +53,8 @@ private:
     QString m_password;
     MailTransport::Transport::EnumEncryption::type m_encr;
     MailTransport::Transport::EnumAuthenticationType::type m_auth;
+    QString m_encrStr;
+    QString m_authStr;
 
     bool m_editMode;
 };
