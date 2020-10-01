@@ -105,8 +105,6 @@ option( ACCOUNTWIZARD_NO_GHNS "Disable GHNS support in the account wizard" FALSE
 
 option(KDEPIM_ENTERPRISE_BUILD "Enable features specific to the enterprise branch, which are normally disabled. Also, it disables many components not needed for Kontact such as the Kolab client." FALSE)
 
-option( ACCOUNTWIZARD_NO_REGENERATE_MIME "Don't regenerate mime file (only for developper)" FALSE )
-
 # config-enterprise.h is needed for both ENTERPRISE_BUILD and BUILD_EVERYTHING
 configure_file(src/config-enterprise.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/src/config-enterprise.h )
 
