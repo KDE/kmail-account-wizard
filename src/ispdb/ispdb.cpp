@@ -7,11 +7,9 @@
 
 #include "ispdb.h"
 #include "accountwizard_debug.h"
-#include <kio/job.h>
 #include <kio/jobclasses.h>
 #include <KLocalizedString>
 
-#include <kmime/kmime_header_parsing.h>
 #include <QDomDocument>
 
 Ispdb::Ispdb(QObject *parent)

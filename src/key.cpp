@@ -9,7 +9,6 @@
 #include "transport.h"
 
 #include <QTimer>
-#include <QProcess>
 
 #include <QGpgME/Protocol>
 #include <QGpgME/WKSPublishJob>

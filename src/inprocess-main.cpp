@@ -5,11 +5,7 @@
 */
 
 #include "inprocess-main.h"
-#include "dialog.h"
-#include "global.h"
 
-#include <QObject>
-#include <QStringList>
 
 AccountWizard::AccountWizard(QObject *parent)
     : QObject(parent)

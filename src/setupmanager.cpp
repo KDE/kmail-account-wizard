@@ -15,7 +15,6 @@
 #include "setupautoconfigkolabmail.h"
 #include "setupautoconfigkolabldap.h"
 #include "setupautoconfigkolabfreebusy.h"
-#include "key.h"
 
 #include <KEMailSettings>
 #include <kwallet.h>

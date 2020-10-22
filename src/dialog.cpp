@@ -14,7 +14,6 @@
 #include "loadpage.h"
 #include "global.h"
 #include "dynamicpage.h"
-#include "setupmanager.h"
 #include "servertest.h"
 #include "setuppage.h"
 #include "cryptopage.h"

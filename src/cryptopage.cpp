@@ -8,7 +8,6 @@
 #include "dialog.h"
 #include "identity.h"
 #include "accountwizard_debug.h"
-#include "key.h"
 #include "transport.h"
 
 #include <Libkleo/DefaultKeyFilter>
@@ -35,7 +34,6 @@
 
 #include <QFileDialog>
 #include <QEventLoopLocker>
-#include <QPointer>
 
 class KeyGenerationJob : public QObject
 {

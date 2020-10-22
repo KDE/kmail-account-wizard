@@ -10,7 +10,6 @@
 
 #include "accountwizard_debug.h"
 #include <QSortFilterProxyModel>
-#include <KNSCore/DownloadManager>
 #include <KLocalizedString>
 #include <QLineEdit>
 
