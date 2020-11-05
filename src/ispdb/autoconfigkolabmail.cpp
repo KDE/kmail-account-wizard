@@ -50,7 +50,7 @@ void AutoconfigKolabMail::slotResult(KJob *job)
         return;
     }
 
-    KIO::TransferJob *tjob = qobject_cast<KIO::TransferJob *>(job);
+    auto *tjob = qobject_cast<KIO::TransferJob *>(job);
 
     int responsecode = tjob->queryMetaData(QStringLiteral("responsecode")).toInt();
 

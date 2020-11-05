@@ -38,7 +38,7 @@ PersonalDataPage::PersonalDataPage(Dialog *parent)
     ui.setupUi(pageParent);
     ui.mProgress->stop();
 
-    PimCommon::EmailValidator *emailValidator = new PimCommon::EmailValidator(this);
+    auto *emailValidator = new PimCommon::EmailValidator(this);
     ui.emailEdit->setValidator(emailValidator);
 
     // KEmailSettings defaults
@@ -158,7 +158,7 @@ void PersonalDataPage::configureSmtpAccount()
         qCDebug(ACCOUNTWIZARD_LOG) << "Configuring transport for" << s.hostname;
 
         QObject *object = mSetupManager->createTransport(QStringLiteral("smtp"));
-        Transport *t = qobject_cast<Transport *>(object);
+        auto *t = qobject_cast<Transport *>(object);
         t->setName(accountName(mIspdb, s.username));
         t->setHost(s.hostname);
         t->setPort(s.port);
@@ -209,7 +209,7 @@ void PersonalDataPage::configureImapAccount()
         qCDebug(ACCOUNTWIZARD_LOG) << "Configuring imap for" << s.hostname;
 
         QObject *object = mSetupManager->createResource(QStringLiteral("akonadi_imap_resource"));
-        Resource *t = qobject_cast<Resource *>(object);
+        auto *t = qobject_cast<Resource *>(object);
         t->setName(accountName(mIspdb, s.username));
         t->setOption(QStringLiteral("ImapServer"), s.hostname);
         t->setOption(QStringLiteral("ImapPort"), s.port);
@@ -261,7 +261,7 @@ void PersonalDataPage::configurePop3Account()
         qCDebug(ACCOUNTWIZARD_LOG) << "No Imap to be created, configuring pop3 for" << s.hostname;
 
         QObject *object = mSetupManager->createResource(QStringLiteral("akonadi_pop3_resource"));
-        Resource *t = qobject_cast<Resource *>(object);
+        auto *t = qobject_cast<Resource *>(object);
         t->setName(accountName(mIspdb, s.username));
         t->setOption(QStringLiteral("Host"), s.hostname);
         t->setOption(QStringLiteral("Port"), s.port);

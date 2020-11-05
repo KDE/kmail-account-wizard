@@ -42,7 +42,7 @@ Dialog::Dialog(QWidget *parent)
     const bool showPersonalDataPage = Global::typeFilter().size() == 1 && Global::typeFilter().at(0) == KMime::Message::mimeType();
     if (showPersonalDataPage) {
         // todo: don't ask these details based on a setting of the desktop file.
-        PersonalDataPage *pdpage = new PersonalDataPage(this);
+        auto *pdpage = new PersonalDataPage(this);
         addPage(pdpage, i18n("Provide personal data"));
         connect(pdpage, &PersonalDataPage::manualWanted, this, &Dialog::slotManualConfigWanted);
         if (!Global::assistant().isEmpty()) {
@@ -50,13 +50,13 @@ Dialog::Dialog(QWidget *parent)
         }
 
         if (!GpgME::checkEngine(GpgME::OpenPGP)) {
-            CryptoPage *cryptoPage = new CryptoPage(this);
+            auto *cryptoPage = new CryptoPage(this);
             addPage(cryptoPage, i18n("Secure your Communication"));
         }
     }
 
     if (Global::assistant().isEmpty()) {
-        TypePage *typePage = new TypePage(this);
+        auto *typePage = new TypePage(this);
         connect(typePage->treeview(), &QAbstractItemView::doubleClicked, this, &Dialog::slotNextPage);
 #ifndef ACCOUNTWIZARD_NO_GHNS
         connect(typePage, &TypePage::ghnsWanted, this, &Dialog::slotGhnsWanted);
@@ -65,7 +65,7 @@ Dialog::Dialog(QWidget *parent)
         setAppropriate(mTypePage, false);
 
 #ifndef ACCOUNTWIZARD_NO_GHNS
-        ProviderPage *ppage = new ProviderPage(this);
+        auto *ppage = new ProviderPage(this);
         connect(typePage, &TypePage::ghnsWanted, ppage, &ProviderPage::startFetchingData);
         connect(ppage->treeview(), &QAbstractItemView::doubleClicked, this, &Dialog::slotNextPage);
         connect(ppage, &ProviderPage::ghnsNotWanted, this, &Dialog::slotGhnsNotWanted);
@@ -74,7 +74,7 @@ Dialog::Dialog(QWidget *parent)
 #endif
     }
 
-    LoadPage *loadPage = new LoadPage(this);
+    auto *loadPage = new LoadPage(this);
     mLoadPage = addPage(loadPage, i18n("Loading Assistant"));
     setAppropriate(mLoadPage, false);
     loadPage->exportObject(this, QStringLiteral("Dialog"));
@@ -82,7 +82,7 @@ Dialog::Dialog(QWidget *parent)
     loadPage->exportObject(new ServerTest(this), QStringLiteral("ServerTest"));
     connect(loadPage, &LoadPage::aboutToStart, this, &Dialog::clearDynamicPages);
 
-    SetupPage *setupPage = new SetupPage(this);
+    auto *setupPage = new SetupPage(this);
     mLastPage = addPage(setupPage, i18n("Setting up Account"));
     mSetupManager->setSetupPage(setupPage);
 

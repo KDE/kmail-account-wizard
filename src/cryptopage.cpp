@@ -71,7 +71,7 @@ Q_SIGNALS:
 private Q_SLOTS:
     void onObjectSetupFinished(SetupObject *obj)
     {
-        if (Transport *transport = qobject_cast<Transport *>(obj)) {
+        if (auto *transport = qobject_cast<Transport *>(obj)) {
             mTransportId = transport->transportId();
         }
     }

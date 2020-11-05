@@ -50,7 +50,7 @@ void SetupIspdb::fillIdentity(int i, QObject *o) const
 {
     identity isp = mIspdb->identities().at(i);
 
-    Identity *id = qobject_cast<Identity *>(o);
+    auto *id = qobject_cast<Identity *>(o);
 
     id->setIdentityName(isp.name);
     id->setRealName(isp.name);
@@ -65,7 +65,7 @@ void SetupIspdb::fillImapServer(int i, QObject *o) const
         return;
     }
     Server isp = mIspdb->imapServers().at(i);
-    Resource *imapRes = qobject_cast<Resource *>(o);
+    auto *imapRes = qobject_cast<Resource *>(o);
 
     imapRes->setName(isp.hostname);
     imapRes->setOption(QStringLiteral("ImapServer"), isp.hostname);
@@ -89,7 +89,7 @@ int SetupIspdb::countImapServers() const
 void SetupIspdb::fillSmtpServer(int i, QObject *o) const
 {
     Server isp = mIspdb->smtpServers().at(i);
-    Transport *smtpRes = qobject_cast<Transport *>(o);
+    auto *smtpRes = qobject_cast<Transport *>(o);
 
     smtpRes->setName(isp.hostname);
     smtpRes->setHost(isp.hostname);

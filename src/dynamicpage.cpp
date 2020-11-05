@@ -19,7 +19,7 @@
 DynamicPage::DynamicPage(const QString &uiFile, KAssistantDialog *parent)
     : Page(parent)
 {
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    auto *layout = new QVBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
 
     QWidget *pageParent = this;
@@ -32,7 +32,7 @@ DynamicPage::DynamicPage(const QString &uiFile, KAssistantDialog *parent)
         m_dynamicWidget = loader.load(&file, pageParent);
         file.close();
         if (!Global::poFileName().isEmpty()) {
-            KLocalizedTranslator *translator = new KLocalizedTranslator(this);
+            auto *translator = new KLocalizedTranslator(this);
             QCoreApplication::instance()->installTranslator(translator);
             translator->setTranslationDomain(Global::poFileName());
 

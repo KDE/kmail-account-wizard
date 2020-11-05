@@ -29,7 +29,7 @@ void SetupPage::detailsClicked()
 
 void SetupPage::addMessage(SetupPage::MessageType type, const QString &msg)
 {
-    QStandardItem *item = new QStandardItem;
+    auto *item = new QStandardItem;
     item->setText(msg);
     item->setEditable(false);
     switch (type) {

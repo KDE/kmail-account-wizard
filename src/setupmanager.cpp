@@ -63,7 +63,7 @@ QObject *SetupManager::createLdap()
 
 QObject *SetupManager::createIdentity()
 {
-    Identity *identity = new Identity(this);
+    auto *identity = new Identity(this);
     identity->setEmail(m_email);
     identity->setRealName(m_name);
     identity->setPgpAutoSign(m_pgpAutoSign);

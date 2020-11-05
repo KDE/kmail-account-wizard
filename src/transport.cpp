@@ -16,7 +16,7 @@ template<typename T>
 struct StringValueTable {
     const char *name;
     typename T::type value;
-    typedef typename T::type value_type;
+    using value_type = typename T::type;
 };
 
 static const StringValueTable<MailTransport::Transport::EnumEncryption> encryptionEnum[] = {

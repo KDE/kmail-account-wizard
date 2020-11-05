@@ -92,7 +92,7 @@ void ProviderPage::leavePageNext()
         return;
     }
 
-    const QSortFilterProxyModel *proxy = static_cast<const QSortFilterProxyModel *>(ui.listView->model());
+    const auto *proxy = static_cast<const QSortFilterProxyModel *>(ui.listView->model());
     const QStandardItem *item = m_model->itemFromIndex(proxy->mapToSource(index));
     qCDebug(ACCOUNTWIZARD_LOG) << "Item selected:" << item->text();
 
