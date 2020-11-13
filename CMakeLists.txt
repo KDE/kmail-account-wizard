@@ -89,6 +89,14 @@ find_package(Qt5UiTools ${QT_REQUIRED_VERSION} CONFIG REQUIRED)
 find_package(KF5Kross ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5NewStuff ${KF5_MIN_VERSION} CONFIG REQUIRED)
 
+#it will replace kwallet support
+find_package(Qt5Keychain CONFIG)
+set_package_properties(Qt5Keychain PROPERTIES
+                                   DESCRIPTION "Provides support for secure credentials storage"
+                                   URL "https://github.com/frankosterfeld/qtkeychain"
+                                   TYPE OPTIONAL)
+
+
 set( SharedMimeInfo_MINIMUM_VERSION "1.3" )
 find_package(SharedMimeInfo ${SharedMimeInfo_MINIMUM_VERSION} REQUIRED)
 
