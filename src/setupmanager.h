@@ -24,7 +24,7 @@ class SetupManager : public QObject
     Q_OBJECT
 public:
     explicit SetupManager(QWidget *parent);
-    ~SetupManager();
+    ~SetupManager() override;
     void setSetupPage(SetupPage *page);
 
     void setName(const QString &);
