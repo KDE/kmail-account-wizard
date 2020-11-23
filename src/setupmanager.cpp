@@ -259,6 +259,7 @@ void SetupManager::setKeyPublishingMethod(Key::PublishingMethod method)
 
 void SetupManager::openWallet()
 {
+    //Remove it we need to update qt5keychain
     using namespace KWallet;
     if (Wallet::isOpen(Wallet::NetworkWallet())) {
         return;
