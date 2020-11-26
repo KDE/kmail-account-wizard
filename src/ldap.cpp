@@ -7,6 +7,7 @@
 #include "ldap.h"
 #include <KLDAP/LdapClientSearchConfig>
 #include <KLDAP/AddHostDialog>
+#include <KLDAP/LdapClientSearchConfigWriteConfigJob>
 
 #include <KConfig>
 #include <KConfigGroup>
@@ -166,11 +167,21 @@ void Ldap::destroy()
         group = KConfigGroup(c, QStringLiteral("LDAP"));
 
         for (int i = 0; i < cSelHosts - 1; ++i) {
-            m_clientSearchConfig->writeConfig(selHosts.at(i), group, i, true);
+            auto job = new KLDAP::LdapClientSearchConfigWriteConfigJob;
+            job->setActive(true);
+            job->setConfig(group);
+            job->setServer(selHosts.at(i));
+            job->setServerIndex(i);
+            job->start();
         }
 
         for (int i = 0; i < cHosts; ++i) {
-            m_clientSearchConfig->writeConfig(hosts.at(i), group, i, false);
+            auto job = new KLDAP::LdapClientSearchConfigWriteConfigJob;
+            job->setActive(false);
+            job->setConfig(group);
+            job->setServer(hosts.at(i));
+            job->setServerIndex(i);
+            job->start();
         }
 
         group.writeEntry(QStringLiteral("NumSelectedHosts"), cSelHosts - 1);
@@ -195,7 +206,12 @@ void Ldap::edit()
     KLDAP::AddHostDialog dlg(&server, nullptr);
 
     if (dlg.exec() && !server.host().isEmpty()) { //krazy:exclude=crashy
-        clientSearchConfig.writeConfig(server, group, m_entry, true);
+        auto job = new KLDAP::LdapClientSearchConfigWriteConfigJob;
+        job->setActive(true);
+        job->setConfig(group);
+        job->setServer(server);
+        job->setServerIndex(m_entry);
+        job->start();
     }
 }
 
