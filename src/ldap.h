@@ -46,7 +46,7 @@ public Q_SLOTS:
 protected:
     virtual KConfig *config() const;
 
-    KLDAP::LdapClientSearchConfig *m_clientSearchConfig = nullptr;
+    KLDAP::LdapClientSearchConfig * const m_clientSearchConfig;
 private:
     friend class LdapTest;
     QString securityString();
@@ -59,14 +59,14 @@ private:
     QString m_mech;
     QString m_realm;
     QString m_baseDn;
-    int m_port;
-    KLDAP::LdapServer::Security m_security;
-    int m_version;
-    int m_pageSize;
-    int m_timeLimit;
-    int m_sizeLimit;
-    int m_entry;
-    bool m_editMode;
+    int m_port = 389;
+    KLDAP::LdapServer::Security m_security = KLDAP::LdapServer::None;
+    int m_version = 3;
+    int m_pageSize = 0;
+    int m_timeLimit = 0;
+    int m_sizeLimit = 0;
+    int m_entry = -1;
+    bool m_editMode = false;
 };
 
 #endif
