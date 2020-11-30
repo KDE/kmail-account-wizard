@@ -133,9 +133,6 @@ QString Ldap::securityString()
         return QStringLiteral("SSL");
     case KLDAP::LdapServer::TLS:
         return QStringLiteral("TLS");
-    default:
-        Q_EMIT error(i18n("Unknown security setting for LDAP server"));
-        return QString();
     }
 }
 
