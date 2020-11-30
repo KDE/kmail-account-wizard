@@ -8,6 +8,7 @@
 #include <KLDAP/LdapClientSearchConfig>
 #include <KLDAP/AddHostDialog>
 #include <KLDAP/LdapClientSearchConfigWriteConfigJob>
+#include <KLDAP/LdapClientSearchConfigReadConfigJob>
 
 #include <KConfig>
 #include <KConfigGroup>
@@ -134,6 +135,7 @@ QString Ldap::securityString()
     case KLDAP::LdapServer::TLS:
         return QStringLiteral("TLS");
     }
+    return {};
 }
 
 void Ldap::destroy()
@@ -199,17 +201,24 @@ void Ldap::edit()
     KLDAP::LdapServer server;
     KLDAP::LdapClientSearchConfig clientSearchConfig;
     KConfigGroup group = clientSearchConfig.config()->group(QStringLiteral("LDAP"));
-    clientSearchConfig.readConfig(server, group, m_entry, true);
-    KLDAP::AddHostDialog dlg(&server, nullptr);
 
-    if (dlg.exec() && !server.host().isEmpty()) { //krazy:exclude=crashy
-        auto job = new KLDAP::LdapClientSearchConfigWriteConfigJob;
-        job->setActive(true);
-        job->setConfig(group);
-        job->setServer(server);
-        job->setServerIndex(m_entry);
-        job->start();
-    }
+    KLDAP::LdapClientSearchConfigReadConfigJob *job = new KLDAP::LdapClientSearchConfigReadConfigJob(this);
+    connect(job, &KLDAP::LdapClientSearchConfigReadConfigJob::configLoaded, this, [this, group](KLDAP::LdapServer server) {
+        KLDAP::AddHostDialog dlg(&server, nullptr);
+
+        if (dlg.exec() && !server.host().isEmpty()) { //krazy:exclude=crashy
+            auto job = new KLDAP::LdapClientSearchConfigWriteConfigJob;
+            job->setActive(true);
+            job->setConfig(group);
+            job->setServer(server);
+            job->setServerIndex(m_entry);
+            job->start();
+        }
+    });
+    job->setActive(true);
+    job->setConfig(group);
+    job->setServerIndex(m_entry);
+    job->start();
 }
 
 void Ldap::setUser(const QString &user)
