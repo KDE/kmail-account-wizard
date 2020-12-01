@@ -15,6 +15,7 @@ set(accountwizard_srcs
     transport.cpp
     configfile.cpp
     ldap.cpp
+    restoreldapsettingsjob.cpp
     identity.cpp
     setupispdb.cpp
     setupautoconfigkolabmail.cpp
