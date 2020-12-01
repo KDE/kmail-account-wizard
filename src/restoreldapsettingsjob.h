@@ -10,6 +10,9 @@
 #include <QObject>
 #include <KLDAP/LdapServer>
 class KConfig;
+namespace KLDAP {
+class LdapClientSearchConfig;
+}
 class RestoreLdapSettingsJob : public QObject
 {
     Q_OBJECT
@@ -21,12 +24,21 @@ public:
     KConfig *config() const;
     void setConfig(KConfig *config);
     Q_REQUIRED_RESULT bool canStart() const;
+    Q_REQUIRED_RESULT int entry() const;
+    void setEntry(int entry);
+
+    KLDAP::LdapClientSearchConfig *clientSearchConfig() const;
+    void setClientSearchConfig(KLDAP::LdapClientSearchConfig *clientSearchConfig);
+
 Q_SIGNALS:
     void restoreDone();
 private:
+    void restore();
     QVector<KLDAP::LdapServer> mSelHosts;
     QVector<KLDAP::LdapServer> mHosts;
+    int mEntry = -1;
     KConfig *mConfig = nullptr;
+    KLDAP::LdapClientSearchConfig *mClientSearchConfig = nullptr;
 };
 
 #endif // RESTORELDAPSETTINGSJOB_H
