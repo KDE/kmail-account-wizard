@@ -5,6 +5,7 @@
 */
 
 #include "ldap.h"
+#include "restoreldapsettingsjob.h"
 #include <KLDAP/LdapClientSearchConfig>
 #include <KLDAP/AddHostDialog>
 #include <KLDAP/LdapClientSearchConfigWriteConfigJob>
@@ -135,52 +136,17 @@ void Ldap::destroy()
     Q_EMIT info(i18n("LDAP not configuring."));
     if (m_entry >= 0) {
         KConfig *c = config();
-        KConfigGroup group = c->group(QStringLiteral("LDAP"));
-        const int cSelHosts = group.readEntry(QStringLiteral("NumSelectedHosts"), 0);
-        const int cHosts = group.readEntry(QStringLiteral("NumHosts"), 0);
-        QVector<KLDAP::LdapServer> selHosts;
-        QVector<KLDAP::LdapServer> hosts;
-        for (int i = 0; i < cSelHosts; ++i) {
-            if (i != m_entry) {
-                KLDAP::LdapServer server;
-                m_clientSearchConfig->readConfig(server, group, i, true);
-                selHosts.append(server);
-            }
-        }
-        hosts.reserve(cHosts);
-        for (int i = 0; i < cHosts; ++i) {
-            KLDAP::LdapServer server;
-            m_clientSearchConfig->readConfig(server, group, i, false);
-            hosts.append(server);
-        }
-
-        c->deleteGroup(QStringLiteral("LDAP"));
-        group = KConfigGroup(c, QStringLiteral("LDAP"));
-
-        for (int i = 0; i < cSelHosts - 1; ++i) {
-            auto job = new KLDAP::LdapClientSearchConfigWriteConfigJob;
-            job->setActive(true);
-            job->setConfig(group);
-            job->setServer(selHosts.at(i));
-            job->setServerIndex(i);
-            job->start();
-        }
-
-        for (int i = 0; i < cHosts; ++i) {
-            auto job = new KLDAP::LdapClientSearchConfigWriteConfigJob;
-            job->setActive(false);
-            job->setConfig(group);
-            job->setServer(hosts.at(i));
-            job->setServerIndex(i);
-            job->start();
-        }
-
-        group.writeEntry(QStringLiteral("NumSelectedHosts"), cSelHosts - 1);
-        group.writeEntry(QStringLiteral("NumHosts"), cHosts);
-        c->sync();
-
-        Q_EMIT info(i18n("Removed LDAP entry."));
+        auto job = new RestoreLdapSettingsJob(this);
+        job->setEntry(m_entry);
+        job->setConfig(c);
+        connect(job, &RestoreLdapSettingsJob::restoreDone, this, &Ldap::slotRestoreDone);
+        job->start();
     }
+}
+
+void Ldap::slotRestoreDone()
+{
+    Q_EMIT info(i18n("Removed LDAP entry."));
 }
 
 void Ldap::edit()

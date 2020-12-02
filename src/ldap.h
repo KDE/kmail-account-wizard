@@ -49,6 +49,7 @@ protected:
     KLDAP::LdapClientSearchConfig * const m_clientSearchConfig;
 private:
     friend class LdapTest;
+    void slotRestoreDone();
     QString securityString();
 
     QString m_user;
