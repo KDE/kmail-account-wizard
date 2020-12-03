@@ -39,49 +39,54 @@ void RestoreLdapSettingsJob::restore()
         KConfigGroup group = mConfig->group(QStringLiteral("LDAP"));
         const int cSelHosts = group.readEntry(QStringLiteral("NumSelectedHosts"), 0);
         const int cHosts = group.readEntry(QStringLiteral("NumHosts"), 0);
-        QVector<KLDAP::LdapServer> selHosts;
-        QVector<KLDAP::LdapServer> hosts;
         for (int i = 0; i < cSelHosts; ++i) {
             if (i != mEntry) {
                 KLDAP::LdapServer server;
                 mClientSearchConfig->readConfig(server, group, i, true);
-                selHosts.append(server);
+                mSelHosts.append(server);
             }
         }
-        hosts.reserve(cHosts);
+        mHosts.reserve(cHosts);
         for (int i = 0; i < cHosts; ++i) {
             KLDAP::LdapServer server;
             mClientSearchConfig->readConfig(server, group, i, false);
-            hosts.append(server);
+            mHosts.append(server);
         }
 
-        mConfig->deleteGroup(QStringLiteral("LDAP"));
-        group = KConfigGroup(mConfig, QStringLiteral("LDAP"));
-
-        for (int i = 0; i < cSelHosts - 1; ++i) {
-            auto job = new KLDAP::LdapClientSearchConfigWriteConfigJob;
-            job->setActive(true);
-            job->setConfig(group);
-            job->setServer(selHosts.at(i));
-            job->setServerIndex(i);
-            job->start();
-        }
-
-        for (int i = 0; i < cHosts; ++i) {
-            auto job = new KLDAP::LdapClientSearchConfigWriteConfigJob;
-            job->setActive(false);
-            job->setConfig(group);
-            job->setServer(hosts.at(i));
-            job->setServerIndex(i);
-            job->start();
-        }
-
-        group.writeEntry(QStringLiteral("NumSelectedHosts"), cSelHosts - 1);
-        group.writeEntry(QStringLiteral("NumHosts"), cHosts);
-        mConfig->sync();
+        saveLdapSettings(cSelHosts, cHosts);
+    } else {
         Q_EMIT restoreDone();
+        deleteLater();
     }
-    //TODO
+}
+
+void RestoreLdapSettingsJob::saveLdapSettings(int cSelHosts, int cHosts)
+{
+    mConfig->deleteGroup(QStringLiteral("LDAP"));
+    KConfigGroup group = KConfigGroup(mConfig, QStringLiteral("LDAP"));
+
+    for (int i = 0; i < cSelHosts - 1; ++i) {
+        auto job = new KLDAP::LdapClientSearchConfigWriteConfigJob;
+        job->setActive(true);
+        job->setConfig(group);
+        job->setServer(mSelHosts.at(i));
+        job->setServerIndex(i);
+        job->start();
+    }
+
+    for (int i = 0; i < cHosts; ++i) {
+        auto job = new KLDAP::LdapClientSearchConfigWriteConfigJob;
+        job->setActive(false);
+        job->setConfig(group);
+        job->setServer(mHosts.at(i));
+        job->setServerIndex(i);
+        job->start();
+    }
+
+    group.writeEntry(QStringLiteral("NumSelectedHosts"), cSelHosts - 1);
+    group.writeEntry(QStringLiteral("NumHosts"), cHosts);
+    mConfig->sync();
+    Q_EMIT restoreDone();
     deleteLater();
 }
 
