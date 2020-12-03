@@ -35,6 +35,7 @@ Q_SIGNALS:
 private:
     void restore();
     void saveLdapSettings(int cSelHosts, int cHosts);
+    void restoreSettingsDone();
     QVector<KLDAP::LdapServer> mSelHosts;
     QVector<KLDAP::LdapServer> mHosts;
     int mEntry = -1;

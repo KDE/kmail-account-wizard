@@ -55,9 +55,14 @@ void RestoreLdapSettingsJob::restore()
 
         saveLdapSettings(cSelHosts, cHosts);
     } else {
-        Q_EMIT restoreDone();
-        deleteLater();
+        restoreSettingsDone();
     }
+}
+
+void RestoreLdapSettingsJob::restoreSettingsDone()
+{
+    Q_EMIT restoreDone();
+    deleteLater();
 }
 
 void RestoreLdapSettingsJob::saveLdapSettings(int cSelHosts, int cHosts)
@@ -86,8 +91,7 @@ void RestoreLdapSettingsJob::saveLdapSettings(int cSelHosts, int cHosts)
     group.writeEntry(QStringLiteral("NumSelectedHosts"), cSelHosts - 1);
     group.writeEntry(QStringLiteral("NumHosts"), cHosts);
     mConfig->sync();
-    Q_EMIT restoreDone();
-    deleteLater();
+    restoreSettingsDone();
 }
 
 KLDAP::LdapClientSearchConfig *RestoreLdapSettingsJob::clientSearchConfig() const
