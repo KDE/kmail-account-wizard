@@ -101,7 +101,8 @@ int main(int argc, char **argv)
     qCDebug(ACCOUNTWIZARD_LOG) << "Domains" << ispdb.relevantDomains();
     qCDebug(ACCOUNTWIZARD_LOG) << "Name" << ispdb.name(Ispdb::Long) << "(" << ispdb.name(Ispdb::Short) << ")";
     qCDebug(ACCOUNTWIZARD_LOG) << "Imap servers:";
-    foreach (const Server &s, ispdb.imapServers()) {
+    const auto imapServers = ispdb.imapServers();
+    for (const Server &s : imapServers) {
         qCDebug(ACCOUNTWIZARD_LOG) << "\thostname:" << s.hostname
                                    << "- port:" << s.port
                                    << "- encryption:" << socketTypeToStr(s.socketType)
@@ -109,7 +110,8 @@ int main(int argc, char **argv)
                                    << "- authentication:" << authTypeToStr(s.authentication);
     }
     qCDebug(ACCOUNTWIZARD_LOG) << "pop3 servers:";
-    foreach (const Server &s, ispdb.pop3Servers()) {
+    const auto pop3Servers = ispdb.pop3Servers();
+    for (const Server &s : pop3Servers) {
         qCDebug(ACCOUNTWIZARD_LOG) << "\thostname:" << s.hostname
                                    << "- port:" << s.port
                                    << "- encryption:" << socketTypeToStr(s.socketType)
@@ -117,7 +119,8 @@ int main(int argc, char **argv)
                                    << "- authentication:" << authTypeToStr(s.authentication);
     }
     qCDebug(ACCOUNTWIZARD_LOG) << "smtp servers:";
-    foreach (const Server &s, ispdb.smtpServers()) {
+    const auto smtpServers = ispdb.smtpServers();
+    for (const Server &s : smtpServers) {
         qCDebug(ACCOUNTWIZARD_LOG) << "\thostname:" << s.hostname
                                    << "- port:" << s.port
                                    << "- encryption:" << socketTypeToStr(s.socketType)
