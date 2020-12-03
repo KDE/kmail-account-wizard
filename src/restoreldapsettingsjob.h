@@ -9,6 +9,7 @@
 
 #include <QObject>
 #include <KLDAP/LdapServer>
+#include <KConfigGroup>
 class KConfig;
 namespace KLDAP {
 class LdapClientSearchConfig;
@@ -34,12 +35,18 @@ Q_SIGNALS:
     void restoreDone();
 private:
     void restore();
-    void saveLdapSettings(int cSelHosts, int cHosts);
+    void saveLdapSettings();
     void restoreSettingsDone();
+    void loadNextSelectHostSettings();
+    void loadNextHostSettings();
     QVector<KLDAP::LdapServer> mSelHosts;
     QVector<KLDAP::LdapServer> mHosts;
     int mEntry = -1;
+    int mNumSelHosts = -1;
+    int mNumHosts = -1;
+    int mCurrentIndex = 0;
     KConfig *mConfig = nullptr;
+    KConfigGroup mCurrentGroup;
     KLDAP::LdapClientSearchConfig *mClientSearchConfig = nullptr;
 };
 
