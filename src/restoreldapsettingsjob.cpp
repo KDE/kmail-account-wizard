@@ -101,44 +101,47 @@ void RestoreLdapSettingsJob::restoreSettingsDone()
     deleteLater();
 }
 
+void RestoreLdapSettingsJob::saveNextSelectHostSettings()
+{
+    if (mCurrentIndex < mNumSelHosts - 1) {
+        auto job = new KLDAP::LdapClientSearchConfigWriteConfigJob(this);
+        connect(job, &KLDAP::LdapClientSearchConfigWriteConfigJob::configSaved, this, &RestoreLdapSettingsJob::saveNextSelectHostSettings);
+        job->setActive(true);
+        job->setConfig(mCurrentGroup);
+        job->setServer(mSelHosts.at(mCurrentIndex));
+        job->setServerIndex(mCurrentIndex);
+        job->start();
+    } else {
+        mCurrentIndex = 0;
+        saveNextHostSettings();
+    }
+}
+
+void RestoreLdapSettingsJob::saveNextHostSettings()
+{
+    if (mCurrentIndex < mNumHosts) {
+        auto job = new KLDAP::LdapClientSearchConfigWriteConfigJob(this);
+        connect(job, &KLDAP::LdapClientSearchConfigWriteConfigJob::configSaved, this, &RestoreLdapSettingsJob::saveNextHostSettings);
+        job->setActive(false);
+        job->setConfig(mCurrentGroup);
+        job->setServer(mHosts.at(mCurrentIndex));
+        job->setServerIndex(mCurrentIndex);
+        job->start();
+    } else {
+        mCurrentGroup.writeEntry(QStringLiteral("NumSelectedHosts"), mNumSelHosts - 1);
+        mCurrentGroup.writeEntry(QStringLiteral("NumHosts"), mNumHosts);
+        mConfig->sync();
+        restoreSettingsDone();
+    }
+}
+
 void RestoreLdapSettingsJob::saveLdapSettings()
 {
     mConfig->deleteGroup(QStringLiteral("LDAP"));
     mCurrentGroup = KConfigGroup(mConfig, QStringLiteral("LDAP"));
 
-    //Move async
-    for (int i = 0; i < mNumSelHosts - 1; ++i) {
-        auto job = new KLDAP::LdapClientSearchConfigWriteConfigJob;
-        job->setActive(true);
-        job->setConfig(mCurrentGroup);
-        job->setServer(mSelHosts.at(i));
-        job->setServerIndex(i);
-        job->start();
-    }
-
-    for (int i = 0; i < mNumHosts; ++i) {
-        auto job = new KLDAP::LdapClientSearchConfigWriteConfigJob;
-        job->setActive(false);
-        job->setConfig(mCurrentGroup);
-        job->setServer(mHosts.at(i));
-        job->setServerIndex(i);
-        job->start();
-    }
-
-    mCurrentGroup.writeEntry(QStringLiteral("NumSelectedHosts"), mNumSelHosts - 1);
-    mCurrentGroup.writeEntry(QStringLiteral("NumHosts"), mNumHosts);
-    mConfig->sync();
-    restoreSettingsDone();
-}
-
-KLDAP::LdapClientSearchConfig *RestoreLdapSettingsJob::clientSearchConfig() const
-{
-    return mClientSearchConfig;
-}
-
-void RestoreLdapSettingsJob::setClientSearchConfig(KLDAP::LdapClientSearchConfig *clientSearchConfig)
-{
-    mClientSearchConfig = clientSearchConfig;
+    mCurrentIndex = 0;
+    saveNextSelectHostSettings();
 }
 
 int RestoreLdapSettingsJob::entry() const
@@ -164,5 +167,5 @@ void RestoreLdapSettingsJob::setConfig(KConfig *config)
 
 bool RestoreLdapSettingsJob::canStart() const
 {
-    return (mConfig != nullptr) && (mEntry != -1) && mClientSearchConfig;
+    return (mConfig != nullptr) && (mEntry != -1);
 }

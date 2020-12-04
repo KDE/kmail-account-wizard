@@ -11,9 +11,6 @@
 #include <KLDAP/LdapServer>
 #include <KConfigGroup>
 class KConfig;
-namespace KLDAP {
-class LdapClientSearchConfig;
-}
 class RestoreLdapSettingsJob : public QObject
 {
     Q_OBJECT
@@ -28,9 +25,6 @@ public:
     Q_REQUIRED_RESULT int entry() const;
     void setEntry(int entry);
 
-    KLDAP::LdapClientSearchConfig *clientSearchConfig() const;
-    void setClientSearchConfig(KLDAP::LdapClientSearchConfig *clientSearchConfig);
-
 Q_SIGNALS:
     void restoreDone();
 private:
@@ -41,6 +35,8 @@ private:
     void restoreSettingsDone();
     void loadNextSelectHostSettings();
     void loadNextHostSettings();
+    void saveNextSelectHostSettings();
+    void saveNextHostSettings();
     QVector<KLDAP::LdapServer> mSelHosts;
     QVector<KLDAP::LdapServer> mHosts;
     int mEntry = -1;
@@ -49,7 +45,6 @@ private:
     int mCurrentIndex = 0;
     KConfig *mConfig = nullptr;
     KConfigGroup mCurrentGroup;
-    KLDAP::LdapClientSearchConfig *mClientSearchConfig = nullptr;
 };
 
 #endif // RESTORELDAPSETTINGSJOB_H
