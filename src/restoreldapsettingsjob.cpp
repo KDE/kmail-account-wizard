@@ -6,6 +6,7 @@
 
 #include "restoreldapsettingsjob.h"
 #include <KLDAP/LdapClientSearchConfigWriteConfigJob>
+#include <KLDAP/LdapClientSearchConfigReadConfigJob>
 #include <KLDAP/LdapClientSearchConfig>
 #include <KConfigGroup>
 #include <KConfig>
@@ -33,15 +34,23 @@ void RestoreLdapSettingsJob::start()
     restore();
 }
 
+void RestoreLdapSettingsJob::slotConfigSelectedHostLoaded(const KLDAP::LdapServer &server)
+{
+    mSelHosts.append(server);
+    mCurrentIndex++;
+    loadNextSelectHostSettings();
+}
+
 void RestoreLdapSettingsJob::loadNextSelectHostSettings()
 {
     if (mCurrentIndex < mNumSelHosts) {
         if (mCurrentIndex != mEntry) {
-            KLDAP::LdapServer server;
-            mClientSearchConfig->readConfig(server, mCurrentGroup, mCurrentIndex, true);
-            mSelHosts.append(server);
-            mCurrentIndex++;
-            loadNextSelectHostSettings(); //Move async
+            auto job = new KLDAP::LdapClientSearchConfigReadConfigJob(this);
+            connect(job, &KLDAP::LdapClientSearchConfigReadConfigJob::configLoaded, this, &RestoreLdapSettingsJob::slotConfigSelectedHostLoaded);
+            job->setActive(true);
+            job->setConfig(mCurrentGroup);
+            job->setServerIndex(mCurrentIndex);
+            job->start();
         } else {
             mCurrentIndex++;
             loadNextSelectHostSettings();
@@ -53,14 +62,22 @@ void RestoreLdapSettingsJob::loadNextSelectHostSettings()
     }
 }
 
+void RestoreLdapSettingsJob::slotConfigHostLoaded(const KLDAP::LdapServer &server)
+{
+    mHosts.append(server);
+    mCurrentIndex++;
+    loadNextHostSettings();
+}
+
 void RestoreLdapSettingsJob::loadNextHostSettings()
 {
     if (mCurrentIndex < mNumHosts) {
-        KLDAP::LdapServer server;
-        mClientSearchConfig->readConfig(server, mCurrentGroup, mCurrentIndex, false);
-        mHosts.append(server);
-        mCurrentIndex++;
-        loadNextHostSettings(); //Move async
+        auto job = new KLDAP::LdapClientSearchConfigReadConfigJob(this);
+        connect(job, &KLDAP::LdapClientSearchConfigReadConfigJob::configLoaded, this, &RestoreLdapSettingsJob::slotConfigHostLoaded);
+        job->setActive(false);
+        job->setConfig(mCurrentGroup);
+        job->setServerIndex(mCurrentIndex);
+        job->start();
     } else {
         saveLdapSettings();
     }

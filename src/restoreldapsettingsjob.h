@@ -34,6 +34,8 @@ public:
 Q_SIGNALS:
     void restoreDone();
 private:
+    void slotConfigSelectedHostLoaded(const KLDAP::LdapServer &server);
+    void slotConfigHostLoaded(const KLDAP::LdapServer &server);
     void restore();
     void saveLdapSettings();
     void restoreSettingsDone();
