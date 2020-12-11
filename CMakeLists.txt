@@ -1,4 +1,4 @@
-set(PIM_VERSION "5.16.0")
+set(PIM_VERSION "5.16.1")
 cmake_minimum_required(VERSION 3.5)
 project(kmail-account-wizard VERSION ${PIM_VERSION})
 
