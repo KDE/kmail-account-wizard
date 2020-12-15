@@ -71,9 +71,17 @@ if ( NOT ACCOUNTWIZARD_NO_GHNS )
 endif ()
 
 add_executable(accountwizard ${accountwizard_srcs} main.cpp)
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+    set_target_properties(accountwizard PROPERTIES UNITY_BUILD ON)
+endif()
+
 target_link_libraries(accountwizard ${accountwizard_libs} KF5::DBusAddons)
 
 add_library(accountwizard_plugin MODULE ${accountwizard_srcs} inprocess-main.cpp)
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+    set_target_properties(accountwizard_plugin PROPERTIES UNITY_BUILD ON)
+endif()
+
 target_link_libraries(accountwizard_plugin ${accountwizard_libs})
 
 if ( NOT ACCOUNTWIZARD_NO_GHNS )
