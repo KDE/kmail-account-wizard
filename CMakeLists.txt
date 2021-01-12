@@ -101,7 +101,7 @@ set( SharedMimeInfo_MINIMUM_VERSION "1.3" )
 find_package(SharedMimeInfo ${SharedMimeInfo_MINIMUM_VERSION} REQUIRED)
 
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054E00)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054F00)
 add_definitions(-DQT_NO_SIGNALS_SLOTS_KEYWORDS)
 add_definitions(-DQT_NO_EMIT)
 set(CMAKE_CXX_STANDARD 14)
