@@ -12,15 +12,12 @@
 #include <QStandardItemModel>
 
 #include "ui_providerpage.h"
-#include <KNSCore/DownloadManager>
+#include <KNSCore/Engine>
 struct Provider {
     QString entryId;
     QString entryProviderId;
 };
 class QSortFilterProxyModel;
-namespace KNSCore {
-class DownloadManager;
-}
 
 class ProviderPage : public Page
 {
@@ -51,7 +48,7 @@ private:
     Ui::ProviderPage ui;
     QStandardItemModel *m_model = nullptr;
     QStandardItem *m_fetchItem = nullptr;
-    KNSCore::DownloadManager *m_downloadManager = nullptr;
+    KNSCore::Engine *m_engine = nullptr;
     QSortFilterProxyModel *mProxy;
     KNSCore::EntryInternal::List m_providerEntries;
     Provider m_wantedProvider;

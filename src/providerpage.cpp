@@ -16,10 +16,12 @@
 ProviderPage::ProviderPage(KAssistantDialog *parent)
     : Page(parent)
     , m_model(new QStandardItemModel(this))
-    , m_downloadManager(new KNSCore::DownloadManager(this))
+    , m_engine(new KNSCore::Engine(this))
 {
     ui.setupUi(this);
 
+    const QString name = QCoreApplication::applicationName() + QStringLiteral(".knsrc");
+    m_engine->init(name);
     mProxy = new QSortFilterProxyModel(this);
     mProxy->setSourceModel(m_model);
     mProxy->setFilterKeyColumn(-1);
@@ -32,16 +34,20 @@ ProviderPage::ProviderPage(KAssistantDialog *parent)
 
     // we can start the search, whenever the user reaches this page, chances
     // are we have the full list.
-    connect(m_downloadManager, &KNSCore::DownloadManager::searchResult, this, &ProviderPage::fillModel);
-    connect(m_downloadManager, &KNSCore::DownloadManager::entryStatusChanged, this, &ProviderPage::providerStatusChanged);
-    m_downloadManager->setSearchOrder(KNSCore::DownloadManager::Alphabetical);
+    connect(m_engine, &KNSCore::Engine::signalUpdateableEntriesLoaded, this, &ProviderPage::fillModel);
+    connect(m_engine, &KNSCore::Engine::signalEntryEvent, this, [this](const KNSCore::EntryInternal &entry, KNSCore::EntryInternal::EntryEvent event) {
+        if (event == KNSCore::EntryInternal::StatusChangedEvent) {
+            providerStatusChanged(entry);
+        }
+    });
+    m_engine->setSortMode(KNSCore::Provider::Alphabetical);
 
     connect(ui.listView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &ProviderPage::selectionChanged);
 }
 
 void ProviderPage::startFetchingData()
 {
-    m_downloadManager->search(0, 100000);
+    m_engine->requestData(0, 100000);
 }
 
 void ProviderPage::slotTextChanged(const QString &str)
@@ -108,7 +114,7 @@ void ProviderPage::leavePageNext()
                 findDesktopAndSetAssistant(e.installedFiles());
             } else {
                 qCDebug(ACCOUNTWIZARD_LOG) << "Starting download for " << e.name();
-                m_downloadManager->installEntry(e);
+                m_engine->install(e);
             }
 
             break;
