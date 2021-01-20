@@ -177,8 +177,10 @@ void SetupManager::rollback()
 {
     m_page->setStatus(i18n("Failed to set up account, rolling back..."));
     const int setupObjectCount = m_objectToSetup.size() + m_setupObjects.size();
-    int remainingObjectCount = m_setupObjects.size();
-    foreach (SetupObject *obj, m_setupObjects) {
+    const int remainingObjectCount = m_setupObjects.size();
+    const auto setupObjectsList = m_setupObjects;
+    for (int i = 0; i < setupObjectsList.count(); ++i) {
+        auto obj = m_setupObjects.at(i);
         m_page->setProgress((remainingObjectCount * 100) / setupObjectCount);
         if (obj) {
             obj->destroy();

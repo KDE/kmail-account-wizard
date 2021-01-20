@@ -193,7 +193,9 @@ SetupManager *Dialog::setupManager()
 
 void Dialog::clearDynamicPages()
 {
-    foreach (KPageWidgetItem *item, mDynamicPages) {
+    const auto dynamicPages = mDynamicPages;
+    for (int i = 0, total = dynamicPages.count(); i < total; ++i) {
+        KPageWidgetItem *item = mDynamicPages.at(i);
         removePage(item);
     }
     mDynamicPages.clear();
