@@ -86,7 +86,7 @@ TypePage::TypePage(KAssistantDialog *parent)
                 continue;
             }
         }
-        QStandardItem *item = new QStandardItem(f.readName());
+        auto *item = new QStandardItem(f.readName());
         item->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
         item->setData(entry, Qt::UserRole);
         if (!f.readIcon().isEmpty()) {

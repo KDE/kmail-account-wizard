@@ -160,7 +160,7 @@ void Ldap::edit()
     KLDAP::LdapClientSearchConfig clientSearchConfig;
     KConfigGroup group = clientSearchConfig.config()->group(QStringLiteral("LDAP"));
 
-    KLDAP::LdapClientSearchConfigReadConfigJob *job = new KLDAP::LdapClientSearchConfigReadConfigJob(this);
+    auto *job = new KLDAP::LdapClientSearchConfigReadConfigJob(this);
     connect(job, &KLDAP::LdapClientSearchConfigReadConfigJob::configLoaded, this, [this, group](KLDAP::LdapServer server) {
         KLDAP::AddHostDialog dlg(&server, nullptr);
 

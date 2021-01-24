@@ -69,7 +69,7 @@ void ProviderPage::fillModel(const KNSCore::EntryInternal::List &list)
     for (const KNSCore::EntryInternal &e : list) {
         qCDebug(ACCOUNTWIZARD_LOG) << "Found Entry: " << e.name();
 
-        QStandardItem *item = new QStandardItem(e.name());
+        auto *item = new QStandardItem(e.name());
         item->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
         item->setData(e.name(), Qt::ToolTipRole);
         item->setData(e.uniqueId(), Qt::UserRole);

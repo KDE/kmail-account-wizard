@@ -93,7 +93,7 @@ Dialog::Dialog(QWidget *parent)
     //TODO ? necessary ???
     Q_EMIT page->pageEnteredNext();
     connect(button(QDialogButtonBox::Cancel), &QPushButton::clicked, this, &Dialog::reject);
-    KHelpMenu *helpMenu = new KHelpMenu(this, KAboutData::applicationData(), true);
+    auto *helpMenu = new KHelpMenu(this, KAboutData::applicationData(), true);
     //Initialize menu
     QMenu *menu = helpMenu->menu();
     helpMenu->action(KHelpMenu::menuAboutApp)->setIcon(QIcon::fromTheme(QStringLiteral("akonadi")));
@@ -153,7 +153,7 @@ void Dialog::slotBackOk()
 QObject *Dialog::addPage(const QString &uiFile, const QString &title)
 {
     qCDebug(ACCOUNTWIZARD_LOG) << uiFile;
-    DynamicPage *page = new DynamicPage(Global::assistantBasePath() + uiFile, this);
+    auto *page = new DynamicPage(Global::assistantBasePath() + uiFile, this);
     connect(page, &DynamicPage::leavePageNextOk, this, &Dialog::slotNextOk);
     connect(page, &DynamicPage::leavePageBackOk, this, &Dialog::slotBackOk);
     KPageWidgetItem *item = insertPage(mLastPage, page, title);

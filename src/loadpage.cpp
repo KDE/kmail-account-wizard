@@ -43,7 +43,7 @@ void LoadPage::enterPageNext()
     ui.statusLabel->setText(i18n("Loading script '%1'...", Global::assistantBasePath() + scriptFile));
 
     m_action = new Kross::Action(this, QStringLiteral("AccountWizard"));
-    typedef QPair<QObject *, QString> ObjectStringPair;
+    using ObjectStringPair = QPair<QObject *, QString>;
     for (const ObjectStringPair &exportedObject : qAsConst(m_exportedObjects)) {
         m_action->addQObject(exportedObject.first, exportedObject.second);
     }
