@@ -10,24 +10,24 @@
 #ifndef ACCOUNTWIZARD_NO_GHNS
 #include "providerpage.h"
 #endif
-#include "typepage.h"
-#include "loadpage.h"
-#include "global.h"
+#include "cryptopage.h"
 #include "dynamicpage.h"
+#include "global.h"
+#include "loadpage.h"
 #include "servertest.h"
 #include "setuppage.h"
-#include "cryptopage.h"
+#include "typepage.h"
 
 #include <QAction>
 
 #include <KMime/Message>
 
-#include <KLocalizedString>
 #include "accountwizard_debug.h"
-#include <KMessageBox>
-#include <qplatformdefs.h>
 #include <KAboutData>
+#include <KLocalizedString>
+#include <KMessageBox>
 #include <PimCommon/PimUtil>
+#include <qplatformdefs.h>
 
 #include <KHelpMenu>
 
@@ -90,11 +90,11 @@ Dialog::Dialog(QWidget *parent)
 
     Page *page = qobject_cast<Page *>(currentPage()->widget());
     page->enterPageNext();
-    //TODO ? necessary ???
+    // TODO ? necessary ???
     Q_EMIT page->pageEnteredNext();
     connect(button(QDialogButtonBox::Cancel), &QPushButton::clicked, this, &Dialog::reject);
     auto *helpMenu = new KHelpMenu(this, KAboutData::applicationData(), true);
-    //Initialize menu
+    // Initialize menu
     QMenu *menu = helpMenu->menu();
     helpMenu->action(KHelpMenu::menuAboutApp)->setIcon(QIcon::fromTheme(QStringLiteral("akonadi")));
     disconnect(helpMenu->action(KHelpMenu::menuHelpContents), nullptr, helpMenu, nullptr);
@@ -203,7 +203,9 @@ void Dialog::clearDynamicPages()
 
 void Dialog::reject()
 {
-    connect(mSetupManager, &SetupManager::rollbackComplete, this, [this]() { KAssistantDialog::reject();} );
+    connect(mSetupManager, &SetupManager::rollbackComplete, this, [this]() {
+        KAssistantDialog::reject();
+    });
     mSetupManager->requestRollback();
 }
 

@@ -7,10 +7,10 @@
 #include "global.h"
 
 #include "accountwizard_debug.h"
-#include <QFileInfo>
 #include <QDir>
-#include <kio/copyjob.h>
+#include <QFileInfo>
 #include <QStandardPaths>
+#include <kio/copyjob.h>
 
 class GlobalPrivate
 {
@@ -30,7 +30,8 @@ QString Global::assistant()
 QStringList Global::assistants()
 {
     QStringList list;
-    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("akonadi/accountwizard/"), QStandardPaths::LocateDirectory);
+    const QStringList dirs =
+        QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("akonadi/accountwizard/"), QStandardPaths::LocateDirectory);
     for (const QString &dir : dirs) {
         const QStringList directories = QDir(dir).entryList(QDir::AllDirs);
         for (const QString &directory : directories) {
@@ -61,7 +62,8 @@ void Global::setAssistant(const QString &assistant)
     }
 
     QStringList list;
-    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("akonadi/accountwizard/"), QStandardPaths::LocateDirectory);
+    const QStringList dirs =
+        QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("akonadi/accountwizard/"), QStandardPaths::LocateDirectory);
     for (const QString &dir : dirs) {
         const QStringList directories = QDir(dir).entryList(QDir::AllDirs);
         for (const QString &directory : directories) {

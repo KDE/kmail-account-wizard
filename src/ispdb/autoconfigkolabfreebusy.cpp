@@ -71,8 +71,7 @@ freebusy AutoconfigKolabFreebusy::createFreebusyServer(const QDomElement &n)
                 s.password = f.text();
             } else if (tagName == QLatin1String("authentication")) {
                 const QString type(f.text());
-                if (type == QLatin1String("none")
-                    || type == QLatin1String("plain")) {
+                if (type == QLatin1String("none") || type == QLatin1String("plain")) {
                     s.authentication = Plain;
                 } else if (type == QLatin1String("basic")) {
                     s.authentication = Basic;
@@ -86,7 +85,7 @@ freebusy AutoconfigKolabFreebusy::createFreebusyServer(const QDomElement &n)
     return s;
 }
 
-QHash< QString, freebusy > AutoconfigKolabFreebusy::freebusyServers() const
+QHash<QString, freebusy> AutoconfigKolabFreebusy::freebusyServers() const
 {
     return mFreebusyServer;
 }

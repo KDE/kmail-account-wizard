@@ -4,16 +4,16 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include <QObject>
 #include <QDir>
+#include <QObject>
 #include <QTest>
 
 #include <KConfig>
 #include <KConfigGroup>
 #include <QTemporaryFile>
 
-#include <KLDAP/LdapClientSearchConfig>
 #include "../ldap.h"
+#include <KLDAP/LdapClientSearchConfig>
 
 class TLdap : public Ldap
 {
@@ -25,7 +25,7 @@ public:
         mTempFile.open();
         mTempFile.close();
         mConfig = new KConfig(mTempFile.fileName(), KConfig::SimpleConfig);
-        //TODO m_clientSearchConfig->askForWallet(false);
+        // TODO m_clientSearchConfig->askForWallet(false);
     }
 
     ~TLdap() override
@@ -50,7 +50,7 @@ class LdapTest : public QObject
 private Q_SLOTS:
     void testDestroy()
     {
-#if 0      //TODO port it
+#if 0 // TODO port it
         TLdap l;
         QFile::remove(l.mTempFile.fileName());
         QFile::copy(QStringLiteral(TEST_DATA_DIR) + QStringLiteral("/ldap.cfg"), l.mTempFile.fileName());

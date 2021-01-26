@@ -7,9 +7,9 @@
 #include "identity.h"
 #include "transport.h"
 
-#include <kidentitymanagement/identitymanager.h>
-#include <kidentitymanagement/identity.h>
 #include "accountwizard_debug.h"
+#include <kidentitymanagement/identity.h>
+#include <kidentitymanagement/identitymanager.h>
 
 #include <KLocalizedString>
 
@@ -57,9 +57,9 @@ QString Identity::identityName() const
         name.replace(QLatin1Char('.'), QLatin1Char(' '));
         pos = name.indexOf(QLatin1Char(' '));
         if (pos != 0) {
-            name[ pos + 1 ] = name[ pos + 1 ].toUpper();
+            name[pos + 1] = name[pos + 1].toUpper();
         }
-        name[ 0 ] = name[ 0 ].toUpper();
+        name[0] = name[0].toUpper();
     }
 
     auto manager = KIdentityManagement::IdentityManager::self();

@@ -9,7 +9,8 @@
 
 #include <QObject>
 
-namespace MailTransport {
+namespace MailTransport
+{
 class ServerTest;
 }
 

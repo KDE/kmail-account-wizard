@@ -6,8 +6,8 @@
 
 #include <QObject>
 #include <QProcess>
-#include <QTest>
 #include <QTcpSocket>
+#include <QTest>
 
 #include "../autoconfigkolabldap.h"
 
@@ -37,7 +37,7 @@ public:
         const QString filePath = QStringLiteral(AUTOCONFIG_DATA_DIR) + QLatin1Char('/') + file;
         [](const QString &file) {
             QVERIFY(QFile(file).exists());
-        } (filePath);
+        }(filePath);
 
         QEventLoop loop;
         TAutoconfLdap *ispdb = new TAutoconfLdap();

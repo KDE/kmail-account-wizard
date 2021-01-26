@@ -13,7 +13,8 @@
 class LdapTest;
 class KConfig;
 
-namespace KLDAP {
+namespace KLDAP
+{
 class LdapClientSearchConfig;
 }
 
@@ -46,7 +47,8 @@ public Q_SLOTS:
 protected:
     virtual KConfig *config() const;
 
-    KLDAP::LdapClientSearchConfig * const m_clientSearchConfig;
+    KLDAP::LdapClientSearchConfig *const m_clientSearchConfig;
+
 private:
     friend class LdapTest;
     void slotRestoreDone();

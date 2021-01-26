@@ -7,8 +7,8 @@
 
 #include "ispdb.h"
 #include "accountwizard_debug.h"
-#include <kio/jobclasses.h>
 #include <KLocalizedString>
+#include <kio/jobclasses.h>
 
 #include <QDomDocument>
 
@@ -52,7 +52,7 @@ void Ispdb::lookupInDb(bool auth, bool crypt)
 void Ispdb::startJob(const QUrl &url)
 {
     mData.clear();
-    QMap< QString, QVariant > map;
+    QMap<QString, QVariant> map;
     map[QStringLiteral("errorPage")] = false;
 
     KIO::TransferJob *job = KIO::get(url, KIO::NoReload, KIO::HideProgressInfo);
@@ -115,7 +115,7 @@ void Ispdb::slotResult(KJob *job)
         return;
     }
 
-    //qCDebug(ACCOUNTWIZARD_LOG) << mData;
+    // qCDebug(ACCOUNTWIZARD_LOG) << mData;
     QDomDocument document;
     bool ok = document.setContent(mData);
     if (!ok) {
@@ -137,13 +137,13 @@ void Ispdb::parseResult(const QDomDocument &document)
         return;
     }
 
-    //only handle the first emailProvider entry
+    // only handle the first emailProvider entry
     QDomNode firstProvider = l.at(0);
     QDomNode n = firstProvider.firstChild();
     while (!n.isNull()) {
         QDomElement e = n.toElement();
         if (!e.isNull()) {
-            //qCDebug(ACCOUNTWIZARD_LOG)  << qPrintable(e.tagName());
+            // qCDebug(ACCOUNTWIZARD_LOG)  << qPrintable(e.tagName());
             const QString tagName(e.tagName());
             if (tagName == QLatin1String("domain")) {
                 mDomains << e.text();
@@ -151,20 +151,17 @@ void Ispdb::parseResult(const QDomDocument &document)
                 mDisplayName = e.text();
             } else if (tagName == QLatin1String("displayShortName")) {
                 mDisplayShortName = e.text();
-            } else if (tagName == QLatin1String("incomingServer")
-                       && e.attribute(QStringLiteral("type")) == QLatin1String("imap")) {
+            } else if (tagName == QLatin1String("incomingServer") && e.attribute(QStringLiteral("type")) == QLatin1String("imap")) {
                 Server s = createServer(e);
                 if (s.isValid()) {
                     mImapServers.append(s);
                 }
-            } else if (tagName == QLatin1String("incomingServer")
-                       && e.attribute(QStringLiteral("type")) == QLatin1String("pop3")) {
+            } else if (tagName == QLatin1String("incomingServer") && e.attribute(QStringLiteral("type")) == QLatin1String("pop3")) {
                 Server s = createServer(e);
                 if (s.isValid()) {
                     mPop3Servers.append(s);
                 }
-            } else if (tagName == QLatin1String("outgoingServer")
-                       && e.attribute(QStringLiteral("type")) == QLatin1String("smtp")) {
+            } else if (tagName == QLatin1String("outgoingServer") && e.attribute(QStringLiteral("type")) == QLatin1String("smtp")) {
                 Server s = createServer(e);
                 if (s.isValid()) {
                     mSmtpServers.append(s);
@@ -229,11 +226,9 @@ Server Ispdb::createServer(const QDomElement &n)
                 s.username = replacePlaceholders(f.text());
             } else if (tagName == QLatin1String("authentication") && s.authentication == 0) {
                 const QString type(f.text());
-                if (type == QLatin1String("password-cleartext")
-                    || type == QLatin1String("plain")) {
+                if (type == QLatin1String("password-cleartext") || type == QLatin1String("plain")) {
                     s.authentication = Plain;
-                } else if (type == QLatin1String("password-encrypted")
-                           || type == QLatin1String("secure")) {
+                } else if (type == QLatin1String("password-encrypted") || type == QLatin1String("secure")) {
                     s.authentication = CramMD5;
                 } else if (type == QLatin1String("NTLM")) {
                     s.authentication = NTLM;
@@ -258,9 +253,8 @@ identity Ispdb::createIdentity(const QDomElement &n)
     QDomNode o = n.firstChild();
     identity i;
 
-    //type="kolab" version="1.0" is the only identity that is defined
-    if (n.attribute(QStringLiteral("type")) != QLatin1String("kolab")
-        || n.attribute(QStringLiteral("version")) != QLatin1String("1.0")) {
+    // type="kolab" version="1.0" is the only identity that is defined
+    if (n.attribute(QStringLiteral("type")) != QLatin1String("kolab") || n.attribute(QStringLiteral("version")) != QLatin1String("1.0")) {
         qCDebug(ACCOUNTWIZARD_LOG) << "unknown type of identity element.";
     }
 
@@ -320,21 +314,21 @@ QString Ispdb::name(length l) const
     } else if (l == Short) {
         return mDisplayShortName;
     } else {
-        return QString();    //make compiler happy. Not me.
+        return QString(); // make compiler happy. Not me.
     }
 }
 
-QVector< Server > Ispdb::imapServers() const
+QVector<Server> Ispdb::imapServers() const
 {
     return mImapServers;
 }
 
-QVector< Server > Ispdb::pop3Servers() const
+QVector<Server> Ispdb::pop3Servers() const
 {
     return mPop3Servers;
 }
 
-QVector< Server > Ispdb::smtpServers() const
+QVector<Server> Ispdb::smtpServers() const
 {
     return mSmtpServers;
 }
@@ -373,7 +367,7 @@ Ispdb::searchServerType Ispdb::serverType() const
     return mServerType;
 }
 
-QDebug operator <<(QDebug d, const Server &t)
+QDebug operator<<(QDebug d, const Server &t)
 {
     d << "authentication " << t.authentication;
     d << "socketType " << t.socketType;
@@ -383,12 +377,12 @@ QDebug operator <<(QDebug d, const Server &t)
     return d;
 }
 
-QDebug operator <<(QDebug d, const identity &t)
+QDebug operator<<(QDebug d, const identity &t)
 {
-    d << " email "  << t.email;
-    d << " name "  << t.name;
-    d << " organization "  << t.organization;
-    d << " signature "  << t.signature;
-    d << " isDefault "  << t.mDefault;
+    d << " email " << t.email;
+    d << " name " << t.name;
+    d << " organization " << t.organization;
+    d << " signature " << t.signature;
+    d << " isDefault " << t.mDefault;
     return d;
 }

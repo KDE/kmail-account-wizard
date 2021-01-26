@@ -10,9 +10,9 @@
 
 #include <QObject>
 
+#include <QUrl>
 #include <kio/job.h>
 #include <kmime/kmime_header_parsing.h>
-#include <QUrl>
 
 class QDomElement;
 class QDomDocument;
@@ -32,9 +32,7 @@ class Ispdb : public QObject
 {
     Q_OBJECT
 public:
-    enum socketType {
-        None = 0, SSL, StartTLS
-    };
+    enum socketType { None = 0, SSL, StartTLS };
 
     /**
      Ispdb uses custom authtyps, hence the enum here.
@@ -42,12 +40,8 @@ public:
      In particular, note that Ispdb's Plain represents both Cleartext and AUTH Plain
      We will always treat it as Cleartext
      */
-    enum authType {
-        Plain = 0, CramMD5, NTLM, GSSAPI, ClientIP, NoAuth, Basic, OAuth2
-    };
-    enum length {
-        Long = 0, Short
-    };
+    enum authType { Plain = 0, CramMD5, NTLM, GSSAPI, ClientIP, NoAuth, Basic, OAuth2 };
+    enum length { Long = 0, Short };
 
     /** Constructor */
     explicit Ispdb(QObject *parent = nullptr);
@@ -67,7 +61,7 @@ public:
 
     /** After finished() has been emitted you can
         get a list of imap servers available for this provider */
-    QVector< Server > imapServers() const;
+    QVector<Server> imapServers() const;
 
     /** After finished() has been emitted you can
         get a list of pop3 servers available for this provider */
@@ -75,9 +69,9 @@ public:
 
     /** After finished() has been emitted you can
         get a list of smtp servers available for this provider */
-    QVector< Server > smtpServers() const;
+    QVector<Server> smtpServers() const;
 
-    QVector< identity > identities() const;
+    QVector<identity> identities() const;
 
     int defaultIdentity() const;
 public Q_SLOTS:
@@ -102,9 +96,9 @@ protected:
         @see lookupUrl to generate a url base on this type
      */
     enum searchServerType {
-        IspAutoConfig = 0,                  /**< http://autoconfig.example.com/mail/config-v1.1.xml */
-        IspWellKnow,                        /**< http://example.com/.well-known/autoconfig/mail/config-v1.1.xml */
-        DataBase                            /**< https://autoconfig.thunderbird.net/v1.1/example.com */
+        IspAutoConfig = 0, /**< http://autoconfig.example.com/mail/config-v1.1.xml */
+        IspWellKnow, /**< http://example.com/.well-known/autoconfig/mail/config-v1.1.xml */
+        DataBase /**< https://autoconfig.thunderbird.net/v1.1/example.com */
     };
 
     /** let's request the autoconfig server */
@@ -144,7 +138,7 @@ protected:
         parts of the emailaddress */
     QString replacePlaceholders(const QString &);
 
-    QByteArray mData;             /** storage of incoming data from kio */
+    QByteArray mData; /** storage of incoming data from kio */
 protected Q_SLOTS:
 
     /** slot for TransferJob to dump data */
@@ -158,10 +152,10 @@ private:
     QStringList mDomains;
     QString mDisplayName;
     QString mDisplayShortName;
-    QVector< Server > mImapServers;
-    QVector< Server > mPop3Servers;
-    QVector< Server > mSmtpServers;
-    QVector< identity > mIdentities;
+    QVector<Server> mImapServers;
+    QVector<Server> mPop3Servers;
+    QVector<Server> mSmtpServers;
+    QVector<identity> mIdentities;
 
     int mDefaultIdentity = -1;
     Ispdb::searchServerType mServerType;
@@ -184,7 +178,7 @@ struct Server {
     QString username;
     int port = -1;
 };
-QDebug operator <<(QDebug d, const Server &t);
+QDebug operator<<(QDebug d, const Server &t);
 
 struct identity {
     identity()
@@ -207,6 +201,6 @@ struct identity {
     QString signature;
     bool mDefault = false;
 };
-QDebug operator <<(QDebug d, const identity &t);
+QDebug operator<<(QDebug d, const identity &t);
 
 #endif

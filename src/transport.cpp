@@ -12,35 +12,30 @@
 
 #define TABLE_SIZE x
 
-template<typename T>
-struct StringValueTable {
+template<typename T> struct StringValueTable {
     const char *name;
     typename T::type value;
     using value_type = typename T::type;
 };
 
-static const StringValueTable<MailTransport::Transport::EnumEncryption> encryptionEnum[] = {
-    { "none", MailTransport::Transport::EnumEncryption::None },
-    { "ssl", MailTransport::Transport::EnumEncryption::SSL },
-    { "tls", MailTransport::Transport::EnumEncryption::TLS }
-};
+static const StringValueTable<MailTransport::Transport::EnumEncryption> encryptionEnum[] = {{"none", MailTransport::Transport::EnumEncryption::None},
+                                                                                            {"ssl", MailTransport::Transport::EnumEncryption::SSL},
+                                                                                            {"tls", MailTransport::Transport::EnumEncryption::TLS}};
 static const int encryptionEnumSize = sizeof(encryptionEnum) / sizeof(*encryptionEnum);
 
 static const StringValueTable<MailTransport::Transport::EnumAuthenticationType> authenticationTypeEnum[] = {
-    { "login", MailTransport::Transport::EnumAuthenticationType::LOGIN },
-    { "plain", MailTransport::Transport::EnumAuthenticationType::PLAIN },
-    { "cram-md5", MailTransport::Transport::EnumAuthenticationType::CRAM_MD5 },
-    { "digest-md5", MailTransport::Transport::EnumAuthenticationType::DIGEST_MD5 },
-    { "gssapi", MailTransport::Transport::EnumAuthenticationType::GSSAPI },
-    { "ntlm", MailTransport::Transport::EnumAuthenticationType::NTLM },
-    { "apop", MailTransport::Transport::EnumAuthenticationType::APOP },
-    { "clear", MailTransport::Transport::EnumAuthenticationType::CLEAR },
-    { "anonymous", MailTransport::Transport::EnumAuthenticationType::ANONYMOUS }
-};
+    {"login", MailTransport::Transport::EnumAuthenticationType::LOGIN},
+    {"plain", MailTransport::Transport::EnumAuthenticationType::PLAIN},
+    {"cram-md5", MailTransport::Transport::EnumAuthenticationType::CRAM_MD5},
+    {"digest-md5", MailTransport::Transport::EnumAuthenticationType::DIGEST_MD5},
+    {"gssapi", MailTransport::Transport::EnumAuthenticationType::GSSAPI},
+    {"ntlm", MailTransport::Transport::EnumAuthenticationType::NTLM},
+    {"apop", MailTransport::Transport::EnumAuthenticationType::APOP},
+    {"clear", MailTransport::Transport::EnumAuthenticationType::CLEAR},
+    {"anonymous", MailTransport::Transport::EnumAuthenticationType::ANONYMOUS}};
 static const int authenticationTypeEnumSize = sizeof(authenticationTypeEnum) / sizeof(*authenticationTypeEnum);
 
-template<typename T>
-static typename T::value_type stringToValue(const T *table, const int tableSize, const QString &string, bool &valid)
+template<typename T> static typename T::value_type stringToValue(const T *table, const int tableSize, const QString &string, bool &valid)
 {
     const QString ref = string.toLower();
     for (int i = 0; i < tableSize; ++i) {
@@ -158,7 +153,6 @@ void Transport::setAuthenticationType(const QString &authType)
     if (valid) {
         m_authStr = authType;
     }
-
 }
 
 int Transport::transportId() const

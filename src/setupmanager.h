@@ -7,12 +7,13 @@
 #ifndef SETUPMANAGER_H
 #define SETUPMANAGER_H
 
+#include "key.h"
 #include <QObject>
 #include <QVector>
-#include "key.h"
 #include <gpgme++/key.h>
 
-namespace KWallet {
+namespace KWallet
+{
 class Wallet;
 }
 

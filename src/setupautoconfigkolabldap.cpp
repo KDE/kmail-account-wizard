@@ -5,9 +5,9 @@
 */
 
 #include "setupautoconfigkolabldap.h"
+#include "configfile.h"
 #include "ispdb/autoconfigkolabldap.h"
 #include "ldap.h"
-#include "configfile.h"
 
 #include <KLocalizedString>
 
@@ -28,7 +28,7 @@ void SetupAutoconfigKolabLdap::fillLdapServer(int i, QObject *o) const
     const ldapServer isp = mIspdb->ldapServers().values().at(i);
     Ldap *ldapRes = qobject_cast<Ldap *>(o);
 
-    //TODO: setting filter
+    // TODO: setting filter
 
     ldapRes->setServer(isp.hostname);
     ldapRes->setPort(isp.port);
@@ -54,7 +54,7 @@ void SetupAutoconfigKolabLdap::fillLdapServer(int i, QObject *o) const
         ldapRes->setPageSize(isp.sizeLimit);
     }
 
-    //Anonymous is set by not setting the AuthenticationMethod
+    // Anonymous is set by not setting the AuthenticationMethod
     if (isp.authentication == KLDAP::LdapServer::SASL) {
         ldapRes->setAuthenticationMethod(QStringLiteral("SASL"));
     } else if (isp.authentication == KLDAP::LdapServer::Simple) {

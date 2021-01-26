@@ -8,8 +8,8 @@
 #define RESOURCE_H
 
 #include "setupobject.h"
-#include <agentinstance.h>
 #include <QMap>
+#include <agentinstance.h>
 
 class KJob;
 

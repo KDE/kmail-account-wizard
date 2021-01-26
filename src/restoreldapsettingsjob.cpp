@@ -5,22 +5,20 @@
 */
 
 #include "restoreldapsettingsjob.h"
-#include <KLDAP/LdapClientSearchConfigWriteConfigJob>
-#include <KLDAP/LdapClientSearchConfigReadConfigJob>
-#include <KLDAP/LdapClientSearchConfig>
-#include <KConfigGroup>
 #include <KConfig>
+#include <KConfigGroup>
+#include <KLDAP/LdapClientSearchConfig>
+#include <KLDAP/LdapClientSearchConfigReadConfigJob>
+#include <KLDAP/LdapClientSearchConfigWriteConfigJob>
 #include <QDebug>
 
 RestoreLdapSettingsJob::RestoreLdapSettingsJob(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 RestoreLdapSettingsJob::~RestoreLdapSettingsJob()
 {
-
 }
 
 void RestoreLdapSettingsJob::start()
@@ -56,7 +54,7 @@ void RestoreLdapSettingsJob::loadNextSelectHostSettings()
             loadNextSelectHostSettings();
         }
     } else {
-        //Reset index;
+        // Reset index;
         mCurrentIndex = 0;
         loadNextHostSettings();
     }
@@ -153,7 +151,6 @@ void RestoreLdapSettingsJob::setEntry(int entry)
 {
     mEntry = entry;
 }
-
 
 KConfig *RestoreLdapSettingsJob::config() const
 {

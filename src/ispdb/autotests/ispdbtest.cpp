@@ -4,8 +4,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include <QObject>
 #include <QDir>
+#include <QObject>
 #include <QTest>
 
 #include "../ispdb.h"
@@ -99,7 +99,8 @@ private Q_SLOTS:
         i.name = QStringLiteral("John Doe");
         i.email = QStringLiteral("john.doe@example.com");
         i.organization = QStringLiteral("Example AG");
-        i.signature = QStringLiteral("John Doe\n\
+        i.signature = QStringLiteral(
+            "John Doe\n\
 Head of World\n\
 \n\
 Example AG\n\

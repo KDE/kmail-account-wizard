@@ -14,11 +14,13 @@
 #include <gpgme++/key.h>
 
 class KJob;
-namespace GpgME {
+namespace GpgME
+{
 class Error;
 }
 
-namespace QGpgME {
+namespace QGpgME
+{
 }
 
 class Key : public SetupObject
@@ -26,11 +28,7 @@ class Key : public SetupObject
     Q_OBJECT
 
 public:
-    enum PublishingMethod {
-        NoPublishing,
-        WKS,
-        PKS
-    };
+    enum PublishingMethod { NoPublishing, WKS, PKS };
 
     explicit Key(QObject *parent = nullptr);
     ~Key() override;

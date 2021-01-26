@@ -6,7 +6,6 @@
 
 #include "inprocess-main.h"
 
-
 AccountWizard::AccountWizard(QObject *parent)
     : QObject(parent)
 {

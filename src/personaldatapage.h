@@ -9,9 +9,9 @@
 #ifndef PERSONALDATA_H
 #define PERSONALDATA_H
 
+#include "dialog.h"
 #include "page.h"
 #include "setupmanager.h"
-#include "dialog.h"
 
 #include "ui_personaldatapage.h"
 

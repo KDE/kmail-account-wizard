@@ -6,7 +6,8 @@
 
 #include "setupobject.h"
 
-SetupObject::SetupObject(QObject *parent) : QObject(parent)
+SetupObject::SetupObject(QObject *parent)
+    : QObject(parent)
 {
 }
 

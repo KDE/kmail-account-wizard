@@ -10,21 +10,21 @@
 
 #include <QTimer>
 
+#include <QGpgME/CryptoConfig>
 #include <QGpgME/Protocol>
 #include <QGpgME/WKSPublishJob>
-#include <QGpgME/CryptoConfig>
 
 #include <gpgme++/engineinfo.h>
 
-#include <MailTransport/TransportManager>
 #include <MailTransport/Transport>
+#include <MailTransport/TransportManager>
 #include <MailTransportAkonadi/MessageQueueJob>
 
-#include <KIdentityManagement/IdentityManager>
 #include <KIdentityManagement/Identity>
+#include <KIdentityManagement/IdentityManager>
 
-#include <KMime/Message>
 #include <KMime/Headers>
+#include <KMime/Message>
 #include <KMime/Util>
 
 #include <KCodecs/KEmailAddress>
@@ -85,8 +85,7 @@ void Key::publishWKS()
 
     auto job = QGpgME::openpgp()->wksPublishJob();
     mJob = job;
-    connect(job, &QGpgME::WKSPublishJob::result,
-            this, &Key::onWKSPublishingCheckDone);
+    connect(job, &QGpgME::WKSPublishJob::result, this, &Key::onWKSPublishingCheckDone);
     job->startCheck(m_mailbox);
 }
 
@@ -113,8 +112,7 @@ void Key::onWKSPublishingCheckDone(const GpgME::Error &gpgMeError, const QByteAr
 
     auto job = QGpgME::openpgp()->wksPublishJob();
     mJob = job;
-    connect(job, &QGpgME::WKSPublishJob::result,
-            this, &Key::onWKSPublishingRequestCreated);
+    connect(job, &QGpgME::WKSPublishJob::result, this, &Key::onWKSPublishingRequestCreated);
     job->startCreate(m_key.primaryFingerprint(), m_mailbox);
 }
 
@@ -136,8 +134,7 @@ void Key::onWKSPublishingRequestCreated(const GpgME::Error &gpgMeError, const QB
     if (m_transportId == 0 && qobject_cast<SetupManager *>(parent())) {
         const auto setupManager = qobject_cast<SetupManager *>(parent());
         const auto setupObjects = setupManager->setupObjects();
-        auto it = std::find_if(setupObjects.cbegin(), setupObjects.cend(),
-                               [](SetupObject *obj) -> bool {
+        auto it = std::find_if(setupObjects.cbegin(), setupObjects.cend(), [](SetupObject *obj) -> bool {
             return qobject_cast<Transport *>(obj);
         });
         if (it != setupObjects.cend()) {
@@ -180,15 +177,14 @@ void Key::onWKSPublishingRequestCreated(const GpgME::Error &gpgMeError, const QB
     // Move to outbox
     auto job = new MailTransport::MessageQueueJob;
     mJob = job;
-    job->addressAttribute().setTo({ msg->to(false)->asUnicodeString() });
+    job->addressAttribute().setTo({msg->to(false)->asUnicodeString()});
     job->transportAttribute().setTransportId(transport->id());
     job->addressAttribute().setFrom(msg->from(false)->asUnicodeString());
     // Don't leave any evidence :-)
     job->sentBehaviourAttribute().setSentBehaviour(MailTransport::SentBehaviourAttribute::Delete);
     job->sentBehaviourAttribute().setSendSilently(true);
     job->setMessage(msg);
-    connect(job, &KJob::result,
-            this, &Key::onWKSPublishingRequestSent);
+    connect(job, &KJob::result, this, &Key::onWKSPublishingRequestSent);
     job->start();
 }
 
@@ -224,10 +220,8 @@ void Key::publishPKS()
     gpgProcess->setProperty("keyServer", keyServer);
     connect(gpgProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, &Key::onPKSPublishingFinished);
     mJob = gpgProcess;
-    gpgProcess->start(QString::fromLatin1(gpgName), {
-        QStringLiteral("--keyserver"), keyServer,
-        QStringLiteral("--send-keys"), QString::fromLatin1(m_key.primaryFingerprint())
-    });
+    gpgProcess->start(QString::fromLatin1(gpgName),
+                      {QStringLiteral("--keyserver"), keyServer, QStringLiteral("--send-keys"), QString::fromLatin1(m_key.primaryFingerprint())});
 }
 
 void Key::onPKSPublishingFinished(int code, QProcess::ExitStatus status)

@@ -7,9 +7,9 @@
 #ifndef RESTORELDAPSETTINGSJOB_H
 #define RESTORELDAPSETTINGSJOB_H
 
-#include <QObject>
-#include <KLDAP/LdapServer>
 #include <KConfigGroup>
+#include <KLDAP/LdapServer>
+#include <QObject>
 class KConfig;
 class RestoreLdapSettingsJob : public QObject
 {
@@ -27,6 +27,7 @@ public:
 
 Q_SIGNALS:
     void restoreDone();
+
 private:
     void slotConfigSelectedHostLoaded(const KLDAP::LdapServer &server);
     void slotConfigHostLoaded(const KLDAP::LdapServer &server);

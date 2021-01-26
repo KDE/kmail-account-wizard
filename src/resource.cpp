@@ -6,18 +6,18 @@
 
 #include "resource.h"
 
-#include <agenttype.h>
-#include <agentmanager.h>
-#include <agentinstancecreatejob.h>
 #include <AkonadiCore/ServerManager>
+#include <agentinstancecreatejob.h>
+#include <agentmanager.h>
+#include <agenttype.h>
 
 #include "accountwizard_debug.h"
 #include <KLocalizedString>
 
-#include <QMetaMethod>
-#include <QVariant>
 #include <QDBusInterface>
 #include <QDBusReply>
+#include <QMetaMethod>
+#include <QVariant>
 
 using namespace Akonadi;
 

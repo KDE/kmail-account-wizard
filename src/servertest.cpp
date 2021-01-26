@@ -5,12 +5,12 @@
 */
 
 #include "servertest.h"
-#include <MailTransport/Transport>
 #include <MailTransport/ServerTest>
+#include <MailTransport/Transport>
 
 #include "accountwizard_debug.h"
-#include <KMessageBox>
 #include <KLocalizedString>
+#include <KMessageBox>
 
 ServerTest::ServerTest(QObject *parent)
     : QObject(parent)
@@ -33,7 +33,7 @@ void ServerTest::test(const QString &server, const QString &protocol)
     if (protocol == QLatin1String("submission")) {
         m_serverTest->setProtocol(QStringLiteral("smtp"));
         m_serverTest->setPort(MailTransport::Transport::EnumEncryption::None, 587);
-        m_serverTest->setPort(MailTransport::Transport::EnumEncryption::SSL, 0);        //No ssl port for submission
+        m_serverTest->setPort(MailTransport::Transport::EnumEncryption::SSL, 0); // No ssl port for submission
     }
     m_serverTest->start();
 }
@@ -46,9 +46,10 @@ void ServerTest::testFinished(const QVector<int> &list)
     } else if (list.contains(MailTransport::Transport::EnumEncryption::SSL)) {
         Q_EMIT testResult(QStringLiteral("ssl"));
     } else {
-        KMessageBox::information(nullptr, i18n("There seems to be a problem in reaching this server "
-                                               "or choosing a safe way to sent the credentials to server. We advise you to "
-                                               "check the settings of the account and adjust it manually if needed."),
+        KMessageBox::information(nullptr,
+                                 i18n("There seems to be a problem in reaching this server "
+                                      "or choosing a safe way to sent the credentials to server. We advise you to "
+                                      "check the settings of the account and adjust it manually if needed."),
                                  i18n("Autodetecting settings failed"));
         Q_EMIT testFail();
     }

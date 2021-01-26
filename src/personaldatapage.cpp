@@ -8,14 +8,14 @@
 
 #include "personaldatapage.h"
 
-#include <config-enterprise.h>
 #include "global.h"
-#include "transport.h"
-#include "resource.h"
 #include "ispdb/ispdb.h"
+#include "resource.h"
+#include "transport.h"
+#include <config-enterprise.h>
 
-#include <PimCommon/EmailValidator>
 #include <KEmailAddress>
+#include <PimCommon/EmailValidator>
 
 #include <MailTransport/Transport>
 
@@ -87,16 +87,14 @@ void PersonalDataPage::slotCreateAccountClicked()
     } else {
         configurePop3Account();
     }
-    Q_EMIT leavePageNextOk();  // go to the next page
+    Q_EMIT leavePageNextOk(); // go to the next page
     mSetupManager->execute();
 }
 
 void PersonalDataPage::slotTextChanged()
 {
     // Ignore the password field, as that can be empty when auth is based on ip-address.
-    setValid(!ui.emailEdit->text().isEmpty()
-             && !ui.nameEdit->text().isEmpty()
-             && KEmailAddress::isValidSimpleAddress(ui.emailEdit->text()));
+    setValid(!ui.emailEdit->text().isEmpty() && !ui.nameEdit->text().isEmpty() && KEmailAddress::isValidSimpleAddress(ui.emailEdit->text()));
 }
 
 void PersonalDataPage::leavePageNext()
@@ -122,8 +120,8 @@ void PersonalDataPage::leavePageNext()
 
         connect(mIspdb, &Ispdb::finished, this, &PersonalDataPage::ispdbSearchFinished);
     } else {
-        Q_EMIT manualWanted(true);       // enable the manual page
-        Q_EMIT leavePageNextOk();  // go to the next page
+        Q_EMIT manualWanted(true); // enable the manual page
+        Q_EMIT leavePageNextOk(); // go to the next page
     }
 }
 
@@ -141,7 +139,7 @@ void PersonalDataPage::ispdbSearchFinished(bool ok)
             automaticConfigureAccount();
         }
     } else {
-        Q_EMIT manualWanted(true);       // enable the manual page
+        Q_EMIT manualWanted(true); // enable the manual page
         Q_EMIT leavePageNextOk();
     }
 }
@@ -306,7 +304,7 @@ void PersonalDataPage::automaticConfigureAccount()
     configureSmtpAccount();
     configureImapAccount();
     configurePop3Account();
-    Q_EMIT leavePageNextOk();  // go to the next page
+    Q_EMIT leavePageNextOk(); // go to the next page
     mSetupManager->execute();
 }
 

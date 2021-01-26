@@ -34,6 +34,7 @@ public Q_SLOTS:
     Q_SCRIPTABLE void setPassword(const QString &group, const QString &key, const QString &value);
     Q_SCRIPTABLE void setEditMode(const bool editMode);
     Q_SCRIPTABLE void setEditName(const QString &name);
+
 private:
     QVector<Config> m_configData;
     QString m_name;

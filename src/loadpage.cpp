@@ -9,9 +9,9 @@
 #include <KAssistantDialog>
 #include <KConfig>
 #include <KConfigGroup>
-#include <kross/core/action.h>
-#include <QFile>
 #include <KLocalizedString>
+#include <QFile>
+#include <kross/core/action.h>
 
 LoadPage::LoadPage(KAssistantDialog *parent)
     : Page(parent)
@@ -25,7 +25,7 @@ void LoadPage::enterPageNext()
 {
     setValid(false);
     // FIXME: deletion seems to delete the exported objects as well, killing the entire wizard...
-    //delete m_action;
+    // delete m_action;
     m_action = nullptr;
     Q_EMIT aboutToStart();
 

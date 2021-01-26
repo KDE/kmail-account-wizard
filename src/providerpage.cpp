@@ -9,9 +9,9 @@
 #include "global.h"
 
 #include "accountwizard_debug.h"
-#include <QSortFilterProxyModel>
 #include <KLocalizedString>
 #include <QLineEdit>
+#include <QSortFilterProxyModel>
 
 ProviderPage::ProviderPage(KAssistantDialog *parent)
     : Page(parent)
@@ -104,8 +104,7 @@ void ProviderPage::leavePageNext()
 
     // download and execute it...
     for (const KNSCore::EntryInternal &e : qAsConst(m_providerEntries)) {
-        if (e.uniqueId() == item->data(Qt::UserRole)
-            && e.providerId() == item->data(Qt::UserRole + 1)) {
+        if (e.uniqueId() == item->data(Qt::UserRole) && e.providerId() == item->data(Qt::UserRole + 1)) {
             m_wantedProvider.entryId = e.uniqueId();
             m_wantedProvider.entryProviderId = e.providerId();
 
@@ -125,9 +124,7 @@ void ProviderPage::leavePageNext()
 void ProviderPage::providerStatusChanged(const KNSCore::EntryInternal &e)
 {
     qCDebug(ACCOUNTWIZARD_LOG) << e.name();
-    if (e.uniqueId() == m_wantedProvider.entryId
-        && e.providerId() == m_wantedProvider.entryProviderId
-        && e.status() == KNS3::Entry::Installed) {
+    if (e.uniqueId() == m_wantedProvider.entryId && e.providerId() == m_wantedProvider.entryProviderId && e.status() == KNS3::Entry::Installed) {
         findDesktopAndSetAssistant(e.installedFiles());
     }
 }

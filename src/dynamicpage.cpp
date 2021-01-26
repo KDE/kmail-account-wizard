@@ -8,13 +8,13 @@
 
 #include "accountwizard_debug.h"
 
-#include <QUiLoader>
-#include <QFile>
-#include <QBoxLayout>
-#include <QScrollArea>
 #include "global.h"
 #include <KLocalizedTranslator>
+#include <QBoxLayout>
 #include <QCoreApplication>
+#include <QFile>
+#include <QScrollArea>
+#include <QUiLoader>
 
 DynamicPage::DynamicPage(const QString &uiFile, KAssistantDialog *parent)
     : Page(parent)

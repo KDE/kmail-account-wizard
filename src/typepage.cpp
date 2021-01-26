@@ -7,17 +7,17 @@
 #include "typepage.h"
 
 #include "accountwizard_debug.h"
-#include <KDesktopFile>
 #include <KConfigGroup>
+#include <KDesktopFile>
 #include <QIcon>
 #include <QLineEdit>
 
-#include <QSortFilterProxyModel>
+#include "global.h"
+#include <QDir>
 #include <QMimeDatabase>
 #include <QMimeType>
-#include "global.h"
+#include <QSortFilterProxyModel>
 #include <QStandardPaths>
-#include <QDir>
 
 TypePage::TypePage(KAssistantDialog *parent)
     : Page(parent)
@@ -38,7 +38,8 @@ TypePage::TypePage(KAssistantDialog *parent)
     connect(ui.searchLine, &QLineEdit::textChanged, this, &TypePage::slotTextChanged);
 
     QStringList list;
-    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("akonadi/accountwizard/"), QStandardPaths::LocateDirectory);
+    const QStringList dirs =
+        QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("akonadi/accountwizard/"), QStandardPaths::LocateDirectory);
     for (const QString &dir : dirs) {
         const QStringList directories = QDir(dir).entryList(QDir::AllDirs);
         for (const QString &directory : directories) {

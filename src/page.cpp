@@ -5,8 +5,8 @@
 */
 
 #include "page.h"
-#include <KPageWidgetModel>
 #include <KAssistantDialog>
+#include <KPageWidgetModel>
 
 Page::Page(KAssistantDialog *parent)
     : QWidget(parent)

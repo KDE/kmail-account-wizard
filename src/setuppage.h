@@ -19,11 +19,7 @@ public:
     explicit SetupPage(KAssistantDialog *parent);
     void enterPageNext() override;
 
-    enum MessageType {
-        Success,
-        Info,
-        Error
-    };
+    enum MessageType { Success, Info, Error };
     void addMessage(MessageType type, const QString &msg);
     void setStatus(const QString &msg);
     void setProgress(int percent);

@@ -11,17 +11,17 @@
 
 #include <KAboutData>
 #include <QApplication>
-#include <QUrl>
 #include <QDebug>
+#include <QUrl>
 
 #include <KDBusService>
 #include <KLocalizedString>
-#include <stdio.h>
 #include <iostream>
+#include <stdio.h>
 
 #include <KCrash>
-#include <QCommandLineParser>
 #include <QCommandLineOption>
+#include <QCommandLineParser>
 #include <QIcon>
 
 int main(int argc, char **argv)
@@ -47,11 +47,13 @@ int main(int argc, char **argv)
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("kontact")));
     QCommandLineParser parser;
     KAboutData::setApplicationData(aboutData);
-    parser.addOption(QCommandLineOption(QStringList() <<  QStringLiteral("type"), i18n("Only offer accounts that support the given type."), QStringLiteral("type")));
-    parser.addOption(QCommandLineOption(QStringList() <<  QStringLiteral("assistant"), i18n("Run the specified assistant."), QStringLiteral("assistant")));
-    parser.addOption(QCommandLineOption(QStringList() <<  QStringLiteral("package"), i18n("unpack fullpath on startup and launch that assistant"), QStringLiteral("fullpath")));
-    parser.addOption(QCommandLineOption(QStringList() <<  QStringLiteral("assistants"), i18n("Returns types of assistants")));
-
+    parser.addOption(
+        QCommandLineOption(QStringList() << QStringLiteral("type"), i18n("Only offer accounts that support the given type."), QStringLiteral("type")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("assistant"), i18n("Run the specified assistant."), QStringLiteral("assistant")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("package"),
+                                        i18n("unpack fullpath on startup and launch that assistant"),
+                                        QStringLiteral("fullpath")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("assistants"), i18n("Returns types of assistants")));
 
     aboutData.setupCommandLine(&parser);
     parser.process(app);

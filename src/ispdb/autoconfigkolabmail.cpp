@@ -5,8 +5,8 @@
  */
 
 #include "autoconfigkolabmail.h"
-#include <QDomDocument>
 #include "accountwizard_debug.h"
+#include <QDomDocument>
 
 AutoconfigKolabMail::AutoconfigKolabMail(QObject *parent)
     : Ispdb(parent)
@@ -16,7 +16,7 @@ AutoconfigKolabMail::AutoconfigKolabMail(QObject *parent)
 void AutoconfigKolabMail::startJob(const QUrl &url)
 {
     mData.clear();
-    QMap< QString, QVariant > map;
+    QMap<QString, QVariant> map;
     map[QStringLiteral("errorPage")] = false;
     map[QStringLiteral("no-auth-prompt")] = true;
     map[QStringLiteral("no-www-auth")] = true;
@@ -30,10 +30,9 @@ void AutoconfigKolabMail::startJob(const QUrl &url)
 void AutoconfigKolabMail::slotResult(KJob *job)
 {
     if (job->error()) {
-        if (job->error() == KIO::ERR_INTERNAL_SERVER      // error 500
-            || job->error() == KIO::ERR_UNKNOWN_HOST      // unknown host
-            || job->error() == KIO::ERR_CANNOT_CONNECT
-            || job->error() == KIO::ERR_DOES_NOT_EXIST) {     // error 404
+        if (job->error() == KIO::ERR_INTERNAL_SERVER // error 500
+            || job->error() == KIO::ERR_UNKNOWN_HOST // unknown host
+            || job->error() == KIO::ERR_CANNOT_CONNECT || job->error() == KIO::ERR_DOES_NOT_EXIST) { // error 404
             if (serverType() == DataBase) {
                 setServerType(IspAutoConfig);
                 lookupInDb(false, false);
@@ -44,7 +43,7 @@ void AutoconfigKolabMail::slotResult(KJob *job)
                 Q_EMIT finished(false);
             }
         } else {
-            //qCDebug(ACCOUNTWIZARD_LOG) << "Fetching failed" << job->error() << job->errorString();
+            // qCDebug(ACCOUNTWIZARD_LOG) << "Fetching failed" << job->error() << job->errorString();
             Q_EMIT finished(false);
         }
         return;
@@ -58,7 +57,7 @@ void AutoconfigKolabMail::slotResult(KJob *job)
         lookupInDb(true, true);
         return;
     } else if (responsecode != 200 && responsecode != 0 && responsecode != 304) {
-        //qCDebug(ACCOUNTWIZARD_LOG) << "Fetching failed with" << responsecode;
+        // qCDebug(ACCOUNTWIZARD_LOG) << "Fetching failed with" << responsecode;
         Q_EMIT finished(false);
         return;
     }
@@ -66,7 +65,7 @@ void AutoconfigKolabMail::slotResult(KJob *job)
     QDomDocument document;
     bool ok = document.setContent(mData);
     if (!ok) {
-        //qCDebug(ACCOUNTWIZARD_LOG) << "Could not parse xml" << mData;
+        // qCDebug(ACCOUNTWIZARD_LOG) << "Could not parse xml" << mData;
         Q_EMIT finished(false);
         return;
     }

@@ -6,10 +6,10 @@
 
 #include "ldap.h"
 #include "restoreldapsettingsjob.h"
-#include <KLDAP/LdapClientSearchConfig>
 #include <KLDAP/AddHostDialog>
-#include <KLDAP/LdapClientSearchConfigWriteConfigJob>
+#include <KLDAP/LdapClientSearchConfig>
 #include <KLDAP/LdapClientSearchConfigReadConfigJob>
+#include <KLDAP/LdapClientSearchConfigWriteConfigJob>
 
 #include <KConfig>
 #include <KConfigGroup>
@@ -33,7 +33,7 @@ KConfig *Ldap::config() const
 
 void Ldap::create()
 {
-    //TODO: use ldapclientsearchconfig to write config
+    // TODO: use ldapclientsearchconfig to write config
     Q_EMIT info(i18n("Setting up LDAP server..."));
 
     if (m_server.isEmpty()) {
@@ -164,7 +164,7 @@ void Ldap::edit()
     connect(job, &KLDAP::LdapClientSearchConfigReadConfigJob::configLoaded, this, [this, group](KLDAP::LdapServer server) {
         KLDAP::AddHostDialog dlg(&server, nullptr);
 
-        if (dlg.exec() && !server.host().isEmpty()) { //krazy:exclude=crashy
+        if (dlg.exec() && !server.host().isEmpty()) { // krazy:exclude=crashy
             auto job = new KLDAP::LdapClientSearchConfigWriteConfigJob;
             job->setActive(true);
             job->setConfig(group);

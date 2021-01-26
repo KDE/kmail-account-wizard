@@ -7,10 +7,11 @@
 #ifndef GLOBAL_H
 #define GLOBAL_H
 
-#include <QUrl>
 #include <QStringList>
+#include <QUrl>
 
-namespace Global {
+namespace Global
+{
 Q_REQUIRED_RESULT QStringList typeFilter();
 void setTypeFilter(const QStringList &filter);
 void setPoFileName(const QString &poFileName);

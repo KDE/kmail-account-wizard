@@ -4,17 +4,17 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "ispdb.h"
 #include "../accountwizard_debug.h"
+#include "ispdb.h"
 
 #include <KAboutData>
 
+#include <KAboutData>
 #include <KLocalizedString>
-#include <QIcon>
 #include <QApplication>
-#include <KAboutData>
-#include <QCommandLineParser>
 #include <QCommandLineOption>
+#include <QCommandLineParser>
+#include <QIcon>
 
 QString socketTypeToStr(Ispdb::socketType socketType)
 {
@@ -78,7 +78,9 @@ int main(int argc, char **argv)
     QCommandLineParser parser;
     KAboutData::setApplicationData(aboutData);
     aboutData.setupCommandLine(&parser);
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("email"), i18n("Tries to fetch the settings for that email address"), QStringLiteral("emailaddress")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("email"),
+                                        i18n("Tries to fetch the settings for that email address"),
+                                        QStringLiteral("emailaddress")));
 
     parser.process(app);
     aboutData.processCommandLine(&parser);
@@ -103,29 +105,20 @@ int main(int argc, char **argv)
     qCDebug(ACCOUNTWIZARD_LOG) << "Imap servers:";
     const auto imapServers = ispdb.imapServers();
     for (const Server &s : imapServers) {
-        qCDebug(ACCOUNTWIZARD_LOG) << "\thostname:" << s.hostname
-                                   << "- port:" << s.port
-                                   << "- encryption:" << socketTypeToStr(s.socketType)
-                                   << "- username:" << s.username
-                                   << "- authentication:" << authTypeToStr(s.authentication);
+        qCDebug(ACCOUNTWIZARD_LOG) << "\thostname:" << s.hostname << "- port:" << s.port << "- encryption:" << socketTypeToStr(s.socketType)
+                                   << "- username:" << s.username << "- authentication:" << authTypeToStr(s.authentication);
     }
     qCDebug(ACCOUNTWIZARD_LOG) << "pop3 servers:";
     const auto pop3Servers = ispdb.pop3Servers();
     for (const Server &s : pop3Servers) {
-        qCDebug(ACCOUNTWIZARD_LOG) << "\thostname:" << s.hostname
-                                   << "- port:" << s.port
-                                   << "- encryption:" << socketTypeToStr(s.socketType)
-                                   << "- username:" << s.username
-                                   << "- authentication:" << authTypeToStr(s.authentication);
+        qCDebug(ACCOUNTWIZARD_LOG) << "\thostname:" << s.hostname << "- port:" << s.port << "- encryption:" << socketTypeToStr(s.socketType)
+                                   << "- username:" << s.username << "- authentication:" << authTypeToStr(s.authentication);
     }
     qCDebug(ACCOUNTWIZARD_LOG) << "smtp servers:";
     const auto smtpServers = ispdb.smtpServers();
     for (const Server &s : smtpServers) {
-        qCDebug(ACCOUNTWIZARD_LOG) << "\thostname:" << s.hostname
-                                   << "- port:" << s.port
-                                   << "- encryption:" << socketTypeToStr(s.socketType)
-                                   << "- username:" << s.username
-                                   << "- authentication:" << authTypeToStr(s.authentication);
+        qCDebug(ACCOUNTWIZARD_LOG) << "\thostname:" << s.hostname << "- port:" << s.port << "- encryption:" << socketTypeToStr(s.socketType)
+                                   << "- username:" << s.username << "- authentication:" << authTypeToStr(s.authentication);
     }
 
     return 0;

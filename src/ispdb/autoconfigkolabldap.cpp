@@ -111,7 +111,7 @@ ldapServer AutoconfigKolabLdap::createLdapServer(const QDomElement &n)
     return s;
 }
 
-QHash< QString, ldapServer > AutoconfigKolabLdap::ldapServers() const
+QHash<QString, ldapServer> AutoconfigKolabLdap::ldapServers() const
 {
     return mLdapServers;
 }

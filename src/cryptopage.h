@@ -7,9 +7,9 @@
 #ifndef CRYPTOPAGE_H
 #define CRYPTOPAGE_H
 
+#include "key.h"
 #include "page.h"
 #include "ui_cryptopage.h"
-#include "key.h"
 
 #include <QPointer>
 
@@ -17,7 +17,8 @@ class Dialog;
 class SetupManager;
 class KeyGenerationJob;
 
-namespace QGpgME {
+namespace QGpgME
+{
 class Job;
 }
 
@@ -36,17 +37,9 @@ private Q_SLOTS:
     void keySelected(const GpgME::Key &key);
 
 private:
-    enum PublishingOptionPage {
-        CheckingkWKSPage,
-        WKSPage,
-        PKSPage
-    };
+    enum PublishingOptionPage { CheckingkWKSPage, WKSPage, PKSPage };
 
-    enum Action {
-        NoKey = 1,
-        GenerateKey,
-        ImportKey
-    };
+    enum Action { NoKey = 1, GenerateKey, ImportKey };
 
     void setPublishingEnabled(bool enabled);
     void importKey();

@@ -5,20 +5,20 @@
 */
 
 #include "setupmanager.h"
+#include "configfile.h"
+#include "identity.h"
+#include "ldap.h"
 #include "resource.h"
+#include "setupautoconfigkolabfreebusy.h"
+#include "setupautoconfigkolabldap.h"
+#include "setupautoconfigkolabmail.h"
+#include "setupispdb.h"
 #include "setuppage.h"
 #include "transport.h"
-#include "configfile.h"
-#include "ldap.h"
-#include "identity.h"
-#include "setupispdb.h"
-#include "setupautoconfigkolabmail.h"
-#include "setupautoconfigkolabldap.h"
-#include "setupautoconfigkolabfreebusy.h"
 
+#include <KAssistantDialog>
 #include <KEMailSettings>
 #include <kwallet.h>
-#include <KAssistantDialog>
 
 #include <QLocale>
 
@@ -103,8 +103,7 @@ void SetupManager::execute()
 {
     if (m_keyPublishingMethod != Key::NoPublishing) {
         auto key = qobject_cast<Key *>(createKey());
-        auto it = std::find_if(m_setupObjects.cbegin(), m_setupObjects.cend(),
-                               [](SetupObject *obj) -> bool {
+        auto it = std::find_if(m_setupObjects.cbegin(), m_setupObjects.cend(), [](SetupObject *obj) -> bool {
             return qobject_cast<Transport *>(obj);
         });
         if (it != m_setupObjects.cend()) {
@@ -261,7 +260,7 @@ void SetupManager::setKeyPublishingMethod(Key::PublishingMethod method)
 
 void SetupManager::openWallet()
 {
-    //Remove it we need to update qt5keychain
+    // Remove it we need to update qt5keychain
     using namespace KWallet;
     if (Wallet::isOpen(Wallet::NetworkWallet())) {
         return;
