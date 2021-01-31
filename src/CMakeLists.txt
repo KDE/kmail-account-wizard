@@ -51,7 +51,7 @@ set(accountwizard_libs
     KF5::Mime
     KF5::IdentityManagement
     KF5::WidgetsAddons
-    Qt5::UiTools
+    Qt::UiTools
     KF5::Libkdepim
     KF5::ItemViews
     KF5::I18n

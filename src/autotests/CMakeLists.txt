@@ -10,8 +10,8 @@ target_link_libraries(ldaptest
     KF5::KIOCore
     KF5::Mime
     KF5::Ldap
-    Qt5::Test
+    Qt::Test
     KF5::Libkdepim
     KF5::I18n
-    Qt5::Widgets
+    Qt::Widgets
     )
