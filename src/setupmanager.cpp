@@ -208,7 +208,7 @@ void SetupManager::setName(const QString &name)
     m_name = name;
 }
 
-QString SetupManager::name()
+QString SetupManager::name() const
 {
     return m_name;
 }
@@ -218,7 +218,7 @@ void SetupManager::setEmail(const QString &email)
     m_email = email;
 }
 
-QString SetupManager::email()
+QString SetupManager::email() const
 {
     return m_email;
 }
@@ -228,12 +228,12 @@ void SetupManager::setPassword(const QString &password)
     m_password = password;
 }
 
-QString SetupManager::password()
+QString SetupManager::password() const
 {
     return m_password;
 }
 
-QString SetupManager::country()
+QString SetupManager::country() const
 {
     return QLocale::countryToString(QLocale().country());
 }
@@ -273,7 +273,7 @@ void SetupManager::openWallet()
     loop.exec();
 }
 
-bool SetupManager::personalDataAvailable()
+bool SetupManager::personalDataAvailable() const
 {
     return m_personalDataAvailable;
 }

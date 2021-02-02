@@ -41,11 +41,11 @@ public:
     QVector<SetupObject *> setupObjects() const;
 
 public Q_SLOTS:
-    Q_SCRIPTABLE bool personalDataAvailable();
-    Q_SCRIPTABLE QString name();
-    Q_SCRIPTABLE QString email();
-    Q_SCRIPTABLE QString password();
-    Q_SCRIPTABLE QString country();
+    Q_SCRIPTABLE bool personalDataAvailable() const;
+    Q_SCRIPTABLE QString name() const;
+    Q_SCRIPTABLE QString email() const;
+    Q_SCRIPTABLE QString password() const;
+    Q_SCRIPTABLE QString country() const;
     /** Ensures the wallet is open for subsequent sync wallet access in the resources. */
     Q_SCRIPTABLE void openWallet();
     Q_SCRIPTABLE QObject *createResource(const QString &type);
