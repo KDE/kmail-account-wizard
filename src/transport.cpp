@@ -159,3 +159,43 @@ int Transport::transportId() const
 {
     return m_transportId;
 }
+
+QString Transport::authenticationType() const
+{
+    return m_authStr;
+}
+
+bool Transport::editMode() const
+{
+    return m_editMode;
+}
+
+QString Transport::encryption() const
+{
+    return m_encrStr;
+}
+
+QString Transport::host() const
+{
+    return m_host;
+}
+
+QString Transport::name() const
+{
+    return m_name;
+}
+
+QString Transport::password() const
+{
+    return m_password;
+}
+
+int Transport::port() const
+{
+    return m_port;
+}
+
+QString Transport::username() const
+{
+    return m_user;
+}
