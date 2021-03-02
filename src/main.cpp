@@ -6,6 +6,7 @@ SPDX-License-Identifier: LGPL-2.0-or-later
 
 #include "controller.h"
 #include "global.h"
+#include "servertest.h"
 #include "setupmanager.h"
 #include "wizardmodel.h"
 
@@ -103,6 +104,9 @@ int main(int argc, char **argv)
 
     SetupManager setupManager;
     qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "SetupManager", &setupManager);
+
+    ServerTest serverTest;
+    qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "ServerTest", &serverTest);
 
     // loadPage->exportObject(new ServerTest(this), QStringLiteral("ServerTest"));
 

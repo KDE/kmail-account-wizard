@@ -26,6 +26,7 @@ class SetupManager : public QObject
     Q_PROPERTY(QString email READ email WRITE setEmail NOTIFY emailChanged)
     Q_PROPERTY(QString password READ password WRITE setPassword NOTIFY passwordChanged)
     Q_PROPERTY(QString country READ country CONSTANT)
+    Q_PROPERTY(bool personalDataAvailable READ personalDataAvailable WRITE setPersonalDataAvailable NOTIFY personalDataAvailableChanged)
 
 public:
     explicit SetupManager(QObject *parent = nullptr);
@@ -52,16 +53,16 @@ public:
 
 public Q_SLOTS:
     /** Ensures the wallet is open for subsequent sync wallet access in the resources. */
-    Q_SCRIPTABLE void openWallet();
-    Q_SCRIPTABLE QObject *createResource(const QString &type);
-    Q_SCRIPTABLE QObject *createTransport(const QString &type);
-    Q_SCRIPTABLE QObject *createConfigFile(const QString &configName);
-    Q_SCRIPTABLE QObject *createLdap();
-    Q_SCRIPTABLE QObject *createIdentity();
-    Q_SCRIPTABLE QObject *createKey();
-    Q_SCRIPTABLE void execute();
-    Q_SCRIPTABLE void setupInfo(const QString &msg);
-    Q_SCRIPTABLE QObject *ispDB(const QString &type);
+    void openWallet();
+    QObject *createResource(const QString &type);
+    QObject *createTransport(const QString &type);
+    QObject *createConfigFile(const QString &configName);
+    QObject *createLdap();
+    QObject *createIdentity();
+    QObject *createKey();
+    void execute();
+    void setupInfo(const QString &msg);
+    QObject *ispDB(const QString &type);
 
     void requestRollback();
 
@@ -71,6 +72,7 @@ Q_SIGNALS:
     void nameChanged();
     void emailChanged();
     void passwordChanged();
+    void personalDataAvailableChanged();
 
 private:
     void setupNext();

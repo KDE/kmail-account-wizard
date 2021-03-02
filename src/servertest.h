@@ -17,7 +17,7 @@ class ServerTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ServerTest(QObject *parent);
+    explicit ServerTest(QObject *parent = nullptr);
     ~ServerTest();
 
 public Q_SLOTS:
