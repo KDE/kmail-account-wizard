@@ -22,7 +22,7 @@
 
 #include <QLocale>
 
-SetupManager::SetupManager(QWidget *parent)
+SetupManager::SetupManager(QObject *parent)
     : QObject(parent)
     , m_keyPublishingMethod(Key::NoPublishing)
 {
@@ -124,7 +124,7 @@ void SetupManager::execute()
 void SetupManager::setupSucceeded(const QString &msg)
 {
     Q_ASSERT(m_page);
-    m_page->addMessage(SetupPage::Success, msg);
+    // m_page->addMessage(SetupPage::Success, msg);
     if (m_currentSetupObject) {
         Q_EMIT setupFinished(m_currentSetupObject);
         m_setupObjects.append(m_currentSetupObject);
@@ -136,7 +136,7 @@ void SetupManager::setupSucceeded(const QString &msg)
 void SetupManager::setupFailed(const QString &msg)
 {
     Q_ASSERT(m_page);
-    m_page->addMessage(SetupPage::Error, msg);
+    // m_page->addMessage(SetupPage::Error, msg);
     if (m_currentSetupObject) {
         m_setupObjects.append(m_currentSetupObject);
         m_currentSetupObject = nullptr;

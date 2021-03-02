@@ -51,7 +51,7 @@ set(KDEPIM_LIB_VERSION "${PIM_VERSION}")
 set(KDEPIM_LIB_SOVERSION "5")
 
 set(QT_REQUIRED_VERSION "5.14.0")
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Xml DBus Test)
+find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Xml DBus Test Quick QuickControls2)
 set(PIMCOMMON_LIB_VERSION "5.16.40")
 set(LIBKDEPIM_LIB_VERSION "5.16.40")
 set(LIBKLEO_LIB_VERSION "5.16.40")
@@ -68,6 +68,7 @@ find_package(KF5TextEditor ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5Codecs ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5Crash ${KF5_MIN_VERSION} REQUIRED)
 find_package(KF5Notifications ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5Package ${KF5_MIN_VERSION} CONFIG REQUIRED)
 
 find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 find_package(KF5IdentityManagement ${IDENTITYMANAGEMENT_LIB_VERSION} CONFIG REQUIRED)
@@ -131,7 +132,7 @@ endif ()
 
 
 add_subdirectory(src)
-
+add_subdirectory(wizards)
 
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 ki18n_install(po)

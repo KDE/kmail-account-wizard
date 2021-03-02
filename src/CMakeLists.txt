@@ -1,7 +1,12 @@
+# SPDX-FileCopyrightText: 2021 Carl Schwan <carlschwan@kde.org>
+
+add_subdirectory(packagestructure)
 
 set(accountwizard_srcs
     cryptopage.cpp
     dialog.cpp
+    wizardmodel.cpp
+    controller.cpp
     typepage.cpp
     loadpage.cpp
     global.cpp
@@ -27,6 +32,7 @@ set(accountwizard_srcs
     ispdb/autoconfigkolabmail.cpp
     ispdb/autoconfigkolabldap.cpp
     ispdb/autoconfigkolabfreebusy.cpp
+    resources.qrc
     )
 
 ki18n_wrap_ui(accountwizard_srcs
@@ -62,6 +68,9 @@ set(accountwizard_libs
     KF5::Notifications
     KF5::PimCommon
     KF5::XmlGui
+    KF5::Package
+    Qt5::Quick
+    Qt5::QuickControls2
     )
 
 if ( NOT ACCOUNTWIZARD_NO_GHNS )
@@ -93,7 +102,6 @@ install(PROGRAMS org.kde.accountwizard.desktop DESTINATION ${KDE_INSTALL_APPDIR}
 install(FILES accountwizard-mime.xml DESTINATION ${KDE_INSTALL_MIMEDIR})
 update_xdg_mimetypes(${KDE_INSTALL_MIMEDIR})
 
-add_subdirectory(wizards)
 add_subdirectory(ispdb)
 if (BUILD_TESTING)
     add_subdirectory(autotests)

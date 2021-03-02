@@ -1,0 +1,17 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "carlschan@kde.org",
+                "Name": "Carl Schwan"
+            }
+        ],
+        "Id": "AccountWizard/Wizard",
+        "ServiceTypes": [
+            "KPackage/PackageStructure"
+        ],
+        "Version": "1"
+    },
+    "X-KDE-ParentApp": "org.kde.pim.accountwizard"
+}
+
