@@ -45,13 +45,13 @@ Kirigami.ScrollablePage {
             ServerTest.test(serverAddress, "imap");
         } else { // stage 2
             var smtp = SetupManager.createTransport("smtp");
-            smtp.setName(serverAddress);
-            smtp.setHost(serverAddress);
-            smtp.setPort(25);
-            smtp.setEncryption("TLS");
-            smtp.setAuthenticationType("plain");
-            smtp.setUsername(emailField.text);
-            smtp.setPassword(passwordField.password);
+            smtp.name = serverAddress;
+            smtp.host = serverAddress;
+            smtp.port = 25;
+            smtp.encryption = "TLS";
+            smtp.authenticationType = "plain";
+            smtp.username = emailField.text;
+            smtp.password = passwordField.password;
             identity.setTransport(smtp);
 
             var dav = SetupManager.createResource("akonadi_davgroupware_resource");
