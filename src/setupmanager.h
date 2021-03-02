@@ -22,8 +22,13 @@ class SetupPage;
 class SetupManager : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
+    Q_PROPERTY(QString email READ email WRITE setEmail NOTIFY emailChanged)
+    Q_PROPERTY(QString password READ password WRITE setPassword NOTIFY passwordChanged)
+    Q_PROPERTY(QString country READ country CONSTANT)
+
 public:
-    explicit SetupManager(QWidget *parent);
+    explicit SetupManager(QObject *parent = nullptr);
     ~SetupManager() override;
     void setSetupPage(SetupPage *page);
 
@@ -39,12 +44,13 @@ public:
     QVector<SetupObject *> objectsToSetup() const;
     QVector<SetupObject *> setupObjects() const;
 
+    bool personalDataAvailable() const;
+    QString name() const;
+    QString email() const;
+    QString password() const;
+    QString country() const;
+
 public Q_SLOTS:
-    Q_SCRIPTABLE bool personalDataAvailable() const;
-    Q_SCRIPTABLE QString name() const;
-    Q_SCRIPTABLE QString email() const;
-    Q_SCRIPTABLE QString password() const;
-    Q_SCRIPTABLE QString country() const;
     /** Ensures the wallet is open for subsequent sync wallet access in the resources. */
     Q_SCRIPTABLE void openWallet();
     Q_SCRIPTABLE QObject *createResource(const QString &type);
@@ -62,6 +68,9 @@ public Q_SLOTS:
 Q_SIGNALS:
     void rollbackComplete();
     void setupFinished(SetupObject *obj);
+    void nameChanged();
+    void emailChanged();
+    void passwordChanged();
 
 private:
     void setupNext();

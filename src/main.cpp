@@ -4,25 +4,31 @@ SPDX-FileCopyrightText: 2009 Volker Krause <vkrause@kde.org>
 SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "dialog.h"
+#include "controller.h"
 #include "global.h"
+#include "setupmanager.h"
+#include "wizardmodel.h"
 
 #include <Akonadi/ControlGui>
 
 #include <KAboutData>
-#include <QApplication>
-#include <QDebug>
-#include <QUrl>
-
+#include <KCrash>
 #include <KDBusService>
+#include <KLocalizedContext>
 #include <KLocalizedString>
+
+#include <QApplication>
+#include <QCommandLineOption>
+#include <QCommandLineParser>
+#include <QDebug>
+#include <QIcon>
+#include <QQmlApplicationEngine>
+#include <QUrl>
+#include <QtQml>
+
 #include <iostream>
 #include <stdio.h>
 
-#include <KCrash>
-#include <QCommandLineOption>
-#include <QCommandLineParser>
-#include <QIcon>
 
 int main(int argc, char **argv)
 {
@@ -84,11 +90,27 @@ int main(int argc, char **argv)
         Global::setTypeFilter(typeValue.split(QLatin1Char(',')));
     }
 
-    Dialog dlg(nullptr);
-    dlg.show();
+    QQmlApplicationEngine engine;
+
+    Controller controller;
+    // qRegisterMetaType<WizardModel *>("WizardModel *");
+    qmlRegisterType<WizardModel>("org.kde.pim.accountwizard", 1, 0, "WizardModel");
+    qRegisterMetaType<Controller *>("Controller *");
+    qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "Controller", &controller);
+
+    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
+    engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
+
+    SetupManager setupManager;
+    qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "SetupManager", &setupManager);
+
+    // loadPage->exportObject(new ServerTest(this), QStringLiteral("ServerTest"));
+
+    // Dialog dlg(nullptr);
+    // dlg.show();
     // Unregister once the UI is closed, even if the app will continue running
     // and generating keys in the background.
-    QObject::connect(&dlg, &Dialog::accepted, &service, &KDBusService::unregister);
+    // QObject::connect(&dlg, &Dialog::accepted, &service, &KDBusService::unregister);
 
     return app.exec();
 }

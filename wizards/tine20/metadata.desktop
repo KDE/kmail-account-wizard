@@ -75,9 +75,19 @@ Comment[x-test]=xxTine 2.0 Groupware Serverxx
 Comment[zh_CN]=Tine 2.0 群件服务器
 Comment[zh_TW]=Tine 2.0 群組伺服器
 
-[Wizard]
-Type=message/rfc822,text/directory,text/calendar
-Script=tine20wizard.es
+Type=Service
+X-KDE-ServiceTypes=AccountWizard/Wizard
+X-KDE-ParentApp=org.kde.accountwizard
+X-KDE-PluginInfo-Author=
+X-KDE-PluginInfo-Email=
+X-KDE-PluginInfo-License=LGPL-2.0-or-later
+X-KDE-PluginInfo-Name=org.kde.pim.account.tine20
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Website=https://kde.org/plasma-desktop
 
-[Translate]
-Filename=accountwizard_tine20
+#[Wizard]
+#Type=message/rfc822,text/directory,text/calendar
+#Script=tine20wizard.es
+#
+#[Translate]
+#Filename=accountwizard_tine20
