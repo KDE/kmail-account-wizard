@@ -14,7 +14,6 @@ Kirigami.ScrollablePage {
     leftPadding: 20
 
     ColumnLayout {
-        antialiasing: true
         spacing: Kirigami.Units.largeSpacing
         Kirigami.Heading {
             Layout.alignment: Qt.AlignHCenter
@@ -54,12 +53,12 @@ Kirigami.ScrollablePage {
             text: i18n("Check online for the settings needed for this email provider. Only the domain name part of the e-mail address will be sent over the Internet at this point. If this option is unchecked, the account can be set up manually.")
             wrapMode: Text.WordWrap
         }
+        Component {
+            id: accountSelectionPageComponent
+            AccountSelectionPage {}
+        }
     }
     
-    Component {
-        id: accountSelectionPageComponent
-        AccountSelectionPage {}
-    }
     
     footer: QQC2.ToolBar {
         contentItem: RowLayout {
