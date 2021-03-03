@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file alias="main.qml">contents/ui/main.qml</file>
+        <file alias="AccountSelectionPage.qml">contents/ui/AccountSelectionPage.qml</file>
+        <file alias="PersonalDataPage.qml">contents/ui/PersonalDataPage.qml</file>
     </qresource>
 </RCC>
