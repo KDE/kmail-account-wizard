@@ -1,7 +1,7 @@
 /*
-    SPDX-FileCopyrightText: 2009 Volker Krause <vkrause@kde.org>
+SPDX-FileCopyrightText: 2009 Volker Krause <vkrause@kde.org>
 
-    SPDX-License-Identifier: LGPL-2.0-or-later
+SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 #include "dialog.h"
@@ -42,7 +42,7 @@ int main(int argc, char **argv)
                          QStringLiteral("https://community.kde.org/KDE_PIM/Akonadi"));
     aboutData.addAuthor(i18n("Volker Krause"), i18n("Author"), QStringLiteral("vkrause@kde.org"));
     aboutData.addAuthor(i18n("Laurent Montel"), QString(), QStringLiteral("montel@kde.org"));
-
+    aboutData.setProductName(QByteArrayLiteral("Akonadi/Account Wizard"));
     app.setOrganizationDomain(QStringLiteral("kde.org"));
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("kontact")));
     QCommandLineParser parser;
