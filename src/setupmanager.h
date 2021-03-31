@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef SETUPMANAGER_H
-#define SETUPMANAGER_H
+#pragma once
 
 #include "key.h"
 #include <QObject>
@@ -88,4 +87,3 @@ private:
     bool m_pgpAutoEncrypt = false;
 };
 
-#endif

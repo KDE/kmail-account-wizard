@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef TRANSPORT_H
-#define TRANSPORT_H
+#pragma once
 
 #include "setupobject.h"
 #include <MailTransport/Transport>
@@ -46,4 +45,3 @@ private:
     bool m_editMode;
 };
 
-#endif

@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef PERSONALDATA_H
-#define PERSONALDATA_H
+#pragma once
 
 #include "dialog.h"
 #include "page.h"
@@ -46,4 +45,3 @@ private:
     SetupManager *mSetupManager = nullptr;
 };
 
-#endif

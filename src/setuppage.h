@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef SETUPPAGE_H
-#define SETUPPAGE_H
+#pragma once
 
 #include "page.h"
 #include "ui_setuppage.h"
@@ -30,4 +29,3 @@ private:
     QStandardItemModel *m_msgModel = nullptr;
 };
 
-#endif

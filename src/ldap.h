@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef LDAP_H
-#define LDAP_H
+#pragma once
 
 #include "setupobject.h"
 #include <KLDAP/LdapServer>
@@ -72,4 +71,3 @@ private:
     bool m_editMode = false;
 };
 
-#endif

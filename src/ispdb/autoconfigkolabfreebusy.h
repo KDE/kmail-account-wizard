@@ -4,8 +4,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#ifndef AUTOCONFIGKOLABFREEBUSY_H
-#define AUTOCONFIGKOLABFREEBUSY_H
+#pragma once
 
 #include "autoconfigkolabmail.h"
 
@@ -52,4 +51,3 @@ struct freebusy {
     Ispdb::authType authentication;
 };
 
-#endif // AUTOCONFIGKOLABFREEBUSY_H

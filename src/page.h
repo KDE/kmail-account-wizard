@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef PAGE_H
-#define PAGE_H
+#pragma once
 
 #include <QWidget>
 
@@ -50,4 +49,3 @@ private:
     bool m_valid = false;
 };
 
-#endif // PAGE_H

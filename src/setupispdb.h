@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef SETUPISPDB_H
-#define SETUPISPDB_H
+#pragma once
 
 #include "setupobject.h"
 
@@ -53,4 +52,3 @@ protected:
     Ispdb *mIspdb = nullptr;
 };
 
-#endif

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef SETUPAUTOCONFIGKOLABMAIL_H
-#define SETUPAUTOCONFIGKOLABMAIL_H
+#pragma once
 
 #include "setupispdb.h"
 
@@ -17,4 +16,3 @@ public:
     explicit SetupAutoconfigKolabMail(QObject *parent = nullptr);
 };
 
-#endif

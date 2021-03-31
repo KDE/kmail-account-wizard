@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef GLOBAL_H
-#define GLOBAL_H
+#pragma once
 
 #include <QStringList>
 #include <QUrl>
@@ -25,4 +24,3 @@ Q_REQUIRED_RESULT QStringList assistants();
 Q_REQUIRED_RESULT QString unpackAssistant(const QUrl &remotePackageUrl);
 }
 
-#endif

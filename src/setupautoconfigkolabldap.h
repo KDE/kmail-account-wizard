@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef SETUPAUTOCONFIGKOLABLDAPDB_H
-#define SETUPAUTOCONFIGKOLABLDAPDB_H
+#pragma once
 
 #include "setupobject.h"
 
@@ -41,4 +40,3 @@ private:
     AutoconfigKolabLdap *mIspdb = nullptr;
 };
 
-#endif

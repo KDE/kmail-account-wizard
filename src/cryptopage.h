@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CRYPTOPAGE_H
-#define CRYPTOPAGE_H
+#pragma once
 
 #include "key.h"
 #include "page.h"
@@ -50,4 +49,3 @@ private:
     QPointer<KeyGenerationJob> mKeyGenerationJob;
 };
 
-#endif // CRYPTOPAGE_H

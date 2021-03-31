@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CONFIGFILE_H
-#define CONFIGFILE_H
+#pragma once
 
 #include "setupobject.h"
 #include <QVector>
@@ -43,4 +42,3 @@ private:
     bool m_editMode = false;
 };
 
-#endif

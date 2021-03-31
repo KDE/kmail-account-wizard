@@ -4,8 +4,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#ifndef AUTOCONFIGKOLABLDAP_H
-#define AUTOCONFIGKOLABLDAP_H
+#pragma once
 
 #include "autoconfigkolabmail.h"
 #include <kldap/ldapserver.h>
@@ -61,4 +60,3 @@ struct ldapServer {
     int sizeLimit;
 };
 
-#endif // AUTOCONFIGKOLABLDAP_H

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef DIALOG_H
-#define DIALOG_H
+#pragma once
 
 #include "setupmanager.h"
 #include <KAssistantDialog>
@@ -54,4 +53,3 @@ private:
     QVector<KPageWidgetItem *> mDynamicPages;
 };
 
-#endif

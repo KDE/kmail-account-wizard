@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef LOADPAGE_H
-#define LOADPAGE_H
+#pragma once
 
 #include "page.h"
 
@@ -36,4 +35,3 @@ private:
     Kross::Action *m_action = nullptr;
 };
 
-#endif

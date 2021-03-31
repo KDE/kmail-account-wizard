@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef IDENTITY_H
-#define IDENTITY_H
+#pragma once
 
 #include "setupobject.h"
 
@@ -47,4 +46,3 @@ private:
     KIdentityManagement::Identity *m_identity = nullptr;
 };
 
-#endif

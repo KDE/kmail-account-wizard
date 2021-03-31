@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef KEY_H
-#define KEY_H
+#pragma once
 
 #include "setupobject.h"
 
@@ -60,4 +59,3 @@ private:
     PublishingMethod m_publishingMethod = NoPublishing;
 };
 
-#endif

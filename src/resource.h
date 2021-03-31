@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef RESOURCE_H
-#define RESOURCE_H
+#pragma once
 
 #include "setupobject.h"
 #include <QMap>
@@ -38,4 +37,3 @@ private:
 
     bool m_editMode = false;
 };
-#endif

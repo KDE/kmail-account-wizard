@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef INPROCESS_MAIN_H
-#define INPROCESS_MAIN_H
+#pragma once
 
 #include "dialog.h"
 #include "global.h"
@@ -25,4 +24,3 @@ public Q_SLOTS:
     void run(const QStringList &types, QWidget *parent);
 };
 
-#endif

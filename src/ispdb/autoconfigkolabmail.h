@@ -4,8 +4,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#ifndef AUTOCONFIGKOLABMAIL_H
-#define AUTOCONFIGKOLABMAIL_H
+#pragma once
 
 #include "ispdb.h"
 
@@ -22,4 +21,3 @@ private:
     void slotResult(KJob *);
 };
 
-#endif // AUTOCONFIGKOLABMAIL_H

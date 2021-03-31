@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef SERVERTEST_H
-#define SERVERTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -39,4 +38,3 @@ private:
     MailTransport::ServerTest *m_serverTest = nullptr;
 };
 
-#endif

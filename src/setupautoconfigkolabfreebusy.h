@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef SETUPAUTOCONFIGKOLABFREEBUSY_H
-#define SETUPAUTOCONFIGKOLABFREEBUSY_H
+#pragma once
 
 #include "setupobject.h"
 
@@ -40,4 +39,3 @@ private:
     AutoconfigKolabFreebusy *mIspdb = nullptr;
 };
 
-#endif

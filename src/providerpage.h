@@ -5,8 +5,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef PROVIDERPAGE_H
-#define PROVIDERPAGE_H
+#pragma once
 
 #include "page.h"
 #include <QStandardItemModel>
@@ -56,4 +55,3 @@ private:
     bool m_newPageReady = false;
 };
 
-#endif

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef SETUPOBJECT_H
-#define SETUPOBJECT_H
+#pragma once
 
 #include <QObject>
 
@@ -30,4 +29,3 @@ private:
     SetupObject *m_dependsOn = nullptr;
 };
 
-#endif

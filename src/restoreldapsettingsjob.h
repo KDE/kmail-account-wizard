@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef RESTORELDAPSETTINGSJOB_H
-#define RESTORELDAPSETTINGSJOB_H
+#pragma once
 
 #include <KConfigGroup>
 #include <KLDAP/LdapServer>
@@ -48,4 +47,3 @@ private:
     KConfigGroup mCurrentGroup;
 };
 
-#endif // RESTORELDAPSETTINGSJOB_H

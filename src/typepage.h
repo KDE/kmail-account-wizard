@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef TYPEPAGE_H
-#define TYPEPAGE_H
+#pragma once
 
 #include "page.h"
 #include <QStandardItemModel>
@@ -33,4 +32,3 @@ private:
     QSortFilterProxyModel *mProxy = nullptr;
 };
 
-#endif

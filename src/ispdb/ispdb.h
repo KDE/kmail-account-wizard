@@ -5,8 +5,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ISPDB_H
-#define ISPDB_H
+#pragma once
 
 #include <QObject>
 
@@ -203,4 +202,3 @@ struct identity {
 };
 QDebug operator<<(QDebug d, const identity &t);
 
-#endif
