@@ -7,20 +7,24 @@
 #include "setupmanager.h"
 #include "configfile.h"
 #include "identity.h"
+#include "ispdbhelper.h"
 #include "ldap.h"
 #include "resource.h"
 #include "setupautoconfigkolabfreebusy.h"
 #include "setupautoconfigkolabldap.h"
 #include "setupautoconfigkolabmail.h"
-#include "setupispdb.h"
-#include "setuppage.h"
 #include "transport.h"
 
-#include <KAssistantDialog>
 #include <KEMailSettings>
 #include <kwallet.h>
 
 #include <QLocale>
+
+SetupManager &SetupManager::instance()
+{
+    static SetupManager _setupManager;
+    return _setupManager;
+}
 
 SetupManager::SetupManager(QObject *parent)
     : QObject(parent)
@@ -36,49 +40,44 @@ SetupManager::~SetupManager()
     delete m_wallet;
 }
 
-void SetupManager::setSetupPage(SetupPage *page)
+Resource *SetupManager::createResource(const QString &type)
 {
-    m_page = page;
+    return new Resource(type, this);
 }
 
-QObject *SetupManager::createResource(const QString &type)
+Transport *SetupManager::createTransport(const QString &type)
 {
-    return connectObject(new Resource(type, this));
+    return new Transport(type, this);
 }
 
-QObject *SetupManager::createTransport(const QString &type)
+ConfigFile *SetupManager::createConfigFile(const QString &fileName)
 {
-    return connectObject(new Transport(type, this));
+    return new ConfigFile(fileName, this);
 }
 
-QObject *SetupManager::createConfigFile(const QString &fileName)
+Ldap *SetupManager::createLdap()
 {
-    return connectObject(new ConfigFile(fileName, this));
+    return new Ldap(this);
 }
 
-QObject *SetupManager::createLdap()
+Identity *SetupManager::createIdentity()
 {
-    return connectObject(new Ldap(this));
-}
-
-QObject *SetupManager::createIdentity()
-{
-    auto *identity = new Identity(this);
+    auto identity = new Identity(this);
     identity->setEmail(m_email);
     identity->setRealName(m_name);
     identity->setPgpAutoSign(m_pgpAutoSign);
     identity->setPgpAutoEncrypt(m_pgpAutoEncrypt);
     identity->setKey(m_key.protocol(), m_key.primaryFingerprint());
-    return connectObject(identity);
+    return identity;
 }
 
-QObject *SetupManager::createKey()
+Key *SetupManager::createKey()
 {
     Key *key = new Key(this);
     key->setKey(m_key);
     key->setMailBox(m_email);
     key->setPublishingMethod(m_keyPublishingMethod);
-    return connectObject(key);
+    return key;
 }
 
 QVector<SetupObject *> SetupManager::objectsToSetup() const
@@ -101,106 +100,97 @@ static bool dependencyCompare(SetupObject *left, SetupObject *right)
 
 void SetupManager::execute()
 {
-    if (m_keyPublishingMethod != Key::NoPublishing) {
-        auto key = qobject_cast<Key *>(createKey());
-        auto it = std::find_if(m_setupObjects.cbegin(), m_setupObjects.cend(), [](SetupObject *obj) -> bool {
-            return qobject_cast<Transport *>(obj);
-        });
-        if (it != m_setupObjects.cend()) {
-            key->setDependsOn(*it);
-        }
-    }
-
-    m_page->setStatus(i18n("Setting up account..."));
-    m_page->setValid(false);
-    m_page->assistantDialog()->backButton()->setEnabled(false);
-
-    // ### FIXME this is a bad over-simplification and would need a real topological sort
-    // but for current usage it is good enough
-    std::stable_sort(m_objectToSetup.begin(), m_objectToSetup.end(), dependencyCompare);
-    setupNext();
+    // if (m_keyPublishingMethod != Key::NoPublishing) {
+    //    auto key = qobject_cast<Key *>(createKey());
+    //    auto it = std::find_if(m_setupObjects.cbegin(), m_setupObjects.cend(), [](SetupObject *obj) -> bool {
+    //        return qobject_cast<Transport *>(obj);
+    //    });
+    //    if (it != m_setupObjects.cend()) {
+    //        key->setDependsOn(*it);
+    //    }
+    //}
+    //
+    // m_page->setStatus(i18n("Setting up account..."));
+    // m_page->setValid(false);
+    // m_page->assistantDialog()->backButton()->setEnabled(false);
+    //
+    //// ### FIXME this is a bad over-simplification and would need a real topological sort
+    //// but for current usage it is good enough
+    // std::stable_sort(m_objectToSetup.begin(), m_objectToSetup.end(), dependencyCompare);
+    // setupNext();
 }
 
 void SetupManager::setupSucceeded(const QString &msg)
 {
-    Q_ASSERT(m_page);
-    // m_page->addMessage(SetupPage::Success, msg);
-    if (m_currentSetupObject) {
-        Q_EMIT setupFinished(m_currentSetupObject);
-        m_setupObjects.append(m_currentSetupObject);
-        m_currentSetupObject = nullptr;
-    }
-    setupNext();
+    // Q_ASSERT(m_page);
+    //// m_page->addMessage(SetupPage::Success, msg);
+    // if (m_currentSetupObject) {
+    //    Q_EMIT setupFinished(m_currentSetupObject);
+    //    m_setupObjects.append(m_currentSetupObject);
+    //    m_currentSetupObject = nullptr;
+    //}
+    // setupNext();
 }
 
 void SetupManager::setupFailed(const QString &msg)
 {
-    Q_ASSERT(m_page);
-    // m_page->addMessage(SetupPage::Error, msg);
-    if (m_currentSetupObject) {
-        m_setupObjects.append(m_currentSetupObject);
-        m_currentSetupObject = nullptr;
-    }
-    rollback();
+    // Q_ASSERT(m_page);
+    // // m_page->addMessage(SetupPage::Error, msg);
+    // if (m_currentSetupObject) {
+    //     m_setupObjects.append(m_currentSetupObject);
+    //     m_currentSetupObject = nullptr;
+    // }
+    // rollback();
 }
 
 void SetupManager::setupInfo(const QString &msg)
 {
-    Q_ASSERT(m_page);
-    m_page->addMessage(SetupPage::Info, msg);
+    // Q_ASSERT(m_page);
+    // m_page->addMessage(SetupPage::Info, msg);
 }
 
 void SetupManager::setupNext()
 {
     // user canceled during the previous setup step
-    if (m_rollbackRequested) {
-        rollback();
-        return;
-    }
-
-    if (m_objectToSetup.isEmpty()) {
-        m_page->setStatus(i18n("Setup complete."));
-        m_page->setProgress(100);
-        m_page->setValid(true);
-        m_page->assistantDialog()->backButton()->setEnabled(false);
-    } else {
-        const int setupObjectCount = m_objectToSetup.size() + m_setupObjects.size();
-        const int remainingObjectCount = setupObjectCount - m_objectToSetup.size();
-        m_page->setProgress((remainingObjectCount * 100) / setupObjectCount);
-        m_currentSetupObject = m_objectToSetup.takeFirst();
-        m_currentSetupObject->create();
-    }
+    // if (m_rollbackRequested) {
+    //    rollback();
+    //    return;
+    //}
+    //
+    // if (m_objectToSetup.isEmpty()) {
+    //    m_page->setStatus(i18n("Setup complete."));
+    //    m_page->setProgress(100);
+    //    m_page->setValid(true);
+    //    m_page->assistantDialog()->backButton()->setEnabled(false);
+    //} else {
+    //    const int setupObjectCount = m_objectToSetup.size() + m_setupObjects.size();
+    //    const int remainingObjectCount = setupObjectCount - m_objectToSetup.size();
+    //    m_page->setProgress((remainingObjectCount * 100) / setupObjectCount);
+    //    m_currentSetupObject = m_objectToSetup.takeFirst();
+    //    m_currentSetupObject->create();
+    //}
 }
 
 void SetupManager::rollback()
 {
-    m_page->setStatus(i18n("Failed to set up account, rolling back..."));
-    const int setupObjectCount = m_objectToSetup.size() + m_setupObjects.size();
-    const int remainingObjectCount = m_setupObjects.size();
-    const auto setupObjectsList = m_setupObjects;
-    for (int i = 0; i < setupObjectsList.count(); ++i) {
-        auto obj = m_setupObjects.at(i);
-        m_page->setProgress((remainingObjectCount * 100) / setupObjectCount);
-        if (obj) {
-            obj->destroy();
-            m_objectToSetup.prepend(obj);
-        }
-    }
-    m_setupObjects.clear();
-    m_page->setProgress(0);
-    m_page->setStatus(i18n("Failed to set up account."));
-    m_page->setValid(true);
-    m_rollbackRequested = false;
-    Q_EMIT rollbackComplete();
-}
-
-SetupObject *SetupManager::connectObject(SetupObject *obj)
-{
-    connect(obj, &SetupObject::finished, this, &SetupManager::setupSucceeded);
-    connect(obj, &SetupObject::info, this, &SetupManager::setupInfo);
-    connect(obj, &SetupObject::error, this, &SetupManager::setupFailed);
-    m_objectToSetup.append(obj);
-    return obj;
+    // m_page->setStatus(i18n("Failed to set up account, rolling back..."));
+    // const int setupObjectCount = m_objectToSetup.size() + m_setupObjects.size();
+    // const int remainingObjectCount = m_setupObjects.size();
+    // const auto setupObjectsList = m_setupObjects;
+    // for (int i = 0; i < setupObjectsList.count(); ++i) {
+    //    auto obj = m_setupObjects.at(i);
+    //    m_page->setProgress((remainingObjectCount * 100) / setupObjectCount);
+    //    if (obj) {
+    //        obj->destroy();
+    //        m_objectToSetup.prepend(obj);
+    //    }
+    //}
+    // m_setupObjects.clear();
+    // m_page->setProgress(0);
+    // m_page->setStatus(i18n("Failed to set up account."));
+    // m_page->setValid(true);
+    // m_rollbackRequested = false;
+    // Q_EMIT rollbackComplete();
 }
 
 void SetupManager::setName(const QString &name)
@@ -261,16 +251,16 @@ void SetupManager::setKeyPublishingMethod(Key::PublishingMethod method)
 void SetupManager::openWallet()
 {
     // Remove it we need to update qt5keychain
-    using namespace KWallet;
-    if (Wallet::isOpen(Wallet::NetworkWallet())) {
-        return;
-    }
-
-    Q_ASSERT(parent()->isWidgetType());
-    m_wallet = Wallet::openWallet(Wallet::NetworkWallet(), qobject_cast<QWidget *>(parent())->effectiveWinId(), Wallet::Asynchronous);
-    QEventLoop loop;
-    connect(m_wallet, &KWallet::Wallet::walletOpened, &loop, &QEventLoop::quit);
-    loop.exec();
+    // using namespace KWallet;
+    // if (Wallet::isOpen(Wallet::NetworkWallet())) {
+    //    return;
+    //}
+    //
+    // Q_ASSERT(parent()->isWidgetType());
+    // m_wallet = Wallet::openWallet(Wallet::NetworkWallet(), qobject_cast<QWidget *>(parent())->effectiveWinId(), Wallet::Asynchronous);
+    // QEventLoop loop;
+    // connect(m_wallet, &KWallet::Wallet::walletOpened, &loop, &QEventLoop::quit);
+    // loop.exec();
 }
 
 bool SetupManager::personalDataAvailable() const
@@ -283,7 +273,7 @@ void SetupManager::setPersonalDataAvailable(bool available)
     m_personalDataAvailable = available;
 }
 
-QObject *SetupManager::ispDB(const QString &type)
+IspdbHelper *SetupManager::ispDB(const QString &type)
 {
     const QString t = type.toLower();
     if (t == QLatin1String("autoconfigkolabmail")) {
@@ -292,19 +282,21 @@ QObject *SetupManager::ispDB(const QString &type)
         return new SetupAutoconfigKolabLdap(this);
     } else if (t == QLatin1String("autoconfigkolabfreebusy")) {
         return new SetupAutoconfigKolabFreebusy(this);
+    } else if (t == QLatin1String("ispdb")) {
+        return new IspdbHelper(this);
     } else {
-        return new SetupIspdb(this);
+        return new IspdbHelper(this);
     }
 }
 
 void SetupManager::requestRollback()
 {
-    if (m_setupObjects.isEmpty()) {
-        Q_EMIT rollbackComplete();
-    } else {
-        m_rollbackRequested = true;
-        if (!m_currentSetupObject) {
-            rollback();
-        }
-    }
+    // if (m_setupObjects.isEmpty()) {
+    //    Q_EMIT rollbackComplete();
+    //} else {
+    //    m_rollbackRequested = true;
+    //    if (!m_currentSetupObject) {
+    //        rollback();
+    //    }
+    //}
 }

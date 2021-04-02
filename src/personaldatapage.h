@@ -8,38 +8,39 @@
 
 #pragma once
 
-#include "dialog.h"
-#include "page.h"
-#include "setupmanager.h"
+#include <QObject>
 
-#include "ui_personaldatapage.h"
+#include "setupmanager.h"
 
 class Ispdb;
 
-class PersonalDataPage : public Page
+class PersonalDataObject : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(QString incomingServer READ incomingServer NOTIFY incomingServerChanged)
+    Q_PROPERTY(QString incomingProtocol READ incomingProtocol NOTIFY incomingProtocolChanged)
+    Q_PROPERTY(QString outcomingServer READ outcomingServer NOTIFY outcomingServer)
 public:
-    explicit PersonalDataPage(Dialog *parent = nullptr);
-    void setHideOptionInternetSearch(bool);
+    explicit PersonalDataPage(QObject *parent = nullptr);
+    ~PersonalDataObject();
 
-    void leavePageNext() override;
-    void leavePageNextRequested() override;
+    void setHideOptionInternetSearch(bool);
 
 Q_SIGNALS:
     void manualWanted(bool);
 
-private:
+public Q_SLOTS:
     void ispdbSearchFinished(bool ok);
     void slotTextChanged();
     void slotCreateAccountClicked();
-    void slotRadioButtonClicked(QAbstractButton *button);
+    void slotRadioButtonClicked(const QString &protocol);
     void slotSearchType(const QString &);
     void automaticConfigureAccount();
     void configureSmtpAccount();
     void configureImapAccount();
     void configurePop3Account();
 
+private:
     Ui::PersonalDataPage ui;
     Ispdb *mIspdb = nullptr;
     SetupManager *mSetupManager = nullptr;

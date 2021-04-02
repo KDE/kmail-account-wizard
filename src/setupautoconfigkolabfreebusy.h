@@ -6,11 +6,11 @@
 
 #pragma once
 
-#include "setupobject.h"
+#include "ispdbhelper.h"
 
 class AutoconfigKolabFreebusy;
 
-class SetupAutoconfigKolabFreebusy : public SetupObject
+class SetupAutoconfigKolabFreebusy : public IspdbHelper
 {
     Q_OBJECT
 public:

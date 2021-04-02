@@ -16,9 +16,15 @@ namespace KWallet
 class Wallet;
 }
 
-class SetupObject;
-class SetupPage;
+class Ldap;
+class ConfigFile;
+class Key;
+class Identity;
+class Transport;
+class Resource;
+class IspdbHelper;
 
+/// Controller of the account wizard
 class SetupManager : public QObject
 {
     Q_OBJECT
@@ -29,9 +35,7 @@ class SetupManager : public QObject
     Q_PROPERTY(bool personalDataAvailable READ personalDataAvailable WRITE setPersonalDataAvailable NOTIFY personalDataAvailableChanged)
 
 public:
-    explicit SetupManager(QObject *parent = nullptr);
-    ~SetupManager() override;
-    void setSetupPage(SetupPage *page);
+    static SetupManager &instance();
 
     void setName(const QString &);
     void setEmail(const QString &);
@@ -51,44 +55,45 @@ public:
     QString password() const;
     QString country() const;
 
-public Q_SLOTS:
-    /** Ensures the wallet is open for subsequent sync wallet access in the resources. */
-    void openWallet();
-    QObject *createResource(const QString &type);
-    QObject *createTransport(const QString &type);
-    QObject *createConfigFile(const QString &configName);
-    QObject *createLdap();
-    QObject *createIdentity();
-    QObject *createKey();
-    void execute();
-    void setupInfo(const QString &msg);
-    QObject *ispDB(const QString &type);
+    /// Ensures the wallet is open for subsequent sync wallet access in the resources.
+    Q_INVOKABLE void openWallet();
+    ///
+    Q_INVOKABLE Resource *createResource(const QString &type);
+    Q_INVOKABLE Transport *createTransport(const QString &type);
+    Q_INVOKABLE ConfigFile *createConfigFile(const QString &configName);
+    Q_INVOKABLE Ldap *createLdap();
+    Q_INVOKABLE Identity *createIdentity();
+    Q_INVOKABLE Key *createKey();
+    Q_INVOKABLE void execute();
+    Q_INVOKABLE void setupInfo(const QString &msg);
+    Q_INVOKABLE IspdbHelper *ispDB(const QString &type);
 
-    void requestRollback();
+    Q_INVOKABLE void requestRollback();
 
 Q_SIGNALS:
     void rollbackComplete();
-    void setupFinished(SetupObject *obj);
     void nameChanged();
     void emailChanged();
     void passwordChanged();
     void personalDataAvailableChanged();
 
 private:
+    explicit SetupManager(QObject *parent = nullptr);
+    ~SetupManager() override;
     void setupNext();
     void rollback();
-    SetupObject *connectObject(SetupObject *obj);
 
 private Q_SLOTS:
     void setupSucceeded(const QString &msg);
     void setupFailed(const QString &msg);
 
 private:
-    QString m_name, m_email, m_password;
+    QString m_name;
+    QString m_email;
+    QString m_password;
     QVector<SetupObject *> m_objectToSetup;
     QVector<SetupObject *> m_setupObjects;
     SetupObject *m_currentSetupObject = nullptr;
-    SetupPage *m_page = nullptr;
     KWallet::Wallet *m_wallet = nullptr;
     GpgME::Key m_key;
     Key::PublishingMethod m_keyPublishingMethod;

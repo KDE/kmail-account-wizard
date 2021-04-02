@@ -30,8 +30,11 @@ struct identity;
 class Ispdb : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(QString email READ email WRITE setEmail NOTIFY emailChanged)
+    Q_PROPERTY(QString password READ password WRITE setPassword NOTIFY passwordChanged)
 public:
     enum socketType { None = 0, SSL, StartTLS };
+    Q_ENUM(socketType);
 
     /**
      Ispdb uses custom authtyps, hence the enum here.
@@ -40,7 +43,9 @@ public:
      We will always treat it as Cleartext
      */
     enum authType { Plain = 0, CramMD5, NTLM, GSSAPI, ClientIP, NoAuth, Basic, OAuth2 };
+    Q_ENUM(authType);
     enum length { Long = 0, Short };
+    Q_ENUM(length);
 
     /** Constructor */
     explicit Ispdb(QObject *parent = nullptr);
@@ -48,37 +53,40 @@ public:
     /** Destructor */
     ~Ispdb();
 
+    QString email() const;
+    QString password() const;
+
     /** After finished() has been emitted you can
         retrieve the domains that are covered by these
         settings */
-    QStringList relevantDomains() const;
+    Q_INVOKABLE QStringList relevantDomains() const;
 
     /** After finished() has been emitted you can
         get the name of the provider, you can get a long
         name and a short one */
-    QString name(length) const;
+    Q_INVOKABLE QString name(length) const;
 
     /** After finished() has been emitted you can
         get a list of imap servers available for this provider */
-    QVector<Server> imapServers() const;
+    Q_INVOKABLE QVector<Server> imapServers() const;
 
     /** After finished() has been emitted you can
         get a list of pop3 servers available for this provider */
-    QVector<Server> pop3Servers() const;
+    Q_INVOKABLE QVector<Server> pop3Servers() const;
 
     /** After finished() has been emitted you can
         get a list of smtp servers available for this provider */
-    QVector<Server> smtpServers() const;
+    Q_INVOKABLE QVector<Server> smtpServers() const;
 
-    QVector<identity> identities() const;
+    Q_INVOKABLE QVector<identity> identities() const;
 
-    int defaultIdentity() const;
-public Q_SLOTS:
+    Q_INVOKABLE int defaultIdentity() const;
+
     /** Sets the emailaddress you want to servers for */
-    void setEmail(const QString &);
+    void setEmail(const QString &email);
 
     /** Sets the password for login */
-    void setPassword(const QString &);
+    void setPassword(const QString &password);
     /** Starts looking up the servers which belong to the e-mailaddress */
     void start();
 
@@ -87,8 +95,10 @@ private:
 
 Q_SIGNALS:
     /** emitted when done. **/
-    void finished(bool);
+    void finished(bool ok);
     void searchType(const QString &type);
+    void emailChanged();
+    void passwordChanged();
 
 protected:
     /** search types, where to search for autoconfig
@@ -146,6 +156,7 @@ protected Q_SLOTS:
 private:
     KMime::Types::AddrSpec mAddr; // emailaddress
     QString mPassword;
+    QString mEmail;
 
     // storage of the results
     QStringList mDomains;
@@ -162,6 +173,10 @@ private:
 };
 
 struct Server {
+    Q_GADGET
+    Q_PROPERTY(QString hostname MEMBER hostname)
+    Q_PROPERTY(QString username MEMBER username)
+public:
     Server()
     {
     }

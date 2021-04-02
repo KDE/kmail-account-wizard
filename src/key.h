@@ -30,7 +30,7 @@ public:
     enum PublishingMethod { NoPublishing, WKS, PKS };
 
     explicit Key(QObject *parent = nullptr);
-    ~Key() override;
+    ~Key() override = default;
 
     void create() override;
     void destroy() override;

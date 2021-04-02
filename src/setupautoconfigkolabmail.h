@@ -6,13 +6,12 @@
 
 #pragma once
 
-#include "setupispdb.h"
+#include "ispdbhelper.h"
 
-class SetupAutoconfigKolabMail : public SetupIspdb
+class SetupAutoconfigKolabMail : public IspdbHelper
 {
     Q_OBJECT
 public:
     /** Constructor */
     explicit SetupAutoconfigKolabMail(QObject *parent = nullptr);
 };
-
