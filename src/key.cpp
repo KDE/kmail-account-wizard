@@ -38,10 +38,6 @@ Key::Key(QObject *parent)
 {
 }
 
-Key::~Key()
-{
-}
-
 void Key::setKey(const GpgME::Key &key)
 {
     m_key = key;

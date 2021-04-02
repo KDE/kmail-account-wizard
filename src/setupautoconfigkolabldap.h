@@ -7,11 +7,11 @@
 #ifndef SETUPAUTOCONFIGKOLABLDAPDB_H
 #define SETUPAUTOCONFIGKOLABLDAPDB_H
 
-#include "setupobject.h"
+#include "ispdbhelper.h"
 
 class AutoconfigKolabLdap;
 
-class SetupAutoconfigKolabLdap : public SetupObject
+class SetupAutoconfigKolabLdap : public IspdbHelper
 {
     Q_OBJECT
 public:

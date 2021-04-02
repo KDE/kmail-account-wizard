@@ -5,18 +5,18 @@
 */
 
 #include "controller.h"
-#include "global.h"
+#include "ispdb/ispdb.h"
 #include "servertest.h"
 #include "setupmanager.h"
 #include "wizardmodel.h"
 
-#include <controlgui.h>
-
+#include <Control>
 #include <KAboutData>
 #include <KCrash>
 #include <KDBusService>
 #include <KLocalizedContext>
 #include <KLocalizedString>
+#include <PimCommon/EmailValidator>
 
 #include <QApplication>
 #include <QCommandLineOption>
@@ -66,30 +66,33 @@ int main(int argc, char **argv)
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
-    if (parser.isSet(QStringLiteral("assistants"))) {
-        const QStringList lst = Global::assistants();
-        std::cout << i18n("The following assistants are available:").toLocal8Bit().data() << std::endl;
-        for (const QString &val : lst) {
-            std::cout << "\t" << val.toLocal8Bit().constData() << std::endl;
-        }
-        return 0;
-    }
+    // if (parser.isSet(QStringLiteral("assistants"))) {
+    //    const QStringList lst = Global::assistants();
+    //    std::cout << i18n("The following assistants are available:").toLocal8Bit().data() << std::endl;
+    //    for (const QString &val : lst) {
+    //        std::cout << "\t" << val.toLocal8Bit().constData() << std::endl;
+    //    }
+    //    return 0;
+    //}
 
     KDBusService service(KDBusService::Unique);
 
-    Akonadi::ControlGui::start(nullptr);
-
-    const QString packageArgument = parser.value(QStringLiteral("package"));
-    if (!packageArgument.isEmpty()) {
-        Global::setAssistant(Global::unpackAssistant(QUrl::fromLocalFile(packageArgument)));
-    } else {
-        Global::setAssistant(parser.value(QStringLiteral("assistant")));
+    if (!Akonadi::Control::start()) {
+        qApp->exit(-1);
+        return 1;
     }
 
-    QString typeValue = parser.value(QStringLiteral("type"));
-    if (!typeValue.isEmpty()) {
-        Global::setTypeFilter(typeValue.split(QLatin1Char(',')));
-    }
+    // const QString packageArgument = parser.value(QStringLiteral("package"));
+    // if (!packageArgument.isEmpty()) {
+    //    Global::setAssistant(Global::unpackAssistant(QUrl::fromLocalFile(packageArgument)));
+    //} else {
+    //    Global::setAssistant(parser.value(QStringLiteral("assistant")));
+    //}
+    //
+    // QString typeValue = parser.value(QStringLiteral("type"));
+    // if (!typeValue.isEmpty()) {
+    //    Global::setTypeFilter(typeValue.split(QLatin1Char(',')));
+    //}
 
     QQmlApplicationEngine engine;
 
@@ -98,12 +101,13 @@ int main(int argc, char **argv)
     qmlRegisterType<WizardModel>("org.kde.pim.accountwizard", 1, 0, "WizardModel");
     qRegisterMetaType<Controller *>("Controller *");
     qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "Controller", &controller);
+    qmlRegisterType<PimCommon::EmailValidator>("org.kde.pim.accountwizard", 1, 0, "EmailValidator");
+    qmlRegisterType<Ispdb>("org.kde.pim.accountwizard", 1, 0, "Ispdb");
 
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
     engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
 
-    SetupManager setupManager;
-    qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "SetupManager", &setupManager);
+    qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "SetupManager", &SetupManager::instance());
 
     ServerTest serverTest;
     qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "ServerTest", &serverTest);

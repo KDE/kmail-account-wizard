@@ -7,11 +7,11 @@
 #ifndef SETUPAUTOCONFIGKOLABFREEBUSY_H
 #define SETUPAUTOCONFIGKOLABFREEBUSY_H
 
-#include "setupobject.h"
+#include "ispdbhelper.h"
 
 class AutoconfigKolabFreebusy;
 
-class SetupAutoconfigKolabFreebusy : public SetupObject
+class SetupAutoconfigKolabFreebusy : public IspdbHelper
 {
     Q_OBJECT
 public:

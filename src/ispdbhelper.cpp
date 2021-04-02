@@ -1,10 +1,8 @@
-/*
-    SPDX-FileCopyrightText: 2014 Sandro Knauß <knauss@kolabsys.com>
+// SPDX-FileCopyrightText: 2014 Sandro Knauß <knauss@kolabsys.com>
+// SPDX-FileCopyrightText: 2021 Carl Schwan <carlschwan@kde.org>
+// SPDX-License-Identifier: LGPL-2.0-or-later
 
-    SPDX-License-Identifier: LGPL-2.0-or-later
-*/
-
-#include "setupispdb.h"
+#include "ispdbhelper.h"
 #include "configfile.h"
 #include "identity.h"
 #include "ispdb/ispdb.h"
@@ -14,43 +12,49 @@
 
 #include <KLocalizedString>
 
-SetupIspdb::SetupIspdb(QObject *parent)
+IspdbHelper::IspdbHelper(QObject *parent)
+    : IspdbHelper(parent, new Ispdb(this))
+{
+}
+
+IspdbHelper::IspdbHelper(QObject *parent, Ispdb *ispdb)
     : SetupObject(parent)
+    , mIspdb(ispdb)
 {
-    mIspdb = new Ispdb(this);
-    connect(mIspdb, &Ispdb::finished, this, &SetupIspdb::onIspdbFinished);
+    connect(mIspdb, &Ispdb::finished, this, &IspdbHelper::onIspdbFinished);
+    connect(mIspdb, &Ispdb::passwordChanged, this, &IspdbHelper::passwordChanged);
+    connect(mIspdb, &Ispdb::emailChanged, this, &IspdbHelper::emailChanged);
 }
 
-SetupIspdb::~SetupIspdb()
-{
-    delete mIspdb;
-}
-
-QStringList SetupIspdb::relevantDomains() const
+QStringList IspdbHelper::relevantDomains() const
 {
     return mIspdb->relevantDomains();
 }
 
-QString SetupIspdb::name(int l) const
+QString IspdbHelper::longName() const
 {
-    return mIspdb->name(static_cast<Ispdb::length>(l));
+    return mIspdb->name(Ispdb::length::Long);
 }
 
-int SetupIspdb::defaultIdentity() const
+QString IspdbHelper::shortName() const
+{
+    return mIspdb->name(Ispdb::length::Short);
+}
+
+int IspdbHelper::defaultIdentity() const
 {
     return mIspdb->defaultIdentity();
 }
 
-int SetupIspdb::countIdentities() const
+int IspdbHelper::countIdentities() const
 {
     return mIspdb->identities().count();
 }
 
-void SetupIspdb::fillIdentity(int i, QObject *o) const
+void IspdbHelper::fillIdentity(int i, Identity *id) const
 {
+    // TODO change struct name
     identity isp = mIspdb->identities().at(i);
-
-    auto *id = qobject_cast<Identity *>(o);
 
     id->setIdentityName(isp.name);
     id->setRealName(isp.name);
@@ -59,13 +63,10 @@ void SetupIspdb::fillIdentity(int i, QObject *o) const
     id->setSignature(isp.signature);
 }
 
-void SetupIspdb::fillImapServer(int i, QObject *o) const
+void IspdbHelper::fillImapServer(int i, Resource *imapRes) const
 {
-    if (mIspdb->imapServers().isEmpty()) {
-        return;
-    }
+    Q_ASSERT(mIspdb->imapServers().count() > i);
     Server isp = mIspdb->imapServers().at(i);
-    auto *imapRes = qobject_cast<Resource *>(o);
 
     imapRes->setName(isp.hostname);
     imapRes->setOption(QStringLiteral("ImapServer"), isp.hostname);
@@ -81,15 +82,15 @@ void SetupIspdb::fillImapServer(int i, QObject *o) const
     }
 }
 
-int SetupIspdb::countImapServers() const
+int IspdbHelper::countImapServers() const
 {
     return mIspdb->imapServers().count();
 }
 
-void SetupIspdb::fillSmtpServer(int i, QObject *o) const
+void IspdbHelper::fillSmtpServer(int i, Transport *smtpRes) const
 {
+    Q_ASSERT(mIspdb->smtpServers().count() > i);
     Server isp = mIspdb->smtpServers().at(i);
-    auto *smtpRes = qobject_cast<Transport *>(o);
 
     smtpRes->setName(isp.hostname);
     smtpRes->setHost(isp.hostname);
@@ -127,36 +128,46 @@ void SetupIspdb::fillSmtpServer(int i, QObject *o) const
     }
 }
 
-int SetupIspdb::countSmtpServers() const
+int IspdbHelper::countSmtpServers() const
 {
     return mIspdb->smtpServers().count();
 }
 
-void SetupIspdb::start()
+void IspdbHelper::start()
 {
     mIspdb->start();
     Q_EMIT info(i18n("Searching for autoconfiguration..."));
 }
 
-void SetupIspdb::setEmail(const QString &email)
+void IspdbHelper::setEmail(const QString &email)
 {
     mIspdb->setEmail(email);
 }
 
-void SetupIspdb::setPassword(const QString &password)
+void IspdbHelper::setPassword(const QString &password)
 {
     mIspdb->setPassword(password);
 }
 
-void SetupIspdb::create()
+QString IspdbHelper::email() const
+{
+    return mIspdb->email();
+}
+
+QString IspdbHelper::password() const
+{
+    return mIspdb->password();
+}
+
+void IspdbHelper::create()
 {
 }
 
-void SetupIspdb::destroy()
+void IspdbHelper::destroy()
 {
 }
 
-void SetupIspdb::onIspdbFinished(bool status)
+void IspdbHelper::onIspdbFinished(bool status)
 {
     Q_EMIT ispdbFinished(status);
     if (status) {

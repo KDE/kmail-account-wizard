@@ -24,16 +24,35 @@ Ispdb::~Ispdb()
 {
 }
 
+QString Ispdb::email() const
+{
+    return mEmail;
+}
+
 void Ispdb::setEmail(const QString &address)
 {
+    if (mEmail == address) {
+        return;
+    }
+    mEmail = address;
     KMime::Types::Mailbox box;
     box.fromUnicodeString(address);
     mAddr = box.addrSpec();
+    Q_EMIT emailChanged();
+}
+
+QString Ispdb::password() const
+{
+    return mPassword;
 }
 
 void Ispdb::setPassword(const QString &password)
 {
+    if (mPassword == password) {
+        return;
+    }
     mPassword = password;
+    Q_EMIT passwordChanged();
 }
 
 void Ispdb::start()
