@@ -9,8 +9,8 @@ target_link_libraries(ispdb
     KF5::I18n
     KF5::KIOCore
     KF5::Mime
-    Qt5::Widgets
-    Qt5::Xml
+    Qt::Widgets
+    Qt::Xml
     )
 
 install(TARGETS ispdb ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

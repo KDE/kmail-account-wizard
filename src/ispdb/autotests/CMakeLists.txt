@@ -11,9 +11,9 @@ set(ispdbtest_srcs
 set(ispdbtest_libs
   KF5::KIOCore
   KF5::Mime
-  Qt5::Test
-  Qt5::Xml
-  Qt5::Network
+  Qt::Test
+  Qt::Xml
+  Qt::Network
   KF5::I18n
 )
 
