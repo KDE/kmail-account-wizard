@@ -1,4 +1,4 @@
-set(PIM_VERSION "5.17.0")
+set(PIM_VERSION "5.17.1")
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 project(kmail-account-wizard VERSION ${PIM_VERSION})
 
@@ -30,7 +30,7 @@ include(ECMQtDeclareLoggingCategory)
 
 # Do NOT add quote
 set(KDEPIM_DEV_VERSION)
-set(RELEASE_SERVICE_VERSION "21.04.0")
+set(RELEASE_SERVICE_VERSION "21.04.1")
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
