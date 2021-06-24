@@ -14,6 +14,7 @@
 #include "transport.h"
 #include <config-enterprise.h>
 
+#include <KAuthorized>
 #include <KEmailAddress>
 #include <PimCommon/EmailValidator>
 
@@ -37,6 +38,7 @@ PersonalDataPage::PersonalDataPage(Dialog *parent)
 
     ui.setupUi(pageParent);
     ui.mProgress->stop();
+    ui.passwordEdit->setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
 
     auto *emailValidator = new PimCommon::EmailValidator(this);
     ui.emailEdit->setValidator(emailValidator);
