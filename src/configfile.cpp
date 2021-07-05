@@ -33,7 +33,7 @@ void ConfigFile::create()
 {
     Q_EMIT info(i18n("Writing config file for %1...", m_name));
 
-    for (const Config &c : qAsConst(m_configData)) {
+    for (const Config &c : std::as_const(m_configData)) {
         KConfigGroup grp = m_config->group(c.group);
         if (c.obscure) {
             grp.writeEntry(c.key, KStringHandler::obscure(c.value));

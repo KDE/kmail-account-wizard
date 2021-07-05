@@ -103,7 +103,7 @@ void ProviderPage::leavePageNext()
     qCDebug(ACCOUNTWIZARD_LOG) << "Item selected:" << item->text();
 
     // download and execute it...
-    for (const KNSCore::EntryInternal &e : qAsConst(m_providerEntries)) {
+    for (const KNSCore::EntryInternal &e : std::as_const(m_providerEntries)) {
         if (e.uniqueId() == item->data(Qt::UserRole) && e.providerId() == item->data(Qt::UserRole + 1)) {
             m_wantedProvider.entryId = e.uniqueId();
             m_wantedProvider.entryProviderId = e.providerId();

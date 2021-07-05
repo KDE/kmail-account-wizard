@@ -184,15 +184,15 @@ void Ispdb::parseResult(const QDomDocument &document)
     qCDebug(ACCOUNTWIZARD_LOG) << "Domains" << mDomains;
     qCDebug(ACCOUNTWIZARD_LOG) << "Name" << mDisplayName << "(" << mDisplayShortName << ")";
     qCDebug(ACCOUNTWIZARD_LOG) << "Imap servers:";
-    for (const Server &s : qAsConst(mImapServers)) {
+    for (const Server &s : std::as_const(mImapServers)) {
         qCDebug(ACCOUNTWIZARD_LOG) << s.hostname << s.port << s.socketType << s.username << s.authentication;
     }
     qCDebug(ACCOUNTWIZARD_LOG) << "pop3 servers:";
-    for (const Server &s : qAsConst(mPop3Servers)) {
+    for (const Server &s : std::as_const(mPop3Servers)) {
         qCDebug(ACCOUNTWIZARD_LOG) << s.hostname << s.port << s.socketType << s.username << s.authentication;
     }
     qCDebug(ACCOUNTWIZARD_LOG) << "smtp servers:";
-    for (const Server &s : qAsConst(mSmtpServers)) {
+    for (const Server &s : std::as_const(mSmtpServers)) {
         qCDebug(ACCOUNTWIZARD_LOG) << s.hostname << s.port << s.socketType << s.username << s.authentication;
     }
     // end section.

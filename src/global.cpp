@@ -45,7 +45,7 @@ QStringList Global::assistants()
     }
     QStringList lstAssistants;
     lstAssistants.reserve(list.count());
-    for (const QString &entry : qAsConst(list)) {
+    for (const QString &entry : std::as_const(list)) {
         const QFileInfo info(entry);
         const QDir dir(info.absolutePath());
         lstAssistants.append(dir.dirName());
@@ -75,7 +75,7 @@ void Global::setAssistant(const QString &assistant)
             }
         }
     }
-    for (const QString &entry : qAsConst(list)) {
+    for (const QString &entry : std::as_const(list)) {
         const QFileInfo info(entry);
         const QDir dir(info.absolutePath());
         if (dir.dirName() == assistant) {
