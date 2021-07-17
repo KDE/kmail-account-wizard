@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Tine 2.0 Groupware Server
 Name[ar]=خادوم البرمجيّات التّعاونيّة «تاين ٢٫٠»
+Name[az]=Tine 2.0 qrup şəklində iş serveri
 Name[ca]=Servidor de treball en grup Tine 2.0
 Name[ca@valencia]=Servidor de treball en grup Tine 2.0
 Name[cs]=Groupware Server Tine 2.0
@@ -38,6 +39,7 @@ Name[zh_TW]=Tine 2.0 群組伺服器
 Icon=applications-internet
 Comment=Tine 2.0 Groupware Server
 Comment[ar]=خادوم البرمجيّات التّعاونيّة «تاين ٢٫٠»
+Comment[az]=Tine 2.0 qrup şəklində iş serveri
 Comment[ca]=Servidor de treball en grup Tine 2.0
 Comment[ca@valencia]=Servidor de treball en grup Tine 2.0
 Comment[cs]=Groupware Server Tine 2.0
