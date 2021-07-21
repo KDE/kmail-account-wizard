@@ -11,6 +11,7 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KStringHandler>
+#include <KPluginMetaData>
 
 ConfigFile::ConfigFile(const QString &configName, QObject *parent)
     : SetupObject(parent)
@@ -90,7 +91,7 @@ void ConfigFile::edit()
 
     if (m_editName == QLatin1String("freebusy")) {
         QPointer<KCMultiDialog> dialog = new KCMultiDialog();
-        dialog->addModule(QStringLiteral("korganizer_configfreebusy.desktop"));
+        dialog->addModule(KPluginMetaData(("korganizer_configfreebusy.desktop")));
         dialog->exec();
         delete dialog;
         return;
