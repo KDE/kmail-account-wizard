@@ -137,6 +137,11 @@ void Resource::instanceCreateResult(KJob *job)
                 return;
             }
         }
+        QDBusReply<void> reply = iface.call(QStringLiteral("save"));
+        if (!reply.isValid()) {
+            Q_EMIT error(i18n("Could not save settings: %1", reply.error().message()));
+            return;
+        }
         m_instance.reconfigure();
     }
 
