@@ -8,7 +8,7 @@
 
 #include "setupobject.h"
 #include <QMap>
-#include <agentinstance.h>
+#include <akonadi/agentinstance.h>
 
 class KJob;
 

@@ -6,10 +6,10 @@
 
 #include "resource.h"
 
-#include <AkonadiCore/ServerManager>
-#include <agentinstancecreatejob.h>
-#include <agentmanager.h>
-#include <agenttype.h>
+#include <Akonadi/AgentInstanceCreateJob>
+#include <Akonadi/AgentType>
+#include <Akonadi/ServerManager>
+#include <akonadi/agentmanager.h>
 
 #include "accountwizard_debug.h"
 #include <KLocalizedString>
