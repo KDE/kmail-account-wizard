@@ -7,9 +7,9 @@
 #include "resource.h"
 
 #include <Akonadi/AgentInstanceCreateJob>
+#include <Akonadi/AgentManager>
 #include <Akonadi/AgentType>
 #include <Akonadi/ServerManager>
-#include <akonadi/agentmanager.h>
 
 #include "accountwizard_debug.h"
 #include <KLocalizedString>

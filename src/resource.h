@@ -7,8 +7,8 @@
 #pragma once
 
 #include "setupobject.h"
+#include <Akonadi/AgentInstance>
 #include <QMap>
-#include <akonadi/agentinstance.h>
 
 class KJob;
 

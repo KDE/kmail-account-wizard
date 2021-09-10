@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.0-or-later
 #include "dialog.h"
 #include "global.h"
 
-#include <akonadi/controlgui.h>
+#include <Akonadi/ControlGui>
 
 #include <KAboutData>
 #include <QApplication>
