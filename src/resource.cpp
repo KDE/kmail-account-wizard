@@ -6,6 +6,7 @@
 
 #include "resource.h"
 
+#include <Akonadi/AgentConfigurationDialog>
 #include <Akonadi/AgentInstanceCreateJob>
 #include <Akonadi/AgentManager>
 #include <Akonadi/AgentType>
@@ -17,6 +18,7 @@
 #include <QDBusInterface>
 #include <QDBusReply>
 #include <QMetaMethod>
+#include <QPointer>
 #include <QVariant>
 
 using namespace Akonadi;
@@ -154,7 +156,9 @@ void Resource::instanceCreateResult(KJob *job)
 void Resource::edit()
 {
     if (m_instance.isValid()) {
-        m_instance.configure();
+        QPointer<Akonadi::AgentConfigurationDialog> dlg = new Akonadi::AgentConfigurationDialog(m_instance);
+        dlg->exec();
+        delete dlg;
     }
 }
 
