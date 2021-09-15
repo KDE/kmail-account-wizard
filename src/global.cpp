@@ -7,10 +7,10 @@
 #include "global.h"
 
 #include "accountwizard_debug.h"
+#include <KIO/CopyJob>
 #include <QDir>
 #include <QFileInfo>
 #include <QStandardPaths>
-#include <kio/copyjob.h>
 
 class GlobalPrivate
 {

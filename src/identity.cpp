@@ -8,8 +8,8 @@
 #include "transport.h"
 
 #include "accountwizard_debug.h"
+#include <KIdentityManagement/IdentityManager>
 #include <kidentitymanagement/identity.h>
-#include <kidentitymanagement/identitymanager.h>
 
 #include <KLocalizedString>
 

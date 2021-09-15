@@ -9,8 +9,8 @@
 
 #include <QObject>
 
+#include <KIO/Job>
 #include <QUrl>
-#include <kio/job.h>
 #include <kmime/kmime_header_parsing.h>
 
 class QDomElement;
