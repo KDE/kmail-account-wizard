@@ -27,7 +27,7 @@
 #include <KMime/Message>
 #include <KMime/Util>
 
-#include <KCodecs/KEmailAddress>
+#include <KEmailAddress>
 
 #include <KLocalizedString>
 
