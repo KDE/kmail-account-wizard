@@ -37,7 +37,6 @@ static QVariant::Type argumentType(const QMetaObject *mo, const QString &method)
 
     if (m.methodSignature().isEmpty()) {
         qCWarning(ACCOUNTWIZARD_LOG) << "Did not find D-Bus method: " << method << " available methods are:";
-        const int numberOfMethod(mo->methodCount());
         for (int i = 0; i < numberOfMethod; ++i) {
             qCWarning(ACCOUNTWIZARD_LOG) << mo->method(i).methodSignature();
         }
@@ -55,7 +54,6 @@ static QVariant::Type argumentType(const QMetaObject *mo, const QString &method)
 Resource::Resource(const QString &type, QObject *parent)
     : SetupObject(parent)
     , m_typeIdentifier(type)
-    , m_editMode(false)
 {
 }
 

@@ -292,8 +292,6 @@ QObject *SetupManager::ispDB(const QString &type)
         return new SetupAutoconfigKolabLdap(this);
     } else if (t == QLatin1String("autoconfigkolabfreebusy")) {
         return new SetupAutoconfigKolabFreebusy(this);
-    } else if (t == QLatin1String("ispdb")) {
-        return new SetupIspdb(this);
     } else {
         return new SetupIspdb(this);
     }

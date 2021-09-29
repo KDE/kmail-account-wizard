@@ -31,7 +31,8 @@ public Q_SLOTS:
 private:
     void instanceCreateResult(KJob *job);
 
-    QString m_typeIdentifier, m_name;
+    const QString m_typeIdentifier;
+    QString m_name;
     QMap<QString, QVariant> m_settings;
     Akonadi::AgentInstance m_instance;
 
