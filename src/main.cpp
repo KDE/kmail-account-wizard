@@ -10,7 +10,7 @@ SPDX-License-Identifier: LGPL-2.0-or-later
 #include "setupmanager.h"
 #include "wizardmodel.h"
 
-#include <Akonadi/ControlGui>
+#include <Akonadi/Control>
 
 #include <KAboutData>
 #include <KCrash>
