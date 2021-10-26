@@ -59,7 +59,7 @@ public:
         job->start(mEmail, mName);
     }
 
-    ~KeyGenerationJob()
+    ~KeyGenerationJob() override
     {
     }
 
@@ -231,7 +231,7 @@ public:
     {
     }
 
-    ~KeyImportJob()
+    ~KeyImportJob() override
     {
     }
 

@@ -46,7 +46,7 @@ public:
     explicit Ispdb(QObject *parent = nullptr);
 
     /** Destructor */
-    ~Ispdb();
+    ~Ispdb() override;
 
     /** After finished() has been emitted you can
         retrieve the domains that are covered by these
