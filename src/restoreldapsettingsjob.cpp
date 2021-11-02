@@ -6,7 +6,6 @@
 
 #include "restoreldapsettingsjob.h"
 #include <KConfig>
-#include <KConfigGroup>
 #include <KLDAP/LdapClientSearchConfig>
 #include <KLDAP/LdapClientSearchConfigReadConfigJob>
 #include <KLDAP/LdapClientSearchConfigWriteConfigJob>
