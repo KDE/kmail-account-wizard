@@ -15,7 +15,7 @@
 class TAutoconfMail : public AutoconfigKolabMail
 {
 public:
-    void startJob(const QUrl &url) Q_DECL_OVERRIDE
+    void startJob(const QUrl &url) override
     {
         QCOMPARE(url, expectedUrls.takeFirst());
         if (replace.contains(url)) {
