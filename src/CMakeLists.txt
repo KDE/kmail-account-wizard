@@ -27,6 +27,36 @@ set(accountwizard_srcs
     ispdb/autoconfigkolabmail.cpp
     ispdb/autoconfigkolabldap.cpp
     ispdb/autoconfigkolabfreebusy.cpp
+
+    key.h
+    setupobject.h
+    setupautoconfigkolabfreebusy.h
+    setuppage.h
+    setupispdb.h
+    cryptopage.h
+    setupautoconfigkolabldap.h
+    setupautoconfigkolabmail.h
+    page.h
+    resource.h
+    dialog.h
+    setupmanager.h
+    personaldatapage.h
+    dynamicpage.h
+    transport.h
+    identity.h
+    global.h
+    ldap.h
+    typepage.h
+    loadpage.h
+    restoreldapsettingsjob.h
+    servertest.h
+    providerpage.h
+    configfile.h
+    ispdb/ispdb.h
+    ispdb/autoconfigkolabfreebusy.h
+    ispdb/autoconfigkolabmail.h
+    ispdb/autoconfigkolabldap.h
+
     )
 
 ki18n_wrap_ui(accountwizard_srcs
