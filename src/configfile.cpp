@@ -15,9 +15,9 @@
 
 ConfigFile::ConfigFile(const QString &configName, QObject *parent)
     : SetupObject(parent)
+    , m_config(new KConfig(configName))
 {
     m_name = configName;
-    m_config = new KConfig(configName);
 }
 
 ConfigFile::~ConfigFile()

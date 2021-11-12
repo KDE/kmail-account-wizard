@@ -13,8 +13,8 @@
 
 SetupAutoconfigKolabLdap::SetupAutoconfigKolabLdap(QObject *parent)
     : SetupObject(parent)
+    , mIspdb(new AutoconfigKolabLdap(this))
 {
-    mIspdb = new AutoconfigKolabLdap(this);
     connect(mIspdb, &AutoconfigKolabLdap::finished, this, &SetupAutoconfigKolabLdap::onIspdbFinished);
 }
 

@@ -50,11 +50,8 @@ template<typename T> static typename T::value_type stringToValue(const T *table,
 
 Transport::Transport(const QString &type, QObject *parent)
     : SetupObject(parent)
-    , m_transportId(-1)
-    , m_port(-1)
     , m_encr(MailTransport::Transport::EnumEncryption::TLS)
     , m_auth(MailTransport::Transport::EnumAuthenticationType::PLAIN)
-    , m_editMode(false)
 {
     if (type == QLatin1String("smtp")) {
         m_port = 25;

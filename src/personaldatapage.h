@@ -42,6 +42,6 @@ private:
 
     Ui::PersonalDataPage ui;
     Ispdb *mIspdb = nullptr;
-    SetupManager *mSetupManager = nullptr;
+    SetupManager *const mSetupManager;
 };
 

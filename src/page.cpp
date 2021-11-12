@@ -10,9 +10,7 @@
 
 Page::Page(KAssistantDialog *parent)
     : QWidget(parent)
-    , m_item(nullptr)
     , m_parent(parent)
-    , m_valid(false)
 {
 }
 

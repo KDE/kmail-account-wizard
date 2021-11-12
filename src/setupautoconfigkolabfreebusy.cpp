@@ -15,8 +15,8 @@
 
 SetupAutoconfigKolabFreebusy::SetupAutoconfigKolabFreebusy(QObject *parent)
     : SetupObject(parent)
+    , mIspdb(new AutoconfigKolabFreebusy(this))
 {
-    mIspdb = new AutoconfigKolabFreebusy(this);
     connect(mIspdb, &AutoconfigKolabFreebusy::finished, this, &SetupAutoconfigKolabFreebusy::onIspdbFinished);
 }
 

@@ -45,9 +45,9 @@ private:
     void findDesktopAndSetAssistant(const QStringList &list);
 
     Ui::ProviderPage ui;
-    QStandardItemModel *m_model = nullptr;
+    QStandardItemModel *const m_model;
     QStandardItem *m_fetchItem = nullptr;
-    KNSCore::Engine *m_engine = nullptr;
+    KNSCore::Engine *const m_engine;
     QSortFilterProxyModel *mProxy;
     KNSCore::EntryInternal::List m_providerEntries;
     Provider m_wantedProvider;

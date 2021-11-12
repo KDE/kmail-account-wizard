@@ -45,7 +45,7 @@ private:
     KPageWidgetItem *addPage(Page *page, const QString &title);
 
 private:
-    SetupManager *mSetupManager = nullptr;
+    SetupManager *const mSetupManager;
     KPageWidgetItem *mLastPage = nullptr;
     KPageWidgetItem *mProviderPage = nullptr;
     KPageWidgetItem *mTypePage = nullptr;

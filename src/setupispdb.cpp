@@ -16,8 +16,8 @@
 
 SetupIspdb::SetupIspdb(QObject *parent)
     : SetupObject(parent)
+    , mIspdb(new Ispdb(this))
 {
-    mIspdb = new Ispdb(this);
     connect(mIspdb, &Ispdb::finished, this, &SetupIspdb::onIspdbFinished);
 }
 

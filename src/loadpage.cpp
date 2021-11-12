@@ -15,7 +15,6 @@
 
 LoadPage::LoadPage(KAssistantDialog *parent)
     : Page(parent)
-    , m_action(nullptr)
 {
     ui.setupUi(this);
     setValid(false);

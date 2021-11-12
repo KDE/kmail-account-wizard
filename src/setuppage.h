@@ -26,6 +26,6 @@ public:
 private:
     void detailsClicked();
     Ui::SetupPage ui;
-    QStandardItemModel *m_msgModel = nullptr;
+    QStandardItemModel *const m_msgModel;
 };
 

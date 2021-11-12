@@ -31,7 +31,6 @@ QString accountName(Ispdb *ispdb, QString username)
 
 PersonalDataPage::PersonalDataPage(Dialog *parent)
     : Page(parent)
-    , mIspdb(nullptr)
     , mSetupManager(parent->setupManager())
 {
     QWidget *pageParent = this;
