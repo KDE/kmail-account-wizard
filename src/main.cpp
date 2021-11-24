@@ -16,8 +16,8 @@ SPDX-License-Identifier: LGPL-2.0-or-later
 
 #include <KDBusService>
 #include <KLocalizedString>
+#include <cstdio>
 #include <iostream>
-#include <stdio.h>
 
 #include <KCrash>
 #include <QCommandLineOption>

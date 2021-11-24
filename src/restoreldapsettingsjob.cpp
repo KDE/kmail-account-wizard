@@ -16,9 +16,7 @@ RestoreLdapSettingsJob::RestoreLdapSettingsJob(QObject *parent)
 {
 }
 
-RestoreLdapSettingsJob::~RestoreLdapSettingsJob()
-{
-}
+RestoreLdapSettingsJob::~RestoreLdapSettingsJob() = default;
 
 void RestoreLdapSettingsJob::start()
 {

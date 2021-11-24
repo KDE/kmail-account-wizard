@@ -59,9 +59,7 @@ public:
         job->start(mEmail, mName);
     }
 
-    ~KeyGenerationJob() override
-    {
-    }
+    ~KeyGenerationJob() override = default;
 
 Q_SIGNALS:
     void result(const QString &fingerprint);
@@ -231,9 +229,7 @@ public:
     {
     }
 
-    ~KeyImportJob() override
-    {
-    }
+    ~KeyImportJob() override = default;
 
     void slotCancel() override
     {

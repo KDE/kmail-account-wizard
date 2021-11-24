@@ -20,9 +20,7 @@ Identity::Identity(QObject *parent)
     Q_ASSERT(m_identity != nullptr);
 }
 
-Identity::~Identity()
-{
-}
+Identity::~Identity() = default;
 
 void Identity::create()
 {

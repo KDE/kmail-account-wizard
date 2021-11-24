@@ -20,9 +20,7 @@ Ispdb::Ispdb(QObject *parent)
 {
 }
 
-Ispdb::~Ispdb()
-{
-}
+Ispdb::~Ispdb() = default;
 
 void Ispdb::setEmail(const QString &address)
 {
@@ -314,7 +312,7 @@ QString Ispdb::name(length l) const
     } else if (l == Short) {
         return mDisplayShortName;
     } else {
-        return QString(); // make compiler happy. Not me.
+        return {}; // make compiler happy. Not me.
     }
 }
 

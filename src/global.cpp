@@ -103,7 +103,7 @@ QString Global::assistantBasePath()
     if (info.isAbsolute()) {
         return info.absolutePath() + QDir::separator();
     }
-    return QString();
+    return {};
 }
 
 QString Global::unpackAssistant(const QUrl &remotePackageUrl)
@@ -117,7 +117,7 @@ QString Global::unpackAssistant(const QUrl &remotePackageUrl)
         KIO::Job *job = KIO::copy(remotePackageUrl, QUrl::fromLocalFile(localPackageFile), KIO::Overwrite | KIO::HideProgressInfo);
         qCDebug(ACCOUNTWIZARD_LOG) << "downloading remote URL" << remotePackageUrl << "to" << localPackageFile;
         if (!job->exec()) {
-            return QString();
+            return {};
         }
     }
 
@@ -132,7 +132,7 @@ QString Global::unpackAssistant(const QUrl &remotePackageUrl)
         return dest + file.fileName() + QLatin1Char('/') + assistant + QLatin1Char('/') + assistant + QLatin1String(".desktop");
     } else {
         qCDebug(ACCOUNTWIZARD_LOG) << "failed" << getJob->errorString();
-        return QString();
+        return {};
     }
 }
 

@@ -162,9 +162,7 @@ private:
 };
 
 struct Server {
-    Server()
-    {
-    }
+    Server() = default;
 
     bool isValid() const
     {
@@ -180,9 +178,7 @@ struct Server {
 QDebug operator<<(QDebug d, const Server &t);
 
 struct identity {
-    identity()
-    {
-    }
+    identity() = default;
 
     bool isValid() const
     {
