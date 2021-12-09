@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: none
+# SPDX-License-Identifier: BSD-3-Clause
+
 set(PIM_VERSION "5.19.40")
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 project(kmail-account-wizard VERSION ${PIM_VERSION})
