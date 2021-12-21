@@ -61,7 +61,9 @@ QString authTypeToStr(Ispdb::authType authType)
 
 int main(int argc, char **argv)
 {
-    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling, true);
+#endif
     QApplication app(argc, argv);
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     KAboutData aboutData(QStringLiteral("ispdb"),
