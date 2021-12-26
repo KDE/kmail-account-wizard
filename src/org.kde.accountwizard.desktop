@@ -82,3 +82,4 @@ MimeType=application/x-accountwizard-package;
 Terminal=false
 X-DBUS-StartupType=Unique
 X-DBUS-ServiceName=org.kde.accountwizard
+X-GNOME-SingleWindow=true
