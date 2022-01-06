@@ -83,4 +83,4 @@ Terminal=false
 Icon=kmail
 X-DBUS-StartupType=Unique
 X-DBUS-ServiceName=org.kde.accountwizard
-X-GNOME-SingleWindow=true
+SingleMainWindow=true
