@@ -5,9 +5,6 @@ set(PIM_VERSION "5.19.40")
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 project(kmail-account-wizard VERSION ${PIM_VERSION})
 
-
-set(LIBRARY_NAMELINK LIBRARY NAMELINK_SKIP)
-
 set(KF5_MIN_VERSION "5.89.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
