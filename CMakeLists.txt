@@ -104,7 +104,7 @@ set_package_properties(Qt5Keychain PROPERTIES
 set( SharedMimeInfo_MINIMUM_VERSION "1.3" )
 find_package(SharedMimeInfo ${SharedMimeInfo_MINIMUM_VERSION} REQUIRED)
 
-ecm_set_disabled_deprecation_versions(QT 5.15.2 KF 5.91.0)
+ecm_set_disabled_deprecation_versions(QT 5.15.2 KF 5.92.0)
 
 
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
