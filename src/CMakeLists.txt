@@ -75,6 +75,8 @@ ecm_qt_declare_logging_category(accountwizard_srcs HEADER accountwizard_debug.h 
 
 
 set(accountwizard_libs
+    Gpgmepp
+    QGpgme
     KF5::AkonadiCore
     KF5::MailTransportAkonadi
     KF5::MailTransport
