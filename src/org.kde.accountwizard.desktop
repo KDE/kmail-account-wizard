@@ -84,3 +84,4 @@ Icon=kmail
 X-DBUS-StartupType=Unique
 X-DBUS-ServiceName=org.kde.accountwizard
 SingleMainWindow=true
+Version=1.5
