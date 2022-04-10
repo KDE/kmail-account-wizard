@@ -236,7 +236,7 @@ Server Ispdb::createServer(const QDomElement &n)
                     s.authentication = ClientIP;
                 } else if (type == QLatin1String("none")) {
                     s.authentication = NoAuth;
-                } else if (n.attribute(QStringLiteral("type")) == QLatin1String("imap") && type == QLatin1String("OAuth2")) {
+                } else if (type == QLatin1String("OAuth2")) {
                     s.authentication = OAuth2;
                 }
             }
