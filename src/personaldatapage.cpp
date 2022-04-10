@@ -176,6 +176,9 @@ void PersonalDataPage::configureSmtpAccount()
         case Ispdb::GSSAPI:
             t->setAuthenticationType(QStringLiteral("gssapi"));
             break;
+        case Ispdb::OAuth2:
+            t->setAuthenticationType(QStringLiteral("oauth2"));
+            break;
         case Ispdb::ClientIP:
             break;
         case Ispdb::NoAuth:

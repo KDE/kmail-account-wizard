@@ -32,6 +32,7 @@ static const StringValueTable<MailTransport::Transport::EnumAuthenticationType> 
     {"ntlm", MailTransport::Transport::EnumAuthenticationType::NTLM},
     {"apop", MailTransport::Transport::EnumAuthenticationType::APOP},
     {"clear", MailTransport::Transport::EnumAuthenticationType::CLEAR},
+    {"oauth2", MailTransport::Transport::EnumAuthenticationType::XOAUTH2},
     {"anonymous", MailTransport::Transport::EnumAuthenticationType::ANONYMOUS}};
 static const int authenticationTypeEnumSize = sizeof(authenticationTypeEnum) / sizeof(*authenticationTypeEnum);
 
