@@ -27,3 +27,6 @@ Dependencies:
     'frameworks/knotifications': '@latest'
     'frameworks/kross': '@latest'
     'frameworks/knewstuff': '@latest'
+
+Options:
+  require-passing-tests-on: [ 'Linux', 'FreeBSD' ]      
