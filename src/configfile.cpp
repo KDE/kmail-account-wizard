@@ -13,6 +13,8 @@
 #include <KStringHandler>
 #include <KPluginMetaData>
 
+#include <QPointer>
+
 ConfigFile::ConfigFile(const QString &configName, QObject *parent)
     : SetupObject(parent)
     , m_config(new KConfig(configName))
