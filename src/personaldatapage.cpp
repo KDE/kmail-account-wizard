@@ -50,7 +50,7 @@ PersonalDataPage::PersonalDataPage(Dialog *parent)
     connect(ui.nameEdit, &QLineEdit::textChanged, this, &PersonalDataPage::slotTextChanged);
     connect(ui.createAccountPb, &QPushButton::clicked, this, &PersonalDataPage::slotCreateAccountClicked);
     connect(ui.buttonGroup, &QButtonGroup::buttonClicked, this, &PersonalDataPage::slotRadioButtonClicked);
-#ifdef KDEPIM_ENTERPRISE_BUILD
+#if KDEPIM_ENTERPRISE_BUILD
     ui.checkOnlineGroupBox->setChecked(false);
 #endif
 }
