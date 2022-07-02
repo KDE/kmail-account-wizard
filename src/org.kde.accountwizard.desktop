@@ -2,6 +2,7 @@
 Name=Account Wizard
 Name[ar]=مرشد الحسابات
 Name[az]=Hesab bələdçisi
+Name[bg]=Съветник създаване на акаунт
 Name[ca]=Assistent de comptes
 Name[ca@valencia]=Assistent de comptes
 Name[cs]=Průvodce nastavením účtu
@@ -42,6 +43,7 @@ NoDisplay=true
 Comment=Launch the account wizard to configure PIM accounts.
 Comment[ar]=أطلِق مرشد الحسابات لضبط حسابات PIM.
 Comment[az]=PİM hesablarını tənzimləmək üçün hesab köməkçisini başladın.
+Comment[bg]=Стартиране на съветника за акаунти за конфигурация на PIM акаунти.
 Comment[ca]=Llança l'assistent de comptes per a configurar els comptes de la PIM.
 Comment[ca@valencia]=Inicia l'assistent de comptes per a configurar els comptes de la PIM.
 Comment[cs]=Spustit průvodce nastavením PIM účtů.
