@@ -101,7 +101,7 @@ set_package_properties(Qt5Keychain PROPERTIES
                                    TYPE OPTIONAL)
 
 
-set( SharedMimeInfo_MINIMUM_VERSION "1.3" )
+set( SharedMimeInfo_MINIMUM_VERSION "2.0" )
 find_package(SharedMimeInfo ${SharedMimeInfo_MINIMUM_VERSION} REQUIRED)
 
 ecm_set_disabled_deprecation_versions(QT 5.15.2 KF 5.98.0)
