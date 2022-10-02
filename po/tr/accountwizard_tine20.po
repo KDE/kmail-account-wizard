@@ -1,0 +1,50 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# obsoleteman <tulliana@gmail.com>, 2012.
+# Volkan Gezer <volkangezer@gmail.com>, 2013.
+# Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
+# Emir SARI <emir_sari@icloud.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-runtime-kde4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:16+0200\n"
+"PO-Revision-Date: 2022-04-15 14:20+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: tine20wizard.es:24
+msgid "Personal Settings"
+msgstr "Kişisel Ayarlar"
+
+#. i18n: ectx: property (text), widget (QLabel, nameLabel)
+#: tine20wizard.ui:20
+#, kde-format
+msgid "&Name:"
+msgstr "&Ad:"
+
+#. i18n: ectx: property (text), widget (QLabel, emailLabel)
+#: tine20wizard.ui:33
+#, kde-format
+msgid "&Email:"
+msgstr "&E-posta:"
+
+#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
+#: tine20wizard.ui:46
+#, kde-format
+msgid "&Password:"
+msgstr "&Parola:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: tine20wizard.ui:60
+#, kde-format
+msgid "&Server Address:"
+msgstr "&Sunucu Adresi:"

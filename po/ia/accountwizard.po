@@ -1,0 +1,749 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# g.sora <g.sora@tiscali.it>, 2010, 2012, 2013, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-12 00:46+0000\n"
+"PO-Revision-Date: 2021-08-31 18:42+0200\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.04.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Giovanni Sora"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "g.sora@tiscali.it"
+
+#: configfile.cpp:37
+#, kde-format
+msgid "Writing config file for %1..."
+msgstr "File de Configuration pro scriber pro %1..."
+
+#: configfile.cpp:54
+#, kde-format
+msgid "Config file for %1 is writing."
+msgstr "File de configuration pro %1 es scribente."
+
+#: configfile.cpp:59
+#, kde-format
+msgid "Config file for %1 was not changed."
+msgstr "File de configuration pro %1 non esseva modificate."
+
+#: configfile.cpp:90
+#, kde-format
+msgid "No given name for the configuration."
+msgstr "Necun date nomine per le configuration"
+
+#: configfile.cpp:102
+#, kde-format
+msgid "Unknown configuration name '%1'"
+msgstr "Nomine de configuration incognoscite '%1'"
+
+#: cryptopage.cpp:80 cryptopage.cpp:101 cryptopage.cpp:202
+#, kde-format
+msgid "Account Wizard"
+msgstr "Assistente pro Conto"
+
+#: cryptopage.cpp:81 cryptopage.cpp:102
+#, kde-format
+msgid "Error while generating new key pair for your account %1: %2"
+msgstr "Error quando on generava nove copula de clave per tu conto %1:%2"
+
+#: cryptopage.cpp:257
+#, kde-format
+msgid "Could not detect valid key type"
+msgstr "Non pote relevar typo de clave valide"
+
+#: cryptopage.cpp:257 cryptopage.cpp:266 cryptopage.cpp:282 cryptopage.cpp:289
+#, kde-format
+msgid "Import error"
+msgstr "Error de importar"
+
+#: cryptopage.cpp:265
+#, kde-format
+msgid "Cannot read data from the certificate file: %1"
+msgstr "Non poite leger datos ex le file de certificato: %1"
+
+#: cryptopage.cpp:281
+#, kde-format
+msgid "Failed to import key: %1"
+msgstr "Il falleva a importar clave: '%1'."
+
+#: cryptopage.cpp:289
+#, kde-format
+msgid "Failed to import key."
+msgstr "Il falleva a importar clave."
+
+#: cryptopage.cpp:316
+#, kde-format
+msgid "No key"
+msgstr "Necun clave"
+
+#: cryptopage.cpp:317
+#, kde-format
+msgid "Generate a new key pair"
+msgstr "Genera un nove copula de clave"
+
+#: cryptopage.cpp:318
+#, kde-format
+msgid "Import a key"
+msgstr "Importam un clave "
+
+#: cryptopage.cpp:425
+#, kde-format
+msgid "Certificates"
+msgstr "Certificatos"
+
+#: cryptopage.cpp:426
+#, kde-format
+msgid "Any files"
+msgstr "Ulle claves"
+
+#: cryptopage.cpp:429
+#, kde-format
+msgid "Select Certificate File"
+msgstr "Selige file de certificato"
+
+#: cryptopage.cpp:435
+#, kde-format
+msgid "Importing key..."
+msgstr "Importa clave ..."
+
+#: dialog.cpp:46
+#, kde-format
+msgid "Provide personal data"
+msgstr "Provider datos personal"
+
+#: dialog.cpp:54
+#, kde-format
+msgid "Secure your Communication"
+msgstr "Assecura tu communication"
+
+#: dialog.cpp:64
+#, kde-format
+msgid "Select Account Type"
+msgstr "Seliger typo de conto"
+
+#: dialog.cpp:72
+#, kde-format
+msgid "Select Provider"
+msgstr "Seliger Fornitor (Provider)"
+
+#: dialog.cpp:78
+#, kde-format
+msgid "Loading Assistant"
+msgstr "Assistente de cargar"
+
+#: dialog.cpp:86
+#, kde-format
+msgid "Setting up Account"
+msgstr "Il configura Conto"
+
+#: identity.cpp:27
+#, kde-format
+msgid "Setting up identity..."
+msgstr "Il configura identitate..."
+
+#: identity.cpp:38
+#, kde-format
+msgid "Identity set up."
+msgstr "Identitate configurate."
+
+#: identity.cpp:46
+#, kde-format
+msgctxt "Default name for new email accounts/identities."
+msgid "Unnamed"
+msgstr "Sin nomine"
+
+#: identity.cpp:78
+#, kde-format
+msgid "Identity removed."
+msgstr "Identitate Removite."
+
+#: ispdb/ispdb.cpp:351
+#, kde-format
+msgid "Lookup configuration: Email provider"
+msgstr "Configuration de cerca: furnitor de e-posta"
+
+#: ispdb/ispdb.cpp:354
+#, kde-format
+msgid "Lookup configuration: Trying common server name"
+msgstr "Configuration de cerca: il cerca nomine de servitor commun"
+
+#: ispdb/ispdb.cpp:357
+#, kde-format
+msgid "Lookup configuration: Mozilla database"
+msgstr "Configuration de cerca: Base de datos de Mozilla"
+
+#: ispdb/main.cpp:70
+#, kde-format
+msgid "ISPDB Assistant"
+msgstr "Assistente de ISPDB"
+
+#: ispdb/main.cpp:72 main.cpp:40
+#, kde-format
+msgid "Helps setting up PIM accounts"
+msgstr "Il adjuta a configurar contos de PIM"
+
+#: ispdb/main.cpp:74
+#, kde-format
+msgid "(c) 2010 Omat Holding B.V."
+msgstr "(c) 2010 Omat Holding B.V."
+
+#: ispdb/main.cpp:77 main.cpp:45
+#, kde-format
+msgid "Author"
+msgstr "Autor"
+
+#: ispdb/main.cpp:77
+#, kde-format
+msgid "Tom Albers"
+msgstr "Tom Albers"
+
+#: ispdb/main.cpp:84
+#, kde-format
+msgid "Tries to fetch the settings for that email address"
+msgstr "Il essaya cercar le preferentias pro illo adresse de e-posta"
+
+#: key.cpp:68
+#, kde-format
+msgid "Skipping key publishing"
+msgstr "Salta publication de clave"
+
+#: key.cpp:82 key.cpp:203
+#, kde-format
+msgid "Publishing OpenPGP key..."
+msgstr "Publicante clave de OpenPGP..."
+
+#: key.cpp:96 key.cpp:123 key.cpp:193
+#, kde-format
+msgid "Key publishing was canceled."
+msgstr "Publication de clave esseva cancellate."
+
+#: key.cpp:102
+#, kde-format
+msgid "Key publishing failed: not online, or GnuPG too old."
+msgstr "Publication de clave falleva: or non in linea or GnuPG troppo vetule."
+
+#: key.cpp:105
+#, kde-format
+msgid "Your email provider does not support key publishing."
+msgstr "Tu fornitor de eposta  non supporta publication de clave."
+
+#: key.cpp:128
+#, kde-format
+msgid "An error occurred while creating key publishing request."
+msgstr "Un error occurreva quando on creava requesta de publication de clave"
+
+#: key.cpp:151
+#, kde-format
+msgid "Key publishing error: mail transport is not configured"
+msgstr "Error de publication de clave: transporto de posta non es configurate"
+
+#: key.cpp:164
+#, kde-format
+msgid "Key publishing error: failed to create request email"
+msgstr ""
+"Errior de publication de clave : il falleva a crear epposta de requesta"
+
+#: key.cpp:195
+#, kde-format
+msgid "Failed to send key publishing request: %1"
+msgstr "Falleva a inviar requesta de publication de clave: %1"
+
+#: key.cpp:197
+#, kde-format
+msgid "Key publishing request sent."
+msgstr "Requesta de publication de clave inviate."
+
+#: key.cpp:233
+#, kde-format
+msgid "Failed to publish the key."
+msgstr "Il falleva a publicar clave."
+
+#: key.cpp:239
+#, kde-format
+msgid "Key has been published on %1"
+msgstr "Clave ha essite publicate sur %1"
+
+#: ldap.cpp:37
+#, kde-format
+msgid "Setting up LDAP server..."
+msgstr "Il configura servitor LDAP..."
+
+#: ldap.cpp:40
+#, kde-format
+msgid "Needed parameters are missing for LDAP config: server '%1'"
+msgstr "Parametros necessari es mancante per config de LDAP: servitor '%1'"
+
+#: ldap.cpp:118
+#, kde-format
+msgid "LDAP set up."
+msgstr "LDAP configurate."
+
+#: ldap.cpp:136
+#, kde-format
+msgid "LDAP not configuring."
+msgstr "LDAP non configurante."
+
+#: ldap.cpp:149
+#, kde-format
+msgid "Removed LDAP entry."
+msgstr "Removite entrata de LDAP."
+
+#: ldap.cpp:155
+#, kde-format
+msgid "No config found to edit"
+msgstr "Necun config trovate per editar"
+
+#: loadpage.cpp:35
+#, kde-format
+msgid "No script specified in '%1'."
+msgstr "Necun script specificate in '%1'."
+
+#: loadpage.cpp:39
+#, kde-format
+msgid "Unable to load assistant: File '%1' does not exist."
+msgstr "Incapace de cargar assistente: File '%1' non existe."
+
+#: loadpage.cpp:42
+#, kde-format
+msgid "Loading script '%1'..."
+msgstr "On carga script '%1'..."
+
+#: loadpage.cpp:51
+#, kde-format
+msgid "Failed to load script: '%1'."
+msgstr "Il falleva a cargar script: '%1'."
+
+#: main.cpp:38
+#, kde-format
+msgid "Account Assistant"
+msgstr "Assistente pro Conto"
+
+#: main.cpp:42
+#, kde-format
+msgid "(c) 2009-2020 the Akonadi developers"
+msgstr "(c) 2009-2020  le disveloppatores de Akonadi"
+
+#: main.cpp:45
+#, kde-format
+msgid "Volker Krause"
+msgstr "Volker Krause"
+
+#: main.cpp:46
+#, kde-format
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: main.cpp:53
+#, kde-format
+msgid "Only offer accounts that support the given type."
+msgstr "Solo il offere contos que supporta le date typo."
+
+#: main.cpp:54
+#, kde-format
+msgid "Run the specified assistant."
+msgstr "Exequer le assistente specificate."
+
+#: main.cpp:56
+#, kde-format
+msgid "unpack fullpath on startup and launch that assistant"
+msgstr "dispacchettar fullpath al initio e il lancea ille assistente"
+
+#: main.cpp:58
+#, kde-format
+msgid "Returns types of assistants"
+msgstr "Exequer typos de assistentes."
+
+#: main.cpp:66
+#, kde-format
+msgid "The following assistants are available:"
+msgstr "Le sequente assistentes es disponibile:"
+
+#: personaldatapage.cpp:71
+#, kde-format
+msgid "SMTP, %1"
+msgstr "SMTP, %1"
+
+#: personaldatapage.cpp:74
+#, kde-format
+msgid "IMAP, %1"
+msgstr "IMAP, %1"
+
+#: personaldatapage.cpp:78
+#, kde-format
+msgid "POP3, %1"
+msgstr "POP3, %1"
+
+#: providerpage.cpp:31
+#, kde-format
+msgid "Fetching provider list..."
+msgstr "Cercar in le lista de fornitor (provider)..."
+
+#: resource.cpp:74
+#, kde-format
+msgid "Resource type '%1' is not available."
+msgstr "typo de ressource '%1' non es disponibile."
+
+#: resource.cpp:88
+#, kde-format
+msgid "Resource '%1' is already set up."
+msgstr "Ressource '%1' jam es configurate."
+
+#: resource.cpp:94
+#, kde-format
+msgid "Creating resource instance for '%1'..."
+msgstr "Il crea un instantia de ressource pro '%1'..."
+
+#: resource.cpp:103
+#, kde-format
+msgid "Failed to create resource instance: %1"
+msgstr "Il falleva a crear un instantia de ressource: %1"
+
+#: resource.cpp:110
+#, kde-format
+msgid "Configuring resource instance..."
+msgstr "Il configura un instantia de ressource..."
+
+#: resource.cpp:114
+#, kde-format
+msgid "Unable to configure resource instance."
+msgstr "Incapace de configurar  un instantia de ressource."
+
+#: resource.cpp:129
+#, kde-format
+msgid "Could not convert value of setting '%1' to required type %2."
+msgstr "Il non pote converter valor de preferentia '%1' al typo requirite %2."
+
+#: resource.cpp:136
+#, kde-format
+msgid "Could not set setting '%1': %2"
+msgstr "Il non pote fixar preferentia '%1': %2"
+
+#: resource.cpp:142
+#, kde-format
+msgid "Could not save settings: %1"
+msgstr "Il non pote salveguardar preferentias: %1"
+
+#: resource.cpp:151
+#, kde-format
+msgid "Resource setup completed."
+msgstr "Configuration de ressource completate."
+
+#: resource.cpp:167
+#, kde-format
+msgid "Removed resource instance for '%1'."
+msgstr "Removite instantia de ressource pro '%1'."
+
+#: servertest.cpp:50
+#, kde-format
+msgid ""
+"There seems to be a problem in reaching this server or choosing a safe way "
+"to sent the credentials to server. We advise you to check the settings of "
+"the account and adjust it manually if needed."
+msgstr ""
+"On sembla esser un problema quando on attinge iste servitor o on selige un "
+"modo secur de inviar credentiales al servitor. Nos consilia te de verificar "
+"le preferentias de conto e adjustar los manualmente, si il es necessari."
+
+#: servertest.cpp:53
+#, kde-format
+msgid "Autodetecting settings failed"
+msgstr "Il falleva a relevar automaticamente preferentias"
+
+#: setupautoconfigkolabfreebusy.cpp:74 setupautoconfigkolabldap.cpp:73
+#: setupispdb.cpp:138
+#, kde-format
+msgid "Searching for autoconfiguration..."
+msgstr "Cercante configuration automatic (autoconfiguration)..."
+
+#: setupautoconfigkolabfreebusy.cpp:99 setupautoconfigkolabldap.cpp:98
+#: setupispdb.cpp:163
+#, kde-format
+msgid "Autoconfiguration found."
+msgstr "Autoconfiguration trovate."
+
+#: setupautoconfigkolabfreebusy.cpp:101 setupautoconfigkolabldap.cpp:100
+#: setupispdb.cpp:165
+#, kde-format
+msgid "Autoconfiguration failed."
+msgstr "Il falleva configurar automaticamente."
+
+#. i18n: ectx: property (text), widget (QLabel, progressLabel)
+#: setupmanager.cpp:114 ui/setuppage.ui:37
+#, kde-format
+msgid "Setting up account..."
+msgstr "Il configura Conto..."
+
+#: setupmanager.cpp:162
+#, kde-format
+msgid "Setup complete."
+msgstr "Configuration complete."
+
+#: setupmanager.cpp:177
+#, kde-format
+msgid "Failed to set up account, rolling back..."
+msgstr "Il falleva a configurar conto, on torna retro..."
+
+#: setupmanager.cpp:191
+#, kde-format
+msgid "Failed to set up account."
+msgstr "Il falleva a configurar conto."
+
+#: transport.cpp:64
+#, kde-format
+msgid "Setting up mail transport account..."
+msgstr "Il es configurante conto de transporto de e-posta..."
+
+#: transport.cpp:83
+#, kde-format
+msgid "Mail transport uses '%1' encryption and '%2' authentication."
+msgstr "Transporto de posta usa cryptation '%1' e authentication '%2'."
+
+#: transport.cpp:89
+#, kde-format
+msgid "Mail transport account set up."
+msgstr "Conto de transporto de e-posta configurate."
+
+#: transport.cpp:95
+#, kde-format
+msgid "Mail transport account deleted."
+msgstr "Conto de transporto de e-posta delite."
+
+#: transport.cpp:102
+#, kde-format
+msgid "Could not load config dialog for UID '%1'"
+msgstr "Non èpote cargar dialogo de config per UID '%1'"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/cryptopage.ui:26
+#, kde-format
+msgid ""
+"Protect yourself against surveillance by encrypting your Mails with GnuPG. "
+"By generating or selecting a public / private key pair now mails can be "
+"encrypted using the public key while only you can decrypt them with your "
+"private key."
+msgstr ""
+"Protege te mesme contra surveliantia per cryptar tu posta con GnuPG. Per "
+"generar un par clave public/private nunc  messages de posta pote esser "
+"cryptate usante le clave public ma solmente tu pote decryptar los con tu "
+"clave private."
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, enableCryptoCheckBox)
+#: ui/cryptopage.ui:52
+#, kde-format
+msgid ""
+"<html><head/><body><p>When sending mails KMail automatically looks for "
+"encryption keys of your recipients and secures the mail when keys for each "
+"recipient can be found.</p><p>It also signs your mails cryptographically so "
+"that it can be verified that your messages have not been tampered with.</p></"
+"body></html>"
+msgstr ""
+"<html><head/><body><p>Quando invia messges de eposta KMail automaticamente "
+"cerca clave de cryptation de tu destinatarios e assecura le mesages quando "
+"claves per cata destinatario pote esser trovate.</p><p>Illo anque igna "
+"tumessages de eposta de modo cryptographic assi que illo poteverificar que "
+"tu messages non ha essite manipulate.</p></body></html>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, enableCryptoCheckBox)
+#: ui/cryptopage.ui:55
+#, kde-format
+msgid "Secure outgoing emails, if possible"
+msgstr "Assecura messages de eposta de partita, si possibile"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/cryptopage.ui:65
+#, kde-format
+msgid "Select key for this account:"
+msgstr "Selige clave per iste conto:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: ui/cryptopage.ui:99
+#, kde-format
+msgid "Checking key publishing support ..."
+msgstr "Verificante supporto de publication de clave ..."
+
+#. i18n: ectx: property (title), widget (QGroupBox, wksCheckBox)
+#: ui/cryptopage.ui:122
+#, kde-format
+msgid "Register &this key with your email provider"
+msgstr "Registra is&te clave con tu fornitor de e-posta"
+
+#. i18n: ectx: property (text), widget (QLabel, wksDescription)
+#: ui/cryptopage.ui:132
+#, kde-format
+msgid ""
+"Your email service provider supports a service to provide your public key so "
+"that others can find it.\n"
+"This means that your public key can be queried from your email provider and "
+"others can then use it to secure their email communication with you."
+msgstr ""
+"Tu fornitor de servicio de e-posta supporta un servicio per fornir tu clave "
+"public assi que alteres pote trovar lo.\n"
+"Isto significa que tu clave public pote esser demandate ab tu fornitor de e-"
+"posta e alteres pote usar lo per assecurar lor communication de e-posta con "
+"te."
+
+#. i18n: ectx: property (title), widget (QGroupBox, pksCheckBox)
+#: ui/cryptopage.ui:152
+#, kde-format
+msgid "Publish &this key on public key server"
+msgstr "Publica is&te clave sur le servitor de clave public"
+
+#. i18n: ectx: property (text), widget (QLabel, pksDescription)
+#: ui/cryptopage.ui:162
+#, kde-format
+msgid ""
+"Your email service provider does not support key publishing. You should "
+"publish your key so that other users can retrieve it and use it to secure "
+"their email communication with you.\n"
+"You can alternatively publish your key on a public key server, but you "
+"should be aware that your email address will be publicly listed and they key "
+"cannot be removed from there, only revoked."
+msgstr ""
+"Tu fornitor de e-posta non supporta pubblication de clave. Tu deberea "
+"publicar tu clave assi que altere usators pote recuperar lo e usar lo per "
+"assecurar lor communication de e-posta con te.\n"
+"Tu alternativemente pote publicar sur un servitor public, ma tu deberea "
+"esser conscie que tu adresse de e-posta essera listate apertemente e que le "
+"clave non pote esser removite ex illac, solmente revocate."
+
+#. i18n: ectx: property (text), widget (QLabel, statusLabel)
+#: ui/loadpage.ui:30
+#, kde-format
+msgid "Loading assistant..."
+msgstr "Il carga assistente..."
+
+#. i18n: ectx: property (text), widget (QLabel, welcomeLabel)
+#: ui/personaldatapage.ui:17
+#, kde-format
+msgid ""
+"With a few simple steps we create the right settings for you. Please follow "
+"the steps of this wizard carefully."
+msgstr ""
+"Con pauc simple passos nos crea le juste preferentias pro te. Pro favor tu "
+"seque le passos de iste assistente con cura."
+
+#. i18n: ectx: property (text), widget (QLabel, nameLabel)
+#: ui/personaldatapage.ui:29
+#, kde-format
+msgid "Full name:"
+msgstr "Nomine complete:"
+
+#. i18n: ectx: property (text), widget (QLabel, emailLabel)
+#: ui/personaldatapage.ui:55
+#, kde-format
+msgid "E-mail address:"
+msgstr "Adresse de e-Posta:"
+
+#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
+#: ui/personaldatapage.ui:85
+#, kde-format
+msgid "Password:"
+msgstr "Contrasigno:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, checkOnlineGroupBox)
+#: ui/personaldatapage.ui:119
+#, kde-format
+msgid "Find pro&vider settings on the Internet"
+msgstr "Tro&var preferentias de fornitor (provider) sur le internet"
+
+#. i18n: ectx: property (text), widget (QLabel, checkOnlineExplanation)
+#: ui/personaldatapage.ui:140
+#, kde-format
+msgid ""
+"Check online for the settings needed for this email provider. Only the "
+"domain name part of the e-mail address will be sent over the Internet at "
+"this point. If this option is unchecked, the account can be set up manually."
+msgstr ""
+"Tu marca in linea pro preferentias necessari pro iste fornitor de e-posta. "
+"Solo le parte de nomine de dominio del adresse de e-posta essera inviate "
+"super le Internet a iste puncto. Si iste option es non marcate, le conto "
+"essera configurate manualmente."
+
+#. i18n: ectx: property (text), widget (QRadioButton, imapAccount)
+#: ui/personaldatapage.ui:178
+#, kde-format
+msgid "IMAP account"
+msgstr "Conto de IMAP"
+
+#. i18n: ectx: property (text), widget (QRadioButton, pop3Account)
+#: ui/personaldatapage.ui:191
+#, kde-format
+msgid "POP&3 account"
+msgstr "Conto POP&3"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/personaldatapage.ui:205
+#, kde-format
+msgid "Incoming:"
+msgstr "In arrivata:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/personaldatapage.ui:222
+#, kde-format
+msgid "Outgoing:"
+msgstr "In exito:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/personaldatapage.ui:239
+#, kde-format
+msgid "Username:"
+msgstr "Nomine de usator:"
+
+#. i18n: ectx: property (text), widget (QPushButton, createAccountPb)
+#: ui/personaldatapage.ui:273
+#, kde-format
+msgid "Add Account"
+msgstr "Adde conto"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/providerpage.ui:17
+#, kde-format
+msgid ""
+"Select your provider from the list below or click back if your provider is "
+"not listed"
+msgstr ""
+"Seliger tu fornitor ex le lista a basso o tu pulsa retro si tu fornitor non "
+"es listate."
+
+#. i18n: ectx: property (text), widget (QPushButton, detailsButton)
+#: ui/setuppage.ui:62
+#, kde-format
+msgid "&Details..."
+msgstr "&Detalios..."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/typepage.ui:17
+#, kde-format
+msgid "Select which kind of account you want to create:"
+msgstr "Seliger qual typo de conto tu vole crear:"
+
+#. i18n: ectx: property (text), widget (QPushButton, ghnsButton)
+#: ui/typepage.ui:68
+#, kde-format
+msgid "Check for more on Internet"
+msgstr "Verifica pro altere sur  internet"
+
+#~ msgid "Unknown security setting for LDAP server"
+#~ msgstr "Preferentia de securitate incognoscite per servitor LDAP"
+
+#~ msgid "Create Account"
+#~ msgstr "Crea  conto"
+
+#~ msgid "TextLabel"
+#~ msgstr "Etiquetta de texto"

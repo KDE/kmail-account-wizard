@@ -1,0 +1,734 @@
+# Fumiaki Okushi <okushi@kde.gr.jp>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: accountwizard\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-12 00:46+0000\n"
+"PO-Revision-Date: 2010-10-22 23:45-0700\n"
+"Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Fumiaki Okushi"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "okushi@kde.gr.jp"
+
+#: configfile.cpp:37
+#, kde-format
+msgid "Writing config file for %1..."
+msgstr "%1 の設定ファイルを書き出し中..."
+
+#: configfile.cpp:54
+#, kde-format
+msgid "Config file for %1 is writing."
+msgstr "%1 の設定ファイルを書き出し中。"
+
+#: configfile.cpp:59
+#, kde-format
+msgid "Config file for %1 was not changed."
+msgstr "%1 の設定ファイルは変更されませんでした。"
+
+#: configfile.cpp:90
+#, kde-format
+msgid "No given name for the configuration."
+msgstr ""
+
+#: configfile.cpp:102
+#, fuzzy, kde-format
+#| msgid "Autodetecting settings failed"
+msgid "Unknown configuration name '%1'"
+msgstr "設定の自動検出に失敗しました"
+
+#: cryptopage.cpp:80 cryptopage.cpp:101 cryptopage.cpp:202
+#, fuzzy, kde-format
+#| msgid "Account Assistant"
+msgid "Account Wizard"
+msgstr "アカウントウィザード"
+
+#: cryptopage.cpp:81 cryptopage.cpp:102
+#, kde-format
+msgid "Error while generating new key pair for your account %1: %2"
+msgstr ""
+
+#: cryptopage.cpp:257
+#, kde-format
+msgid "Could not detect valid key type"
+msgstr ""
+
+#: cryptopage.cpp:257 cryptopage.cpp:266 cryptopage.cpp:282 cryptopage.cpp:289
+#, kde-format
+msgid "Import error"
+msgstr ""
+
+#: cryptopage.cpp:265
+#, kde-format
+msgid "Cannot read data from the certificate file: %1"
+msgstr ""
+
+#: cryptopage.cpp:281
+#, fuzzy, kde-format
+#| msgid "Failed to load script: '%1'."
+msgid "Failed to import key: %1"
+msgstr "スクリプト <resource>%1</resource> の読み込みに失敗しました。"
+
+#: cryptopage.cpp:289
+#, fuzzy, kde-format
+#| msgid "Failed to load script: '%1'."
+msgid "Failed to import key."
+msgstr "スクリプト <resource>%1</resource> の読み込みに失敗しました。"
+
+#: cryptopage.cpp:316
+#, kde-format
+msgid "No key"
+msgstr ""
+
+#: cryptopage.cpp:317
+#, kde-format
+msgid "Generate a new key pair"
+msgstr ""
+
+#: cryptopage.cpp:318
+#, kde-format
+msgid "Import a key"
+msgstr ""
+
+#: cryptopage.cpp:425
+#, kde-format
+msgid "Certificates"
+msgstr ""
+
+#: cryptopage.cpp:426
+#, kde-format
+msgid "Any files"
+msgstr ""
+
+#: cryptopage.cpp:429
+#, kde-format
+msgid "Select Certificate File"
+msgstr ""
+
+#: cryptopage.cpp:435
+#, kde-format
+msgid "Importing key..."
+msgstr ""
+
+#: dialog.cpp:46
+#, kde-format
+msgid "Provide personal data"
+msgstr "個人情報を入力"
+
+#: dialog.cpp:54
+#, kde-format
+msgid "Secure your Communication"
+msgstr ""
+
+#: dialog.cpp:64
+#, kde-format
+msgid "Select Account Type"
+msgstr "アカウントタイプを選択"
+
+#: dialog.cpp:72
+#, kde-format
+msgid "Select Provider"
+msgstr "プロバイダを選択"
+
+#: dialog.cpp:78
+#, kde-format
+msgid "Loading Assistant"
+msgstr "ウィザードを読み込み中"
+
+#: dialog.cpp:86
+#, kde-format
+msgid "Setting up Account"
+msgstr "アカウントの設定"
+
+#: identity.cpp:27
+#, kde-format
+msgid "Setting up identity..."
+msgstr "個人情報を設定中..."
+
+#: identity.cpp:38
+#, kde-format
+msgid "Identity set up."
+msgstr "個人情報を設定。"
+
+#: identity.cpp:46
+#, kde-format
+msgctxt "Default name for new email accounts/identities."
+msgid "Unnamed"
+msgstr "無名"
+
+#: identity.cpp:78
+#, kde-format
+msgid "Identity removed."
+msgstr "個人情報を削除しました。"
+
+#: ispdb/ispdb.cpp:351
+#, kde-format
+msgid "Lookup configuration: Email provider"
+msgstr ""
+
+#: ispdb/ispdb.cpp:354
+#, kde-format
+msgid "Lookup configuration: Trying common server name"
+msgstr ""
+
+#: ispdb/ispdb.cpp:357
+#, kde-format
+msgid "Lookup configuration: Mozilla database"
+msgstr ""
+
+#: ispdb/main.cpp:70
+#, fuzzy, kde-format
+#| msgid "Loading Assistant"
+msgid "ISPDB Assistant"
+msgstr "ウィザードを読み込み中"
+
+#: ispdb/main.cpp:72 main.cpp:40
+#, kde-format
+msgid "Helps setting up PIM accounts"
+msgstr "PIM のアカウントの設定をお手伝いします"
+
+#: ispdb/main.cpp:74
+#, kde-format
+msgid "(c) 2010 Omat Holding B.V."
+msgstr ""
+
+#: ispdb/main.cpp:77 main.cpp:45
+#, kde-format
+msgid "Author"
+msgstr "作者"
+
+#: ispdb/main.cpp:77
+#, kde-format
+msgid "Tom Albers"
+msgstr ""
+
+#: ispdb/main.cpp:84
+#, kde-format
+msgid "Tries to fetch the settings for that email address"
+msgstr ""
+
+#: key.cpp:68
+#, kde-format
+msgid "Skipping key publishing"
+msgstr ""
+
+#: key.cpp:82 key.cpp:203
+#, kde-format
+msgid "Publishing OpenPGP key..."
+msgstr ""
+
+#: key.cpp:96 key.cpp:123 key.cpp:193
+#, kde-format
+msgid "Key publishing was canceled."
+msgstr ""
+
+#: key.cpp:102
+#, kde-format
+msgid "Key publishing failed: not online, or GnuPG too old."
+msgstr ""
+
+#: key.cpp:105
+#, kde-format
+msgid "Your email provider does not support key publishing."
+msgstr ""
+
+#: key.cpp:128
+#, kde-format
+msgid "An error occurred while creating key publishing request."
+msgstr ""
+
+#: key.cpp:151
+#, kde-format
+msgid "Key publishing error: mail transport is not configured"
+msgstr ""
+
+#: key.cpp:164
+#, kde-format
+msgid "Key publishing error: failed to create request email"
+msgstr ""
+
+#: key.cpp:195
+#, kde-format
+msgid "Failed to send key publishing request: %1"
+msgstr ""
+
+#: key.cpp:197
+#, kde-format
+msgid "Key publishing request sent."
+msgstr ""
+
+#: key.cpp:233
+#, fuzzy, kde-format
+#| msgid "Failed to load script: '%1'."
+msgid "Failed to publish the key."
+msgstr "スクリプト <resource>%1</resource> の読み込みに失敗しました。"
+
+#: key.cpp:239
+#, kde-format
+msgid "Key has been published on %1"
+msgstr ""
+
+#: ldap.cpp:37
+#, kde-format
+msgid "Setting up LDAP server..."
+msgstr "LDAP サーバを設定中..."
+
+#: ldap.cpp:40
+#, kde-format
+msgid "Needed parameters are missing for LDAP config: server '%1'"
+msgstr ""
+
+#: ldap.cpp:118
+#, kde-format
+msgid "LDAP set up."
+msgstr "LDAP の設定完了。"
+
+#: ldap.cpp:136
+#, kde-format
+msgid "LDAP not configuring."
+msgstr "LDAP を設定しませんでした。"
+
+#: ldap.cpp:149
+#, kde-format
+msgid "Removed LDAP entry."
+msgstr ""
+
+#: ldap.cpp:155
+#, kde-format
+msgid "No config found to edit"
+msgstr ""
+
+#: loadpage.cpp:35
+#, kde-format
+msgid "No script specified in '%1'."
+msgstr "“%1” がスクリプトを指定しませんでした。"
+
+#: loadpage.cpp:39
+#, kde-format
+msgid "Unable to load assistant: File '%1' does not exist."
+msgstr ""
+"ウィザードを読み込むことができませんでした: ファイル ‘%1’ がありません。"
+
+#: loadpage.cpp:42
+#, kde-format
+msgid "Loading script '%1'..."
+msgstr "スクリプト “%1” を読み込み中..."
+
+#: loadpage.cpp:51
+#, kde-format
+msgid "Failed to load script: '%1'."
+msgstr "スクリプト “%1” の読み込みに失敗しました。"
+
+#: main.cpp:38
+#, kde-format
+msgid "Account Assistant"
+msgstr "アカウントウィザード"
+
+#: main.cpp:42
+#, fuzzy, kde-format
+#| msgid "(c) 2009 the Akonadi developers"
+msgid "(c) 2009-2020 the Akonadi developers"
+msgstr "(c) 2009 Akonadi 開発チーム"
+
+#: main.cpp:45
+#, kde-format
+msgid "Volker Krause"
+msgstr "Volker Krause"
+
+#: main.cpp:46
+#, kde-format
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: main.cpp:53
+#, kde-format
+msgid "Only offer accounts that support the given type."
+msgstr ""
+
+#: main.cpp:54
+#, kde-format
+msgid "Run the specified assistant."
+msgstr "指定されたウィザードを実行。"
+
+#: main.cpp:56
+#, kde-format
+msgid "unpack fullpath on startup and launch that assistant"
+msgstr ""
+
+#: main.cpp:58
+#, fuzzy, kde-format
+#| msgid "Run the specified assistant."
+msgid "Returns types of assistants"
+msgstr "指定されたウィザードを実行。"
+
+#: main.cpp:66
+#, kde-format
+msgid "The following assistants are available:"
+msgstr ""
+
+#: personaldatapage.cpp:71
+#, kde-format
+msgid "SMTP, %1"
+msgstr ""
+
+#: personaldatapage.cpp:74
+#, kde-format
+msgid "IMAP, %1"
+msgstr ""
+
+#: personaldatapage.cpp:78
+#, kde-format
+msgid "POP3, %1"
+msgstr ""
+
+#: providerpage.cpp:31
+#, kde-format
+msgid "Fetching provider list..."
+msgstr "プロバイダ一覧を取得中..."
+
+#: resource.cpp:74
+#, kde-format
+msgid "Resource type '%1' is not available."
+msgstr "リソースタイプ “%1” がありません。"
+
+#: resource.cpp:88
+#, kde-format
+msgid "Resource '%1' is already set up."
+msgstr "リソース “%1” は既に設定されています。"
+
+#: resource.cpp:94
+#, kde-format
+msgid "Creating resource instance for '%1'..."
+msgstr "“%1” のリソースインスタンスを作成中..."
+
+#: resource.cpp:103
+#, kde-format
+msgid "Failed to create resource instance: %1"
+msgstr "リソースインスタンスの作成に失敗しました: %1"
+
+#: resource.cpp:110
+#, kde-format
+msgid "Configuring resource instance..."
+msgstr "リソースインスタンスを設定中..."
+
+#: resource.cpp:114
+#, kde-format
+msgid "Unable to configure resource instance."
+msgstr "リソースインスタンスの設定ができませんでした。"
+
+#: resource.cpp:129
+#, kde-format
+msgid "Could not convert value of setting '%1' to required type %2."
+msgstr "設定「%1」の値を必要とされる型「%2」に変換できませんでした。"
+
+#: resource.cpp:136
+#, kde-format
+msgid "Could not set setting '%1': %2"
+msgstr "「%1」を設定できませんでした: %2"
+
+#: resource.cpp:142
+#, fuzzy, kde-format
+#| msgid "Could not set setting '%1': %2"
+msgid "Could not save settings: %1"
+msgstr "「%1」を設定できませんでした: %2"
+
+#: resource.cpp:151
+#, kde-format
+msgid "Resource setup completed."
+msgstr "リソースの設定完了。"
+
+#: resource.cpp:167
+#, kde-format
+msgid "Removed resource instance for '%1'."
+msgstr "“%1” のリソースインスタンスを削除しました。"
+
+#: servertest.cpp:50
+#, kde-format
+msgid ""
+"There seems to be a problem in reaching this server or choosing a safe way "
+"to sent the credentials to server. We advise you to check the settings of "
+"the account and adjust it manually if needed."
+msgstr ""
+
+#: servertest.cpp:53
+#, kde-format
+msgid "Autodetecting settings failed"
+msgstr "設定の自動検出に失敗しました"
+
+#: setupautoconfigkolabfreebusy.cpp:74 setupautoconfigkolabldap.cpp:73
+#: setupispdb.cpp:138
+#, kde-format
+msgid "Searching for autoconfiguration..."
+msgstr ""
+
+#: setupautoconfigkolabfreebusy.cpp:99 setupautoconfigkolabldap.cpp:98
+#: setupispdb.cpp:163
+#, kde-format
+msgid "Autoconfiguration found."
+msgstr ""
+
+#: setupautoconfigkolabfreebusy.cpp:101 setupautoconfigkolabldap.cpp:100
+#: setupispdb.cpp:165
+#, fuzzy, kde-format
+#| msgid "Autodetecting settings failed"
+msgid "Autoconfiguration failed."
+msgstr "設定の自動検出に失敗しました"
+
+#. i18n: ectx: property (text), widget (QLabel, progressLabel)
+#: setupmanager.cpp:114 ui/setuppage.ui:37
+#, kde-format
+msgid "Setting up account..."
+msgstr "アカウントの設定..."
+
+#: setupmanager.cpp:162
+#, kde-format
+msgid "Setup complete."
+msgstr "設定完了。"
+
+#: setupmanager.cpp:177
+#, kde-format
+msgid "Failed to set up account, rolling back..."
+msgstr "アカウントの設定に失敗しました。設定を戻しています..."
+
+#: setupmanager.cpp:191
+#, kde-format
+msgid "Failed to set up account."
+msgstr "アカウントの設定に失敗しました。"
+
+#: transport.cpp:64
+#, kde-format
+msgid "Setting up mail transport account..."
+msgstr ""
+
+#: transport.cpp:83
+#, kde-format
+msgid "Mail transport uses '%1' encryption and '%2' authentication."
+msgstr ""
+
+#: transport.cpp:89
+#, kde-format
+msgid "Mail transport account set up."
+msgstr ""
+
+#: transport.cpp:95
+#, kde-format
+msgid "Mail transport account deleted."
+msgstr ""
+
+#: transport.cpp:102
+#, kde-format
+msgid "Could not load config dialog for UID '%1'"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/cryptopage.ui:26
+#, kde-format
+msgid ""
+"Protect yourself against surveillance by encrypting your Mails with GnuPG. "
+"By generating or selecting a public / private key pair now mails can be "
+"encrypted using the public key while only you can decrypt them with your "
+"private key."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, enableCryptoCheckBox)
+#: ui/cryptopage.ui:52
+#, kde-format
+msgid ""
+"<html><head/><body><p>When sending mails KMail automatically looks for "
+"encryption keys of your recipients and secures the mail when keys for each "
+"recipient can be found.</p><p>It also signs your mails cryptographically so "
+"that it can be verified that your messages have not been tampered with.</p></"
+"body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, enableCryptoCheckBox)
+#: ui/cryptopage.ui:55
+#, kde-format
+msgid "Secure outgoing emails, if possible"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/cryptopage.ui:65
+#, kde-format
+msgid "Select key for this account:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: ui/cryptopage.ui:99
+#, kde-format
+msgid "Checking key publishing support ..."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, wksCheckBox)
+#: ui/cryptopage.ui:122
+#, kde-format
+msgid "Register &this key with your email provider"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, wksDescription)
+#: ui/cryptopage.ui:132
+#, kde-format
+msgid ""
+"Your email service provider supports a service to provide your public key so "
+"that others can find it.\n"
+"This means that your public key can be queried from your email provider and "
+"others can then use it to secure their email communication with you."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, pksCheckBox)
+#: ui/cryptopage.ui:152
+#, kde-format
+msgid "Publish &this key on public key server"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, pksDescription)
+#: ui/cryptopage.ui:162
+#, kde-format
+msgid ""
+"Your email service provider does not support key publishing. You should "
+"publish your key so that other users can retrieve it and use it to secure "
+"their email communication with you.\n"
+"You can alternatively publish your key on a public key server, but you "
+"should be aware that your email address will be publicly listed and they key "
+"cannot be removed from there, only revoked."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, statusLabel)
+#: ui/loadpage.ui:30
+#, kde-format
+msgid "Loading assistant..."
+msgstr "ウィザードを読み込み中..."
+
+#. i18n: ectx: property (text), widget (QLabel, welcomeLabel)
+#: ui/personaldatapage.ui:17
+#, kde-format
+msgid ""
+"With a few simple steps we create the right settings for you. Please follow "
+"the steps of this wizard carefully."
+msgstr ""
+"数少ないステップで、正しい設定を行います。ウィザードの指示に従ってください。"
+
+#. i18n: ectx: property (text), widget (QLabel, nameLabel)
+#: ui/personaldatapage.ui:29
+#, fuzzy, kde-format
+#| msgid "Full Name"
+msgid "Full name:"
+msgstr "氏名"
+
+#. i18n: ectx: property (text), widget (QLabel, emailLabel)
+#: ui/personaldatapage.ui:55
+#, kde-format
+msgid "E-mail address:"
+msgstr "メールアドレス:"
+
+#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
+#: ui/personaldatapage.ui:85
+#, fuzzy, kde-format
+#| msgid "Password"
+msgid "Password:"
+msgstr "パスワード"
+
+#. i18n: ectx: property (title), widget (QGroupBox, checkOnlineGroupBox)
+#: ui/personaldatapage.ui:119
+#, fuzzy, kde-format
+#| msgid "Find provider settings on the Internet"
+msgid "Find pro&vider settings on the Internet"
+msgstr "プロバイダの設定をインターネットで検索"
+
+#. i18n: ectx: property (text), widget (QLabel, checkOnlineExplanation)
+#: ui/personaldatapage.ui:140
+#, kde-format
+msgid ""
+"Check online for the settings needed for this email provider. Only the "
+"domain name part of the e-mail address will be sent over the Internet at "
+"this point. If this option is unchecked, the account can be set up manually."
+msgstr ""
+"私のメールプロバイダの設定をオンライン検索します。あなたのメールアドレスのド"
+"メイン名部分のみ送信されます。このオプションを解除すると、アカウントを手動作"
+"成できます。"
+
+#. i18n: ectx: property (text), widget (QRadioButton, imapAccount)
+#: ui/personaldatapage.ui:178
+#, fuzzy, kde-format
+#| msgid "Setting up Account"
+msgid "IMAP account"
+msgstr "アカウントの設定"
+
+#. i18n: ectx: property (text), widget (QRadioButton, pop3Account)
+#: ui/personaldatapage.ui:191
+#, fuzzy, kde-format
+#| msgid "Setting up Account"
+msgid "POP&3 account"
+msgstr "アカウントの設定"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/personaldatapage.ui:205
+#, kde-format
+msgid "Incoming:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/personaldatapage.ui:222
+#, kde-format
+msgid "Outgoing:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/personaldatapage.ui:239
+#, fuzzy, kde-format
+#| msgctxt "Default name for new email accounts/identities."
+#| msgid "Unnamed"
+msgid "Username:"
+msgstr "無名"
+
+#. i18n: ectx: property (text), widget (QPushButton, createAccountPb)
+#: ui/personaldatapage.ui:273
+#, fuzzy, kde-format
+#| msgid "Setting up Account"
+msgid "Add Account"
+msgstr "アカウントの設定"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/providerpage.ui:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "Select your provider from the list below or click advanced if your "
+#| "provider is not listed"
+msgid ""
+"Select your provider from the list below or click back if your provider is "
+"not listed"
+msgstr ""
+"プロバイダを一覧から選択してください。もし一覧にない場合、<interface>詳細</"
+"interface>をクリックしてください。"
+
+#. i18n: ectx: property (text), widget (QPushButton, detailsButton)
+#: ui/setuppage.ui:62
+#, kde-format
+msgid "&Details..."
+msgstr "詳細(&D)..."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/typepage.ui:17
+#, kde-format
+msgid "Select which kind of account you want to create:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, ghnsButton)
+#: ui/typepage.ui:68
+#, kde-format
+msgid "Check for more on Internet"
+msgstr ""

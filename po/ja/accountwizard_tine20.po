@@ -1,0 +1,43 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: accountwizard_tine20\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:16+0200\n"
+"PO-Revision-Date: 2012-05-17 22:23-0700\n"
+"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: tine20wizard.es:24
+msgid "Personal Settings"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, nameLabel)
+#: tine20wizard.ui:20
+#, kde-format
+msgid "&Name:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, emailLabel)
+#: tine20wizard.ui:33
+#, kde-format
+msgid "&Email:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
+#: tine20wizard.ui:46
+#, kde-format
+msgid "&Password:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: tine20wizard.ui:60
+#, kde-format
+msgid "&Server Address:"
+msgstr ""

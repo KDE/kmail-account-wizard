@@ -1,0 +1,740 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2011, 2012.
+# Balázs Úr <urbalazs@gmail.com>, 2013, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-12 00:46+0000\n"
+"PO-Revision-Date: 2014-01-20 22:02+0100\n"
+"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kiszel Kristóf"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ulysses@kubuntu.org"
+
+#: configfile.cpp:37
+#, kde-format
+msgid "Writing config file for %1..."
+msgstr "%1 beállítófájljának írása…"
+
+#: configfile.cpp:54
+#, kde-format
+msgid "Config file for %1 is writing."
+msgstr "%1 beállítófájljának írása."
+
+#: configfile.cpp:59
+#, kde-format
+msgid "Config file for %1 was not changed."
+msgstr "%1 beállítófájlja nem változott."
+
+#: configfile.cpp:90
+#, kde-format
+msgid "No given name for the configuration."
+msgstr ""
+
+#: configfile.cpp:102
+#, fuzzy, kde-format
+#| msgid "Autodetecting settings failed"
+msgid "Unknown configuration name '%1'"
+msgstr "A beállítások automatikus felismerése meghiúsult"
+
+#: cryptopage.cpp:80 cryptopage.cpp:101 cryptopage.cpp:202
+#, fuzzy, kde-format
+#| msgid "Account Assistant"
+msgid "Account Wizard"
+msgstr "Azonosítóvarázsló"
+
+#: cryptopage.cpp:81 cryptopage.cpp:102
+#, kde-format
+msgid "Error while generating new key pair for your account %1: %2"
+msgstr ""
+
+#: cryptopage.cpp:257
+#, kde-format
+msgid "Could not detect valid key type"
+msgstr ""
+
+#: cryptopage.cpp:257 cryptopage.cpp:266 cryptopage.cpp:282 cryptopage.cpp:289
+#, kde-format
+msgid "Import error"
+msgstr ""
+
+#: cryptopage.cpp:265
+#, kde-format
+msgid "Cannot read data from the certificate file: %1"
+msgstr ""
+
+#: cryptopage.cpp:281
+#, fuzzy, kde-format
+#| msgid "Failed to load script: '%1'."
+msgid "Failed to import key: %1"
+msgstr "Nem sikerült betölteni a szkriptet: „%1”."
+
+#: cryptopage.cpp:289
+#, fuzzy, kde-format
+#| msgid "Failed to load script: '%1'."
+msgid "Failed to import key."
+msgstr "Nem sikerült betölteni a szkriptet: „%1”."
+
+#: cryptopage.cpp:316
+#, kde-format
+msgid "No key"
+msgstr ""
+
+#: cryptopage.cpp:317
+#, kde-format
+msgid "Generate a new key pair"
+msgstr ""
+
+#: cryptopage.cpp:318
+#, kde-format
+msgid "Import a key"
+msgstr ""
+
+#: cryptopage.cpp:425
+#, kde-format
+msgid "Certificates"
+msgstr ""
+
+#: cryptopage.cpp:426
+#, kde-format
+msgid "Any files"
+msgstr ""
+
+#: cryptopage.cpp:429
+#, kde-format
+msgid "Select Certificate File"
+msgstr ""
+
+#: cryptopage.cpp:435
+#, kde-format
+msgid "Importing key..."
+msgstr ""
+
+#: dialog.cpp:46
+#, kde-format
+msgid "Provide personal data"
+msgstr "Személyes adatok megadása"
+
+#: dialog.cpp:54
+#, kde-format
+msgid "Secure your Communication"
+msgstr ""
+
+#: dialog.cpp:64
+#, kde-format
+msgid "Select Account Type"
+msgstr "Azonosítótípus választása"
+
+#: dialog.cpp:72
+#, kde-format
+msgid "Select Provider"
+msgstr "Szolgáltatóválasztás"
+
+#: dialog.cpp:78
+#, kde-format
+msgid "Loading Assistant"
+msgstr "Varázsló betöltése"
+
+#: dialog.cpp:86
+#, kde-format
+msgid "Setting up Account"
+msgstr "Azonosító beállítása"
+
+#: identity.cpp:27
+#, kde-format
+msgid "Setting up identity..."
+msgstr "Identitás beállítása…"
+
+#: identity.cpp:38
+#, kde-format
+msgid "Identity set up."
+msgstr "Az azonosító beállítva."
+
+#: identity.cpp:46
+#, kde-format
+msgctxt "Default name for new email accounts/identities."
+msgid "Unnamed"
+msgstr "Névtelen"
+
+#: identity.cpp:78
+#, kde-format
+msgid "Identity removed."
+msgstr "Az azonosító eltávolítva."
+
+#: ispdb/ispdb.cpp:351
+#, kde-format
+msgid "Lookup configuration: Email provider"
+msgstr "Beállítás keresése: E-mail szolgáltató"
+
+#: ispdb/ispdb.cpp:354
+#, kde-format
+msgid "Lookup configuration: Trying common server name"
+msgstr "Beállítás keresése: Közös kiszolgálónév megpróbálása"
+
+#: ispdb/ispdb.cpp:357
+#, kde-format
+msgid "Lookup configuration: Mozilla database"
+msgstr "Beállítás keresése: Mozilla adatbázis"
+
+#: ispdb/main.cpp:70
+#, kde-format
+msgid "ISPDB Assistant"
+msgstr "ISPDB segéd"
+
+#: ispdb/main.cpp:72 main.cpp:40
+#, kde-format
+msgid "Helps setting up PIM accounts"
+msgstr "Segít a PIM azonosítók beállításában"
+
+#: ispdb/main.cpp:74
+#, kde-format
+msgid "(c) 2010 Omat Holding B.V."
+msgstr "© Omat Holding B.V., 2010."
+
+#: ispdb/main.cpp:77 main.cpp:45
+#, kde-format
+msgid "Author"
+msgstr "Szerző"
+
+#: ispdb/main.cpp:77
+#, kde-format
+msgid "Tom Albers"
+msgstr "Tom Albers"
+
+#: ispdb/main.cpp:84
+#, kde-format
+msgid "Tries to fetch the settings for that email address"
+msgstr "Megpróbálja lekérni a beállításokat ahhoz az e-mail címhez"
+
+#: key.cpp:68
+#, kde-format
+msgid "Skipping key publishing"
+msgstr ""
+
+#: key.cpp:82 key.cpp:203
+#, kde-format
+msgid "Publishing OpenPGP key..."
+msgstr ""
+
+#: key.cpp:96 key.cpp:123 key.cpp:193
+#, kde-format
+msgid "Key publishing was canceled."
+msgstr ""
+
+#: key.cpp:102
+#, kde-format
+msgid "Key publishing failed: not online, or GnuPG too old."
+msgstr ""
+
+#: key.cpp:105
+#, kde-format
+msgid "Your email provider does not support key publishing."
+msgstr ""
+
+#: key.cpp:128
+#, kde-format
+msgid "An error occurred while creating key publishing request."
+msgstr ""
+
+#: key.cpp:151
+#, kde-format
+msgid "Key publishing error: mail transport is not configured"
+msgstr ""
+
+#: key.cpp:164
+#, kde-format
+msgid "Key publishing error: failed to create request email"
+msgstr ""
+
+#: key.cpp:195
+#, kde-format
+msgid "Failed to send key publishing request: %1"
+msgstr ""
+
+#: key.cpp:197
+#, kde-format
+msgid "Key publishing request sent."
+msgstr ""
+
+#: key.cpp:233
+#, fuzzy, kde-format
+#| msgid "Failed to load script: '%1'."
+msgid "Failed to publish the key."
+msgstr "Nem sikerült betölteni a szkriptet: „%1”."
+
+#: key.cpp:239
+#, kde-format
+msgid "Key has been published on %1"
+msgstr ""
+
+#: ldap.cpp:37
+#, kde-format
+msgid "Setting up LDAP server..."
+msgstr "LDAP kiszolgáló beállítása…"
+
+#: ldap.cpp:40
+#, kde-format
+msgid "Needed parameters are missing for LDAP config: server '%1'"
+msgstr ""
+
+#: ldap.cpp:118
+#, kde-format
+msgid "LDAP set up."
+msgstr "Az LDAP beállítva."
+
+#: ldap.cpp:136
+#, kde-format
+msgid "LDAP not configuring."
+msgstr "Az LDAP nincs beállítva."
+
+#: ldap.cpp:149
+#, kde-format
+msgid "Removed LDAP entry."
+msgstr ""
+
+#: ldap.cpp:155
+#, kde-format
+msgid "No config found to edit"
+msgstr ""
+
+#: loadpage.cpp:35
+#, kde-format
+msgid "No script specified in '%1'."
+msgstr "Nincs megadva szkript itt: „%1”."
+
+#: loadpage.cpp:39
+#, kde-format
+msgid "Unable to load assistant: File '%1' does not exist."
+msgstr "Nem lehet betölteni a varázslót: a(z) „%1” fájl nem létezik."
+
+#: loadpage.cpp:42
+#, kde-format
+msgid "Loading script '%1'..."
+msgstr "„%1” szkript betöltése…"
+
+#: loadpage.cpp:51
+#, kde-format
+msgid "Failed to load script: '%1'."
+msgstr "Nem sikerült betölteni a szkriptet: „%1”."
+
+#: main.cpp:38
+#, kde-format
+msgid "Account Assistant"
+msgstr "Azonosítóvarázsló"
+
+#: main.cpp:42
+#, fuzzy, kde-format
+#| msgid "(c) 2009 the Akonadi developers"
+msgid "(c) 2009-2020 the Akonadi developers"
+msgstr "© Az Akonadi fejlesztői, 2009."
+
+#: main.cpp:45
+#, kde-format
+msgid "Volker Krause"
+msgstr "Volker Krause"
+
+#: main.cpp:46
+#, kde-format
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: main.cpp:53
+#, kde-format
+msgid "Only offer accounts that support the given type."
+msgstr "Csak a megadott típust támogató azonosítók nyújtása."
+
+#: main.cpp:54
+#, kde-format
+msgid "Run the specified assistant."
+msgstr "A megadott varázsló futtatása."
+
+#: main.cpp:56
+#, kde-format
+msgid "unpack fullpath on startup and launch that assistant"
+msgstr "A teljes elérési út kibontása induláskor és a varázsló futtatása"
+
+#: main.cpp:58
+#, fuzzy, kde-format
+#| msgid "Run the specified assistant."
+msgid "Returns types of assistants"
+msgstr "A megadott varázsló futtatása."
+
+#: main.cpp:66
+#, kde-format
+msgid "The following assistants are available:"
+msgstr ""
+
+#: personaldatapage.cpp:71
+#, kde-format
+msgid "SMTP, %1"
+msgstr "SMTP, %1"
+
+#: personaldatapage.cpp:74
+#, kde-format
+msgid "IMAP, %1"
+msgstr "IMAP, %1"
+
+#: personaldatapage.cpp:78
+#, kde-format
+msgid "POP3, %1"
+msgstr "POP3, %1"
+
+#: providerpage.cpp:31
+#, kde-format
+msgid "Fetching provider list..."
+msgstr "Szolgáltatólista letöltése…"
+
+#: resource.cpp:74
+#, kde-format
+msgid "Resource type '%1' is not available."
+msgstr "A(z) „%1” erőforrástípus nem érhető el."
+
+#: resource.cpp:88
+#, kde-format
+msgid "Resource '%1' is already set up."
+msgstr "A(z) „%1” erőforrás már be van állítva."
+
+#: resource.cpp:94
+#, kde-format
+msgid "Creating resource instance for '%1'..."
+msgstr "Erőforráspéldány létrehozása ehhez: %1…"
+
+#: resource.cpp:103
+#, kde-format
+msgid "Failed to create resource instance: %1"
+msgstr "Nem sikerült létrehozni az erőforráspéldányt: %1"
+
+#: resource.cpp:110
+#, kde-format
+msgid "Configuring resource instance..."
+msgstr "Erőforráspéldány beállítása…"
+
+#: resource.cpp:114
+#, kde-format
+msgid "Unable to configure resource instance."
+msgstr "Nem sikerült beállítani az erőforráspéldányt."
+
+#: resource.cpp:129
+#, kde-format
+msgid "Could not convert value of setting '%1' to required type %2."
+msgstr "A(z) „%1” beállítás értéke nem konvertálható a szükséges %2 típusra."
+
+#: resource.cpp:136
+#, kde-format
+msgid "Could not set setting '%1': %2"
+msgstr "Nem sikerült beállítani a(z) „%1” beállítást: %2"
+
+#: resource.cpp:142
+#, fuzzy, kde-format
+#| msgid "Could not set setting '%1': %2"
+msgid "Could not save settings: %1"
+msgstr "Nem sikerült beállítani a(z) „%1” beállítást: %2"
+
+#: resource.cpp:151
+#, kde-format
+msgid "Resource setup completed."
+msgstr "Az erőforrás beállítása befejeződött."
+
+#: resource.cpp:167
+#, kde-format
+msgid "Removed resource instance for '%1'."
+msgstr "„%1” erőforráspéldánya eltávolítva."
+
+#: servertest.cpp:50
+#, kde-format
+msgid ""
+"There seems to be a problem in reaching this server or choosing a safe way "
+"to sent the credentials to server. We advise you to check the settings of "
+"the account and adjust it manually if needed."
+msgstr ""
+"Úgy tűnik, hogy probléma lépett fel a kiszolgáló elérése vagy hitelesítési "
+"adatok biztonságos elküldési módjának kiválasztása során. Ellenőrizze az "
+"azonosító beállításait és adja meg őket kézzel, ha szükséges."
+
+#: servertest.cpp:53
+#, kde-format
+msgid "Autodetecting settings failed"
+msgstr "A beállítások automatikus felismerése meghiúsult"
+
+#: setupautoconfigkolabfreebusy.cpp:74 setupautoconfigkolabldap.cpp:73
+#: setupispdb.cpp:138
+#, kde-format
+msgid "Searching for autoconfiguration..."
+msgstr ""
+
+#: setupautoconfigkolabfreebusy.cpp:99 setupautoconfigkolabldap.cpp:98
+#: setupispdb.cpp:163
+#, kde-format
+msgid "Autoconfiguration found."
+msgstr ""
+
+#: setupautoconfigkolabfreebusy.cpp:101 setupautoconfigkolabldap.cpp:100
+#: setupispdb.cpp:165
+#, fuzzy, kde-format
+#| msgid "Autodetecting settings failed"
+msgid "Autoconfiguration failed."
+msgstr "A beállítások automatikus felismerése meghiúsult"
+
+#. i18n: ectx: property (text), widget (QLabel, progressLabel)
+#: setupmanager.cpp:114 ui/setuppage.ui:37
+#, kde-format
+msgid "Setting up account..."
+msgstr "Azonosító beállítása…"
+
+#: setupmanager.cpp:162
+#, kde-format
+msgid "Setup complete."
+msgstr "A beállítás befejeződött."
+
+#: setupmanager.cpp:177
+#, kde-format
+msgid "Failed to set up account, rolling back..."
+msgstr "Nem sikerült beállítani az azonosítót, visszaállítás…"
+
+#: setupmanager.cpp:191
+#, kde-format
+msgid "Failed to set up account."
+msgstr "Nem sikerült beállítani az azonosítót."
+
+#: transport.cpp:64
+#, kde-format
+msgid "Setting up mail transport account..."
+msgstr "Levéltovábbító azonosító beállítása…"
+
+#: transport.cpp:83
+#, kde-format
+msgid "Mail transport uses '%1' encryption and '%2' authentication."
+msgstr ""
+
+#: transport.cpp:89
+#, kde-format
+msgid "Mail transport account set up."
+msgstr "A levéltovábbító azonosító beállítva."
+
+#: transport.cpp:95
+#, kde-format
+msgid "Mail transport account deleted."
+msgstr "A levéltovábbító azonosító törölve."
+
+#: transport.cpp:102
+#, kde-format
+msgid "Could not load config dialog for UID '%1'"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/cryptopage.ui:26
+#, kde-format
+msgid ""
+"Protect yourself against surveillance by encrypting your Mails with GnuPG. "
+"By generating or selecting a public / private key pair now mails can be "
+"encrypted using the public key while only you can decrypt them with your "
+"private key."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, enableCryptoCheckBox)
+#: ui/cryptopage.ui:52
+#, kde-format
+msgid ""
+"<html><head/><body><p>When sending mails KMail automatically looks for "
+"encryption keys of your recipients and secures the mail when keys for each "
+"recipient can be found.</p><p>It also signs your mails cryptographically so "
+"that it can be verified that your messages have not been tampered with.</p></"
+"body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, enableCryptoCheckBox)
+#: ui/cryptopage.ui:55
+#, kde-format
+msgid "Secure outgoing emails, if possible"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/cryptopage.ui:65
+#, kde-format
+msgid "Select key for this account:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: ui/cryptopage.ui:99
+#, kde-format
+msgid "Checking key publishing support ..."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, wksCheckBox)
+#: ui/cryptopage.ui:122
+#, kde-format
+msgid "Register &this key with your email provider"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, wksDescription)
+#: ui/cryptopage.ui:132
+#, kde-format
+msgid ""
+"Your email service provider supports a service to provide your public key so "
+"that others can find it.\n"
+"This means that your public key can be queried from your email provider and "
+"others can then use it to secure their email communication with you."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, pksCheckBox)
+#: ui/cryptopage.ui:152
+#, kde-format
+msgid "Publish &this key on public key server"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, pksDescription)
+#: ui/cryptopage.ui:162
+#, kde-format
+msgid ""
+"Your email service provider does not support key publishing. You should "
+"publish your key so that other users can retrieve it and use it to secure "
+"their email communication with you.\n"
+"You can alternatively publish your key on a public key server, but you "
+"should be aware that your email address will be publicly listed and they key "
+"cannot be removed from there, only revoked."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, statusLabel)
+#: ui/loadpage.ui:30
+#, kde-format
+msgid "Loading assistant..."
+msgstr "Varázsló betöltése…"
+
+#. i18n: ectx: property (text), widget (QLabel, welcomeLabel)
+#: ui/personaldatapage.ui:17
+#, kde-format
+msgid ""
+"With a few simple steps we create the right settings for you. Please follow "
+"the steps of this wizard carefully."
+msgstr ""
+"Néhány egyszerű lépéssel létrehozzuk az Ön beállításait. Kövesse figyelmesen "
+"a varázsló lépéseit."
+
+#. i18n: ectx: property (text), widget (QLabel, nameLabel)
+#: ui/personaldatapage.ui:29
+#, kde-format
+msgid "Full name:"
+msgstr "Teljes név:"
+
+#. i18n: ectx: property (text), widget (QLabel, emailLabel)
+#: ui/personaldatapage.ui:55
+#, kde-format
+msgid "E-mail address:"
+msgstr "E-mail cím:"
+
+#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
+#: ui/personaldatapage.ui:85
+#, kde-format
+msgid "Password:"
+msgstr "Jelszó:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, checkOnlineGroupBox)
+#: ui/personaldatapage.ui:119
+#, fuzzy, kde-format
+#| msgid "Find provider settings on the Internet"
+msgid "Find pro&vider settings on the Internet"
+msgstr "Szolgáltatóbeállítások keresése az interneten"
+
+#. i18n: ectx: property (text), widget (QLabel, checkOnlineExplanation)
+#: ui/personaldatapage.ui:140
+#, kde-format
+msgid ""
+"Check online for the settings needed for this email provider. Only the "
+"domain name part of the e-mail address will be sent over the Internet at "
+"this point. If this option is unchecked, the account can be set up manually."
+msgstr ""
+"Az e-mail szolgáltató beállításainak keresése. Az e-mail címből csak a "
+"tartománynév kerül elküldésre az interneten keresztül. Ha a beállítás nincs "
+"bejelölve, az azonosító kézzel állítható be."
+
+#. i18n: ectx: property (text), widget (QRadioButton, imapAccount)
+#: ui/personaldatapage.ui:178
+#, kde-format
+msgid "IMAP account"
+msgstr "IMAP fiók"
+
+#. i18n: ectx: property (text), widget (QRadioButton, pop3Account)
+#: ui/personaldatapage.ui:191
+#, fuzzy, kde-format
+#| msgid "POP3 account"
+msgid "POP&3 account"
+msgstr "POP3 fiók"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/personaldatapage.ui:205
+#, kde-format
+msgid "Incoming:"
+msgstr "Bejövő:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/personaldatapage.ui:222
+#, kde-format
+msgid "Outgoing:"
+msgstr "Kimenő:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/personaldatapage.ui:239
+#, kde-format
+msgid "Username:"
+msgstr "Felhasználónév:"
+
+#. i18n: ectx: property (text), widget (QPushButton, createAccountPb)
+#: ui/personaldatapage.ui:273
+#, fuzzy, kde-format
+#| msgid "IMAP account"
+msgid "Add Account"
+msgstr "IMAP fiók"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/providerpage.ui:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "Select your provider from the list below or click advanced if your "
+#| "provider is not listed"
+msgid ""
+"Select your provider from the list below or click back if your provider is "
+"not listed"
+msgstr ""
+"Válassza ki a szolgáltatóját az alábbi listából, vagy kattintson a Speciális "
+"gombra, ha a szolgáltató nincs a listában"
+
+#. i18n: ectx: property (text), widget (QPushButton, detailsButton)
+#: ui/setuppage.ui:62
+#, kde-format
+msgid "&Details..."
+msgstr "&Részletek…"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/typepage.ui:17
+#, kde-format
+msgid "Select which kind of account you want to create:"
+msgstr "Válassza ki a létrehozandó azonosító típusát:"
+
+#. i18n: ectx: property (text), widget (QPushButton, ghnsButton)
+#: ui/typepage.ui:68
+#, kde-format
+msgid "Check for more on Internet"
+msgstr "Továbbiak keresése az interneten"
+
+#~ msgid "Create Account"
+#~ msgstr "Felhasználói fiók létrehozása"
+
+#~ msgid "TextLabel"
+#~ msgstr "Szövegcímke"
