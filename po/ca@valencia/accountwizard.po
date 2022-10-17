@@ -320,7 +320,7 @@ msgstr "S'ha suprimit una entrada LDAP."
 #: ldap.cpp:155
 #, kde-format
 msgid "No config found to edit"
-msgstr "No s'ha trobat la configuració a editar"
+msgstr "No s'ha trobat la configuració que s'ha d'editar"
 
 #: loadpage.cpp:35
 #, kde-format
