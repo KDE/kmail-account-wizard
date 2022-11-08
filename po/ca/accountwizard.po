@@ -747,6 +747,3 @@ msgstr "Seleccioneu quin tipus de compte voleu crear:"
 #, kde-format
 msgid "Check for more on Internet"
 msgstr "Cerca'n més a Internet"
-
-#~ msgid "Unknown security setting for LDAP server"
-#~ msgstr "Configuració de seguretat desconeguda per al servidor LDAP"
