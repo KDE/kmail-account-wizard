@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-06-12 00:46+0000\n"
-"PO-Revision-Date: 2022-08-23 16:37+0200\n"
+"PO-Revision-Date: 2022-12-04 13:45+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -36,22 +36,22 @@ msgstr "კონფიგურაცის ჩაწერის შეცდ�
 #: configfile.cpp:54
 #, kde-format
 msgid "Config file for %1 is writing."
-msgstr ""
+msgstr "მიმდინარეობს %1-ის კონფიგურაციის ფაილის ჩაწერა."
 
 #: configfile.cpp:59
 #, kde-format
 msgid "Config file for %1 was not changed."
-msgstr ""
+msgstr "კონფიგურაციის ფაილი %1-სთვის არ შეცვლილა."
 
 #: configfile.cpp:90
 #, kde-format
 msgid "No given name for the configuration."
-msgstr ""
+msgstr "კონფიგურაციისთვის სახელი მითითებული არაა."
 
 #: configfile.cpp:102
 #, kde-format
 msgid "Unknown configuration name '%1'"
-msgstr ""
+msgstr "უცნობი კონფიგურაციის სახელი '%1'"
 
 #: cryptopage.cpp:80 cryptopage.cpp:101 cryptopage.cpp:202
 #, kde-format
@@ -96,7 +96,7 @@ msgstr "გასაღების გარეშე"
 #: cryptopage.cpp:317
 #, kde-format
 msgid "Generate a new key pair"
-msgstr ""
+msgstr "გასაღების ახალი წყვილის გენერაცია"
 
 #: cryptopage.cpp:318
 #, kde-format
@@ -126,22 +126,22 @@ msgstr "გასაღების შემოტანა..."
 #: dialog.cpp:46
 #, kde-format
 msgid "Provide personal data"
-msgstr ""
+msgstr "პირადი მონაცემები"
 
 #: dialog.cpp:54
 #, kde-format
 msgid "Secure your Communication"
-msgstr ""
+msgstr "დაცავით თქვენი ურთიერთობა"
 
 #: dialog.cpp:64
 #, kde-format
 msgid "Select Account Type"
-msgstr ""
+msgstr "აირჩიეთ ანგარიშის ტიპი"
 
 #: dialog.cpp:72
 #, kde-format
 msgid "Select Provider"
-msgstr ""
+msgstr "აირჩიეთ მომწოდებელი"
 
 #: dialog.cpp:78
 #, kde-format
@@ -151,7 +151,7 @@ msgstr ""
 #: dialog.cpp:86
 #, kde-format
 msgid "Setting up Account"
-msgstr ""
+msgstr "ანგარიშის მორგება"
 
 #: identity.cpp:27
 #, kde-format
@@ -172,7 +172,7 @@ msgstr "უსახელო"
 #: identity.cpp:78
 #, kde-format
 msgid "Identity removed."
-msgstr ""
+msgstr "იდენტიფიკაცია წაშლილია."
 
 #: ispdb/ispdb.cpp:351
 #, kde-format
@@ -212,7 +212,7 @@ msgstr "ავტორი"
 #: ispdb/main.cpp:77
 #, kde-format
 msgid "Tom Albers"
-msgstr ""
+msgstr "Tom Albers"
 
 #: ispdb/main.cpp:84
 #, kde-format
@@ -267,12 +267,12 @@ msgstr ""
 #: key.cpp:197
 #, kde-format
 msgid "Key publishing request sent."
-msgstr ""
+msgstr "გასაღების გამოქვეყნების მოთხოვნა გაგზავნილია."
 
 #: key.cpp:233
 #, kde-format
 msgid "Failed to publish the key."
-msgstr ""
+msgstr "გასაღების გამოქვეყნების შეცდომა."
 
 #: key.cpp:239
 #, kde-format
@@ -282,7 +282,7 @@ msgstr ""
 #: ldap.cpp:37
 #, kde-format
 msgid "Setting up LDAP server..."
-msgstr ""
+msgstr "LDAP სერვერის მორგება..."
 
 #: ldap.cpp:40
 #, kde-format
@@ -292,22 +292,22 @@ msgstr ""
 #: ldap.cpp:118
 #, kde-format
 msgid "LDAP set up."
-msgstr ""
+msgstr "LDAP მორგებულია."
 
 #: ldap.cpp:136
 #, kde-format
 msgid "LDAP not configuring."
-msgstr ""
+msgstr "LDAP მორგებული არაა."
 
 #: ldap.cpp:149
 #, kde-format
 msgid "Removed LDAP entry."
-msgstr ""
+msgstr "LDAP ჩანაწერი წაშლილია."
 
 #: ldap.cpp:155
 #, kde-format
 msgid "No config found to edit"
-msgstr ""
+msgstr "ჩასასწორებელი კონფიგურაცია ვერ ვიპოვე"
 
 #: loadpage.cpp:35
 #, kde-format
@@ -332,12 +332,12 @@ msgstr "სკრიპტის ჩატვირთვის შეცდო�
 #: main.cpp:38
 #, kde-format
 msgid "Account Assistant"
-msgstr ""
+msgstr "ანგარიშის დამხმარე"
 
 #: main.cpp:42
 #, kde-format
 msgid "(c) 2009-2020 the Akonadi developers"
-msgstr ""
+msgstr "(c) 2009-2020 Akonadi-ის პროგრამისტები, ყველა უფლება დაცულია"
 
 #: main.cpp:45
 #, kde-format
@@ -392,37 +392,37 @@ msgstr "POP3, %1"
 #: providerpage.cpp:31
 #, kde-format
 msgid "Fetching provider list..."
-msgstr ""
+msgstr "მომწოდებლების სიის გამოთხოვა..."
 
 #: resource.cpp:74
 #, kde-format
 msgid "Resource type '%1' is not available."
-msgstr ""
+msgstr "რესურსის ტიპი \"%1\" ხელმიუწვდომელია."
 
 #: resource.cpp:88
 #, kde-format
 msgid "Resource '%1' is already set up."
-msgstr ""
+msgstr "რესურსი '%1' უკვე გაშვებულია."
 
 #: resource.cpp:94
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr ""
+msgstr "მიმდინარეობს რესურსის გაშვებული ასლის შექმნა '%1'-სთვის..."
 
 #: resource.cpp:103
 #, kde-format
 msgid "Failed to create resource instance: %1"
-msgstr ""
+msgstr "რესურსის გაშვებული ასლის შექმნის შეცდომა: %1"
 
 #: resource.cpp:110
 #, kde-format
 msgid "Configuring resource instance..."
-msgstr ""
+msgstr "რესურსის გაშვებული ასლის მორგება..."
 
 #: resource.cpp:114
 #, kde-format
 msgid "Unable to configure resource instance."
-msgstr ""
+msgstr "რესურსის გაშვებული ასლის მორგების შეცდომა."
 
 #: resource.cpp:129
 #, kde-format
@@ -432,17 +432,17 @@ msgstr ""
 #: resource.cpp:136
 #, kde-format
 msgid "Could not set setting '%1': %2"
-msgstr ""
+msgstr "'%1' პარამეტრის დაყენების შეცდომა: %2"
 
 #: resource.cpp:142
 #, kde-format
 msgid "Could not save settings: %1"
-msgstr ""
+msgstr "პარამეტრების შენახვის შეცდომა: %1"
 
 #: resource.cpp:151
 #, kde-format
 msgid "Resource setup completed."
-msgstr ""
+msgstr "რესურსის მორგება დასრულდა."
 
 #: resource.cpp:167
 #, kde-format
@@ -499,12 +499,12 @@ msgstr ""
 #: setupmanager.cpp:191
 #, kde-format
 msgid "Failed to set up account."
-msgstr ""
+msgstr "ანგარიშის მორგებია შეცდომა."
 
 #: transport.cpp:64
 #, kde-format
 msgid "Setting up mail transport account..."
-msgstr ""
+msgstr "ფოსტის ტრანსპორტის ანგარიშის მორგება..."
 
 #: transport.cpp:83
 #, kde-format
@@ -514,12 +514,12 @@ msgstr ""
 #: transport.cpp:89
 #, kde-format
 msgid "Mail transport account set up."
-msgstr ""
+msgstr "ფოსტის ტრანსპორტის ანგარიში მორგებულია."
 
 #: transport.cpp:95
 #, kde-format
 msgid "Mail transport account deleted."
-msgstr ""
+msgstr "ფოსტის ტრანსპორტის ანგარიში წაიშალა."
 
 #: transport.cpp:102
 #, kde-format
@@ -557,7 +557,7 @@ msgstr ""
 #: ui/cryptopage.ui:65
 #, kde-format
 msgid "Select key for this account:"
-msgstr ""
+msgstr "აირჩიეთ გასაღები ამ ანგარიშისთვის:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: ui/cryptopage.ui:99
@@ -706,4 +706,4 @@ msgstr ""
 #: ui/typepage.ui:68
 #, kde-format
 msgid "Check for more on Internet"
-msgstr ""
+msgstr "იპოვეთ მეტი ინტერნეტში"
