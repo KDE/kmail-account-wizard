@@ -27,6 +27,7 @@ Dependencies:
     'frameworks/knotifications': '@latest'
     'frameworks/kross': '@latest'
     'frameworks/knewstuff': '@latest'
+    'third-party/qtkeychain': '@latest'
 
 Options:
   require-passing-tests-on: [ 'Linux', 'FreeBSD' ]      
