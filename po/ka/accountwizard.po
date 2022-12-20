@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-06-12 00:46+0000\n"
-"PO-Revision-Date: 2022-12-16 07:28+0100\n"
+"PO-Revision-Date: 2022-12-19 09:18+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -541,6 +541,10 @@ msgid ""
 "encrypted using the public key while only you can decrypt them with your "
 "private key."
 msgstr ""
+"დაიცავით თავი მეთვალყურეობისგან თქვენი ელფოსტების GnuPG-ით დაშიფვრით. "
+"საჯარო / პირადი გასაღებების არჩევის/გენერაციის საშუალებით ახალი ელფოსტები "
+"საჯარო გასაღებებით დაიშიფრება მაშინ, როცა გაშიფვრა მხოლოდ თქვენ შეგძლიათ, "
+"თქვენი პირადი გასაღებით."
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, enableCryptoCheckBox)
 #: ui/cryptopage.ui:52
@@ -552,6 +556,11 @@ msgid ""
 "that it can be verified that your messages have not been tampered with.</p></"
 "body></html>"
 msgstr ""
+"<html><head/><body><p>ელფოსტის გაგზავნისას KMail -ი ავტომატურად მოძებნის "
+"მიმღებების დაშიფვრის გასაღებებს და დაიცავს თქვენს ელფოსტას, როცა თითოეული "
+"მიმღების გასაღებს იპოვის.</p><p>ის ელფოსტებს ასევე ამატებს კრიპტოგრაფიულ "
+"ხელმოწერებს, რომელიც ელფოსტის შეცვლის მიმართ მედეგობას უზრუნველყოფს.</p></"
+"body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, enableCryptoCheckBox)
 #: ui/cryptopage.ui:55
@@ -586,6 +595,10 @@ msgid ""
 "This means that your public key can be queried from your email provider and "
 "others can then use it to secure their email communication with you."
 msgstr ""
+"თქვენს ელფოსტის მომწოდებელს აქვს სერვისი, რომელიც თქვენს საჯარო გასაღებებს "
+"ისე მოგაწოდებთ, რომ მისი პოვნა სხვებსაც შეუძლიათ.\n"
+"ეს ნიშნავს, რომ თქვენი საჯარო გასაღები გამოთხოვილი იქნება მომწოდებლიდან და "
+"თქვენთან ურთიერთობისას ელფოსტის დაშიფვრა მათაც შეეძლებათ."
 
 #. i18n: ectx: property (title), widget (QGroupBox, pksCheckBox)
 #: ui/cryptopage.ui:152
@@ -604,6 +617,12 @@ msgid ""
 "should be aware that your email address will be publicly listed and they key "
 "cannot be removed from there, only revoked."
 msgstr ""
+"თქვენს ელფოსტის მომწოდებელს გასაღებების გამოცემის მხარდაჭერა არ გააჩნია. "
+"თქვენი გასაღებები უნდა გამოსცეთ, რათა სხვა მომხმარებლებმა მისი გადმოწერა და "
+"თქვენთან კომუნიკაციის დაშიფვრა შეძლონ.\n"
+"ასევე შეგიძლიათ თქვენი გასაღები საჯარო გასაღებების სერვერზე გამოსცეთ. "
+"დაიმახსოვრეთ, რომ თქვენი ელფოსტის მისამართი საჯარო ჩამონათვალში იქნება "
+"ხელმისაწვდომი და მისი მხოლოდ გაუქმება შეგიძლიათ და არა წაშლა."
 
 #. i18n: ectx: property (text), widget (QLabel, statusLabel)
 #: ui/loadpage.ui:30
@@ -618,6 +637,8 @@ msgid ""
 "With a few simple steps we create the right settings for you. Please follow "
 "the steps of this wizard carefully."
 msgstr ""
+"რამდენიმე მარტივი ნაბიჯით ჩვენ ვქმნით თქვენთვის სწორ პარამეტრებს. გთხოვთ, "
+"ყურადღებით მიჰყვეთ ამ ოსტატის ნაბიჯებს."
 
 #. i18n: ectx: property (text), widget (QLabel, nameLabel)
 #: ui/personaldatapage.ui:29
@@ -651,6 +672,10 @@ msgid ""
 "domain name part of the e-mail address will be sent over the Internet at "
 "this point. If this option is unchecked, the account can be set up manually."
 msgstr ""
+"შეამოწმეთ ონლაინ ამ ელ.ფოსტის პროვაიდერისთვის საჭირო პარამეტრებისთვის. ამ "
+"ეტაპზე მხოლოდ ელექტრონული ფოსტის მისამართის დომენის სახელი გაიგზავნება "
+"ინტერნეტში. თუ ეს ვარიანტი არ არის შემოწმებული, ანგარიშის დაყენება "
+"შესაძლებელია ხელით."
 
 #. i18n: ectx: property (text), widget (QRadioButton, imapAccount)
 #: ui/personaldatapage.ui:178
@@ -695,6 +720,8 @@ msgid ""
 "Select your provider from the list below or click back if your provider is "
 "not listed"
 msgstr ""
+"აირჩიეთ თქვენი მომწოდებელი ქვედა სიიდან, ან დააჭირეთ უკან გადასვლას, თუ "
+"თქვენი მომწოდებელი ჩამონათვალში არაა"
 
 #. i18n: ectx: property (text), widget (QPushButton, detailsButton)
 #: ui/setuppage.ui:62
