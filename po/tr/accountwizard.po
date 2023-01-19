@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kdepim-runtime-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-06-12 00:46+0000\n"
-"PO-Revision-Date: 2023-01-10 21:22+0300\n"
+"PO-Revision-Date: 2023-01-18 22:31+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 "X-POOTLE-MTIME: 1413102276.000000\n"
 
 #, kde-format
@@ -359,7 +359,7 @@ msgstr "Laurent Montel"
 #: main.cpp:53
 #, kde-format
 msgid "Only offer accounts that support the given type."
-msgstr "Sadece verilen türü destekleyen hesapları sun."
+msgstr "Yalnızca verilen türü destekleyen hesapları sun."
 
 #: main.cpp:54
 #, kde-format
@@ -548,7 +548,7 @@ msgid ""
 msgstr ""
 "Kendinizi gözetimlere karşı, postalarınızı GnuPG ile şifreleyerek koruyun. "
 "Bir genel/özel anahtar çifti oluşturarak ya da seçerek, postalarınız genel "
-"anahtar ile şifrelenir ve sadece özel anahtarınızla siz tarafından şifresi "
+"anahtar ile şifrelenir ve yalnızca özel anahtarınızla siz tarafından şifresi "
 "çözülebilir."
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, enableCryptoCheckBox)
