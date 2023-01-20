@@ -5,9 +5,9 @@ set(PIM_VERSION "5.22.40")
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 project(kmail-account-wizard VERSION ${PIM_VERSION})
 
-set(KF5_MIN_VERSION "5.102.0")
+set(KF_MIN_VERSION "5.102.0")
 
-find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 include(ECMInstallIcons)
@@ -63,17 +63,17 @@ set(LIBKDEPIM_LIB_VERSION "5.22.40")
 set(LIBKLEO_LIB_VERSION "5.22.40")
 
 # Find KF5 package
-find_package(KF5Wallet ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5KCMUtils ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5NotifyConfig ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5Config ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5Service ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5DBusAddons ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5DocTools ${KF5_MIN_VERSION} REQUIRED)
-find_package(KF5TextEditor ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5Codecs ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5Crash ${KF5_MIN_VERSION} REQUIRED)
-find_package(KF5Notifications ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5Wallet ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5KCMUtils ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5NotifyConfig ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5Config ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5Service ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5DBusAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5DocTools ${KF_MIN_VERSION} REQUIRED)
+find_package(KF5TextEditor ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5Codecs ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5Crash ${KF_MIN_VERSION} REQUIRED)
+find_package(KF5Notifications ${KF_MIN_VERSION} CONFIG REQUIRED)
 
 find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 find_package(KF5IdentityManagement ${IDENTITYMANAGEMENT_LIB_VERSION} CONFIG REQUIRED)
@@ -93,8 +93,8 @@ include_directories(${kmail-account-wizard_SOURCE_DIR} ${kmail-account-wizard_BI
 # Qt5 package
 find_package(Qt5UiTools ${QT_REQUIRED_VERSION} CONFIG REQUIRED)
 
-find_package(KF5Kross ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5NewStuff ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5Kross ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5NewStuff ${KF_MIN_VERSION} CONFIG REQUIRED)
 
 #it will replace kwallet support
 find_package(Qt5Keychain CONFIG)
