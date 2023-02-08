@@ -3,7 +3,6 @@
 
 #include "wizardmodel.h"
 
-#include "accountwizard_debug.h"
 #include "global.h"
 
 #include <KConfigGroup>
@@ -28,7 +27,7 @@ void WizardModel::reload()
     m_items.clear();
     endResetModel();
 
-    auto list = KPackage::PackageLoader::self()->listPackages(QStringLiteral("AccountWizard/Wizard"));
+    const auto list = KPackage::PackageLoader::self()->listPackages(QStringLiteral("AccountWizard/Wizard"));
     // NOTE: This will disable completely the internal in-memory cache
     KPackage::Package p;
     p.install(QString(), QString());
@@ -63,6 +62,7 @@ QVariant WizardModel::data(const QModelIndex &index, int role) const
 
 int WizardModel::rowCount(const QModelIndex &parent) const
 {
+    Q_UNUSED(parent)
     return m_items.count();
 }
 
