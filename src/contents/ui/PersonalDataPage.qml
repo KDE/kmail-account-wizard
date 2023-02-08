@@ -43,7 +43,7 @@ Kirigami.ScrollablePage {
             }
             
             QQC2.CheckBox {
-                text: "Find provider settings on the internet"
+                text: i18n("Find provider settings on the internet")
             }
         }
         QQC2.Label {
