@@ -44,6 +44,7 @@ set(accountwizard_libs
     KF5::AkonadiCore
     KF5::AkonadiWidgets
     KF5::MailTransportAkonadi
+    KF5::MailTransport
     KF5::KCMUtils
     KF5::KIOCore
     KF5::Mime
