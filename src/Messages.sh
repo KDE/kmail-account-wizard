@@ -1,3 +1,3 @@
 #!/bin/sh
 $EXTRACTRC ui/*.ui >> rc.cpp
-$XGETTEXT *.cpp ispdb/*.cpp  -o $podir/accountwizard.pot
+$XGETTEXT `find -name \*.cpp -o -name \*.qml` -o $podir/accountwizard.pot
