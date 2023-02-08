@@ -7,12 +7,12 @@ add_test(NAME ldaptest COMMAND ldaptest)
 ecm_mark_as_test(ldaptest)
 
 target_link_libraries(ldaptest
-    KF5::KIOCore
+    KF${KF_MAJOR_VERSION}::KIOCore
     KF5::Mime
     KF5::Ldap
     Qt::Test
     KF5::Libkdepim
-    KF5::I18n
-    KF5::ConfigCore
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::ConfigCore
     Qt::Widgets
     )

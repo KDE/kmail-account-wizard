@@ -9,12 +9,12 @@ set(ispdbtest_srcs
 )
 
 set(ispdbtest_libs
-  KF5::KIOCore
+  KF${KF_MAJOR_VERSION}::KIOCore
   KF5::Mime
   Qt::Test
   Qt::Xml
   Qt::Network
-  KF5::I18n
+  KF${KF_MAJOR_VERSION}::I18n
 )
 
 add_executable(ispdbtest ispdbtest.cpp ${ispdbtest_srcs})

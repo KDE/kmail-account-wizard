@@ -45,22 +45,22 @@ set(accountwizard_libs
     KF5::AkonadiWidgets
     KF5::MailTransportAkonadi
     KF5::MailTransport
-    KF5::KCMUtils
-    KF5::KIOCore
+    KF${KF_MAJOR_VERSION}::KCMUtils
+    KF${KF_MAJOR_VERSION}::KIOCore
     KF5::Mime
     KF5::IdentityManagement
-    KF5::WidgetsAddons
+    KF${KF_MAJOR_VERSION}::WidgetsAddons
     Qt::UiTools
     KF5::Libkdepim
-    KF5::ItemViews
-    KF5::I18n
+    KF${KF_MAJOR_VERSION}::ItemViews
+    KF${KF_MAJOR_VERSION}::I18n
     KF5::Ldap
-    KF5::Crash
+    KF${KF_MAJOR_VERSION}::Crash
     KF5::Libkleo
-    KF5::Notifications
+    KF${KF_MAJOR_VERSION}::Notifications
     KF5::PimCommon
-    KF5::XmlGui
-    KF5::Package
+    KF${KF_MAJOR_VERSION}::XmlGui
+    KF${KF_MAJOR_VERSION}::Package
     Qt5::Quick
     Qt5::QuickControls2
     )
@@ -68,7 +68,7 @@ set(accountwizard_libs
 #if ( NOT ACCOUNTWIZARD_NO_GHNS )
 #    set(accountwizard_srcs ${accountwizard_srcs} providerpage.cpp)
 #    #ki18n_wrap_ui(accountwizard_srcs ui/providerpage.ui)
-#    set(accountwizard_libs ${accountwizard_libs} KF5::NewStuff)
+#    set(accountwizard_libs ${accountwizard_libs} KF${KF_MAJOR_VERSION}::NewStuff)
 #endif ()
 
 add_executable(accountwizard ${accountwizard_srcs} main.cpp)
@@ -76,7 +76,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(accountwizard PROPERTIES UNITY_BUILD ON)
 endif()
 
-target_link_libraries(accountwizard ${accountwizard_libs} KF5::DBusAddons)
+target_link_libraries(accountwizard ${accountwizard_libs} KF${KF_MAJOR_VERSION}::DBusAddons)
 
 #add_library(accountwizard_plugin MODULE ${accountwizard_srcs} inprocess-main.cpp)
 #if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)

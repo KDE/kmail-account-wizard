@@ -6,8 +6,8 @@ ecm_qt_declare_logging_category(ispdb_srcs HEADER accountwizard_debug.h IDENTIFI
 add_executable(ispdb ${ispdb_srcs})
 
 target_link_libraries(ispdb
-    KF5::I18n
-    KF5::KIOCore
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::KIOCore
     KF5::Mime
     Qt::Widgets
     Qt::Xml
