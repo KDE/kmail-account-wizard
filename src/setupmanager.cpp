@@ -100,6 +100,7 @@ static bool dependencyCompare(SetupObject *left, SetupObject *right)
 
 void SetupManager::execute()
 {
+    qWarning() << " void SetupManager::execute() not implement yet";
     // if (m_keyPublishingMethod != Key::NoPublishing) {
     //    auto key = qobject_cast<Key *>(createKey());
     //    auto it = std::find_if(m_setupObjects.cbegin(), m_setupObjects.cend(), [](SetupObject *obj) -> bool {
@@ -250,6 +251,7 @@ void SetupManager::setKeyPublishingMethod(Key::PublishingMethod method)
 
 void SetupManager::openWallet()
 {
+    qWarning() << " void SetupManager::openWallet() not implemented yet";
     // Remove it we need to update qt5keychain
     // using namespace KWallet;
     // if (Wallet::isOpen(Wallet::NetworkWallet())) {
