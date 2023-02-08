@@ -8,6 +8,7 @@ SPDX-License-Identifier: LGPL-2.0-or-later
 #include "identity.h"
 #include "ispdb/ispdb.h"
 #include "ispdbhelper.h"
+#include "resource.h"
 #include "servertest.h"
 #include "setupmanager.h"
 #include "wizardmodel.h"
@@ -113,6 +114,7 @@ int main(int argc, char **argv)
     qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "SetupManager", &SetupManager::instance());
     qRegisterMetaType<Identity *>("Identity *");
     qRegisterMetaType<IspdbHelper *>("IspdbHelper *");
+    qRegisterMetaType<Resource *>("Resource *");
     ServerTest serverTest;
     qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "ServerTest", &serverTest);
 
