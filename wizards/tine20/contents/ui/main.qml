@@ -152,7 +152,7 @@ Kirigami.ScrollablePage {
     footer: QQC2.ToolBar {
         contentItem: RowLayout {
             QQC2.Button {
-                Layout.alignment: Layout.AlignRight
+                Layout.alignment: Qt.AlignRight
                 text: i18n("Next")
                 enabled: root.valid
                 onClicked: setup()
