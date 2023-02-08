@@ -15,7 +15,7 @@ class KJob;
 class Resource : public SetupObject
 {
     Q_OBJECT
-    Q_PROPERTY(QString name READ name WRITE setName NOTIFY name)
+    Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
 public:
     explicit Resource(const QString &type, QObject *parent = nullptr);
     ~Resource() = default;
