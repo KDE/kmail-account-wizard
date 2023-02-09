@@ -111,9 +111,6 @@ void SetupManager::execute()
     //    }
     //}
     //
-    // m_page->setStatus(i18n("Setting up account..."));
-    // m_page->setValid(false);
-    // m_page->assistantDialog()->backButton()->setEnabled(false);
     //
     //// ### FIXME this is a bad over-simplification and would need a real topological sort
     //// but for current usage it is good enough
@@ -153,45 +150,30 @@ void SetupManager::setupInfo(const QString &msg)
 void SetupManager::setupNext()
 {
     // user canceled during the previous setup step
-    // if (m_rollbackRequested) {
-    //    rollback();
-    //    return;
-    //}
-    //
-    // if (m_objectToSetup.isEmpty()) {
-    //    m_page->setStatus(i18n("Setup complete."));
-    //    m_page->setProgress(100);
-    //    m_page->setValid(true);
-    //    m_page->assistantDialog()->backButton()->setEnabled(false);
-    //} else {
-    //    const int setupObjectCount = m_objectToSetup.size() + m_setupObjects.size();
-    //    const int remainingObjectCount = setupObjectCount - m_objectToSetup.size();
-    //    m_page->setProgress((remainingObjectCount * 100) / setupObjectCount);
-    //    m_currentSetupObject = m_objectToSetup.takeFirst();
-    //    m_currentSetupObject->create();
-    //}
+    if (m_rollbackRequested) {
+        rollback();
+        return;
+    }
+
+    if (!m_objectToSetup.isEmpty()) {
+        m_currentSetupObject = m_objectToSetup.takeFirst();
+        m_currentSetupObject->create();
+    }
 }
 
 void SetupManager::rollback()
 {
-    // m_page->setStatus(i18n("Failed to set up account, rolling back..."));
-    // const int setupObjectCount = m_objectToSetup.size() + m_setupObjects.size();
-    // const int remainingObjectCount = m_setupObjects.size();
-    // const auto setupObjectsList = m_setupObjects;
-    // for (int i = 0; i < setupObjectsList.count(); ++i) {
-    //    auto obj = m_setupObjects.at(i);
-    //    m_page->setProgress((remainingObjectCount * 100) / setupObjectCount);
-    //    if (obj) {
-    //        obj->destroy();
-    //        m_objectToSetup.prepend(obj);
-    //    }
-    //}
-    // m_setupObjects.clear();
-    // m_page->setProgress(0);
-    // m_page->setStatus(i18n("Failed to set up account."));
-    // m_page->setValid(true);
-    // m_rollbackRequested = false;
-    // Q_EMIT rollbackComplete();
+    const auto setupObjectsList = m_setupObjects;
+    for (int i = 0; i < setupObjectsList.count(); ++i) {
+        auto obj = m_setupObjects.at(i);
+        if (obj) {
+            obj->destroy();
+            m_objectToSetup.prepend(obj);
+        }
+    }
+    m_setupObjects.clear();
+    m_rollbackRequested = false;
+    Q_EMIT rollbackComplete();
 }
 
 void SetupManager::setName(const QString &name)
@@ -251,18 +233,18 @@ void SetupManager::setKeyPublishingMethod(Key::PublishingMethod method)
 
 void SetupManager::openWallet()
 {
-    qWarning() << " void SetupManager::openWallet() not implemented yet";
+    qWarning() << " SetupManager::openWallet() not implemented yet";
     // Remove it we need to update qt5keychain
-    // using namespace KWallet;
-    // if (Wallet::isOpen(Wallet::NetworkWallet())) {
-    //    return;
-    //}
-    //
-    // Q_ASSERT(parent()->isWidgetType());
-    // m_wallet = Wallet::openWallet(Wallet::NetworkWallet(), qobject_cast<QWidget *>(parent())->effectiveWinId(), Wallet::Asynchronous);
-    // QEventLoop loop;
-    // connect(m_wallet, &KWallet::Wallet::walletOpened, &loop, &QEventLoop::quit);
-    // loop.exec();
+    //    using namespace KWallet;
+    //    if (Wallet::isOpen(Wallet::NetworkWallet())) {
+    //        return;
+    //    }
+
+    //    Q_ASSERT(parent()->isWidgetType());
+    //    m_wallet = Wallet::openWallet(Wallet::NetworkWallet(), qobject_cast<QWidget *>(parent())->effectiveWinId(), Wallet::Asynchronous);
+    //    QEventLoop loop;
+    //    connect(m_wallet, &KWallet::Wallet::walletOpened, &loop, &QEventLoop::quit);
+    //    loop.exec();
 }
 
 bool SetupManager::personalDataAvailable() const
@@ -293,12 +275,12 @@ IspdbHelper *SetupManager::ispDB(const QString &type)
 
 void SetupManager::requestRollback()
 {
-    // if (m_setupObjects.isEmpty()) {
-    //    Q_EMIT rollbackComplete();
-    //} else {
-    //    m_rollbackRequested = true;
-    //    if (!m_currentSetupObject) {
-    //        rollback();
-    //    }
-    //}
+    if (m_setupObjects.isEmpty()) {
+        Q_EMIT rollbackComplete();
+    } else {
+        m_rollbackRequested = true;
+        if (!m_currentSetupObject) {
+            rollback();
+        }
+    }
 }

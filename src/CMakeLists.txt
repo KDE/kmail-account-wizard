@@ -7,12 +7,10 @@ set(accountwizard_srcs
     #dialog.cpp
     wizardmodel.cpp
     controller.cpp
-    #typepage.cpp
     #loadpage.cpp
     #global.cpp
     #page.cpp
     key.cpp
-    #dynamicpage.cpp
     setupmanager.cpp
     #setuppage.cpp
     resource.cpp

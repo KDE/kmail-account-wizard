@@ -62,18 +62,9 @@ void Resource::setOption(const QString &key, const QVariant &value)
     m_settings.insert(key, value);
 }
 
-QString Resource::name() const
-{
-    return m_name;
-}
-
 void Resource::setName(const QString &name)
 {
-    if (m_name == name) {
-        return;
-    }
     m_name = name;
-    Q_EMIT nameChanged();
 }
 
 void Resource::create()
