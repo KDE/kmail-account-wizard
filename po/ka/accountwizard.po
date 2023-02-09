@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-06-12 00:46+0000\n"
-"PO-Revision-Date: 2023-01-01 13:06+0100\n"
+"PO-Revision-Date: 2023-02-08 11:54+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -187,7 +187,7 @@ msgstr "კონფიგურაციის მოძებნა: საე
 #: ispdb/ispdb.cpp:357
 #, kde-format
 msgid "Lookup configuration: Mozilla database"
-msgstr "კონფიგურაციის მძებნა: Mozilla_ის ბაზა"
+msgstr "კონფიგურაციის მოძებნა: Mozilla-ის ბაზა"
 
 #: ispdb/main.cpp:70
 #, kde-format
