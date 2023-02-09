@@ -90,8 +90,8 @@ set(accountwizard_libs
     KF5::PimCommon
     KF${KF_MAJOR_VERSION}::XmlGui
     KF${KF_MAJOR_VERSION}::Package
-    Qt5::Quick
-    Qt5::QuickControls2
+    Qt::Quick
+    Qt::QuickControls2
     )
 
 #if ( NOT ACCOUNTWIZARD_NO_GHNS )

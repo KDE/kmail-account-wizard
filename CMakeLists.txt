@@ -53,7 +53,7 @@ set(KDEPIM_LIB_VERSION "${PIM_VERSION}")
 set(KDEPIM_LIB_SOVERSION "5")
 
 set(QT_REQUIRED_VERSION "5.15.2")
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Xml DBus Test Quick QuickControls2)
+find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Xml DBus Test Quick QuickControls2)
 set(PIMCOMMON_LIB_VERSION "5.18.40")
 set(LIBKDEPIM_LIB_VERSION "5.18.40")
 set(LIBKLEO_LIB_VERSION "5.18.40")
@@ -96,14 +96,13 @@ include_directories(${kmail-account-wizard_SOURCE_DIR} ${kmail-account-wizard_BI
 
 
 # Qt5 package
-find_package(Qt5UiTools ${QT_REQUIRED_VERSION} CONFIG REQUIRED)
+find_package(Qt${QT_MAJOR_VERSION}UiTools ${QT_REQUIRED_VERSION} CONFIG REQUIRED)
 
-find_package(KF5Kross ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF${KF_MAJOR_VERSION}NewStuff ${KF5_MIN_VERSION} CONFIG REQUIRED)
 
 #it will replace kwallet support
-find_package(Qt5Keychain CONFIG)
-set_package_properties(Qt5Keychain PROPERTIES
+find_package(Qt${QT_MAJOR_VERSION}Keychain CONFIG)
+set_package_properties(Qt${QT_MAJOR_VERSION}Keychain PROPERTIES
                                    DESCRIPTION "Provides support for secure credentials storage"
                                    URL "https://github.com/frankosterfeld/qtkeychain"
                                    TYPE OPTIONAL)
