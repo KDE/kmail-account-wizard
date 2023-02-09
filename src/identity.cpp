@@ -1,5 +1,5 @@
 /*
-    SPDX-FileCopyrightText: 2010-2021 Laurent Montel <montel@kde.org>
+    SPDX-FileCopyrightText: 2010-2023 Laurent Montel <montel@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -20,9 +20,7 @@ Identity::Identity(QObject *parent)
     Q_ASSERT(m_identity != nullptr);
 }
 
-Identity::~Identity()
-{
-}
+Identity::~Identity() = default;
 
 void Identity::create()
 {

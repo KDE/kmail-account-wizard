@@ -17,9 +17,7 @@ Ispdb::Ispdb(QObject *parent)
 {
 }
 
-Ispdb::~Ispdb()
-{
-}
+Ispdb::~Ispdb() = default;
 
 QString Ispdb::email() const
 {
@@ -254,7 +252,7 @@ Server Ispdb::createServer(const QDomElement &n)
                     s.authentication = ClientIP;
                 } else if (type == QLatin1String("none")) {
                     s.authentication = NoAuth;
-                } else if (n.attribute(QStringLiteral("type")) == QLatin1String("imap") && type == QLatin1String("OAuth2")) {
+                } else if (type == QLatin1String("OAuth2")) {
                     s.authentication = OAuth2;
                 }
             }
@@ -330,7 +328,7 @@ QString Ispdb::name(length l) const
     } else if (l == Short) {
         return mDisplayShortName;
     } else {
-        return QString(); // make compiler happy. Not me.
+        return {}; // make compiler happy. Not me.
     }
 }
 

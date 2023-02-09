@@ -1,0 +1,46 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kmail-account-wizard package.
+#
+# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kmail-account-wizard\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:16+0200\n"
+"PO-Revision-Date: 2022-05-21 11:49+0200\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.04.0\n"
+
+#: tine20wizard.es:24
+msgid "Personal Settings"
+msgstr "Лични настройки"
+
+#. i18n: ectx: property (text), widget (QLabel, nameLabel)
+#: tine20wizard.ui:20
+#, kde-format
+msgid "&Name:"
+msgstr "&Име:"
+
+#. i18n: ectx: property (text), widget (QLabel, emailLabel)
+#: tine20wizard.ui:33
+#, kde-format
+msgid "&Email:"
+msgstr "&Е-поща:"
+
+#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
+#: tine20wizard.ui:46
+#, kde-format
+msgid "&Password:"
+msgstr "&Парола:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: tine20wizard.ui:60
+#, kde-format
+msgid "&Server Address:"
+msgstr "&Адрес на сървъра:"

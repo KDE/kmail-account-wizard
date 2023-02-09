@@ -1,5 +1,5 @@
 /*
-    SPDX-FileCopyrightText: 2010-2021 Laurent Montel <montel@kde.org>
+    SPDX-FileCopyrightText: 2010-2023 Laurent Montel <montel@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -17,9 +17,9 @@
 
 ConfigFile::ConfigFile(const QString &configName, QObject *parent)
     : SetupObject(parent)
+    , m_config(new KConfig(configName))
 {
     m_name = configName;
-    m_config = new KConfig(configName);
 }
 
 ConfigFile::~ConfigFile()

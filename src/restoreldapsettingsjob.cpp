@@ -1,12 +1,11 @@
 /*
-    SPDX-FileCopyrightText: 2010-2021 Laurent Montel <montel@kde.org>
+    SPDX-FileCopyrightText: 2010-2023 Laurent Montel <montel@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 #include "restoreldapsettingsjob.h"
 #include <KConfig>
-#include <KConfigGroup>
 #include <KLDAP/LdapClientSearchConfig>
 #include <KLDAP/LdapClientSearchConfigReadConfigJob>
 #include <KLDAP/LdapClientSearchConfigWriteConfigJob>
@@ -17,9 +16,7 @@ RestoreLdapSettingsJob::RestoreLdapSettingsJob(QObject *parent)
 {
 }
 
-RestoreLdapSettingsJob::~RestoreLdapSettingsJob()
-{
-}
+RestoreLdapSettingsJob::~RestoreLdapSettingsJob() = default;
 
 void RestoreLdapSettingsJob::start()
 {

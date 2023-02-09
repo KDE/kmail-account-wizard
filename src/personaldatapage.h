@@ -1,7 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2009 Volker Krause <vkrause@kde.org>
     SPDX-FileCopyrightText: 2010 Tom Albers <toma@kde.org>
-    SPDX-FileCopyrightText: 2012-2021 Laurent Montel <montel@kde.org>
+    SPDX-FileCopyrightText: 2012-2023 Laurent Montel <montel@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -43,6 +43,6 @@ public Q_SLOTS:
 private:
     Ui::PersonalDataPage ui;
     Ispdb *mIspdb = nullptr;
-    SetupManager *mSetupManager = nullptr;
+    SetupManager *const mSetupManager;
 };
 

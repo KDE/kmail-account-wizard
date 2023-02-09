@@ -55,10 +55,10 @@ Q_SIGNALS:
     void editModeChanged();
 
 private:
-    int m_transportId;
+    int m_transportId = -1;
     QString m_name;
     QString m_host;
-    int m_port;
+    int m_port = -1;
     QString m_user;
     QString m_password;
     MailTransport::Transport::EnumEncryption::type m_encr;
@@ -66,5 +66,5 @@ private:
     QString m_encrStr;
     QString m_authStr;
 
-    bool m_editMode;
+    bool m_editMode = false;
 };

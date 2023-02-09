@@ -32,6 +32,7 @@ static const StringValueTable<MailTransport::Transport::EnumAuthenticationType> 
     {"ntlm", MailTransport::Transport::EnumAuthenticationType::NTLM},
     {"apop", MailTransport::Transport::EnumAuthenticationType::APOP},
     {"clear", MailTransport::Transport::EnumAuthenticationType::CLEAR},
+    {"oauth2", MailTransport::Transport::EnumAuthenticationType::XOAUTH2},
     {"anonymous", MailTransport::Transport::EnumAuthenticationType::ANONYMOUS}};
 static const int authenticationTypeEnumSize = sizeof(authenticationTypeEnum) / sizeof(*authenticationTypeEnum);
 
@@ -50,11 +51,8 @@ template<typename T> static typename T::value_type stringToValue(const T *table,
 
 Transport::Transport(const QString &type, QObject *parent)
     : SetupObject(parent)
-    , m_transportId(-1)
-    , m_port(-1)
     , m_encr(MailTransport::Transport::EnumEncryption::TLS)
     , m_auth(MailTransport::Transport::EnumAuthenticationType::PLAIN)
-    , m_editMode(false)
 {
     if (type == QLatin1String("smtp")) {
         m_port = 25;

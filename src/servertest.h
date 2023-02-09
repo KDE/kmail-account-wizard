@@ -18,7 +18,7 @@ class ServerTest : public QObject
     Q_OBJECT
 public:
     explicit ServerTest(QObject *parent = nullptr);
-    ~ServerTest();
+    ~ServerTest() override;
 
 public Q_SLOTS:
     /* @p protocol being 'imap' 'smtp' or 'pop3' */
@@ -35,6 +35,6 @@ private Q_SLOTS:
     void testFinished(const QVector<int> &list);
 
 private:
-    MailTransport::ServerTest *m_serverTest = nullptr;
+    MailTransport::ServerTest *const m_serverTest;
 };
 

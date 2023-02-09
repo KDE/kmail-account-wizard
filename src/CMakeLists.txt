@@ -1,5 +1,5 @@
 # SPDX-FileCopyrightText: 2021 Carl Schwan <carlschwan@kde.org>
-
+# SPDX-License-Identifier: BSD-3-Clause
 add_subdirectory(packagestructure)
 
 set(accountwizard_srcs
@@ -32,34 +32,6 @@ set(accountwizard_srcs
     ispdb/autoconfigkolabmail.cpp
     ispdb/autoconfigkolabldap.cpp
     ispdb/autoconfigkolabfreebusy.cpp
-    #cryptopage.h
-    #dialog.h
-    wizardmodel.h
-    controller.h
-    #typepage.h
-    #loadpage.h
-    #global.h
-    #page.h
-    key.h
-    #dynamicpage.h
-    setupmanager.h
-    #setuppage.h
-    resource.h
-    transport.h
-    configfile.h
-    ldap.h
-    restoreldapsettingsjob.h
-    identity.h
-    ispdbhelper.h
-    setupobject.h
-    setupautoconfigkolabmail.h
-    setupautoconfigkolabldap.h
-    setupautoconfigkolabfreebusy.h
-    servertest.h
-    #personaldatapage.h
-    ispdb/ispdb.h
-    ispdb/autoconfigkolabmail.h
-    ispdb/autoconfigkolabldap.h
     ispdb/autoconfigkolabfreebusy.h
     resources.qrc
     )

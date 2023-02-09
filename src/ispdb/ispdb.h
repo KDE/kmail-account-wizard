@@ -51,7 +51,7 @@ public:
     explicit Ispdb(QObject *parent = nullptr);
 
     /** Destructor */
-    ~Ispdb();
+    ~Ispdb() override;
 
     QString email() const;
     QString password() const;
@@ -177,9 +177,7 @@ struct Server {
     Q_PROPERTY(QString hostname MEMBER hostname)
     Q_PROPERTY(QString username MEMBER username)
 public:
-    Server()
-    {
-    }
+    Server() = default;
 
     bool isValid() const
     {
@@ -195,9 +193,7 @@ public:
 QDebug operator<<(QDebug d, const Server &t);
 
 struct identity {
-    identity()
-    {
-    }
+    identity() = default;
 
     bool isValid() const
     {

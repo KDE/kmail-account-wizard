@@ -36,9 +36,9 @@
 
 Dialog::Dialog(QWidget *parent)
     : KAssistantDialog(parent)
+    , mSetupManager(new SetupManager(this))
 {
     resize(480, 600);
-    mSetupManager = new SetupManager(this);
     const bool showPersonalDataPage = Global::typeFilter().size() == 1 && Global::typeFilter().at(0) == KMime::Message::mimeType();
     if (showPersonalDataPage) {
         // todo: don't ask these details based on a setting of the desktop file.

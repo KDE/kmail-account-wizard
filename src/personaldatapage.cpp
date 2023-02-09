@@ -1,7 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2009 Volker Krause <vkrause@kde.org>
     SPDX-FileCopyrightText: 2010 Tom Albers <toma@kde.org>
-    SPDX-FileCopyrightText: 2012-2021 Laurent Montel <montel@kde.org>
+    SPDX-FileCopyrightText: 2012-2023 Laurent Montel <montel@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -31,7 +31,6 @@ QString accountName(Ispdb *ispdb, QString username)
 
 PersonalDataPage::PersonalDataPage(Dialog *parent)
     : Page(parent)
-    , mIspdb(nullptr)
     , mSetupManager(parent->setupManager())
 {
     QWidget *pageParent = this;
@@ -51,7 +50,7 @@ PersonalDataPage::PersonalDataPage(Dialog *parent)
     connect(ui.nameEdit, &QLineEdit::textChanged, this, &PersonalDataPage::slotTextChanged);
     connect(ui.createAccountPb, &QPushButton::clicked, this, &PersonalDataPage::slotCreateAccountClicked);
     connect(ui.buttonGroup, &QButtonGroup::buttonClicked, this, &PersonalDataPage::slotRadioButtonClicked);
-#ifdef KDEPIM_ENTERPRISE_BUILD
+#if KDEPIM_ENTERPRISE_BUILD
     ui.checkOnlineGroupBox->setChecked(false);
 #endif
 }

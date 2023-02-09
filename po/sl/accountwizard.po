@@ -1,0 +1,789 @@
+# Slovenian translation of accountwizard
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Andrej Vernekar <andrej.vernekar@moj.net>, 2010.
+# Jure Repinc <jlp@holodeck1.com>, 2012.
+# Andrej Mernik <andrejm@ubuntu.si>, 2014, 2015, 2016, 2017, 2018.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-12 00:46+0000\n"
+"PO-Revision-Date: 2021-08-15 21:31+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Lokalize 20.12.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Jure Repinc,Andrej Vernekar,Andrej Mernik,Matjaž Jeran"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"jlp@holodeck1.com,andrej.vernekar@gmail.com,andrejm@ubuntu.si,matjaz."
+"jeran@amis.net"
+
+#: configfile.cpp:37
+#, kde-format
+msgid "Writing config file for %1..."
+msgstr "Zapisovanje nastavitvene datoteke za %1 ..."
+
+#: configfile.cpp:54
+#, kde-format
+msgid "Config file for %1 is writing."
+msgstr "Nastavitvena datoteka za %1 se zapisuje."
+
+#: configfile.cpp:59
+#, kde-format
+msgid "Config file for %1 was not changed."
+msgstr "Nastavitvena datoteka za %1 ni bila spremenjena."
+
+#: configfile.cpp:90
+#, kde-format
+msgid "No given name for the configuration."
+msgstr "Za nastavitve ni podanega imena."
+
+#: configfile.cpp:102
+#, kde-format
+msgid "Unknown configuration name '%1'"
+msgstr "Neznano ime nastavitev '%1'"
+
+#: cryptopage.cpp:80 cryptopage.cpp:101 cryptopage.cpp:202
+#, kde-format
+msgid "Account Wizard"
+msgstr "Čarovnik za račune"
+
+#: cryptopage.cpp:81 cryptopage.cpp:102
+#, kde-format
+msgid "Error while generating new key pair for your account %1: %2"
+msgstr "Napaka med ustvarjanjem novega para ključev za vaš račun %1: %2"
+
+#: cryptopage.cpp:257
+#, kde-format
+msgid "Could not detect valid key type"
+msgstr "Ni bilo mogoče zaznati veljavne vrste ključa"
+
+#: cryptopage.cpp:257 cryptopage.cpp:266 cryptopage.cpp:282 cryptopage.cpp:289
+#, kde-format
+msgid "Import error"
+msgstr "Napaka uvažanja"
+
+#: cryptopage.cpp:265
+#, kde-format
+msgid "Cannot read data from the certificate file: %1"
+msgstr "Ni bilo mogoče prebrati podatkov iz datoteke s potrdilom: %1"
+
+#: cryptopage.cpp:281
+#, kde-format
+msgid "Failed to import key: %1"
+msgstr "Uvažanje ključa ni uspelo: %1"
+
+#: cryptopage.cpp:289
+#, kde-format
+msgid "Failed to import key."
+msgstr "Uvažanje ključa ni uspelo."
+
+#: cryptopage.cpp:316
+#, kde-format
+msgid "No key"
+msgstr "Ni ključa"
+
+#: cryptopage.cpp:317
+#, kde-format
+msgid "Generate a new key pair"
+msgstr "Ustvari nov par ključev"
+
+#: cryptopage.cpp:318
+#, kde-format
+msgid "Import a key"
+msgstr "Uvozi ključ"
+
+#: cryptopage.cpp:425
+#, kde-format
+msgid "Certificates"
+msgstr "Potrdila"
+
+#: cryptopage.cpp:426
+#, kde-format
+msgid "Any files"
+msgstr "Katerekoli datoteke"
+
+#: cryptopage.cpp:429
+#, kde-format
+msgid "Select Certificate File"
+msgstr "Izberite datoteko s potrdilom"
+
+#: cryptopage.cpp:435
+#, kde-format
+msgid "Importing key..."
+msgstr "Uvažanje ključa..."
+
+#: dialog.cpp:46
+#, kde-format
+msgid "Provide personal data"
+msgstr "Posredujte osebne podatke"
+
+#: dialog.cpp:54
+#, kde-format
+msgid "Secure your Communication"
+msgstr "Zaščitite vaše sporazumevanje"
+
+#: dialog.cpp:64
+#, kde-format
+msgid "Select Account Type"
+msgstr "Izberite vrsto računa"
+
+#: dialog.cpp:72
+#, kde-format
+msgid "Select Provider"
+msgstr "Izberite ponudnika"
+
+#: dialog.cpp:78
+#, kde-format
+msgid "Loading Assistant"
+msgstr "Nalaganje pomočnika"
+
+#: dialog.cpp:86
+#, kde-format
+msgid "Setting up Account"
+msgstr "Nastavljanje računa"
+
+#: identity.cpp:27
+#, kde-format
+msgid "Setting up identity..."
+msgstr "Nastavljanje istovetnosti ..."
+
+#: identity.cpp:38
+#, kde-format
+msgid "Identity set up."
+msgstr "Istovetnost je nastavljena."
+
+#: identity.cpp:46
+#, kde-format
+msgctxt "Default name for new email accounts/identities."
+msgid "Unnamed"
+msgstr "Neimenovano"
+
+#: identity.cpp:78
+#, kde-format
+msgid "Identity removed."
+msgstr "Istovetnost je odstranjena."
+
+#: ispdb/ispdb.cpp:351
+#, kde-format
+msgid "Lookup configuration: Email provider"
+msgstr "Iskanje nastavitev: ponudnik e-pošte"
+
+#: ispdb/ispdb.cpp:354
+#, kde-format
+msgid "Lookup configuration: Trying common server name"
+msgstr "Iskanje nastavitev: preizkušanje splošnega imena strežnika"
+
+#: ispdb/ispdb.cpp:357
+#, kde-format
+msgid "Lookup configuration: Mozilla database"
+msgstr "Iskanje nastavitev: podatkovna zbirka Mozille"
+
+#: ispdb/main.cpp:70
+#, kde-format
+msgid "ISPDB Assistant"
+msgstr "Pomočnik ISPDB"
+
+#: ispdb/main.cpp:72 main.cpp:40
+#, kde-format
+msgid "Helps setting up PIM accounts"
+msgstr "Pomaga nastaviti račune za upravljanje z osebnimi podatki"
+
+#: ispdb/main.cpp:74
+#, kde-format
+msgid "(c) 2010 Omat Holding B.V."
+msgstr "(c) 2010 Omat Holding B.V."
+
+#: ispdb/main.cpp:77 main.cpp:45
+#, kde-format
+msgid "Author"
+msgstr "Avtor"
+
+#: ispdb/main.cpp:77
+#, kde-format
+msgid "Tom Albers"
+msgstr "Tom Albers"
+
+#: ispdb/main.cpp:84
+#, kde-format
+msgid "Tries to fetch the settings for that email address"
+msgstr "Poskusi pridobiti nastavitve za ta e-poštni naslov"
+
+#: key.cpp:68
+#, kde-format
+msgid "Skipping key publishing"
+msgstr "Preskakovanje objave ključa"
+
+#: key.cpp:82 key.cpp:203
+#, kde-format
+msgid "Publishing OpenPGP key..."
+msgstr "Objavljanje ključa OpenPGP ..."
+
+#: key.cpp:96 key.cpp:123 key.cpp:193
+#, kde-format
+msgid "Key publishing was canceled."
+msgstr "Objavljanje ključa je bilo preklicano."
+
+#: key.cpp:102
+#, kde-format
+msgid "Key publishing failed: not online, or GnuPG too old."
+msgstr "Objavljanje ključa ni uspelo: niste povezani ali pa je GnuPG prestar."
+
+#: key.cpp:105
+#, kde-format
+msgid "Your email provider does not support key publishing."
+msgstr "Vaš ponudnik e-pošte ne podpira objave ključev."
+
+#: key.cpp:128
+#, kde-format
+msgid "An error occurred while creating key publishing request."
+msgstr "Med ustvarjanjem zahteve za objavo ključa je prišlo do napake."
+
+#: key.cpp:151
+#, kde-format
+msgid "Key publishing error: mail transport is not configured"
+msgstr "Napaka objavljanja ključa: poštni prenos ni nastavljen"
+
+#: key.cpp:164
+#, kde-format
+msgid "Key publishing error: failed to create request email"
+msgstr ""
+"Napaka objavljanja ključa: ni bilo mogoče ustvariti e-sporočila zahteve"
+
+#: key.cpp:195
+#, kde-format
+msgid "Failed to send key publishing request: %1"
+msgstr "Pošiljanje zahteve za objavo ključa ni uspelo: %1"
+
+#: key.cpp:197
+#, kde-format
+msgid "Key publishing request sent."
+msgstr "Zahteva za objavo ključa poslana."
+
+#: key.cpp:233
+#, kde-format
+msgid "Failed to publish the key."
+msgstr "Objavljanje ključa ni uspelo."
+
+#: key.cpp:239
+#, kde-format
+msgid "Key has been published on %1"
+msgstr "Ključ je bilo objavljen na %1"
+
+#: ldap.cpp:37
+#, kde-format
+msgid "Setting up LDAP server..."
+msgstr "Nastavljanje strežnika LDAP ..."
+
+#: ldap.cpp:40
+#, kde-format
+msgid "Needed parameters are missing for LDAP config: server '%1'"
+msgstr "Za nastavitev LDAP manjkajo zahtevani parametri: strežnik '%1'"
+
+#: ldap.cpp:118
+#, kde-format
+msgid "LDAP set up."
+msgstr "LDAP je nastavljen."
+
+#: ldap.cpp:136
+#, kde-format
+msgid "LDAP not configuring."
+msgstr "LDAP se ne nastavlja."
+
+#: ldap.cpp:149
+#, kde-format
+msgid "Removed LDAP entry."
+msgstr "Odstranjen vnos LDAP."
+
+#: ldap.cpp:155
+#, kde-format
+msgid "No config found to edit"
+msgstr "Ni najdenih nastavitev za urejanje"
+
+#: loadpage.cpp:35
+#, kde-format
+msgid "No script specified in '%1'."
+msgstr "V '%1' ni določenega nobenega skripta."
+
+#: loadpage.cpp:39
+#, kde-format
+msgid "Unable to load assistant: File '%1' does not exist."
+msgstr "Pomočnika ni mogoče naložiti: datoteka '%1' ne obstaja."
+
+#: loadpage.cpp:42
+#, kde-format
+msgid "Loading script '%1'..."
+msgstr "Nalaganje skripta '%1'..."
+
+#: loadpage.cpp:51
+#, kde-format
+msgid "Failed to load script: '%1'."
+msgstr "Nalaganje skripta ni uspelo: '%1'."
+
+#: main.cpp:38
+#, kde-format
+msgid "Account Assistant"
+msgstr "Pomočnik za račune"
+
+#: main.cpp:42
+#, kde-format
+msgid "(c) 2009-2020 the Akonadi developers"
+msgstr "(c) 2009-2020 razvijalci Akonadija"
+
+#: main.cpp:45
+#, kde-format
+msgid "Volker Krause"
+msgstr "Volker Krause"
+
+#: main.cpp:46
+#, kde-format
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: main.cpp:53
+#, kde-format
+msgid "Only offer accounts that support the given type."
+msgstr "Ponudi samo račune, ki podpirajo dano vrsto."
+
+#: main.cpp:54
+#, kde-format
+msgid "Run the specified assistant."
+msgstr "Zaženi danega pomočnika."
+
+#: main.cpp:56
+#, kde-format
+msgid "unpack fullpath on startup and launch that assistant"
+msgstr "ob zagonu odpakiraj polno pot in zaženi tega pomočnika"
+
+#: main.cpp:58
+#, kde-format
+msgid "Returns types of assistants"
+msgstr "Vrne vrste pomočnikov"
+
+#: main.cpp:66
+#, kde-format
+msgid "The following assistants are available:"
+msgstr "Na voljo so naslednji pomočniki:"
+
+#: personaldatapage.cpp:71
+#, kde-format
+msgid "SMTP, %1"
+msgstr "SMTP, %1"
+
+#: personaldatapage.cpp:74
+#, kde-format
+msgid "IMAP, %1"
+msgstr "IMAP, %1"
+
+#: personaldatapage.cpp:78
+#, kde-format
+msgid "POP3, %1"
+msgstr "POP3, %1"
+
+#: providerpage.cpp:31
+#, kde-format
+msgid "Fetching provider list..."
+msgstr "Pridobivanje seznama ponudnikov ..."
+
+#: resource.cpp:74
+#, kde-format
+msgid "Resource type '%1' is not available."
+msgstr "Vrsta vira '%1' ni na voljo."
+
+#: resource.cpp:88
+#, kde-format
+msgid "Resource '%1' is already set up."
+msgstr "Vir '%1' je že nastavljen."
+
+#: resource.cpp:94
+#, kde-format
+msgid "Creating resource instance for '%1'..."
+msgstr "Ustvarjanje primerka vira za '%1'..."
+
+#: resource.cpp:103
+#, kde-format
+msgid "Failed to create resource instance: %1"
+msgstr "Ustvaritev primerka vira ni uspela: %1"
+
+#: resource.cpp:110
+#, kde-format
+msgid "Configuring resource instance..."
+msgstr "Nastavljanje primerka vira ..."
+
+#: resource.cpp:114
+#, kde-format
+msgid "Unable to configure resource instance."
+msgstr "Primerka vira ni mogoče nastaviti."
+
+#: resource.cpp:129
+#, kde-format
+msgid "Could not convert value of setting '%1' to required type %2."
+msgstr ""
+"Vrednosti nastavitve '%1' ni bilo mogoče pretvoriti v zahtevano vrsto %2."
+
+#: resource.cpp:136
+#, kde-format
+msgid "Could not set setting '%1': %2"
+msgstr "Nastavitve '%1' ni bilo mogoče nastaviti: %2"
+
+#: resource.cpp:142
+#, kde-format
+msgid "Could not save settings: %1"
+msgstr "Ni bilo mogoče shraniti nastavitev: %1"
+
+#: resource.cpp:151
+#, kde-format
+msgid "Resource setup completed."
+msgstr "Nastavitev vira je zaključena."
+
+#: resource.cpp:167
+#, kde-format
+msgid "Removed resource instance for '%1'."
+msgstr "Pojavek vira za '%1' je odstranjen."
+
+#: servertest.cpp:50
+#, kde-format
+msgid ""
+"There seems to be a problem in reaching this server or choosing a safe way "
+"to sent the credentials to server. We advise you to check the settings of "
+"the account and adjust it manually if needed."
+msgstr ""
+"Videti je, da so z vzpostavitvijo stika s strežnikom težave. Morda je težava "
+"v izboru varnega načina pošiljanja poveril strežniku. Svetujemo vam, da "
+"preverite nastavitve računa in jih ročno prilagodite."
+
+#: servertest.cpp:53
+#, kde-format
+msgid "Autodetecting settings failed"
+msgstr "Samozaznavanje nastavitev ni uspelo"
+
+#: setupautoconfigkolabfreebusy.cpp:74 setupautoconfigkolabldap.cpp:73
+#: setupispdb.cpp:138
+#, kde-format
+msgid "Searching for autoconfiguration..."
+msgstr "Iskanje samodejnih nastavitev ..."
+
+#: setupautoconfigkolabfreebusy.cpp:99 setupautoconfigkolabldap.cpp:98
+#: setupispdb.cpp:163
+#, kde-format
+msgid "Autoconfiguration found."
+msgstr "Samodejne nastavitve najdene."
+
+#: setupautoconfigkolabfreebusy.cpp:101 setupautoconfigkolabldap.cpp:100
+#: setupispdb.cpp:165
+#, kde-format
+msgid "Autoconfiguration failed."
+msgstr "Samonastavljanje ni uspelo."
+
+#. i18n: ectx: property (text), widget (QLabel, progressLabel)
+#: setupmanager.cpp:114 ui/setuppage.ui:37
+#, kde-format
+msgid "Setting up account..."
+msgstr "Nastavljanje računa ..."
+
+#: setupmanager.cpp:162
+#, kde-format
+msgid "Setup complete."
+msgstr "Nastavljanje je zaključeno."
+
+#: setupmanager.cpp:177
+#, kde-format
+msgid "Failed to set up account, rolling back..."
+msgstr "Nastavljanje računa ni uspelo, vračanje na prejšnje stanje ..."
+
+#: setupmanager.cpp:191
+#, kde-format
+msgid "Failed to set up account."
+msgstr "Nastavljanje računa ni uspelo."
+
+#: transport.cpp:64
+#, kde-format
+msgid "Setting up mail transport account..."
+msgstr "Nastavljanje računa za prenos pošte ..."
+
+#: transport.cpp:83
+#, kde-format
+msgid "Mail transport uses '%1' encryption and '%2' authentication."
+msgstr ""
+"Transport pošte uporablja šifriranje '%1' in preverjanje pristnosti '%2'."
+
+#: transport.cpp:89
+#, kde-format
+msgid "Mail transport account set up."
+msgstr "Račun za prenos pošte je nastavljen."
+
+#: transport.cpp:95
+#, kde-format
+msgid "Mail transport account deleted."
+msgstr "Račun za prenos pošte je izbrisan."
+
+#: transport.cpp:102
+#, kde-format
+msgid "Could not load config dialog for UID '%1'"
+msgstr "Ni bilo mogoče naložiti nastavitvenega pogovornega okna za UID '%1'"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/cryptopage.ui:26
+#, kde-format
+msgid ""
+"Protect yourself against surveillance by encrypting your Mails with GnuPG. "
+"By generating or selecting a public / private key pair now mails can be "
+"encrypted using the public key while only you can decrypt them with your "
+"private key."
+msgstr ""
+"Zaščitite se pred vohunjenjem s pomočjo šifriranja e-pošte z GnuPG. Z "
+"ustvaritvijo ali izborom para javni/zasebni ključ lahko šifrirate e-pošto z "
+"javnim ključem in jo dešifrirate z vašim zasebnim ključem."
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, enableCryptoCheckBox)
+#: ui/cryptopage.ui:52
+#, kde-format
+msgid ""
+"<html><head/><body><p>When sending mails KMail automatically looks for "
+"encryption keys of your recipients and secures the mail when keys for each "
+"recipient can be found.</p><p>It also signs your mails cryptographically so "
+"that it can be verified that your messages have not been tampered with.</p></"
+"body></html>"
+msgstr ""
+"<html><head/><body><p>Ob pošiljanju e-pošte KMail samodejno poišče šifrirne "
+"ključe vaših prejemnikov in z njimi zaščiti e-pošto namenjeno njim.</"
+"p><p>Poleg tega bodo sporočila šifrirno podpisana, da se bo dalo preveriti, "
+"ali je bilo sporočilo spremenjeno ali ne.</p></body></html>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, enableCryptoCheckBox)
+#: ui/cryptopage.ui:55
+#, kde-format
+msgid "Secure outgoing emails, if possible"
+msgstr "Zaščiti odhodno pošto, če je mogoče"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/cryptopage.ui:65
+#, kde-format
+msgid "Select key for this account:"
+msgstr "Izberite ključ za ta račun:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: ui/cryptopage.ui:99
+#, kde-format
+msgid "Checking key publishing support ..."
+msgstr "Preverjanje za podporo objavljanju ključev ..."
+
+#. i18n: ectx: property (title), widget (QGroupBox, wksCheckBox)
+#: ui/cryptopage.ui:122
+#, kde-format
+msgid "Register &this key with your email provider"
+msgstr "Registriraj &ta ključ pri mojem ponudniku e-pošte"
+
+#. i18n: ectx: property (text), widget (QLabel, wksDescription)
+#: ui/cryptopage.ui:132
+#, kde-format
+msgid ""
+"Your email service provider supports a service to provide your public key so "
+"that others can find it.\n"
+"This means that your public key can be queried from your email provider and "
+"others can then use it to secure their email communication with you."
+msgstr ""
+"Vaš ponudnik e-pošte podpira storitev za javno objavo vašega javnega "
+"ključa.\n"
+"To pomeni, da lahko drugi prejmejo vaš javni ključ iz strežnikov vašega "
+"ponudnika e-pošte in z njim zaščitijo e-poštno sporazumevanje z vami."
+
+#. i18n: ectx: property (title), widget (QGroupBox, pksCheckBox)
+#: ui/cryptopage.ui:152
+#, kde-format
+msgid "Publish &this key on public key server"
+msgstr "Objavi &ta ključ na javnem strežniku za ključe"
+
+#. i18n: ectx: property (text), widget (QLabel, pksDescription)
+#: ui/cryptopage.ui:162
+#, kde-format
+msgid ""
+"Your email service provider does not support key publishing. You should "
+"publish your key so that other users can retrieve it and use it to secure "
+"their email communication with you.\n"
+"You can alternatively publish your key on a public key server, but you "
+"should be aware that your email address will be publicly listed and they key "
+"cannot be removed from there, only revoked."
+msgstr ""
+"Vaš ponudnik e-pošte ne podpira storitev za javno objavo ključev. Vaš ključ "
+"morate objaviti, če želite, da lahko drugi zaščitijo e-poštno sporazumevanje "
+"z vami.\n"
+"Vaš ključ lahko objavite na javnem strežniku s ključi, vendar pa bo vaš e-"
+"poštni naslov izpostavljen, poleg tega pa ključa ne bo mogoče odstraniti, "
+"ampak le preklicati."
+
+#. i18n: ectx: property (text), widget (QLabel, statusLabel)
+#: ui/loadpage.ui:30
+#, kde-format
+msgid "Loading assistant..."
+msgstr "Nalaganje pomočnika ..."
+
+#. i18n: ectx: property (text), widget (QLabel, welcomeLabel)
+#: ui/personaldatapage.ui:17
+#, kde-format
+msgid ""
+"With a few simple steps we create the right settings for you. Please follow "
+"the steps of this wizard carefully."
+msgstr ""
+"V nekaj korakih bomo ustvarili pravilne nastavitve. Pazljivo sledite korakom "
+"tega pomočnika."
+
+#. i18n: ectx: property (text), widget (QLabel, nameLabel)
+#: ui/personaldatapage.ui:29
+#, kde-format
+msgid "Full name:"
+msgstr "Polno ime:"
+
+#. i18n: ectx: property (text), widget (QLabel, emailLabel)
+#: ui/personaldatapage.ui:55
+#, kde-format
+msgid "E-mail address:"
+msgstr "E-poštni naslov:"
+
+#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
+#: ui/personaldatapage.ui:85
+#, kde-format
+msgid "Password:"
+msgstr "Geslo:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, checkOnlineGroupBox)
+#: ui/personaldatapage.ui:119
+#, kde-format
+msgid "Find pro&vider settings on the Internet"
+msgstr "Nastavit&ve za ponudnika najdi na internetu"
+
+#. i18n: ectx: property (text), widget (QLabel, checkOnlineExplanation)
+#: ui/personaldatapage.ui:140
+#, kde-format
+msgid ""
+"Check online for the settings needed for this email provider. Only the "
+"domain name part of the e-mail address will be sent over the Internet at "
+"this point. If this option is unchecked, the account can be set up manually."
+msgstr ""
+"Zahtevane nastavitve za tega ponudnika e-pošte se poskuša poiskati na "
+"internetu. Po internetu se bo poslala le domena e-poštnega naslova. V "
+"primeru, da te možnosti ne označite, lahko račun nastavite ročno."
+
+#. i18n: ectx: property (text), widget (QRadioButton, imapAccount)
+#: ui/personaldatapage.ui:178
+#, kde-format
+msgid "IMAP account"
+msgstr "Račun IMAP"
+
+#. i18n: ectx: property (text), widget (QRadioButton, pop3Account)
+#: ui/personaldatapage.ui:191
+#, kde-format
+msgid "POP&3 account"
+msgstr "Račun POP&3"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/personaldatapage.ui:205
+#, kde-format
+msgid "Incoming:"
+msgstr "Prejemanje:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/personaldatapage.ui:222
+#, kde-format
+msgid "Outgoing:"
+msgstr "Pošiljanje:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/personaldatapage.ui:239
+#, kde-format
+msgid "Username:"
+msgstr "Uporabniško ime:"
+
+#. i18n: ectx: property (text), widget (QPushButton, createAccountPb)
+#: ui/personaldatapage.ui:273
+#, kde-format
+msgid "Add Account"
+msgstr "Dodaj račun"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/providerpage.ui:17
+#, kde-format
+msgid ""
+"Select your provider from the list below or click back if your provider is "
+"not listed"
+msgstr ""
+"S spodnjega seznama izberite svojega ponudnika. Če vašega ponudnika ni na "
+"seznamu, kliknite Nazaj"
+
+#. i18n: ectx: property (text), widget (QPushButton, detailsButton)
+#: ui/setuppage.ui:62
+#, kde-format
+msgid "&Details..."
+msgstr "Po&drobnosti ..."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/typepage.ui:17
+#, kde-format
+msgid "Select which kind of account you want to create:"
+msgstr "Izberite vrsto računa, ki ga želite ustvariti:"
+
+#. i18n: ectx: property (text), widget (QPushButton, ghnsButton)
+#: ui/typepage.ui:68
+#, kde-format
+msgid "Check for more on Internet"
+msgstr "Za dodatne preveri na internetu"
+
+#~ msgid "Unknown security setting for LDAP server"
+#~ msgstr "Neznana varnostna nastavitev strežnika LDAP"
+
+#~ msgid ""
+#~ "Your communication should always be private. To communicate privately, "
+#~ "you need a public/private pair of keys."
+#~ msgstr ""
+#~ "Vaše sporazumevanje z drugimi bi moralo biti vedno zasebno. V ta namen "
+#~ "potrebujete javni/zasebni par ključev."
+
+#~ msgid ""
+#~ "The public key will be uploaded to a key server from where other users "
+#~ "can download it to verify authenticity of emails you sent them."
+#~ msgstr ""
+#~ "Javni ključ bo naložen na strežnik s ključi od koder ga lahko drugi "
+#~ "uporabniki prejmejo in tako preverijo pristnost vaše e-pošte."
+
+#~ msgid "Publish key automatically"
+#~ msgstr "Samodejno objavi ključ"
+
+#~ msgid "Security:"
+#~ msgstr "Varnost:"
+
+#~ msgid "Always sign and encrypt outgoing emails"
+#~ msgstr "Vedno podpiši in šifriraj odhodno pošto"
+
+#~ msgid "Always sign outgoing emails"
+#~ msgstr "Vedno podpiši odhodno pošto"
+
+#~ msgid "Always encrypt outgoing emails"
+#~ msgstr "Vedno šifriraj odhodno pošto"
+
+#~ msgid "Don't sign or encrypt outgoing emails"
+#~ msgstr "Ne podpiši ali šifriraj odhodne pošte"
+
+#~ msgid "Key Generation Error"
+#~ msgstr "Napaka med ustvarjanjem ključa"
+
+#~ msgid "Generating new key pair..."
+#~ msgstr "Ustvarjanje novega para ključev ..."
+
+#~ msgid "Create Account"
+#~ msgstr "Ustvari račun"
