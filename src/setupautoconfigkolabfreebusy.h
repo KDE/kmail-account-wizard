@@ -36,6 +36,6 @@ Q_SIGNALS:
 private:
     void onIspdbFinished(bool);
 
-    AutoconfigKolabFreebusy *const mIspdb;
+    AutoconfigKolabFreebusy *mIspdb;
 };
 
