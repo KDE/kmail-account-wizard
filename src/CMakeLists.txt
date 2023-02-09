@@ -92,6 +92,7 @@ set(accountwizard_libs
     KF${KF_MAJOR_VERSION}::Package
     Qt::Quick
     Qt::QuickControls2
+    KF${KF_MAJOR_VERSION}::Codecs
     )
 
 #if ( NOT ACCOUNTWIZARD_NO_GHNS )

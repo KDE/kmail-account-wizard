@@ -14,6 +14,6 @@ void WizardPackageStructure::initPackage(KPackage::Package *package)
     package->setRequired("mainscript", true);
 }
 
-K_EXPORT_KPACKAGE_PACKAGE_WITH_JSON(WizardPackageStructure, "wizard-packagestructure.json")
+K_PLUGIN_CLASS_WITH_JSON(WizardPackageStructure, "wizard-packagestructure.json")
 
 #include "wizardpackage.moc"
