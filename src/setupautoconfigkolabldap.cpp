@@ -5,7 +5,6 @@
 */
 
 #include "setupautoconfigkolabldap.h"
-#include "configfile.h"
 #include "ispdb/autoconfigkolabldap.h"
 #include "ldap.h"
 
