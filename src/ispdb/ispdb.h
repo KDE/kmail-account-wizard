@@ -168,7 +168,7 @@ private:
     QVector<identity> mIdentities;
 
     int mDefaultIdentity = -1;
-    Ispdb::searchServerType mServerType;
+    Ispdb::searchServerType mServerType = DataBase;
     bool mStart = true;
 };
 

@@ -14,9 +14,6 @@
 
 Ispdb::Ispdb(QObject *parent)
     : QObject(parent)
-    , mDefaultIdentity(-1)
-    , mServerType(DataBase)
-    , mStart(true)
 {
 }
 
