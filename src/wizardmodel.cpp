@@ -3,8 +3,6 @@
 
 #include "wizardmodel.h"
 
-#include "global.h"
-
 #include <KConfigGroup>
 #include <KDesktopFile>
 
