@@ -7,7 +7,6 @@ set(accountwizard_srcs
     #dialog.cpp
     wizardmodel.cpp
     controller.cpp
-    #loadpage.cpp
     #global.cpp
     #page.cpp
     key.cpp
