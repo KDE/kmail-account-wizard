@@ -64,12 +64,6 @@ set(accountwizard_libs
     KF${KF_MAJOR_VERSION}::Codecs
     )
 
-#if ( NOT ACCOUNTWIZARD_NO_GHNS )
-#    set(accountwizard_srcs ${accountwizard_srcs} providerpage.cpp)
-#    #ki18n_wrap_ui(accountwizard_srcs ui/providerpage.ui)
-#    set(accountwizard_libs ${accountwizard_libs} KF${KF_MAJOR_VERSION}::NewStuff)
-#endif ()
-
 add_executable(accountwizard ${accountwizard_srcs} main.cpp)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(accountwizard PROPERTIES UNITY_BUILD ON)
