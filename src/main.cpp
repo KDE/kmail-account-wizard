@@ -51,7 +51,7 @@ int main(int argc, char **argv)
                          QStringLiteral("0.2"),
                          i18n("Helps setting up PIM accounts"),
                          KAboutLicense::LGPL,
-                         i18n("(c) 2009-2020 the Akonadi developers"),
+                         i18n("(c) 2009-2023 the Akonadi developers"),
                          QString(),
                          QStringLiteral("https://community.kde.org/KDE_PIM/Akonadi"));
     aboutData.addAuthor(i18n("Volker Krause"), i18n("Author"), QStringLiteral("vkrause@kde.org"));
@@ -104,7 +104,6 @@ int main(int argc, char **argv)
     QQmlApplicationEngine engine;
 
     Controller controller;
-    // qRegisterMetaType<WizardModel *>("WizardModel *");
     qmlRegisterType<WizardModel>("org.kde.pim.accountwizard", 1, 0, "WizardModel");
     qRegisterMetaType<Controller *>("Controller *");
     qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "Controller", &controller);
