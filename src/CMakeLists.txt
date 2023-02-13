@@ -8,10 +8,8 @@ set(accountwizard_srcs
     wizardmodel.cpp
     controller.cpp
     #global.cpp
-    #page.cpp
     key.cpp
     setupmanager.cpp
-    #setuppage.cpp
     resource.cpp
     transport.cpp
     configfile.cpp
@@ -24,7 +22,6 @@ set(accountwizard_srcs
     setupautoconfigkolabldap.cpp
     setupautoconfigkolabfreebusy.cpp
     servertest.cpp
-    #personaldatapage.cpp
     ispdb/ispdb.cpp
     ispdb/autoconfigkolabmail.cpp
     ispdb/autoconfigkolabldap.cpp
