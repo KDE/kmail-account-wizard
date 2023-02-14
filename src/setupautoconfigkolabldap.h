@@ -6,11 +6,11 @@
 
 #pragma once
 
-#include "ispdbhelper.h"
+#include "setupobject.h"
 
 class AutoconfigKolabLdap;
 
-class SetupAutoconfigKolabLdap : public IspdbHelper
+class SetupAutoconfigKolabLdap : public SetupObject
 {
     Q_OBJECT
 public:
@@ -37,6 +37,5 @@ private Q_SLOTS:
     void onIspdbFinished(bool);
 
 private:
-    AutoconfigKolabLdap *mIspdb;
+    AutoconfigKolabLdap *const mIspdb;
 };
-

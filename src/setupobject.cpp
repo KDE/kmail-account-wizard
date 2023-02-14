@@ -16,9 +16,5 @@ SetupObject *SetupObject::dependsOn() const
 
 void SetupObject::setDependsOn(SetupObject *obj)
 {
-    if (m_dependsOn == obj) {
-        return;
-    }
     m_dependsOn = obj;
-    Q_EMIT dependsOnChanged();
 }

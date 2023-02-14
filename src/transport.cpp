@@ -12,7 +12,8 @@
 
 #define TABLE_SIZE x
 
-template<typename T> struct StringValueTable {
+template<typename T>
+struct StringValueTable {
     const char *name;
     typename T::type value;
     using value_type = typename T::type;
@@ -36,7 +37,8 @@ static const StringValueTable<MailTransport::Transport::EnumAuthenticationType> 
     {"anonymous", MailTransport::Transport::EnumAuthenticationType::ANONYMOUS}};
 static const int authenticationTypeEnumSize = sizeof(authenticationTypeEnum) / sizeof(*authenticationTypeEnum);
 
-template<typename T> static typename T::value_type stringToValue(const T *table, const int tableSize, const QString &string, bool &valid)
+template<typename T>
+static typename T::value_type stringToValue(const T *table, const int tableSize, const QString &string, bool &valid)
 {
     const QString ref = string.toLower();
     for (int i = 0; i < tableSize; ++i) {
@@ -156,44 +158,4 @@ void Transport::setAuthenticationType(const QString &authType)
 int Transport::transportId() const
 {
     return m_transportId;
-}
-
-QString Transport::authenticationType() const
-{
-    return m_authStr;
-}
-
-bool Transport::editMode() const
-{
-    return m_editMode;
-}
-
-QString Transport::encryption() const
-{
-    return m_encrStr;
-}
-
-QString Transport::host() const
-{
-    return m_host;
-}
-
-QString Transport::name() const
-{
-    return m_name;
-}
-
-QString Transport::password() const
-{
-    return m_password;
-}
-
-int Transport::port() const
-{
-    return m_port;
-}
-
-QString Transport::username() const
-{
-    return m_user;
 }

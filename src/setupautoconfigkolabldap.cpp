@@ -11,12 +11,15 @@
 #include <KLocalizedString>
 
 SetupAutoconfigKolabLdap::SetupAutoconfigKolabLdap(QObject *parent)
-    : IspdbHelper(parent, new AutoconfigKolabLdap(this))
+    : SetupObject(parent)
+    , mIspdb(new AutoconfigKolabLdap(this))
 {
+    connect(mIspdb, &AutoconfigKolabLdap::finished, this, &SetupAutoconfigKolabLdap::onIspdbFinished);
 }
 
 SetupAutoconfigKolabLdap::~SetupAutoconfigKolabLdap()
 {
+    delete mIspdb;
 }
 
 void SetupAutoconfigKolabLdap::fillLdapServer(int i, QObject *o) const

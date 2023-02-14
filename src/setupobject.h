@@ -10,8 +10,6 @@
 class SetupObject : public QObject
 {
     Q_OBJECT
-    /// Specify the dependency relations with other setup objects.
-    Q_PROPERTY(SetupObject *dependsOn READ dependsOn WRITE setDependsOn NOTIFY dependsOnChanged)
 public:
     explicit SetupObject(QObject *parent = nullptr);
 
@@ -25,7 +23,6 @@ Q_SIGNALS:
     void error(const QString &msg);
     void info(const QString &msg);
     void finished(const QString &msg);
-    void dependsOnChanged();
 
 private:
     SetupObject *m_dependsOn = nullptr;

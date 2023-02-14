@@ -14,12 +14,15 @@
 #include <KLocalizedString>
 
 SetupAutoconfigKolabFreebusy::SetupAutoconfigKolabFreebusy(QObject *parent)
-    : IspdbHelper(parent, new AutoconfigKolabFreebusy(this))
+    : SetupObject(parent)
+    , mIspdb(new AutoconfigKolabFreebusy(this))
 {
+    connect(mIspdb, &AutoconfigKolabFreebusy::finished, this, &SetupAutoconfigKolabFreebusy::onIspdbFinished);
 }
 
 SetupAutoconfigKolabFreebusy::~SetupAutoconfigKolabFreebusy()
 {
+    delete mIspdb;
 }
 
 int SetupAutoconfigKolabFreebusy::countFreebusyServers() const

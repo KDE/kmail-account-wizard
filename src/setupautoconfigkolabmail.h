@@ -6,9 +6,9 @@
 
 #pragma once
 
-#include "ispdbhelper.h"
+#include "setupispdb.h"
 
-class SetupAutoconfigKolabMail : public IspdbHelper
+class SetupAutoconfigKolabMail : public SetupIspdb
 {
     Q_OBJECT
 public:

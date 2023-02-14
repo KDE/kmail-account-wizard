@@ -6,11 +6,11 @@
 
 #pragma once
 
-#include "ispdbhelper.h"
+#include "setupobject.h"
 
 class AutoconfigKolabFreebusy;
 
-class SetupAutoconfigKolabFreebusy : public IspdbHelper
+class SetupAutoconfigKolabFreebusy : public SetupObject
 {
     Q_OBJECT
 public:
@@ -36,6 +36,5 @@ Q_SIGNALS:
 private:
     void onIspdbFinished(bool);
 
-    AutoconfigKolabFreebusy *mIspdb;
+    AutoconfigKolabFreebusy *const mIspdb;
 };
-

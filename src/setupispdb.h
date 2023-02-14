@@ -4,6 +4,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+// This code was taken from kmail-account-wizard
+
 #pragma once
 
 #include "setupobject.h"
@@ -51,4 +53,3 @@ protected Q_SLOTS:
 protected:
     Ispdb *mIspdb = nullptr;
 };
-

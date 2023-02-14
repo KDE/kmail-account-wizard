@@ -19,6 +19,7 @@ set(accountwizard_srcs
     identity.cpp
     ispdbhelper.cpp
     setupobject.cpp
+    setupispdb.cpp
     setupautoconfigkolabmail.cpp
     setupautoconfigkolabldap.cpp
     setupautoconfigkolabfreebusy.cpp
