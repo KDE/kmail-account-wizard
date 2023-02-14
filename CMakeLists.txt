@@ -99,9 +99,6 @@ find_package(KF5AkonadiMime ${AKONADI_MIMELIB_VERSION} CONFIG REQUIRED)
 include_directories(${kmail-account-wizard_SOURCE_DIR} ${kmail-account-wizard_BINARY_DIR})
 
 
-# Qt5 package
-find_package(Qt${QT_MAJOR_VERSION}UiTools ${QT_REQUIRED_VERSION} CONFIG REQUIRED)
-
 find_package(KF${KF_MAJOR_VERSION}NewStuff ${KF5_MIN_VERSION} CONFIG REQUIRED)
 
 #it will replace kwallet support

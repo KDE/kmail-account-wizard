@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2021 Carl Schwan <carlschwan@kde.org>
+# SPDX-FileCopyrightText: 2023 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 add_subdirectory(packagestructure)
 
@@ -66,7 +67,6 @@ set(accountwizard_libs
     KF5::Mime
     KF5::IdentityManagement
     KF${KF_MAJOR_VERSION}::WidgetsAddons
-    Qt::UiTools
     KF5::Libkdepim
     KF${KF_MAJOR_VERSION}::ItemViews
     KF${KF_MAJOR_VERSION}::I18n
