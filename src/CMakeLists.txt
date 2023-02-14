@@ -17,7 +17,6 @@ set(accountwizard_srcs
     ldap.cpp
     restoreldapsettingsjob.cpp
     identity.cpp
-    ispdbhelper.cpp
     setupobject.cpp
     setupispdb.cpp
     setupautoconfigkolabmail.cpp
@@ -40,7 +39,6 @@ set(accountwizard_srcs
     ldap.h
     restoreldapsettingsjob.h
     identity.h
-    ispdbhelper.h
     setupobject.h
     setupautoconfigkolabmail.h
     setupautoconfigkolabldap.h
