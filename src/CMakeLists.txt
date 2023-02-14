@@ -27,6 +27,27 @@ set(accountwizard_srcs
     ispdb/autoconfigkolabldap.cpp
     ispdb/autoconfigkolabfreebusy.cpp
     ispdb/autoconfigkolabfreebusy.h
+
+    wizardmodel.h
+    controller.h
+    key.h
+    setupmanager.h
+    resource.h
+    transport.h
+    configfile.h
+    ldap.h
+    restoreldapsettingsjob.h
+    identity.h
+    ispdbhelper.h
+    setupobject.h
+    setupautoconfigkolabmail.h
+    setupautoconfigkolabldap.h
+    setupautoconfigkolabfreebusy.h
+    servertest.h
+    ispdb/ispdb.h
+    ispdb/autoconfigkolabmail.h
+    ispdb/autoconfigkolabldap.h
+    ispdb/autoconfigkolabfreebusy.h
     resources.qrc
     )
 
