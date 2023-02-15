@@ -35,8 +35,8 @@ public:
     void setKey(const GpgME::Key &key);
     void setKeyPublishingMethod(Key::PublishingMethod method);
 
-    QVector<SetupObject *> objectsToSetup() const;
-    QVector<SetupObject *> setupObjects() const;
+    Q_REQUIRED_RESULT QVector<SetupObject *> objectsToSetup() const;
+    Q_REQUIRED_RESULT QVector<SetupObject *> setupObjects() const;
 
 public Q_SLOTS:
     Q_SCRIPTABLE bool personalDataAvailable() const;

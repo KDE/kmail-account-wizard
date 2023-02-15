@@ -17,7 +17,7 @@ public:
     /** Constructor */
     explicit AutoconfigKolabFreebusy(QObject *parent = nullptr);
 
-    QHash<QString, freebusy> freebusyServers() const;
+    Q_REQUIRED_RESULT QHash<QString, freebusy> freebusyServers() const;
 
 protected:
     void lookupInDb(bool auth, bool crypt) override;
@@ -37,7 +37,7 @@ struct freebusy {
     {
     }
 
-    bool isValid() const
+    Q_REQUIRED_RESULT bool isValid() const
     {
         return port != -1;
     }

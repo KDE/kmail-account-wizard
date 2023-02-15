@@ -53,8 +53,8 @@ public:
     /** Destructor */
     ~Ispdb() override;
 
-    QString email() const;
-    QString password() const;
+    Q_REQUIRED_RESULT QString email() const;
+    Q_REQUIRED_RESULT QString password() const;
 
     /** After finished() has been emitted you can
         retrieve the domains that are covered by these
@@ -64,7 +64,7 @@ public:
     /** After finished() has been emitted you can
         get the name of the provider, you can get a long
         name and a short one */
-    Q_INVOKABLE QString name(length) const;
+    Q_INVOKABLE QString name(Ispdb::length) const;
 
     /** After finished() has been emitted you can
         get a list of imap servers available for this provider */
@@ -135,17 +135,17 @@ protected:
                     (username is the emailaddress)
         @param crypt use https
      */
-    QUrl lookupUrl(const QString &type, const QString &version, bool auth, bool crypt);
+    Q_REQUIRED_RESULT QUrl lookupUrl(const QString &type, const QString &version, bool auth, bool crypt);
 
     /** setter for serverType */
     void setServerType(Ispdb::searchServerType type);
 
     /** getter for serverType */
-    Ispdb::searchServerType serverType() const;
+    Q_REQUIRED_RESULT Ispdb::searchServerType serverType() const;
 
     /** replaces %EMAILLOCALPART%, %EMAILADDRESS% and %EMAILDOMAIN% with the
         parts of the emailaddress */
-    QString replacePlaceholders(const QString &);
+    Q_REQUIRED_RESULT QString replacePlaceholders(const QString &);
 
     QByteArray mData; /** storage of incoming data from kio */
 protected Q_SLOTS:
@@ -179,7 +179,7 @@ struct Server {
 public:
     Server() = default;
 
-    bool isValid() const
+    Q_REQUIRED_RESULT bool isValid() const
     {
         return port != -1;
     }
@@ -195,12 +195,12 @@ QDebug operator<<(QDebug d, const Server &t);
 struct identity {
     identity() = default;
 
-    bool isValid() const
+    Q_REQUIRED_RESULT bool isValid() const
     {
         return !name.isEmpty();
     }
 
-    bool isDefault() const
+    Q_REQUIRED_RESULT bool isDefault() const
     {
         return mDefault;
     }

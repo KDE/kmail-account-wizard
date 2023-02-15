@@ -18,14 +18,14 @@ public:
     /** Constructor */
     explicit AutoconfigKolabLdap(QObject *parent = nullptr);
 
-    QHash<QString, ldapServer> ldapServers() const;
+    Q_REQUIRED_RESULT QHash<QString, ldapServer> ldapServers() const;
 
 protected:
     void lookupInDb(bool auth, bool crypt) override;
     void parseResult(const QDomDocument &document) override;
 
 private:
-    ldapServer createLdapServer(const QDomElement &n);
+    Q_REQUIRED_RESULT ldapServer createLdapServer(const QDomElement &n);
 
     QHash<QString, ldapServer> mLdapServers;
 };

@@ -18,7 +18,7 @@ public:
     void destroy() override;
     void edit();
 
-    int transportId() const;
+    Q_REQUIRED_RESULT int transportId() const;
 
 public Q_SLOTS:
     Q_SCRIPTABLE void setName(const QString &name);

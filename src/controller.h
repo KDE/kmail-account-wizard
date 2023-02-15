@@ -21,15 +21,13 @@ class Controller : public QObject
     Q_PROPERTY(QString wizardId READ wizardId WRITE setWizardId NOTIFY wizardIdChanged)
 
 public:
-    Controller(QObject *parent = nullptr);
-    ~Controller()
-    {
-    }
+    explicit Controller(QObject *parent = nullptr);
+    ~Controller() override = default;
 
     QQuickItem *wizardItem();
     void setWizardItem(QQuickItem *wizardItem);
 
-    QString wizardId() const;
+    Q_REQUIRED_RESULT QString wizardId() const;
     void setWizardId(const QString &wizardId);
 
 Q_SIGNALS:
