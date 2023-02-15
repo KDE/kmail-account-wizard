@@ -33,9 +33,7 @@ public Q_SLOTS:
 Q_SIGNALS:
     void ispdbFinished(bool);
 
-private Q_SLOTS:
-    void onIspdbFinished(bool);
-
 private:
+    void onIspdbFinished(bool);
     AutoconfigKolabLdap *const mIspdb;
 };

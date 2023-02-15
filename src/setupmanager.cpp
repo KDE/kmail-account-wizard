@@ -121,7 +121,7 @@ void SetupManager::execute()
     }
 }
 
-void SetupManager::setupSuccessSlot(const QString &msg)
+void SetupManager::slotSetupSuccess(const QString &msg)
 {
     Q_EMIT setupSucceeded(msg);
     if (m_currentSetupObject) {
@@ -132,7 +132,7 @@ void SetupManager::setupSuccessSlot(const QString &msg)
     setupNext();
 }
 
-void SetupManager::setupFailedSlot(const QString &msg)
+void SetupManager::slotSetupFailed(const QString &msg)
 {
     Q_EMIT setupFailed(msg);
     if (m_currentSetupObject) {
@@ -164,7 +164,7 @@ void SetupManager::setupNext()
 void SetupManager::rollback()
 {
     const auto setupObjectsList = m_setupObjects;
-    for (int i = 0; i < setupObjectsList.count(); ++i) {
+    for (int i = 0, total = setupObjectsList.count(); i < total; ++i) {
         auto obj = m_setupObjects.at(i);
         if (obj) {
             obj->destroy();
@@ -178,7 +178,7 @@ void SetupManager::rollback()
 
 SetupObject *SetupManager::connectObject(SetupObject *obj)
 {
-    connect(obj, &SetupObject::finished, this, &SetupManager::setupSuccessSlot);
+    connect(obj, &SetupObject::finished, this, &SetupManager::slotSetupSuccess);
     connect(obj, &SetupObject::finished, this, [](const QString &msg) {
         qDebug() << msg;
     });
@@ -186,7 +186,7 @@ SetupObject *SetupManager::connectObject(SetupObject *obj)
     connect(obj, &SetupObject::info, this, [](const QString &msg) {
         qDebug() << msg;
     });
-    connect(obj, &SetupObject::error, this, &SetupManager::setupFailedSlot);
+    connect(obj, &SetupObject::error, this, &SetupManager::slotSetupFailed);
     connect(obj, &SetupObject::error, this, [](const QString &msg) {
         qDebug() << msg;
     });

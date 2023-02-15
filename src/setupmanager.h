@@ -71,8 +71,8 @@ private:
     SetupObject *connectObject(SetupObject *obj);
 
 private Q_SLOTS:
-    void setupSuccessSlot(const QString &msg);
-    void setupFailedSlot(const QString &msg);
+    void slotSetupSuccess(const QString &msg);
+    void slotSetupFailed(const QString &msg);
 
 private:
     QString m_name, m_email, m_password;

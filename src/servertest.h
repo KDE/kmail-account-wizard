@@ -31,10 +31,8 @@ Q_SIGNALS:
     /* returns if no connection is possible, test failed. */
     void testFail();
 
-private Q_SLOTS:
-    void testFinished(const QVector<int> &list);
-
 private:
+    void testFinished(const QVector<int> &list);
     MailTransport::ServerTest *const m_serverTest;
 };
 
