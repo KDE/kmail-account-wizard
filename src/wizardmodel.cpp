@@ -36,9 +36,7 @@ void WizardModel::reload()
     m_items = list;
 }
 
-WizardModel::~WizardModel()
-{
-}
+WizardModel::~WizardModel() = default;
 
 QVariant WizardModel::data(const QModelIndex &index, int role) const
 {

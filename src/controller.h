@@ -36,11 +36,11 @@ Q_SIGNALS:
 
 private:
     QQuickItem *createGui(const QString &qmlPath);
-    QString qmlPath() const;
+    Q_REQUIRED_RESULT QString qmlPath() const;
 
-    QQmlEngine *m_engine;
+    QQmlEngine *m_engine = nullptr;
     KLocalizedContext *m_contextObj = nullptr;
     KPackage::Package m_wizardPackage;
-    QQuickItem *m_wizardItem;
+    QQuickItem *m_wizardItem = nullptr;
     QString m_wizardId;
 };
