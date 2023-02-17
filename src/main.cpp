@@ -95,10 +95,11 @@ int main(int argc, char **argv)
     //    Global::setAssistant(parser.value(QStringLiteral("assistant")));
     //}
     //
-    // QString typeValue = parser.value(QStringLiteral("type"));
-    // if (!typeValue.isEmpty()) {
-    //    Global::setTypeFilter(typeValue.split(QLatin1Char(',')));
-    //}
+    const QString typeValue = parser.value(QStringLiteral("type"));
+    if (!typeValue.isEmpty()) {
+        qDebug() << " Need type " << typeValue;
+        //    Global::setTypeFilter(typeValue.split(QLatin1Char(',')));
+    }
 
     QQmlApplicationEngine engine;
 
