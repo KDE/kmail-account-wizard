@@ -47,7 +47,7 @@ int main(int argc, char **argv)
     KCrash::initialize();
     KAboutData aboutData(QStringLiteral("accountwizard"),
                          i18n("Account Assistant"),
-                         QStringLiteral("0.2"),
+                         QStringLiteral("0.3"),
                          i18n("Helps setting up PIM accounts"),
                          KAboutLicense::LGPL,
                          i18n("(c) 2009-2023 the Akonadi developers"),
