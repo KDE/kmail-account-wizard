@@ -7,6 +7,7 @@
 #pragma once
 
 #include "key.h"
+#include "libaccountwizard_export.h"
 
 #include <QObject>
 #include <QVector>
@@ -18,7 +19,7 @@ namespace KWallet
 class Wallet;
 }
 
-class SetupManager : public QObject
+class LIBACCOUNTWIZARD_EXPORT SetupManager : public QObject
 {
     Q_OBJECT
 public:

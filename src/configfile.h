@@ -5,7 +5,7 @@
 */
 
 #pragma once
-
+#include "libaccountwizard_export.h"
 #include "setupobject.h"
 #include <QVector>
 class KConfig;
@@ -17,7 +17,7 @@ struct Config {
     bool obscure;
 };
 
-class ConfigFile : public SetupObject
+class LIBACCOUNTWIZARD_EXPORT ConfigFile : public SetupObject
 {
     Q_OBJECT
 public:

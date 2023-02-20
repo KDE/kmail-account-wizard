@@ -5,11 +5,11 @@
 */
 
 #pragma once
-
+#include "libaccountwizard_export.h"
 #include "setupobject.h"
 #include <MailTransport/Transport>
 
-class Transport : public SetupObject
+class LIBACCOUNTWIZARD_EXPORT Transport : public SetupObject
 {
     Q_OBJECT
 public:

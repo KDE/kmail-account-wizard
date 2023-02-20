@@ -2,7 +2,7 @@
 // SPDX-LicenseRed: LGPL-2.0-or-later
 
 #pragma once
-
+#include "libaccountwizard_export.h"
 #include <KPackage/Package>
 #include <QObject>
 #include <QQuickItem>
@@ -14,7 +14,7 @@ class KLocalizedContext;
 /// /brief Main Controller for the AccountWizard.
 ///
 /// Creates QQuickItem from pluginId
-class Controller : public QObject
+class LIBACCOUNTWIZARD_EXPORT Controller : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QQuickItem *wizardItem READ wizardItem WRITE setWizardItem NOTIFY wizardItemChanged)

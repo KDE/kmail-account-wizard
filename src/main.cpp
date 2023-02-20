@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.0-or-later
 #include "configfile.h"
 #include "controller.h"
 #include "identity.h"
-#include "ispdb/ispdb.h"
+#include "ispdb.h"
 #include "resource.h"
 #include "servertest.h"
 #include "setupmanager.h"

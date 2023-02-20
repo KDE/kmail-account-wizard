@@ -6,7 +6,7 @@
 
 #include "setupispdb.h"
 #include "identity.h"
-#include "ispdb/ispdb.h"
+#include "ispdb.h"
 #include "resource.h"
 #include "transport.h"
 

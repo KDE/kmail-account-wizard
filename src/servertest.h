@@ -5,7 +5,7 @@
 */
 
 #pragma once
-
+#include "libaccountwizard_export.h"
 #include <QObject>
 
 namespace MailTransport
@@ -13,7 +13,7 @@ namespace MailTransport
 class ServerTest;
 }
 
-class ServerTest : public QObject
+class LIBACCOUNTWIZARD_EXPORT ServerTest : public QObject
 {
     Q_OBJECT
 public:

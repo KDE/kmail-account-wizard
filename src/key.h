@@ -5,7 +5,7 @@
 */
 
 #pragma once
-
+#include "libaccountwizard_export.h"
 #include "setupobject.h"
 
 #include <QPointer>
@@ -22,7 +22,7 @@ namespace QGpgME
 {
 }
 
-class Key : public SetupObject
+class LIBACCOUNTWIZARD_EXPORT Key : public SetupObject
 {
     Q_OBJECT
 

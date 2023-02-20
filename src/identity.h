@@ -5,7 +5,7 @@
 */
 
 #pragma once
-
+#include "libaccountwizard_export.h"
 #include "setupobject.h"
 
 #include <gpgme++/global.h>
@@ -17,7 +17,7 @@ namespace KIdentityManagement
 class Identity;
 }
 
-class Identity : public SetupObject
+class LIBACCOUNTWIZARD_EXPORT Identity : public SetupObject
 {
     Q_OBJECT
 public:

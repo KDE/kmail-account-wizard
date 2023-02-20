@@ -3,7 +3,11 @@
 # SPDX-License-Identifier: BSD-3-Clause
 add_subdirectory(packagestructure)
 
-set(accountwizard_srcs
+add_library(libaccountwizard)
+
+generate_export_header(libaccountwizard BASE_NAME libaccountwizard)
+
+target_sources(libaccountwizard PRIVATE
     #cryptopage.cpp
     #dialog.cpp
     wizardmodel.cpp
@@ -23,7 +27,7 @@ set(accountwizard_srcs
     setupautoconfigkolabldap.cpp
     setupautoconfigkolabfreebusy.cpp
     servertest.cpp
-    ispdb/ispdb.cpp
+    ispdb.cpp
     ispdb/autoconfigkolabmail.cpp
     ispdb/autoconfigkolabldap.cpp
     ispdb/autoconfigkolabfreebusy.cpp
@@ -44,19 +48,19 @@ set(accountwizard_srcs
     setupautoconfigkolabldap.h
     setupautoconfigkolabfreebusy.h
     servertest.h
-    ispdb/ispdb.h
+    ispdb.h
     ispdb/autoconfigkolabmail.h
     ispdb/autoconfigkolabldap.h
     ispdb/autoconfigkolabfreebusy.h
     resources.qrc
     )
 
-ecm_qt_declare_logging_category(accountwizard_srcs HEADER accountwizard_debug.h IDENTIFIER ACCOUNTWIZARD_LOG CATEGORY_NAME org.kde.pim.accountwizard
+ecm_qt_declare_logging_category(libaccountwizard HEADER accountwizard_debug.h IDENTIFIER ACCOUNTWIZARD_LOG CATEGORY_NAME org.kde.pim.accountwizard
         OLD_CATEGORY_NAMES log_accountwizard
         DESCRIPTION "accountwizard (accountwizard)" EXPORT ACCOUNTWIZARD)
 
 
-set(accountwizard_libs
+target_link_libraries(libaccountwizard
     KF5::AkonadiCore
     KF5::AkonadiWidgets
     KF5::MailTransportAkonadi
@@ -79,6 +83,7 @@ set(accountwizard_libs
     Qt::Quick
     Qt::QuickControls2
     KF${KF_MAJOR_VERSION}::Codecs
+    KF${KF_MAJOR_VERSION}::DBusAddons
     )
 
 add_executable(accountwizard ${accountwizard_srcs} main.cpp)
@@ -86,7 +91,9 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(accountwizard PROPERTIES UNITY_BUILD ON)
 endif()
 
-target_link_libraries(accountwizard ${accountwizard_libs} KF${KF_MAJOR_VERSION}::DBusAddons)
+target_link_libraries(accountwizard libaccountwizard)
+
+install(TARGETS libaccountwizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
 #add_library(accountwizard_plugin MODULE ${accountwizard_srcs} inprocess-main.cpp)
 #if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)

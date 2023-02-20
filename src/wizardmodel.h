@@ -5,11 +5,11 @@
 */
 
 #pragma once
-
+#include "libaccountwizard_export.h"
 #include <KPluginMetaData>
 #include <QAbstractListModel>
 
-class WizardModel : public QAbstractListModel
+class LIBACCOUNTWIZARD_EXPORT WizardModel : public QAbstractListModel
 {
     Q_OBJECT
     Q_PROPERTY(int assistant READ assistant WRITE setAssistant NOTIFY assistantChanged)

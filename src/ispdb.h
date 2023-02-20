@@ -6,11 +6,10 @@
 */
 
 #pragma once
-
-#include <QObject>
-
+#include "libaccountwizard_export.h"
 #include <KIO/Job>
 #include <KMime/HeaderParsing>
+#include <QObject>
 #include <QUrl>
 
 class QDomElement;
@@ -27,7 +26,7 @@ struct identity;
     https://developer.mozilla.org/en/Thunderbird/Autoconfiguration
     https://ispdb.mozillamessaging.com/
 */
-class Ispdb : public QObject
+class LIBACCOUNTWIZARD_EXPORT Ispdb : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString email READ email WRITE setEmail NOTIFY emailChanged)
@@ -212,4 +211,3 @@ struct identity {
     bool mDefault = false;
 };
 QDebug operator<<(QDebug d, const identity &t);
-
