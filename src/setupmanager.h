@@ -66,17 +66,18 @@ Q_SIGNALS:
     void setupFailed(const QString &msg);
     void setupInfo(const QString &msg);
 
-private:
-    void setupNext();
-    void rollback();
-    SetupObject *connectObject(SetupObject *obj);
-
 private Q_SLOTS:
     void slotSetupSuccess(const QString &msg);
     void slotSetupFailed(const QString &msg);
 
 private:
-    QString m_name, m_email, m_password;
+    void setupNext();
+    void rollback();
+    SetupObject *connectObject(SetupObject *obj);
+
+    QString m_name;
+    QString m_email;
+    QString m_password;
     QVector<SetupObject *> m_objectToSetup;
     QVector<SetupObject *> m_setupObjects;
     SetupObject *m_currentSetupObject = nullptr;
