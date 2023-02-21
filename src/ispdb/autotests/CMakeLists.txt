@@ -10,7 +10,7 @@ set(ispdbtest_srcs
 
 set(ispdbtest_libs
   KF${KF_MAJOR_VERSION}::KIOCore
-  KF5::Mime
+  KPim${KF_MAJOR_VERSION}::Mime
   Qt::Test
   Qt::Xml
   Qt::Network

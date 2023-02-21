@@ -67,7 +67,7 @@ target_link_libraries(libaccountwizard
     KF5::MailTransport
     KF${KF_MAJOR_VERSION}::KCMUtils
     KF${KF_MAJOR_VERSION}::KIOCore
-    KF5::Mime
+    KPim${KF_MAJOR_VERSION}::Mime
     KF5::IdentityManagement
     KF${KF_MAJOR_VERSION}::WidgetsAddons
     KF5::Libkdepim

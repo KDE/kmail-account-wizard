@@ -11,7 +11,7 @@ target_link_libraries(ispdb
     libaccountwizard
     KF${KF_MAJOR_VERSION}::I18n
     KF${KF_MAJOR_VERSION}::KIOCore
-    KF5::Mime
+    KPim${KF_MAJOR_VERSION}::Mime
     Qt::Widgets
     Qt::Xml
     )
