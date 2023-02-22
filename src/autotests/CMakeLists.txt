@@ -14,7 +14,7 @@ target_link_libraries(ldaptest
     KF5::Mime
     KPim${KF_MAJOR_VERSION}::Ldap
     Qt::Test
-    KF5::Libkdepim
+    KPim${KF_MAJOR_VERSION}::Libkdepim
     KF5::I18n
     KF5::ConfigCore
     Qt::Widgets

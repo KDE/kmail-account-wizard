@@ -76,16 +76,16 @@ ecm_qt_declare_logging_category(accountwizard_srcs HEADER accountwizard_debug.h 
 
 set(accountwizard_libs
     KF5::AkonadiCore
-    KF5::MailTransportAkonadi
-    KF5::MailTransport
+    KPim${KF_MAJOR_VERSION}::MailTransportAkonadi
+    KPim${KF_MAJOR_VERSION}::MailTransport
     KF5::KCMUtils
     KF5::KrossCore
     KF5::KIOCore
     KF5::Mime
-    KF5::IdentityManagement
+    KPim${KF_MAJOR_VERSION}::IdentityManagement
     KF5::WidgetsAddons
     Qt::UiTools
-    KF5::Libkdepim
+    KPim${KF_MAJOR_VERSION}::Libkdepim
     KF5::ItemViews
     KF5::I18n
     KPim${KF_MAJOR_VERSION}::Ldap
