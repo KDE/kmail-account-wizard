@@ -12,7 +12,7 @@ ecm_mark_as_test(ldaptest)
 target_link_libraries(ldaptest
     KF5::KIOCore
     KF5::Mime
-    KF5::Ldap
+    KPim${KF_MAJOR_VERSION}::Ldap
     Qt::Test
     KF5::Libkdepim
     KF5::I18n

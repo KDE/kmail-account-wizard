@@ -88,7 +88,7 @@ set(accountwizard_libs
     KF5::Libkdepim
     KF5::ItemViews
     KF5::I18n
-    KF5::Ldap
+    KPim${KF_MAJOR_VERSION}::Ldap
     KF5::AkonadiWidgets
     KF5::Crash
     KF5::Libkleo
