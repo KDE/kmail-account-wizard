@@ -93,6 +93,7 @@ find_package(KF5Libkleo ${LIBKLEO_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
 find_package(MailTransportDBusService CONFIG REQUIRED)
 find_package(KPim${KF_MAJOR_VERSION}AkonadiMime ${AKONADI_MIMELIB_VERSION} CONFIG REQUIRED)
+find_package(KPim${KF_MAJOR_VERSION}Mime ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
 
 
 include_directories(${kmail-account-wizard_SOURCE_DIR} ${kmail-account-wizard_BINARY_DIR})

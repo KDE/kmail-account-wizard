@@ -81,7 +81,7 @@ set(accountwizard_libs
     KF5::KCMUtils
     KF5::KrossCore
     KF5::KIOCore
-    KF5::Mime
+    KPim${KF_MAJOR_VERSION}::Mime
     KPim${KF_MAJOR_VERSION}::IdentityManagement
     KF5::WidgetsAddons
     Qt::UiTools

@@ -11,7 +11,7 @@ add_executable(ispdb ${ispdb_srcs})
 target_link_libraries(ispdb
     KF5::I18n
     KF5::KIOCore
-    KF5::Mime
+    KPim${KF_MAJOR_VERSION}::Mime
     Qt::Widgets
     Qt::Xml
     )
