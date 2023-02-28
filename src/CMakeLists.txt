@@ -91,7 +91,7 @@ set(accountwizard_libs
     KPim${KF_MAJOR_VERSION}::Ldap
     KF5::AkonadiWidgets
     KF5::Crash
-    KF5::Libkleo
+    KPim${KF_MAJOR_VERSION}::Libkleo
     KF5::Notifications
     KF5::PimCommon
     KF5::XmlGui
