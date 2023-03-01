@@ -12,7 +12,6 @@ set(ispdbtest_libs
   KF${KF_MAJOR_VERSION}::KIOCore
   KPim${KF_MAJOR_VERSION}::Mime
   Qt::Test
-  Qt::Xml
   Qt::Network
   KF${KF_MAJOR_VERSION}::I18n
 )

@@ -13,7 +13,6 @@ target_link_libraries(ispdb
     KF${KF_MAJOR_VERSION}::KIOCore
     KPim${KF_MAJOR_VERSION}::Mime
     Qt::Widgets
-    Qt::Xml
     )
 
 install(TARGETS ispdb ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
