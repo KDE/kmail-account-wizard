@@ -63,19 +63,19 @@ ecm_qt_declare_logging_category(libaccountwizard HEADER accountwizard_debug.h ID
 target_link_libraries(libaccountwizard
     KF5::AkonadiCore
     KF5::AkonadiWidgets
-    KF5::MailTransportAkonadi
-    KF5::MailTransport
+    KPim${KF_MAJOR_VERSION}::MailTransportAkonadi
+    KPim${KF_MAJOR_VERSION}::MailTransport
     KF${KF_MAJOR_VERSION}::KCMUtils
     KF${KF_MAJOR_VERSION}::KIOCore
     KPim${KF_MAJOR_VERSION}::Mime
-    KF5::IdentityManagement
+    KPim${KF_MAJOR_VERSION}::IdentityManagement
     KF${KF_MAJOR_VERSION}::WidgetsAddons
-    KF5::Libkdepim
+    KPim${KF_MAJOR_VERSION}::Libkdepim
     KF${KF_MAJOR_VERSION}::ItemViews
     KF${KF_MAJOR_VERSION}::I18n
-    KF5::Ldap
+    KPim${KF_MAJOR_VERSION}::Ldap
     KF${KF_MAJOR_VERSION}::Crash
-    KF5::Libkleo
+    KPim${KF_MAJOR_VERSION}::Libkleo
     KF${KF_MAJOR_VERSION}::Notifications
     KF5::PimCommon
     KF${KF_MAJOR_VERSION}::XmlGui

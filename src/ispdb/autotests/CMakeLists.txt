@@ -48,7 +48,7 @@ ecm_mark_as_test(autoconfigkolabldaptest)
 ecm_mark_nongui_executable(autoconfigkolabldaptest)
 
 target_link_libraries(autoconfigkolabldaptest
-  KF5::Ldap
+  KPim${KF_MAJOR_VERSION}::Ldap
   ${ispdbtest_libs}
 )
 
