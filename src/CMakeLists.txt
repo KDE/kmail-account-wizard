@@ -75,7 +75,7 @@ ecm_qt_declare_logging_category(accountwizard_srcs HEADER accountwizard_debug.h 
 
 
 set(accountwizard_libs
-    KF5::AkonadiCore
+    KPim${KF_MAJOR_VERSION}::AkonadiCore
     KPim${KF_MAJOR_VERSION}::MailTransportAkonadi
     KPim${KF_MAJOR_VERSION}::MailTransport
     KF5::KCMUtils
@@ -89,7 +89,7 @@ set(accountwizard_libs
     KF5::ItemViews
     KF5::I18n
     KPim${KF_MAJOR_VERSION}::Ldap
-    KF5::AkonadiWidgets
+    KPim${KF_MAJOR_VERSION}::AkonadiWidgets
     KF5::Crash
     KPim${KF_MAJOR_VERSION}::Libkleo
     KF5::Notifications
