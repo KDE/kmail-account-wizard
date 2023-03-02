@@ -61,8 +61,8 @@ ecm_qt_declare_logging_category(libaccountwizard HEADER accountwizard_debug.h ID
 
 
 target_link_libraries(libaccountwizard
-    KF5::AkonadiCore
-    KF5::AkonadiWidgets
+    KPim${KF_MAJOR_VERSION}::AkonadiCore
+    KPim${KF_MAJOR_VERSION}::AkonadiWidgets
     KPim${KF_MAJOR_VERSION}::MailTransportAkonadi
     KPim${KF_MAJOR_VERSION}::MailTransport
     KF${KF_MAJOR_VERSION}::KCMUtils
