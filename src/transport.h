@@ -37,8 +37,8 @@ private:
     int m_port = -1;
     QString m_user;
     QString m_password;
-    MailTransport::Transport::EnumEncryption::type m_encr;
-    MailTransport::Transport::EnumAuthenticationType::type m_auth;
+    MailTransport::Transport::EnumEncryption m_encr;
+    MailTransport::Transport::EnumAuthenticationType m_auth;
     QString m_encrStr;
     QString m_authStr;
 
