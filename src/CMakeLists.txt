@@ -93,7 +93,7 @@ set(accountwizard_libs
     KF5::Crash
     KPim${KF_MAJOR_VERSION}::Libkleo
     KF5::Notifications
-    KF5::PimCommon
+    KPim${KF_MAJOR_VERSION}::PimCommon
     KF5::XmlGui
     )
 
