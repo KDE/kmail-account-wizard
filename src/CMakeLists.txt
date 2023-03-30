@@ -77,7 +77,7 @@ target_link_libraries(libaccountwizard
     KF${KF_MAJOR_VERSION}::Crash
     KPim${KF_MAJOR_VERSION}::Libkleo
     KF${KF_MAJOR_VERSION}::Notifications
-    KF5::PimCommon
+    KPim${KF_MAJOR_VERSION}::PimCommon
     KF${KF_MAJOR_VERSION}::XmlGui
     KF${KF_MAJOR_VERSION}::Package
     Qt::Quick
