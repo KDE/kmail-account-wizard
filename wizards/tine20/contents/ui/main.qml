@@ -129,18 +129,18 @@ Kirigami.ScrollablePage {
         QQC2.TextField {
             id: nameField
             Kirigami.FormData.label: i18n("Name:")
-            text: SetupManager.name
+            text: SetupManager.name()
         }
         QQC2.TextField {
             id: emailField
             Kirigami.FormData.label: i18n("Email:")
             onTextChanged: guessServerName()
-            text: SetupManager.email
+            text: SetupManager.email()
         }
         Kirigami.PasswordField {
             id: passwordField
             Kirigami.FormData.label: i18n("Password:")
-            text: SetupManager.password
+            text: SetupManager.password()
             onAccepted: userChangedServerAddress = true;
         }
         QQC2.TextField {
