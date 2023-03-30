@@ -31,12 +31,12 @@ Kirigami.ScrollablePage {
             QQC2.TextField {
                 Kirigami.FormData.label: i18n("Full name:")
                 placeholderText: i18nc("Generic name", "John Smith") 
-                text: SetupManager.name
+                text: SetupManager.name()
             }
             QQC2.TextField {
                 Kirigami.FormData.label: i18n("E-mail address:")
                 placeholderText: i18nc("Generic email address", "boss@example.corp")
-                text: SetupManager.email
+                text: SetupManager.email()
             }
             Kirigami.PasswordField {
                 Kirigami.FormData.label: i18n("Password:")
