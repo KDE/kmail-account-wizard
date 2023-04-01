@@ -102,6 +102,7 @@ int main(int argc, char **argv)
     }
 
     QQmlApplicationEngine engine;
+    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
 
     Controller controller;
     qmlRegisterType<WizardModel>("org.kde.pim.accountwizard", 1, 0, "WizardModel");
@@ -109,9 +110,6 @@ int main(int argc, char **argv)
     qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "Controller", &controller);
     qmlRegisterType<PimCommon::EmailValidator>("org.kde.pim.accountwizard", 1, 0, "EmailValidator");
     qmlRegisterType<Ispdb>("org.kde.pim.accountwizard", 1, 0, "Ispdb");
-
-    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
-    engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
 
     qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "SetupManager", &SetupManager::instance());
     qRegisterMetaType<Identity *>("Identity *");
@@ -121,6 +119,8 @@ int main(int argc, char **argv)
     qRegisterMetaType<ConfigFile *>("ConfigFile *");
     ServerTest serverTest;
     qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "ServerTest", &serverTest);
+
+    engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
 
     // loadPage->exportObject(new ServerTest(this), QStringLiteral("ServerTest"));
 
