@@ -30,6 +30,7 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 include(ECMDeprecationSettings)
+include(ECMQmlModule)
 
 # Do NOT add quote
 set(KDEPIM_DEV_VERSION alpha)
@@ -138,6 +139,7 @@ endif ()
 
 add_subdirectory(src)
 add_subdirectory(wizards)
+add_subdirectory(components)
 
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 ki18n_install(po)

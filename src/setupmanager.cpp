@@ -134,17 +134,12 @@ void SetupManager::slotSetupSuccess(const QString &msg)
 
 void SetupManager::slotSetupFailed(const QString &msg)
 {
-    Q_EMIT setupFailed(msg);
+    Q_EMIT errorOccured(msg);
     if (m_currentSetupObject) {
         m_setupObjects.append(m_currentSetupObject);
         m_currentSetupObject = nullptr;
     }
     rollback();
-}
-
-void SetupManager::setupInfoSlot(const QString &msg)
-{
-    Q_EMIT setupInfo(msg);
 }
 
 void SetupManager::setupNext()
@@ -182,11 +177,11 @@ SetupObject *SetupManager::connectObject(SetupObject *obj)
     connect(obj, &SetupObject::finished, this, [](const QString &msg) {
         qDebug() << msg;
     });
-    connect(obj, &SetupObject::info, this, &SetupManager::setupInfo);
+    connect(obj, &SetupObject::info, this, &SetupManager::infoOccured);
     connect(obj, &SetupObject::info, this, [](const QString &msg) {
         qDebug() << msg;
     });
-    connect(obj, &SetupObject::error, this, &SetupManager::slotSetupFailed);
+    connect(obj, &SetupObject::error, this, &SetupManager::errorOccured);
     connect(obj, &SetupObject::error, this, [](const QString &msg) {
         qDebug() << msg;
     });

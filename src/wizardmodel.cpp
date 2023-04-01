@@ -46,13 +46,14 @@ QVariant WizardModel::data(const QModelIndex &index, int role) const
 
     const auto &item = m_items[index.row()];
     switch (role) {
-    case Qt::ToolTipRole:
+    case DescriptionRole:
         return item.description();
     case Qt::DisplayRole:
+    case NameRole:
         return item.name();
-    case Qt::DecorationRole:
+    case IconNameRole:
         return item.iconName();
-    case PluginId:
+    case PluginIdRole:
         return item.pluginId();
     default:
         return {};
@@ -81,7 +82,10 @@ int WizardModel::assistant() const
 
 QHash<int, QByteArray> WizardModel::roleNames() const
 {
-    auto roles = QAbstractListModel::roleNames();
-    roles[PluginId] = QByteArrayLiteral("pluginId");
-    return roles;
+    return {
+        {NameRole, "name"},
+        {PluginIdRole, "pluginId"},
+        {DescriptionRole, "description"},
+        {IconNameRole, "iconName"},
+    };
 }

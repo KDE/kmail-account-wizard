@@ -54,7 +54,6 @@ public Q_SLOTS:
     Q_SCRIPTABLE QObject *createIdentity();
     Q_SCRIPTABLE QObject *createKey();
     Q_SCRIPTABLE void execute();
-    Q_SCRIPTABLE void setupInfoSlot(const QString &msg);
     Q_SCRIPTABLE QObject *ispDB(const QString &type);
 
     void requestRollback();
@@ -63,8 +62,8 @@ Q_SIGNALS:
     void rollbackComplete();
     void setupFinished(SetupObject *obj);
     void setupSucceeded(const QString &msg);
-    void setupFailed(const QString &msg);
-    void setupInfo(const QString &msg);
+    void errorOccured(const QString &errorMessage);
+    void infoOccured(const QString &infoMessage);
 
 private Q_SLOTS:
     void slotSetupSuccess(const QString &msg);

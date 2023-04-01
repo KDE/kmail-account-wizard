@@ -14,7 +14,7 @@ class LIBACCOUNTWIZARD_EXPORT WizardModel : public QAbstractListModel
     Q_OBJECT
     Q_PROPERTY(int assistant READ assistant WRITE setAssistant NOTIFY assistantChanged)
 public:
-    enum Roles { PluginId = Qt::UserRole };
+    enum Roles { NameRole = Qt::UserRole, IconNameRole, DescriptionRole, PluginIdRole };
 
 public:
     explicit WizardModel(QObject *parent = nullptr);
