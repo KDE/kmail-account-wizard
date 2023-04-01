@@ -14,13 +14,21 @@ Kirigami.ScrollablePage {
             id: wizardModel
         }
         delegate: Kirigami.BasicListItem {
-            icon: model.decoration
-            label: model.display
-            subtitle: model.tooltip
+            required property int index
+            required property string description
+            required property string name
+            required property string iconName
+            required property string pluginId
+
+            icon: iconName
+            label: name
+            subtitle: description
 
             onClicked: {
-                Account.Controller.wizardId = model.pluginId;
-                pageStack.push(Account.Controller.wizardItem, {"title": model.display});
+                Account.Controller.wizardId = pluginId;
+                pageStack.push(Account.Controller.wizardItem, {
+                    title: name,
+                });
             }
         }
     }
