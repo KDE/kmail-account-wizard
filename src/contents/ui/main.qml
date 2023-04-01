@@ -7,5 +7,19 @@ import org.kde.kirigami 2.15 as Kirigami
 import org.kde.pim.accountwizard 1.0 as Account
 
 Kirigami.ApplicationWindow {
-    pageStack.initialPage: PersonalDataPage {}
+    id: root
+
+    pageStack {
+        initialPage: PersonalDataPage {}
+        defaultColumnWidth: root.width
+
+        globalToolBar {
+            style: Kirigami.ApplicationHeaderStyle.ToolBar
+            showNavigationButtons: if (applicationWindow().pageStack.currentIndex > 0) {
+                Kirigami.ApplicationHeaderStyle.ShowBackButton
+            } else {
+                0
+            }
+        }
+    }
 }
