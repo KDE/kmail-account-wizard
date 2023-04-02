@@ -76,7 +76,7 @@ ecm_qt_declare_logging_category(accountwizard_srcs HEADER accountwizard_debug.h 
 
 set(accountwizard_libs
     KPim${KF_MAJOR_VERSION}::AkonadiCore
-    KPim${KF_MAJOR_VERSION}::MailTransportAkonadi
+    KPim${KF_MAJOR_VERSION}::AkonadiMime
     KPim${KF_MAJOR_VERSION}::MailTransport
     KF5::KCMUtils
     KF5::KrossCore

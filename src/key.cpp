@@ -16,9 +16,9 @@
 
 #include <gpgme++/engineinfo.h>
 
+#include <Akonadi/MessageQueueJob>
 #include <MailTransport/Transport>
 #include <MailTransport/TransportManager>
-#include <MailTransportAkonadi/MessageQueueJob>
 
 #include <KIdentityManagement/Identity>
 #include <KIdentityManagement/IdentityManager>
@@ -173,13 +173,13 @@ void Key::onWKSPublishingRequestCreated(const GpgME::Error &gpgMeError, const QB
     msg->assemble();
 
     // Move to outbox
-    auto job = new MailTransport::MessageQueueJob;
+    auto job = new Akonadi::MessageQueueJob;
     mJob = job;
     job->addressAttribute().setTo({msg->to(false)->asUnicodeString()});
     job->transportAttribute().setTransportId(transport->id());
     job->addressAttribute().setFrom(msg->from(false)->asUnicodeString());
     // Don't leave any evidence :-)
-    job->sentBehaviourAttribute().setSentBehaviour(MailTransport::SentBehaviourAttribute::Delete);
+    job->sentBehaviourAttribute().setSentBehaviour(Akonadi::SentBehaviourAttribute::Delete);
     job->sentBehaviourAttribute().setSendSilently(true);
     job->setMessage(msg);
     connect(job, &KJob::result, this, &Key::onWKSPublishingRequestSent);
