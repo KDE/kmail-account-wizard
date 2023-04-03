@@ -94,6 +94,7 @@ set(accountwizard_libs
     KPim${KF_MAJOR_VERSION}::Libkleo
     KF5::Notifications
     KPim${KF_MAJOR_VERSION}::PimCommon
+    KF5::Wallet
     KF5::XmlGui
     )
 
