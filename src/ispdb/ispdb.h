@@ -60,17 +60,17 @@ public:
 
     /** After finished() has been emitted you can
         get a list of imap servers available for this provider */
-    QVector<Server> imapServers() const;
+    QList<Server> imapServers() const;
 
     /** After finished() has been emitted you can
         get a list of pop3 servers available for this provider */
-    QVector<Server> pop3Servers() const;
+    QList<Server> pop3Servers() const;
 
     /** After finished() has been emitted you can
         get a list of smtp servers available for this provider */
-    QVector<Server> smtpServers() const;
+    QList<Server> smtpServers() const;
 
-    QVector<identity> identities() const;
+    QList<identity> identities() const;
 
     int defaultIdentity() const;
 public Q_SLOTS:
@@ -151,10 +151,10 @@ private:
     QStringList mDomains;
     QString mDisplayName;
     QString mDisplayShortName;
-    QVector<Server> mImapServers;
-    QVector<Server> mPop3Servers;
-    QVector<Server> mSmtpServers;
-    QVector<identity> mIdentities;
+    QList<Server> mImapServers;
+    QList<Server> mPop3Servers;
+    QList<Server> mSmtpServers;
+    QList<identity> mIdentities;
 
     int mDefaultIdentity = -1;
     Ispdb::searchServerType mServerType;

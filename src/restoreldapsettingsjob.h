@@ -37,8 +37,8 @@ private:
     void loadNextHostSettings();
     void saveNextSelectHostSettings();
     void saveNextHostSettings();
-    QVector<KLDAP::LdapServer> mSelHosts;
-    QVector<KLDAP::LdapServer> mHosts;
+    QList<KLDAP::LdapServer> mSelHosts;
+    QList<KLDAP::LdapServer> mHosts;
     int mEntry = -1;
     int mNumSelHosts = -1;
     int mNumHosts = -1;

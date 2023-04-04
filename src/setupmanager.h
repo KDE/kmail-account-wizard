@@ -7,8 +7,8 @@
 #pragma once
 
 #include "key.h"
+#include <QList>
 #include <QObject>
-#include <QVector>
 #include <gpgme++/key.h>
 
 namespace KWallet
@@ -36,8 +36,8 @@ public:
     void setKey(const GpgME::Key &key);
     void setKeyPublishingMethod(Key::PublishingMethod method);
 
-    QVector<SetupObject *> objectsToSetup() const;
-    QVector<SetupObject *> setupObjects() const;
+    QList<SetupObject *> objectsToSetup() const;
+    QList<SetupObject *> setupObjects() const;
 
 public Q_SLOTS:
     Q_SCRIPTABLE bool personalDataAvailable() const;
@@ -74,8 +74,8 @@ private Q_SLOTS:
 
 private:
     QString m_name, m_email, m_password;
-    QVector<SetupObject *> m_objectToSetup;
-    QVector<SetupObject *> m_setupObjects;
+    QList<SetupObject *> m_objectToSetup;
+    QList<SetupObject *> m_setupObjects;
     SetupObject *m_currentSetupObject = nullptr;
     SetupPage *m_page = nullptr;
     KWallet::Wallet *m_wallet = nullptr;

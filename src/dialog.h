@@ -50,6 +50,6 @@ private:
     KPageWidgetItem *mProviderPage = nullptr;
     KPageWidgetItem *mTypePage = nullptr;
     KPageWidgetItem *mLoadPage = nullptr;
-    QVector<KPageWidgetItem *> mDynamicPages;
+    QList<KPageWidgetItem *> mDynamicPages;
 };
 
