@@ -75,32 +75,32 @@ ecm_qt_declare_logging_category(accountwizard_srcs HEADER accountwizard_debug.h 
 
 
 set(accountwizard_libs
-    KPim${KF_MAJOR_VERSION}::AkonadiCore
-    KPim${KF_MAJOR_VERSION}::AkonadiMime
-    KPim${KF_MAJOR_VERSION}::MailTransport
-    KF5::KCMUtils
-    KF5::KrossCore
-    KF5::KIOCore
-    KPim${KF_MAJOR_VERSION}::Mime
-    KPim${KF_MAJOR_VERSION}::IdentityManagement
-    KF5::WidgetsAddons
+    KPim6::AkonadiCore
+    KPim6::AkonadiMime
+    KPim6::MailTransport
+    KF6::KCMUtils
+    KF6::KrossCore
+    KF6::KIOCore
+    KPim6::Mime
+    KPim6::IdentityManagement
+    KF6::WidgetsAddons
     Qt::UiTools
-    KPim${KF_MAJOR_VERSION}::Libkdepim
-    KF5::ItemViews
-    KF5::I18n
-    KPim${KF_MAJOR_VERSION}::Ldap
-    KPim${KF_MAJOR_VERSION}::AkonadiWidgets
-    KF5::Crash
-    KPim${KF_MAJOR_VERSION}::Libkleo
-    KF5::Notifications
-    KPim${KF_MAJOR_VERSION}::PimCommon
-    KF5::XmlGui
+    KPim6::Libkdepim
+    KF6::ItemViews
+    KF6::I18n
+    KPim6::Ldap
+    KPim6::AkonadiWidgets
+    KF6::Crash
+    KPim6::Libkleo
+    KF6::Notifications
+    KPim6::PimCommon
+    KF6::XmlGui
     )
 
 if ( NOT ACCOUNTWIZARD_NO_GHNS )
     set(accountwizard_srcs ${accountwizard_srcs} providerpage.cpp)
     ki18n_wrap_ui(accountwizard_srcs ui/providerpage.ui)
-    set(accountwizard_libs ${accountwizard_libs} KF5::NewStuff)
+    set(accountwizard_libs ${accountwizard_libs} KF6::NewStuff)
 endif ()
 
 add_executable(accountwizard ${accountwizard_srcs} main.cpp)
@@ -108,7 +108,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(accountwizard PROPERTIES UNITY_BUILD ON)
 endif()
 
-target_link_libraries(accountwizard ${accountwizard_libs} KF5::DBusAddons)
+target_link_libraries(accountwizard ${accountwizard_libs} KF6::DBusAddons)
 
 add_library(accountwizard_plugin MODULE ${accountwizard_srcs} inprocess-main.cpp)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)

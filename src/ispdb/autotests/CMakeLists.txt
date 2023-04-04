@@ -9,12 +9,12 @@ set(ispdbtest_srcs
 )
 
 set(ispdbtest_libs
-  KF5::KIOCore
-  KPim${KF_MAJOR_VERSION}::Mime
+  KF6::KIOCore
+  KPim6::Mime
   Qt::Test
   Qt::Xml
   Qt::Network
-  KF5::I18n
+  KF6::I18n
 )
 
 add_executable(ispdbtest ispdbtest.cpp ${ispdbtest_srcs})
@@ -48,7 +48,7 @@ ecm_mark_as_test(autoconfigkolabldaptest)
 ecm_mark_nongui_executable(autoconfigkolabldaptest)
 
 target_link_libraries(autoconfigkolabldaptest
-  KPim${KF_MAJOR_VERSION}::Ldap
+  KPim6::Ldap
   ${ispdbtest_libs}
 )
 
