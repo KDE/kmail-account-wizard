@@ -95,6 +95,7 @@ set(accountwizard_libs
     KF6::Notifications
     KPim6::PimCommon
     KF6::XmlGui
+    KF6::Wallet
     )
 
 if ( NOT ACCOUNTWIZARD_NO_GHNS )
