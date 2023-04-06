@@ -123,22 +123,11 @@ set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
 if (USE_UNITY_CMAKE_SUPPORT)
     set(COMPILE_WITH_UNITY_CMAKE_SUPPORT ON)
 endif()
-# allow to disable GHNS support on resource-constrained systems
-option( ACCOUNTWIZARD_NO_GHNS "Disable GHNS support in the account wizard" FALSE )
-
-option(KDEPIM_ENTERPRISE_BUILD "Enable features specific to the enterprise branch, which are normally disabled. Also, it disables many components not needed for Kontact such as the Kolab client." FALSE)
 
 # config-enterprise.h is needed for both ENTERPRISE_BUILD and BUILD_EVERYTHING
 configure_file(src/config-enterprise.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/src/config-enterprise.h )
 
-if ( ACCOUNTWIZARD_NO_GHNS )
-    add_definitions( -DACCOUNTWIZARD_NO_GHNS )
-endif ()
-
-
-
 add_subdirectory(src)
-add_subdirectory(wizards)
 add_subdirectory(components)
 
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)

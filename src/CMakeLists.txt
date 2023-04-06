@@ -1,7 +1,6 @@
 # SPDX-FileCopyrightText: 2021 Carl Schwan <carlschwan@kde.org>
 # SPDX-FileCopyrightText: 2023 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
-add_subdirectory(packagestructure)
 
 add_library(libaccountwizard)
 
@@ -10,8 +9,6 @@ generate_export_header(libaccountwizard BASE_NAME libaccountwizard)
 target_sources(libaccountwizard PRIVATE
     #cryptopage.cpp
     #dialog.cpp
-    wizardmodel.cpp
-    controller.cpp
     #global.cpp
     key.cpp
     setupmanager.cpp
@@ -33,8 +30,6 @@ target_sources(libaccountwizard PRIVATE
     ispdb/autoconfigkolabfreebusy.cpp
     ispdb/autoconfigkolabfreebusy.h
 
-    wizardmodel.h
-    controller.h
     key.h
     setupmanager.h
     resource.h

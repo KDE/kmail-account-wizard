@@ -10,7 +10,7 @@ import org.kde.pim.accountwizard 1.0
 Kirigami.ScrollablePage {
     id: root
     title: i18n("Personal Information")
-    
+
     leftPadding: 20
 
     ColumnLayout {
@@ -24,6 +24,7 @@ Kirigami.ScrollablePage {
             text: i18n("With a few simple steps we create the right settings for you. Please follow the steps of this wizard carefully.")
             wrapMode: Text.WordWrap
         }
+
         Kirigami.FormLayout {
             id: form
             Layout.fillWidth: true
@@ -41,7 +42,7 @@ Kirigami.ScrollablePage {
             Kirigami.PasswordField {
                 Kirigami.FormData.label: i18n("Password:")
             }
-            
+
             QQC2.CheckBox {
                 text: i18n("Find provider settings on the internet")
             }
@@ -53,13 +54,8 @@ Kirigami.ScrollablePage {
             text: i18n("Check online for the settings needed for this email provider. Only the domain name part of the e-mail address will be sent over the Internet at this point. If this option is unchecked, the account can be set up manually.")
             wrapMode: Text.WordWrap
         }
-        Component {
-            id: accountSelectionPageComponent
-            AccountSelectionPage {}
-        }
     }
-    
-    
+
     footer: QQC2.ToolBar {
         contentItem: RowLayout {
             QQC2.Button {

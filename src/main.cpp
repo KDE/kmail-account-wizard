@@ -5,14 +5,12 @@ SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 #include "configfile.h"
-#include "controller.h"
 #include "identity.h"
 #include "ispdb.h"
 #include "resource.h"
 #include "servertest.h"
 #include "setupmanager.h"
 #include "transport.h"
-#include "wizardmodel.h"
 
 #include <Akonadi/Control>
 
@@ -104,10 +102,6 @@ int main(int argc, char **argv)
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
 
-    Controller controller;
-    qmlRegisterType<WizardModel>("org.kde.pim.accountwizard", 1, 0, "WizardModel");
-    qRegisterMetaType<Controller *>("Controller *");
-    qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "Controller", &controller);
     qmlRegisterType<PimCommon::EmailValidator>("org.kde.pim.accountwizard", 1, 0, "EmailValidator");
     qmlRegisterType<Ispdb>("org.kde.pim.accountwizard", 1, 0, "Ispdb");
 
