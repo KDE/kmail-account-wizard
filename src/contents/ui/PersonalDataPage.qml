@@ -6,6 +6,7 @@ import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15 as QQC2
 import org.kde.kirigami 2.15 as Kirigami
 import org.kde.pim.accountwizard 1.0
+import org.kde.kirigamiaddons.labs.mobileform 0.1 as MobileForm
 
 Kirigami.ScrollablePage {
     id: root
@@ -14,45 +15,101 @@ Kirigami.ScrollablePage {
     leftPadding: 20
 
     ColumnLayout {
-        spacing: Kirigami.Units.largeSpacing
-        Kirigami.Heading {
-            Layout.alignment: Qt.AlignHCenter
-            Layout.maximumWidth: Kirigami.Units.gridUnit * 25
+        MobileForm.FormCard {
+            Layout.topMargin: Kirigami.Units.largeSpacing
             Layout.fillWidth: true
-            horizontalAlignment: form.wideMode ? Qt.AlignHCenter : Qt.AlignLeft
-            level: 2
-            text: i18n("With a few simple steps we create the right settings for you. Please follow the steps of this wizard carefully.")
-            wrapMode: Text.WordWrap
+            contentItem: ColumnLayout {
+                spacing: 0
+
+                Kirigami.Heading {
+                    text: i18n("Set Up Your Existing Email Address")
+                    wrapMode: Text.WordWrap
+                    padding: Kirigami.Units.gridUnit
+                    bottomPadding: 0
+
+                    Layout.fillWidth: true
+                }
+
+                Kirigami.Heading {
+                    text: i18n("To use your current email address fill in your credentials.<br />This wizard will automatically search for a working and recommended server configuration.")
+                    padding: Kirigami.Units.gridUnit
+                    topPadding: 0
+                    bottomPadding: 0
+                    wrapMode: Text.WordWrap
+                    level: 4
+
+                    Layout.fillWidth: true
+                }
+
+                MobileForm.FormTextFieldDelegate {
+                    label: i18n("Full name:")
+                    placeholderText: i18nc("Generic name", "John Smith")
+                    text: SetupManager.name
+                    onTextChanged: SetupManager.name = text
+                }
+
+                MobileForm.FormDelegateSeparator {}
+
+                MobileForm.FormTextFieldDelegate {
+                    label: i18n("E-mail address:")
+                    placeholderText: i18nc("Generic email address", "boss@example.corp")
+                    text: SetupManager.email
+                    onTextChanged: SetupManager.email = text
+                }
+
+                MobileForm.FormDelegateSeparator {}
+
+                MobileForm.FormTextFieldDelegate {
+                    label: i18n("Password:")
+                    onTextChanged: SetupManager.password = text
+                    echoMode: TextInput.Password
+                    inputMethodHints: Qt.ImhUrlCharactersOnly
+                }
+
+                MobileForm.FormDelegateSeparator { above: continueButton }
+
+                MobileForm.FormButtonDelegate {
+                    id: continueButton
+                    text: i18n("Continue")
+                    checked: true
+                    onClicked: SetupManager.searchConfiguration()
+                }
+
+                MobileForm.FormDelegateSeparator { below: continueButton }
+
+                MobileForm.FormSectionText {
+                    text: i18n("Check online for the settings needed for this email provider. Only the domain name part of the e-mail address will be sent over the Internet.")
+                    wrapMode: Text.WordWrap
+                }
+            }
         }
 
-        Kirigami.FormLayout {
-            id: form
+        MobileForm.FormCard {
+            Layout.topMargin: Kirigami.Units.largeSpacing
             Layout.fillWidth: true
 
-            QQC2.TextField {
-                Kirigami.FormData.label: i18n("Full name:")
-                placeholderText: i18nc("Generic name", "John Smith") 
-                text: SetupManager.name()
-            }
-            QQC2.TextField {
-                Kirigami.FormData.label: i18n("E-mail address:")
-                placeholderText: i18nc("Generic email address", "boss@example.corp")
-                text: SetupManager.email()
-            }
-            Kirigami.PasswordField {
-                Kirigami.FormData.label: i18n("Password:")
-            }
+            visible: configurationRepeater.count > 0
 
-            QQC2.CheckBox {
-                text: i18n("Find provider settings on the internet")
+            contentItem: ColumnLayout {
+                spacing: 0
+
+                MobileForm.FormCardHeader {
+                    title: i18n("Available configurations")
+                }
+
+                Repeater {
+                    id: configurationRepeater
+                    model: SetupManager.configurationModel
+                    Component.onCompleted: console.log(SetupManager.configurationModel)
+
+                    delegate: ConfigurationDelegate {
+                        required property int index
+
+                        checked: index === 0
+                        Layout.fillWidth: true
+                    }
+                }
             }
-        }
-        QQC2.Label {
-            Layout.alignment: Qt.AlignHCenter
-            Layout.maximumWidth: Kirigami.Units.gridUnit * 25
-            Layout.fillWidth: true
-            text: i18n("Check online for the settings needed for this email provider. Only the domain name part of the e-mail address will be sent over the Internet at this point. If this option is unchecked, the account can be set up manually.")
-            wrapMode: Text.WordWrap
         }
     }
 
@@ -60,6 +117,7 @@ Kirigami.ScrollablePage {
         contentItem: RowLayout {
             QQC2.Button {
                 Layout.alignment: Qt.AlignRight
+                enabled: false
                 text: i18n("Next")
                 onClicked: QQC2.ApplicationWindow.window.pageStack.push(accountSelectionPageComponent);
             }

@@ -1,26 +1,25 @@
 /*
-    SPDX-FileCopyrightText: 2010-2023 Laurent Montel <montel@kde.org>
+    SPDX-FileCopyrightText: 2010-2022 Laurent Montel <montel@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "identity.h"
-#include "transport.h"
+// This code was taken from kmail-account-wizard
 
-#include "accountwizard_debug.h"
+#include "identity.h"
+
 #include <KIdentityManagement/IdentityManager>
-#include <kidentitymanagement/identity.h>
+#include <KIdentityManagement/Identity>
+#include <MailTransport/Transport>
 
 #include <KLocalizedString>
 
 Identity::Identity(QObject *parent)
-    : SetupObject(parent)
+    : QObject(parent)
 {
     m_identity = &KIdentityManagement::IdentityManager::self()->newFromScratch(QString());
     Q_ASSERT(m_identity != nullptr);
 }
-
-Identity::~Identity() = default;
 
 void Identity::create()
 {
@@ -32,7 +31,7 @@ void Identity::create()
     auto manager = KIdentityManagement::IdentityManager::self();
     manager->commit();
     if (!manager->setAsDefault(m_identity->uoid())) {
-        qCWarning(ACCOUNTWIZARD_LOG) << "Impossible to find identity";
+        qWarning() << "Impossible to find identity";
     }
 
     Q_EMIT finished(i18n("Identity set up."));
@@ -71,7 +70,7 @@ void Identity::destroy()
 {
     auto manager = KIdentityManagement::IdentityManager::self();
     if (!manager->removeIdentityForced(m_identityName)) {
-        qCWarning(ACCOUNTWIZARD_LOG) << " impossible to remove identity " << m_identityName;
+        qWarning() << " impossible to remove identity " << m_identityName;
     }
     manager->commit();
     m_identity = nullptr;
@@ -83,19 +82,46 @@ void Identity::setIdentityName(const QString &name)
     m_identityName = name;
 }
 
-void Identity::setRealName(const QString &name)
+QString Identity::fullName() const
 {
+    return m_identity->fullName();
+}
+
+void Identity::setFullName(const QString &name)
+{
+    if (name == fullName()) {
+        return;
+    }
     m_identity->setFullName(name);
+    Q_EMIT fullNameChanged();
+}
+
+QString Identity::organization() const
+{
+    return m_identity->organization();
 }
 
 void Identity::setOrganization(const QString &org)
 {
+    if (org == this->organization()) {
+        return;
+    }
     m_identity->setOrganization(org);
+    Q_EMIT organizationChanged();
+}
+
+QString Identity::email() const
+{
+    return m_identity->primaryEmailAddress();
 }
 
 void Identity::setEmail(const QString &email)
 {
+    if (email == this->email()) {
+        return;
+    }
     m_identity->setPrimaryEmailAddress(email);
+    Q_EMIT emailChanged();
 }
 
 uint Identity::uoid() const
@@ -103,14 +129,18 @@ uint Identity::uoid() const
     return m_identity->uoid();
 }
 
-void Identity::setTransport(QObject *transport)
+void Identity::setTransport(MailTransport::Transport *transport)
 {
     if (transport) {
-        m_identity->setTransport(QString::number(qobject_cast<Transport *>(transport)->transportId()));
+        m_identity->setTransport(QString::number(transport->id()));
     } else {
-        m_identity->setTransport(QString());
+        m_identity->setTransport({});
     }
-    setDependsOn(qobject_cast<SetupObject *>(transport));
+}
+
+QString Identity::signature() const
+{
+    return m_identity->signature().text();
 }
 
 void Identity::setSignature(const QString &sig)

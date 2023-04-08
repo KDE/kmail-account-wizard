@@ -1,25 +1,17 @@
-/*
-SPDX-FileCopyrightText: 2009 Volker Krause <vkrause@kde.org>
+// SPDX-FileCopyrightText: 2009 Volker Krause <vkrause@kde.org>
+// SPDX-FileCopyrightText: 2023 Carl Schwan <carl@carlschwan.eu>
+// SPDX-License-Identifier: LGPL-2.0-or-later
 
-SPDX-License-Identifier: LGPL-2.0-or-later
-*/
-
-#include "configfile.h"
-#include "identity.h"
-#include "ispdb.h"
-#include "resource.h"
-#include "servertest.h"
+#include "ispdb/configurationmodel.h"
 #include "setupmanager.h"
-#include "transport.h"
+#include "identity.h"
 
 #include <Akonadi/Control>
-
 #include <KAboutData>
 #include <KCrash>
 #include <KDBusService>
 #include <KLocalizedContext>
 #include <KLocalizedString>
-#include <PimCommon/EmailValidator>
 
 #include <QApplication>
 #include <QCommandLineOption>
@@ -29,9 +21,6 @@ SPDX-License-Identifier: LGPL-2.0-or-later
 #include <QQmlApplicationEngine>
 #include <QUrl>
 #include <QtQml>
-
-#include <cstdio>
-#include <iostream>
 
 int main(int argc, char **argv)
 {
@@ -53,6 +42,7 @@ int main(int argc, char **argv)
                          QStringLiteral("https://community.kde.org/KDE_PIM/Akonadi"));
     aboutData.addAuthor(i18n("Volker Krause"), i18n("Author"), QStringLiteral("vkrause@kde.org"));
     aboutData.addAuthor(i18n("Laurent Montel"), QString(), QStringLiteral("montel@kde.org"));
+    aboutData.addAuthor(i18n("Carl Schwan"), i18n("Maintainer"), QStringLiteral("carl@carlschwan.eu"));
     aboutData.setProductName(QByteArrayLiteral("Akonadi/Account Wizard"));
     app.setOrganizationDomain(QStringLiteral("kde.org"));
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("kontact")));
@@ -102,27 +92,11 @@ int main(int argc, char **argv)
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
 
-    qmlRegisterType<PimCommon::EmailValidator>("org.kde.pim.accountwizard", 1, 0, "EmailValidator");
-    qmlRegisterType<Ispdb>("org.kde.pim.accountwizard", 1, 0, "Ispdb");
-
-    qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "SetupManager", &SetupManager::instance());
+    SetupManager setupManager;
+    qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "SetupManager", &setupManager);
     qRegisterMetaType<Identity *>("Identity *");
-    qRegisterMetaType<Resource *>("Resource *");
-    qRegisterMetaType<Transport *>("Transport *");
-    qRegisterMetaType<Key *>("Key *");
-    qRegisterMetaType<ConfigFile *>("ConfigFile *");
-    ServerTest serverTest;
-    qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "ServerTest", &serverTest);
-
+    qRegisterMetaType<ConfigurationModel *>("ConfigurationModel *");
     engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
-
-    // loadPage->exportObject(new ServerTest(this), QStringLiteral("ServerTest"));
-
-    // Dialog dlg(nullptr);
-    // dlg.show();
-    // Unregister once the UI is closed, even if the app will continue running
-    // and generating keys in the background.
-    // QObject::connect(&dlg, &Dialog::accepted, &service, &KDBusService::unregister);
 
     return app.exec();
 }

@@ -1,90 +1,50 @@
-/*
-    SPDX-FileCopyrightText: 2009 Volker Krause <vkrause@kde.org>
-
-    SPDX-License-Identifier: LGPL-2.0-or-later
-*/
+// SPDX-FileCopyrightText: 2023 Carl Schwan <carl@carlschwan.eu>
+// SPDX-License-Identifier: LGPL-2.0-or-later
 
 #pragma once
 
-#include "key.h"
-#include "libaccountwizard_export.h"
-
 #include <QObject>
-#include <QVector>
 
-#include <gpgme++/key.h>
+class Identity;
+class IspdbService;
+class ConfigurationModel;
 
-namespace KWallet
-{
-class Wallet;
-}
-
-class LIBACCOUNTWIZARD_EXPORT SetupManager : public QObject
+class SetupManager : public QObject
 {
     Q_OBJECT
+
+    Q_PROPERTY(QString email READ email WRITE setEmail NOTIFY emailChanged)
+    Q_PROPERTY(QString password READ password WRITE setPassword NOTIFY passwordChanged)
+    Q_PROPERTY(QString fullName READ fullName WRITE setFullName NOTIFY fullNameChanged)
+    Q_PROPERTY(Identity *identity READ identity CONSTANT)
+    Q_PROPERTY(ConfigurationModel *configurationModel READ configurationModel CONSTANT)
+
 public:
-    static SetupManager &instance();
     explicit SetupManager(QObject *parent = nullptr);
-    ~SetupManager() override;
+    ~SetupManager();
 
-    void setName(const QString &);
-    void setEmail(const QString &);
-    void setPassword(const QString &);
-    void setPersonalDataAvailable(bool available);
-    void setPgpAutoSign(bool autosign);
-    void setPgpAutoEncrypt(bool autoencrypt);
-    void setKey(const GpgME::Key &key);
-    void setKeyPublishingMethod(Key::PublishingMethod method);
+    QString fullName() const;
+    void setFullName(const QString &fullName);
 
-    Q_REQUIRED_RESULT QVector<SetupObject *> objectsToSetup() const;
-    Q_REQUIRED_RESULT QVector<SetupObject *> setupObjects() const;
+    QString email() const;
+    void setEmail(const QString &email);
 
-public Q_SLOTS:
-    Q_SCRIPTABLE bool personalDataAvailable() const;
-    Q_SCRIPTABLE QString name() const;
-    Q_SCRIPTABLE QString email() const;
-    Q_SCRIPTABLE QString password() const;
-    Q_SCRIPTABLE QString country() const;
-    /** Ensures the wallet is open for subsequent sync wallet access in the resources. */
-    Q_SCRIPTABLE void openWallet();
-    Q_SCRIPTABLE QObject *createResource(const QString &type);
-    Q_SCRIPTABLE QObject *createTransport(const QString &type);
-    Q_SCRIPTABLE QObject *createConfigFile(const QString &configName);
-    Q_SCRIPTABLE QObject *createLdap();
-    Q_SCRIPTABLE QObject *createIdentity();
-    Q_SCRIPTABLE QObject *createKey();
-    Q_SCRIPTABLE void execute();
-    Q_SCRIPTABLE QObject *ispDB(const QString &type);
+    QString password() const;
+    void setPassword(const QString &password);
 
-    void requestRollback();
+    Identity *identity() const;
+    ConfigurationModel *configurationModel() const;
+
+    Q_INVOKABLE void searchConfiguration();
 
 Q_SIGNALS:
-    void rollbackComplete();
-    void setupFinished(SetupObject *obj);
-    void setupSucceeded(const QString &msg);
-    void errorOccured(const QString &errorMessage);
-    void infoOccured(const QString &infoMessage);
-
-private Q_SLOTS:
-    void slotSetupSuccess(const QString &msg);
-    void slotSetupFailed(const QString &msg);
+    void fullNameChanged();
+    void emailChanged();
+    void passwordChanged();
 
 private:
-    void setupNext();
-    void rollback();
-    SetupObject *connectObject(SetupObject *obj);
-
-    QString m_name;
-    QString m_email;
+    Identity *const m_identity;
+    IspdbService *const m_ispdbService;
+    ConfigurationModel *const m_configurationModel;
     QString m_password;
-    QVector<SetupObject *> m_objectToSetup;
-    QVector<SetupObject *> m_setupObjects;
-    SetupObject *m_currentSetupObject = nullptr;
-    KWallet::Wallet *m_wallet = nullptr;
-    GpgME::Key m_key;
-    Key::PublishingMethod m_keyPublishingMethod;
-    bool m_personalDataAvailable = false;
-    bool m_rollbackRequested = false;
-    bool m_pgpAutoSign = false;
-    bool m_pgpAutoEncrypt = false;
 };

@@ -181,7 +181,7 @@ void Ispdb::parseResult(const QDomDocument &document)
                     mSmtpServers.append(s);
                 }
             } else if (tagName == QLatin1String("identity")) {
-                identity i = createIdentity(e);
+                Identity i = createIdentity(e);
                 if (i.isValid()) {
                     mIdentities.append(i);
                     if (i.isDefault()) {
@@ -262,10 +262,10 @@ Server Ispdb::createServer(const QDomElement &n)
     return s;
 }
 
-identity Ispdb::createIdentity(const QDomElement &n)
+Identity Ispdb::createIdentity(const QDomElement &n)
 {
     QDomNode o = n.firstChild();
-    identity i;
+    Identity i;
 
     // type="kolab" version="1.0" is the only identity that is defined
     if (n.attribute(QStringLiteral("type")) != QLatin1String("kolab") || n.attribute(QStringLiteral("version")) != QLatin1String("1.0")) {
@@ -321,7 +321,7 @@ QStringList Ispdb::relevantDomains() const
     return mDomains;
 }
 
-QString Ispdb::name(length l) const
+QString Ispdb::name(Length l) const
 {
     if (l == Long) {
         return mDisplayName;
@@ -352,12 +352,12 @@ int Ispdb::defaultIdentity() const
     return mDefaultIdentity;
 }
 
-QVector<identity> Ispdb::identities() const
+QVector<Identity> Ispdb::identities() const
 {
     return mIdentities;
 }
 
-void Ispdb::setServerType(Ispdb::searchServerType type)
+void Ispdb::setServerType(Ispdb::SearchServerType type)
 {
     if (type != mServerType || mStart) {
         mServerType = type;
@@ -376,7 +376,7 @@ void Ispdb::setServerType(Ispdb::searchServerType type)
     }
 }
 
-Ispdb::searchServerType Ispdb::serverType() const
+Ispdb::SearchServerType Ispdb::serverType() const
 {
     return mServerType;
 }
@@ -391,7 +391,7 @@ QDebug operator<<(QDebug d, const Server &t)
     return d;
 }
 
-QDebug operator<<(QDebug d, const identity &t)
+QDebug operator<<(QDebug d, const Identity &t)
 {
     d << " email " << t.email;
     d << " name " << t.name;
