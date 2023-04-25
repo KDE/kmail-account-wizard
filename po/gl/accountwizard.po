@@ -1,16 +1,16 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Xosé <xosecalvo@gmail.com>, 2010, 2013.
 # Adrian Chaves Fernandez <adriyetichaves@gmail.com>, 2013, 2015, 2016, 2017.
 # Marce Villarino <mvillarino@kde-espana.org>, 2013, 2014.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-06-12 00:46+0000\n"
-"PO-Revision-Date: 2019-11-01 17:02+0100\n"
+"PO-Revision-Date: 2023-04-24 07:41+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.08.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -343,10 +343,9 @@ msgid "Account Assistant"
 msgstr "Asistente de Contas"
 
 #: main.cpp:42
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2019 the Akonadi developers"
+#, kde-format
 msgid "(c) 2009-2020 the Akonadi developers"
-msgstr "© 2009-2019 Desenvolvedores de Akonadi"
+msgstr "© 2009-2020 Persoas desenvolvedoras de Akonadi"
 
 #: main.cpp:45
 #, kde-format
@@ -444,10 +443,9 @@ msgid "Could not set setting '%1': %2"
 msgstr "Non se puido configurar a opción «%1»: %2"
 
 #: resource.cpp:142
-#, fuzzy, kde-format
-#| msgid "Could not set setting '%1': %2"
+#, kde-format
 msgid "Could not save settings: %1"
-msgstr "Non se puido configurar a opción «%1»: %2"
+msgstr "Non se puido gardar a configuración: %1"
 
 #: resource.cpp:151
 #, kde-format
@@ -522,7 +520,7 @@ msgstr "Estase a configurar a conta do transporte de correo…"
 #: transport.cpp:83
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
-msgstr ""
+msgstr "O transporte de correo usa cifraxe «%1» e autenticación «%2»."
 
 #: transport.cpp:89
 #, kde-format
