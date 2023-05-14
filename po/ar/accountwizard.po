@@ -203,7 +203,7 @@ msgstr "يساعد في ضبط حسابات إدارة المعلومات الش
 #: ispdb/main.cpp:74
 #, kde-format
 msgid "(c) 2010 Omat Holding B.V."
-msgstr "٢٠١٠ © لِ‍ Omat Holding B.V."
+msgstr "2010 © لِ‍ Omat Holding B.V."
 
 #: ispdb/main.cpp:77 main.cpp:45
 #, kde-format
@@ -338,7 +338,7 @@ msgstr "مُساعد الحسابات"
 #: main.cpp:42
 #, kde-format
 msgid "(c) 2009-2020 the Akonadi developers"
-msgstr "© ٢٠٠٩-٢٠٢٠ لمطوّري «أكونادي»"
+msgstr "© 2009-2020 لمطوّري «أكونادي»"
 
 #: main.cpp:45
 #, kde-format
