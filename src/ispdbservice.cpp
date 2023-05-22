@@ -39,6 +39,7 @@ void IspdbService::requestConfig(const KMime::Types::AddrSpec &addrSpec, const S
         url = QUrl(QStringLiteral("https://autoconfig.thunderbird.net/v1.1/") + domain.toLower());
     }
 
+    qDebug() << " url " << url;
     QNetworkRequest request(url);
     auto reply = m_qnam->get(request);
 
@@ -87,8 +88,8 @@ void IspdbService::handleReply(QNetworkReply *const reply, const KMime::Types::A
     }
 #endif
 
-    QDomElement docElem = document.documentElement();
-    QDomNodeList emailProviders = docElem.elementsByTagName(QStringLiteral("emailProvider"));
+    const QDomElement docElem = document.documentElement();
+    const QDomNodeList emailProviders = docElem.elementsByTagName(QStringLiteral("emailProvider"));
 
     if (emailProviders.isEmpty()) {
         Q_EMIT errorOccured();
@@ -99,7 +100,7 @@ void IspdbService::handleReply(QNetworkReply *const reply, const KMime::Types::A
 
     QDomNode emailProviderNode = emailProviders.at(0).firstChild();
     while (!emailProviderNode.isNull()) {
-        QDomElement element = emailProviderNode.toElement();
+        const QDomElement element = emailProviderNode.toElement();
         if (element.isNull()) {
             emailProviderNode = emailProviderNode.nextSibling();
             continue;
