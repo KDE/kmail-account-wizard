@@ -23,13 +23,13 @@ public:
     explicit SetupManager(QObject *parent = nullptr);
     ~SetupManager();
 
-    QString fullName() const;
+    Q_REQUIRED_RESULT QString fullName() const;
     void setFullName(const QString &fullName);
 
-    QString email() const;
+    Q_REQUIRED_RESULT QString email() const;
     void setEmail(const QString &email);
 
-    QString password() const;
+    Q_REQUIRED_RESULT QString password() const;
     void setPassword(const QString &password);
 
     Identity *identity() const;

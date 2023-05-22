@@ -45,7 +45,7 @@ struct Server {
     SocketType socketType = SSL;
     AuthType authType = Plain;
 
-    QStringList tags() const;
+    Q_REQUIRED_RESULT QStringList tags() const;
 
     static std::optional<Server> fromDomElement(const QDomElement &element, const KMime::Types::AddrSpec &addrSpec);
 };
