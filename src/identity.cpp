@@ -7,6 +7,7 @@
 // This code was taken from kmail-account-wizard
 
 #include "identity.h"
+#include "accountwizard_debug.h"
 
 #include <KIdentityManagement/IdentityManager>
 #include <KIdentityManagement/Identity>
@@ -31,7 +32,7 @@ void Identity::create()
     auto manager = KIdentityManagement::IdentityManager::self();
     manager->commit();
     if (!manager->setAsDefault(m_identity->uoid())) {
-        qWarning() << "Impossible to find identity";
+        qCWarning(ACCOUNTWIZARD_LOG) << "Impossible to find identity";
     }
 
     Q_EMIT finished(i18n("Identity set up."));
@@ -70,7 +71,7 @@ void Identity::destroy()
 {
     auto manager = KIdentityManagement::IdentityManager::self();
     if (!manager->removeIdentityForced(m_identityName)) {
-        qWarning() << " impossible to remove identity " << m_identityName;
+        qCWarning(ACCOUNTWIZARD_LOG) << " impossible to remove identity " << m_identityName;
     }
     manager->commit();
     m_identity = nullptr;
