@@ -2,13 +2,12 @@
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 #include "ispdb/configurationmodel.h"
-#include "accountwizard_debug.h"
 #include <KLocalizedString>
 
 Configuration::Configuration(Server _incoming, std::optional<Server> _outgoing, const QString &_shortDisplayName)
-    : incoming(_incoming)
+    : shortDisplayName(_shortDisplayName)
+    , incoming(_incoming)
     , outgoing(_outgoing)
-    , shortDisplayName(_shortDisplayName)
 {}
 
 ConfigurationModel::ConfigurationModel(QObject *parent)
@@ -17,6 +16,7 @@ ConfigurationModel::ConfigurationModel(QObject *parent)
 
 int ConfigurationModel::rowCount(const QModelIndex &parent) const
 {
+    Q_UNUSED(parent)
     return m_configurations.size();
 }
 

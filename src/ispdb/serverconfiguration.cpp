@@ -4,7 +4,6 @@
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 #include "ispdb/serverconfiguration.h"
-#include "accountwizard_debug.h"
 #include <KLocalizedString>
 
 QString replacePlaceholders(const QString &in, const KMime::Types::AddrSpec &addrSpec)
