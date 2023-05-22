@@ -5,7 +5,6 @@
 
 #include "identity.h"
 #include "ispdbservice.h"
-#include "ispdb/configurationmodel.h"
 #include <KEMailSettings>
 
 SetupManager::SetupManager(QObject *parent)

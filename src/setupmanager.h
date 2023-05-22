@@ -3,11 +3,11 @@
 
 #pragma once
 
+#include "ispdb/configurationmodel.h"
 #include <QObject>
 
 class Identity;
 class IspdbService;
-class ConfigurationModel;
 
 class SetupManager : public QObject
 {
