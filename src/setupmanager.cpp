@@ -19,7 +19,7 @@ SetupManager::SetupManager(QObject *parent)
 
     connect(m_identity, &Identity::emailChanged, this, &SetupManager::emailChanged);
     connect(m_ispdbService, &IspdbService::finished, this, &SetupManager::setEmailProvider);
-    connect(m_ispdbService, &IspdbService::errorOccured, this, &SetupManager::setErrorOccured);
+    connect(m_ispdbService, &IspdbService::notConfigFound, this, &SetupManager::noConfigFound);
 #if 0
     connect(m_ispdbService, &IspdbService::info, m_configurationModel,
             &ConfigurationModel::setInformation);
@@ -93,12 +93,12 @@ void SetupManager::clearConfiguration()
     m_searchIspdbFoundMessage.clear();
     Q_EMIT searchIspdbFoundMessageChanged();
 
-    m_searchIspdbErrorMessage.clear();
-    Q_EMIT searchIspdbErrorMessageChanged();
+    m_noConfigFound = false;
+    Q_EMIT noConfigFoundChanged();
 }
 
-void SetupManager::setErrorOccured(const QString &errorMessage)
+void SetupManager::noConfigFound()
 {
-    m_searchIspdbErrorMessage = errorMessage;
-    Q_EMIT searchIspdbErrorMessageChanged();
+    m_noConfigFound = true;
+    Q_EMIT noConfigFoundChanged();
 }

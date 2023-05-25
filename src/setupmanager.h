@@ -19,7 +19,7 @@ class SetupManager : public QObject
     Q_PROPERTY(Identity *identity READ identity CONSTANT)
     Q_PROPERTY(ConfigurationModel *configurationModel READ configurationModel CONSTANT)
     Q_PROPERTY(QString searchIspdbFoundMessage MEMBER m_searchIspdbFoundMessage NOTIFY searchIspdbFoundMessageChanged)
-    Q_PROPERTY(QString searchIspdbErrorMessage MEMBER m_searchIspdbErrorMessage NOTIFY searchIspdbErrorMessageChanged)
+    Q_PROPERTY(bool noConfigFound MEMBER m_noConfigFound NOTIFY noConfigFoundChanged)
 
 public:
     explicit SetupManager(QObject *parent = nullptr);
@@ -44,16 +44,17 @@ Q_SIGNALS:
     void emailChanged();
     void passwordChanged();
     void searchIspdbFoundMessageChanged();
-    void searchIspdbErrorMessageChanged();
+    void noConfigFoundChanged();
 
 private:
     void setEmailProvider(const EmailProvider &emailProvider, const QString &messageInfo);
     void setErrorOccured(const QString &errorMessage);
     void clearConfiguration();
+    void noConfigFound();
     Identity *const m_identity;
     IspdbService *const m_ispdbService;
     ConfigurationModel *const m_configurationModel;
     QString m_password;
     QString m_searchIspdbFoundMessage;
-    QString m_searchIspdbErrorMessage;
+    bool m_noConfigFound = false;
 };

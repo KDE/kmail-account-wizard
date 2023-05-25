@@ -102,18 +102,18 @@ Kirigami.ScrollablePage {
         }
 
         MobileForm.FormCard {
-            id: ispdbSearchError
+            id: noIspdbConfigFound
             Layout.topMargin: Kirigami.Units.largeSpacing
             Layout.fillWidth: true
-            visible: SetupManager.searchIspdbErrorMessage.length > 0
+            visible: SetupManager.noConfigFound
             contentItem: ColumnLayout {
                 spacing: 0
 
                 Kirigami.InlineMessage {
                     Layout.fillWidth: true
                     type: Kirigami.MessageType.Error
-                    text: SetupManager.searchIspdbErrorMessage
-                    visible: ispdbSearchInfo.visible
+                    text: i18n("No config found from ispdb server.")
+                    visible: noIspdbConfigFound.visible
                 }
             }
         }

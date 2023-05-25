@@ -78,14 +78,16 @@ void IspdbService::handleReply(QNetworkReply *const reply, const KMime::Types::A
     bool ok = document.setContent(data);
     if (!ok) {
         qCDebug(ACCOUNTWIZARD_LOG) << "Could not parse xml" << data;
-        Q_EMIT errorOccured();
+        Q_EMIT notConfigFound();
         return;
     }
 #else
     QDomDocument::ParseResult result = document.setContent(data);
     if (!result) {
         qCDebug(ACCOUNTWIZARD_LOG) << "Could not parse xml" << data;
-        Q_EMIT errorOccured(i18n("Impossible to parse result"));
+        if (searchServerType == IspWellKnow) { // Last one
+            Q_EMIT notConfigFound();
+        }
         return;
     }
 #endif

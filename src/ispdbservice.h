@@ -22,7 +22,7 @@ public:
 Q_SIGNALS:
     void finished(const EmailProvider &emailProvider, const QString &messageInfo);
     void info(const QString &infoMessage);
-    void errorOccured(const QString &str);
+    void notConfigFound();
     void requestedConfigFromUrl(const QUrl &url);
 
 private:
