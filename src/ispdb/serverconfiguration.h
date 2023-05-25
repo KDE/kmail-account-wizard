@@ -40,7 +40,7 @@ struct Server {
     };
     Type type;
     QString hostname;
-    int port;
+    int port = -1;
     QString username;
     SocketType socketType = SSL;
     AuthType authType = Plain;
