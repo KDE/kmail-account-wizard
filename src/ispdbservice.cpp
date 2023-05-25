@@ -41,7 +41,7 @@ void IspdbService::requestConfig(const KMime::Types::AddrSpec &addrSpec, const S
         url = QUrl(QStringLiteral("https://autoconfig.thunderbird.net/v1.1/") + domain.toLower());
     }
 
-    qDebug() << " url " << url;
+    qCDebug(ACCOUNTWIZARD_LOG) << " url " << url;
     QNetworkRequest request(url);
     Q_EMIT requestedConfigFromUrl(url);
     auto reply = m_qnam->get(request);
