@@ -1,5 +1,6 @@
 // SPDX-FileCopyrightText: 2009 Volker Krause <vkrause@kde.org>
 // SPDX-FileCopyrightText: 2023 Carl Schwan <carl@carlschwan.eu>
+// SPDX-FileCopyrightText: 2023 Laurent Montel <montel@kde.org>
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 #include "ispdb/configurationmodel.h"
@@ -48,45 +49,16 @@ int main(int argc, char **argv)
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("kontact")));
     QCommandLineParser parser;
     KAboutData::setApplicationData(aboutData);
-    parser.addOption(
-        QCommandLineOption(QStringList() << QStringLiteral("type"), i18n("Only offer accounts that support the given type."), QStringLiteral("type")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("assistant"), i18n("Run the specified assistant."), QStringLiteral("assistant")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("package"),
-                                        i18n("unpack fullpath on startup and launch that assistant"),
-                                        QStringLiteral("fullpath")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("assistants"), i18n("Returns types of assistants")));
 
     aboutData.setupCommandLine(&parser);
     parser.process(app);
     aboutData.processCommandLine(&parser);
-
-    // if (parser.isSet(QStringLiteral("assistants"))) {
-    //    const QStringList lst = Global::assistants();
-    //    std::cout << i18n("The following assistants are available:").toLocal8Bit().data() << std::endl;
-    //    for (const QString &val : lst) {
-    //        std::cout << "\t" << val.toLocal8Bit().constData() << std::endl;
-    //    }
-    //    return 0;
-    //}
 
     KDBusService service(KDBusService::Unique);
 
     if (!Akonadi::Control::start()) {
         qApp->exit(-1);
         return 1;
-    }
-
-    // const QString packageArgument = parser.value(QStringLiteral("package"));
-    // if (!packageArgument.isEmpty()) {
-    //    Global::setAssistant(Global::unpackAssistant(QUrl::fromLocalFile(packageArgument)));
-    //} else {
-    //    Global::setAssistant(parser.value(QStringLiteral("assistant")));
-    //}
-    //
-    const QString typeValue = parser.value(QStringLiteral("type"));
-    if (!typeValue.isEmpty()) {
-        qDebug() << " Need type " << typeValue;
-        //    Global::setTypeFilter(typeValue.split(QLatin1Char(',')));
     }
 
     QQmlApplicationEngine engine;
