@@ -72,8 +72,6 @@ endif ()
 install(TARGETS accountwizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 #install(TARGETS accountwizard_plugin DESTINATION ${KDE_INSTALL_PLUGINDIR})
 install(PROGRAMS org.kde.accountwizard.desktop DESTINATION ${KDE_INSTALL_APPDIR})
-install(FILES accountwizard-mime.xml DESTINATION ${KDE_INSTALL_MIMEDIR})
-update_xdg_mimetypes(${KDE_INSTALL_MIMEDIR})
 
 #add_subdirectory(ispdb)
 if (BUILD_TESTING)
