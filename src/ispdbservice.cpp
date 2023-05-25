@@ -66,11 +66,11 @@ void IspdbService::requestConfig(const KMime::Types::AddrSpec &addrSpec, const S
             }
         }
 
-        handleReply(reply, addrSpec);
+        handleReply(reply, addrSpec, searchServerType);
     });
 }
 
-void IspdbService::handleReply(QNetworkReply *const reply, const KMime::Types::AddrSpec &addrSpec)
+void IspdbService::handleReply(QNetworkReply *const reply, const KMime::Types::AddrSpec &addrSpec, const SearchServerType searchServerType)
 {
     const auto data = reply->readAll();
     QDomDocument document;
@@ -138,6 +138,18 @@ void IspdbService::handleReply(QNetworkReply *const reply, const KMime::Types::A
 
         emailProviderNode = emailProviderNode.nextSibling();
     }
+    QString foundInServerTypeMessage;
+    switch (searchServerType) {
+    case IspAutoConfig:
+        foundInServerTypeMessage = i18n("Configuration found auto config file.");
+        break;
+    case IspWellKnow:
+        foundInServerTypeMessage = i18n("Configuration found in well-known file.");
+        break;
+    case DataBase:
+        foundInServerTypeMessage = i18n("Configuration found in Mozilla FAI Database.");
+        break;
+    }
 
-    Q_EMIT finished(emailProvider);
+    Q_EMIT finished(emailProvider, foundInServerTypeMessage);
 }

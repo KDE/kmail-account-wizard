@@ -18,6 +18,8 @@ class SetupManager : public QObject
     Q_PROPERTY(QString fullName READ fullName WRITE setFullName NOTIFY fullNameChanged)
     Q_PROPERTY(Identity *identity READ identity CONSTANT)
     Q_PROPERTY(ConfigurationModel *configurationModel READ configurationModel CONSTANT)
+    Q_PROPERTY(QString searchIspdbFoundMessage MEMBER m_searchIspdbFoundMessage NOTIFY searchIspdbFoundMessageChanged)
+    Q_PROPERTY(QString searchIspdbErrorMessage MEMBER m_searchIspdbErrorMessage NOTIFY searchIspdbErrorMessageChanged)
 
 public:
     explicit SetupManager(QObject *parent = nullptr);
@@ -41,10 +43,17 @@ Q_SIGNALS:
     void fullNameChanged();
     void emailChanged();
     void passwordChanged();
+    void searchIspdbFoundMessageChanged();
+    void searchIspdbErrorMessageChanged();
 
 private:
+    void setEmailProvider(const EmailProvider &emailProvider, const QString &messageInfo);
+    void setErrorOccured(const QString &errorMessage);
+    void clearConfiguration();
     Identity *const m_identity;
     IspdbService *const m_ispdbService;
     ConfigurationModel *const m_configurationModel;
     QString m_password;
+    QString m_searchIspdbFoundMessage;
+    QString m_searchIspdbErrorMessage;
 };

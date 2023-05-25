@@ -20,7 +20,7 @@ public:
     void start(const KMime::Types::AddrSpec &addrSpec);
 
 Q_SIGNALS:
-    void finished(const EmailProvider &emailProvider);
+    void finished(const EmailProvider &emailProvider, const QString &messageInfo);
     void info(const QString &infoMessage);
     void errorOccured(const QString &str);
     void requestedConfigFromUrl(const QUrl &url);
@@ -32,7 +32,7 @@ private:
         DataBase ///< https://autoconfig.thunderbird.net/v1.1/example.com */
     };
     void requestConfig(const KMime::Types::AddrSpec &addrSpec, const SearchServerType searchServerType);
-    void handleReply(QNetworkReply *const reply, const KMime::Types::AddrSpec &addrSpec);
+    void handleReply(QNetworkReply *const reply, const KMime::Types::AddrSpec &addrSpec, const SearchServerType searchServerType);
 
     QNetworkAccessManager *const m_qnam;
 };

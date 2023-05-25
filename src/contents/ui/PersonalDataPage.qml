@@ -85,6 +85,41 @@ Kirigami.ScrollablePage {
         }
 
         MobileForm.FormCard {
+            id: ispdbSearchInfo
+            Layout.topMargin: Kirigami.Units.largeSpacing
+            Layout.fillWidth: true
+            visible: SetupManager.searchIspdbFoundMessage.length > 0
+            contentItem: ColumnLayout {
+                spacing: 0
+
+                Kirigami.InlineMessage {
+                    Layout.fillWidth: true
+                    type: Kirigami.MessageType.Information
+                    text: SetupManager.searchIspdbFoundMessage
+                    visible: ispdbSearchInfo.visible
+                }
+            }
+        }
+
+        MobileForm.FormCard {
+            id: ispdbSearchError
+            Layout.topMargin: Kirigami.Units.largeSpacing
+            Layout.fillWidth: true
+            visible: SetupManager.searchIspdbErrorMessage.length > 0
+            contentItem: ColumnLayout {
+                spacing: 0
+
+                Kirigami.InlineMessage {
+                    Layout.fillWidth: true
+                    type: Kirigami.MessageType.Error
+                    text: SetupManager.searchIspdbErrorMessage
+                    visible: ispdbSearchInfo.visible
+                }
+            }
+        }
+
+
+        MobileForm.FormCard {
             Layout.topMargin: Kirigami.Units.largeSpacing
             Layout.fillWidth: true
 

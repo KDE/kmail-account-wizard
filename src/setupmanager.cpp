@@ -18,11 +18,9 @@ SetupManager::SetupManager(QObject *parent)
     setEmail(emailSettings.getSetting(KEMailSettings::EmailAddress));
 
     connect(m_identity, &Identity::emailChanged, this, &SetupManager::emailChanged);
-    connect(m_ispdbService, &IspdbService::finished, m_configurationModel,
-            &ConfigurationModel::setEmailProvider);
+    connect(m_ispdbService, &IspdbService::finished, this, &SetupManager::setEmailProvider);
+    connect(m_ispdbService, &IspdbService::errorOccured, this, &SetupManager::setErrorOccured);
 #if 0
-    connect(m_ispdbService, &IspdbService::errorOccured, m_configurationModel,
-            &ConfigurationModel::setErrorOccured);
     connect(m_ispdbService, &IspdbService::info, m_configurationModel,
             &ConfigurationModel::setInformation);
 #endif
@@ -76,8 +74,31 @@ ConfigurationModel *SetupManager::configurationModel() const
 
 void SetupManager::searchConfiguration()
 {
-    m_configurationModel->clear();
+    clearConfiguration();
     KMime::Types::Mailbox box;
     box.fromUnicodeString(email());
     m_ispdbService->start(box.addrSpec());
+}
+
+void SetupManager::setEmailProvider(const EmailProvider &emailProvider, const QString &messageInfo)
+{
+    m_searchIspdbFoundMessage = messageInfo;
+    m_configurationModel->setEmailProvider(emailProvider);
+    Q_EMIT searchIspdbFoundMessageChanged();
+}
+
+void SetupManager::clearConfiguration()
+{
+    m_configurationModel->clear();
+    m_searchIspdbFoundMessage.clear();
+    Q_EMIT searchIspdbFoundMessageChanged();
+
+    m_searchIspdbErrorMessage.clear();
+    Q_EMIT searchIspdbErrorMessageChanged();
+}
+
+void SetupManager::setErrorOccured(const QString &errorMessage)
+{
+    m_searchIspdbErrorMessage = errorMessage;
+    Q_EMIT searchIspdbErrorMessageChanged();
 }
