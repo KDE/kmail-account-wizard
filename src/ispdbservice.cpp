@@ -1,16 +1,18 @@
 // SPDX-FileCopyrightText: 2010 Omat Holding B.V. <info@omat.nl>
 // SPDX-FileCopyrightText: 2014 Sandro Knauß <knauss@kolabsys.com>
 // SPDX-FileCopyrightText: 2023 Carl Schwan <carl@carlschwan.eu>
+// SPDX-FileCopyrightText: 2023 Laurent Montel <montel@kde.org>
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 #include "ispdbservice.h"
 
 #include "accountwizard_debug.h"
 
+#include <KLocalizedString>
+#include <QDomDocument>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QNetworkRequest>
-#include <QDomDocument>
 #include <qdom.h>
 
 IspdbService::IspdbService(QObject *parent)
@@ -41,11 +43,12 @@ void IspdbService::requestConfig(const KMime::Types::AddrSpec &addrSpec, const S
 
     qDebug() << " url " << url;
     QNetworkRequest request(url);
+    Q_EMIT requestedConfigFromUrl(url);
     auto reply = m_qnam->get(request);
 
     connect(reply, &QNetworkReply::finished, this, [this, addrSpec, reply, searchServerType]() {
         reply->deleteLater();
-        if (200 != reply->attribute(QNetworkRequest::HttpStatusCodeAttribute)) {
+        if (reply->attribute(QNetworkRequest::HttpStatusCodeAttribute) != 200) {
             qCDebug(ACCOUNTWIZARD_LOG)
                 << "Fetching failed"
                 << searchServerType
@@ -56,7 +59,6 @@ void IspdbService::requestConfig(const KMime::Types::AddrSpec &addrSpec, const S
                 requestConfig(addrSpec, IspWellKnow);
                 break;
             case IspWellKnow:
-                Q_EMIT errorOccured();
                 break;
             case DataBase:
                 requestConfig(addrSpec, IspAutoConfig);
@@ -83,7 +85,7 @@ void IspdbService::handleReply(QNetworkReply *const reply, const KMime::Types::A
     QDomDocument::ParseResult result = document.setContent(data);
     if (!result) {
         qCDebug(ACCOUNTWIZARD_LOG) << "Could not parse xml" << data;
-        Q_EMIT errorOccured();
+        Q_EMIT errorOccured(i18n("Impossible to parse result"));
         return;
     }
 #endif
@@ -92,7 +94,7 @@ void IspdbService::handleReply(QNetworkReply *const reply, const KMime::Types::A
     const QDomNodeList emailProviders = docElem.elementsByTagName(QStringLiteral("emailProvider"));
 
     if (emailProviders.isEmpty()) {
-        Q_EMIT errorOccured();
+        Q_EMIT info(i18n("No providers found."));
         return;
     }
 

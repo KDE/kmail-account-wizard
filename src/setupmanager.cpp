@@ -20,6 +20,12 @@ SetupManager::SetupManager(QObject *parent)
     connect(m_identity, &Identity::emailChanged, this, &SetupManager::emailChanged);
     connect(m_ispdbService, &IspdbService::finished, m_configurationModel,
             &ConfigurationModel::setEmailProvider);
+#if 0
+    connect(m_ispdbService, &IspdbService::errorOccured, m_configurationModel,
+            &ConfigurationModel::setErrorOccured);
+    connect(m_ispdbService, &IspdbService::info, m_configurationModel,
+            &ConfigurationModel::setInformation);
+#endif
 }
 
 SetupManager::~SetupManager() = default;
@@ -70,6 +76,7 @@ ConfigurationModel *SetupManager::configurationModel() const
 
 void SetupManager::searchConfiguration()
 {
+    m_configurationModel->clear();
     KMime::Types::Mailbox box;
     box.fromUnicodeString(email());
     m_ispdbService->start(box.addrSpec());

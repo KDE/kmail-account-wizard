@@ -20,9 +20,10 @@ public:
     void start(const KMime::Types::AddrSpec &addrSpec);
 
 Q_SIGNALS:
-    void finished(EmailProvider emailProvider);
+    void finished(const EmailProvider &emailProvider);
     void info(const QString &infoMessage);
-    void errorOccured();
+    void errorOccured(const QString &str);
+    void requestedConfigFromUrl(const QUrl &url);
 
 private:
     enum SearchServerType {

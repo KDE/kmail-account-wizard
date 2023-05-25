@@ -60,7 +60,19 @@ QHash<int, QByteArray> ConfigurationModel::roleNames() const
     };
 }
 
-void ConfigurationModel::setEmailProvider(EmailProvider emailProvider)
+void ConfigurationModel::setErrorOccured(const QString &errorMessage)
+{
+    // TODO
+}
+
+void ConfigurationModel::clear()
+{
+    beginResetModel();
+    m_configurations.clear();
+    endResetModel();
+}
+
+void ConfigurationModel::setEmailProvider(const EmailProvider &emailProvider)
 {
     std::optional<Server> preferredOutgoingServer;
 

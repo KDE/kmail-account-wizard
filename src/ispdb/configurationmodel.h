@@ -35,7 +35,9 @@ public:
     QVariant data(const QModelIndex &index, int role) const override;
     QHash<int, QByteArray> roleNames() const override;
 
-    void setEmailProvider(EmailProvider emailProvider);
+    void setEmailProvider(const EmailProvider &emailProvider);
+    void setErrorOccured(const QString &errorMessage);
+    void clear();
 
 private:
     std::vector<Configuration> m_configurations;
