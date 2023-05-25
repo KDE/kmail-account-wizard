@@ -118,6 +118,47 @@ Kirigami.ScrollablePage {
             }
         }
 
+        MobileForm.FormCard {
+            id: manualConfiguration
+            Layout.topMargin: Kirigami.Units.largeSpacing
+            Layout.fillWidth: true
+            visible: SetupManager.noConfigFound
+            contentItem: ColumnLayout {
+                spacing: 0
+
+                MobileForm.FormCardHeader {
+                    title: i18n("Server Parameters")
+                }
+
+                QQC2.Label {
+                    font.bold: true
+                    text: i18n("Incoming")
+                    padding: Kirigami.Units.gridUnit
+                }
+                GridLayout {
+                    columns: 2
+                    QQC2.Label {
+                        text: i18n("Protocol")
+                        padding: Kirigami.Units.gridUnit
+                    }
+                    QQC2.ComboBox {
+                        // TODO
+                    }
+                    QQC2.Label {
+                        text: i18n("Hostname")
+                        padding: Kirigami.Units.gridUnit
+                    }
+                }
+
+                MobileForm.FormDelegateSeparator {}
+
+                QQC2.Label {
+                    font.bold: true
+                    text: i18n("Outgoing")
+                    padding: Kirigami.Units.gridUnit
+                }
+            }
+        }
 
         MobileForm.FormCard {
             Layout.topMargin: Kirigami.Units.largeSpacing
