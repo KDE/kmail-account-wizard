@@ -15,7 +15,6 @@
 #include <KLocalizedString>
 
 #include <QApplication>
-#include <QCommandLineOption>
 #include <QCommandLineParser>
 #include <QDebug>
 #include <QIcon>
