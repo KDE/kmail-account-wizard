@@ -12,6 +12,7 @@ SetupManager::SetupManager(QObject *parent)
     , m_identity(new Identity(this))
     , m_ispdbService(new IspdbService(this))
     , m_configurationModel(new ConfigurationModel(this))
+    , m_manualConfiguration(new ManualConfiguration(this))
 {
     KEMailSettings emailSettings;
     setFullName(emailSettings.getSetting(KEMailSettings::RealName));
@@ -101,4 +102,9 @@ void SetupManager::noConfigFound()
 {
     m_noConfigFound = true;
     Q_EMIT noConfigFoundChanged();
+}
+
+ManualConfiguration *SetupManager::manualConfiguration() const
+{
+    return m_manualConfiguration;
 }

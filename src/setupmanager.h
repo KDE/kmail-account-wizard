@@ -4,6 +4,7 @@
 #pragma once
 
 #include "ispdb/configurationmodel.h"
+#include "manualconfiguration.h"
 #include <QObject>
 
 class Identity;
@@ -20,6 +21,7 @@ class SetupManager : public QObject
     Q_PROPERTY(ConfigurationModel *configurationModel READ configurationModel CONSTANT)
     Q_PROPERTY(QString searchIspdbFoundMessage MEMBER m_searchIspdbFoundMessage NOTIFY searchIspdbFoundMessageChanged)
     Q_PROPERTY(bool noConfigFound MEMBER m_noConfigFound NOTIFY noConfigFoundChanged)
+    Q_PROPERTY(ManualConfiguration *manualConfiguration READ manualConfiguration CONSTANT)
 
 public:
     explicit SetupManager(QObject *parent = nullptr);
@@ -36,6 +38,7 @@ public:
 
     Identity *identity() const;
     ConfigurationModel *configurationModel() const;
+    ManualConfiguration *manualConfiguration() const;
 
     Q_INVOKABLE void searchConfiguration();
 
@@ -54,6 +57,7 @@ private:
     Identity *const m_identity;
     IspdbService *const m_ispdbService;
     ConfigurationModel *const m_configurationModel;
+    ManualConfiguration *const m_manualConfiguration;
     QString m_password;
     QString m_searchIspdbFoundMessage;
     bool m_noConfigFound = false;

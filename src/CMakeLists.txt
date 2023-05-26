@@ -14,6 +14,8 @@ add_library(libaccountwizard STATIC
     ispdb/serverconfiguration.cpp
     ispdbservice.h
     ispdbservice.cpp
+    manualconfiguration.h
+    manualconfiguration.cpp
 )
 
 ecm_qt_declare_logging_category(libaccountwizard HEADER accountwizard_debug.h IDENTIFIER ACCOUNTWIZARD_LOG CATEGORY_NAME org.kde.pim.accountwizard
@@ -28,7 +30,7 @@ target_link_libraries(libaccountwizard
     KF${KF_MAJOR_VERSION}::KCMUtils
     KF${KF_MAJOR_VERSION}::KIOCore
     KPim${KF_MAJOR_VERSION}::Mime
-    KPim${KF_MAJOR_VERSION}::IdentityManagement
+    KPim${KF_MAJOR_VERSION}::IdentityManagementCore
     KF${KF_MAJOR_VERSION}::WidgetsAddons
     KPim${KF_MAJOR_VERSION}::Libkdepim
     KF${KF_MAJOR_VERSION}::ItemViews
