@@ -29,8 +29,8 @@
 #include <KNewPasswordDialog>
 #include <KNotifications/KNotification>
 
-#include <KIdentityManagement/Identity>
-#include <KIdentityManagement/IdentityManager>
+#include <KIdentityManagementCore/Identity>
+#include <KIdentityManagementCore/IdentityManager>
 
 #include <QEventLoopLocker>
 #include <QFileDialog>
@@ -170,7 +170,7 @@ private Q_SLOTS:
 
     void updateIdentity(const QString &email, const QByteArray &fingerprint)
     {
-        auto manager = KIdentityManagement::IdentityManager::self();
+        auto manager = KIdentityManagementCore::IdentityManager::self();
         for (auto it = manager->modifyBegin(), end = manager->modifyEnd(); it != end; ++it) {
             if (it->primaryEmailAddress() == email) {
                 qCDebug(ACCOUNTWIZARD_LOG) << "Found matching identity for" << email << ":" << it->uoid();

@@ -9,8 +9,8 @@
 #include "identity.h"
 #include "accountwizard_debug.h"
 
-#include <KIdentityManagement/IdentityManager>
-#include <KIdentityManagement/Identity>
+#include <KIdentityManagementCore/Identity>
+#include <KIdentityManagementCore/IdentityManager>
 #include <MailTransport/Transport>
 
 #include <KLocalizedString>
@@ -18,7 +18,7 @@
 Identity::Identity(QObject *parent)
     : QObject(parent)
 {
-    m_identity = &KIdentityManagement::IdentityManager::self()->newFromScratch(QString());
+    m_identity = &KIdentityManagementCore::IdentityManager::self()->newFromScratch(QString());
     Q_ASSERT(m_identity != nullptr);
 }
 
@@ -29,7 +29,7 @@ void Identity::create()
     // store identity information
     m_identityName = identityName();
     m_identity->setIdentityName(m_identityName);
-    auto manager = KIdentityManagement::IdentityManager::self();
+    auto manager = KIdentityManagementCore::IdentityManager::self();
     manager->commit();
     if (!manager->setAsDefault(m_identity->uoid())) {
         qCWarning(ACCOUNTWIZARD_LOG) << "Impossible to find identity";
@@ -60,7 +60,7 @@ QString Identity::identityName() const
         name[0] = name[0].toUpper();
     }
 
-    auto manager = KIdentityManagement::IdentityManager::self();
+    auto manager = KIdentityManagementCore::IdentityManager::self();
     if (!manager->isUnique(name)) {
         name = manager->makeUnique(name);
     }
@@ -69,7 +69,7 @@ QString Identity::identityName() const
 
 void Identity::destroy()
 {
-    auto manager = KIdentityManagement::IdentityManager::self();
+    auto manager = KIdentityManagementCore::IdentityManager::self();
     if (!manager->removeIdentityForced(m_identityName)) {
         qCWarning(ACCOUNTWIZARD_LOG) << " impossible to remove identity " << m_identityName;
     }
@@ -147,10 +147,10 @@ QString Identity::signature() const
 void Identity::setSignature(const QString &sig)
 {
     if (!sig.isEmpty()) {
-        const KIdentityManagement::Signature signature(sig);
+        const KIdentityManagementCore::Signature signature(sig);
         m_identity->setSignature(signature);
     } else {
-        m_identity->setSignature(KIdentityManagement::Signature());
+        m_identity->setSignature(KIdentityManagementCore::Signature());
     }
 }
 

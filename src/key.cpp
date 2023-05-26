@@ -20,8 +20,8 @@
 #include <MailTransport/TransportManager>
 #include <MailTransportAkonadi/MessageQueueJob>
 
-#include <KIdentityManagement/Identity>
-#include <KIdentityManagement/IdentityManager>
+#include <KIdentityManagementCore/Identity>
+#include <KIdentityManagementCore/IdentityManager>
 
 #include <KMime/Headers>
 #include <KMime/Message>
@@ -137,7 +137,7 @@ void Key::onWKSPublishingRequestCreated(const GpgME::Error &gpgMeError, const QB
             m_transportId = qobject_cast<Transport *>(*it)->transportId();
         }
     } else if (m_transportId) {
-        auto ident = KIdentityManagement::IdentityManager::self()->identityForAddress(m_mailbox);
+        auto ident = KIdentityManagementCore::IdentityManager::self()->identityForAddress(m_mailbox);
         if (!ident.transport().isEmpty()) {
             m_transportId = ident.transport().toInt();
         }

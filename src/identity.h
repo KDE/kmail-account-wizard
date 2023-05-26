@@ -9,7 +9,7 @@
 #include <QObject>
 #include <gpgme++/global.h>
 
-namespace KIdentityManagement
+namespace KIdentityManagementCore
 {
 class Identity;
 }
@@ -81,5 +81,5 @@ Q_SIGNALS:
 
 private:
     QString m_identityName;
-    KIdentityManagement::Identity *m_identity = nullptr;
+    KIdentityManagementCore::Identity *m_identity = nullptr;
 };
