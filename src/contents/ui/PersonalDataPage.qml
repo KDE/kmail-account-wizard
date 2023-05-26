@@ -138,19 +138,32 @@ Kirigami.ScrollablePage {
                     text: i18n("Incoming")
                     padding: Kirigami.Units.gridUnit
                 }
-                GridLayout {
-                    columns: 2
-                    QQC2.Label {
-                        text: i18n("Protocol")
-                        padding: Kirigami.Units.gridUnit
-                    }
-                    QQC2.ComboBox {
-                        // TODO
-                    }
-                    QQC2.Label {
-                        text: i18n("Hostname")
-                        padding: Kirigami.Units.gridUnit
-                    }
+
+                MobileForm.FormTextFieldDelegate {
+                    id: manualIncomingHostName
+                    label: i18n("Hostname:")
+                    inputMethodHints: Qt.ImhUrlCharactersOnly
+                }
+                MobileForm.FormComboBoxDelegate {
+                    id: manualIncomingProtocol
+                    description: i18n("Protocol:")
+                }
+                MobileForm.FormSpinBoxDelegate {
+                    id: manualIncomingPort
+                    label: i18n("Port:")
+                }
+                MobileForm.FormComboBoxDelegate {
+                    id: manualIncomingSecurity
+                    description: i18n("Security:")
+                }
+                MobileForm.FormComboBoxDelegate {
+                    id: manualIncomingAuthenticationMethod
+                    description: i18n("Authentication Method:")
+                }
+                MobileForm.FormTextFieldDelegate {
+                    id: manualIncomingUserName
+                    label: i18n("Username:")
+                    inputMethodHints: Qt.ImhUrlCharactersOnly
                 }
 
                 MobileForm.FormDelegateSeparator {}
@@ -159,6 +172,28 @@ Kirigami.ScrollablePage {
                     font.bold: true
                     text: i18n("Outgoing")
                     padding: Kirigami.Units.gridUnit
+                }
+                MobileForm.FormTextFieldDelegate {
+                    id: manualOutgoingHostName
+                    label: i18n("Hostname:")
+                    inputMethodHints: Qt.ImhUrlCharactersOnly
+                }
+                MobileForm.FormSpinBoxDelegate {
+                    id: manualOutgoingPort
+                    label: i18n("Port:")
+                }
+                MobileForm.FormComboBoxDelegate {
+                    id: manualOutgoingSecurity
+                    description: i18n("Security:")
+                }
+                MobileForm.FormComboBoxDelegate {
+                    id: manualOutgoingAuthenticationMethod
+                    description: i18n("Authentication Method:")
+                }
+                MobileForm.FormTextFieldDelegate {
+                    id: manualOutgoingUserName
+                    label: i18n("Username:")
+                    inputMethodHints: Qt.ImhUrlCharactersOnly
                 }
             }
         }
