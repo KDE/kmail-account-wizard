@@ -54,11 +54,11 @@ private:
     void setErrorOccured(const QString &errorMessage);
     void clearConfiguration();
     void noConfigFound();
+    QString m_password;
+    QString m_searchIspdbFoundMessage;
     Identity *const m_identity;
     IspdbService *const m_ispdbService;
     ConfigurationModel *const m_configurationModel;
     ManualConfiguration *const m_manualConfiguration;
-    QString m_password;
-    QString m_searchIspdbFoundMessage;
     bool m_noConfigFound = false;
 };

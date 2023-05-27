@@ -21,7 +21,6 @@ public:
 
 Q_SIGNALS:
     void finished(const EmailProvider &emailProvider, const QString &messageInfo);
-    void info(const QString &infoMessage);
     void notConfigFound();
     void requestedConfigFromUrl(const QUrl &url);
 

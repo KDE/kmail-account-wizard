@@ -21,10 +21,6 @@ SetupManager::SetupManager(QObject *parent)
     connect(m_identity, &Identity::emailChanged, this, &SetupManager::emailChanged);
     connect(m_ispdbService, &IspdbService::finished, this, &SetupManager::setEmailProvider);
     connect(m_ispdbService, &IspdbService::notConfigFound, this, &SetupManager::noConfigFound);
-#if 0
-    connect(m_ispdbService, &IspdbService::info, m_configurationModel,
-            &ConfigurationModel::setInformation);
-#endif
 }
 
 SetupManager::~SetupManager() = default;

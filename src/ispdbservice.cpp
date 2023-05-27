@@ -96,7 +96,6 @@ void IspdbService::handleReply(QNetworkReply *const reply, const KMime::Types::A
     const QDomNodeList emailProviders = docElem.elementsByTagName(QStringLiteral("emailProvider"));
 
     if (emailProviders.isEmpty()) {
-        Q_EMIT info(i18n("No providers found."));
         return;
     }
 
