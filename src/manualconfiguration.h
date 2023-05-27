@@ -45,6 +45,8 @@ public:
     Q_REQUIRED_RESULT QStringList incomingProtocols() const;
 
     Q_REQUIRED_RESULT bool configurationIsValid() const;
+
+    Q_INVOKABLE void createManualAccount();
 Q_SIGNALS:
     void incomingHostNameChanged();
     void incomingPortChanged();

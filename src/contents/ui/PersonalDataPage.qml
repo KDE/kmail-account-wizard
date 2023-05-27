@@ -149,6 +149,7 @@ Kirigami.ScrollablePage {
                     id: manualIncomingProtocol
                     description: i18n("Protocol:")
                     model: SetupManager.manualConfiguration.incomingProtocols
+                    currentIndex: 0
                 }
                 MobileForm.FormSpinBoxDelegate {
                     id: manualIncomingPort
@@ -208,9 +209,11 @@ Kirigami.ScrollablePage {
                     id: createAccountManualConfiguration
                     text: i18n("Create Account")
                     checked: true
-                    // TODO onClicked: SetupManager.searchConfiguration()
+                    onClicked: {
+                        SetupManager.manualConfiguration.createManualAccount()
+                    }
                     visible: manualConfiguration.visible
-                    enabled: manualConfiguration.configurationIsValid
+                    enabled: SetupManager.manualConfiguration.configurationIsValid
                 }
             }
         }
@@ -232,7 +235,7 @@ Kirigami.ScrollablePage {
                 Repeater {
                     id: configurationRepeater
                     model: SetupManager.configurationModel
-                    Component.onCompleted: console.log(SetupManager.configurationModel)
+                    // Component.onCompleted: console.log(SetupManager.configurationModel)
 
                     delegate: ConfigurationDelegate {
                         required property int index

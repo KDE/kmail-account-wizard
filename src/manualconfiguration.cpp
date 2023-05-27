@@ -25,6 +25,11 @@ bool ManualConfiguration::configurationIsValid() const
     return true;
 }
 
+void ManualConfiguration::createManualAccount()
+{
+    // TODO
+}
+
 QString ManualConfiguration::incomingHostName() const
 {
     return mIncomingHostName;
