@@ -124,9 +124,6 @@ if (USE_UNITY_CMAKE_SUPPORT)
     set(COMPILE_WITH_UNITY_CMAKE_SUPPORT ON)
 endif()
 
-# config-enterprise.h is needed for both ENTERPRISE_BUILD and BUILD_EVERYTHING
-configure_file(src/config-enterprise.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/src/config-enterprise.h )
-
 add_subdirectory(src)
 add_subdirectory(components)
 
