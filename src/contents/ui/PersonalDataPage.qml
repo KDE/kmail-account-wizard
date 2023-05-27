@@ -159,10 +159,13 @@ Kirigami.ScrollablePage {
                 MobileForm.FormComboBoxDelegate {
                     id: manualIncomingSecurity
                     description: i18n("Security:")
+                    model: SetupManager.manualConfiguration.securityProtocols
+                    currentIndex: 2 //None
                 }
                 MobileForm.FormComboBoxDelegate {
                     id: manualIncomingAuthenticationMethod
                     description: i18n("Authentication Method:")
+                    model: SetupManager.manualConfiguration.authenticationProtocols
                 }
                 MobileForm.FormTextFieldDelegate {
                     id: manualIncomingUserName
@@ -192,10 +195,13 @@ Kirigami.ScrollablePage {
                 MobileForm.FormComboBoxDelegate {
                     id: manualOutgoingSecurity
                     description: i18n("Security:")
+                    model: SetupManager.manualConfiguration.securityProtocols
+                    currentIndex: 2 //None
                 }
                 MobileForm.FormComboBoxDelegate {
                     id: manualOutgoingAuthenticationMethod
                     description: i18n("Authentication Method:")
+                    model: SetupManager.manualConfiguration.authenticationProtocols
                 }
                 MobileForm.FormTextFieldDelegate {
                     id: manualOutgoingUserName

@@ -19,6 +19,16 @@ QStringList ManualConfiguration::incomingProtocols() const
     return {i18n("POP3"), i18n("IMAP")};
 }
 
+QStringList ManualConfiguration::securityProtocols() const
+{
+    return {i18n("STARTTLS"), i18n("SSL/TLS"), i18n("None")};
+}
+
+QStringList ManualConfiguration::authenticationProtocols() const
+{
+    return {i18n("Clear text"), i18n("LOGIN"), i18n("PLAIN"), i18n("CRAM-MD5"), i18n("DIGEST-MD5"), i18n("NTLM"), i18n("GSSAPI")};
+}
+
 bool ManualConfiguration::configurationIsValid() const
 {
     // TODO customize
