@@ -143,6 +143,7 @@ Kirigami.ScrollablePage {
                     id: manualIncomingHostName
                     label: i18n("Hostname:")
                     inputMethodHints: Qt.ImhUrlCharactersOnly
+                    text: SetupManager.manualConfiguration.incomingHostName
                 }
                 MobileForm.FormComboBoxDelegate {
                     id: manualIncomingProtocol
@@ -151,6 +152,7 @@ Kirigami.ScrollablePage {
                 MobileForm.FormSpinBoxDelegate {
                     id: manualIncomingPort
                     label: i18n("Port:")
+                    text: SetupManager.manualConfiguration.incomingPort
                 }
                 MobileForm.FormComboBoxDelegate {
                     id: manualIncomingSecurity
@@ -164,6 +166,7 @@ Kirigami.ScrollablePage {
                     id: manualIncomingUserName
                     label: i18n("Username:")
                     inputMethodHints: Qt.ImhUrlCharactersOnly
+                    text: SetupManager.manualConfiguration.userName
                 }
 
                 MobileForm.FormDelegateSeparator {}
@@ -177,10 +180,12 @@ Kirigami.ScrollablePage {
                     id: manualOutgoingHostName
                     label: i18n("Hostname:")
                     inputMethodHints: Qt.ImhUrlCharactersOnly
+                    text: SetupManager.manualConfiguration.manualOutgoingHostName
                 }
                 MobileForm.FormSpinBoxDelegate {
                     id: manualOutgoingPort
                     label: i18n("Port:")
+                    text: SetupManager.manualConfiguration.manualOutgoingPort
                 }
                 MobileForm.FormComboBoxDelegate {
                     id: manualOutgoingSecurity
@@ -194,6 +199,7 @@ Kirigami.ScrollablePage {
                     id: manualOutgoingUserName
                     label: i18n("Username:")
                     inputMethodHints: Qt.ImhUrlCharactersOnly
+                    text: SetupManager.manualConfiguration.manualOutgoingUserName
                 }
             }
         }

@@ -11,6 +11,8 @@ ManualConfiguration::ManualConfiguration(QObject *parent)
 {
 }
 
+ManualConfiguration::~ManualConfiguration() = default;
+
 QString ManualConfiguration::incomingHostName() const
 {
     return mIncomingHostName;
@@ -37,4 +39,54 @@ void ManualConfiguration::setIncomingPort(int newPort)
     }
 }
 
-ManualConfiguration::~ManualConfiguration() = default;
+QString ManualConfiguration::incomingUserName() const
+{
+    return mIncomingUserName;
+}
+
+void ManualConfiguration::setIncomingUserName(const QString &newIncomingUserName)
+{
+    if (mIncomingUserName != newIncomingUserName) {
+        mIncomingUserName = newIncomingUserName;
+        Q_EMIT incomingUserNameChanged();
+    }
+}
+
+QString ManualConfiguration::outgoingHostName() const
+{
+    return mOutgoingHostName;
+}
+
+void ManualConfiguration::setOutgoingHostName(const QString &newOutgoingHostName)
+{
+    if (mOutgoingHostName != newOutgoingHostName) {
+        mOutgoingHostName = newOutgoingHostName;
+        Q_EMIT outgoingHostNameChanged();
+    }
+}
+
+int ManualConfiguration::outgoingPort() const
+{
+    return mOutgoingPort;
+}
+
+void ManualConfiguration::setOutgoingPort(int newPort)
+{
+    if (mOutgoingPort != newPort) {
+        mOutgoingPort = newPort;
+        Q_EMIT outgoingPortChanged();
+    }
+}
+
+QString ManualConfiguration::outgoingUserName() const
+{
+    return mOutgoingUserName;
+}
+
+void ManualConfiguration::setOutgoingUserName(const QString &newOutgoingUserName)
+{
+    if (mOutgoingUserName != newOutgoingUserName) {
+        mOutgoingUserName = newOutgoingUserName;
+        Q_EMIT outgoingUserNameChanged();
+    }
+}
