@@ -232,15 +232,4 @@ Kirigami.ScrollablePage {
             }
         }
     }
-
-    footer: QQC2.ToolBar {
-        contentItem: RowLayout {
-            QQC2.Button {
-                Layout.alignment: Qt.AlignRight
-                enabled: false
-                text: i18n("Next")
-                onClicked: QQC2.ApplicationWindow.window.pageStack.push(accountSelectionPageComponent);
-            }
-        }
-    }
 }
