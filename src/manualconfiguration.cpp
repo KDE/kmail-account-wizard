@@ -19,6 +19,12 @@ QStringList ManualConfiguration::incomingProtocols() const
     return {i18n("POP3"), i18n("IMAP")};
 }
 
+bool ManualConfiguration::configurationIsValid() const
+{
+    // TODO customize
+    return true;
+}
+
 QString ManualConfiguration::incomingHostName() const
 {
     return mIncomingHostName;

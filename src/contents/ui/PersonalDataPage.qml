@@ -210,6 +210,7 @@ Kirigami.ScrollablePage {
                     checked: true
                     // TODO onClicked: SetupManager.searchConfiguration()
                     visible: manualConfiguration.visible
+                    enabled: manualConfiguration.configurationIsValid
                 }
             }
         }
