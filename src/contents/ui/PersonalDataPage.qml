@@ -202,10 +202,20 @@ Kirigami.ScrollablePage {
                     inputMethodHints: Qt.ImhUrlCharactersOnly
                     text: SetupManager.manualConfiguration.manualOutgoingUserName
                 }
+                MobileForm.FormDelegateSeparator {}
+
+                MobileForm.FormButtonDelegate {
+                    id: createAccountManualConfiguration
+                    text: i18n("Create Account")
+                    checked: true
+                    // TODO onClicked: SetupManager.searchConfiguration()
+                    visible: manualConfiguration.visible
+                }
             }
         }
 
         MobileForm.FormCard {
+            id: availableConfigurations
             Layout.topMargin: Kirigami.Units.largeSpacing
             Layout.fillWidth: true
 
@@ -229,6 +239,16 @@ Kirigami.ScrollablePage {
                         checked: index === 0
                         Layout.fillWidth: true
                     }
+                }
+
+                MobileForm.FormDelegateSeparator {}
+
+                MobileForm.FormButtonDelegate {
+                    id: createAccount
+                    text: i18n("Create Account")
+                    checked: true
+                    // TODO onClicked: SetupManager.searchConfiguration()
+                    visible: availableConfigurations.visible
                 }
             }
         }
