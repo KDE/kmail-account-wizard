@@ -5,6 +5,7 @@
 */
 
 #include "manualconfiguration.h"
+#include <KLocalizedString>
 
 ManualConfiguration::ManualConfiguration(QObject *parent)
     : QObject{parent}
@@ -12,6 +13,11 @@ ManualConfiguration::ManualConfiguration(QObject *parent)
 }
 
 ManualConfiguration::~ManualConfiguration() = default;
+
+QStringList ManualConfiguration::incomingProtocols() const
+{
+    return {i18n("POP3"), i18n("IMAP")};
+}
 
 QString ManualConfiguration::incomingHostName() const
 {

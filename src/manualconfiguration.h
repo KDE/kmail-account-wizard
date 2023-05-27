@@ -17,6 +17,7 @@ class ManualConfiguration : public QObject
     Q_PROPERTY(QString outgoingHostName READ outgoingHostName WRITE setOutgoingHostName NOTIFY outgoingHostNameChanged FINAL)
     Q_PROPERTY(int outgoingPort READ outgoingPort WRITE setOutgoingPort NOTIFY outgoingPortChanged FINAL)
     Q_PROPERTY(QString outgoingUserName READ outgoingUserName WRITE setOutgoingUserName NOTIFY outgoingUserNameChanged FINAL)
+    Q_PROPERTY(QStringList incomingProtocols READ incomingProtocols CONSTANT)
 
 public:
     explicit ManualConfiguration(QObject *parent = nullptr);
@@ -39,6 +40,8 @@ public:
 
     Q_REQUIRED_RESULT QString outgoingUserName() const;
     void setOutgoingUserName(const QString &newOutgoingUserName);
+
+    Q_REQUIRED_RESULT QStringList incomingProtocols() const;
 
 Q_SIGNALS:
     void incomingHostNameChanged();

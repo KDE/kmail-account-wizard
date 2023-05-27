@@ -148,6 +148,7 @@ Kirigami.ScrollablePage {
                 MobileForm.FormComboBoxDelegate {
                     id: manualIncomingProtocol
                     description: i18n("Protocol:")
+                    model: SetupManager.manualConfiguration.incomingProtocols
                 }
                 MobileForm.FormSpinBoxDelegate {
                     id: manualIncomingPort
