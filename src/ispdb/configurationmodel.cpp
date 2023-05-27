@@ -4,7 +4,7 @@
 #include "ispdb/configurationmodel.h"
 #include <KLocalizedString>
 
-Configuration::Configuration(Server _incoming, std::optional<Server> _outgoing, const QString &_shortDisplayName)
+Configuration::Configuration(const Server &_incoming, std::optional<Server> _outgoing, const QString &_shortDisplayName)
     : shortDisplayName(_shortDisplayName)
     , incoming(_incoming)
     , outgoing(_outgoing)

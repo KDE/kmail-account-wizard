@@ -9,7 +9,7 @@
 
 struct Configuration
 {
-    explicit Configuration(Server incomming, std::optional<Server> outgoing, const QString &shortDisplayName);
+    explicit Configuration(const Server &incomming, std::optional<Server> outgoing, const QString &shortDisplayName);
     QString shortDisplayName;
     Server incoming;
     std::optional<Server> outgoing;
