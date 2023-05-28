@@ -64,12 +64,12 @@ private:
     // Incoming
     QString mIncomingUserName;
     QString mIncomingHostName;
-    int mIncomingPort = -1;
+    int mIncomingPort = 1;
 
     // Outgoing
     QString mOutgoingUserName;
     QString mOutgoingHostName;
-    int mOutgoingPort = -1;
+    int mOutgoingPort = 1;
 
     // configuration is Valid
     bool mConfigurationIsValid = false;
