@@ -70,7 +70,7 @@ private:
     // Outgoing
     QString mOutgoingUserName;
     QString mOutgoingHostName;
-    int mOutgoingPort = 1;
+    int mOutgoingPort = 465;
 
     // configuration is Valid
     bool mConfigurationIsValid = false;

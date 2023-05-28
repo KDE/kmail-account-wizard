@@ -157,6 +157,8 @@ Kirigami.ScrollablePage {
                     id: manualIncomingPort
                     label: i18n("Port:")
                     value: SetupManager.manualConfiguration.incomingPort
+                    from: 1
+                    to: 999
                 }
                 MobileForm.FormComboBoxDelegate {
                     id: manualIncomingSecurity
@@ -194,6 +196,8 @@ Kirigami.ScrollablePage {
                     id: manualOutgoingPort
                     label: i18n("Port:")
                     value: SetupManager.manualConfiguration.outgoingPort
+                    from: 1
+                    to: 999
                 }
                 MobileForm.FormComboBoxDelegate {
                     id: manualOutgoingSecurity
