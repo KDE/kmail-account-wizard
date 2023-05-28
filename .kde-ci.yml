@@ -12,6 +12,7 @@ Dependencies:
     'kde/pim/kldap' : '@latest-kf6'
     'kde/pim/kmailtransport' : '@latest-kf6'
     'kde/pim/libkleo' : '@latest-kf6'
+    'frameworks/kdbusaddons': '@latest-kf6'
 
 Options:
   require-passing-tests-on: [ 'Linux', 'FreeBSD' ]      
