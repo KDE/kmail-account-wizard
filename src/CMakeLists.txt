@@ -27,24 +27,18 @@ target_link_libraries(libaccountwizard
     KPim${KF_MAJOR_VERSION}::AkonadiCore
     KPim${KF_MAJOR_VERSION}::AkonadiWidgets
     KPim${KF_MAJOR_VERSION}::MailTransport
-    KF${KF_MAJOR_VERSION}::KCMUtils
-    KF${KF_MAJOR_VERSION}::KIOCore
     KPim${KF_MAJOR_VERSION}::Mime
+    KF${KF_MAJOR_VERSION}::KIOCore
     KPim${KF_MAJOR_VERSION}::IdentityManagementCore
     KF${KF_MAJOR_VERSION}::WidgetsAddons
-    KPim${KF_MAJOR_VERSION}::Libkdepim
-    KF${KF_MAJOR_VERSION}::ItemViews
     KF${KF_MAJOR_VERSION}::I18n
     KPim${KF_MAJOR_VERSION}::Ldap
     KF${KF_MAJOR_VERSION}::Crash
     KPim${KF_MAJOR_VERSION}::Libkleo
-    KF${KF_MAJOR_VERSION}::Notifications
-    KPim${KF_MAJOR_VERSION}::PimCommon
-    KF${KF_MAJOR_VERSION}::XmlGui
     KF${KF_MAJOR_VERSION}::Package
+    Qt::Xml
     Qt::Quick
     Qt::QuickControls2
-    KF${KF_MAJOR_VERSION}::Codecs
     KF${KF_MAJOR_VERSION}::DBusAddons
     )
 
