@@ -15,31 +15,5 @@ Dependencies:
     'kde/pim/libkleo' : '@latest-kf6'
     'kde/pim/pimcommon' : '@latest-kf6'
 
-- 'on': ['Linux/Qt5', 'FreeBSD/Qt5']
-  'require':
-    'frameworks/extra-cmake-modules': '@latest'
-    'pim/akonadi' : '@same'
-    'pim/akonadi-mime' : '@same'
-    'pim/kidentitymanagement' : '@same'
-    'pim/kimap' : '@same'
-    'pim/kldap' : '@same'
-    'pim/kmailtransport' : '@same'
-    'pim/libkdepim' : '@same'
-    'pim/libkleo' : '@same'
-    'pim/pimcommon' : '@same'
-    'frameworks/kwallet': '@latest'
-    'frameworks/kcmutils': '@latest'
-    'frameworks/knotifyconfig': '@latest'
-    'frameworks/kconfig': '@latest'
-    'frameworks/kservice': '@latest'
-    'frameworks/kdbusaddons': '@latest'
-    'frameworks/kdoctools': '@latest'
-    'frameworks/ktexteditor': '@latest'
-    'frameworks/kcodecs': '@latest'
-    'frameworks/kcrash': '@latest'
-    'frameworks/knotifications': '@latest'
-    'frameworks/knewstuff': '@latest'
-    'third-party/qtkeychain': '@latest'
-
 Options:
   require-passing-tests-on: [ 'Linux', 'FreeBSD' ]      
