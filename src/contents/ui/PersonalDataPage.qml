@@ -56,7 +56,9 @@ Kirigami.ScrollablePage {
                     label: i18n("E-mail address:")
                     placeholderText: i18nc("Generic email address", "boss@example.corp")
                     text: SetupManager.email
-                    onTextChanged: SetupManager.email = text
+                    onTextChanged: {
+                        SetupManager.email = text
+                    }
                 }
 
                 MobileForm.FormDelegateSeparator {}

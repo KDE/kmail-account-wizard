@@ -43,6 +43,7 @@ QString SetupManager::email() const
 void SetupManager::setEmail(const QString &email)
 {
     m_identity->setEmail(email);
+    clearConfiguration();
 }
 
 QString SetupManager::password() const
