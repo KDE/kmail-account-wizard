@@ -60,8 +60,6 @@ set(LIBKLEO_LIB_VERSION "5.22.40")
 set(KPIM_MIME_VERSION "5.22.41")
 
 # Find KF5 package
-find_package(KF6Config ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF6Service ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6DBusAddons ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6DocTools ${KF5_MIN_VERSION} REQUIRED)
 find_package(KF6Codecs ${KF5_MIN_VERSION} CONFIG REQUIRED)
