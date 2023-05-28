@@ -29,12 +29,6 @@ QStringList ManualConfiguration::authenticationProtocols() const
     return {i18n("Clear text"), i18n("LOGIN"), i18n("PLAIN"), i18n("CRAM-MD5"), i18n("DIGEST-MD5"), i18n("NTLM"), i18n("GSSAPI")};
 }
 
-bool ManualConfiguration::configurationIsValid() const
-{
-    // TODO customize
-    return true;
-}
-
 void ManualConfiguration::createManualAccount()
 {
     // TODO

@@ -18,9 +18,9 @@ class ManualConfiguration : public QObject
     Q_PROPERTY(int outgoingPort READ outgoingPort WRITE setOutgoingPort NOTIFY outgoingPortChanged FINAL)
     Q_PROPERTY(QString outgoingUserName READ outgoingUserName WRITE setOutgoingUserName NOTIFY outgoingUserNameChanged FINAL)
     Q_PROPERTY(QStringList incomingProtocols READ incomingProtocols CONSTANT)
-    Q_PROPERTY(bool configurationIsValid READ configurationIsValid NOTIFY configurationIsValidChanged FINAL)
     Q_PROPERTY(QStringList securityProtocols READ securityProtocols CONSTANT)
     Q_PROPERTY(QStringList authenticationProtocols READ authenticationProtocols CONSTANT)
+    Q_PROPERTY(bool configurationIsValid MEMBER mConfigurationIsValid NOTIFY configurationIsValidChanged)
 
 public:
     explicit ManualConfiguration(QObject *parent = nullptr);
@@ -48,8 +48,6 @@ public:
     Q_REQUIRED_RESULT QStringList securityProtocols() const;
     Q_REQUIRED_RESULT QStringList authenticationProtocols() const;
 
-    Q_REQUIRED_RESULT bool configurationIsValid() const;
-
     Q_INVOKABLE void createManualAccount();
 Q_SIGNALS:
     void incomingHostNameChanged();
@@ -72,4 +70,7 @@ private:
     QString mOutgoingUserName;
     QString mOutgoingHostName;
     int mOutgoingPort = -1;
+
+    // configuration is Valid
+    bool mConfigurationIsValid = false;
 };
