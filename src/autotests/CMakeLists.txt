@@ -14,7 +14,6 @@ target_link_libraries(ldaptest
     KPim6::Mime
     KPim6::Ldap
     Qt::Test
-    KPim6::Libkdepim
     KF6::I18n
     KF6::ConfigCore
     Qt::Widgets
