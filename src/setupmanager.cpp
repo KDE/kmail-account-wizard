@@ -77,6 +77,11 @@ void SetupManager::searchConfiguration()
     m_ispdbService->start(box.addrSpec());
 }
 
+void SetupManager::createAutomaticAccount()
+{
+    qDebug() << " Create Automatic Account";
+}
+
 void SetupManager::setEmailProvider(const EmailProvider &emailProvider, const QString &messageInfo)
 {
     m_searchIspdbFoundMessage = messageInfo;

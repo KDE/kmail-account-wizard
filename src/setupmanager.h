@@ -41,6 +41,7 @@ public:
     ManualConfiguration *manualConfiguration() const;
 
     Q_INVOKABLE void searchConfiguration();
+    Q_INVOKABLE void createAutomaticAccount();
 
 Q_SIGNALS:
     void fullNameChanged();

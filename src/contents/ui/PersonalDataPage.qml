@@ -257,7 +257,7 @@ Kirigami.ScrollablePage {
                     id: createAccount
                     text: i18n("Create Account")
                     checked: true
-                    // TODO onClicked: SetupManager.searchConfiguration()
+                    onClicked: SetupManager.createAutomaticAccount()
                     visible: availableConfigurations.visible
                 }
             }
