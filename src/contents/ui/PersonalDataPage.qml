@@ -216,6 +216,19 @@ Kirigami.ScrollablePage {
                 MobileForm.FormDelegateSeparator {}
 
                 MobileForm.FormButtonDelegate {
+                    id: recheckAccountManualConfiguration
+                    text: i18n("Recheck")
+                    checked: true
+                    onClicked: {
+                        SetupManager.manualConfiguration.checkServer()
+                    }
+                    visible: manualConfiguration.visible
+                    enabled: SetupManager.manualConfiguration.configurationIsValid
+                }
+
+                MobileForm.FormDelegateSeparator {}
+
+                MobileForm.FormButtonDelegate {
                     id: createAccountManualConfiguration
                     text: i18n("Create Account")
                     checked: true

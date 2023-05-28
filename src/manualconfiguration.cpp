@@ -31,7 +31,13 @@ QStringList ManualConfiguration::authenticationProtocols() const
 
 void ManualConfiguration::createManualAccount()
 {
+    qDebug() << " createManualAccount ";
     // TODO
+}
+
+void ManualConfiguration::checkServer()
+{
+    qDebug() << " Verify server";
 }
 
 QString ManualConfiguration::incomingHostName() const

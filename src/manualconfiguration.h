@@ -49,6 +49,7 @@ public:
     Q_REQUIRED_RESULT QStringList authenticationProtocols() const;
 
     Q_INVOKABLE void createManualAccount();
+    Q_INVOKABLE void checkServer();
 Q_SIGNALS:
     void incomingHostNameChanged();
     void incomingPortChanged();
