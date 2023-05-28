@@ -168,6 +168,7 @@ Kirigami.ScrollablePage {
                     id: manualIncomingAuthenticationMethod
                     description: i18n("Authentication Method:")
                     model: SetupManager.manualConfiguration.authenticationProtocols
+                    currentIndex: 0
                 }
                 MobileForm.FormTextFieldDelegate {
                     id: manualIncomingUserName
@@ -192,7 +193,7 @@ Kirigami.ScrollablePage {
                 MobileForm.FormSpinBoxDelegate {
                     id: manualOutgoingPort
                     label: i18n("Port:")
-                    value: SetupManager.manualConfiguration.manualOutgoingPort
+                    value: SetupManager.manualConfiguration.outgoingPort
                 }
                 MobileForm.FormComboBoxDelegate {
                     id: manualOutgoingSecurity
@@ -204,6 +205,7 @@ Kirigami.ScrollablePage {
                     id: manualOutgoingAuthenticationMethod
                     description: i18n("Authentication Method:")
                     model: SetupManager.manualConfiguration.authenticationProtocols
+                    currentIndex: 0
                 }
                 MobileForm.FormTextFieldDelegate {
                     id: manualOutgoingUserName
