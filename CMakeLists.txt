@@ -1,11 +1,11 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
 
-set(PIM_VERSION "5.22.40")
+set(PIM_VERSION "5.240.40")
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 project(kmail-account-wizard VERSION ${PIM_VERSION})
 
-set(KF_MIN_VERSION "5.102.0")
+set(KF_MIN_VERSION "5.240.0")
 
 find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -34,7 +34,7 @@ include(ECMQmlModule)
 
 # Do NOT add quote
 set(KDEPIM_DEV_VERSION alpha)
-set(RELEASE_SERVICE_VERSION "23.03.40")
+set(RELEASE_SERVICE_VERSION "23.07.40")
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
@@ -52,57 +52,45 @@ set(KIMAP_LIB_VERSION "5.22.40")
 set(AKONADI_MIMELIB_VERSION "5.22.40")
 
 set(KDEPIM_LIB_VERSION "${PIM_VERSION}")
-set(KDEPIM_LIB_SOVERSION "5")
-
-set(QT_REQUIRED_VERSION "5.15.2")
-if (QT_MAJOR_VERSION STREQUAL "6")
-    set(QT_REQUIRED_VERSION "6.4.0")
-endif()
-find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Test Quick QuickControls2)
+set(QT_REQUIRED_VERSION "6.4.0")
+find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Test Quick QuickControls2)
 set(PIMCOMMON_LIB_VERSION "5.22.40")
 set(LIBKDEPIM_LIB_VERSION "5.22.40")
 set(LIBKLEO_LIB_VERSION "5.22.40")
 set(KPIM_MIME_VERSION "5.22.41")
-if (QT_MAJOR_VERSION STREQUAL "6")
-    set(QT_REQUIRED_VERSION "6.4.0")
-    set(KF_MIN_VERSION "5.240.0")
-    set(KF_MAJOR_VERSION "6")
-else()
-    set(KF_MAJOR_VERSION "5")
-endif()
 
 # Find KF5 package
-find_package(KF${KF_MAJOR_VERSION}KCMUtils ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}Config ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}Service ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}DBusAddons ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}DocTools ${KF5_MIN_VERSION} REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}Codecs ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}Crash ${KF5_MIN_VERSION} REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}Notifications ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}Package ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6KCMUtils ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6Config ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6Service ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6DBusAddons ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6DocTools ${KF5_MIN_VERSION} REQUIRED)
+find_package(KF6Codecs ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6Crash ${KF5_MIN_VERSION} REQUIRED)
+find_package(KF6Notifications ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6Package ${KF5_MIN_VERSION} CONFIG REQUIRED)
 
-find_package(KPim${KF_MAJOR_VERSION}Mime ${KPIM_MIME_VERSION} CONFIG REQUIRED)
-find_package(KPim${KF_MAJOR_VERSION}Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
-find_package(KPim${KF_MAJOR_VERSION}IdentityManagementCore ${IDENTITYMANAGEMENT_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim${KF_MAJOR_VERSION}Ldap ${KLDAP_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim${KF_MAJOR_VERSION}MailTransport ${KMAILTRANSPORT_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim${KF_MAJOR_VERSION}PimCommon ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim${KF_MAJOR_VERSION}Libkdepim ${LIBKDEPIM_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim${KF_MAJOR_VERSION}Libkleo ${LIBKLEO_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim${KF_MAJOR_VERSION}IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim${KF_MAJOR_VERSION}MailTransportDBusService CONFIG REQUIRED)
-find_package(KPim${KF_MAJOR_VERSION}AkonadiMime ${AKONADI_MIMELIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6Mime ${KPIM_MIME_VERSION} CONFIG REQUIRED)
+find_package(KPim6Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
+find_package(KPim6IdentityManagementCore ${IDENTITYMANAGEMENT_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6Ldap ${KLDAP_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6MailTransport ${KMAILTRANSPORT_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6PimCommon ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6Libkdepim ${LIBKDEPIM_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6Libkleo ${LIBKLEO_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6MailTransportDBusService CONFIG REQUIRED)
+find_package(KPim6AkonadiMime ${AKONADI_MIMELIB_VERSION} CONFIG REQUIRED)
 
 
 include_directories(${kmail-account-wizard_SOURCE_DIR} ${kmail-account-wizard_BINARY_DIR})
 
 
-find_package(KF${KF_MAJOR_VERSION}NewStuff ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6NewStuff ${KF5_MIN_VERSION} CONFIG REQUIRED)
 
 #it will replace kwallet support
-find_package(Qt${QT_MAJOR_VERSION}Keychain CONFIG)
-set_package_properties(Qt${QT_MAJOR_VERSION}Keychain PROPERTIES
+find_package(Qt6Keychain CONFIG)
+set_package_properties(Qt6Keychain PROPERTIES
                                    DESCRIPTION "Provides support for secure credentials storage"
                                    URL "https://github.com/frankosterfeld/qtkeychain"
                                    TYPE OPTIONAL)
@@ -111,7 +99,7 @@ set_package_properties(Qt${QT_MAJOR_VERSION}Keychain PROPERTIES
 set( SharedMimeInfo_MINIMUM_VERSION "2.0" )
 find_package(SharedMimeInfo ${SharedMimeInfo_MINIMUM_VERSION} REQUIRED)
 
-ecm_set_disabled_deprecation_versions(QT 5.15.2  KF 5.102.0)
+ecm_set_disabled_deprecation_versions(QT 6.5  KF 5.240.0)
 
 
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
