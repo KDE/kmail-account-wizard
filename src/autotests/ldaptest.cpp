@@ -13,7 +13,7 @@
 #include <QTemporaryFile>
 
 #include "../ldap.h"
-#include <KLDAP/LdapClientSearchConfig>
+#include <KLDAPWidgets/LdapClientSearchConfig>
 
 class TLdap : public Ldap
 {

@@ -12,7 +12,8 @@ ecm_mark_as_test(ldaptest)
 target_link_libraries(ldaptest
     KF6::KIOCore
     KPim6::Mime
-    KPim6::Ldap
+    KPim6::LdapCore
+    KPim6::LdapWidgets
     Qt::Test
     KF6::I18n
     KF6::ConfigCore

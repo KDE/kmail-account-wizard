@@ -7,7 +7,7 @@
 #pragma once
 
 #include <KConfigGroup>
-#include <KLDAP/LdapServer>
+#include <KLDAPCore/LdapServer>
 #include <QObject>
 class KConfig;
 class RestoreLdapSettingsJob : public QObject
@@ -28,8 +28,8 @@ Q_SIGNALS:
     void restoreDone();
 
 private:
-    void slotConfigSelectedHostLoaded(const KLDAP::LdapServer &server);
-    void slotConfigHostLoaded(const KLDAP::LdapServer &server);
+    void slotConfigSelectedHostLoaded(const KLDAPCore::LdapServer &server);
+    void slotConfigHostLoaded(const KLDAPCore::LdapServer &server);
     void restore();
     void saveLdapSettings();
     void restoreSettingsDone();
@@ -37,8 +37,8 @@ private:
     void loadNextHostSettings();
     void saveNextSelectHostSettings();
     void saveNextHostSettings();
-    QVector<KLDAP::LdapServer> mSelHosts;
-    QVector<KLDAP::LdapServer> mHosts;
+    QVector<KLDAPCore::LdapServer> mSelHosts;
+    QVector<KLDAPCore::LdapServer> mHosts;
     int mEntry = -1;
     int mNumSelHosts = -1;
     int mNumHosts = -1;

@@ -6,10 +6,10 @@
 
 #include "ldap.h"
 #include "restoreldapsettingsjob.h"
-#include <KLDAP/AddHostDialog>
-#include <KLDAP/LdapClientSearchConfig>
-#include <KLDAP/LdapClientSearchConfigReadConfigJob>
-#include <KLDAP/LdapClientSearchConfigWriteConfigJob>
+#include <KLDAPWidgets/AddHostDialog>
+#include <KLDAPWidgets/LdapClientSearchConfig>
+#include <KLDAPWidgets/LdapClientSearchConfigReadConfigJob>
+#include <KLDAPWidgets/LdapClientSearchConfigWriteConfigJob>
 
 #include <KConfig>
 #include <KConfigGroup>
@@ -17,7 +17,7 @@
 
 Ldap::Ldap(QObject *parent)
     : SetupObject(parent)
-    , m_clientSearchConfig(new KLDAP::LdapClientSearchConfig)
+    , m_clientSearchConfig(new KLDAPWidgets::LdapClientSearchConfig)
 {
 }
 
@@ -121,11 +121,11 @@ void Ldap::create()
 QString Ldap::securityString()
 {
     switch (m_security) {
-    case KLDAP::LdapServer::None:
+    case KLDAPCore::LdapServer::None:
         return QStringLiteral("None");
-    case KLDAP::LdapServer::SSL:
+    case KLDAPCore::LdapServer::SSL:
         return QStringLiteral("SSL");
-    case KLDAP::LdapServer::TLS:
+    case KLDAPCore::LdapServer::TLS:
         return QStringLiteral("TLS");
     }
     return {};
@@ -156,16 +156,16 @@ void Ldap::edit()
         return;
     }
 
-    KLDAP::LdapServer server;
-    KLDAP::LdapClientSearchConfig clientSearchConfig;
+    KLDAPCore::LdapServer server;
+    KLDAPWidgets::LdapClientSearchConfig clientSearchConfig;
     KConfigGroup group = clientSearchConfig.config()->group(QStringLiteral("LDAP"));
 
-    auto *job = new KLDAP::LdapClientSearchConfigReadConfigJob(this);
-    connect(job, &KLDAP::LdapClientSearchConfigReadConfigJob::configLoaded, this, [this, group](KLDAP::LdapServer server) {
-        KLDAP::AddHostDialog dlg(&server, nullptr);
+    auto *job = new KLDAPWidgets::LdapClientSearchConfigReadConfigJob(this);
+    connect(job, &KLDAPWidgets::LdapClientSearchConfigReadConfigJob::configLoaded, this, [this, group](KLDAPCore::LdapServer server) {
+        KLDAPWidgets::AddHostDialog dlg(&server, nullptr);
 
         if (dlg.exec() && !server.host().isEmpty()) { // krazy:exclude=crashy
-            auto job = new KLDAP::LdapClientSearchConfigWriteConfigJob;
+            auto job = new KLDAPWidgets::LdapClientSearchConfigWriteConfigJob;
             job->setActive(true);
             job->setConfig(group);
             job->setServer(server);
@@ -229,7 +229,7 @@ void Ldap::setSaslMech(const QString &saslmech)
     m_mech = saslmech;
 }
 
-void Ldap::setSecurity(const KLDAP::LdapServer::Security security)
+void Ldap::setSecurity(const KLDAPCore::LdapServer::Security security)
 {
     m_security = security;
 }

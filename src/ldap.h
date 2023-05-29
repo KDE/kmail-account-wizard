@@ -7,12 +7,12 @@
 #pragma once
 
 #include "setupobject.h"
-#include <KLDAP/LdapServer>
+#include <KLDAPCore/LdapServer>
 
 class LdapTest;
 class KConfig;
 
-namespace KLDAP
+namespace KLDAPWidgets
 {
 class LdapClientSearchConfig;
 }
@@ -34,7 +34,7 @@ public Q_SLOTS:
     Q_SCRIPTABLE void setBaseDn(const QString &baseDn);
     Q_SCRIPTABLE void setPassword(const QString &password);
     Q_SCRIPTABLE void setPort(const int port);
-    Q_SCRIPTABLE void setSecurity(const KLDAP::LdapServer::Security security);
+    Q_SCRIPTABLE void setSecurity(const KLDAPCore::LdapServer::Security security);
     Q_SCRIPTABLE void setSaslMech(const QString &saslmech);
     Q_SCRIPTABLE void setRealm(const QString &realm);
     Q_SCRIPTABLE void setVersion(const int version);
@@ -46,7 +46,7 @@ public Q_SLOTS:
 protected:
     virtual KConfig *config() const;
 
-    KLDAP::LdapClientSearchConfig *const m_clientSearchConfig;
+    KLDAPWidgets::LdapClientSearchConfig *const m_clientSearchConfig;
 
 private:
     friend class LdapTest;
@@ -62,7 +62,7 @@ private:
     QString m_realm;
     QString m_baseDn;
     int m_port = 389;
-    KLDAP::LdapServer::Security m_security = KLDAP::LdapServer::None;
+    KLDAPCore::LdapServer::Security m_security = KLDAPCore::LdapServer::None;
     int m_version = 3;
     int m_pageSize = 0;
     int m_timeLimit = 0;

@@ -6,9 +6,9 @@
 
 #include "restoreldapsettingsjob.h"
 #include <KConfig>
-#include <KLDAP/LdapClientSearchConfig>
-#include <KLDAP/LdapClientSearchConfigReadConfigJob>
-#include <KLDAP/LdapClientSearchConfigWriteConfigJob>
+#include <KLDAPWidgets/LdapClientSearchConfig>
+#include <KLDAPWidgets/LdapClientSearchConfigReadConfigJob>
+#include <KLDAPWidgets/LdapClientSearchConfigWriteConfigJob>
 #include <QDebug>
 
 RestoreLdapSettingsJob::RestoreLdapSettingsJob(QObject *parent)
@@ -29,7 +29,7 @@ void RestoreLdapSettingsJob::start()
     restore();
 }
 
-void RestoreLdapSettingsJob::slotConfigSelectedHostLoaded(const KLDAP::LdapServer &server)
+void RestoreLdapSettingsJob::slotConfigSelectedHostLoaded(const KLDAPCore::LdapServer &server)
 {
     mSelHosts.append(server);
     mCurrentIndex++;
@@ -40,8 +40,8 @@ void RestoreLdapSettingsJob::loadNextSelectHostSettings()
 {
     if (mCurrentIndex < mNumSelHosts) {
         if (mCurrentIndex != mEntry) {
-            auto job = new KLDAP::LdapClientSearchConfigReadConfigJob(this);
-            connect(job, &KLDAP::LdapClientSearchConfigReadConfigJob::configLoaded, this, &RestoreLdapSettingsJob::slotConfigSelectedHostLoaded);
+            auto job = new KLDAPWidgets::LdapClientSearchConfigReadConfigJob(this);
+            connect(job, &KLDAPWidgets::LdapClientSearchConfigReadConfigJob::configLoaded, this, &RestoreLdapSettingsJob::slotConfigSelectedHostLoaded);
             job->setActive(true);
             job->setConfig(mCurrentGroup);
             job->setServerIndex(mCurrentIndex);
@@ -57,7 +57,7 @@ void RestoreLdapSettingsJob::loadNextSelectHostSettings()
     }
 }
 
-void RestoreLdapSettingsJob::slotConfigHostLoaded(const KLDAP::LdapServer &server)
+void RestoreLdapSettingsJob::slotConfigHostLoaded(const KLDAPCore::LdapServer &server)
 {
     mHosts.append(server);
     mCurrentIndex++;
@@ -67,8 +67,8 @@ void RestoreLdapSettingsJob::slotConfigHostLoaded(const KLDAP::LdapServer &serve
 void RestoreLdapSettingsJob::loadNextHostSettings()
 {
     if (mCurrentIndex < mNumHosts) {
-        auto job = new KLDAP::LdapClientSearchConfigReadConfigJob(this);
-        connect(job, &KLDAP::LdapClientSearchConfigReadConfigJob::configLoaded, this, &RestoreLdapSettingsJob::slotConfigHostLoaded);
+        auto job = new KLDAPWidgets::LdapClientSearchConfigReadConfigJob(this);
+        connect(job, &KLDAPWidgets::LdapClientSearchConfigReadConfigJob::configLoaded, this, &RestoreLdapSettingsJob::slotConfigHostLoaded);
         job->setActive(false);
         job->setConfig(mCurrentGroup);
         job->setServerIndex(mCurrentIndex);
@@ -99,8 +99,8 @@ void RestoreLdapSettingsJob::restoreSettingsDone()
 void RestoreLdapSettingsJob::saveNextSelectHostSettings()
 {
     if (mCurrentIndex < mNumSelHosts - 1) {
-        auto job = new KLDAP::LdapClientSearchConfigWriteConfigJob(this);
-        connect(job, &KLDAP::LdapClientSearchConfigWriteConfigJob::configSaved, this, &RestoreLdapSettingsJob::saveNextSelectHostSettings);
+        auto job = new KLDAPWidgets::LdapClientSearchConfigWriteConfigJob(this);
+        connect(job, &KLDAPWidgets::LdapClientSearchConfigWriteConfigJob::configSaved, this, &RestoreLdapSettingsJob::saveNextSelectHostSettings);
         job->setActive(true);
         job->setConfig(mCurrentGroup);
         job->setServer(mSelHosts.at(mCurrentIndex));
@@ -115,8 +115,8 @@ void RestoreLdapSettingsJob::saveNextSelectHostSettings()
 void RestoreLdapSettingsJob::saveNextHostSettings()
 {
     if (mCurrentIndex < mNumHosts) {
-        auto job = new KLDAP::LdapClientSearchConfigWriteConfigJob(this);
-        connect(job, &KLDAP::LdapClientSearchConfigWriteConfigJob::configSaved, this, &RestoreLdapSettingsJob::saveNextHostSettings);
+        auto job = new KLDAPWidgets::LdapClientSearchConfigWriteConfigJob(this);
+        connect(job, &KLDAPWidgets::LdapClientSearchConfigWriteConfigJob::configSaved, this, &RestoreLdapSettingsJob::saveNextHostSettings);
         job->setActive(false);
         job->setConfig(mCurrentGroup);
         job->setServer(mHosts.at(mCurrentIndex));
