@@ -151,7 +151,10 @@ Kirigami.ScrollablePage {
                     id: manualIncomingProtocol
                     description: i18n("Protocol:")
                     model: SetupManager.manualConfiguration.incomingProtocols
-                    currentIndex: 0
+                    currentIndex: SetupManager.manualConfiguration.currentIncomingProtocol
+                    onCurrentIndexChanged: {
+                        SetupManager.manualConfiguration.currentIncomingProtocol = currentIndex
+                    }
                 }
                 MobileForm.FormSpinBoxDelegate {
                     id: manualIncomingPort

@@ -40,6 +40,19 @@ void ManualConfiguration::checkServer()
     qDebug() << " Verify server";
 }
 
+void ManualConfiguration::setCurrentIncomingProtocol(int newCurrentIncomingProtocol)
+{
+    if (mCurrentIncomingProtocol != newCurrentIncomingProtocol) {
+        mCurrentIncomingProtocol = newCurrentIncomingProtocol;
+        Q_EMIT currentIncomingProtocolChanged();
+    }
+}
+
+int ManualConfiguration::currentIncomingProtocol() const
+{
+    return mCurrentIncomingProtocol;
+}
+
 QString ManualConfiguration::incomingHostName() const
 {
     return mIncomingHostName;
