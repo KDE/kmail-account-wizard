@@ -80,8 +80,6 @@ find_package(KPim6AkonadiMime ${AKONADI_MIMELIB_VERSION} CONFIG REQUIRED)
 include_directories(${kmail-account-wizard_SOURCE_DIR} ${kmail-account-wizard_BINARY_DIR})
 
 
-find_package(KF6NewStuff ${KF5_MIN_VERSION} CONFIG REQUIRED)
-
 find_package(Qt6Keychain CONFIG)
 set_package_properties(Qt6Keychain PROPERTIES
                                    DESCRIPTION "Provides support for secure credentials storage"

@@ -55,9 +55,6 @@ target_link_libraries(accountwizard PRIVATE libaccountwizard)
 
 install(TARGETS libaccountwizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
-if ( NOT ACCOUNTWIZARD_NO_GHNS )
-    install(FILES accountwizard.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
-endif ()
 install(TARGETS accountwizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(PROGRAMS org.kde.accountwizard.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
