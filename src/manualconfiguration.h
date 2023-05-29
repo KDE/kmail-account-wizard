@@ -22,6 +22,14 @@ class ManualConfiguration : public QObject
     Q_PROPERTY(QStringList authenticationProtocols READ authenticationProtocols CONSTANT)
     Q_PROPERTY(bool configurationIsValid MEMBER mConfigurationIsValid NOTIFY configurationIsValidChanged)
     Q_PROPERTY(int currentIncomingProtocol READ currentIncomingProtocol WRITE setCurrentIncomingProtocol NOTIFY currentIncomingProtocolChanged FINAL)
+    Q_PROPERTY(int currentIncomingSecurityProtocol READ currentIncomingSecurityProtocol WRITE setCurrentIncomingSecurityProtocol NOTIFY
+                   currentIncomingSecurityProtocolChanged FINAL)
+    Q_PROPERTY(int currentOutgoingSecurityProtocol READ currentOutgoingSecurityProtocol WRITE setCurrentOutgoingSecurityProtocol NOTIFY
+                   currentOutgoingSecurityProtocolChanged FINAL)
+    Q_PROPERTY(int currentIncomingAuthenticationProtocols READ currentIncomingAuthenticationProtocols WRITE setCurrentIncomingAuthenticationProtocols NOTIFY
+                   currentIncomingAuthenticationProtocolsChanged FINAL)
+    Q_PROPERTY(int currentOutgoingAuthenticationProtocols READ currentOutgoingAuthenticationProtocols WRITE setCurrentOutgoingAuthenticationProtocols NOTIFY
+                   currentOutgoingAuthenticationProtocolsChanged FINAL)
 
 public:
     explicit ManualConfiguration(QObject *parent = nullptr);
@@ -52,8 +60,21 @@ public:
     Q_REQUIRED_RESULT int currentIncomingProtocol() const;
     void setCurrentIncomingProtocol(int newCurrentIncomingProtocol);
 
+    Q_REQUIRED_RESULT int currentIncomingSecurityProtocol() const;
+    void setCurrentIncomingSecurityProtocol(int newCurrentIncomingSecurityProtocol);
+
+    Q_REQUIRED_RESULT int currentOutgoingSecurityProtocol() const;
+    void setCurrentOutgoingSecurityProtocol(int newCurrentOutgoingSecurityProtocol);
+
+    Q_REQUIRED_RESULT int currentIncomingAuthenticationProtocols() const;
+    void setCurrentIncomingAuthenticationProtocols(int newCurrentIncomingAuthenticationProtocols);
+
+    Q_REQUIRED_RESULT int currentOutgoingAuthenticationProtocols() const;
+    void setCurrentOutgoingAuthenticationProtocols(int newCurrentOutgoingAuthenticationProtocols);
+
     Q_INVOKABLE void createManualAccount();
     Q_INVOKABLE void checkServer();
+
 Q_SIGNALS:
     void incomingHostNameChanged();
     void incomingPortChanged();
@@ -65,6 +86,12 @@ Q_SIGNALS:
 
     void configurationIsValidChanged();
     void currentIncomingProtocolChanged();
+
+    void currentIncomingSecurityProtocolChanged();
+    void currentOutgoingSecurityProtocolChanged();
+
+    void currentIncomingAuthenticationProtocolsChanged();
+    void currentOutgoingAuthenticationProtocolsChanged();
 
 private:
     // Incoming
@@ -78,6 +105,12 @@ private:
     int mOutgoingPort = 465;
 
     int mCurrentIncomingProtocol = 0;
+
+    int mCurrentIncomingSecurityProtocol = 2; // NONE
+    int mCurrentOutgoingSecurityProtocol = 2; // NONE
+
+    int mCurrentIncomingAuthenticationProtocols = 0;
+    int mCurrentOutgoingAuthenticationProtocols = 0;
 
     // configuration is Valid
     bool mConfigurationIsValid = false;

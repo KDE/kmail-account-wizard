@@ -40,6 +40,58 @@ void ManualConfiguration::checkServer()
     qDebug() << " Verify server";
 }
 
+int ManualConfiguration::currentOutgoingAuthenticationProtocols() const
+{
+    return mCurrentOutgoingAuthenticationProtocols;
+}
+
+void ManualConfiguration::setCurrentOutgoingAuthenticationProtocols(int newCurrentOutgoingAuthenticationProtocols)
+{
+    if (mCurrentOutgoingAuthenticationProtocols == newCurrentOutgoingAuthenticationProtocols)
+        return;
+    mCurrentOutgoingAuthenticationProtocols = newCurrentOutgoingAuthenticationProtocols;
+    Q_EMIT currentOutgoingAuthenticationProtocolsChanged();
+}
+
+int ManualConfiguration::currentIncomingAuthenticationProtocols() const
+{
+    return mCurrentIncomingAuthenticationProtocols;
+}
+
+void ManualConfiguration::setCurrentIncomingAuthenticationProtocols(int newCurrentIncomingAuthenticationProtocols)
+{
+    if (mCurrentIncomingAuthenticationProtocols == newCurrentIncomingAuthenticationProtocols)
+        return;
+    mCurrentIncomingAuthenticationProtocols = newCurrentIncomingAuthenticationProtocols;
+    Q_EMIT currentIncomingAuthenticationProtocolsChanged();
+}
+
+int ManualConfiguration::currentOutgoingSecurityProtocol() const
+{
+    return mCurrentOutgoingSecurityProtocol;
+}
+
+void ManualConfiguration::setCurrentOutgoingSecurityProtocol(int newCurrentOutgoingSecurityProtocol)
+{
+    if (mCurrentOutgoingSecurityProtocol == newCurrentOutgoingSecurityProtocol)
+        return;
+    mCurrentOutgoingSecurityProtocol = newCurrentOutgoingSecurityProtocol;
+    Q_EMIT currentOutgoingSecurityProtocolChanged();
+}
+
+int ManualConfiguration::currentIncomingSecurityProtocol() const
+{
+    return mCurrentIncomingSecurityProtocol;
+}
+
+void ManualConfiguration::setCurrentIncomingSecurityProtocol(int newCurrentIncomingSecurityProtocol)
+{
+    if (mCurrentIncomingSecurityProtocol == newCurrentIncomingSecurityProtocol)
+        return;
+    mCurrentIncomingSecurityProtocol = newCurrentIncomingSecurityProtocol;
+    Q_EMIT currentIncomingSecurityProtocolChanged();
+}
+
 void ManualConfiguration::setCurrentIncomingProtocol(int newCurrentIncomingProtocol)
 {
     if (mCurrentIncomingProtocol != newCurrentIncomingProtocol) {

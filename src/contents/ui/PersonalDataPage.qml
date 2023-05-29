@@ -167,13 +167,19 @@ Kirigami.ScrollablePage {
                     id: manualIncomingSecurity
                     description: i18n("Security:")
                     model: SetupManager.manualConfiguration.securityProtocols
-                    currentIndex: 2 //None
+                    currentIndex: SetupManager.manualConfiguration.currentIncomingAuthenticationProtocols
+                    onCurrentIndexChanged: {
+                        SetupManager.manualConfiguration.currentIncomingAuthenticationProtocols = currentIndex
+                    }
                 }
                 MobileForm.FormComboBoxDelegate {
                     id: manualIncomingAuthenticationMethod
                     description: i18n("Authentication Method:")
                     model: SetupManager.manualConfiguration.authenticationProtocols
-                    currentIndex: 0
+                    currentIndex: SetupManager.manualConfiguration.currentOutgoingSecurityProtocol
+                    onCurrentIndexChanged: {
+                        SetupManager.manualConfiguration.currentOutgoingSecurityProtocol = currentIndex
+                    }
                 }
                 MobileForm.FormTextFieldDelegate {
                     id: manualIncomingUserName
@@ -206,13 +212,19 @@ Kirigami.ScrollablePage {
                     id: manualOutgoingSecurity
                     description: i18n("Security:")
                     model: SetupManager.manualConfiguration.securityProtocols
-                    currentIndex: 2 //None
+                    currentIndex: SetupManager.manualConfiguration.currentOutgoingSecurityProtocol
+                    onCurrentIndexChanged: {
+                        SetupManager.manualConfiguration.currentOutgoingSecurityProtocol = currentIndex
+                    }
                 }
                 MobileForm.FormComboBoxDelegate {
                     id: manualOutgoingAuthenticationMethod
                     description: i18n("Authentication Method:")
                     model: SetupManager.manualConfiguration.authenticationProtocols
-                    currentIndex: 0
+                    currentIndex: SetupManager.manualConfiguration.currentOutgoingAuthenticationProtocols
+                    onCurrentIndexChanged: {
+                        SetupManager.manualConfiguration.currentOutgoingAuthenticationProtocols = currentIndex
+                    }
                 }
                 MobileForm.FormTextFieldDelegate {
                     id: manualOutgoingUserName
