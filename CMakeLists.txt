@@ -43,21 +43,21 @@ endif()
 
 set(KDEPIM_VERSION "${PIM_VERSION}${KDEPIM_DEV_VERSION} (${RELEASE_SERVICE_VERSION})")
 
-set(AKONADI_MIMELIB_VERSION "5.22.40")
-set(IDENTITYMANAGEMENT_LIB_VERSION "5.22.40")
-set(KLDAP_LIB_VERSION "5.22.40")
-set(KMAILTRANSPORT_LIB_VERSION "5.22.40")
-set(AKONADI_VERSION "5.22.40")
-set(KIMAP_LIB_VERSION "5.22.40")
-set(AKONADI_MIMELIB_VERSION "5.22.40")
+set(AKONADI_MIMELIB_VERSION "5.240.40")
+set(IDENTITYMANAGEMENT_LIB_VERSION "5.240.40")
+set(KLDAP_LIB_VERSION "5.240.40")
+set(KMAILTRANSPORT_LIB_VERSION "5.240.40")
+set(AKONADI_VERSION "5.240.40")
+set(KIMAP_LIB_VERSION "5.240.40")
+set(AKONADI_MIMELIB_VERSION "5.240.40")
 
 set(KDEPIM_LIB_VERSION "${PIM_VERSION}")
 set(QT_REQUIRED_VERSION "6.4.0")
 find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Test Quick QuickControls2)
-set(PIMCOMMON_LIB_VERSION "5.22.40")
-set(LIBKDEPIM_LIB_VERSION "5.22.40")
-set(LIBKLEO_LIB_VERSION "5.22.40")
-set(KPIM_MIME_VERSION "5.22.41")
+set(PIMCOMMON_LIB_VERSION "5.240.40")
+set(LIBKDEPIM_LIB_VERSION "5.240.40")
+set(LIBKLEO_LIB_VERSION "5.240.40")
+set(KPIM_MIME_VERSION "5.240.40")
 
 # Find KF5 package
 find_package(KF6DBusAddons ${KF5_MIN_VERSION} CONFIG REQUIRED)
@@ -68,7 +68,8 @@ find_package(KF6Package ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KPim6Mime ${KPIM_MIME_VERSION} CONFIG REQUIRED)
 find_package(KPim6Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 find_package(KPim6IdentityManagementCore ${IDENTITYMANAGEMENT_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim6Ldap ${KLDAP_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6LdapCore ${KLDAP_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6LdapWidgets ${KLDAP_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6MailTransport ${KMAILTRANSPORT_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6Libkleo ${LIBKLEO_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
@@ -81,16 +82,12 @@ include_directories(${kmail-account-wizard_SOURCE_DIR} ${kmail-account-wizard_BI
 
 find_package(KF6NewStuff ${KF5_MIN_VERSION} CONFIG REQUIRED)
 
-#it will replace kwallet support
 find_package(Qt6Keychain CONFIG)
 set_package_properties(Qt6Keychain PROPERTIES
                                    DESCRIPTION "Provides support for secure credentials storage"
                                    URL "https://github.com/frankosterfeld/qtkeychain"
                                    TYPE OPTIONAL)
 
-
-set( SharedMimeInfo_MINIMUM_VERSION "2.0" )
-find_package(SharedMimeInfo ${SharedMimeInfo_MINIMUM_VERSION} REQUIRED)
 
 ecm_set_disabled_deprecation_versions(QT 6.5  KF 5.240.0)
 
