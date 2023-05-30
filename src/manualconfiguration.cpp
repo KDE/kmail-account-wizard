@@ -102,6 +102,11 @@ void ManualConfiguration::setCurrentIncomingProtocol(int newCurrentIncomingProto
     if (mCurrentIncomingProtocol != newCurrentIncomingProtocol) {
         mCurrentIncomingProtocol = newCurrentIncomingProtocol;
         qDebug() << " setCurrentIncomingProtocol " << mCurrentIncomingProtocol;
+        if (newCurrentIncomingProtocol == 0) {
+            setIncomingPort(995);
+        } else {
+            setIncomingPort(993);
+        }
         Q_EMIT currentIncomingProtocolChanged();
     }
 }
