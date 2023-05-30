@@ -6,6 +6,7 @@
 
 #include "manualconfiguration.h"
 #include <KLocalizedString>
+#include <QDebug>
 
 ManualConfiguration::ManualConfiguration(QObject *parent)
     : QObject{parent}
@@ -50,6 +51,7 @@ void ManualConfiguration::setCurrentOutgoingAuthenticationProtocols(int newCurre
     if (mCurrentOutgoingAuthenticationProtocols == newCurrentOutgoingAuthenticationProtocols)
         return;
     mCurrentOutgoingAuthenticationProtocols = newCurrentOutgoingAuthenticationProtocols;
+    qDebug() << " setCurrentOutgoingAuthenticationProtocols " << mCurrentOutgoingAuthenticationProtocols;
     Q_EMIT currentOutgoingAuthenticationProtocolsChanged();
 }
 
@@ -63,6 +65,7 @@ void ManualConfiguration::setCurrentIncomingAuthenticationProtocols(int newCurre
     if (mCurrentIncomingAuthenticationProtocols == newCurrentIncomingAuthenticationProtocols)
         return;
     mCurrentIncomingAuthenticationProtocols = newCurrentIncomingAuthenticationProtocols;
+    qDebug() << " setCurrentIncomingAuthenticationProtocols " << mCurrentIncomingAuthenticationProtocols;
     Q_EMIT currentIncomingAuthenticationProtocolsChanged();
 }
 
@@ -76,6 +79,7 @@ void ManualConfiguration::setCurrentOutgoingSecurityProtocol(int newCurrentOutgo
     if (mCurrentOutgoingSecurityProtocol == newCurrentOutgoingSecurityProtocol)
         return;
     mCurrentOutgoingSecurityProtocol = newCurrentOutgoingSecurityProtocol;
+    qDebug() << " setCurrentOutgoingSecurityProtocol " << mCurrentOutgoingSecurityProtocol;
     Q_EMIT currentOutgoingSecurityProtocolChanged();
 }
 
@@ -89,6 +93,7 @@ void ManualConfiguration::setCurrentIncomingSecurityProtocol(int newCurrentIncom
     if (mCurrentIncomingSecurityProtocol == newCurrentIncomingSecurityProtocol)
         return;
     mCurrentIncomingSecurityProtocol = newCurrentIncomingSecurityProtocol;
+    qDebug() << " setCurrentIncomingSecurityProtocol " << mCurrentIncomingSecurityProtocol;
     Q_EMIT currentIncomingSecurityProtocolChanged();
 }
 
@@ -96,6 +101,7 @@ void ManualConfiguration::setCurrentIncomingProtocol(int newCurrentIncomingProto
 {
     if (mCurrentIncomingProtocol != newCurrentIncomingProtocol) {
         mCurrentIncomingProtocol = newCurrentIncomingProtocol;
+        qDebug() << " setCurrentIncomingProtocol " << mCurrentIncomingProtocol;
         Q_EMIT currentIncomingProtocolChanged();
     }
 }
