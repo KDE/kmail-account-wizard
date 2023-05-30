@@ -60,11 +60,6 @@ QHash<int, QByteArray> ConfigurationModel::roleNames() const
     };
 }
 
-void ConfigurationModel::setErrorOccured(const QString &errorMessage)
-{
-    // TODO
-}
-
 void ConfigurationModel::clear()
 {
     beginResetModel();

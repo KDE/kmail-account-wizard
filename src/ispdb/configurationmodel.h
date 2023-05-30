@@ -36,7 +36,6 @@ public:
     QHash<int, QByteArray> roleNames() const override;
 
     void setEmailProvider(const EmailProvider &emailProvider);
-    void setErrorOccured(const QString &errorMessage);
     void clear();
 
 private:
