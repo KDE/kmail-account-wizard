@@ -7,7 +7,7 @@
 #pragma once
 #include "libaccountwizard_export.h"
 #include "setupobject.h"
-#include <QVector>
+#include <QList>
 class KConfig;
 
 struct Config {
@@ -35,7 +35,7 @@ public Q_SLOTS:
     Q_SCRIPTABLE void setEditName(const QString &name);
 
 private:
-    QVector<Config> m_configData;
+    QList<Config> m_configData;
     QString m_name;
     KConfig *const m_config;
     QString m_editName;

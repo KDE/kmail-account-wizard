@@ -55,7 +55,7 @@ struct EmailProvider {
     QString displayName;
     QString shortDisplayName;
 
-    QVector<Server> imapServers;
-    QVector<Server> popServers;
-    QVector<Server> smtpServers;
+    QList<Server> imapServers;
+    QList<Server> popServers;
+    QList<Server> smtpServers;
 };

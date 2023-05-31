@@ -87,17 +87,17 @@ public:
 
     /** After finished() has been emitted you can
         get a list of imap servers available for this provider */
-    Q_INVOKABLE QVector<Server> imapServers() const;
+    Q_INVOKABLE QList<Server> imapServers() const;
 
     /** After finished() has been emitted you can
         get a list of pop3 servers available for this provider */
-    Q_INVOKABLE QVector<Server> pop3Servers() const;
+    Q_INVOKABLE QList<Server> pop3Servers() const;
 
     /** After finished() has been emitted you can
         get a list of smtp servers available for this provider */
-    Q_INVOKABLE QVector<Server> smtpServers() const;
+    Q_INVOKABLE QList<Server> smtpServers() const;
 
-    Q_INVOKABLE QVector<Identity> identities() const;
+    Q_INVOKABLE QList<Identity> identities() const;
 
     Q_INVOKABLE int defaultIdentity() const;
 
@@ -176,10 +176,10 @@ private:
     QStringList mDomains;
     QString mDisplayName;
     QString mDisplayShortName;
-    QVector<Server> mImapServers;
-    QVector<Server> mPop3Servers;
-    QVector<Server> mSmtpServers;
-    QVector<Identity> mIdentities;
+    QList<Server> mImapServers;
+    QList<Server> mPop3Servers;
+    QList<Server> mSmtpServers;
+    QList<Identity> mIdentities;
 
     int mDefaultIdentity = -1;
     Ispdb::SearchServerType mServerType = DataBase;

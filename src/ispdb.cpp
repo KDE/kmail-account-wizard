@@ -332,17 +332,17 @@ QString Ispdb::name(Length l) const
     }
 }
 
-QVector<Server> Ispdb::imapServers() const
+QList<Server> Ispdb::imapServers() const
 {
     return mImapServers;
 }
 
-QVector<Server> Ispdb::pop3Servers() const
+QList<Server> Ispdb::pop3Servers() const
 {
     return mPop3Servers;
 }
 
-QVector<Server> Ispdb::smtpServers() const
+QList<Server> Ispdb::smtpServers() const
 {
     return mSmtpServers;
 }
@@ -352,7 +352,7 @@ int Ispdb::defaultIdentity() const
     return mDefaultIdentity;
 }
 
-QVector<Identity> Ispdb::identities() const
+QList<Identity> Ispdb::identities() const
 {
     return mIdentities;
 }
