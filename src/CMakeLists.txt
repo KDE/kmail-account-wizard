@@ -42,24 +42,12 @@ target_link_libraries(libaccountwizard
     KF6::DBusAddons
     )
 
-add_executable(accountwizard
-    main.cpp
-    resources.qrc
-)
-
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(accountwizard PROPERTIES UNITY_BUILD ON)
-endif()
-
-target_link_libraries(accountwizard PRIVATE libaccountwizard)
-
 install(TARGETS libaccountwizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
-
-install(TARGETS accountwizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-install(PROGRAMS org.kde.accountwizard.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 if (BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
+
+add_subdirectory(apps)
 
 ecm_qt_install_logging_categories(EXPORT ACCOUNTWIZARD FILE accountwizard.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
