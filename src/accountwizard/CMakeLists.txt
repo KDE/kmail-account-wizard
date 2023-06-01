@@ -16,6 +16,8 @@ add_library(libaccountwizard STATIC
     ispdbservice.cpp
     manualconfiguration.h
     manualconfiguration.cpp
+    resource.h
+    resource.cpp
 )
 
 ecm_qt_declare_logging_category(libaccountwizard HEADER accountwizard_debug.h IDENTIFIER ACCOUNTWIZARD_LOG CATEGORY_NAME org.kde.pim.accountwizard
