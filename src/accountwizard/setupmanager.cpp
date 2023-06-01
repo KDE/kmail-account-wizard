@@ -84,6 +84,12 @@ void SetupManager::createAutomaticAccount()
     qDebug() << " Create Automatic Account";
 }
 
+void SetupManager::createManualAccount()
+{
+    qDebug() << " Create MAnual Account";
+    m_manualConfiguration->createManualAccount();
+}
+
 void SetupManager::setEmailProvider(const EmailProvider &emailProvider, const QString &messageInfo)
 {
     m_searchIspdbFoundMessage = messageInfo;

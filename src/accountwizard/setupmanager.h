@@ -42,6 +42,7 @@ public:
 
     Q_INVOKABLE void searchConfiguration();
     Q_INVOKABLE void createAutomaticAccount();
+    Q_INVOKABLE void createManualAccount();
 
 Q_SIGNALS:
     void fullNameChanged();

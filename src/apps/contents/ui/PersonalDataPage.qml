@@ -269,7 +269,7 @@ Kirigami.ScrollablePage {
                     text: i18n("Create Account")
                     checked: true
                     onClicked: {
-                        SetupManager.manualConfiguration.createManualAccount()
+                        SetupManager.createManualAccount()
                     }
                     visible: manualConfiguration.visible
                     enabled: SetupManager.manualConfiguration.configurationIsValid

@@ -73,8 +73,9 @@ public:
     Q_REQUIRED_RESULT int currentOutgoingAuthenticationProtocols() const;
     void setCurrentOutgoingAuthenticationProtocols(int newCurrentOutgoingAuthenticationProtocols);
 
-    Q_INVOKABLE void createManualAccount();
     Q_INVOKABLE void checkServer();
+
+    void createManualAccount();
 
 Q_SIGNALS:
     void incomingHostNameChanged();
