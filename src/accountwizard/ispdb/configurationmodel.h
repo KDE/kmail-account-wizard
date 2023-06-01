@@ -3,12 +3,11 @@
 
 #pragma once
 
+#include "serverconfiguration.h"
 #include <QAbstractListModel>
 #include <optional>
-#include "serverconfiguration.h"
 
-struct Configuration
-{
+struct Configuration {
     explicit Configuration(const Server &incomming, std::optional<Server> outgoing, const QString &shortDisplayName);
     QString shortDisplayName;
     Server incoming;

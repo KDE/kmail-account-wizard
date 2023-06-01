@@ -8,11 +8,13 @@ Configuration::Configuration(const Server &_incoming, std::optional<Server> _out
     : shortDisplayName(_shortDisplayName)
     , incoming(_incoming)
     , outgoing(_outgoing)
-{}
+{
+}
 
 ConfigurationModel::ConfigurationModel(QObject *parent)
     : QAbstractListModel(parent)
-{}
+{
+}
 
 int ConfigurationModel::rowCount(const QModelIndex &parent) const
 {
@@ -33,9 +35,8 @@ QVariant ConfigurationModel::data(const QModelIndex &index, int role) const
     case NameRole:
         return incomingServer.type == Server::Type::IMAP ? i18n("IMAP") : i18n("POP3");
     case DescriptionRole:
-        return incomingServer.type == Server::Type::IMAP
-            ? i18n("Keep your folders and emails synced on your server")
-            : i18n("Keep your folders and emails on your computer");
+        return incomingServer.type == Server::Type::IMAP ? i18n("Keep your folders and emails synced on your server")
+                                                         : i18n("Keep your folders and emails on your computer");
     case IncomingHostRole:
         return incomingServer.hostname;
     case IncomingTagsRole:
@@ -51,12 +52,12 @@ QVariant ConfigurationModel::data(const QModelIndex &index, int role) const
 QHash<int, QByteArray> ConfigurationModel::roleNames() const
 {
     return {
-        { NameRole, "name" },
-        { DescriptionRole, "description" },
-        { IncomingTagsRole, "incomingTags" },
-        { IncomingHostRole, "incomingHost" },
-        { OutgoingTagsRole, "outgoingTags" },
-        { OutgoingHostRole, "outgoingHost" },
+        {NameRole, "name"},
+        {DescriptionRole, "description"},
+        {IncomingTagsRole, "incomingTags"},
+        {IncomingHostRole, "incomingHost"},
+        {OutgoingTagsRole, "outgoingTags"},
+        {OutgoingHostRole, "outgoingHost"},
     };
 }
 
@@ -72,8 +73,7 @@ void ConfigurationModel::setEmailProvider(const EmailProvider &emailProvider)
     std::optional<Server> preferredOutgoingServer;
 
     for (const auto &server : emailProvider.smtpServers) {
-        if (!preferredOutgoingServer
-            || preferredOutgoingServer->socketType < server.socketType) {
+        if (!preferredOutgoingServer || preferredOutgoingServer->socketType < server.socketType) {
             preferredOutgoingServer = server;
         }
     }

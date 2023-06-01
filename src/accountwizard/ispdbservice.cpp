@@ -18,7 +18,8 @@
 IspdbService::IspdbService(QObject *parent)
     : QObject(parent)
     , m_qnam(new QNetworkAccessManager(this))
-{}
+{
+}
 
 void IspdbService::start(const KMime::Types::AddrSpec &addrSpec)
 {
@@ -49,10 +50,7 @@ void IspdbService::requestConfig(const KMime::Types::AddrSpec &addrSpec, const S
     connect(reply, &QNetworkReply::finished, this, [this, addrSpec, reply, searchServerType]() {
         reply->deleteLater();
         if (reply->attribute(QNetworkRequest::HttpStatusCodeAttribute) != 200) {
-            qCDebug(ACCOUNTWIZARD_LOG)
-                << "Fetching failed"
-                << searchServerType
-                << reply->errorString();
+            qCDebug(ACCOUNTWIZARD_LOG) << "Fetching failed" << searchServerType << reply->errorString();
 
             switch (searchServerType) {
             case IspAutoConfig:
@@ -107,8 +105,7 @@ void IspdbService::handleReply(QNetworkReply *const reply, const KMime::Types::A
             emailProvider.displayName = element.text();
         } else if (tagName == QLatin1String("displayShortName")) {
             emailProvider.shortDisplayName = element.text();
-        } else if (tagName == QLatin1String("incomingServer")
-                && element.attribute(QStringLiteral("type")) == QLatin1String("imap")) {
+        } else if (tagName == QLatin1String("incomingServer") && element.attribute(QStringLiteral("type")) == QLatin1String("imap")) {
             auto server = Server::fromDomElement(element, addrSpec);
             if (server) {
                 server->type = Server::Type::IMAP;

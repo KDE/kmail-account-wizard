@@ -5,11 +5,11 @@
 
 #pragma once
 
-#include <QString>
+#include <KMime/HeaderParsing>
 #include <QDomElement>
 #include <QList>
+#include <QString>
 #include <optional>
-#include <KMime/HeaderParsing>
 
 enum SocketType {
     SSL = 0, ///< SSL socket, the most secure and the default
@@ -17,10 +17,10 @@ enum SocketType {
     None,
 };
 
- /// Ispdb uses custom authtyps, hence the enum here.
- /// @see https://wiki.mozilla.org/Thunderbird:Autoconfiguration:ConfigFileFormat
- /// In particular, note that Ispdb's Plain represents both Cleartext and AUTH Plain
- /// We will always treat it as Cleartext
+/// Ispdb uses custom authtyps, hence the enum here.
+/// @see https://wiki.mozilla.org/Thunderbird:Autoconfiguration:ConfigFileFormat
+/// In particular, note that Ispdb's Plain represents both Cleartext and AUTH Plain
+/// We will always treat it as Cleartext
 enum AuthType {
     Plain = 0,
     CramMD5,
@@ -33,11 +33,7 @@ enum AuthType {
 };
 
 struct Server {
-    enum Type {
-        IMAP,
-        POP3,
-        SMTP
-    };
+    enum Type { IMAP, POP3, SMTP };
     Type type;
     QString hostname;
     int port = -1;
