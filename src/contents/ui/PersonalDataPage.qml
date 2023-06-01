@@ -15,6 +15,11 @@ Kirigami.ScrollablePage {
 
     leftPadding: 20
 
+    function isNotEmptyStr(str) {
+        return str.trim().length > 0;
+    }
+
+
     ColumnLayout {
         MobileForm.FormCard {
             Layout.topMargin: Kirigami.Units.largeSpacing
@@ -77,7 +82,7 @@ Kirigami.ScrollablePage {
                     text: i18n("Continue")
                     checked: true
                     onClicked: SetupManager.searchConfiguration()
-                    enabled: addressEmailField.text.length > 0 // Fix trimmed + is real email
+                    enabled: isNotEmptyStr(addressEmailField.text) // Fix trimmed + is real email
                 }
 
                 MobileForm.FormDelegateSeparator { below: continueButton }
