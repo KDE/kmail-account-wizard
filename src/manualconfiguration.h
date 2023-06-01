@@ -97,14 +97,14 @@ private:
     // Incoming
     QString mIncomingUserName;
     QString mIncomingHostName;
-    int mIncomingPort = 1;
+    int mIncomingPort = 995;
 
     // Outgoing
     QString mOutgoingUserName;
     QString mOutgoingHostName;
     int mOutgoingPort = 465;
 
-    int mCurrentIncomingProtocol = 0;
+    int mCurrentIncomingProtocol = 0; // POP3
 
     int mCurrentIncomingSecurityProtocol = 2; // NONE
     int mCurrentOutgoingSecurityProtocol = 2; // NONE
