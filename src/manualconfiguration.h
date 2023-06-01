@@ -5,6 +5,7 @@
 */
 #pragma once
 
+#include <QDebug>
 #include <QObject>
 
 class ManualConfiguration : public QObject
@@ -117,3 +118,4 @@ private:
     // configuration is Valid
     bool mConfigurationIsValid = false;
 };
+QDebug operator<<(QDebug d, const ManualConfiguration &t);

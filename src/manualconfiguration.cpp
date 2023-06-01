@@ -213,3 +213,23 @@ void ManualConfiguration::setOutgoingUserName(const QString &newOutgoingUserName
         Q_EMIT outgoingUserNameChanged();
     }
 }
+
+QDebug operator<<(QDebug d, const ManualConfiguration &t)
+{
+    d << "mIncomingUserName " << t.incomingUserName();
+    d << "mIncomingHostName " << t.incomingHostName();
+    d << "mIncomingPort " << t.incomingPort();
+
+    d << "mOutgoingUserName " << t.outgoingUserName();
+    d << "mOutgoingHostName " << t.outgoingHostName();
+    d << "mOutgoingPort " << t.outgoingPort();
+
+    d << "mCurrentIncomingProtocol " << t.currentIncomingProtocol();
+    d << "mCurrentIncomingSecurityProtocol " << t.currentIncomingSecurityProtocol();
+    d << "mCurrentOutgoingSecurityProtocol " << t.currentOutgoingSecurityProtocol();
+
+    d << "mCurrentIncomingAuthenticationProtocols " << t.currentIncomingAuthenticationProtocols();
+    d << "mCurrentOutgoingAuthenticationProtocols " << t.currentOutgoingAuthenticationProtocols();
+
+    return d;
+}
