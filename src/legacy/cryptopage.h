@@ -48,4 +48,3 @@ private:
     SetupManager *mSetupManager = nullptr;
     QPointer<KeyGenerationJob> mKeyGenerationJob;
 };
-

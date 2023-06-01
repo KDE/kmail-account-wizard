@@ -44,10 +44,10 @@ public:
     };
     Q_ENUM(SocketType);
 
-     /// Ispdb uses custom authtyps, hence the enum here.
-     /// @see https://wiki.mozilla.org/Thunderbird:Autoconfiguration:ConfigFileFormat
-     /// In particular, note that Ispdb's Plain represents both Cleartext and AUTH Plain
-     /// We will always treat it as Cleartext
+    /// Ispdb uses custom authtyps, hence the enum here.
+    /// @see https://wiki.mozilla.org/Thunderbird:Autoconfiguration:ConfigFileFormat
+    /// In particular, note that Ispdb's Plain represents both Cleartext and AUTH Plain
+    /// We will always treat it as Cleartext
     enum AuthType {
         Plain = 0,
         CramMD5,

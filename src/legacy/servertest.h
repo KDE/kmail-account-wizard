@@ -35,4 +35,3 @@ private:
     void testFinished(const QList<int> &list);
     MailTransport::ServerTest *const m_serverTest;
 };
-

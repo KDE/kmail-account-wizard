@@ -41,4 +41,3 @@ private:
     QString m_editName;
     bool m_editMode = false;
 };
-

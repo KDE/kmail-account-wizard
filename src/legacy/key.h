@@ -58,4 +58,3 @@ private:
     QPointer<QObject> mJob;
     PublishingMethod m_publishingMethod = NoPublishing;
 };
-

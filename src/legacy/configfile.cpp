@@ -10,8 +10,8 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KLocalizedString>
-#include <KStringHandler>
 #include <KPluginMetaData>
+#include <KStringHandler>
 
 #include <QPointer>
 

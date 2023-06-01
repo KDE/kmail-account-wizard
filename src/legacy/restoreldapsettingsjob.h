@@ -46,4 +46,3 @@ private:
     KConfig *mConfig = nullptr;
     KConfigGroup mCurrentGroup;
 };
-

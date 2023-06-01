@@ -70,4 +70,3 @@ private:
     int m_entry = -1;
     bool m_editMode = false;
 };
-
