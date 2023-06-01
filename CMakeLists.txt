@@ -59,7 +59,7 @@ set(LIBKDEPIM_LIB_VERSION "5.240.40")
 set(LIBKLEO_LIB_VERSION "5.240.40")
 set(KPIM_MIME_VERSION "5.240.40")
 
-# Find KF5 package
+# Find KF6 package
 find_package(KF6DBusAddons ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6DocTools ${KF5_MIN_VERSION} REQUIRED)
 find_package(KF6Crash ${KF5_MIN_VERSION} REQUIRED)
