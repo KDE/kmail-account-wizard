@@ -151,6 +151,9 @@ Kirigami.ScrollablePage {
                     label: i18n("Hostname:")
                     inputMethodHints: Qt.ImhUrlCharactersOnly
                     text: SetupManager.manualConfiguration.incomingHostName
+                    onTextChanged: {
+                        SetupManager.manualConfiguration.incomingHostName = manualIncomingHostName.text
+                    }
                 }
                 MobileForm.FormComboBoxDelegate {
                     id: manualIncomingProtocol
@@ -191,6 +194,9 @@ Kirigami.ScrollablePage {
                     label: i18n("Username:")
                     inputMethodHints: Qt.ImhUrlCharactersOnly
                     text: SetupManager.manualConfiguration.userName
+                    onTextChanged: {
+                        SetupManager.manualConfiguration.userName = manualIncomingUserName.text
+                    }
                 }
 
                 MobileForm.FormDelegateSeparator {}
@@ -204,7 +210,10 @@ Kirigami.ScrollablePage {
                     id: manualOutgoingHostName
                     label: i18n("Hostname:")
                     inputMethodHints: Qt.ImhUrlCharactersOnly
-                    text: SetupManager.manualConfiguration.manualOutgoingHostName
+                    text: SetupManager.manualConfiguration.outgoingHostName
+                    onTextChanged: {
+                        SetupManager.manualConfiguration.outgoingHostName = manualOutgoingHostName.text
+                    }
                 }
                 MobileForm.FormSpinBoxDelegate {
                     id: manualOutgoingPort
@@ -235,7 +244,10 @@ Kirigami.ScrollablePage {
                     id: manualOutgoingUserName
                     label: i18n("Username:")
                     inputMethodHints: Qt.ImhUrlCharactersOnly
-                    text: SetupManager.manualConfiguration.manualOutgoingUserName
+                    text: SetupManager.manualConfiguration.outgoingUserName
+                    onTextChanged: {
+                        SetupManager.manualConfiguration.outgoingUserName = manualOutgoingUserName.text
+                    }
                 }
                 MobileForm.FormDelegateSeparator {}
 

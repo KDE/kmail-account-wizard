@@ -94,6 +94,8 @@ Q_SIGNALS:
     void currentOutgoingAuthenticationProtocolsChanged();
 
 private:
+    void checkConfiguration();
+
     // Incoming
     QString mIncomingUserName;
     QString mIncomingHostName;

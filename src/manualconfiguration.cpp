@@ -41,6 +41,15 @@ void ManualConfiguration::checkServer()
     qDebug() << " Verify server";
 }
 
+void ManualConfiguration::checkConfiguration()
+{
+    const bool valid = !mIncomingUserName.trimmed().isEmpty() && !mIncomingHostName.trimmed().isEmpty() && !mOutgoingHostName.trimmed().isEmpty()
+        && !mOutgoingUserName.trimmed().isEmpty();
+    mConfigurationIsValid = valid;
+    qDebug() << " mConfigurationIsValid " << mConfigurationIsValid;
+    Q_EMIT configurationIsValidChanged();
+}
+
 int ManualConfiguration::currentOutgoingAuthenticationProtocols() const
 {
     return mCurrentOutgoingAuthenticationProtocols;
@@ -52,6 +61,7 @@ void ManualConfiguration::setCurrentOutgoingAuthenticationProtocols(int newCurre
         return;
     mCurrentOutgoingAuthenticationProtocols = newCurrentOutgoingAuthenticationProtocols;
     qDebug() << " setCurrentOutgoingAuthenticationProtocols " << mCurrentOutgoingAuthenticationProtocols;
+    checkConfiguration();
     Q_EMIT currentOutgoingAuthenticationProtocolsChanged();
 }
 
@@ -66,6 +76,7 @@ void ManualConfiguration::setCurrentIncomingAuthenticationProtocols(int newCurre
         return;
     mCurrentIncomingAuthenticationProtocols = newCurrentIncomingAuthenticationProtocols;
     qDebug() << " setCurrentIncomingAuthenticationProtocols " << mCurrentIncomingAuthenticationProtocols;
+    checkConfiguration();
     Q_EMIT currentIncomingAuthenticationProtocolsChanged();
 }
 
@@ -80,6 +91,7 @@ void ManualConfiguration::setCurrentOutgoingSecurityProtocol(int newCurrentOutgo
         return;
     mCurrentOutgoingSecurityProtocol = newCurrentOutgoingSecurityProtocol;
     qDebug() << " setCurrentOutgoingSecurityProtocol " << mCurrentOutgoingSecurityProtocol;
+    checkConfiguration();
     Q_EMIT currentOutgoingSecurityProtocolChanged();
 }
 
@@ -94,6 +106,7 @@ void ManualConfiguration::setCurrentIncomingSecurityProtocol(int newCurrentIncom
         return;
     mCurrentIncomingSecurityProtocol = newCurrentIncomingSecurityProtocol;
     qDebug() << " setCurrentIncomingSecurityProtocol " << mCurrentIncomingSecurityProtocol;
+    checkConfiguration();
     Q_EMIT currentIncomingSecurityProtocolChanged();
 }
 
@@ -107,6 +120,7 @@ void ManualConfiguration::setCurrentIncomingProtocol(int newCurrentIncomingProto
         } else {
             setIncomingPort(993);
         }
+        checkConfiguration();
         Q_EMIT currentIncomingProtocolChanged();
     }
 }
@@ -125,6 +139,7 @@ void ManualConfiguration::setIncomingHostName(const QString &newIncomingHostName
 {
     if (mIncomingHostName != newIncomingHostName) {
         mIncomingHostName = newIncomingHostName;
+        checkConfiguration();
         Q_EMIT incomingHostNameChanged();
     }
 }
@@ -138,6 +153,7 @@ void ManualConfiguration::setIncomingPort(int newPort)
 {
     if (mIncomingPort != newPort) {
         mIncomingPort = newPort;
+        checkConfiguration();
         Q_EMIT incomingPortChanged();
     }
 }
@@ -151,6 +167,7 @@ void ManualConfiguration::setIncomingUserName(const QString &newIncomingUserName
 {
     if (mIncomingUserName != newIncomingUserName) {
         mIncomingUserName = newIncomingUserName;
+        checkConfiguration();
         Q_EMIT incomingUserNameChanged();
     }
 }
@@ -164,6 +181,7 @@ void ManualConfiguration::setOutgoingHostName(const QString &newOutgoingHostName
 {
     if (mOutgoingHostName != newOutgoingHostName) {
         mOutgoingHostName = newOutgoingHostName;
+        checkConfiguration();
         Q_EMIT outgoingHostNameChanged();
     }
 }
@@ -177,6 +195,7 @@ void ManualConfiguration::setOutgoingPort(int newPort)
 {
     if (mOutgoingPort != newPort) {
         mOutgoingPort = newPort;
+        checkConfiguration();
         Q_EMIT outgoingPortChanged();
     }
 }
@@ -190,6 +209,7 @@ void ManualConfiguration::setOutgoingUserName(const QString &newOutgoingUserName
 {
     if (mOutgoingUserName != newOutgoingUserName) {
         mOutgoingUserName = newOutgoingUserName;
+        checkConfiguration();
         Q_EMIT outgoingUserNameChanged();
     }
 }
