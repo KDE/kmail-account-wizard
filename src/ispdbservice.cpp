@@ -74,14 +74,6 @@ void IspdbService::handleReply(QNetworkReply *const reply, const KMime::Types::A
 {
     const auto data = reply->readAll();
     QDomDocument document;
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    bool ok = document.setContent(data);
-    if (!ok) {
-        qCDebug(ACCOUNTWIZARD_LOG) << "Could not parse xml" << data;
-        Q_EMIT notConfigFound();
-        return;
-    }
-#else
     QDomDocument::ParseResult result = document.setContent(data);
     if (!result) {
         qCDebug(ACCOUNTWIZARD_LOG) << "Could not parse xml" << data;
@@ -90,7 +82,6 @@ void IspdbService::handleReply(QNetworkReply *const reply, const KMime::Types::A
         }
         return;
     }
-#endif
 
     const QDomElement docElem = document.documentElement();
     const QDomNodeList emailProviders = docElem.elementsByTagName(QStringLiteral("emailProvider"));
