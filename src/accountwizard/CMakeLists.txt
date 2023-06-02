@@ -2,7 +2,7 @@
 # SPDX-FileCopyrightText: 2023 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 
-add_library(libaccountwizard STATIC
+add_library(libaccountwizard SHARED
     identity.h
     identity.cpp
     setupmanager.h
@@ -19,6 +19,8 @@ add_library(libaccountwizard STATIC
     resource.h
     resource.cpp
 )
+
+generate_export_header(libaccountwizard BASE_NAME libaccountwizard)
 
 ecm_qt_declare_logging_category(libaccountwizard HEADER accountwizard_debug.h IDENTIFIER ACCOUNTWIZARD_LOG CATEGORY_NAME org.kde.pim.accountwizard
         OLD_CATEGORY_NAMES log_accountwizard
@@ -47,7 +49,9 @@ target_link_libraries(libaccountwizard
 install(TARGETS libaccountwizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
 if (BUILD_TESTING)
-	#add_subdirectory(autotests)
+    add_subdirectory(autotests)
 endif()
 
 ecm_qt_install_logging_categories(EXPORT ACCOUNTWIZARD FILE accountwizard.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
+
+install(TARGETS libaccountwizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)

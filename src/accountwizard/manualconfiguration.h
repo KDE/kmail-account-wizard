@@ -5,10 +5,11 @@
 */
 #pragma once
 
+#include "libaccountwizard_export.h"
 #include <QDebug>
 #include <QObject>
 
-class ManualConfiguration : public QObject
+class LIBACCOUNTWIZARD_EXPORT ManualConfiguration : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString incomingHostName READ incomingHostName WRITE setIncomingHostName NOTIFY incomingHostNameChanged FINAL)

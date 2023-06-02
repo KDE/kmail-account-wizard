@@ -5,6 +5,7 @@
 */
 
 #include "resource.h"
+#include "accountwizard_debug.h"
 
 #include <KLocalizedString>
 
@@ -65,7 +66,7 @@ void Resource::instanceCreateResult(KJob *job)
 
     if (!m_settings.isEmpty()) {
         Q_EMIT info(i18n("Configuring resource instance..."));
-        const auto service = ServerManager::agentServiceName(ServerManager::Resource, m_instance.identifier());
+        const auto service = ServerManager::agentServiceName(ServerManager::Resource, mInstance.identifier());
         QDBusInterface iface(service, QStringLiteral("/Settings"));
         if (!iface.isValid()) {
             Q_EMIT error(i18n("Unable to configure resource instance."));
@@ -73,8 +74,8 @@ void Resource::instanceCreateResult(KJob *job)
         }
 
         // configure resource
-        if (!m_name.isEmpty()) {
-            mInstance.setName(m_name);
+        if (!mName.isEmpty()) {
+            mInstance.setName(mName);
         }
         QMap<QString, QVariant>::const_iterator end(m_settings.constEnd());
         for (QMap<QString, QVariant>::const_iterator it = m_settings.constBegin(); it != end; ++it) {
@@ -104,4 +105,14 @@ void Resource::instanceCreateResult(KJob *job)
 
 #endif
     Q_EMIT finished(i18n("Resource setup completed."));
+}
+
+QString Resource::name() const
+{
+    return mName;
+}
+
+void Resource::setName(const QString &newName)
+{
+    mName = newName;
 }

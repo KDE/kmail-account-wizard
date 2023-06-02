@@ -5,7 +5,7 @@
 */
 
 #pragma once
-
+#include "libaccountwizard_export.h"
 #include <QObject>
 #include <gpgme++/global.h>
 
@@ -22,7 +22,7 @@ class Transport;
 /// QObject-wrapper around a KIdentityManagement
 ///
 /// Allow to configure an account
-class Identity : public QObject
+class LIBACCOUNTWIZARD_EXPORT Identity : public QObject
 {
     Q_OBJECT
 

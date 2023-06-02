@@ -16,6 +16,9 @@ public:
     explicit Resource(const QString &resourceType, QObject *parent = nullptr);
     ~Resource() override;
 
+    Q_REQUIRED_RESULT QString name() const;
+    void setName(const QString &newName);
+
     void createResource();
 
 Q_SIGNALS:
@@ -27,4 +30,5 @@ private:
     const QString mTypeIdentifier;
     void instanceCreateResult(KJob *job);
     Akonadi::AgentInstance mInstance;
+    QString mName;
 };

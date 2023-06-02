@@ -2,15 +2,15 @@
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 #pragma once
-
 #include "ispdb/configurationmodel.h"
+#include "libaccountwizard_export.h"
 #include "manualconfiguration.h"
 #include <QObject>
 
 class Identity;
 class IspdbService;
 
-class SetupManager : public QObject
+class LIBACCOUNTWIZARD_EXPORT SetupManager : public QObject
 {
     Q_OBJECT
 
