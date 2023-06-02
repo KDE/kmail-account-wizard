@@ -50,7 +50,7 @@ void Resource::createResource()
     }
 
     Q_EMIT info(i18n("Creating resource instance for '%1'...", type.name()));
-    auto *job = new AgentInstanceCreateJob(type, this);
+    auto job = new AgentInstanceCreateJob(type, this);
     connect(job, &AgentInstanceCreateJob::result, this, &Resource::instanceCreateResult);
     job->start();
 }
@@ -62,9 +62,8 @@ void Resource::instanceCreateResult(KJob *job)
         return;
     }
     mInstance = qobject_cast<AgentInstanceCreateJob *>(job)->instance();
-#if 0
 
-    if (!m_settings.isEmpty()) {
+    if (!mSettings.isEmpty()) {
         Q_EMIT info(i18n("Configuring resource instance..."));
         const auto service = ServerManager::agentServiceName(ServerManager::Resource, mInstance.identifier());
         QDBusInterface iface(service, QStringLiteral("/Settings"));
@@ -77,11 +76,12 @@ void Resource::instanceCreateResult(KJob *job)
         if (!mName.isEmpty()) {
             mInstance.setName(mName);
         }
-        QMap<QString, QVariant>::const_iterator end(m_settings.constEnd());
-        for (QMap<QString, QVariant>::const_iterator it = m_settings.constBegin(); it != end; ++it) {
-            qCDebug(ACCOUNTWIZARD_LOG) << "Setting up " << it.key() << " for agent " << m_instance.identifier();
+        QMap<QString, QVariant>::const_iterator end(mSettings.constEnd());
+        for (QMap<QString, QVariant>::const_iterator it = mSettings.constBegin(); it != end; ++it) {
+            qCDebug(ACCOUNTWIZARD_LOG) << "Setting up " << it.key() << " for agent " << mInstance.identifier();
             const QString methodName = QStringLiteral("set%1").arg(it.key());
             QVariant arg = it.value();
+#if 0
             const QVariant::Type targetType = argumentType(iface.metaObject(), methodName);
             if (!arg.canConvert(targetType)) {
                 Q_EMIT error(i18n("Could not convert value of setting '%1' to required type %2.", it.key(), QLatin1String(QVariant::typeToName(targetType))));
@@ -94,6 +94,7 @@ void Resource::instanceCreateResult(KJob *job)
                 Q_EMIT error(i18n("Could not set setting '%1': %2", it.key(), reply.error().message()));
                 return;
             }
+#endif
         }
         QDBusReply<void> reply = iface.call(QStringLiteral("save"));
         if (!reply.isValid()) {
@@ -103,8 +104,17 @@ void Resource::instanceCreateResult(KJob *job)
         mInstance.reconfigure();
     }
 
-#endif
     Q_EMIT finished(i18n("Resource setup completed."));
+}
+
+QMap<QString, QVariant> Resource::settings() const
+{
+    return mSettings;
+}
+
+void Resource::setSettings(const QMap<QString, QVariant> &newSettings)
+{
+    mSettings = newSettings;
 }
 
 QString Resource::name() const

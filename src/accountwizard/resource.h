@@ -7,6 +7,7 @@
 #pragma once
 
 #include <Akonadi/AgentInstance>
+#include <QMap>
 #include <QObject>
 class KJob;
 class Resource : public QObject
@@ -19,6 +20,9 @@ public:
     Q_REQUIRED_RESULT QString name() const;
     void setName(const QString &newName);
 
+    Q_REQUIRED_RESULT QMap<QString, QVariant> settings() const;
+    void setSettings(const QMap<QString, QVariant> &newSettings);
+
     void createResource();
 
 Q_SIGNALS:
@@ -27,8 +31,9 @@ Q_SIGNALS:
     void finished(const QString &msg);
 
 private:
-    const QString mTypeIdentifier;
     void instanceCreateResult(KJob *job);
+    QMap<QString, QVariant> mSettings;
     Akonadi::AgentInstance mInstance;
+    const QString mTypeIdentifier;
     QString mName;
 };
