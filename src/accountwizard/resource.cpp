@@ -16,8 +16,38 @@
 
 #include <QDBusInterface>
 #include <QDBusReply>
+#include <QMetaMethod>
 
 using namespace Akonadi;
+
+static QMetaType::Type argumentType(const QMetaObject *mo, const QString &method)
+{
+    QMetaMethod m;
+    const int numberOfMethod(mo->methodCount());
+    for (int i = 0; i < numberOfMethod; ++i) {
+        const QString signature = QLatin1String(mo->method(i).methodSignature());
+        if (signature.contains(method + QLatin1Char('('))) {
+            m = mo->method(i);
+            break;
+        }
+    }
+
+    if (m.methodSignature().isEmpty()) {
+        qCWarning(ACCOUNTWIZARD_LOG) << "Did not find D-Bus method: " << method << " available methods are:";
+        for (int i = 0; i < numberOfMethod; ++i) {
+            qCWarning(ACCOUNTWIZARD_LOG) << mo->method(i).methodSignature();
+        }
+        return QMetaType::UnknownType;
+    }
+
+    const QList<QByteArray> argTypes = m.parameterTypes();
+    if (argTypes.count() != 1) {
+        return QMetaType::UnknownType;
+    }
+
+    return static_cast<QMetaType::Type>(QMetaType::fromName(argTypes.first().constData()).id());
+}
+
 Resource::Resource(const QString &resourceType, QObject *parent)
     : QObject{parent}
     , mTypeIdentifier(resourceType)
@@ -81,20 +111,18 @@ void Resource::instanceCreateResult(KJob *job)
             qCDebug(ACCOUNTWIZARD_LOG) << "Setting up " << it.key() << " for agent " << mInstance.identifier();
             const QString methodName = QStringLiteral("set%1").arg(it.key());
             QVariant arg = it.value();
-#if 0
-            const QVariant::Type targetType = argumentType(iface.metaObject(), methodName);
-            if (!arg.canConvert(targetType)) {
-                Q_EMIT error(i18n("Could not convert value of setting '%1' to required type %2.", it.key(), QLatin1String(QVariant::typeToName(targetType))));
+            const QMetaType::Type targetType = argumentType(iface.metaObject(), methodName);
+            if (arg.metaType().id() != targetType) {
+                Q_EMIT error(i18n("Could not convert value of setting '%1' to required type %2.", it.key(), QLatin1String(QMetaType(targetType).name())));
                 qCWarning(ACCOUNTWIZARD_LOG) << "Impossible to convert argument : " << arg;
                 return;
             }
-            arg.convert(targetType);
+            // arg.convert(targetType);
             QDBusReply<void> reply = iface.call(methodName, arg);
             if (!reply.isValid()) {
                 Q_EMIT error(i18n("Could not set setting '%1': %2", it.key(), reply.error().message()));
                 return;
             }
-#endif
         }
         QDBusReply<void> reply = iface.call(QStringLiteral("save"));
         if (!reply.isValid()) {
