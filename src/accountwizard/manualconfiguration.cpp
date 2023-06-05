@@ -33,7 +33,13 @@ QStringList ManualConfiguration::authenticationProtocols() const
 void ManualConfiguration::createManualAccount()
 {
     qDebug() << " createManualAccount ";
-    // TODO
+    if (mCurrentIncomingProtocol == 0) { // POP3
+
+    } else if (mCurrentIncomingProtocol == 1) { // IMAP
+
+    } else {
+        qDebug() << " invalid protocol ";
+    }
 }
 
 void ManualConfiguration::checkServer()
