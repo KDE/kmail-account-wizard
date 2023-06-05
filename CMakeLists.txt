@@ -35,7 +35,6 @@ include(ECMQmlModule)
 # Do NOT add quote
 set(KDEPIM_DEV_VERSION alpha)
 set(RELEASE_SERVICE_VERSION "23.07.40")
-
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
     set(KDEPIM_DEV_VERSION " ${KDEPIM_DEV_VERSION}")
@@ -88,7 +87,6 @@ set_package_properties(Qt6Keychain PROPERTIES
 
 
 ecm_set_disabled_deprecation_versions(QT 6.5  KF 5.240.0)
-
 
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
