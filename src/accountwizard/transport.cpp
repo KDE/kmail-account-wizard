@@ -6,6 +6,8 @@
 */
 
 #include "transport.h"
+#include <KLocalizedString>
+#include <MailTransport/TransportManager>
 
 Transport::Transport(const QString &type, QObject *parent)
     : QObject(parent)

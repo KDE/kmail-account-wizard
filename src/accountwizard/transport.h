@@ -16,4 +16,8 @@ public:
     explicit Transport(const QString &type, QObject *parent);
     ~Transport() override;
     void createTransport();
+Q_SIGNALS:
+    void error(const QString &msg);
+    void info(const QString &msg);
+    void finished(const QString &msg);
 };
