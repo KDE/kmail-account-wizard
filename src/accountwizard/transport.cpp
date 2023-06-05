@@ -20,3 +20,26 @@ void Transport::createTransport()
 {
     // TODO
 }
+
+Transport::TransportInfo Transport::transportInfo() const
+{
+    return mTransportInfo;
+}
+
+void Transport::setTransportInfo(const TransportInfo &newTransportInfo)
+{
+    mTransportInfo = newTransportInfo;
+}
+
+QDebug operator<<(QDebug d, const Transport::TransportInfo &t)
+{
+    d << "name " << t.name;
+    d << "host " << t.host;
+    d << "user " << t.user;
+    d << "password " << t.password;
+    d << "encrStr " << t.encrStr;
+    d << "authStr " << t.authStr;
+    d << "port " << t.port;
+
+    return d;
+}
