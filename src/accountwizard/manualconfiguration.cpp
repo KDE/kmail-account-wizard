@@ -6,6 +6,7 @@
 
 #include "manualconfiguration.h"
 #include "resource.h"
+#include "transport.h"
 #include <KLocalizedString>
 #include <QDebug>
 
@@ -49,6 +50,9 @@ void ManualConfiguration::createManualAccount()
     resource->createResource();
     // Create outgoing account
     // TODO
+    auto transport = new Transport(QString() /* TODO */, this);
+    // TODO connect
+    transport->createTransport();
 }
 
 void ManualConfiguration::checkServer()

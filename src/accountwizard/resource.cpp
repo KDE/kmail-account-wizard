@@ -54,9 +54,7 @@ Resource::Resource(const QString &resourceType, QObject *parent)
 {
 }
 
-Resource::~Resource()
-{
-}
+Resource::~Resource() = default;
 
 void Resource::createResource()
 {

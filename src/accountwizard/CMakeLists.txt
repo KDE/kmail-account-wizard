@@ -18,6 +18,8 @@ add_library(libaccountwizard SHARED
     manualconfiguration.cpp
     resource.h
     resource.cpp
+    transport.h
+    transport.cpp
 )
 
 generate_export_header(libaccountwizard BASE_NAME libaccountwizard)
