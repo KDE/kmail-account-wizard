@@ -63,6 +63,7 @@ void Resource::createResource()
     const AgentType type = AgentManager::self()->type(mTypeIdentifier);
     if (!type.isValid()) {
         Q_EMIT error(i18n("Resource type '%1' is not available.", mTypeIdentifier));
+        deleteLater();
         return;
     }
 
@@ -74,6 +75,7 @@ void Resource::createResource()
             // qCDebug(ACCOUNTWIZARD_LOG) << instance.type().identifier() << (instance.type() == type);
             if (instance.type() == type) {
                 Q_EMIT finished(i18n("Resource '%1' is already set up.", type.name()));
+                deleteLater();
                 return;
             }
         }
@@ -89,6 +91,7 @@ void Resource::instanceCreateResult(KJob *job)
 {
     if (job->error()) {
         Q_EMIT error(i18n("Failed to create resource instance: %1", job->errorText()));
+        deleteLater();
         return;
     }
     mInstance = qobject_cast<AgentInstanceCreateJob *>(job)->instance();
@@ -99,6 +102,7 @@ void Resource::instanceCreateResult(KJob *job)
         QDBusInterface iface(service, QStringLiteral("/Settings"));
         if (!iface.isValid()) {
             Q_EMIT error(i18n("Unable to configure resource instance."));
+            deleteLater();
             return;
         }
 
@@ -133,6 +137,7 @@ void Resource::instanceCreateResult(KJob *job)
     }
 
     Q_EMIT finished(i18n("Resource setup completed."));
+    deleteLater();
 }
 
 QMap<QString, QVariant> Resource::settings() const

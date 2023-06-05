@@ -5,6 +5,7 @@
 */
 
 #include "manualconfiguration.h"
+#include "resource.h"
 #include <KLocalizedString>
 #include <QDebug>
 
@@ -32,14 +33,22 @@ QStringList ManualConfiguration::authenticationProtocols() const
 
 void ManualConfiguration::createManualAccount()
 {
+    // Create incoming account
+    QString resourceType;
     qDebug() << " createManualAccount ";
     if (mCurrentIncomingProtocol == 0) { // POP3
-
+        resourceType = QStringLiteral("akonadi_pop3_resource");
     } else if (mCurrentIncomingProtocol == 1) { // IMAP
-
+        resourceType = QStringLiteral("akonadi_imap_resource");
     } else {
         qDebug() << " invalid protocol ";
+        return;
     }
+    auto resource = new Resource(resourceType, this);
+    // TODO connect
+    resource->createResource();
+    // Create outgoing account
+    // TODO
 }
 
 void ManualConfiguration::checkServer()
