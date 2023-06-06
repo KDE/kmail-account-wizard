@@ -6,6 +6,7 @@
 #pragma once
 
 #include "libaccountwizard_export.h"
+#include "transport.h"
 #include <QDebug>
 #include <QObject>
 
@@ -98,6 +99,7 @@ Q_SIGNALS:
 
 private:
     void checkConfiguration();
+    Q_REQUIRED_RESULT Transport::TransportInfo createTransportInfo() const;
 
     // Incoming
     QString mIncomingUserName;
