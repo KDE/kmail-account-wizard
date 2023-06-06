@@ -2,7 +2,8 @@
 # SPDX-FileCopyrightText: 2023 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 
-add_library(libaccountwizard SHARED
+add_library(libaccountwizard SHARED)
+target_sources(libaccountwizard PRIVATE
     identity.h
     identity.cpp
     setupmanager.h
@@ -20,6 +21,8 @@ add_library(libaccountwizard SHARED
     resource.cpp
     transport.h
     transport.cpp
+    setupbase.h
+    setupbase.cpp
 )
 
 generate_export_header(libaccountwizard BASE_NAME libaccountwizard)

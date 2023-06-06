@@ -10,7 +10,7 @@
 #include <MailTransport/TransportManager>
 
 Transport::Transport(const QString &type, QObject *parent)
-    : QObject(parent)
+    : SetupBase(parent)
 {
 }
 

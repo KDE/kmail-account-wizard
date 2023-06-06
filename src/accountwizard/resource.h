@@ -6,11 +6,14 @@
 
 #pragma once
 
+#include "setupbase.h"
+
 #include <Akonadi/AgentInstance>
 #include <QMap>
 #include <QObject>
+
 class KJob;
-class Resource : public QObject
+class Resource : public SetupBase
 {
     Q_OBJECT
 public:
@@ -24,11 +27,6 @@ public:
     void setSettings(const QMap<QString, QVariant> &newSettings);
 
     void createResource();
-
-Q_SIGNALS:
-    void error(const QString &msg);
-    void info(const QString &msg);
-    void finished(const QString &msg);
 
 private:
     void instanceCreateResult(KJob *job);

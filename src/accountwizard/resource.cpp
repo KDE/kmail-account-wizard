@@ -49,7 +49,7 @@ static QMetaType::Type argumentType(const QMetaObject *mo, const QString &method
 }
 
 Resource::Resource(const QString &resourceType, QObject *parent)
-    : QObject{parent}
+    : SetupBase{parent}
     , mTypeIdentifier(resourceType)
 {
 }

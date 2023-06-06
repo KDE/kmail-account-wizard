@@ -7,9 +7,11 @@
 
 #pragma once
 
+#include "setupbase.h"
+
 #include <QObject>
 
-class Transport : public QObject
+class Transport : public SetupBase
 {
     Q_OBJECT
 public:
