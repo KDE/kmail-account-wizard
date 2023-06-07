@@ -20,20 +20,20 @@ void Transport::createTransport()
 {
     Q_EMIT info(i18n("Setting up mail transport account..."));
     MailTransport::Transport *mt = MailTransport::TransportManager::self()->createTransport();
+    mt->setName(mTransportInfo.name);
+    mt->setHost(mTransportInfo.host);
+    if (mTransportInfo.port > 0) {
+        mt->setPort(mTransportInfo.port);
+    }
+    if (!mTransportInfo.user.isEmpty()) {
+        mt->setUserName(mTransportInfo.user);
+        mt->setRequiresAuthentication(true);
+    }
+    if (!mTransportInfo.password.isEmpty()) {
+        mt->setStorePassword(true);
+        mt->setPassword(mTransportInfo.password);
+    }
     /*
-        mt->setName(m_name);
-        mt->setHost(m_host);
-        if (m_port > 0) {
-            mt->setPort(m_port);
-        }
-        if (!m_user.isEmpty()) {
-            mt->setUserName(m_user);
-            mt->setRequiresAuthentication(true);
-        }
-        if (!m_password.isEmpty()) {
-            mt->setStorePassword(true);
-            mt->setPassword(m_password);
-        }
         mt->setEncryption(m_encr);
         mt->setAuthenticationType(m_auth);
         m_transportId = mt->id();
@@ -43,8 +43,6 @@ void Transport::createTransport()
     MailTransport::TransportManager::self()->addTransport(mt);
     MailTransport::TransportManager::self()->setDefaultTransport(mt->id());
     Q_EMIT finished(i18n("Mail transport account set up."));
-
-    // TODO
 }
 
 Transport::TransportInfo Transport::transportInfo() const
