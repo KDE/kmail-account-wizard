@@ -45,6 +45,7 @@ struct Server {
 
     static std::optional<Server> fromDomElement(const QDomElement &element, const KMime::Types::AddrSpec &addrSpec);
 };
+QDebug operator<<(QDebug d, const Server &t);
 
 struct EmailProvider {
     QStringList domains;
@@ -55,3 +56,4 @@ struct EmailProvider {
     QList<Server> popServers;
     QList<Server> smtpServers;
 };
+QDebug operator<<(QDebug d, const EmailProvider &t);

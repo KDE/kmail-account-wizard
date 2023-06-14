@@ -98,3 +98,26 @@ std::optional<Server> Server::fromDomElement(const QDomElement &element, const K
     }
     return server;
 }
+
+QDebug operator<<(QDebug d, const EmailProvider &t)
+{
+    d << "domains " << t.domains;
+    d << "displayName " << t.displayName;
+    d << "shortDisplayName " << t.shortDisplayName;
+    d << "imapServers " << t.imapServers;
+    d << "popServers " << t.popServers;
+    d << "smtpServers " << t.smtpServers;
+
+    return d;
+}
+
+QDebug operator<<(QDebug d, const Server &t)
+{
+    d << "type " << t.type;
+    d << "hostname " << t.hostname;
+    d << "port " << t.port;
+    d << "username " << t.username;
+    d << "socketType " << t.socketType;
+    d << "authType " << t.authType;
+    return d;
+}
