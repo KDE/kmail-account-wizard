@@ -32,7 +32,7 @@ QStringList ManualConfiguration::authenticationProtocols() const
     return {i18n("Clear text"), i18n("LOGIN"), i18n("PLAIN"), i18n("CRAM-MD5"), i18n("DIGEST-MD5"), i18n("NTLM"), i18n("GSSAPI")};
 }
 
-void ManualConfiguration::createManualAccount()
+void ManualConfiguration::createResource()
 {
     // Create incoming account
     QString resourceType;
@@ -48,12 +48,22 @@ void ManualConfiguration::createManualAccount()
     auto resource = new Resource(resourceType, this);
     // TODO connect
     resource->createResource();
+}
+
+void ManualConfiguration::createTransport()
+{
     // Create outgoing account
     // TODO
     auto transport = new Transport(QString() /* TODO */, this);
     transport->setTransportInfo(createTransportInfo());
     // TODO connect
     transport->createTransport();
+}
+
+void ManualConfiguration::createManualAccount()
+{
+    createResource();
+    createTransport();
 }
 
 Transport::TransportInfo ManualConfiguration::createTransportInfo() const

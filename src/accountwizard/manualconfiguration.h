@@ -100,6 +100,8 @@ Q_SIGNALS:
 private:
     void checkConfiguration();
     Q_REQUIRED_RESULT Transport::TransportInfo createTransportInfo() const;
+    void createResource();
+    void createTransport();
 
     // Incoming
     QString mIncomingUserName;
