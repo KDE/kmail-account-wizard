@@ -6,14 +6,14 @@
 
 #pragma once
 
+#include "libaccountwizard_private_export.h"
 #include "setupbase.h"
-
 #include <Akonadi/AgentInstance>
 #include <QMap>
 #include <QObject>
 
 class KJob;
-class Resource : public SetupBase
+class LIBACCOUNTWIZARD_TESTS_EXPORT Resource : public SetupBase
 {
     Q_OBJECT
 public:

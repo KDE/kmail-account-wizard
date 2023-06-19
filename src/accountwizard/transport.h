@@ -6,12 +6,12 @@
 */
 
 #pragma once
-
+#include "libaccountwizard_private_export.h"
 #include "setupbase.h"
 
 #include <QObject>
 
-class Transport : public SetupBase
+class LIBACCOUNTWIZARD_TESTS_EXPORT Transport : public SetupBase
 {
     Q_OBJECT
 public:
