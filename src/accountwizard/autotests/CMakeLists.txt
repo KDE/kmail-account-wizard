@@ -35,3 +35,4 @@ endmacro()
 
 accountwizard_test(manualconfigurationtest.cpp)
 accountwizard_test(setupmanagertest.cpp)
+# TODO reactivate it accountwizard_test(resourcetest.cpp)
