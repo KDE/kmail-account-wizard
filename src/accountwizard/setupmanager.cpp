@@ -10,65 +10,65 @@
 
 SetupManager::SetupManager(QObject *parent)
     : QObject(parent)
-    , m_identity(new Identity(this))
-    , m_ispdbService(new IspdbService(this))
-    , m_configurationModel(new ConfigurationModel(this))
-    , m_manualConfiguration(new ManualConfiguration(this))
+    , mIdentity(new Identity(this))
+    , mIspdbService(new IspdbService(this))
+    , mConfigurationModel(new ConfigurationModel(this))
+    , mManualConfiguration(new ManualConfiguration(this))
 {
     KEMailSettings emailSettings;
     setFullName(emailSettings.getSetting(KEMailSettings::RealName));
     setEmail(emailSettings.getSetting(KEMailSettings::EmailAddress));
 
-    connect(m_identity, &Identity::emailChanged, this, &SetupManager::emailChanged);
-    connect(m_ispdbService, &IspdbService::finished, this, &SetupManager::setEmailProvider);
-    connect(m_ispdbService, &IspdbService::notConfigFound, this, &SetupManager::noConfigFound);
+    connect(mIdentity, &Identity::emailChanged, this, &SetupManager::emailChanged);
+    connect(mIspdbService, &IspdbService::finished, this, &SetupManager::setEmailProvider);
+    connect(mIspdbService, &IspdbService::notConfigFound, this, &SetupManager::noConfigFound);
 }
 
 SetupManager::~SetupManager() = default;
 
 QString SetupManager::fullName() const
 {
-    return m_identity->fullName();
+    return mIdentity->fullName();
 }
 
 void SetupManager::setFullName(const QString &fullName)
 {
-    m_identity->setFullName(fullName);
+    mIdentity->setFullName(fullName);
 }
 
 QString SetupManager::email() const
 {
-    return m_identity->email();
+    return mIdentity->email();
 }
 
 void SetupManager::setEmail(const QString &email)
 {
-    m_identity->setEmail(email);
+    mIdentity->setEmail(email);
     clearConfiguration();
 }
 
 QString SetupManager::password() const
 {
-    return m_password;
+    return mPassword;
 }
 
 void SetupManager::setPassword(const QString &password)
 {
-    if (m_password == password) {
+    if (mPassword == password) {
         return;
     }
-    m_password = password;
+    mPassword = password;
     Q_EMIT passwordChanged();
 }
 
 Identity *SetupManager::identity() const
 {
-    return m_identity;
+    return mIdentity;
 }
 
 ConfigurationModel *SetupManager::configurationModel() const
 {
-    return m_configurationModel;
+    return mConfigurationModel;
 }
 
 void SetupManager::searchConfiguration()
@@ -76,7 +76,7 @@ void SetupManager::searchConfiguration()
     clearConfiguration();
     KMime::Types::Mailbox box;
     box.fromUnicodeString(email());
-    m_ispdbService->start(box.addrSpec());
+    mIspdbService->start(box.addrSpec());
 }
 
 void SetupManager::createAutomaticAccount()
@@ -87,33 +87,33 @@ void SetupManager::createAutomaticAccount()
 void SetupManager::createManualAccount()
 {
     qDebug() << " Create MAnual Account";
-    m_manualConfiguration->createManualAccount();
+    mManualConfiguration->createManualAccount();
 }
 
 void SetupManager::setEmailProvider(const EmailProvider &emailProvider, const QString &messageInfo)
 {
-    m_searchIspdbFoundMessage = messageInfo;
-    m_configurationModel->setEmailProvider(emailProvider);
+    mSearchIspdbFoundMessage = messageInfo;
+    mConfigurationModel->setEmailProvider(emailProvider);
     Q_EMIT searchIspdbFoundMessageChanged();
 }
 
 void SetupManager::clearConfiguration()
 {
-    m_configurationModel->clear();
-    m_searchIspdbFoundMessage.clear();
+    mConfigurationModel->clear();
+    mSearchIspdbFoundMessage.clear();
     Q_EMIT searchIspdbFoundMessageChanged();
 
-    m_noConfigFound = false;
+    mNoConfigFound = false;
     Q_EMIT noConfigFoundChanged();
 }
 
 void SetupManager::noConfigFound()
 {
-    m_noConfigFound = true;
+    mNoConfigFound = true;
     Q_EMIT noConfigFoundChanged();
 }
 
 ManualConfiguration *SetupManager::manualConfiguration() const
 {
-    return m_manualConfiguration;
+    return mManualConfiguration;
 }

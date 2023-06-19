@@ -18,8 +18,8 @@
 Identity::Identity(QObject *parent)
     : QObject(parent)
 {
-    m_identity = &KIdentityManagementCore::IdentityManager::self()->newFromScratch(QString());
-    Q_ASSERT(m_identity != nullptr);
+    mIdentity = &KIdentityManagementCore::IdentityManager::self()->newFromScratch(QString());
+    Q_ASSERT(mIdentity != nullptr);
 }
 
 void Identity::create()
@@ -27,11 +27,11 @@ void Identity::create()
     Q_EMIT info(i18n("Setting up identity..."));
 
     // store identity information
-    m_identityName = identityName();
-    m_identity->setIdentityName(m_identityName);
+    mIdentityName = identityName();
+    mIdentity->setIdentityName(mIdentityName);
     auto manager = KIdentityManagementCore::IdentityManager::self();
     manager->commit();
-    if (!manager->setAsDefault(m_identity->uoid())) {
+    if (!manager->setAsDefault(mIdentity->uoid())) {
         qCWarning(ACCOUNTWIZARD_LOG) << "Impossible to find identity";
     }
 
@@ -41,11 +41,11 @@ void Identity::create()
 QString Identity::identityName() const
 {
     // create identity name
-    QString name(m_identityName);
+    QString name(mIdentityName);
     if (name.isEmpty()) {
         name = i18nc("Default name for new email accounts/identities.", "Unnamed");
 
-        const QString idName = m_identity->primaryEmailAddress();
+        const QString idName = mIdentity->primaryEmailAddress();
         int pos = idName.indexOf(QLatin1Char('@'));
         if (pos != -1) {
             name = idName.mid(0, pos);
@@ -70,22 +70,22 @@ QString Identity::identityName() const
 void Identity::destroy()
 {
     auto manager = KIdentityManagementCore::IdentityManager::self();
-    if (!manager->removeIdentityForced(m_identityName)) {
-        qCWarning(ACCOUNTWIZARD_LOG) << " impossible to remove identity " << m_identityName;
+    if (!manager->removeIdentityForced(mIdentityName)) {
+        qCWarning(ACCOUNTWIZARD_LOG) << " impossible to remove identity " << mIdentityName;
     }
     manager->commit();
-    m_identity = nullptr;
+    mIdentity = nullptr;
     Q_EMIT info(i18n("Identity removed."));
 }
 
 void Identity::setIdentityName(const QString &name)
 {
-    m_identityName = name;
+    mIdentityName = name;
 }
 
 QString Identity::fullName() const
 {
-    return m_identity->fullName();
+    return mIdentity->fullName();
 }
 
 void Identity::setFullName(const QString &name)
@@ -93,13 +93,13 @@ void Identity::setFullName(const QString &name)
     if (name == fullName()) {
         return;
     }
-    m_identity->setFullName(name);
+    mIdentity->setFullName(name);
     Q_EMIT fullNameChanged();
 }
 
 QString Identity::organization() const
 {
-    return m_identity->organization();
+    return mIdentity->organization();
 }
 
 void Identity::setOrganization(const QString &org)
@@ -107,13 +107,13 @@ void Identity::setOrganization(const QString &org)
     if (org == this->organization()) {
         return;
     }
-    m_identity->setOrganization(org);
+    mIdentity->setOrganization(org);
     Q_EMIT organizationChanged();
 }
 
 QString Identity::email() const
 {
-    return m_identity->primaryEmailAddress();
+    return mIdentity->primaryEmailAddress();
 }
 
 void Identity::setEmail(const QString &email)
@@ -121,72 +121,72 @@ void Identity::setEmail(const QString &email)
     if (email == this->email()) {
         return;
     }
-    m_identity->setPrimaryEmailAddress(email);
+    mIdentity->setPrimaryEmailAddress(email);
     Q_EMIT emailChanged();
 }
 
 uint Identity::uoid() const
 {
-    return m_identity->uoid();
+    return mIdentity->uoid();
 }
 
 void Identity::setTransport(MailTransport::Transport *transport)
 {
     if (transport) {
-        m_identity->setTransport(QString::number(transport->id()));
+        mIdentity->setTransport(QString::number(transport->id()));
     } else {
-        m_identity->setTransport({});
+        mIdentity->setTransport({});
     }
 }
 
 QString Identity::signature() const
 {
-    return m_identity->signature().text();
+    return mIdentity->signature().text();
 }
 
 void Identity::setSignature(const QString &sig)
 {
     if (!sig.isEmpty()) {
         const KIdentityManagementCore::Signature signature(sig);
-        m_identity->setSignature(signature);
+        mIdentity->setSignature(signature);
     } else {
-        m_identity->setSignature(KIdentityManagementCore::Signature());
+        mIdentity->setSignature(KIdentityManagementCore::Signature());
     }
 }
 
 void Identity::setPreferredCryptoMessageFormat(const QString &format)
 {
-    m_identity->setPreferredCryptoMessageFormat(format);
+    mIdentity->setPreferredCryptoMessageFormat(format);
 }
 
 void Identity::setXFace(const QString &xface)
 {
-    m_identity->setXFaceEnabled(!xface.isEmpty());
-    m_identity->setXFace(xface);
+    mIdentity->setXFaceEnabled(!xface.isEmpty());
+    mIdentity->setXFace(xface);
 }
 
 void Identity::setPgpAutoEncrypt(bool autoencrypt)
 {
-    m_identity->setPgpAutoEncrypt(autoencrypt);
+    mIdentity->setPgpAutoEncrypt(autoencrypt);
 }
 
 void Identity::setPgpAutoSign(bool autosign)
 {
-    m_identity->setPgpAutoSign(autosign);
+    mIdentity->setPgpAutoSign(autosign);
 }
 
 void Identity::setKey(GpgME::Protocol protocol, const QByteArray &fingerprint)
 {
     if (fingerprint.isEmpty()) {
-        m_identity->setPGPEncryptionKey(QByteArray());
-        m_identity->setPGPSigningKey(QByteArray());
-        m_identity->setSMIMEEncryptionKey(QByteArray());
-        m_identity->setSMIMESigningKey(QByteArray());
+        mIdentity->setPGPEncryptionKey(QByteArray());
+        mIdentity->setPGPSigningKey(QByteArray());
+        mIdentity->setSMIMEEncryptionKey(QByteArray());
+        mIdentity->setSMIMESigningKey(QByteArray());
     } else if (protocol == GpgME::OpenPGP) {
-        m_identity->setPGPSigningKey(fingerprint);
-        m_identity->setPGPEncryptionKey(fingerprint);
+        mIdentity->setPGPSigningKey(fingerprint);
+        mIdentity->setPGPEncryptionKey(fingerprint);
     } else if (protocol == GpgME::CMS) {
-        m_identity->setSMIMESigningKey(fingerprint);
-        m_identity->setSMIMEEncryptionKey(fingerprint);
+        mIdentity->setSMIMESigningKey(fingerprint);
+        mIdentity->setSMIMEEncryptionKey(fingerprint);
     }
 }

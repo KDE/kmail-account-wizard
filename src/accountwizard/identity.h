@@ -80,6 +80,6 @@ Q_SIGNALS:
     void signatureChanged();
 
 private:
-    QString m_identityName;
-    KIdentityManagementCore::Identity *m_identity = nullptr;
+    QString mIdentityName;
+    KIdentityManagementCore::Identity *mIdentity = nullptr;
 };

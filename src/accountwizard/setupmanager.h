@@ -19,8 +19,8 @@ class LIBACCOUNTWIZARD_EXPORT SetupManager : public QObject
     Q_PROPERTY(QString fullName READ fullName WRITE setFullName NOTIFY fullNameChanged)
     Q_PROPERTY(Identity *identity READ identity CONSTANT)
     Q_PROPERTY(ConfigurationModel *configurationModel READ configurationModel CONSTANT)
-    Q_PROPERTY(QString searchIspdbFoundMessage MEMBER m_searchIspdbFoundMessage NOTIFY searchIspdbFoundMessageChanged)
-    Q_PROPERTY(bool noConfigFound MEMBER m_noConfigFound NOTIFY noConfigFoundChanged)
+    Q_PROPERTY(QString searchIspdbFoundMessage MEMBER mSearchIspdbFoundMessage NOTIFY searchIspdbFoundMessageChanged)
+    Q_PROPERTY(bool noConfigFound MEMBER mNoConfigFound NOTIFY noConfigFoundChanged)
     Q_PROPERTY(ManualConfiguration *manualConfiguration READ manualConfiguration CONSTANT)
 
 public:
@@ -56,11 +56,11 @@ private:
     void setErrorOccured(const QString &errorMessage);
     void clearConfiguration();
     void noConfigFound();
-    QString m_password;
-    QString m_searchIspdbFoundMessage;
-    Identity *const m_identity;
-    IspdbService *const m_ispdbService;
-    ConfigurationModel *const m_configurationModel;
-    ManualConfiguration *const m_manualConfiguration;
-    bool m_noConfigFound = false;
+    QString mPassword;
+    QString mSearchIspdbFoundMessage;
+    Identity *const mIdentity;
+    IspdbService *const mIspdbService;
+    ConfigurationModel *const mConfigurationModel;
+    ManualConfiguration *const mManualConfiguration;
+    bool mNoConfigFound = false;
 };

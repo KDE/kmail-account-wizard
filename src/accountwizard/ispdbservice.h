@@ -33,5 +33,5 @@ private:
     void requestConfig(const KMime::Types::AddrSpec &addrSpec, const SearchServerType searchServerType);
     void handleReply(QNetworkReply *const reply, const KMime::Types::AddrSpec &addrSpec, const SearchServerType searchServerType);
 
-    QNetworkAccessManager *const m_qnam;
+    QNetworkAccessManager *const mQnam;
 };
