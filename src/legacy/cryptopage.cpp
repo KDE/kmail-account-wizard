@@ -441,3 +441,5 @@ void CryptoPage::importKey()
 }
 
 #include "cryptopage.moc"
+
+#include "moc_cryptopage.cpp"

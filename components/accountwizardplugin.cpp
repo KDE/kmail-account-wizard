@@ -10,3 +10,5 @@ void AccountWizardPlugin::registerTypes(const char *uri)
     Q_ASSERT(uri == QByteArray("org.kde.pim.accountwizard.components"));
     qmlRegisterModule(uri, 1, 0);
 }
+
+#include "moc_accountwizardplugin.cpp"

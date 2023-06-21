@@ -190,3 +190,5 @@ void Identity::setKey(GpgME::Protocol protocol, const QByteArray &fingerprint)
         mIdentity->setSMIMEEncryptionKey(fingerprint);
     }
 }
+
+#include "moc_identity.cpp"

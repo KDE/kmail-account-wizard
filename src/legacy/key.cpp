@@ -248,3 +248,5 @@ void Key::destroy()
         job->kill();
     }
 }
+
+#include "moc_key.cpp"

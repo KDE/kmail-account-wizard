@@ -163,3 +163,5 @@ bool RestoreLdapSettingsJob::canStart() const
 {
     return (mConfig != nullptr) && (mEntry != -1);
 }
+
+#include "moc_restoreldapsettingsjob.cpp"

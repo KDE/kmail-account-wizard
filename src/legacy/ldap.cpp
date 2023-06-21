@@ -253,3 +253,5 @@ void Ldap::setEditMode(const bool editMode)
 {
     m_editMode = editMode;
 }
+
+#include "moc_ldap.cpp"

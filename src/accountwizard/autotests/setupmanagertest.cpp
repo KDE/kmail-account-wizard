@@ -20,3 +20,5 @@ void SetupManagerTest::shouldHaveDefaultValues()
     QVERIFY(w.configurationModel());
     QVERIFY(w.manualConfiguration());
 }
+
+#include "moc_setupmanagertest.cpp"

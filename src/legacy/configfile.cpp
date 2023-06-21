@@ -111,3 +111,5 @@ void ConfigFile::setEditMode(const bool editMode)
 {
     m_editMode = editMode;
 }
+
+#include "moc_configfile.cpp"

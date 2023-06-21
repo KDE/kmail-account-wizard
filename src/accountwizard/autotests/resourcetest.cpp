@@ -16,3 +16,5 @@ void ResourceTest::shouldHaveDefaultValues()
     QVERIFY(w.name().isEmpty());
     QVERIFY(w.settings().isEmpty());
 }
+
+#include "moc_resourcetest.cpp"

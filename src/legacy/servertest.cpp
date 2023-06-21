@@ -54,3 +54,5 @@ void ServerTest::testFinished(const QList<int> &list)
         Q_EMIT testFail();
     }
 }
+
+#include "moc_servertest.cpp"

@@ -400,3 +400,5 @@ QDebug operator<<(QDebug d, const Identity &t)
     d << " isDefault " << t.mDefault;
     return d;
 }
+
+#include "moc_ispdb.cpp"

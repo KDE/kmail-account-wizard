@@ -14,3 +14,5 @@ SetupBase::SetupBase(QObject *parent)
 SetupBase::~SetupBase()
 {
 }
+
+#include "moc_setupbase.cpp"

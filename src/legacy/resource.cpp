@@ -182,3 +182,5 @@ void Resource::setEditMode(const bool editMode)
 {
     m_editMode = editMode;
 }
+
+#include "moc_resource.cpp"

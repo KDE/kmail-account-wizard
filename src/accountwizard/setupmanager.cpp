@@ -117,3 +117,5 @@ ManualConfiguration *SetupManager::manualConfiguration() const
 {
     return mManualConfiguration;
 }
+
+#include "moc_setupmanager.cpp"

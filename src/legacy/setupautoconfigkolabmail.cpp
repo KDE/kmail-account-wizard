@@ -14,3 +14,5 @@ SetupAutoconfigKolabMail::SetupAutoconfigKolabMail(QObject *parent)
     mIspdb = new AutoconfigKolabMail(this);
     connect(mIspdb, &AutoconfigKolabMail::finished, this, &SetupAutoconfigKolabMail::onIspdbFinished);
 }
+
+#include "moc_setupautoconfigkolabmail.cpp"

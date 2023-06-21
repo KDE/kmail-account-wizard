@@ -142,3 +142,5 @@ void IspdbService::handleReply(QNetworkReply *const reply, const KMime::Types::A
 
     Q_EMIT finished(emailProvider, foundInServerTypeMessage);
 }
+
+#include "moc_ispdbservice.cpp"

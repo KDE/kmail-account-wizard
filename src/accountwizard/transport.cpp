@@ -67,3 +67,5 @@ QDebug operator<<(QDebug d, const Transport::TransportInfo &t)
 
     return d;
 }
+
+#include "moc_transport.cpp"

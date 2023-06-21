@@ -157,3 +157,5 @@ void Resource::setName(const QString &newName)
 {
     mName = newName;
 }
+
+#include "moc_resource.cpp"

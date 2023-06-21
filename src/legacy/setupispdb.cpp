@@ -163,3 +163,5 @@ void SetupIspdb::onIspdbFinished(bool status)
         Q_EMIT info(i18n("Autoconfiguration failed."));
     }
 }
+
+#include "moc_setupispdb.cpp"

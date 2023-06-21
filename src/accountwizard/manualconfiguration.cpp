@@ -270,3 +270,5 @@ QDebug operator<<(QDebug d, const ManualConfiguration &t)
 
     return d;
 }
+
+#include "moc_manualconfiguration.cpp"
