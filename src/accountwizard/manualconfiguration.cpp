@@ -83,7 +83,6 @@ void ManualConfiguration::checkConfiguration()
     const bool valid = !mIncomingUserName.trimmed().isEmpty() && !mIncomingHostName.trimmed().isEmpty() && !mOutgoingHostName.trimmed().isEmpty()
         && !mOutgoingUserName.trimmed().isEmpty();
     mConfigurationIsValid = valid;
-    qDebug() << " mConfigurationIsValid " << mConfigurationIsValid;
     Q_EMIT configurationIsValidChanged();
 }
 
@@ -97,7 +96,6 @@ void ManualConfiguration::setCurrentOutgoingAuthenticationProtocols(int newCurre
     if (mCurrentOutgoingAuthenticationProtocols == newCurrentOutgoingAuthenticationProtocols)
         return;
     mCurrentOutgoingAuthenticationProtocols = newCurrentOutgoingAuthenticationProtocols;
-    qDebug() << " setCurrentOutgoingAuthenticationProtocols " << mCurrentOutgoingAuthenticationProtocols;
     checkConfiguration();
     Q_EMIT currentOutgoingAuthenticationProtocolsChanged();
 }
@@ -112,7 +110,6 @@ void ManualConfiguration::setCurrentIncomingAuthenticationProtocols(int newCurre
     if (mCurrentIncomingAuthenticationProtocols == newCurrentIncomingAuthenticationProtocols)
         return;
     mCurrentIncomingAuthenticationProtocols = newCurrentIncomingAuthenticationProtocols;
-    qDebug() << " setCurrentIncomingAuthenticationProtocols " << mCurrentIncomingAuthenticationProtocols;
     checkConfiguration();
     Q_EMIT currentIncomingAuthenticationProtocolsChanged();
 }
@@ -142,7 +139,6 @@ void ManualConfiguration::setCurrentIncomingSecurityProtocol(int newCurrentIncom
     if (mCurrentIncomingSecurityProtocol == newCurrentIncomingSecurityProtocol)
         return;
     mCurrentIncomingSecurityProtocol = newCurrentIncomingSecurityProtocol;
-    qDebug() << " setCurrentIncomingSecurityProtocol " << mCurrentIncomingSecurityProtocol;
     checkConfiguration();
     Q_EMIT currentIncomingSecurityProtocolChanged();
 }
@@ -151,7 +147,6 @@ void ManualConfiguration::setCurrentIncomingProtocol(int newCurrentIncomingProto
 {
     if (mCurrentIncomingProtocol != newCurrentIncomingProtocol) {
         mCurrentIncomingProtocol = newCurrentIncomingProtocol;
-        qDebug() << " setCurrentIncomingProtocol " << mCurrentIncomingProtocol;
         if (newCurrentIncomingProtocol == 0) {
             setIncomingPort(995);
         } else {
