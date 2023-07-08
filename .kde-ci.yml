@@ -2,32 +2,22 @@
 # SPDX-License-Identifier: CC0-1.0
 
 Dependencies:
-- 'on': ['@all']
+- 'on': ['Linux/Qt6', 'FreeBSD/Qt6']
   'require':
-    'frameworks/extra-cmake-modules': '@latest'
-    'pim/akonadi' : '@same'
-    'pim/akonadi-mime' : '@same'
-    'pim/kidentitymanagement' : '@same'
-    'pim/kimap' : '@same'
-    'pim/kldap' : '@same'
-    'pim/kmailtransport' : '@same'
-    'pim/libkdepim' : '@same'
-    'pim/libkleo' : '@same'
-    'pim/pimcommon' : '@same'
-    'frameworks/kwallet': '@latest'
-    'frameworks/kcmutils': '@latest'
-    'frameworks/knotifyconfig': '@latest'
-    'frameworks/kconfig': '@latest'
-    'frameworks/kservice': '@latest'
-    'frameworks/kdbusaddons': '@latest'
-    'frameworks/kdoctools': '@latest'
-    'frameworks/ktexteditor': '@latest'
-    'frameworks/kcodecs': '@latest'
-    'frameworks/kcrash': '@latest'
-    'frameworks/knotifications': '@latest'
-    'frameworks/kross': '@latest'
-    'frameworks/knewstuff': '@latest'
-    'third-party/qtkeychain': '@latest'
+    'frameworks/extra-cmake-modules': '@latest-kf6'
+    'pim/akonadi' : '@latest-kf6'
+    'pim/akonadi-mime' : '@latest-kf6'
+    'pim/kidentitymanagement' : '@latest-kf6'
+    'pim/kimap' : '@latest-kf6'
+    'pim/kldap' : '@latest-kf6'
+    'pim/kmailtransport' : '@latest-kf6'
+    'pim/libkleo' : '@latest-kf6'
+    'frameworks/kdbusaddons': '@latest-kf6'
+    'frameworks/kdoctools': '@latest-kf6'
+    'frameworks/kcrash': '@latest-kf6'
+    'frameworks/kpackage': '@latest-kf6'
+    'pim/kmime' : '@latest-kf6'
+    'pim/libkdepim' : '@latest-kf6'
 
 Options:
   require-passing-tests-on: [ 'Linux', 'FreeBSD' ]      
