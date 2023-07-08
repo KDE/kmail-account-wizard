@@ -124,7 +124,6 @@ void ManualConfiguration::setCurrentOutgoingSecurityProtocol(int newCurrentOutgo
     if (mCurrentOutgoingSecurityProtocol == newCurrentOutgoingSecurityProtocol)
         return;
     mCurrentOutgoingSecurityProtocol = newCurrentOutgoingSecurityProtocol;
-    qDebug() << " setCurrentOutgoingSecurityProtocol " << mCurrentOutgoingSecurityProtocol;
     checkConfiguration();
     Q_EMIT currentOutgoingSecurityProtocolChanged();
 }
