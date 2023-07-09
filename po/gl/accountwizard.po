@@ -330,7 +330,7 @@ msgstr "Non se pode cargar o asistente: O ficheiro «%1» non existe."
 #: loadpage.cpp:42
 #, kde-format
 msgid "Loading script '%1'..."
-msgstr "Estase a cargar o script «%1»…"
+msgstr "Estase a cargar o guión «%1»…"
 
 #: loadpage.cpp:51
 #, kde-format
