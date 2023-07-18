@@ -42,7 +42,7 @@ public:
         SSL,
         StartTLS,
     };
-    Q_ENUM(SocketType);
+    Q_ENUM(SocketType)
 
     /// Ispdb uses custom authtyps, hence the enum here.
     /// @see https://wiki.mozilla.org/Thunderbird:Autoconfiguration:ConfigFileFormat
@@ -58,13 +58,13 @@ public:
         Basic,
         OAuth2,
     };
-    Q_ENUM(AuthType);
+    Q_ENUM(AuthType)
 
     enum Length {
         Long = 0,
         Short,
     };
-    Q_ENUM(Length);
+    Q_ENUM(Length)
 
     explicit Ispdb(QObject *parent = nullptr);
     ~Ispdb() override;
