@@ -19,7 +19,7 @@ ManualConfiguration::~ManualConfiguration() = default;
 
 QStringList ManualConfiguration::incomingProtocols() const
 {
-    return {i18n("POP3"), i18n("IMAP")};
+    return {i18n("POP3"), i18n("IMAP"), i18n("Kolab")};
 }
 
 QStringList ManualConfiguration::securityProtocols() const
@@ -41,6 +41,9 @@ void ManualConfiguration::createResource()
         resourceType = QStringLiteral("akonadi_pop3_resource");
     } else if (mCurrentIncomingProtocol == 1) { // IMAP
         resourceType = QStringLiteral("akonadi_imap_resource");
+    } else if (mCurrentIncomingProtocol == 2) { // KOLAB
+        // TODO port to webdav/imap ?
+        resourceType = QStringLiteral("akonadi_kolab_resource");
     } else {
         qDebug() << " invalid protocol ";
         return;
