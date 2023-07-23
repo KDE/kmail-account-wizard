@@ -56,7 +56,6 @@ void ManualConfiguration::createResource()
 void ManualConfiguration::createTransport()
 {
     // Create outgoing account
-    // TODO
     auto transport = new Transport(QString() /* TODO */, this);
     transport->setTransportInfo(createTransportInfo());
     // TODO connect
@@ -72,6 +71,9 @@ void ManualConfiguration::createManualAccount()
 Transport::TransportInfo ManualConfiguration::createTransportInfo() const
 {
     Transport::TransportInfo info;
+    info.user = mOutgoingUserName;
+    info.host = mOutgoingHostName;
+    info.port = mOutgoingPort;
     // TODO
     return info;
 }

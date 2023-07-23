@@ -12,6 +12,8 @@
 Transport::Transport(const QString &type, QObject *parent)
     : SetupBase(parent)
 {
+    // TODO use it
+    Q_UNUSED(type)
 }
 
 Transport::~Transport() = default;
