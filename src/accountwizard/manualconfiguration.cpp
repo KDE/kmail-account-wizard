@@ -49,7 +49,9 @@ void ManualConfiguration::createResource()
         return;
     }
     auto resource = new Resource(resourceType, this);
-    // TODO connect
+    connect(resource, &Resource::info, this, &ManualConfiguration::info);
+    connect(resource, &Resource::finished, this, &ManualConfiguration::finished);
+    connect(resource, &Resource::error, this, &ManualConfiguration::error);
     resource->createResource();
 }
 
@@ -62,7 +64,6 @@ void ManualConfiguration::createTransport()
     connect(transport, &Transport::info, this, &ManualConfiguration::info);
     connect(transport, &Transport::finished, this, &ManualConfiguration::finished);
     connect(transport, &Transport::error, this, &ManualConfiguration::error);
-    // TODO connect
     transport->createTransport();
 }
 
