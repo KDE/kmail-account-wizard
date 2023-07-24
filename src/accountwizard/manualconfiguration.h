@@ -97,6 +97,10 @@ Q_SIGNALS:
     void currentIncomingAuthenticationProtocolsChanged();
     void currentOutgoingAuthenticationProtocolsChanged();
 
+    void error(const QString &msg);
+    void info(const QString &msg);
+    void finished(const QString &msg);
+
 private:
     void checkConfiguration();
     Q_REQUIRED_RESULT Transport::TransportInfo createTransportInfo() const;

@@ -58,6 +58,10 @@ void ManualConfiguration::createTransport()
     // Create outgoing account
     auto transport = new Transport(QString() /* TODO */, this);
     transport->setTransportInfo(createTransportInfo());
+
+    connect(transport, &Transport::info, this, &ManualConfiguration::info);
+    connect(transport, &Transport::finished, this, &ManualConfiguration::finished);
+    connect(transport, &Transport::error, this, &ManualConfiguration::error);
     // TODO connect
     transport->createTransport();
 }
@@ -74,6 +78,7 @@ Transport::TransportInfo ManualConfiguration::createTransportInfo() const
     info.user = mOutgoingUserName;
     info.host = mOutgoingHostName;
     info.port = mOutgoingPort;
+    // TODO add authentication/encryption
     // TODO
     return info;
 }
