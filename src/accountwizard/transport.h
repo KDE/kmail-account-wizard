@@ -31,11 +31,6 @@ public:
     Q_REQUIRED_RESULT TransportInfo transportInfo() const;
     void setTransportInfo(const TransportInfo &newTransportInfo);
 
-Q_SIGNALS:
-    void error(const QString &msg);
-    void info(const QString &msg);
-    void finished(const QString &msg);
-
 private:
     TransportInfo mTransportInfo;
 };
