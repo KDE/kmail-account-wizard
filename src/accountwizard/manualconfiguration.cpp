@@ -5,6 +5,7 @@
 */
 
 #include "manualconfiguration.h"
+#include "accountwizard_debug.h"
 #include "resource.h"
 #include "transport.h"
 #include <KLocalizedString>
@@ -45,10 +46,11 @@ void ManualConfiguration::createResource()
         // TODO port to webdav/imap ?
         resourceType = QStringLiteral("akonadi_kolab_resource");
     } else {
-        qDebug() << " invalid protocol ";
+        qCWarning(ACCOUNTWIZARD_LOG) << " invalid protocol: " << mCurrentIncomingProtocol;
         return;
     }
     auto resource = new Resource(resourceType, this);
+    // TODO add setSettings(...)
     connect(resource, &Resource::info, this, &ManualConfiguration::info);
     connect(resource, &Resource::finished, this, &ManualConfiguration::finished);
     connect(resource, &Resource::error, this, &ManualConfiguration::error);
@@ -79,7 +81,9 @@ Transport::TransportInfo ManualConfiguration::createTransportInfo() const
     info.user = mOutgoingUserName;
     info.host = mOutgoingHostName;
     info.port = mOutgoingPort;
-    // TODO add authentication/encryption
+    // TODO convert it.
+    // info.authStr = mCurrentOutgoingAuthenticationProtocols;
+    // info.encrStr = mCurrentOutgoingSecurityProtocol;
     // TODO
     return info;
 }
