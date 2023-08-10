@@ -17,7 +17,7 @@
 
 IspdbService::IspdbService(QObject *parent)
     : QObject(parent)
-    , mQnam(new QNetworkAccessManager(this))
+    , mNetworkAccessManager(new QNetworkAccessManager(this))
 {
 }
 
@@ -45,7 +45,7 @@ void IspdbService::requestConfig(const KMime::Types::AddrSpec &addrSpec, const S
     qCDebug(ACCOUNTWIZARD_LOG) << " url " << url;
     QNetworkRequest request(url);
     Q_EMIT requestedConfigFromUrl(url);
-    auto reply = mQnam->get(request);
+    auto reply = mNetworkAccessManager->get(request);
 
     connect(reply, &QNetworkReply::finished, this, [this, addrSpec, reply, searchServerType]() {
         reply->deleteLater();
