@@ -72,7 +72,7 @@ void IspdbService::handleReply(QNetworkReply *const reply, const KMime::Types::A
 {
     const auto data = reply->readAll();
     QDomDocument document;
-    QDomDocument::ParseResult result = document.setContent(data);
+    const QDomDocument::ParseResult result = document.setContent(data);
     if (!result) {
         qCDebug(ACCOUNTWIZARD_LOG) << "Could not parse xml" << data;
         if (searchServerType == IspWellKnow) { // Last one
