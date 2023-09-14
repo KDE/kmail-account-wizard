@@ -6,18 +6,18 @@ Dependencies:
   'require':
     'frameworks/extra-cmake-modules': '@latest-kf6'
     'frameworks/ki18n': '@latest-kf6'
-    'pim/akonadi' : '@latest-kf6'
-    'pim/akonadi-mime' : '@latest-kf6'
-    'pim/kidentitymanagement' : '@latest-kf6'
-    'pim/kimap' : '@latest-kf6'
-    'pim/kldap' : '@latest-kf6'
-    'pim/kmailtransport' : '@latest-kf6'
-    'pim/libkleo' : '@latest-kf6'
+    'pim/akonadi' : '@same'
+    'pim/akonadi-mime' : '@same'
+    'pim/kidentitymanagement' : '@same'
+    'pim/kimap' : '@same'
+    'pim/kldap' : '@same'
+    'pim/kmailtransport' : '@same'
+    'pim/libkleo' : '@same'
     'frameworks/kdbusaddons': '@latest-kf6'
     'frameworks/kdoctools': '@latest-kf6'
     'frameworks/kcrash': '@latest-kf6'
     'frameworks/kpackage': '@latest-kf6'
-    'pim/kmime' : '@latest-kf6'
+    'pim/kmime' : '@same'
 
 Options:
   require-passing-tests-on: [ 'Linux', 'FreeBSD' ]      
