@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-12 00:46+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2022-07-08 11:25+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -27,432 +27,598 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mkondarev@yahoo.de"
 
-#: configfile.cpp:37
-#, kde-format
-msgid "Writing config file for %1..."
-msgstr "Записване на конфигурационен файл за %1..."
-
-#: configfile.cpp:54
-#, kde-format
-msgid "Config file for %1 is writing."
-msgstr "Конфигурационният файл за %1 записва."
-
-#: configfile.cpp:59
-#, kde-format
-msgid "Config file for %1 was not changed."
-msgstr "Конфигурационният файл за %1 не беше променен."
-
-#: configfile.cpp:90
-#, kde-format
-msgid "No given name for the configuration."
-msgstr "Няма дадено име за конфигурацията."
-
-#: configfile.cpp:102
-#, kde-format
-msgid "Unknown configuration name '%1'"
-msgstr "Неизвестно име на конфигурация \"%1\""
-
-#: cryptopage.cpp:80 cryptopage.cpp:101 cryptopage.cpp:202
-#, kde-format
-msgid "Account Wizard"
-msgstr "Съветник за акаунти"
-
-#: cryptopage.cpp:81 cryptopage.cpp:102
-#, kde-format
-msgid "Error while generating new key pair for your account %1: %2"
-msgstr "Грешка при генерирането на нова двойка ключове за вашия акаунт %1: %2"
-
-#: cryptopage.cpp:257
-#, kde-format
-msgid "Could not detect valid key type"
-msgstr "Неуспешно откриване на валиден тип ключ"
-
-#: cryptopage.cpp:257 cryptopage.cpp:266 cryptopage.cpp:282 cryptopage.cpp:289
-#, kde-format
-msgid "Import error"
-msgstr "Грешка при импортиране"
-
-#: cryptopage.cpp:265
-#, kde-format
-msgid "Cannot read data from the certificate file: %1"
-msgstr "Не може да се прочетат данни от файла със сертификата:%1"
-
-#: cryptopage.cpp:281
-#, kde-format
-msgid "Failed to import key: %1"
-msgstr "Неуспех при импортиране на ключ: %1"
-
-#: cryptopage.cpp:289
-#, kde-format
-msgid "Failed to import key."
-msgstr "Неуспех при импортиране на ключ."
-
-#: cryptopage.cpp:316
-#, kde-format
-msgid "No key"
-msgstr "Без ключ"
-
-#: cryptopage.cpp:317
-#, kde-format
-msgid "Generate a new key pair"
-msgstr "Генериране на нова двойка ключове"
-
-#: cryptopage.cpp:318
-#, kde-format
-msgid "Import a key"
-msgstr "Импортиране на ключ"
-
-#: cryptopage.cpp:425
-#, kde-format
-msgid "Certificates"
-msgstr "Сертификати"
-
-#: cryptopage.cpp:426
-#, kde-format
-msgid "Any files"
-msgstr "Всички файлове"
-
-#: cryptopage.cpp:429
-#, kde-format
-msgid "Select Certificate File"
-msgstr "Избиране на файл със сертификат"
-
-#: cryptopage.cpp:435
-#, kde-format
-msgid "Importing key..."
-msgstr "Импортиране на ключ..."
-
-#: dialog.cpp:46
-#, kde-format
-msgid "Provide personal data"
-msgstr "Предоставяне на лични данни"
-
-#: dialog.cpp:54
-#, kde-format
-msgid "Secure your Communication"
-msgstr "Защитете комуникацията си"
-
-#: dialog.cpp:64
-#, kde-format
-msgid "Select Account Type"
-msgstr "Избиране на тип на акаунт"
-
-#: dialog.cpp:72
-#, kde-format
-msgid "Select Provider"
-msgstr "Избиране на доставчик"
-
-#: dialog.cpp:78
-#, kde-format
-msgid "Loading Assistant"
-msgstr "Зареждане на асистента"
-
-#: dialog.cpp:86
-#, kde-format
-msgid "Setting up Account"
-msgstr "Настройване на акаунта"
-
-#: identity.cpp:27
+#: accountwizard/identity.cpp:27
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Настройване на самоличността..."
 
-#: identity.cpp:38
+#: accountwizard/identity.cpp:38
 #, kde-format
 msgid "Identity set up."
 msgstr "Създадена самоличност."
 
-#: identity.cpp:46
+#: accountwizard/identity.cpp:46
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Неозаглавен"
 
-#: identity.cpp:78
+#: accountwizard/identity.cpp:78
 #, kde-format
 msgid "Identity removed."
 msgstr "Самоличността е премахната."
 
-#: ispdb/ispdb.cpp:351
-#, kde-format
-msgid "Lookup configuration: Email provider"
-msgstr "Конфигурация за справка: доставчик на имейл"
-
-#: ispdb/ispdb.cpp:354
-#, kde-format
-msgid "Lookup configuration: Trying common server name"
-msgstr "Конфигурация за справка: Опитване  общо име на сървър"
-
-#: ispdb/ispdb.cpp:357
-#, kde-format
-msgid "Lookup configuration: Mozilla database"
-msgstr "Конфигурация за справка: база данни на Mozilla"
-
-#: ispdb/main.cpp:70
-#, kde-format
-msgid "ISPDB Assistant"
-msgstr "ISPDB асистент"
-
-#: ispdb/main.cpp:72 main.cpp:40
-#, kde-format
-msgid "Helps setting up PIM accounts"
-msgstr "Помага за настройване на PIM акаунти"
-
-#: ispdb/main.cpp:74
-#, kde-format
-msgid "(c) 2010 Omat Holding B.V."
-msgstr "(c) 2010 Omat Holding B.V."
-
-#: ispdb/main.cpp:77 main.cpp:45
-#, kde-format
-msgid "Author"
-msgstr "Автор"
-
-#: ispdb/main.cpp:77
-#, kde-format
-msgid "Tom Albers"
-msgstr "Tom Albers"
-
-#: ispdb/main.cpp:84
-#, kde-format
-msgid "Tries to fetch the settings for that email address"
-msgstr "Опитва да извлече настройките за този имейл адрес"
-
-#: key.cpp:68
-#, kde-format
-msgid "Skipping key publishing"
-msgstr "Пропускане на публикуването на ключове"
-
-#: key.cpp:82 key.cpp:203
-#, kde-format
-msgid "Publishing OpenPGP key..."
-msgstr "Публикуване на OpenPGP ключ..."
-
-#: key.cpp:96 key.cpp:123 key.cpp:193
-#, kde-format
-msgid "Key publishing was canceled."
-msgstr "Публикуването на ключа беше отменено."
-
-#: key.cpp:102
-#, kde-format
-msgid "Key publishing failed: not online, or GnuPG too old."
-msgstr ""
-"Публикуването на ключове е неуспешно: няма връзка или GnuPG е твърде стар."
-
-#: key.cpp:105
-#, kde-format
-msgid "Your email provider does not support key publishing."
-msgstr "Вашият имейл доставчик не поддържа публикуване на ключове."
-
-#: key.cpp:128
-#, kde-format
-msgid "An error occurred while creating key publishing request."
-msgstr "Възникна грешка при създаване на заявка за публикуване на ключове."
-
-#: key.cpp:151
-#, kde-format
-msgid "Key publishing error: mail transport is not configured"
-msgstr "Грешка при публикуване на ключ: транспортът на поща не е конфигуриран"
-
-#: key.cpp:164
-#, kde-format
-msgid "Key publishing error: failed to create request email"
-msgstr "Грешка при публикуване на ключ: не можа да се създаде имейл за заявка"
-
-#: key.cpp:195
-#, kde-format
-msgid "Failed to send key publishing request: %1"
-msgstr "Неуспешно изпращане на заявка за публикуване на ключ: %1"
-
-#: key.cpp:197
-#, kde-format
-msgid "Key publishing request sent."
-msgstr "Заявката за публикуване на ключ е изпратена."
-
-#: key.cpp:233
-#, kde-format
-msgid "Failed to publish the key."
-msgstr "Неуспешно публикуване на ключа."
-
-#: key.cpp:239
-#, kde-format
-msgid "Key has been published on %1"
-msgstr "Ключът е публикуван на %1"
-
-#: ldap.cpp:37
-#, kde-format
-msgid "Setting up LDAP server..."
-msgstr "Настройване на LDAP сървър..."
-
-#: ldap.cpp:40
-#, kde-format
-msgid "Needed parameters are missing for LDAP config: server '%1'"
-msgstr "Липсват необходимите параметри за LDAP config: сървър '%1'"
-
-#: ldap.cpp:118
-#, kde-format
-msgid "LDAP set up."
-msgstr "LDAP е настроен."
-
-#: ldap.cpp:136
-#, kde-format
-msgid "LDAP not configuring."
-msgstr "LDAP не се конфигурира."
-
-#: ldap.cpp:149
-#, kde-format
-msgid "Removed LDAP entry."
-msgstr "Премахнат LDAP запис."
-
-#: ldap.cpp:155
-#, kde-format
-msgid "No config found to edit"
-msgstr "Не е намерен конфигурационен файл за редактиране"
-
-#: loadpage.cpp:35
-#, kde-format
-msgid "No script specified in '%1'."
-msgstr "Не е посочен скрипт в '%1'."
-
-#: loadpage.cpp:39
-#, kde-format
-msgid "Unable to load assistant: File '%1' does not exist."
-msgstr "Асистентът не може да се зареди: Файл \"%1\" не съществува."
-
-#: loadpage.cpp:42
-#, kde-format
-msgid "Loading script '%1'..."
-msgstr "Зареждане на скрипт \"%1\"..."
-
-#: loadpage.cpp:51
-#, kde-format
-msgid "Failed to load script: '%1'."
-msgstr "Неуспешно зареждане на скрипт: \"%1\"."
-
-#: main.cpp:38
-#, kde-format
-msgid "Account Assistant"
-msgstr "Помощник за създаване на акаунт"
-
-#: main.cpp:42
-#, kde-format
-msgid "(c) 2009-2020 the Akonadi developers"
-msgstr "(c) 2009-2020 Akonadi разработчици"
-
-#: main.cpp:45
-#, kde-format
-msgid "Volker Krause"
-msgstr "Volker Krause"
-
-#: main.cpp:46
-#, kde-format
-msgid "Laurent Montel"
-msgstr "Laurent Montel"
-
-#: main.cpp:53
-#, kde-format
-msgid "Only offer accounts that support the given type."
-msgstr "Предлагане само на акаунти, които поддържат дадения тип."
-
-#: main.cpp:54
-#, kde-format
-msgid "Run the specified assistant."
-msgstr "Стартиране на посочения асистент."
-
-#: main.cpp:56
-#, kde-format
-msgid "unpack fullpath on startup and launch that assistant"
-msgstr ""
-"разопаковане на пълния път при стартиране и стартиране на този асистент"
-
-#: main.cpp:58
-#, kde-format
-msgid "Returns types of assistants"
-msgstr "Връща типа на асистентите"
-
-#: main.cpp:66
-#, kde-format
-msgid "The following assistants are available:"
-msgstr "Налични са следните асистенти:"
-
-#: personaldatapage.cpp:71
-#, kde-format
-msgid "SMTP, %1"
-msgstr "SMTP, %1"
-
-#: personaldatapage.cpp:74
-#, kde-format
-msgid "IMAP, %1"
+#: accountwizard/ispdb/configurationmodel.cpp:36
+#: accountwizard/ispdb/serverconfiguration.cpp:23
+#: accountwizard/manualconfiguration.cpp:23
+#, fuzzy, kde-format
+#| msgid "IMAP, %1"
+msgid "IMAP"
 msgstr "IMAP, %1"
 
-#: personaldatapage.cpp:78
-#, kde-format
-msgid "POP3, %1"
+#: accountwizard/ispdb/configurationmodel.cpp:36
+#: accountwizard/ispdb/serverconfiguration.cpp:26
+#: accountwizard/manualconfiguration.cpp:23
+#, fuzzy, kde-format
+#| msgid "POP3, %1"
+msgid "POP3"
 msgstr "POP3, %1"
 
-#: providerpage.cpp:31
+#: accountwizard/ispdb/configurationmodel.cpp:38
 #, kde-format
-msgid "Fetching provider list..."
-msgstr "Извличане на списък на доставчика..."
+msgid "Keep your folders and emails synced on your server"
+msgstr ""
 
-#: resource.cpp:74
+#: accountwizard/ispdb/configurationmodel.cpp:39
+#, kde-format
+msgid "Keep your folders and emails on your computer"
+msgstr ""
+
+#: accountwizard/ispdb/serverconfiguration.cpp:29
+#, fuzzy, kde-format
+#| msgid "SMTP, %1"
+msgid "SMTP"
+msgstr "SMTP, %1"
+
+#: accountwizard/ispdb/serverconfiguration.cpp:35
+#: accountwizard/manualconfiguration.cpp:28
+#, kde-format
+msgid "SSL/TLS"
+msgstr ""
+
+#: accountwizard/ispdb/serverconfiguration.cpp:38
+#, kde-format
+msgid "StartTLS"
+msgstr ""
+
+#: accountwizard/ispdb/serverconfiguration.cpp:41
+#, kde-format
+msgctxt "No security mechanism"
+msgid "None"
+msgstr ""
+
+#: accountwizard/ispdbservice.cpp:133
+#, fuzzy, kde-format
+#| msgid "Autoconfiguration found."
+msgid "Configuration found auto config file."
+msgstr "Открито е автоматично конфигуриране."
+
+#: accountwizard/ispdbservice.cpp:136
+#, fuzzy, kde-format
+#| msgid "Autoconfiguration found."
+msgid "Configuration found in well-known file."
+msgstr "Открито е автоматично конфигуриране."
+
+#: accountwizard/ispdbservice.cpp:139
+#, fuzzy, kde-format
+#| msgid "Lookup configuration: Mozilla database"
+msgid "Configuration found in Mozilla FAI Database."
+msgstr "Конфигурация за справка: база данни на Mozilla"
+
+#: accountwizard/manualconfiguration.cpp:23
+#, kde-format
+msgid "Kolab"
+msgstr ""
+
+#: accountwizard/manualconfiguration.cpp:28
+#, kde-format
+msgid "STARTTLS"
+msgstr ""
+
+#: accountwizard/manualconfiguration.cpp:28
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: accountwizard/manualconfiguration.cpp:33
+#, kde-format
+msgid "Clear text"
+msgstr ""
+
+#: accountwizard/manualconfiguration.cpp:33
+#, kde-format
+msgid "LOGIN"
+msgstr ""
+
+#: accountwizard/manualconfiguration.cpp:33
+#, kde-format
+msgid "PLAIN"
+msgstr ""
+
+#: accountwizard/manualconfiguration.cpp:33
+#, kde-format
+msgid "CRAM-MD5"
+msgstr ""
+
+#: accountwizard/manualconfiguration.cpp:33
+#, kde-format
+msgid "DIGEST-MD5"
+msgstr ""
+
+#: accountwizard/manualconfiguration.cpp:33
+#, kde-format
+msgid "NTLM"
+msgstr ""
+
+#: accountwizard/manualconfiguration.cpp:33
+#, kde-format
+msgid "GSSAPI"
+msgstr ""
+
+#: accountwizard/resource.cpp:63 legacy/resource.cpp:74
 #, kde-format
 msgid "Resource type '%1' is not available."
 msgstr "Типът ресурс \"%1\" не е наличен."
 
-#: resource.cpp:88
+#: accountwizard/resource.cpp:75 legacy/resource.cpp:88
 #, kde-format
 msgid "Resource '%1' is already set up."
 msgstr "Ресурсът \"%1\" вече е настроен."
 
-#: resource.cpp:94
+#: accountwizard/resource.cpp:82 legacy/resource.cpp:94
 #, kde-format
 msgid "Creating resource instance for '%1'..."
 msgstr "Създаване на инстанция на ресурс за \"%1\"..."
 
-#: resource.cpp:103
+#: accountwizard/resource.cpp:91 legacy/resource.cpp:103
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Неуспешно създаване на инстанция на ресурс: %1"
 
-#: resource.cpp:110
+#: accountwizard/resource.cpp:98 legacy/resource.cpp:110
 #, kde-format
 msgid "Configuring resource instance..."
 msgstr "Конфигуриране на инстанция на ресурс..."
 
-#: resource.cpp:114
+#: accountwizard/resource.cpp:102 legacy/resource.cpp:114
 #, kde-format
 msgid "Unable to configure resource instance."
 msgstr "Не може да се конфигурира инстанция на ресурс."
 
-#: resource.cpp:129
+#: accountwizard/resource.cpp:118 legacy/resource.cpp:129
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr ""
 "Стойността на настройката \"%1\" не можа да се преобразува в необходимия тип "
 "%2."
 
-#: resource.cpp:136
+#: accountwizard/resource.cpp:125 legacy/resource.cpp:136
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Не може да се зададе настройка \"%1\" : %2"
 
-#: resource.cpp:142
+#: accountwizard/resource.cpp:131 legacy/resource.cpp:142
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Не може да се запазят настройките %1"
 
-#: resource.cpp:151
+#: accountwizard/resource.cpp:137 legacy/resource.cpp:151
 #, kde-format
 msgid "Resource setup completed."
 msgstr "Настройката на ресурса завърши."
 
-#: resource.cpp:167
+#: accountwizard/transport.cpp:23
+#, kde-format
+msgid "Setting up mail transport account..."
+msgstr "Настройване на пощенския транспорт на акаунт..."
+
+#: accountwizard/transport.cpp:47
+#, kde-format
+msgid "Mail transport account set up."
+msgstr "Настройка на акаунт за пощенски транспорт."
+
+#: apps/contents/ui/ConfigurationDelegate.qml:93
+#: apps/contents/ui/PersonalDataPage.qml:145
+#, fuzzy, kde-format
+#| msgid "Incoming:"
+msgid "Incoming"
+msgstr "Входящи:"
+
+#: apps/contents/ui/ConfigurationDelegate.qml:114
+#: apps/contents/ui/PersonalDataPage.qml:206
+#, fuzzy, kde-format
+#| msgid "Outgoing:"
+msgid "Outgoing"
+msgstr "Изходящи:"
+
+#: apps/contents/ui/PersonalDataPage.qml:14
+#, kde-format
+msgid "Personal Information"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:31
+#, kde-format
+msgid "Set Up Your Existing Email Address"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:40
+#, kde-format
+msgid ""
+"To use your current email address fill in your credentials.<br />This wizard "
+"will automatically search for a working and recommended server configuration."
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:51
+#, kde-format
+msgid "Full name:"
+msgstr "Цяло име:"
+
+#: apps/contents/ui/PersonalDataPage.qml:52
+#, kde-format
+msgctxt "Generic name"
+msgid "John Smith"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:61
+#, kde-format
+msgid "E-mail address:"
+msgstr "Адрес на е-поща:"
+
+#: apps/contents/ui/PersonalDataPage.qml:62
+#, kde-format
+msgctxt "Generic email address"
+msgid "boss@example.corp"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:72
+#, kde-format
+msgid "Password:"
+msgstr "Парола:"
+
+#: apps/contents/ui/PersonalDataPage.qml:82
+#, kde-format
+msgid "Continue"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:91
+#, fuzzy, kde-format
+#| msgid ""
+#| "Check online for the settings needed for this email provider. Only the "
+#| "domain name part of the e-mail address will be sent over the Internet at "
+#| "this point. If this option is unchecked, the account can be set up "
+#| "manually."
+msgid ""
+"Check online for the settings needed for this email provider. Only the "
+"domain name part of the e-mail address will be sent over the Internet."
+msgstr ""
+"Проверяване онлайн за настройките, необходими за този доставчик на "
+"електронна поща. На този етап през интернет ще бъде изпратена само частта с "
+"име на домейн от имейл адреса. Ако тази опция не е отметната, акаунтът може "
+"да бъде настроен ръчно."
+
+#: apps/contents/ui/PersonalDataPage.qml:125
+#, fuzzy, kde-format
+#| msgid "No config found to edit"
+msgid "No config found from ispdb server."
+msgstr "Не е намерен конфигурационен файл за редактиране"
+
+#: apps/contents/ui/PersonalDataPage.qml:140
+#, kde-format
+msgid "Server Parameters"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:151
+#: apps/contents/ui/PersonalDataPage.qml:211
+#, fuzzy, kde-format
+#| msgid "Username:"
+msgid "Hostname:"
+msgstr "Потребителско име:"
+
+#: apps/contents/ui/PersonalDataPage.qml:160
+#, kde-format
+msgid "Protocol:"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:169
+#: apps/contents/ui/PersonalDataPage.qml:220
+#, kde-format
+msgid "Port:"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:176
+#: apps/contents/ui/PersonalDataPage.qml:227
+#, kde-format
+msgid "Security:"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:185
+#: apps/contents/ui/PersonalDataPage.qml:236
+#, kde-format
+msgid "Authentication Method:"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:194
+#: apps/contents/ui/PersonalDataPage.qml:245
+#, kde-format
+msgid "Username:"
+msgstr "Потребителско име:"
+
+#: apps/contents/ui/PersonalDataPage.qml:256
+#, kde-format
+msgid "Recheck"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:269
+#: apps/contents/ui/PersonalDataPage.qml:311
+#, fuzzy, kde-format
+#| msgid "Add Account"
+msgid "Create Account"
+msgstr "Добавяне на акаунт"
+
+#: apps/contents/ui/PersonalDataPage.qml:291
+#, kde-format
+msgid "Available configurations"
+msgstr ""
+
+#: apps/main.cpp:32
+#, kde-format
+msgid "Account Assistant"
+msgstr "Помощник за създаване на акаунт"
+
+#: apps/main.cpp:34
+#, kde-format
+msgid "Helps setting up PIM accounts"
+msgstr "Помага за настройване на PIM акаунти"
+
+#: apps/main.cpp:36
+#, fuzzy, kde-format
+#| msgid "(c) 2009-2020 the Akonadi developers"
+msgid "(c) 2009-2023 the Akonadi developers"
+msgstr "(c) 2009-2020 Akonadi разработчици"
+
+#: apps/main.cpp:39
+#, kde-format
+msgid "Volker Krause"
+msgstr "Volker Krause"
+
+#: apps/main.cpp:39
+#, kde-format
+msgid "Author"
+msgstr "Автор"
+
+#: apps/main.cpp:40
+#, kde-format
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: apps/main.cpp:41
+#, kde-format
+msgid "Carl Schwan"
+msgstr ""
+
+#: apps/main.cpp:41
+#, kde-format
+msgid "Maintainer"
+msgstr ""
+
+#: legacy/configfile.cpp:37
+#, kde-format
+msgid "Writing config file for %1..."
+msgstr "Записване на конфигурационен файл за %1..."
+
+#: legacy/configfile.cpp:54
+#, kde-format
+msgid "Config file for %1 is writing."
+msgstr "Конфигурационният файл за %1 записва."
+
+#: legacy/configfile.cpp:59
+#, kde-format
+msgid "Config file for %1 was not changed."
+msgstr "Конфигурационният файл за %1 не беше променен."
+
+#: legacy/configfile.cpp:90
+#, kde-format
+msgid "No given name for the configuration."
+msgstr "Няма дадено име за конфигурацията."
+
+#: legacy/configfile.cpp:102
+#, kde-format
+msgid "Unknown configuration name '%1'"
+msgstr "Неизвестно име на конфигурация \"%1\""
+
+#: legacy/cryptopage.cpp:80 legacy/cryptopage.cpp:101 legacy/cryptopage.cpp:202
+#, kde-format
+msgid "Account Wizard"
+msgstr "Съветник за акаунти"
+
+#: legacy/cryptopage.cpp:81 legacy/cryptopage.cpp:102
+#, kde-format
+msgid "Error while generating new key pair for your account %1: %2"
+msgstr "Грешка при генерирането на нова двойка ключове за вашия акаунт %1: %2"
+
+#: legacy/cryptopage.cpp:257
+#, kde-format
+msgid "Could not detect valid key type"
+msgstr "Неуспешно откриване на валиден тип ключ"
+
+#: legacy/cryptopage.cpp:257 legacy/cryptopage.cpp:266
+#: legacy/cryptopage.cpp:282 legacy/cryptopage.cpp:289
+#, kde-format
+msgid "Import error"
+msgstr "Грешка при импортиране"
+
+#: legacy/cryptopage.cpp:265
+#, kde-format
+msgid "Cannot read data from the certificate file: %1"
+msgstr "Не може да се прочетат данни от файла със сертификата:%1"
+
+#: legacy/cryptopage.cpp:281
+#, kde-format
+msgid "Failed to import key: %1"
+msgstr "Неуспех при импортиране на ключ: %1"
+
+#: legacy/cryptopage.cpp:289
+#, kde-format
+msgid "Failed to import key."
+msgstr "Неуспех при импортиране на ключ."
+
+#: legacy/cryptopage.cpp:316
+#, kde-format
+msgid "No key"
+msgstr "Без ключ"
+
+#: legacy/cryptopage.cpp:317
+#, kde-format
+msgid "Generate a new key pair"
+msgstr "Генериране на нова двойка ключове"
+
+#: legacy/cryptopage.cpp:318
+#, kde-format
+msgid "Import a key"
+msgstr "Импортиране на ключ"
+
+#: legacy/cryptopage.cpp:425
+#, kde-format
+msgid "Certificates"
+msgstr "Сертификати"
+
+#: legacy/cryptopage.cpp:426
+#, kde-format
+msgid "Any files"
+msgstr "Всички файлове"
+
+#: legacy/cryptopage.cpp:429
+#, kde-format
+msgid "Select Certificate File"
+msgstr "Избиране на файл със сертификат"
+
+#: legacy/cryptopage.cpp:435
+#, kde-format
+msgid "Importing key..."
+msgstr "Импортиране на ключ..."
+
+#: legacy/ispdb.cpp:367
+#, kde-format
+msgid "Lookup configuration: Email provider"
+msgstr "Конфигурация за справка: доставчик на имейл"
+
+#: legacy/ispdb.cpp:370
+#, kde-format
+msgid "Lookup configuration: Trying common server name"
+msgstr "Конфигурация за справка: Опитване  общо име на сървър"
+
+#: legacy/ispdb.cpp:373
+#, kde-format
+msgid "Lookup configuration: Mozilla database"
+msgstr "Конфигурация за справка: база данни на Mozilla"
+
+#: legacy/key.cpp:66
+#, kde-format
+msgid "Skipping key publishing"
+msgstr "Пропускане на публикуването на ключове"
+
+#: legacy/key.cpp:80 legacy/key.cpp:201
+#, kde-format
+msgid "Publishing OpenPGP key..."
+msgstr "Публикуване на OpenPGP ключ..."
+
+#: legacy/key.cpp:94 legacy/key.cpp:121 legacy/key.cpp:191
+#, kde-format
+msgid "Key publishing was canceled."
+msgstr "Публикуването на ключа беше отменено."
+
+#: legacy/key.cpp:100
+#, kde-format
+msgid "Key publishing failed: not online, or GnuPG too old."
+msgstr ""
+"Публикуването на ключове е неуспешно: няма връзка или GnuPG е твърде стар."
+
+#: legacy/key.cpp:103
+#, kde-format
+msgid "Your email provider does not support key publishing."
+msgstr "Вашият имейл доставчик не поддържа публикуване на ключове."
+
+#: legacy/key.cpp:126
+#, kde-format
+msgid "An error occurred while creating key publishing request."
+msgstr "Възникна грешка при създаване на заявка за публикуване на ключове."
+
+#: legacy/key.cpp:149
+#, kde-format
+msgid "Key publishing error: mail transport is not configured"
+msgstr "Грешка при публикуване на ключ: транспортът на поща не е конфигуриран"
+
+#: legacy/key.cpp:162
+#, kde-format
+msgid "Key publishing error: failed to create request email"
+msgstr "Грешка при публикуване на ключ: не можа да се създаде имейл за заявка"
+
+#: legacy/key.cpp:193
+#, kde-format
+msgid "Failed to send key publishing request: %1"
+msgstr "Неуспешно изпращане на заявка за публикуване на ключ: %1"
+
+#: legacy/key.cpp:195
+#, kde-format
+msgid "Key publishing request sent."
+msgstr "Заявката за публикуване на ключ е изпратена."
+
+#: legacy/key.cpp:231
+#, kde-format
+msgid "Failed to publish the key."
+msgstr "Неуспешно публикуване на ключа."
+
+#: legacy/key.cpp:237
+#, kde-format
+msgid "Key has been published on %1"
+msgstr "Ключът е публикуван на %1"
+
+#: legacy/ldap.cpp:37
+#, kde-format
+msgid "Setting up LDAP server..."
+msgstr "Настройване на LDAP сървър..."
+
+#: legacy/ldap.cpp:40
+#, kde-format
+msgid "Needed parameters are missing for LDAP config: server '%1'"
+msgstr "Липсват необходимите параметри за LDAP config: сървър '%1'"
+
+#: legacy/ldap.cpp:118
+#, kde-format
+msgid "LDAP set up."
+msgstr "LDAP е настроен."
+
+#: legacy/ldap.cpp:136
+#, kde-format
+msgid "LDAP not configuring."
+msgstr "LDAP не се конфигурира."
+
+#: legacy/ldap.cpp:149
+#, kde-format
+msgid "Removed LDAP entry."
+msgstr "Премахнат LDAP запис."
+
+#: legacy/ldap.cpp:155
+#, kde-format
+msgid "No config found to edit"
+msgstr "Не е намерен конфигурационен файл за редактиране"
+
+#: legacy/resource.cpp:167
 #, kde-format
 msgid "Removed resource instance for '%1'."
 msgstr "Премахнат инстанция на ресурс за \"%1\"."
 
-#: servertest.cpp:50
+#: legacy/servertest.cpp:50
 #, kde-format
 msgid ""
 "There seems to be a problem in reaching this server or choosing a safe way "
@@ -464,284 +630,211 @@ msgstr ""
 "Съветваме ви да проверите настройките на акаунта и да го коригирате ръчно, "
 "ако е необходимо."
 
-#: servertest.cpp:53
+#: legacy/servertest.cpp:53
 #, kde-format
 msgid "Autodetecting settings failed"
 msgstr "Автоматичното откриване на настройките е неуспешно"
 
-#: setupautoconfigkolabfreebusy.cpp:74 setupautoconfigkolabldap.cpp:73
-#: setupispdb.cpp:138
+#: legacy/setupautoconfigkolabfreebusy.cpp:74
+#: legacy/setupautoconfigkolabldap.cpp:72 legacy/setupispdb.cpp:136
 #, kde-format
 msgid "Searching for autoconfiguration..."
 msgstr "Търсене на автоматично конфигуриране..."
 
-#: setupautoconfigkolabfreebusy.cpp:99 setupautoconfigkolabldap.cpp:98
-#: setupispdb.cpp:163
+#: legacy/setupautoconfigkolabfreebusy.cpp:99
+#: legacy/setupautoconfigkolabldap.cpp:97 legacy/setupispdb.cpp:161
 #, kde-format
 msgid "Autoconfiguration found."
 msgstr "Открито е автоматично конфигуриране."
 
-#: setupautoconfigkolabfreebusy.cpp:101 setupautoconfigkolabldap.cpp:100
-#: setupispdb.cpp:165
+#: legacy/setupautoconfigkolabfreebusy.cpp:101
+#: legacy/setupautoconfigkolabldap.cpp:99 legacy/setupispdb.cpp:163
 #, kde-format
 msgid "Autoconfiguration failed."
 msgstr "Автоматичното конфигуриране е неуспешно."
 
-#. i18n: ectx: property (text), widget (QLabel, progressLabel)
-#: setupmanager.cpp:114 ui/setuppage.ui:37
-#, kde-format
-msgid "Setting up account..."
-msgstr "Настройване на акаунта..."
+#~ msgid "Provide personal data"
+#~ msgstr "Предоставяне на лични данни"
 
-#: setupmanager.cpp:162
-#, kde-format
-msgid "Setup complete."
-msgstr "Настройването завърши."
+#~ msgid "Secure your Communication"
+#~ msgstr "Защитете комуникацията си"
 
-#: setupmanager.cpp:177
-#, kde-format
-msgid "Failed to set up account, rolling back..."
-msgstr "Неуспешно настройване на акаунт, връщане назад..."
+#~ msgid "Select Account Type"
+#~ msgstr "Избиране на тип на акаунт"
 
-#: setupmanager.cpp:191
-#, kde-format
-msgid "Failed to set up account."
-msgstr "Настройването на акаунта е неуспешно."
+#~ msgid "Select Provider"
+#~ msgstr "Избиране на доставчик"
 
-#: transport.cpp:64
-#, kde-format
-msgid "Setting up mail transport account..."
-msgstr "Настройване на пощенския транспорт на акаунт..."
+#~ msgid "Loading Assistant"
+#~ msgstr "Зареждане на асистента"
 
-#: transport.cpp:83
-#, kde-format
-msgid "Mail transport uses '%1' encryption and '%2' authentication."
-msgstr ""
-"Транспортът на поща използва криптиране \"%1\" и удостоверяване \"%2\"."
+#~ msgid "Setting up Account"
+#~ msgstr "Настройване на акаунта"
 
-#: transport.cpp:89
-#, kde-format
-msgid "Mail transport account set up."
-msgstr "Настройка на акаунт за пощенски транспорт."
+#~ msgid "ISPDB Assistant"
+#~ msgstr "ISPDB асистент"
 
-#: transport.cpp:95
-#, kde-format
-msgid "Mail transport account deleted."
-msgstr "Акаунтът за транспорт на поща е изтрит."
+#~ msgid "(c) 2010 Omat Holding B.V."
+#~ msgstr "(c) 2010 Omat Holding B.V."
 
-#: transport.cpp:102
-#, kde-format
-msgid "Could not load config dialog for UID '%1'"
-msgstr ""
-"Не може да се зареди диалоговият прозорец за конфигуриране на UID \"%1\""
+#~ msgid "Tom Albers"
+#~ msgstr "Tom Albers"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: ui/cryptopage.ui:26
-#, kde-format
-msgid ""
-"Protect yourself against surveillance by encrypting your Mails with GnuPG. "
-"By generating or selecting a public / private key pair now mails can be "
-"encrypted using the public key while only you can decrypt them with your "
-"private key."
-msgstr ""
-"Защитете се от наблюдение, като шифровате имейлите си с GnuPG. Чрез "
-"генериране или избор на двойка публичен / частен ключ пощата вече може да се "
-"криптира с публичния ключ, докато само вие можете да ги декриптирате с "
-"личния си ключ."
+#~ msgid "Tries to fetch the settings for that email address"
+#~ msgstr "Опитва да извлече настройките за този имейл адрес"
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, enableCryptoCheckBox)
-#: ui/cryptopage.ui:52
-#, kde-format
-msgid ""
-"<html><head/><body><p>When sending mails KMail automatically looks for "
-"encryption keys of your recipients and secures the mail when keys for each "
-"recipient can be found.</p><p>It also signs your mails cryptographically so "
-"that it can be verified that your messages have not been tampered with.</p></"
-"body></html>"
-msgstr ""
-"<html> <head /> <body> <p> При изпращане на поща KMail автоматично търси "
-"ключове за криптиране на вашите получатели и защитава пощата, когато могат "
-"да бъдат намерени ключове за всеки получател. </p> <p> Той също така "
-"подписва вашата поща криптографски, за да може да се провери дали "
-"съобщенията ви не са били подправени. </p> </body> </html>"
+#~ msgid "No script specified in '%1'."
+#~ msgstr "Не е посочен скрипт в '%1'."
 
-#. i18n: ectx: property (text), widget (QCheckBox, enableCryptoCheckBox)
-#: ui/cryptopage.ui:55
-#, kde-format
-msgid "Secure outgoing emails, if possible"
-msgstr "Защищаване на изходящите имейли, ако е възможно"
+#~ msgid "Unable to load assistant: File '%1' does not exist."
+#~ msgstr "Асистентът не може да се зареди: Файл \"%1\" не съществува."
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: ui/cryptopage.ui:65
-#, kde-format
-msgid "Select key for this account:"
-msgstr "Избор на ключ за този акаунт:"
+#~ msgid "Loading script '%1'..."
+#~ msgstr "Зареждане на скрипт \"%1\"..."
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: ui/cryptopage.ui:99
-#, kde-format
-msgid "Checking key publishing support ..."
-msgstr "Проверка на поддръжката на ключови публикации..."
+#~ msgid "Failed to load script: '%1'."
+#~ msgstr "Неуспешно зареждане на скрипт: \"%1\"."
 
-#. i18n: ectx: property (title), widget (QGroupBox, wksCheckBox)
-#: ui/cryptopage.ui:122
-#, kde-format
-msgid "Register &this key with your email provider"
-msgstr "Регистриране на този ключ при вашия имейл доставчик"
+#~ msgid "Only offer accounts that support the given type."
+#~ msgstr "Предлагане само на акаунти, които поддържат дадения тип."
 
-#. i18n: ectx: property (text), widget (QLabel, wksDescription)
-#: ui/cryptopage.ui:132
-#, kde-format
-msgid ""
-"Your email service provider supports a service to provide your public key so "
-"that others can find it.\n"
-"This means that your public key can be queried from your email provider and "
-"others can then use it to secure their email communication with you."
-msgstr ""
-"Вашият доставчик на имейл услуги поддържа услуга, която предоставя вашия "
-"публичен ключ, така че другите да могат да го намерят. \n"
-"Това означава, че вашият публичен ключ може да бъде изискан от вашия "
-"доставчик на електронна поща и след това други могат да го използват, за да "
-"защитят своята електронна комуникация с вас."
+#~ msgid "Run the specified assistant."
+#~ msgstr "Стартиране на посочения асистент."
 
-#. i18n: ectx: property (title), widget (QGroupBox, pksCheckBox)
-#: ui/cryptopage.ui:152
-#, kde-format
-msgid "Publish &this key on public key server"
-msgstr "Публикуване на този ключ на сървър с публичен ключ"
+#~ msgid "unpack fullpath on startup and launch that assistant"
+#~ msgstr ""
+#~ "разопаковане на пълния път при стартиране и стартиране на този асистент"
 
-#. i18n: ectx: property (text), widget (QLabel, pksDescription)
-#: ui/cryptopage.ui:162
-#, kde-format
-msgid ""
-"Your email service provider does not support key publishing. You should "
-"publish your key so that other users can retrieve it and use it to secure "
-"their email communication with you.\n"
-"You can alternatively publish your key on a public key server, but you "
-"should be aware that your email address will be publicly listed and they key "
-"cannot be removed from there, only revoked."
-msgstr ""
-"Вашият доставчик на имейл услуги не поддържа публикуване на ключове. Трябва "
-"да публикувате своя ключ, така че другите потребители да могат да го "
-"извлекат и да го използват, за да осигурят комуникацията си по имейл с "
-"вас. \n"
-"Като алтернатива можете да публикувате вашия ключ на сървър с публичен ключ, "
-"но трябва да знаете, че вашият имейл адрес ще бъде публично включен и този "
-"ключ не може да бъде премахнат от там, а само анулиран."
+#~ msgid "Returns types of assistants"
+#~ msgstr "Връща типа на асистентите"
 
-#. i18n: ectx: property (text), widget (QLabel, statusLabel)
-#: ui/loadpage.ui:30
-#, kde-format
-msgid "Loading assistant..."
-msgstr "Зареждане на асистента..."
+#~ msgid "The following assistants are available:"
+#~ msgstr "Налични са следните асистенти:"
 
-#. i18n: ectx: property (text), widget (QLabel, welcomeLabel)
-#: ui/personaldatapage.ui:17
-#, kde-format
-msgid ""
-"With a few simple steps we create the right settings for you. Please follow "
-"the steps of this wizard carefully."
-msgstr ""
-"С няколко прости стъпки ние създаваме правилните настройки за вас. Моля, "
-"следвайте внимателно стъпките на този съветник."
+#~ msgid "Fetching provider list..."
+#~ msgstr "Извличане на списък на доставчика..."
 
-#. i18n: ectx: property (text), widget (QLabel, nameLabel)
-#: ui/personaldatapage.ui:29
-#, kde-format
-msgid "Full name:"
-msgstr "Цяло име:"
+#~ msgid "Setting up account..."
+#~ msgstr "Настройване на акаунта..."
 
-#. i18n: ectx: property (text), widget (QLabel, emailLabel)
-#: ui/personaldatapage.ui:55
-#, kde-format
-msgid "E-mail address:"
-msgstr "Адрес на е-поща:"
+#~ msgid "Setup complete."
+#~ msgstr "Настройването завърши."
 
-#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
-#: ui/personaldatapage.ui:85
-#, kde-format
-msgid "Password:"
-msgstr "Парола:"
+#~ msgid "Failed to set up account, rolling back..."
+#~ msgstr "Неуспешно настройване на акаунт, връщане назад..."
 
-#. i18n: ectx: property (title), widget (QGroupBox, checkOnlineGroupBox)
-#: ui/personaldatapage.ui:119
-#, kde-format
-msgid "Find pro&vider settings on the Internet"
-msgstr "Намиране на настройки за &доставчик в Интернет"
+#~ msgid "Failed to set up account."
+#~ msgstr "Настройването на акаунта е неуспешно."
 
-#. i18n: ectx: property (text), widget (QLabel, checkOnlineExplanation)
-#: ui/personaldatapage.ui:140
-#, kde-format
-msgid ""
-"Check online for the settings needed for this email provider. Only the "
-"domain name part of the e-mail address will be sent over the Internet at "
-"this point. If this option is unchecked, the account can be set up manually."
-msgstr ""
-"Проверяване онлайн за настройките, необходими за този доставчик на "
-"електронна поща. На този етап през интернет ще бъде изпратена само частта с "
-"име на домейн от имейл адреса. Ако тази опция не е отметната, акаунтът може "
-"да бъде настроен ръчно."
+#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
+#~ msgstr ""
+#~ "Транспортът на поща използва криптиране \"%1\" и удостоверяване \"%2\"."
 
-#. i18n: ectx: property (text), widget (QRadioButton, imapAccount)
-#: ui/personaldatapage.ui:178
-#, kde-format
-msgid "IMAP account"
-msgstr "IMAP акаунт"
+#~ msgid "Mail transport account deleted."
+#~ msgstr "Акаунтът за транспорт на поща е изтрит."
 
-#. i18n: ectx: property (text), widget (QRadioButton, pop3Account)
-#: ui/personaldatapage.ui:191
-#, kde-format
-msgid "POP&3 account"
-msgstr "POP&3 акаунт"
+#~ msgid "Could not load config dialog for UID '%1'"
+#~ msgstr ""
+#~ "Не може да се зареди диалоговият прозорец за конфигуриране на UID \"%1\""
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: ui/personaldatapage.ui:205
-#, kde-format
-msgid "Incoming:"
-msgstr "Входящи:"
+#~ msgid ""
+#~ "Protect yourself against surveillance by encrypting your Mails with "
+#~ "GnuPG. By generating or selecting a public / private key pair now mails "
+#~ "can be encrypted using the public key while only you can decrypt them "
+#~ "with your private key."
+#~ msgstr ""
+#~ "Защитете се от наблюдение, като шифровате имейлите си с GnuPG. Чрез "
+#~ "генериране или избор на двойка публичен / частен ключ пощата вече може да "
+#~ "се криптира с публичния ключ, докато само вие можете да ги декриптирате с "
+#~ "личния си ключ."
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: ui/personaldatapage.ui:222
-#, kde-format
-msgid "Outgoing:"
-msgstr "Изходящи:"
+#~ msgid ""
+#~ "<html><head/><body><p>When sending mails KMail automatically looks for "
+#~ "encryption keys of your recipients and secures the mail when keys for "
+#~ "each recipient can be found.</p><p>It also signs your mails "
+#~ "cryptographically so that it can be verified that your messages have not "
+#~ "been tampered with.</p></body></html>"
+#~ msgstr ""
+#~ "<html> <head /> <body> <p> При изпращане на поща KMail автоматично търси "
+#~ "ключове за криптиране на вашите получатели и защитава пощата, когато "
+#~ "могат да бъдат намерени ключове за всеки получател. </p> <p> Той също "
+#~ "така подписва вашата поща криптографски, за да може да се провери дали "
+#~ "съобщенията ви не са били подправени. </p> </body> </html>"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: ui/personaldatapage.ui:239
-#, kde-format
-msgid "Username:"
-msgstr "Потребителско име:"
+#~ msgid "Secure outgoing emails, if possible"
+#~ msgstr "Защищаване на изходящите имейли, ако е възможно"
 
-#. i18n: ectx: property (text), widget (QPushButton, createAccountPb)
-#: ui/personaldatapage.ui:273
-#, kde-format
-msgid "Add Account"
-msgstr "Добавяне на акаунт"
+#~ msgid "Select key for this account:"
+#~ msgstr "Избор на ключ за този акаунт:"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: ui/providerpage.ui:17
-#, kde-format
-msgid ""
-"Select your provider from the list below or click back if your provider is "
-"not listed"
-msgstr ""
-"Изберете вашия доставчик от списъка по-долу или щракнете обратно, ако той не "
-"е в списъка"
+#~ msgid "Checking key publishing support ..."
+#~ msgstr "Проверка на поддръжката на ключови публикации..."
 
-#. i18n: ectx: property (text), widget (QPushButton, detailsButton)
-#: ui/setuppage.ui:62
-#, kde-format
-msgid "&Details..."
-msgstr "&Подробности..."
+#~ msgid "Register &this key with your email provider"
+#~ msgstr "Регистриране на този ключ при вашия имейл доставчик"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: ui/typepage.ui:17
-#, kde-format
-msgid "Select which kind of account you want to create:"
-msgstr "Изберете какъв вид акаунт искате да създадете:"
+#~ msgid ""
+#~ "Your email service provider supports a service to provide your public key "
+#~ "so that others can find it.\n"
+#~ "This means that your public key can be queried from your email provider "
+#~ "and others can then use it to secure their email communication with you."
+#~ msgstr ""
+#~ "Вашият доставчик на имейл услуги поддържа услуга, която предоставя вашия "
+#~ "публичен ключ, така че другите да могат да го намерят. \n"
+#~ "Това означава, че вашият публичен ключ може да бъде изискан от вашия "
+#~ "доставчик на електронна поща и след това други могат да го използват, за "
+#~ "да защитят своята електронна комуникация с вас."
 
-#. i18n: ectx: property (text), widget (QPushButton, ghnsButton)
-#: ui/typepage.ui:68
-#, kde-format
-msgid "Check for more on Internet"
-msgstr "Проверяване за още настройки в Интернет"
+#~ msgid "Publish &this key on public key server"
+#~ msgstr "Публикуване на този ключ на сървър с публичен ключ"
+
+#~ msgid ""
+#~ "Your email service provider does not support key publishing. You should "
+#~ "publish your key so that other users can retrieve it and use it to secure "
+#~ "their email communication with you.\n"
+#~ "You can alternatively publish your key on a public key server, but you "
+#~ "should be aware that your email address will be publicly listed and they "
+#~ "key cannot be removed from there, only revoked."
+#~ msgstr ""
+#~ "Вашият доставчик на имейл услуги не поддържа публикуване на ключове. "
+#~ "Трябва да публикувате своя ключ, така че другите потребители да могат да "
+#~ "го извлекат и да го използват, за да осигурят комуникацията си по имейл с "
+#~ "вас. \n"
+#~ "Като алтернатива можете да публикувате вашия ключ на сървър с публичен "
+#~ "ключ, но трябва да знаете, че вашият имейл адрес ще бъде публично включен "
+#~ "и този ключ не може да бъде премахнат от там, а само анулиран."
+
+#~ msgid "Loading assistant..."
+#~ msgstr "Зареждане на асистента..."
+
+#~ msgid ""
+#~ "With a few simple steps we create the right settings for you. Please "
+#~ "follow the steps of this wizard carefully."
+#~ msgstr ""
+#~ "С няколко прости стъпки ние създаваме правилните настройки за вас. Моля, "
+#~ "следвайте внимателно стъпките на този съветник."
+
+#~ msgid "Find pro&vider settings on the Internet"
+#~ msgstr "Намиране на настройки за &доставчик в Интернет"
+
+#~ msgid "IMAP account"
+#~ msgstr "IMAP акаунт"
+
+#~ msgid "POP&3 account"
+#~ msgstr "POP&3 акаунт"
+
+#~ msgid ""
+#~ "Select your provider from the list below or click back if your provider "
+#~ "is not listed"
+#~ msgstr ""
+#~ "Изберете вашия доставчик от списъка по-долу или щракнете обратно, ако той "
+#~ "не е в списъка"
+
+#~ msgid "&Details..."
+#~ msgstr "&Подробности..."
+
+#~ msgid "Select which kind of account you want to create:"
+#~ msgstr "Изберете какъв вид акаунт искате да създадете:"
+
+#~ msgid "Check for more on Internet"
+#~ msgstr "Проверяване за още настройки в Интернет"
