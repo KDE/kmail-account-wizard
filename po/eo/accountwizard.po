@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2023-01-08 21:45+0100\n"
+"PO-Revision-Date: 2023-09-21 08:21+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -223,17 +223,15 @@ msgstr ""
 
 #: apps/contents/ui/ConfigurationDelegate.qml:93
 #: apps/contents/ui/PersonalDataPage.qml:145
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming"
-msgstr "Envenanta:"
+msgstr "Envenanta"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
 #: apps/contents/ui/PersonalDataPage.qml:206
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing"
-msgstr "Eliranta:"
+msgstr "Eliranta"
 
 #: apps/contents/ui/PersonalDataPage.qml:14
 #, kde-format
@@ -303,33 +301,32 @@ msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:151
 #: apps/contents/ui/PersonalDataPage.qml:211
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgid "Hostname:"
 msgstr "Uzantnomo:"
 
 #: apps/contents/ui/PersonalDataPage.qml:160
 #, kde-format
 msgid "Protocol:"
-msgstr ""
+msgstr "Protokolo:"
 
 #: apps/contents/ui/PersonalDataPage.qml:169
 #: apps/contents/ui/PersonalDataPage.qml:220
 #, kde-format
 msgid "Port:"
-msgstr ""
+msgstr "Pordo:"
 
 #: apps/contents/ui/PersonalDataPage.qml:176
 #: apps/contents/ui/PersonalDataPage.qml:227
 #, kde-format
 msgid "Security:"
-msgstr ""
+msgstr "Sekureco:"
 
 #: apps/contents/ui/PersonalDataPage.qml:185
 #: apps/contents/ui/PersonalDataPage.qml:236
 #, kde-format
 msgid "Authentication Method:"
-msgstr ""
+msgstr "Aŭtentiga Metodo:"
 
 #: apps/contents/ui/PersonalDataPage.qml:194
 #: apps/contents/ui/PersonalDataPage.qml:245
@@ -340,14 +337,13 @@ msgstr "Uzantnomo:"
 #: apps/contents/ui/PersonalDataPage.qml:256
 #, kde-format
 msgid "Recheck"
-msgstr ""
+msgstr "Rekontroli"
 
 #: apps/contents/ui/PersonalDataPage.qml:269
 #: apps/contents/ui/PersonalDataPage.qml:311
-#, fuzzy, kde-format
-#| msgid "Add Account"
+#, kde-format
 msgid "Create Account"
-msgstr "Aldoni Konton"
+msgstr "Krei Konton"
 
 #: apps/contents/ui/PersonalDataPage.qml:291
 #, kde-format
@@ -630,21 +626,3 @@ msgstr ""
 #, kde-format
 msgid "Autoconfiguration failed."
 msgstr ""
-
-#~ msgid "Select key for this account:"
-#~ msgstr "Elekti ŝloson por ĉi tiu konto:"
-
-#~ msgid "Loading assistant..."
-#~ msgstr "Ŝarganta asistilon..."
-
-#~ msgid "Find pro&vider settings on the Internet"
-#~ msgstr "Trovi pro&vizantagordojn en la Interreto"
-
-#~ msgid "IMAP account"
-#~ msgstr "IMAP-konto"
-
-#~ msgid "POP&3 account"
-#~ msgstr "POP&3-konto"
-
-#~ msgid "&Details..."
-#~ msgstr "&Detaloj..."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-12 00:46+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2022-06-19 14:05+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -30,436 +30,603 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "karl@huftis.org"
 
-#: configfile.cpp:37
-#, kde-format
-msgid "Writing config file for %1..."
-msgstr "Skriv oppsettsfil for %1 …"
-
-#: configfile.cpp:54
-#, kde-format
-msgid "Config file for %1 is writing."
-msgstr "Oppsettsfila for %1 vert skriven."
-
-#: configfile.cpp:59
-#, kde-format
-msgid "Config file for %1 was not changed."
-msgstr "Oppsettsfila for %1 vart ikkje endra."
-
-#: configfile.cpp:90
-#, kde-format
-msgid "No given name for the configuration."
-msgstr "Oppsettet manglar namn."
-
-#: configfile.cpp:102
-#, kde-format
-msgid "Unknown configuration name '%1'"
-msgstr "Ukjent oppsettnamn «%1»"
-
-#: cryptopage.cpp:80 cryptopage.cpp:101 cryptopage.cpp:202
-#, kde-format
-msgid "Account Wizard"
-msgstr "Kontovegvisar"
-
-#: cryptopage.cpp:81 cryptopage.cpp:102
-#, kde-format
-msgid "Error while generating new key pair for your account %1: %2"
-msgstr "Feil ved generering av nytt nøkkelpar for kontoen %1: %2"
-
-#: cryptopage.cpp:257
-#, kde-format
-msgid "Could not detect valid key type"
-msgstr "Klarte ikkje finna gyldig nøkkeltype"
-
-#: cryptopage.cpp:257 cryptopage.cpp:266 cryptopage.cpp:282 cryptopage.cpp:289
-#, kde-format
-msgid "Import error"
-msgstr "Feil ved importering"
-
-#: cryptopage.cpp:265
-#, kde-format
-msgid "Cannot read data from the certificate file: %1"
-msgstr "Klarte ikkje lesa data frå sertifikatfila: %1"
-
-#: cryptopage.cpp:281
-#, kde-format
-msgid "Failed to import key: %1"
-msgstr "Klarte ikkje importera nøkkel: %1"
-
-#: cryptopage.cpp:289
-#, kde-format
-msgid "Failed to import key."
-msgstr "Klarte ikkje importera nøkkel."
-
-#: cryptopage.cpp:316
-#, kde-format
-msgid "No key"
-msgstr "Manglar nøkkel"
-
-#: cryptopage.cpp:317
-#, kde-format
-msgid "Generate a new key pair"
-msgstr "Generer nytt nøkkelpar"
-
-#: cryptopage.cpp:318
-#, kde-format
-msgid "Import a key"
-msgstr "Importer nøkkel"
-
-#: cryptopage.cpp:425
-#, kde-format
-msgid "Certificates"
-msgstr "Sertifikat"
-
-#: cryptopage.cpp:426
-#, kde-format
-msgid "Any files"
-msgstr "Alle filer"
-
-#: cryptopage.cpp:429
-#, kde-format
-msgid "Select Certificate File"
-msgstr "Vel sertifikatfil"
-
-#: cryptopage.cpp:435
-#, kde-format
-msgid "Importing key..."
-msgstr "Importerer nøkkel …"
-
-#: dialog.cpp:46
-#, kde-format
-msgid "Provide personal data"
-msgstr "Oppgje personleg informasjon"
-
-#: dialog.cpp:54
-#, kde-format
-msgid "Secure your Communication"
-msgstr "Gjer kommunikasjonen din trygg"
-
-#: dialog.cpp:64
-#, kde-format
-msgid "Select Account Type"
-msgstr "Vel kontotype"
-
-#: dialog.cpp:72
-#, kde-format
-msgid "Select Provider"
-msgstr "Vel leverandør"
-
-#: dialog.cpp:78
-#, kde-format
-msgid "Loading Assistant"
-msgstr "Lastar vegvisar"
-
-#: dialog.cpp:86
-#, kde-format
-msgid "Setting up Account"
-msgstr "Set opp konto"
-
-#: identity.cpp:27
+#: accountwizard/identity.cpp:27
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Set opp identitet …"
 
-#: identity.cpp:38
+#: accountwizard/identity.cpp:38
 #, kde-format
 msgid "Identity set up."
 msgstr "Identiteten er sett opp."
 
-#: identity.cpp:46
+#: accountwizard/identity.cpp:46
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Namnlaus"
 
-#: identity.cpp:78
+#: accountwizard/identity.cpp:78
 #, kde-format
 msgid "Identity removed."
 msgstr "Identiteten er fjerna."
 
-#: ispdb/ispdb.cpp:351
-#, kde-format
-msgid "Lookup configuration: Email provider"
-msgstr "Leitar etter oppsett: E-postleverandør"
-
-#: ispdb/ispdb.cpp:354
-#, kde-format
-msgid "Lookup configuration: Trying common server name"
-msgstr "Leitar etter oppsett: Prøver vanlege tenarnamn"
-
-#: ispdb/ispdb.cpp:357
-#, kde-format
-msgid "Lookup configuration: Mozilla database"
-msgstr "Leitar etter oppsett: Mozilla-database"
-
-#: ispdb/main.cpp:70
-#, kde-format
-msgid "ISPDB Assistant"
-msgstr "ISPDB-assistent"
-
-#: ispdb/main.cpp:72 main.cpp:40
-#, kde-format
-msgid "Helps setting up PIM accounts"
-msgstr "Hjelp til å setja opp kontoar"
-
-#: ispdb/main.cpp:74
-#, kde-format
-msgid "(c) 2010 Omat Holding B.V."
-msgstr "© 2010 Omat Holding B.V."
-
-#: ispdb/main.cpp:77 main.cpp:45
-#, kde-format
-msgid "Author"
-msgstr "Opphavsperson"
-
-#: ispdb/main.cpp:77
-#, kde-format
-msgid "Tom Albers"
-msgstr "Tom Albers"
-
-#: ispdb/main.cpp:84
-#, kde-format
-msgid "Tries to fetch the settings for that email address"
-msgstr "Prøver å henta innstillingar for e-postadressa"
-
-#: key.cpp:68
-#, kde-format
-msgid "Skipping key publishing"
-msgstr "Hoppar over offentleggjering av nøkkel"
-
-#: key.cpp:82 key.cpp:203
-#, kde-format
-msgid "Publishing OpenPGP key..."
-msgstr "Offentleggjer OpenPGP-nøkkel …"
-
-#: key.cpp:96 key.cpp:123 key.cpp:193
-#, kde-format
-msgid "Key publishing was canceled."
-msgstr "Offentleggjering av nøkkelen vart avbroten."
-
-#: key.cpp:102
-#, kde-format
-msgid "Key publishing failed: not online, or GnuPG too old."
-msgstr ""
-"Feil ved offentleggjering av nøkkel: finst ikkje på nettet, eller så er "
-"GnuPG for gammal."
-
-#: key.cpp:105
-#, kde-format
-msgid "Your email provider does not support key publishing."
-msgstr "E-postleverandøren din støttar ikkje offentleggjering av nøklar."
-
-#: key.cpp:128
-#, kde-format
-msgid "An error occurred while creating key publishing request."
-msgstr ""
-"Det oppstod ein feil ved oppretting av førespurnad om offentleggjering av "
-"nøkkel."
-
-#: key.cpp:151
-#, kde-format
-msgid "Key publishing error: mail transport is not configured"
-msgstr "Feil ved offentleggjering av nøkkel: E-posttransport er ikkje sett opp"
-
-#: key.cpp:164
-#, kde-format
-msgid "Key publishing error: failed to create request email"
-msgstr ""
-"Feil ved offentleggjering av nøkkel: Klarte ikkje generera e-post med "
-"førespurnad"
-
-#: key.cpp:195
-#, kde-format
-msgid "Failed to send key publishing request: %1"
-msgstr "Klarte ikkje senda førespurnad om offentleggjering av nøkkel: %1"
-
-#: key.cpp:197
-#, kde-format
-msgid "Key publishing request sent."
-msgstr "Førespurnad om offentleggjering av nøkkel er no send."
-
-#: key.cpp:233
-#, kde-format
-msgid "Failed to publish the key."
-msgstr "Klarte ikkje offentleggjera nøkkelen."
-
-#: key.cpp:239
-#, kde-format
-msgid "Key has been published on %1"
-msgstr "Nøkkelen er no offentleggjord på %1"
-
-#: ldap.cpp:37
-#, kde-format
-msgid "Setting up LDAP server..."
-msgstr "Set opp LDAP-tenar …"
-
-#: ldap.cpp:40
-#, kde-format
-msgid "Needed parameters are missing for LDAP config: server '%1'"
-msgstr "Nødvendige parametrar manglar for LDAP-oppsett: tenar «%1»"
-
-#: ldap.cpp:118
-#, kde-format
-msgid "LDAP set up."
-msgstr "LDAP er sett opp."
-
-#: ldap.cpp:136
-#, kde-format
-msgid "LDAP not configuring."
-msgstr "Klarte ikkje setja opp LDAP."
-
-#: ldap.cpp:149
-#, kde-format
-msgid "Removed LDAP entry."
-msgstr "Fjerna LDAP-oppføring."
-
-#: ldap.cpp:155
-#, kde-format
-msgid "No config found to edit"
-msgstr "Fann ikkje oppsett å redigera"
-
-#: loadpage.cpp:35
-#, kde-format
-msgid "No script specified in '%1'."
-msgstr "Det er ikkje valt noko skript i «%1»."
-
-#: loadpage.cpp:39
-#, kde-format
-msgid "Unable to load assistant: File '%1' does not exist."
-msgstr "Klarte ikkje lasta vegvisaren. Fila «%1» finst ikkje."
-
-#: loadpage.cpp:42
-#, kde-format
-msgid "Loading script '%1'..."
-msgstr "Lastar skriptet «%1» …"
-
-#: loadpage.cpp:51
-#, kde-format
-msgid "Failed to load script: '%1'."
-msgstr "Klarte ikkje lasta skriptet: «%1»."
-
-#: main.cpp:38
-#, kde-format
-msgid "Account Assistant"
-msgstr "Kontovegvisar"
-
-#: main.cpp:42
-#, kde-format
-msgid "(c) 2009-2020 the Akonadi developers"
-msgstr "© 2009–2020 Akonadi-utviklarane"
-
-#: main.cpp:45
-#, kde-format
-msgid "Volker Krause"
-msgstr "Volker Krause"
-
-#: main.cpp:46
-#, kde-format
-msgid "Laurent Montel"
-msgstr "Laurent Montel"
-
-#: main.cpp:53
-#, kde-format
-msgid "Only offer accounts that support the given type."
-msgstr "Berre vis kontoar som støttar den valde typen."
-
-#: main.cpp:54
-#, kde-format
-msgid "Run the specified assistant."
-msgstr "Køyr den valde vegvisaren."
-
-#: main.cpp:56
-#, kde-format
-msgid "unpack fullpath on startup and launch that assistant"
-msgstr "Pakk ut full sti ved oppstart og start assistenten"
-
-#: main.cpp:58
-#, kde-format
-msgid "Returns types of assistants"
-msgstr "Returnerer assistenttypar"
-
-#: main.cpp:66
-#, kde-format
-msgid "The following assistants are available:"
-msgstr "Desse assistentane er tilgjengelege:"
-
-#: personaldatapage.cpp:71
-#, kde-format
-msgid "SMTP, %1"
-msgstr "SMTP, %1"
-
-#: personaldatapage.cpp:74
-#, kde-format
-msgid "IMAP, %1"
+#: accountwizard/ispdb/configurationmodel.cpp:36
+#: accountwizard/ispdb/serverconfiguration.cpp:23
+#: accountwizard/manualconfiguration.cpp:23
+#, fuzzy, kde-format
+#| msgid "IMAP, %1"
+msgid "IMAP"
 msgstr "IMAP, %1"
 
-#: personaldatapage.cpp:78
-#, kde-format
-msgid "POP3, %1"
+#: accountwizard/ispdb/configurationmodel.cpp:36
+#: accountwizard/ispdb/serverconfiguration.cpp:26
+#: accountwizard/manualconfiguration.cpp:23
+#, fuzzy, kde-format
+#| msgid "POP3, %1"
+msgid "POP3"
 msgstr "POP3, %1"
 
-#: providerpage.cpp:31
+#: accountwizard/ispdb/configurationmodel.cpp:38
 #, kde-format
-msgid "Fetching provider list..."
-msgstr "Hentar leverandørliste …"
+msgid "Keep your folders and emails synced on your server"
+msgstr ""
 
-#: resource.cpp:74
+#: accountwizard/ispdb/configurationmodel.cpp:39
+#, kde-format
+msgid "Keep your folders and emails on your computer"
+msgstr ""
+
+#: accountwizard/ispdb/serverconfiguration.cpp:29
+#, fuzzy, kde-format
+#| msgid "SMTP, %1"
+msgid "SMTP"
+msgstr "SMTP, %1"
+
+#: accountwizard/ispdb/serverconfiguration.cpp:35
+#: accountwizard/manualconfiguration.cpp:28
+#, kde-format
+msgid "SSL/TLS"
+msgstr ""
+
+#: accountwizard/ispdb/serverconfiguration.cpp:38
+#, kde-format
+msgid "StartTLS"
+msgstr ""
+
+#: accountwizard/ispdb/serverconfiguration.cpp:41
+#, kde-format
+msgctxt "No security mechanism"
+msgid "None"
+msgstr ""
+
+#: accountwizard/ispdbservice.cpp:133
+#, fuzzy, kde-format
+#| msgid "Autoconfiguration found."
+msgid "Configuration found auto config file."
+msgstr "Fann automatisk oppsett."
+
+#: accountwizard/ispdbservice.cpp:136
+#, fuzzy, kde-format
+#| msgid "Autoconfiguration found."
+msgid "Configuration found in well-known file."
+msgstr "Fann automatisk oppsett."
+
+#: accountwizard/ispdbservice.cpp:139
+#, fuzzy, kde-format
+#| msgid "Lookup configuration: Mozilla database"
+msgid "Configuration found in Mozilla FAI Database."
+msgstr "Leitar etter oppsett: Mozilla-database"
+
+#: accountwizard/manualconfiguration.cpp:23
+#, kde-format
+msgid "Kolab"
+msgstr ""
+
+#: accountwizard/manualconfiguration.cpp:28
+#, kde-format
+msgid "STARTTLS"
+msgstr ""
+
+#: accountwizard/manualconfiguration.cpp:28
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: accountwizard/manualconfiguration.cpp:33
+#, kde-format
+msgid "Clear text"
+msgstr ""
+
+#: accountwizard/manualconfiguration.cpp:33
+#, kde-format
+msgid "LOGIN"
+msgstr ""
+
+#: accountwizard/manualconfiguration.cpp:33
+#, kde-format
+msgid "PLAIN"
+msgstr ""
+
+#: accountwizard/manualconfiguration.cpp:33
+#, kde-format
+msgid "CRAM-MD5"
+msgstr ""
+
+#: accountwizard/manualconfiguration.cpp:33
+#, kde-format
+msgid "DIGEST-MD5"
+msgstr ""
+
+#: accountwizard/manualconfiguration.cpp:33
+#, kde-format
+msgid "NTLM"
+msgstr ""
+
+#: accountwizard/manualconfiguration.cpp:33
+#, kde-format
+msgid "GSSAPI"
+msgstr ""
+
+#: accountwizard/resource.cpp:63 legacy/resource.cpp:74
 #, kde-format
 msgid "Resource type '%1' is not available."
 msgstr "Ressurstypen «%1» er ikkje tilgjengeleg."
 
-#: resource.cpp:88
+#: accountwizard/resource.cpp:75 legacy/resource.cpp:88
 #, kde-format
 msgid "Resource '%1' is already set up."
 msgstr "Ressursen «%1» er alt sett opp."
 
-#: resource.cpp:94
+#: accountwizard/resource.cpp:82 legacy/resource.cpp:94
 #, kde-format
 msgid "Creating resource instance for '%1'..."
 msgstr "Lagar ressursinstans for «%1» …"
 
-#: resource.cpp:103
+#: accountwizard/resource.cpp:91 legacy/resource.cpp:103
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Klarte ikkje laga ressursinstans: %1"
 
-#: resource.cpp:110
+#: accountwizard/resource.cpp:98 legacy/resource.cpp:110
 #, kde-format
 msgid "Configuring resource instance..."
 msgstr "Set opp ressursinstans …"
 
-#: resource.cpp:114
+#: accountwizard/resource.cpp:102 legacy/resource.cpp:114
 #, kde-format
 msgid "Unable to configure resource instance."
 msgstr "Klarte ikkje setja opp ressursinstans."
 
-#: resource.cpp:129
+#: accountwizard/resource.cpp:118 legacy/resource.cpp:129
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr ""
 "Klarte ikkje endra verdien for innstillinga «%1» til den nødvendige typen "
 "«%2»."
 
-#: resource.cpp:136
+#: accountwizard/resource.cpp:125 legacy/resource.cpp:136
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Klarte ikkje lagra innstillinga «%1»: %2"
 
-#: resource.cpp:142
+#: accountwizard/resource.cpp:131 legacy/resource.cpp:142
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Klarte ikkje lagra innstillingar: %1"
 
-#: resource.cpp:151
+#: accountwizard/resource.cpp:137 legacy/resource.cpp:151
 #, kde-format
 msgid "Resource setup completed."
 msgstr "Ferdig med å setja opp ressursen."
 
-#: resource.cpp:167
+#: accountwizard/transport.cpp:23
+#, kde-format
+msgid "Setting up mail transport account..."
+msgstr "Set opp konto for e-postoverføring …"
+
+#: accountwizard/transport.cpp:47
+#, kde-format
+msgid "Mail transport account set up."
+msgstr "Kontoen for e-postoverføring er no sett opp."
+
+#: apps/contents/ui/ConfigurationDelegate.qml:93
+#: apps/contents/ui/PersonalDataPage.qml:145
+#, fuzzy, kde-format
+#| msgid "Incoming:"
+msgid "Incoming"
+msgstr "Innkommande:"
+
+#: apps/contents/ui/ConfigurationDelegate.qml:114
+#: apps/contents/ui/PersonalDataPage.qml:206
+#, fuzzy, kde-format
+#| msgid "Outgoing:"
+msgid "Outgoing"
+msgstr "Utgåande:"
+
+#: apps/contents/ui/PersonalDataPage.qml:14
+#, kde-format
+msgid "Personal Information"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:31
+#, kde-format
+msgid "Set Up Your Existing Email Address"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:40
+#, kde-format
+msgid ""
+"To use your current email address fill in your credentials.<br />This wizard "
+"will automatically search for a working and recommended server configuration."
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:51
+#, kde-format
+msgid "Full name:"
+msgstr "Fullt namn:"
+
+#: apps/contents/ui/PersonalDataPage.qml:52
+#, kde-format
+msgctxt "Generic name"
+msgid "John Smith"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:61
+#, kde-format
+msgid "E-mail address:"
+msgstr "E-postadresse:"
+
+#: apps/contents/ui/PersonalDataPage.qml:62
+#, kde-format
+msgctxt "Generic email address"
+msgid "boss@example.corp"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:72
+#, kde-format
+msgid "Password:"
+msgstr "Passord:"
+
+#: apps/contents/ui/PersonalDataPage.qml:82
+#, kde-format
+msgid "Continue"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:91
+#, fuzzy, kde-format
+#| msgid ""
+#| "Check online for the settings needed for this email provider. Only the "
+#| "domain name part of the e-mail address will be sent over the Internet at "
+#| "this point. If this option is unchecked, the account can be set up "
+#| "manually."
+msgid ""
+"Check online for the settings needed for this email provider. Only the "
+"domain name part of the e-mail address will be sent over the Internet."
+msgstr ""
+"Sjå på nettet etter informasjon om kva innstillingar du skal bruka for denne "
+"e-postleverandøren. Berre domenedelen (delen etter @-teiknet) av e-"
+"postadressa vert då send over Internett. Viss det ikkje er kryssa av her, "
+"kan du setja opp kontoen manuelt."
+
+#: apps/contents/ui/PersonalDataPage.qml:125
+#, fuzzy, kde-format
+#| msgid "No config found to edit"
+msgid "No config found from ispdb server."
+msgstr "Fann ikkje oppsett å redigera"
+
+#: apps/contents/ui/PersonalDataPage.qml:140
+#, kde-format
+msgid "Server Parameters"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:151
+#: apps/contents/ui/PersonalDataPage.qml:211
+#, fuzzy, kde-format
+#| msgid "Username:"
+msgid "Hostname:"
+msgstr "Brukarnamn:"
+
+#: apps/contents/ui/PersonalDataPage.qml:160
+#, kde-format
+msgid "Protocol:"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:169
+#: apps/contents/ui/PersonalDataPage.qml:220
+#, kde-format
+msgid "Port:"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:176
+#: apps/contents/ui/PersonalDataPage.qml:227
+#, kde-format
+msgid "Security:"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:185
+#: apps/contents/ui/PersonalDataPage.qml:236
+#, kde-format
+msgid "Authentication Method:"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:194
+#: apps/contents/ui/PersonalDataPage.qml:245
+#, kde-format
+msgid "Username:"
+msgstr "Brukarnamn:"
+
+#: apps/contents/ui/PersonalDataPage.qml:256
+#, kde-format
+msgid "Recheck"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:269
+#: apps/contents/ui/PersonalDataPage.qml:311
+#, fuzzy, kde-format
+#| msgid "Add Account"
+msgid "Create Account"
+msgstr "Legg til konto"
+
+#: apps/contents/ui/PersonalDataPage.qml:291
+#, kde-format
+msgid "Available configurations"
+msgstr ""
+
+#: apps/main.cpp:32
+#, kde-format
+msgid "Account Assistant"
+msgstr "Kontovegvisar"
+
+#: apps/main.cpp:34
+#, kde-format
+msgid "Helps setting up PIM accounts"
+msgstr "Hjelp til å setja opp kontoar"
+
+#: apps/main.cpp:36
+#, fuzzy, kde-format
+#| msgid "(c) 2009-2020 the Akonadi developers"
+msgid "(c) 2009-2023 the Akonadi developers"
+msgstr "© 2009–2020 Akonadi-utviklarane"
+
+#: apps/main.cpp:39
+#, kde-format
+msgid "Volker Krause"
+msgstr "Volker Krause"
+
+#: apps/main.cpp:39
+#, kde-format
+msgid "Author"
+msgstr "Opphavsperson"
+
+#: apps/main.cpp:40
+#, kde-format
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: apps/main.cpp:41
+#, kde-format
+msgid "Carl Schwan"
+msgstr ""
+
+#: apps/main.cpp:41
+#, kde-format
+msgid "Maintainer"
+msgstr ""
+
+#: legacy/configfile.cpp:37
+#, kde-format
+msgid "Writing config file for %1..."
+msgstr "Skriv oppsettsfil for %1 …"
+
+#: legacy/configfile.cpp:54
+#, kde-format
+msgid "Config file for %1 is writing."
+msgstr "Oppsettsfila for %1 vert skriven."
+
+#: legacy/configfile.cpp:59
+#, kde-format
+msgid "Config file for %1 was not changed."
+msgstr "Oppsettsfila for %1 vart ikkje endra."
+
+#: legacy/configfile.cpp:90
+#, kde-format
+msgid "No given name for the configuration."
+msgstr "Oppsettet manglar namn."
+
+#: legacy/configfile.cpp:102
+#, kde-format
+msgid "Unknown configuration name '%1'"
+msgstr "Ukjent oppsettnamn «%1»"
+
+#: legacy/cryptopage.cpp:80 legacy/cryptopage.cpp:101 legacy/cryptopage.cpp:202
+#, kde-format
+msgid "Account Wizard"
+msgstr "Kontovegvisar"
+
+#: legacy/cryptopage.cpp:81 legacy/cryptopage.cpp:102
+#, kde-format
+msgid "Error while generating new key pair for your account %1: %2"
+msgstr "Feil ved generering av nytt nøkkelpar for kontoen %1: %2"
+
+#: legacy/cryptopage.cpp:257
+#, kde-format
+msgid "Could not detect valid key type"
+msgstr "Klarte ikkje finna gyldig nøkkeltype"
+
+#: legacy/cryptopage.cpp:257 legacy/cryptopage.cpp:266
+#: legacy/cryptopage.cpp:282 legacy/cryptopage.cpp:289
+#, kde-format
+msgid "Import error"
+msgstr "Feil ved importering"
+
+#: legacy/cryptopage.cpp:265
+#, kde-format
+msgid "Cannot read data from the certificate file: %1"
+msgstr "Klarte ikkje lesa data frå sertifikatfila: %1"
+
+#: legacy/cryptopage.cpp:281
+#, kde-format
+msgid "Failed to import key: %1"
+msgstr "Klarte ikkje importera nøkkel: %1"
+
+#: legacy/cryptopage.cpp:289
+#, kde-format
+msgid "Failed to import key."
+msgstr "Klarte ikkje importera nøkkel."
+
+#: legacy/cryptopage.cpp:316
+#, kde-format
+msgid "No key"
+msgstr "Manglar nøkkel"
+
+#: legacy/cryptopage.cpp:317
+#, kde-format
+msgid "Generate a new key pair"
+msgstr "Generer nytt nøkkelpar"
+
+#: legacy/cryptopage.cpp:318
+#, kde-format
+msgid "Import a key"
+msgstr "Importer nøkkel"
+
+#: legacy/cryptopage.cpp:425
+#, kde-format
+msgid "Certificates"
+msgstr "Sertifikat"
+
+#: legacy/cryptopage.cpp:426
+#, kde-format
+msgid "Any files"
+msgstr "Alle filer"
+
+#: legacy/cryptopage.cpp:429
+#, kde-format
+msgid "Select Certificate File"
+msgstr "Vel sertifikatfil"
+
+#: legacy/cryptopage.cpp:435
+#, kde-format
+msgid "Importing key..."
+msgstr "Importerer nøkkel …"
+
+#: legacy/ispdb.cpp:367
+#, kde-format
+msgid "Lookup configuration: Email provider"
+msgstr "Leitar etter oppsett: E-postleverandør"
+
+#: legacy/ispdb.cpp:370
+#, kde-format
+msgid "Lookup configuration: Trying common server name"
+msgstr "Leitar etter oppsett: Prøver vanlege tenarnamn"
+
+#: legacy/ispdb.cpp:373
+#, kde-format
+msgid "Lookup configuration: Mozilla database"
+msgstr "Leitar etter oppsett: Mozilla-database"
+
+#: legacy/key.cpp:66
+#, kde-format
+msgid "Skipping key publishing"
+msgstr "Hoppar over offentleggjering av nøkkel"
+
+#: legacy/key.cpp:80 legacy/key.cpp:201
+#, kde-format
+msgid "Publishing OpenPGP key..."
+msgstr "Offentleggjer OpenPGP-nøkkel …"
+
+#: legacy/key.cpp:94 legacy/key.cpp:121 legacy/key.cpp:191
+#, kde-format
+msgid "Key publishing was canceled."
+msgstr "Offentleggjering av nøkkelen vart avbroten."
+
+#: legacy/key.cpp:100
+#, kde-format
+msgid "Key publishing failed: not online, or GnuPG too old."
+msgstr ""
+"Feil ved offentleggjering av nøkkel: finst ikkje på nettet, eller så er "
+"GnuPG for gammal."
+
+#: legacy/key.cpp:103
+#, kde-format
+msgid "Your email provider does not support key publishing."
+msgstr "E-postleverandøren din støttar ikkje offentleggjering av nøklar."
+
+#: legacy/key.cpp:126
+#, kde-format
+msgid "An error occurred while creating key publishing request."
+msgstr ""
+"Det oppstod ein feil ved oppretting av førespurnad om offentleggjering av "
+"nøkkel."
+
+#: legacy/key.cpp:149
+#, kde-format
+msgid "Key publishing error: mail transport is not configured"
+msgstr "Feil ved offentleggjering av nøkkel: E-posttransport er ikkje sett opp"
+
+#: legacy/key.cpp:162
+#, kde-format
+msgid "Key publishing error: failed to create request email"
+msgstr ""
+"Feil ved offentleggjering av nøkkel: Klarte ikkje generera e-post med "
+"førespurnad"
+
+#: legacy/key.cpp:193
+#, kde-format
+msgid "Failed to send key publishing request: %1"
+msgstr "Klarte ikkje senda førespurnad om offentleggjering av nøkkel: %1"
+
+#: legacy/key.cpp:195
+#, kde-format
+msgid "Key publishing request sent."
+msgstr "Førespurnad om offentleggjering av nøkkel er no send."
+
+#: legacy/key.cpp:231
+#, kde-format
+msgid "Failed to publish the key."
+msgstr "Klarte ikkje offentleggjera nøkkelen."
+
+#: legacy/key.cpp:237
+#, kde-format
+msgid "Key has been published on %1"
+msgstr "Nøkkelen er no offentleggjord på %1"
+
+#: legacy/ldap.cpp:37
+#, kde-format
+msgid "Setting up LDAP server..."
+msgstr "Set opp LDAP-tenar …"
+
+#: legacy/ldap.cpp:40
+#, kde-format
+msgid "Needed parameters are missing for LDAP config: server '%1'"
+msgstr "Nødvendige parametrar manglar for LDAP-oppsett: tenar «%1»"
+
+#: legacy/ldap.cpp:118
+#, kde-format
+msgid "LDAP set up."
+msgstr "LDAP er sett opp."
+
+#: legacy/ldap.cpp:136
+#, kde-format
+msgid "LDAP not configuring."
+msgstr "Klarte ikkje setja opp LDAP."
+
+#: legacy/ldap.cpp:149
+#, kde-format
+msgid "Removed LDAP entry."
+msgstr "Fjerna LDAP-oppføring."
+
+#: legacy/ldap.cpp:155
+#, kde-format
+msgid "No config found to edit"
+msgstr "Fann ikkje oppsett å redigera"
+
+#: legacy/resource.cpp:167
 #, kde-format
 msgid "Removed resource instance for '%1'."
 msgstr "Fjerna ressursinstansen for «%1»."
 
-#: servertest.cpp:50
+#: legacy/servertest.cpp:50
 #, kde-format
 msgid ""
 "There seems to be a problem in reaching this server or choosing a safe way "
@@ -470,280 +637,206 @@ msgstr ""
 "ein trygg måte å senda innlogginga til tenaren på. Vi rår deg til å sjekka "
 "innstillingane for kontoen og justera dei manuelt viss det er nødvendig."
 
-#: servertest.cpp:53
+#: legacy/servertest.cpp:53
 #, kde-format
 msgid "Autodetecting settings failed"
 msgstr "Klarte ikkje finna innstillingar automatisk"
 
-#: setupautoconfigkolabfreebusy.cpp:74 setupautoconfigkolabldap.cpp:73
-#: setupispdb.cpp:138
+#: legacy/setupautoconfigkolabfreebusy.cpp:74
+#: legacy/setupautoconfigkolabldap.cpp:72 legacy/setupispdb.cpp:136
 #, kde-format
 msgid "Searching for autoconfiguration..."
 msgstr "Søkjer etter automatisk oppsett …"
 
-#: setupautoconfigkolabfreebusy.cpp:99 setupautoconfigkolabldap.cpp:98
-#: setupispdb.cpp:163
+#: legacy/setupautoconfigkolabfreebusy.cpp:99
+#: legacy/setupautoconfigkolabldap.cpp:97 legacy/setupispdb.cpp:161
 #, kde-format
 msgid "Autoconfiguration found."
 msgstr "Fann automatisk oppsett."
 
-#: setupautoconfigkolabfreebusy.cpp:101 setupautoconfigkolabldap.cpp:100
-#: setupispdb.cpp:165
+#: legacy/setupautoconfigkolabfreebusy.cpp:101
+#: legacy/setupautoconfigkolabldap.cpp:99 legacy/setupispdb.cpp:163
 #, kde-format
 msgid "Autoconfiguration failed."
 msgstr "Fann ikkje automatisk oppsett."
 
-#. i18n: ectx: property (text), widget (QLabel, progressLabel)
-#: setupmanager.cpp:114 ui/setuppage.ui:37
-#, kde-format
-msgid "Setting up account..."
-msgstr "Set opp konto …"
+#~ msgid "Provide personal data"
+#~ msgstr "Oppgje personleg informasjon"
 
-#: setupmanager.cpp:162
-#, kde-format
-msgid "Setup complete."
-msgstr "Kontoen er no sett opp."
+#~ msgid "Secure your Communication"
+#~ msgstr "Gjer kommunikasjonen din trygg"
 
-#: setupmanager.cpp:177
-#, kde-format
-msgid "Failed to set up account, rolling back..."
-msgstr "Klarte ikkje setja opp kontoen. Tilbakestiller …"
+#~ msgid "Select Account Type"
+#~ msgstr "Vel kontotype"
 
-#: setupmanager.cpp:191
-#, kde-format
-msgid "Failed to set up account."
-msgstr "Klarte ikkje setja opp kontoen."
+#~ msgid "Select Provider"
+#~ msgstr "Vel leverandør"
 
-#: transport.cpp:64
-#, kde-format
-msgid "Setting up mail transport account..."
-msgstr "Set opp konto for e-postoverføring …"
+#~ msgid "Loading Assistant"
+#~ msgstr "Lastar vegvisar"
 
-#: transport.cpp:83
-#, kde-format
-msgid "Mail transport uses '%1' encryption and '%2' authentication."
-msgstr "E-postoverføring brukar «%1»-kryptering og «%2»-autentisering."
+#~ msgid "Setting up Account"
+#~ msgstr "Set opp konto"
 
-#: transport.cpp:89
-#, kde-format
-msgid "Mail transport account set up."
-msgstr "Kontoen for e-postoverføring er no sett opp."
+#~ msgid "ISPDB Assistant"
+#~ msgstr "ISPDB-assistent"
 
-#: transport.cpp:95
-#, kde-format
-msgid "Mail transport account deleted."
-msgstr "Kontoen for e-postoverføring er no fjerna."
+#~ msgid "(c) 2010 Omat Holding B.V."
+#~ msgstr "© 2010 Omat Holding B.V."
 
-#: transport.cpp:102
-#, kde-format
-msgid "Could not load config dialog for UID '%1'"
-msgstr "Klarte ikkje lasta oppsettvindauge for UID-en «%1»"
+#~ msgid "Tom Albers"
+#~ msgstr "Tom Albers"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: ui/cryptopage.ui:26
-#, kde-format
-msgid ""
-"Protect yourself against surveillance by encrypting your Mails with GnuPG. "
-"By generating or selecting a public / private key pair now mails can be "
-"encrypted using the public key while only you can decrypt them with your "
-"private key."
-msgstr ""
-"Vern deg sjølv mot overvaking ved å kryptera e-postmeldingar med GnuPG. Viss "
-"du generer eller vel eit offentleg-/privatnøkkel-par, kan folk kryptera "
-"meldingar til deg med offentleg­nøkkelen, mens berre du kan dekryptera dei, "
-"med privatnøkkelen."
+#~ msgid "Tries to fetch the settings for that email address"
+#~ msgstr "Prøver å henta innstillingar for e-postadressa"
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, enableCryptoCheckBox)
-#: ui/cryptopage.ui:52
-#, kde-format
-msgid ""
-"<html><head/><body><p>When sending mails KMail automatically looks for "
-"encryption keys of your recipients and secures the mail when keys for each "
-"recipient can be found.</p><p>It also signs your mails cryptographically so "
-"that it can be verified that your messages have not been tampered with.</p></"
-"body></html>"
-msgstr ""
-"<html><head/><body><p>Ved sending av e-post vil KMail automatisk sjå om det "
-"finst krypterings­nøklar for mottakarane og sikra e-posten når han finn ein "
-"nøkkel for ein mottakar.</p><p>Programmet vil òg signera e-postane "
-"kryptografisk, slik at andre kan stadfesta at dei ikkje har blitt tukla med "
-"undervegs.</p></body></html>"
+#~ msgid "No script specified in '%1'."
+#~ msgstr "Det er ikkje valt noko skript i «%1»."
 
-#. i18n: ectx: property (text), widget (QCheckBox, enableCryptoCheckBox)
-#: ui/cryptopage.ui:55
-#, kde-format
-msgid "Secure outgoing emails, if possible"
-msgstr "Trygge utgåande e-postar, viss mogleg"
+#~ msgid "Unable to load assistant: File '%1' does not exist."
+#~ msgstr "Klarte ikkje lasta vegvisaren. Fila «%1» finst ikkje."
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: ui/cryptopage.ui:65
-#, kde-format
-msgid "Select key for this account:"
-msgstr "Vel nøkkel for denne kontoen:"
+#~ msgid "Loading script '%1'..."
+#~ msgstr "Lastar skriptet «%1» …"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: ui/cryptopage.ui:99
-#, kde-format
-msgid "Checking key publishing support ..."
-msgstr "Ser etter støtte for offentleggjering av nøkkel …"
+#~ msgid "Failed to load script: '%1'."
+#~ msgstr "Klarte ikkje lasta skriptet: «%1»."
 
-#. i18n: ectx: property (title), widget (QGroupBox, wksCheckBox)
-#: ui/cryptopage.ui:122
-#, kde-format
-msgid "Register &this key with your email provider"
-msgstr "Registrer &nøkkelen med e-postleverandøren"
+#~ msgid "Only offer accounts that support the given type."
+#~ msgstr "Berre vis kontoar som støttar den valde typen."
 
-#. i18n: ectx: property (text), widget (QLabel, wksDescription)
-#: ui/cryptopage.ui:132
-#, kde-format
-msgid ""
-"Your email service provider supports a service to provide your public key so "
-"that others can find it.\n"
-"This means that your public key can be queried from your email provider and "
-"others can then use it to secure their email communication with you."
-msgstr ""
-"E-postleverandøren din støttar ei teneste for å gje ut offentleg­nøkkelen "
-"din, slik at andre kan finna han.\n"
-"Dette medfører at andre kan spørja etter nøkkelen frå e-postleverandøren din "
-"og bruka han til å sikra kommunikasjonen med deg."
+#~ msgid "Run the specified assistant."
+#~ msgstr "Køyr den valde vegvisaren."
 
-#. i18n: ectx: property (title), widget (QGroupBox, pksCheckBox)
-#: ui/cryptopage.ui:152
-#, kde-format
-msgid "Publish &this key on public key server"
-msgstr "Offentleggjer &denne nøkkelen på nøkkeltenar"
+#~ msgid "unpack fullpath on startup and launch that assistant"
+#~ msgstr "Pakk ut full sti ved oppstart og start assistenten"
 
-#. i18n: ectx: property (text), widget (QLabel, pksDescription)
-#: ui/cryptopage.ui:162
-#, kde-format
-msgid ""
-"Your email service provider does not support key publishing. You should "
-"publish your key so that other users can retrieve it and use it to secure "
-"their email communication with you.\n"
-"You can alternatively publish your key on a public key server, but you "
-"should be aware that your email address will be publicly listed and they key "
-"cannot be removed from there, only revoked."
-msgstr ""
-"E-postleverandøren din støttar ikkje nøkkel­publisering. Du bør "
-"offentleggjera offentlegnøkkelen din, slik at andre får tilgang til han og "
-"kan bruka han til å sikra e-postkommunikasjonen med deg.\n"
-"Du kan eventuelt offentleggjera han på ein nøkkeltenar, men då må du vera "
-"obs på at e-postadressa di vert synleg for alle, og du kan ikkje sletta "
-"nøkkelen i ettertid, berre tilbakekalla/ugyldiggjera han."
+#~ msgid "Returns types of assistants"
+#~ msgstr "Returnerer assistenttypar"
 
-#. i18n: ectx: property (text), widget (QLabel, statusLabel)
-#: ui/loadpage.ui:30
-#, kde-format
-msgid "Loading assistant..."
-msgstr "Lastar vegvisar …"
+#~ msgid "The following assistants are available:"
+#~ msgstr "Desse assistentane er tilgjengelege:"
 
-#. i18n: ectx: property (text), widget (QLabel, welcomeLabel)
-#: ui/personaldatapage.ui:17
-#, kde-format
-msgid ""
-"With a few simple steps we create the right settings for you. Please follow "
-"the steps of this wizard carefully."
-msgstr ""
-"Via nokre enkle steg lagar me klar dei rette innstillingane for deg. Følg "
-"stega i vegvisaren nøye."
+#~ msgid "Fetching provider list..."
+#~ msgstr "Hentar leverandørliste …"
 
-#. i18n: ectx: property (text), widget (QLabel, nameLabel)
-#: ui/personaldatapage.ui:29
-#, kde-format
-msgid "Full name:"
-msgstr "Fullt namn:"
+#~ msgid "Setting up account..."
+#~ msgstr "Set opp konto …"
 
-#. i18n: ectx: property (text), widget (QLabel, emailLabel)
-#: ui/personaldatapage.ui:55
-#, kde-format
-msgid "E-mail address:"
-msgstr "E-postadresse:"
+#~ msgid "Setup complete."
+#~ msgstr "Kontoen er no sett opp."
 
-#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
-#: ui/personaldatapage.ui:85
-#, kde-format
-msgid "Password:"
-msgstr "Passord:"
+#~ msgid "Failed to set up account, rolling back..."
+#~ msgstr "Klarte ikkje setja opp kontoen. Tilbakestiller …"
 
-#. i18n: ectx: property (title), widget (QGroupBox, checkOnlineGroupBox)
-#: ui/personaldatapage.ui:119
-#, kde-format
-msgid "Find pro&vider settings on the Internet"
-msgstr "Finn l&everandørinnstillingar på Internett"
+#~ msgid "Failed to set up account."
+#~ msgstr "Klarte ikkje setja opp kontoen."
 
-#. i18n: ectx: property (text), widget (QLabel, checkOnlineExplanation)
-#: ui/personaldatapage.ui:140
-#, kde-format
-msgid ""
-"Check online for the settings needed for this email provider. Only the "
-"domain name part of the e-mail address will be sent over the Internet at "
-"this point. If this option is unchecked, the account can be set up manually."
-msgstr ""
-"Sjå på nettet etter informasjon om kva innstillingar du skal bruka for denne "
-"e-postleverandøren. Berre domenedelen (delen etter @-teiknet) av e-"
-"postadressa vert då send over Internett. Viss det ikkje er kryssa av her, "
-"kan du setja opp kontoen manuelt."
+#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
+#~ msgstr "E-postoverføring brukar «%1»-kryptering og «%2»-autentisering."
 
-#. i18n: ectx: property (text), widget (QRadioButton, imapAccount)
-#: ui/personaldatapage.ui:178
-#, kde-format
-msgid "IMAP account"
-msgstr "IMAP-konto"
+#~ msgid "Mail transport account deleted."
+#~ msgstr "Kontoen for e-postoverføring er no fjerna."
 
-#. i18n: ectx: property (text), widget (QRadioButton, pop3Account)
-#: ui/personaldatapage.ui:191
-#, kde-format
-msgid "POP&3 account"
-msgstr "POP&3-konto"
+#~ msgid "Could not load config dialog for UID '%1'"
+#~ msgstr "Klarte ikkje lasta oppsettvindauge for UID-en «%1»"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: ui/personaldatapage.ui:205
-#, kde-format
-msgid "Incoming:"
-msgstr "Innkommande:"
+#~ msgid ""
+#~ "Protect yourself against surveillance by encrypting your Mails with "
+#~ "GnuPG. By generating or selecting a public / private key pair now mails "
+#~ "can be encrypted using the public key while only you can decrypt them "
+#~ "with your private key."
+#~ msgstr ""
+#~ "Vern deg sjølv mot overvaking ved å kryptera e-postmeldingar med GnuPG. "
+#~ "Viss du generer eller vel eit offentleg-/privatnøkkel-par, kan folk "
+#~ "kryptera meldingar til deg med offentleg­nøkkelen, mens berre du kan "
+#~ "dekryptera dei, med privatnøkkelen."
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: ui/personaldatapage.ui:222
-#, kde-format
-msgid "Outgoing:"
-msgstr "Utgåande:"
+#~ msgid ""
+#~ "<html><head/><body><p>When sending mails KMail automatically looks for "
+#~ "encryption keys of your recipients and secures the mail when keys for "
+#~ "each recipient can be found.</p><p>It also signs your mails "
+#~ "cryptographically so that it can be verified that your messages have not "
+#~ "been tampered with.</p></body></html>"
+#~ msgstr ""
+#~ "<html><head/><body><p>Ved sending av e-post vil KMail automatisk sjå om "
+#~ "det finst krypterings­nøklar for mottakarane og sikra e-posten når han "
+#~ "finn ein nøkkel for ein mottakar.</p><p>Programmet vil òg signera e-"
+#~ "postane kryptografisk, slik at andre kan stadfesta at dei ikkje har blitt "
+#~ "tukla med undervegs.</p></body></html>"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: ui/personaldatapage.ui:239
-#, kde-format
-msgid "Username:"
-msgstr "Brukarnamn:"
+#~ msgid "Secure outgoing emails, if possible"
+#~ msgstr "Trygge utgåande e-postar, viss mogleg"
 
-#. i18n: ectx: property (text), widget (QPushButton, createAccountPb)
-#: ui/personaldatapage.ui:273
-#, kde-format
-msgid "Add Account"
-msgstr "Legg til konto"
+#~ msgid "Select key for this account:"
+#~ msgstr "Vel nøkkel for denne kontoen:"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: ui/providerpage.ui:17
-#, kde-format
-msgid ""
-"Select your provider from the list below or click back if your provider is "
-"not listed"
-msgstr ""
-"Vel leverandøren din frå lista nedanfor, eller trykk «Tilbake» viss han "
-"ikkje er med på lista."
+#~ msgid "Checking key publishing support ..."
+#~ msgstr "Ser etter støtte for offentleggjering av nøkkel …"
 
-#. i18n: ectx: property (text), widget (QPushButton, detailsButton)
-#: ui/setuppage.ui:62
-#, kde-format
-msgid "&Details..."
-msgstr "&Detaljar …"
+#~ msgid "Register &this key with your email provider"
+#~ msgstr "Registrer &nøkkelen med e-postleverandøren"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: ui/typepage.ui:17
-#, kde-format
-msgid "Select which kind of account you want to create:"
-msgstr "Vel kva type konto du vil setja opp:"
+#~ msgid ""
+#~ "Your email service provider supports a service to provide your public key "
+#~ "so that others can find it.\n"
+#~ "This means that your public key can be queried from your email provider "
+#~ "and others can then use it to secure their email communication with you."
+#~ msgstr ""
+#~ "E-postleverandøren din støttar ei teneste for å gje ut offentleg­nøkkelen "
+#~ "din, slik at andre kan finna han.\n"
+#~ "Dette medfører at andre kan spørja etter nøkkelen frå e-postleverandøren "
+#~ "din og bruka han til å sikra kommunikasjonen med deg."
 
-#. i18n: ectx: property (text), widget (QPushButton, ghnsButton)
-#: ui/typepage.ui:68
-#, kde-format
-msgid "Check for more on Internet"
-msgstr "Sjå etter fleire på Internett"
+#~ msgid "Publish &this key on public key server"
+#~ msgstr "Offentleggjer &denne nøkkelen på nøkkeltenar"
+
+#~ msgid ""
+#~ "Your email service provider does not support key publishing. You should "
+#~ "publish your key so that other users can retrieve it and use it to secure "
+#~ "their email communication with you.\n"
+#~ "You can alternatively publish your key on a public key server, but you "
+#~ "should be aware that your email address will be publicly listed and they "
+#~ "key cannot be removed from there, only revoked."
+#~ msgstr ""
+#~ "E-postleverandøren din støttar ikkje nøkkel­publisering. Du bør "
+#~ "offentleggjera offentlegnøkkelen din, slik at andre får tilgang til han "
+#~ "og kan bruka han til å sikra e-postkommunikasjonen med deg.\n"
+#~ "Du kan eventuelt offentleggjera han på ein nøkkeltenar, men då må du vera "
+#~ "obs på at e-postadressa di vert synleg for alle, og du kan ikkje sletta "
+#~ "nøkkelen i ettertid, berre tilbakekalla/ugyldiggjera han."
+
+#~ msgid "Loading assistant..."
+#~ msgstr "Lastar vegvisar …"
+
+#~ msgid ""
+#~ "With a few simple steps we create the right settings for you. Please "
+#~ "follow the steps of this wizard carefully."
+#~ msgstr ""
+#~ "Via nokre enkle steg lagar me klar dei rette innstillingane for deg. Følg "
+#~ "stega i vegvisaren nøye."
+
+#~ msgid "Find pro&vider settings on the Internet"
+#~ msgstr "Finn l&everandørinnstillingar på Internett"
+
+#~ msgid "IMAP account"
+#~ msgstr "IMAP-konto"
+
+#~ msgid "POP&3 account"
+#~ msgstr "POP&3-konto"
+
+#~ msgid ""
+#~ "Select your provider from the list below or click back if your provider "
+#~ "is not listed"
+#~ msgstr ""
+#~ "Vel leverandøren din frå lista nedanfor, eller trykk «Tilbake» viss han "
+#~ "ikkje er med på lista."
+
+#~ msgid "&Details..."
+#~ msgstr "&Detaljar …"
+
+#~ msgid "Select which kind of account you want to create:"
+#~ msgstr "Vel kva type konto du vil setja opp:"
+
+#~ msgid "Check for more on Internet"
+#~ msgstr "Sjå etter fleire på Internett"

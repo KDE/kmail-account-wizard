@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2010, 2012, 2013, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
+# Yuri Chornoivan <yurchor@ukr.net>, 2010, 2012, 2013, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2021-08-14 08:06+0300\n"
+"PO-Revision-Date: 2023-09-21 13:50+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -54,119 +54,113 @@ msgstr "Профіль вилучено."
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:23
 #: accountwizard/manualconfiguration.cpp:23
-#, fuzzy, kde-format
-#| msgid "IMAP, %1"
+#, kde-format
 msgid "IMAP"
-msgstr "IMAP, %1"
+msgstr "IMAP"
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:26
 #: accountwizard/manualconfiguration.cpp:23
-#, fuzzy, kde-format
-#| msgid "POP3, %1"
+#, kde-format
 msgid "POP3"
-msgstr "POP3, %1"
+msgstr "POP3"
 
 #: accountwizard/ispdb/configurationmodel.cpp:38
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
-msgstr ""
+msgstr "Зберігати теки і повідомлення синхронізованими на сервері"
 
 #: accountwizard/ispdb/configurationmodel.cpp:39
 #, kde-format
 msgid "Keep your folders and emails on your computer"
-msgstr ""
+msgstr "Зберігати ваші теки і повідомлення на вашому комп'ютері"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:29
-#, fuzzy, kde-format
-#| msgid "SMTP, %1"
+#, kde-format
 msgid "SMTP"
-msgstr "SMTP, %1"
+msgstr "SMTP"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:35
 #: accountwizard/manualconfiguration.cpp:28
 #, kde-format
 msgid "SSL/TLS"
-msgstr ""
+msgstr "SSL/TLS"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:38
 #, kde-format
 msgid "StartTLS"
-msgstr ""
+msgstr "StartTLS"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:41
 #, kde-format
 msgctxt "No security mechanism"
 msgid "None"
-msgstr ""
+msgstr "Немає"
 
 #: accountwizard/ispdbservice.cpp:133
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgid "Configuration found auto config file."
-msgstr "Виявлено автоматичні налаштування."
+msgstr "Виявлено файл автоматичних налаштувань."
 
 #: accountwizard/ispdbservice.cpp:136
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgid "Configuration found in well-known file."
-msgstr "Виявлено автоматичні налаштування."
+msgstr "Виявлено налаштування у відомому файлі."
 
 #: accountwizard/ispdbservice.cpp:139
-#, fuzzy, kde-format
-#| msgid "Lookup configuration: Mozilla database"
+#, kde-format
 msgid "Configuration found in Mozilla FAI Database."
-msgstr "Налаштування пошуку: база даних Mozilla"
+msgstr "Виявлено налаштування у базі даних Mozilla FAI."
 
 #: accountwizard/manualconfiguration.cpp:23
 #, kde-format
 msgid "Kolab"
-msgstr ""
+msgstr "Kolab"
 
 #: accountwizard/manualconfiguration.cpp:28
 #, kde-format
 msgid "STARTTLS"
-msgstr ""
+msgstr "STARTTLS"
 
 #: accountwizard/manualconfiguration.cpp:28
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Немає"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "Clear text"
-msgstr ""
+msgstr "Звичайний текстовий"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "LOGIN"
-msgstr ""
+msgstr "LOGIN"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "PLAIN"
-msgstr ""
+msgstr "PLAIN"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "CRAM-MD5"
-msgstr ""
+msgstr "CRAM-MD5"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "DIGEST-MD5"
-msgstr ""
+msgstr "DIGEST-MD5"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "NTLM"
-msgstr ""
+msgstr "NTLM"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "GSSAPI"
-msgstr ""
+msgstr "GSSAPI"
 
 #: accountwizard/resource.cpp:63 legacy/resource.cpp:74
 #, kde-format
@@ -232,27 +226,25 @@ msgstr "Обліковий запис пересилання пошти нала
 
 #: apps/contents/ui/ConfigurationDelegate.qml:93
 #: apps/contents/ui/PersonalDataPage.qml:145
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming"
-msgstr "Вхідні:"
+msgstr "Вхідні"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
 #: apps/contents/ui/PersonalDataPage.qml:206
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing"
-msgstr "Вихідні:"
+msgstr "Вихідні"
 
 #: apps/contents/ui/PersonalDataPage.qml:14
 #, kde-format
 msgid "Personal Information"
-msgstr ""
+msgstr "Особисті відомості"
 
 #: apps/contents/ui/PersonalDataPage.qml:31
 #, kde-format
 msgid "Set Up Your Existing Email Address"
-msgstr ""
+msgstr "Налаштовування вашої наявної адреси ел. пошти"
 
 #: apps/contents/ui/PersonalDataPage.qml:40
 #, kde-format
@@ -260,6 +252,9 @@ msgid ""
 "To use your current email address fill in your credentials.<br />This wizard "
 "will automatically search for a working and recommended server configuration."
 msgstr ""
+"Щоб скористатися поточною адресою електронної пошти, вкажіть реєстраційні "
+"дані.<br />Цей майстер виконає автоматичний пошук працездатних і "
+"рекомендованих налаштувань сервера."
 
 #: apps/contents/ui/PersonalDataPage.qml:51
 #, kde-format
@@ -270,7 +265,7 @@ msgstr "Ім’я повністю:"
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
-msgstr ""
+msgstr "Іван Іваненко"
 
 #: apps/contents/ui/PersonalDataPage.qml:61
 #, kde-format
@@ -281,7 +276,7 @@ msgstr "Адреса ел. пошти:"
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
-msgstr ""
+msgstr "boss@example.corp"
 
 #: apps/contents/ui/PersonalDataPage.qml:72
 #, kde-format
@@ -291,52 +286,43 @@ msgstr "Пароль:"
 #: apps/contents/ui/PersonalDataPage.qml:82
 #, kde-format
 msgid "Continue"
-msgstr ""
+msgstr "Продовжити"
 
 #: apps/contents/ui/PersonalDataPage.qml:91
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check online for the settings needed for this email provider. Only the "
-#| "domain name part of the e-mail address will be sent over the Internet at "
-#| "this point. If this option is unchecked, the account can be set up "
-#| "manually."
+#, kde-format
 msgid ""
 "Check online for the settings needed for this email provider. Only the "
 "domain name part of the e-mail address will be sent over the Internet."
 msgstr ""
-"Знайти дані вашого постачальника послуг у інтернеті. На цьому кроці за "
-"допомогою інтернету з вашої адреси електронної пошти буде надіслано лише "
-"назву домену. Якщо ви не позначатимете відповідного пункту, ви зможете "
-"вказати параметри вашого облікового запису вручну."
+"Знайти дані вашого постачальника послуг у інтернеті. За допомогою інтернету "
+"з вашої адреси електронної пошти буде надіслано лише назву домену."
 
 #: apps/contents/ui/PersonalDataPage.qml:125
-#, fuzzy, kde-format
-#| msgid "No config found to edit"
+#, kde-format
 msgid "No config found from ispdb server."
-msgstr "Не знайдено налаштувань для редагування"
+msgstr "Не знайдено налаштувань від сервера ispdb."
 
 #: apps/contents/ui/PersonalDataPage.qml:140
 #, kde-format
 msgid "Server Parameters"
-msgstr ""
+msgstr "Параметри сервера"
 
 #: apps/contents/ui/PersonalDataPage.qml:151
 #: apps/contents/ui/PersonalDataPage.qml:211
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgid "Hostname:"
-msgstr "Користувач:"
+msgstr "Назва вузла:"
 
 #: apps/contents/ui/PersonalDataPage.qml:160
 #, kde-format
 msgid "Protocol:"
-msgstr ""
+msgstr "Протокол:"
 
 #: apps/contents/ui/PersonalDataPage.qml:169
 #: apps/contents/ui/PersonalDataPage.qml:220
 #, kde-format
 msgid "Port:"
-msgstr ""
+msgstr "Порт:"
 
 #: apps/contents/ui/PersonalDataPage.qml:176
 #: apps/contents/ui/PersonalDataPage.qml:227
@@ -348,7 +334,7 @@ msgstr "Захист:"
 #: apps/contents/ui/PersonalDataPage.qml:236
 #, kde-format
 msgid "Authentication Method:"
-msgstr ""
+msgstr "Спосіб розпізнавання:"
 
 #: apps/contents/ui/PersonalDataPage.qml:194
 #: apps/contents/ui/PersonalDataPage.qml:245
@@ -359,7 +345,7 @@ msgstr "Користувач:"
 #: apps/contents/ui/PersonalDataPage.qml:256
 #, kde-format
 msgid "Recheck"
-msgstr ""
+msgstr "Повторна перевірка"
 
 #: apps/contents/ui/PersonalDataPage.qml:269
 #: apps/contents/ui/PersonalDataPage.qml:311
@@ -370,7 +356,7 @@ msgstr "Створити обліковий запис"
 #: apps/contents/ui/PersonalDataPage.qml:291
 #, kde-format
 msgid "Available configurations"
-msgstr ""
+msgstr "Доступні налаштування"
 
 #: apps/main.cpp:32
 #, kde-format
@@ -383,10 +369,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "Допомагає налаштовувати облікові записи"
 
 #: apps/main.cpp:36
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2020 the Akonadi developers"
+#, kde-format
 msgid "(c) 2009-2023 the Akonadi developers"
-msgstr "© Розробники Akonadi, 2009–2020"
+msgstr "© Розробники Akonadi, 2009–2023"
 
 #: apps/main.cpp:39
 #, kde-format
@@ -406,12 +391,12 @@ msgstr "Laurent Montel"
 #: apps/main.cpp:41
 #, kde-format
 msgid "Carl Schwan"
-msgstr ""
+msgstr "Carl Schwan"
 
 #: apps/main.cpp:41
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Супровідник"
 
 #: legacy/configfile.cpp:37
 #, kde-format

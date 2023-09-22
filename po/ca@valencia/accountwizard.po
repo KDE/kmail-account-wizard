@@ -4,21 +4,21 @@
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Manuel Tortosa Moreno <manutortosa@gmail.com>, 2010.
-# Josep M. Ferrer <txemaq@gmail.com>, 2010, 2012, 2015, 2016, 2017, 2018, 2020, 2021.
+# Josep M. Ferrer <txemaq@gmail.com>, 2010, 2012, 2015, 2016, 2017, 2018, 2020, 2021, 2023.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2013, 2014, 2015, 2016, 2017, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2021-10-31 22:55+0100\n"
+"PO-Revision-Date: 2023-09-21 16:53+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -56,119 +56,114 @@ msgstr "S'ha eliminat la identitat."
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:23
 #: accountwizard/manualconfiguration.cpp:23
-#, fuzzy, kde-format
-#| msgid "IMAP, %1"
+#, kde-format
 msgid "IMAP"
-msgstr "IMAP, %1"
+msgstr "IMAP"
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:26
 #: accountwizard/manualconfiguration.cpp:23
-#, fuzzy, kde-format
-#| msgid "POP3, %1"
+#, kde-format
 msgid "POP3"
-msgstr "POP3, %1"
+msgstr "POP3"
 
 #: accountwizard/ispdb/configurationmodel.cpp:38
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
 msgstr ""
+"Manteniu les carpetes i els correus electrònics sincronitzats en el servidor"
 
 #: accountwizard/ispdb/configurationmodel.cpp:39
 #, kde-format
 msgid "Keep your folders and emails on your computer"
-msgstr ""
+msgstr "Manteniu les carpetes i els correus electrònics en el vostre ordinador"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:29
-#, fuzzy, kde-format
-#| msgid "SMTP, %1"
+#, kde-format
 msgid "SMTP"
-msgstr "SMTP, %1"
+msgstr "SMTP"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:35
 #: accountwizard/manualconfiguration.cpp:28
 #, kde-format
 msgid "SSL/TLS"
-msgstr ""
+msgstr "SSL/TLS"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:38
 #, kde-format
 msgid "StartTLS"
-msgstr ""
+msgstr "StartTLS"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:41
 #, kde-format
 msgctxt "No security mechanism"
 msgid "None"
-msgstr ""
+msgstr "Cap"
 
 #: accountwizard/ispdbservice.cpp:133
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgid "Configuration found auto config file."
-msgstr "S'ha trobat la configuració automàtica."
+msgstr "S'ha trobat el fitxer de configuració automàtica."
 
 #: accountwizard/ispdbservice.cpp:136
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgid "Configuration found in well-known file."
-msgstr "S'ha trobat la configuració automàtica."
+msgstr "S'ha trobat la configuració en un fitxer ben conegut."
 
 #: accountwizard/ispdbservice.cpp:139
-#, fuzzy, kde-format
-#| msgid "Lookup configuration: Mozilla database"
+#, kde-format
 msgid "Configuration found in Mozilla FAI Database."
-msgstr "Busca de la configuració: Base de dades de Mozilla"
+msgstr "S'ha trobat la configuració en la Base de dades FAI de Mozilla."
 
 #: accountwizard/manualconfiguration.cpp:23
 #, kde-format
 msgid "Kolab"
-msgstr ""
+msgstr "Kolab"
 
 #: accountwizard/manualconfiguration.cpp:28
 #, kde-format
 msgid "STARTTLS"
-msgstr ""
+msgstr "STARTTLS"
 
 #: accountwizard/manualconfiguration.cpp:28
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Cap"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "Clear text"
-msgstr ""
+msgstr "Text en clar"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "LOGIN"
-msgstr ""
+msgstr "LOGIN"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "PLAIN"
-msgstr ""
+msgstr "PLAIN"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "CRAM-MD5"
-msgstr ""
+msgstr "CRAM-MD5"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "DIGEST-MD5"
-msgstr ""
+msgstr "DIGEST-MD5"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "NTLM"
-msgstr ""
+msgstr "NTLM"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "GSSAPI"
-msgstr ""
+msgstr "GSSAPI"
 
 #: accountwizard/resource.cpp:63 legacy/resource.cpp:74
 #, kde-format
@@ -232,27 +227,25 @@ msgstr "S'ha configurat el transport de correu del compte."
 
 #: apps/contents/ui/ConfigurationDelegate.qml:93
 #: apps/contents/ui/PersonalDataPage.qml:145
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming"
-msgstr "Entrant:"
+msgstr "Entrant"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
 #: apps/contents/ui/PersonalDataPage.qml:206
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing"
-msgstr "Eixint:"
+msgstr "Eixint"
 
 #: apps/contents/ui/PersonalDataPage.qml:14
 #, kde-format
 msgid "Personal Information"
-msgstr ""
+msgstr "Informació personal"
 
 #: apps/contents/ui/PersonalDataPage.qml:31
 #, kde-format
 msgid "Set Up Your Existing Email Address"
-msgstr ""
+msgstr "Configureu la vostra adreça de correu existent"
 
 #: apps/contents/ui/PersonalDataPage.qml:40
 #, kde-format
@@ -260,6 +253,9 @@ msgid ""
 "To use your current email address fill in your credentials.<br />This wizard "
 "will automatically search for a working and recommended server configuration."
 msgstr ""
+"Empleneu els credencials per a utilitzar la vostra adreça de correu "
+"electrònic actual.<br />Este assistent buscarà automàticament una "
+"configuració de servidor que funcione i que es recomane."
 
 #: apps/contents/ui/PersonalDataPage.qml:51
 #, kde-format
@@ -270,7 +266,7 @@ msgstr "Nom complet:"
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
-msgstr ""
+msgstr "Joana Llopis"
 
 #: apps/contents/ui/PersonalDataPage.qml:61
 #, kde-format
@@ -281,7 +277,7 @@ msgstr "Adreça de correu:"
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
-msgstr ""
+msgstr "director@exemple.corp"
 
 #: apps/contents/ui/PersonalDataPage.qml:72
 #, kde-format
@@ -291,63 +287,55 @@ msgstr "Contrasenya:"
 #: apps/contents/ui/PersonalDataPage.qml:82
 #, kde-format
 msgid "Continue"
-msgstr ""
+msgstr "Continua"
 
 #: apps/contents/ui/PersonalDataPage.qml:91
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check online for the settings needed for this email provider. Only the "
-#| "domain name part of the e-mail address will be sent over the Internet at "
-#| "this point. If this option is unchecked, the account can be set up "
-#| "manually."
+#, kde-format
 msgid ""
 "Check online for the settings needed for this email provider. Only the "
 "domain name part of the e-mail address will be sent over the Internet."
 msgstr ""
-"Comprova en línia la configuració del meu proveïdor. En este punt només "
-"s'enviarà a Internet la part del nom del domini de la vostra adreça de "
-"correu. Si desmarqueu esta opció, podeu establir el compte manualment."
+"Comprova en línia la configuració necessària per a este proveïdor de correu. "
+"Només s'enviarà a Internet la part del nom del domini de l'adreça de correu."
 
 #: apps/contents/ui/PersonalDataPage.qml:125
-#, fuzzy, kde-format
-#| msgid "No config found to edit"
+#, kde-format
 msgid "No config found from ispdb server."
-msgstr "No s'ha trobat la configuració que s'ha d'editar"
+msgstr "No s'ha trobat la configuració des del servidor «ispdb»."
 
 #: apps/contents/ui/PersonalDataPage.qml:140
 #, kde-format
 msgid "Server Parameters"
-msgstr ""
+msgstr "Paràmetres del servidor"
 
 #: apps/contents/ui/PersonalDataPage.qml:151
 #: apps/contents/ui/PersonalDataPage.qml:211
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgid "Hostname:"
-msgstr "Nom d'usuari:"
+msgstr "Nom del servidor:"
 
 #: apps/contents/ui/PersonalDataPage.qml:160
 #, kde-format
 msgid "Protocol:"
-msgstr ""
+msgstr "Protocol:"
 
 #: apps/contents/ui/PersonalDataPage.qml:169
 #: apps/contents/ui/PersonalDataPage.qml:220
 #, kde-format
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
 #: apps/contents/ui/PersonalDataPage.qml:176
 #: apps/contents/ui/PersonalDataPage.qml:227
 #, kde-format
 msgid "Security:"
-msgstr ""
+msgstr "Seguretat:"
 
 #: apps/contents/ui/PersonalDataPage.qml:185
 #: apps/contents/ui/PersonalDataPage.qml:236
 #, kde-format
 msgid "Authentication Method:"
-msgstr ""
+msgstr "Mètode d'autenticació:"
 
 #: apps/contents/ui/PersonalDataPage.qml:194
 #: apps/contents/ui/PersonalDataPage.qml:245
@@ -358,19 +346,18 @@ msgstr "Nom d'usuari:"
 #: apps/contents/ui/PersonalDataPage.qml:256
 #, kde-format
 msgid "Recheck"
-msgstr ""
+msgstr "Torna a comprovar"
 
 #: apps/contents/ui/PersonalDataPage.qml:269
 #: apps/contents/ui/PersonalDataPage.qml:311
-#, fuzzy, kde-format
-#| msgid "Add Account"
+#, kde-format
 msgid "Create Account"
-msgstr "Afig un compte"
+msgstr "Crea un compte"
 
 #: apps/contents/ui/PersonalDataPage.qml:291
 #, kde-format
 msgid "Available configurations"
-msgstr ""
+msgstr "Configuracions disponibles"
 
 #: apps/main.cpp:32
 #, kde-format
@@ -383,10 +370,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "Ajuda a configurar els comptes PIM"
 
 #: apps/main.cpp:36
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2020 the Akonadi developers"
+#, kde-format
 msgid "(c) 2009-2023 the Akonadi developers"
-msgstr "(c) 2009-2020, els desenvolupadors d'Akonadi"
+msgstr "(c) 2009-2023, els desenvolupadors d'Akonadi"
 
 #: apps/main.cpp:39
 #, kde-format
@@ -406,12 +392,12 @@ msgstr "Laurent Montel"
 #: apps/main.cpp:41
 #, kde-format
 msgid "Carl Schwan"
-msgstr ""
+msgstr "Carl Schwan"
 
 #: apps/main.cpp:41
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Mantenidor"
 
 #: legacy/configfile.cpp:37
 #, kde-format
@@ -661,187 +647,3 @@ msgstr "S'ha trobat la configuració automàtica."
 #, kde-format
 msgid "Autoconfiguration failed."
 msgstr "No s'ha pogut configurar automàtica."
-
-#~ msgid "Provide personal data"
-#~ msgstr "Proporcioneu les dades personals"
-
-#~ msgid "Secure your Communication"
-#~ msgstr "Assegura la vostra comunicació"
-
-#~ msgid "Select Account Type"
-#~ msgstr "Seleccioneu el tipus de compte"
-
-#~ msgid "Select Provider"
-#~ msgstr "Seleccioneu el proveïdor"
-
-#~ msgid "Loading Assistant"
-#~ msgstr "S'està carregant l'assistent"
-
-#~ msgid "Setting up Account"
-#~ msgstr "S'està configurant el compte"
-
-#~ msgid "ISPDB Assistant"
-#~ msgstr "Assistent ISPDB"
-
-#~ msgid "(c) 2010 Omat Holding B.V."
-#~ msgstr "(c) 2010 Omat Holding B.V."
-
-#~ msgid "Tom Albers"
-#~ msgstr "Tom Albers"
-
-#~ msgid "Tries to fetch the settings for that email address"
-#~ msgstr "Intenta obtindre la configuració per a esta adreça de correu"
-
-#~ msgid "No script specified in '%1'."
-#~ msgstr "No s'ha especificat cap script a «%1»."
-
-#~ msgid "Unable to load assistant: File '%1' does not exist."
-#~ msgstr "No s'ha pogut carregar l'assistent: el fitxer «%1» no existix."
-
-#~ msgid "Loading script '%1'..."
-#~ msgstr "S'està carregant l'script «%1»..."
-
-#~ msgid "Failed to load script: '%1'."
-#~ msgstr "No s'ha pogut carregar l'script «%1»."
-
-#~ msgid "Only offer accounts that support the given type."
-#~ msgstr "Oferix només comptes que admeten el tipus proporcionat."
-
-#~ msgid "Run the specified assistant."
-#~ msgstr "Executa l'assistent especificat."
-
-#~ msgid "unpack fullpath on startup and launch that assistant"
-#~ msgstr "descomprimix el camí complet en iniciar i inicia este assistent"
-
-#~ msgid "Returns types of assistants"
-#~ msgstr "Retorna els tipus d'assistents"
-
-#~ msgid "The following assistants are available:"
-#~ msgstr "Hi ha disponibles els següents assistents:"
-
-#~ msgid "Fetching provider list..."
-#~ msgstr "S'està recuperant la llista de proveïdors..."
-
-#~ msgid "Setting up account..."
-#~ msgstr "S'està configurant el compte..."
-
-#~ msgid "Setup complete."
-#~ msgstr "S'ha completat la configuració."
-
-#~ msgid "Failed to set up account, rolling back..."
-#~ msgstr "No s'ha pogut establir el compte, s'està tornant arrere..."
-
-#~ msgid "Failed to set up account."
-#~ msgstr "No s'ha pogut establir el compte."
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr ""
-#~ "El transport de correu utilitza l'encriptació «%1» i l'autenticació «%2»."
-
-#~ msgid "Mail transport account deleted."
-#~ msgstr "S'ha eliminat el transport de correu del compte."
-
-#~ msgid "Could not load config dialog for UID '%1'"
-#~ msgstr "No s'ha pogut carregar el diàleg de configuració per a l'UID «%1»"
-
-#~ msgid ""
-#~ "Protect yourself against surveillance by encrypting your Mails with "
-#~ "GnuPG. By generating or selecting a public / private key pair now mails "
-#~ "can be encrypted using the public key while only you can decrypt them "
-#~ "with your private key."
-#~ msgstr ""
-#~ "Protegiu-vos contra la vigilància encriptant els correus amb GnuPG. "
-#~ "Generant o seleccionant un parell de claus pública/privada. Ara podreu "
-#~ "encriptar el correu utilitzant la clau pública, mentre que només el "
-#~ "podreu desencriptar amb la vostra clau privada."
-
-#~ msgid ""
-#~ "<html><head/><body><p>When sending mails KMail automatically looks for "
-#~ "encryption keys of your recipients and secures the mail when keys for "
-#~ "each recipient can be found.</p><p>It also signs your mails "
-#~ "cryptographically so that it can be verified that your messages have not "
-#~ "been tampered with.</p></body></html>"
-#~ msgstr ""
-#~ "<html><head/><body><p>Quan envieu correu, KMail buscarà automàticament "
-#~ "les claus d'encriptació dels destinataris i assegurarà el correu quan "
-#~ "trobe les claus per a cada destinatari.</p><p>També signarà el correu "
-#~ "criptogràficament de manera que es puga verificar que els missatges no "
-#~ "han sigut alterats.</p></body></html>"
-
-#~ msgid "Secure outgoing emails, if possible"
-#~ msgstr "Assegura el correu electrònic eixint, si és possible"
-
-#~ msgid "Select key for this account:"
-#~ msgstr "Selecciona la clau per a este compte:"
-
-#~ msgid "Checking key publishing support ..."
-#~ msgstr "S'està comprovant si s'admet la publicació de la clau..."
-
-#~ msgid "Register &this key with your email provider"
-#~ msgstr "Registra es&ta clau amb el proveïdor de correu electrònic"
-
-#~ msgid ""
-#~ "Your email service provider supports a service to provide your public key "
-#~ "so that others can find it.\n"
-#~ "This means that your public key can be queried from your email provider "
-#~ "and others can then use it to secure their email communication with you."
-#~ msgstr ""
-#~ "El proveïdor del servei de correu electrònic admet un servei que "
-#~ "proporcione la vostra clau pública perquè els altres la puguen trobar.\n"
-#~ "Açò vol dir que la vostra clau pública es pot consultar des del vostre "
-#~ "proveïdor de correu electrònic, i llavors, els altres la podran utilitzar "
-#~ "per a assegurar la seua comunicació per correu electrònic."
-
-#~ msgid "Publish &this key on public key server"
-#~ msgstr "Publica es&ta clau al servidor de claus públic"
-
-#~ msgid ""
-#~ "Your email service provider does not support key publishing. You should "
-#~ "publish your key so that other users can retrieve it and use it to secure "
-#~ "their email communication with you.\n"
-#~ "You can alternatively publish your key on a public key server, but you "
-#~ "should be aware that your email address will be publicly listed and they "
-#~ "key cannot be removed from there, only revoked."
-#~ msgstr ""
-#~ "El proveïdor del servei de correu electrònic no admet la publicació de la "
-#~ "clau. L'haureu de publicar perquè els altres usuaris la puguen rebre i "
-#~ "utilitzar per a assegurar la seua comunicació per correu electrònic.\n"
-#~ "De manera alternativa podeu publicar-la en un servidor de claus públic, "
-#~ "però haureu de tindre en compte que la vostra adreça de correu electrònic "
-#~ "es mostrarà públicament i la clau no es podrà eliminar d'allí, només "
-#~ "revocar."
-
-#~ msgid "Loading assistant..."
-#~ msgstr "S'està carregant l'assistent..."
-
-#~ msgid ""
-#~ "With a few simple steps we create the right settings for you. Please "
-#~ "follow the steps of this wizard carefully."
-#~ msgstr ""
-#~ "Amb uns pocs senzills passos es crearà la configuració adequada per a "
-#~ "vós. Seguiu els passos d'este assistent amb cura."
-
-#~ msgid "Find pro&vider settings on the Internet"
-#~ msgstr "Busca la configuració del pro&veïdor a Internet"
-
-#~ msgid "IMAP account"
-#~ msgstr "Compte IMAP"
-
-#~ msgid "POP&3 account"
-#~ msgstr "Compte POP&3"
-
-#~ msgid ""
-#~ "Select your provider from the list below or click back if your provider "
-#~ "is not listed"
-#~ msgstr ""
-#~ "Seleccioneu el vostre proveïdor en la llista a continuació o cliqueu "
-#~ "arrere si el proveïdor no està llistat"
-
-#~ msgid "&Details..."
-#~ msgstr "&Detalls..."
-
-#~ msgid "Select which kind of account you want to create:"
-#~ msgstr "Seleccioneu quin tipus de compte voleu crear:"
-
-#~ msgid "Check for more on Internet"
-#~ msgstr "Busca'n més a Internet"
