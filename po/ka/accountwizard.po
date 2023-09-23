@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2023-02-03 16:44+0100\n"
+"PO-Revision-Date: 2023-09-22 06:36+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -52,119 +52,113 @@ msgstr "იდენტიფიკაცია წაშლილია."
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:23
 #: accountwizard/manualconfiguration.cpp:23
-#, fuzzy, kde-format
-#| msgid "IMAP, %1"
+#, kde-format
 msgid "IMAP"
-msgstr "IMAP, %1"
+msgstr "IMAP"
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:26
 #: accountwizard/manualconfiguration.cpp:23
-#, fuzzy, kde-format
-#| msgid "POP3, %1"
+#, kde-format
 msgid "POP3"
-msgstr "POP3, %1"
+msgstr "POP3"
 
 #: accountwizard/ispdb/configurationmodel.cpp:38
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
-msgstr ""
+msgstr "იქონიეთ თქვენი საქაღალდეები და ელფოსტა სინქონიზებული თქვენს სერვერთან"
 
 #: accountwizard/ispdb/configurationmodel.cpp:39
 #, kde-format
 msgid "Keep your folders and emails on your computer"
-msgstr ""
+msgstr "იქონიეთ თქვენი საქაღალდეები და ელფოსტა თქვენს კომპიუტერზე"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:29
-#, fuzzy, kde-format
-#| msgid "SMTP, %1"
+#, kde-format
 msgid "SMTP"
-msgstr "SMTP, %1"
+msgstr "SMTP"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:35
 #: accountwizard/manualconfiguration.cpp:28
 #, kde-format
 msgid "SSL/TLS"
-msgstr ""
+msgstr "ინტერნეტში"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:38
 #, kde-format
 msgid "StartTLS"
-msgstr ""
+msgstr "ინტერნეტში"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:41
 #, kde-format
 msgctxt "No security mechanism"
 msgid "None"
-msgstr ""
+msgstr "არაფერი"
 
 #: accountwizard/ispdbservice.cpp:133
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgid "Configuration found auto config file."
 msgstr "ავტოკონფიგურაცია ნაპოვნია."
 
 #: accountwizard/ispdbservice.cpp:136
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgid "Configuration found in well-known file."
-msgstr "ავტოკონფიგურაცია ნაპოვნია."
+msgstr "ავტოკონფიგურაცია ნაპოვნია კარგად ნაცნობ ფაილში."
 
 #: accountwizard/ispdbservice.cpp:139
-#, fuzzy, kde-format
-#| msgid "Lookup configuration: Mozilla database"
+#, kde-format
 msgid "Configuration found in Mozilla FAI Database."
-msgstr "კონფიგურაციის მოძებნა: Mozilla-ის ბაზა"
+msgstr "კონფიგურაცია ნაპოვნია Mozilla_ის FAI ბაზაში."
 
 #: accountwizard/manualconfiguration.cpp:23
 #, kde-format
 msgid "Kolab"
-msgstr ""
+msgstr "Kolab"
 
 #: accountwizard/manualconfiguration.cpp:28
 #, kde-format
 msgid "STARTTLS"
-msgstr ""
+msgstr "STARTTLS"
 
 #: accountwizard/manualconfiguration.cpp:28
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "არაფერი"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "Clear text"
-msgstr ""
+msgstr "სუფთა ტექსტი"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "LOGIN"
-msgstr ""
+msgstr "LOGIN"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "PLAIN"
-msgstr ""
+msgstr "PLAIN"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "CRAM-MD5"
-msgstr ""
+msgstr "CRAM-MD5"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "DIGEST-MD5"
-msgstr ""
+msgstr "DIGEST-MD5"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "NTLM"
-msgstr ""
+msgstr "NTLM"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "GSSAPI"
-msgstr ""
+msgstr "GSSAPI"
 
 #: accountwizard/resource.cpp:63 legacy/resource.cpp:74
 #, kde-format
@@ -228,27 +222,25 @@ msgstr "ფოსტის ტრანსპორტის ანგარი�
 
 #: apps/contents/ui/ConfigurationDelegate.qml:93
 #: apps/contents/ui/PersonalDataPage.qml:145
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming"
-msgstr "შემომავალი:"
+msgstr "შემომავალი"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
 #: apps/contents/ui/PersonalDataPage.qml:206
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing"
-msgstr "გამავალი:"
+msgstr "გამავალი"
 
 #: apps/contents/ui/PersonalDataPage.qml:14
 #, kde-format
 msgid "Personal Information"
-msgstr ""
+msgstr "პირადი ინფორმაცია"
 
 #: apps/contents/ui/PersonalDataPage.qml:31
 #, kde-format
 msgid "Set Up Your Existing Email Address"
-msgstr ""
+msgstr "მოირგეთ თქვენი არსებული ელფოსტის მისამართი"
 
 #: apps/contents/ui/PersonalDataPage.qml:40
 #, kde-format
@@ -256,6 +248,8 @@ msgid ""
 "To use your current email address fill in your credentials.<br />This wizard "
 "will automatically search for a working and recommended server configuration."
 msgstr ""
+"თქვენი მიმდინარე ელფოსტის გამოსაყენებლად შეავსეთ ავტორიზაციის დეტალები.<br /"
+">ოსტატი ავტომატურად მოძებნის მუშა და რეკომენდებულ სერვერის კონფიგურაციას."
 
 #: apps/contents/ui/PersonalDataPage.qml:51
 #, kde-format
@@ -266,7 +260,7 @@ msgstr "სრული სახელი:"
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
-msgstr ""
+msgstr "კვაჭი კვაჭანტირაძე"
 
 #: apps/contents/ui/PersonalDataPage.qml:61
 #, kde-format
@@ -277,7 +271,7 @@ msgstr "ელფოსტის მისამართი:"
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
-msgstr ""
+msgstr "ვითომუფროსი@მაგალითი.კომპ"
 
 #: apps/contents/ui/PersonalDataPage.qml:72
 #, kde-format
@@ -287,64 +281,55 @@ msgstr "პაროლი:"
 #: apps/contents/ui/PersonalDataPage.qml:82
 #, kde-format
 msgid "Continue"
-msgstr ""
+msgstr "გაგრძელება"
 
 #: apps/contents/ui/PersonalDataPage.qml:91
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check online for the settings needed for this email provider. Only the "
-#| "domain name part of the e-mail address will be sent over the Internet at "
-#| "this point. If this option is unchecked, the account can be set up "
-#| "manually."
+#, kde-format
 msgid ""
 "Check online for the settings needed for this email provider. Only the "
 "domain name part of the e-mail address will be sent over the Internet."
 msgstr ""
-"შეამოწმეთ ონლაინ ამ ელ.ფოსტის პროვაიდერისთვის საჭირო პარამეტრებისთვის. ამ "
-"ეტაპზე მხოლოდ ელექტრონული ფოსტის მისამართის დომენის სახელი გაიგზავნება "
-"ინტერნეტში. თუ ეს ვარიანტი არ არის შემოწმებული, ანგარიშის დაყენება "
-"შესაძლებელია ხელით."
+"შეამოწმეთ ონლაინ ამ ელ.ფოსტის პროვაიდერისთვის საჭირო პარამეტრები. ინტერნეტში "
+"მხოლოდ ელექტრონული ფოსტის მისამართის დომენის სახელი გაიგზავნება."
 
 #: apps/contents/ui/PersonalDataPage.qml:125
-#, fuzzy, kde-format
-#| msgid "No config found to edit"
+#, kde-format
 msgid "No config found from ispdb server."
-msgstr "ჩასასწორებელი კონფიგურაცია ვერ ვიპოვე"
+msgstr "Ispdb სერვერიდან კონფიგურაცია ვერ ვიპოვე."
 
 #: apps/contents/ui/PersonalDataPage.qml:140
 #, kde-format
 msgid "Server Parameters"
-msgstr ""
+msgstr "სერვერის პარამეტრები"
 
 #: apps/contents/ui/PersonalDataPage.qml:151
 #: apps/contents/ui/PersonalDataPage.qml:211
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgid "Hostname:"
-msgstr "მომხმარებელი:"
+msgstr "ჰოსტის სახელი:"
 
 #: apps/contents/ui/PersonalDataPage.qml:160
 #, kde-format
 msgid "Protocol:"
-msgstr ""
+msgstr "პროტოკოლი:"
 
 #: apps/contents/ui/PersonalDataPage.qml:169
 #: apps/contents/ui/PersonalDataPage.qml:220
 #, kde-format
 msgid "Port:"
-msgstr ""
+msgstr "პორტი:"
 
 #: apps/contents/ui/PersonalDataPage.qml:176
 #: apps/contents/ui/PersonalDataPage.qml:227
 #, kde-format
 msgid "Security:"
-msgstr ""
+msgstr "უსაფრთხოება:"
 
 #: apps/contents/ui/PersonalDataPage.qml:185
 #: apps/contents/ui/PersonalDataPage.qml:236
 #, kde-format
 msgid "Authentication Method:"
-msgstr ""
+msgstr "ავთენტიკაციის მეთოდი:"
 
 #: apps/contents/ui/PersonalDataPage.qml:194
 #: apps/contents/ui/PersonalDataPage.qml:245
@@ -355,19 +340,18 @@ msgstr "მომხმარებელი:"
 #: apps/contents/ui/PersonalDataPage.qml:256
 #, kde-format
 msgid "Recheck"
-msgstr ""
+msgstr "თავიდან შემოწმება"
 
 #: apps/contents/ui/PersonalDataPage.qml:269
 #: apps/contents/ui/PersonalDataPage.qml:311
-#, fuzzy, kde-format
-#| msgid "Add Account"
+#, kde-format
 msgid "Create Account"
-msgstr "ანგარიშის დამატება"
+msgstr "ანგარიშის შექმნა"
 
 #: apps/contents/ui/PersonalDataPage.qml:291
 #, kde-format
 msgid "Available configurations"
-msgstr ""
+msgstr "ხელმისაწვდომი კონფიგურაციები"
 
 #: apps/main.cpp:32
 #, kde-format
@@ -380,10 +364,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "PIM ანგარიშების მორგების დახმარება"
 
 #: apps/main.cpp:36
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2020 the Akonadi developers"
+#, kde-format
 msgid "(c) 2009-2023 the Akonadi developers"
-msgstr "(c) 2009-2020 Akonadi-ის პროგრამისტები, ყველა უფლება დაცულია"
+msgstr "(c) 2009-2023 Akonadi-ის პროგრამისტები"
 
 #: apps/main.cpp:39
 #, kde-format
@@ -403,12 +386,12 @@ msgstr "Laurent Montel"
 #: apps/main.cpp:41
 #, kde-format
 msgid "Carl Schwan"
-msgstr ""
+msgstr "Carl Schwan"
 
 #: apps/main.cpp:41
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "წამყვანი პროგრამისტი"
 
 #: legacy/configfile.cpp:37
 #, kde-format

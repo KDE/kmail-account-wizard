@@ -54,154 +54,148 @@ msgstr "Adsız"
 #: accountwizard/identity.cpp:78
 #, kde-format
 msgid "Identity removed."
-msgstr "Kimlik silindi."
+msgstr "Kimlik kaldırıldı."
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:23
 #: accountwizard/manualconfiguration.cpp:23
-#, fuzzy, kde-format
-#| msgid "IMAP, %1"
+#, kde-format
 msgid "IMAP"
-msgstr "IMAP, %1"
+msgstr "IMAP"
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:26
 #: accountwizard/manualconfiguration.cpp:23
-#, fuzzy, kde-format
-#| msgid "POP3, %1"
+#, kde-format
 msgid "POP3"
-msgstr "POP3, %1"
+msgstr "POP3"
 
 #: accountwizard/ispdb/configurationmodel.cpp:38
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
-msgstr ""
+msgstr "Klasörleri ve e-postaları sunucuyla eşzamanlı tut"
 
 #: accountwizard/ispdb/configurationmodel.cpp:39
 #, kde-format
 msgid "Keep your folders and emails on your computer"
-msgstr ""
+msgstr "Klasörleri ve e-postaları bilgisayarda tut"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:29
-#, fuzzy, kde-format
-#| msgid "SMTP, %1"
+#, kde-format
 msgid "SMTP"
-msgstr "SMTP, %1"
+msgstr "SMTP"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:35
 #: accountwizard/manualconfiguration.cpp:28
 #, kde-format
 msgid "SSL/TLS"
-msgstr ""
+msgstr "SSL/TLS"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:38
 #, kde-format
 msgid "StartTLS"
-msgstr ""
+msgstr "StartTLS"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:41
 #, kde-format
 msgctxt "No security mechanism"
 msgid "None"
-msgstr ""
+msgstr "Yok"
 
 #: accountwizard/ispdbservice.cpp:133
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgid "Configuration found auto config file."
-msgstr "Otomatik yapılandırma bulundu."
+msgstr "Yapılandırma, kendiliğinden yapılandırma dosyası buldu."
 
 #: accountwizard/ispdbservice.cpp:136
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgid "Configuration found in well-known file."
-msgstr "Otomatik yapılandırma bulundu."
+msgstr "Yapılandırma, iyi bilinen dosyada bulundu."
 
 #: accountwizard/ispdbservice.cpp:139
-#, fuzzy, kde-format
-#| msgid "Lookup configuration: Mozilla database"
+#, kde-format
 msgid "Configuration found in Mozilla FAI Database."
-msgstr "Arama yapılandırması: Mozilla veritabanı"
+msgstr "Yapılandırma, Mozilla FAI veritabanında bulundu."
 
 #: accountwizard/manualconfiguration.cpp:23
 #, kde-format
 msgid "Kolab"
-msgstr ""
+msgstr "Kolab"
 
 #: accountwizard/manualconfiguration.cpp:28
 #, kde-format
 msgid "STARTTLS"
-msgstr ""
+msgstr "STARTTLS"
 
 #: accountwizard/manualconfiguration.cpp:28
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Yok"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "Clear text"
-msgstr ""
+msgstr "Metni temizle"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "LOGIN"
-msgstr ""
+msgstr "LOGIN"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "PLAIN"
-msgstr ""
+msgstr "PLAIN"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "CRAM-MD5"
-msgstr ""
+msgstr "CRAM-MD5"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "DIGEST-MD5"
-msgstr ""
+msgstr "DIGEST-MD5"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "NTLM"
-msgstr ""
+msgstr "NTLM"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "GSSAPI"
-msgstr ""
+msgstr "GSSAPI"
 
 #: accountwizard/resource.cpp:63 legacy/resource.cpp:74
 #, kde-format
 msgid "Resource type '%1' is not available."
-msgstr "Kaynak türü '%1' mevcut değil."
+msgstr "Özkaynak türü '%1' kullanılabilir değil."
 
 #: accountwizard/resource.cpp:75 legacy/resource.cpp:88
 #, kde-format
 msgid "Resource '%1' is already set up."
-msgstr "Kaynak türü '%1' zaten ayarlanmış."
+msgstr "Özkaynak türü '%1' halihazırda ayarlandı."
 
 #: accountwizard/resource.cpp:82 legacy/resource.cpp:94
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr "'%1' için kaynak örneği oluşturuluyor..."
+msgstr "'%1' için özkaynak örneği oluşturuluyor..."
 
 #: accountwizard/resource.cpp:91 legacy/resource.cpp:103
 #, kde-format
 msgid "Failed to create resource instance: %1"
-msgstr "Kaynak örneği oluşturulamadı: %1"
+msgstr "Özkaynak örneği oluşturulamadı: %1"
 
 #: accountwizard/resource.cpp:98 legacy/resource.cpp:110
 #, kde-format
 msgid "Configuring resource instance..."
-msgstr "Kaynak örneği yapılandırılıyor..."
+msgstr "Özkaynak örneği yapılandırılıyor..."
 
 #: accountwizard/resource.cpp:102 legacy/resource.cpp:114
 #, kde-format
 msgid "Unable to configure resource instance."
-msgstr "Kaynak örneği yapılandırılamadı."
+msgstr "Özkaynak örneği yapılandırılamadı."
 
 #: accountwizard/resource.cpp:118 legacy/resource.cpp:129
 #, kde-format
@@ -221,7 +215,7 @@ msgstr "Ayarlar kaydedilemedi: %1"
 #: accountwizard/resource.cpp:137 legacy/resource.cpp:151
 #, kde-format
 msgid "Resource setup completed."
-msgstr "Kaynak kurulumu tamamlandı."
+msgstr "Özkaynak kurulumu tamamlandı."
 
 #: accountwizard/transport.cpp:23
 #, kde-format
@@ -235,27 +229,25 @@ msgstr "Posta taşıma hesabı ayarlandı."
 
 #: apps/contents/ui/ConfigurationDelegate.qml:93
 #: apps/contents/ui/PersonalDataPage.qml:145
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming"
-msgstr "Gelen:"
+msgstr "Gelen"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
 #: apps/contents/ui/PersonalDataPage.qml:206
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing"
-msgstr "Giden:"
+msgstr "Giden"
 
 #: apps/contents/ui/PersonalDataPage.qml:14
 #, kde-format
 msgid "Personal Information"
-msgstr ""
+msgstr "Kişisel Bilgiler"
 
 #: apps/contents/ui/PersonalDataPage.qml:31
 #, kde-format
 msgid "Set Up Your Existing Email Address"
-msgstr ""
+msgstr "Var Olan E-posta Adresinizi Ayarlayın"
 
 #: apps/contents/ui/PersonalDataPage.qml:40
 #, kde-format
@@ -263,6 +255,8 @@ msgid ""
 "To use your current email address fill in your credentials.<br />This wizard "
 "will automatically search for a working and recommended server configuration."
 msgstr ""
+"Geçerli e-posta adresinizi kullanmak için kimlik bilgilerinizi doldurun.<br /"
+">Bu sihirbaz, kendiliğinden önerilen sunucu yapılandırmasını arayacaktır."
 
 #: apps/contents/ui/PersonalDataPage.qml:51
 #, kde-format
@@ -273,7 +267,7 @@ msgstr "Tam ad:"
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
-msgstr ""
+msgstr "Gökhan İLTERİŞ"
 
 #: apps/contents/ui/PersonalDataPage.qml:61
 #, kde-format
@@ -284,7 +278,7 @@ msgstr "E-posta adresi:"
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
-msgstr ""
+msgstr "goekhan@ilteris.com"
 
 #: apps/contents/ui/PersonalDataPage.qml:72
 #, kde-format
@@ -294,63 +288,55 @@ msgstr "Parola:"
 #: apps/contents/ui/PersonalDataPage.qml:82
 #, kde-format
 msgid "Continue"
-msgstr ""
+msgstr "Sürdür"
 
 #: apps/contents/ui/PersonalDataPage.qml:91
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check online for the settings needed for this email provider. Only the "
-#| "domain name part of the e-mail address will be sent over the Internet at "
-#| "this point. If this option is unchecked, the account can be set up "
-#| "manually."
+#, kde-format
 msgid ""
 "Check online for the settings needed for this email provider. Only the "
 "domain name part of the e-mail address will be sent over the Internet."
 msgstr ""
-"Bu e-posta sağlayıcısı için gereken ayarları internetten denetleyin. Bu "
-"noktada yalnızca e-posta adresinin etki alanı adı İnternet üzerinden "
-"gönderilir. Bu seçenek işaretli değilse hesap el ile ayarlanabilir."
+"Bu e-posta sağlayıcısı için gerekli olan ayarları çevrimiçi arayın. E-posta "
+"adresinin yalnızca alan adı kısmı İnternet üzerinden gönderilir."
 
 #: apps/contents/ui/PersonalDataPage.qml:125
-#, fuzzy, kde-format
-#| msgid "No config found to edit"
+#, kde-format
 msgid "No config found from ispdb server."
-msgstr "Düzenlenecek yapılandırma bulunamadı"
+msgstr "ispdb sunucusunda yapılandırma bulunamadı."
 
 #: apps/contents/ui/PersonalDataPage.qml:140
 #, kde-format
 msgid "Server Parameters"
-msgstr ""
+msgstr "Sunucu Parametreleri"
 
 #: apps/contents/ui/PersonalDataPage.qml:151
 #: apps/contents/ui/PersonalDataPage.qml:211
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgid "Hostname:"
-msgstr "Kullanıcı adı:"
+msgstr "Makine adı:"
 
 #: apps/contents/ui/PersonalDataPage.qml:160
 #, kde-format
 msgid "Protocol:"
-msgstr ""
+msgstr "Protokol:"
 
 #: apps/contents/ui/PersonalDataPage.qml:169
 #: apps/contents/ui/PersonalDataPage.qml:220
 #, kde-format
 msgid "Port:"
-msgstr ""
+msgstr "Kapı:"
 
 #: apps/contents/ui/PersonalDataPage.qml:176
 #: apps/contents/ui/PersonalDataPage.qml:227
 #, kde-format
 msgid "Security:"
-msgstr ""
+msgstr "Güvenlik:"
 
 #: apps/contents/ui/PersonalDataPage.qml:185
 #: apps/contents/ui/PersonalDataPage.qml:236
 #, kde-format
 msgid "Authentication Method:"
-msgstr ""
+msgstr "Kimlik doğrulama yöntemi:"
 
 #: apps/contents/ui/PersonalDataPage.qml:194
 #: apps/contents/ui/PersonalDataPage.qml:245
@@ -361,7 +347,7 @@ msgstr "Kullanıcı adı:"
 #: apps/contents/ui/PersonalDataPage.qml:256
 #, kde-format
 msgid "Recheck"
-msgstr ""
+msgstr "Yeniden Denetle"
 
 #: apps/contents/ui/PersonalDataPage.qml:269
 #: apps/contents/ui/PersonalDataPage.qml:311
@@ -372,7 +358,7 @@ msgstr "Hesap Oluştur"
 #: apps/contents/ui/PersonalDataPage.qml:291
 #, kde-format
 msgid "Available configurations"
-msgstr ""
+msgstr "Kullanılabilir yapılandırmalar"
 
 #: apps/main.cpp:32
 #, kde-format
@@ -385,10 +371,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "Kişisel Bilgi Yöneticisi hesaplarını yapılandırmaya yardım eder"
 
 #: apps/main.cpp:36
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2020 the Akonadi developers"
+#, kde-format
 msgid "(c) 2009-2023 the Akonadi developers"
-msgstr "(c) 2009-2020 Akonadi geliştiricileri"
+msgstr "(c) 2009-2023 Akonadi geliştiricileri"
 
 #: apps/main.cpp:39
 #, kde-format
@@ -408,12 +393,12 @@ msgstr "Laurent Montel"
 #: apps/main.cpp:41
 #, kde-format
 msgid "Carl Schwan"
-msgstr ""
+msgstr "Carl Schwan"
 
 #: apps/main.cpp:41
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Bakımcı"
 
 #: legacy/configfile.cpp:37
 #, kde-format
@@ -448,12 +433,12 @@ msgstr "Hesap Sihirbazı"
 #: legacy/cryptopage.cpp:81 legacy/cryptopage.cpp:102
 #, kde-format
 msgid "Error while generating new key pair for your account %1: %2"
-msgstr "Hesabınız %1 için yeni anahtar çifti oluşturulurken hata: %2"
+msgstr "%1 hesabınız için yeni anahtar çifti oluşturulurken hata: %2"
 
 #: legacy/cryptopage.cpp:257
 #, kde-format
 msgid "Could not detect valid key type"
-msgstr "Geçerli anahtar türü tespit edilemedi"
+msgstr "Geçerli anahtar türü algılanamadı"
 
 #: legacy/cryptopage.cpp:257 legacy/cryptopage.cpp:266
 #: legacy/cryptopage.cpp:282 legacy/cryptopage.cpp:289
@@ -469,12 +454,12 @@ msgstr "Sertifika dosyasından veri okunamadı: %1"
 #: legacy/cryptopage.cpp:281
 #, kde-format
 msgid "Failed to import key: %1"
-msgstr "Anahtar alma başarısız: %1"
+msgstr "Anahtar içe aktarılamadı: %1"
 
 #: legacy/cryptopage.cpp:289
 #, kde-format
 msgid "Failed to import key."
-msgstr "Anahtar alma başarısız."
+msgstr "Anahtar içe aktarılamadı."
 
 #: legacy/cryptopage.cpp:316
 #, kde-format
@@ -484,12 +469,12 @@ msgstr "Anahtar yok"
 #: legacy/cryptopage.cpp:317
 #, kde-format
 msgid "Generate a new key pair"
-msgstr "Yeni bir anahtar çifti oluştur"
+msgstr "Yeni bir anahtar çifti üret"
 
 #: legacy/cryptopage.cpp:318
 #, kde-format
 msgid "Import a key"
-msgstr "Bir anahtar al"
+msgstr "Bir anahtar içe aktar"
 
 #: legacy/cryptopage.cpp:425
 #, kde-format
@@ -504,7 +489,7 @@ msgstr "Herhangi bir dosya"
 #: legacy/cryptopage.cpp:429
 #, kde-format
 msgid "Select Certificate File"
-msgstr "Sertifika Dosyasını Seç"
+msgstr "Sertifika Dosyası Seç"
 
 #: legacy/cryptopage.cpp:435
 #, kde-format
@@ -514,7 +499,7 @@ msgstr "Anahtar içe aktarılıyor..."
 #: legacy/ispdb.cpp:367
 #, kde-format
 msgid "Lookup configuration: Email provider"
-msgstr "Arama yapılandırması: E-posta sağlayıcı"
+msgstr "Arama yapılandırması: E-posta sağlayıcısı"
 
 #: legacy/ispdb.cpp:370
 #, kde-format
@@ -529,32 +514,32 @@ msgstr "Arama yapılandırması: Mozilla veritabanı"
 #: legacy/key.cpp:66
 #, kde-format
 msgid "Skipping key publishing"
-msgstr "Anahtar yayınlama atlanıyor"
+msgstr "Anahtar yayımlama atlanıyor"
 
 #: legacy/key.cpp:80 legacy/key.cpp:201
 #, kde-format
 msgid "Publishing OpenPGP key..."
-msgstr "OpenPGP anahtarı yayınlanıyor..."
+msgstr "OpenPGP anahtarı yayımlanıyor..."
 
 #: legacy/key.cpp:94 legacy/key.cpp:121 legacy/key.cpp:191
 #, kde-format
 msgid "Key publishing was canceled."
-msgstr "Anahtar yayınlama iptal edildi."
+msgstr "Anahtar yayımlama iptal edildi."
 
 #: legacy/key.cpp:100
 #, kde-format
 msgid "Key publishing failed: not online, or GnuPG too old."
-msgstr "Anahtar yayınlama başarısız: çevrimiçi değil veya GnuPG çok eski."
+msgstr "Anahtar yayımlama başarısız: Çevrimiçi değil veya GnuPG çok eski."
 
 #: legacy/key.cpp:103
 #, kde-format
 msgid "Your email provider does not support key publishing."
-msgstr "E-posta sağlayıcınız anahtar yayınlamayı desteklemiyor."
+msgstr "E-posta sağlayıcınız anahtar yayımlamayı desteklemiyor."
 
 #: legacy/key.cpp:126
 #, kde-format
 msgid "An error occurred while creating key publishing request."
-msgstr "Anahtar yayınlama talebi oluşturulurken bir hata oluştu."
+msgstr "Anahtar yayımlama talebi oluşturulurken bir hata oluştu."
 
 #: legacy/key.cpp:149
 #, kde-format
@@ -564,27 +549,27 @@ msgstr "Anahtar yayınlama hatası: Posta taşıması yapılandırılmamış"
 #: legacy/key.cpp:162
 #, kde-format
 msgid "Key publishing error: failed to create request email"
-msgstr "Anahtar yayınlama hatası: talep e-postası oluşturulamadı"
+msgstr "Anahtar yayımlama hatası: Talep e-postası oluşturulamadı"
 
 #: legacy/key.cpp:193
 #, kde-format
 msgid "Failed to send key publishing request: %1"
-msgstr "Anahtar yayınlama talebi gönderme başarısız: %1"
+msgstr "Anahtar yayımlama talebini gönderme başarısız: %1"
 
 #: legacy/key.cpp:195
 #, kde-format
 msgid "Key publishing request sent."
-msgstr "Anahtar yayınlama talebi gönderildi."
+msgstr "Anahtar yayımlama talebi gönderildi."
 
 #: legacy/key.cpp:231
 #, kde-format
 msgid "Failed to publish the key."
-msgstr "Anahtar yayınlama başarısız."
+msgstr "Anahtar yayımlanamadı."
 
 #: legacy/key.cpp:237
 #, kde-format
 msgid "Key has been published on %1"
-msgstr "Anahtar %1 üzerinde yayınlandı"
+msgstr "Anahtar, %1 üzerinde yayımlandı"
 
 #: legacy/ldap.cpp:37
 #, kde-format
@@ -619,7 +604,7 @@ msgstr "Düzenlenecek yapılandırma bulunamadı"
 #: legacy/resource.cpp:167
 #, kde-format
 msgid "Removed resource instance for '%1'."
-msgstr "'%1' için kaynak örneği kaldırıldı."
+msgstr "'%1' için özkaynak örneği kaldırıldı."
 
 #: legacy/servertest.cpp:50
 #, kde-format
@@ -635,212 +620,22 @@ msgstr ""
 #: legacy/servertest.cpp:53
 #, kde-format
 msgid "Autodetecting settings failed"
-msgstr "Ayarları otomatik tespit etme başarısız"
+msgstr "Ayarları kendiliğinden algılama başarısız"
 
 #: legacy/setupautoconfigkolabfreebusy.cpp:74
 #: legacy/setupautoconfigkolabldap.cpp:72 legacy/setupispdb.cpp:136
 #, kde-format
 msgid "Searching for autoconfiguration..."
-msgstr "Otomatik yapılandırma aranıyor..."
+msgstr "Kendiliğinden yapılandırma aranıyor..."
 
 #: legacy/setupautoconfigkolabfreebusy.cpp:99
 #: legacy/setupautoconfigkolabldap.cpp:97 legacy/setupispdb.cpp:161
 #, kde-format
 msgid "Autoconfiguration found."
-msgstr "Otomatik yapılandırma bulundu."
+msgstr "Kendiliğinden yapılandırma bulundu."
 
 #: legacy/setupautoconfigkolabfreebusy.cpp:101
 #: legacy/setupautoconfigkolabldap.cpp:99 legacy/setupispdb.cpp:163
 #, kde-format
 msgid "Autoconfiguration failed."
-msgstr "Otomatik yapılandırma başarısız oldu."
-
-#~ msgid "Provide personal data"
-#~ msgstr "Kişisel verinizi girin"
-
-#~ msgid "Secure your Communication"
-#~ msgstr "Bağlantınızı Güvende Tutun"
-
-#~ msgid "Select Account Type"
-#~ msgstr "Hesap Türünü Seç"
-
-#~ msgid "Select Provider"
-#~ msgstr "Sağlayıcı Seç"
-
-#~ msgid "Loading Assistant"
-#~ msgstr "Yardımcı Yükleniyor"
-
-#~ msgid "Setting up Account"
-#~ msgstr "Hesap Ayarlanıyor"
-
-#~ msgid "ISPDB Assistant"
-#~ msgstr "ISPDB Yardımcısı"
-
-#~ msgid "(c) 2010 Omat Holding B.V."
-#~ msgstr "(c) 2010 Omat Holding B.V."
-
-#~ msgid "Tom Albers"
-#~ msgstr "Tom Albers"
-
-#~ msgid "Tries to fetch the settings for that email address"
-#~ msgstr "E-posta adresi için ayarları almaya çalış"
-
-#~ msgid "No script specified in '%1'."
-#~ msgstr "'%1' içinde hiçbir betik belirtilmemiş."
-
-#~ msgid "Unable to load assistant: File '%1' does not exist."
-#~ msgstr "Yardımcı yüklenemiyor: '%1' dosyası mevcut değil."
-
-#~ msgid "Loading script '%1'..."
-#~ msgstr "Betik dosyası '%1' yükleniyor..."
-
-#~ msgid "Failed to load script: '%1'."
-#~ msgstr "Betik yükleme başarısız: '%1'."
-
-#~ msgid "Only offer accounts that support the given type."
-#~ msgstr "Yalnızca verilen türü destekleyen hesapları sun."
-
-#~ msgid "Run the specified assistant."
-#~ msgstr "Özelleşmiş yardımcıyı çalıştır."
-
-#~ msgid "unpack fullpath on startup and launch that assistant"
-#~ msgstr "başlangıçta tüm yolu aç ve yardımcıyı çalıştır"
-
-#~ msgid "Returns types of assistants"
-#~ msgstr "Asistan türlerini döndürür"
-
-#~ msgid "The following assistants are available:"
-#~ msgstr "Aşağıdaki asistanlar kullanılabilir:"
-
-#~ msgid "Fetching provider list..."
-#~ msgstr "Sağlayıcı listesi alınıyor..."
-
-#~ msgid "Setting up account..."
-#~ msgstr "Hesap ayarlanıyor..."
-
-#~ msgid "Setup complete."
-#~ msgstr "Ayarlama tamamlandı."
-
-#~ msgid "Failed to set up account, rolling back..."
-#~ msgstr "Hesap ayarlaması başarısız, geri alınıyor..."
-
-#~ msgid "Failed to set up account."
-#~ msgstr "Hesap ayarlaması başarısız."
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr ""
-#~ "Posta taşıması şifreleme olarak '%1' ve kimlik doğrulama için '%2' "
-#~ "kullanır."
-
-#~ msgid "Mail transport account deleted."
-#~ msgstr "Posta taşıma hesabı silindi."
-
-#~ msgid "Could not load config dialog for UID '%1'"
-#~ msgstr "'%1' UID için yapılandırma penceresi yüklenemedi"
-
-#~ msgid ""
-#~ "Protect yourself against surveillance by encrypting your Mails with "
-#~ "GnuPG. By generating or selecting a public / private key pair now mails "
-#~ "can be encrypted using the public key while only you can decrypt them "
-#~ "with your private key."
-#~ msgstr ""
-#~ "Kendinizi gözetimlere karşı, postalarınızı GnuPG ile şifreleyerek "
-#~ "koruyun. Bir genel/özel anahtar çifti oluşturarak ya da seçerek, "
-#~ "postalarınız genel anahtar ile şifrelenir ve yalnızca özel anahtarınızla "
-#~ "siz tarafından şifresi çözülebilir."
-
-#~ msgid ""
-#~ "<html><head/><body><p>When sending mails KMail automatically looks for "
-#~ "encryption keys of your recipients and secures the mail when keys for "
-#~ "each recipient can be found.</p><p>It also signs your mails "
-#~ "cryptographically so that it can be verified that your messages have not "
-#~ "been tampered with.</p></body></html>"
-#~ msgstr ""
-#~ "<html><head/><body><p>Postalar gönderilirken, K Posta alıcılarınızın "
-#~ "şifreleme anahtarlarını arar ve anahtarı bulunan her alıcı için postayı "
-#~ "güvence altına alır.</p><p>Ayrıca postalarınızı kriptografik olarak "
-#~ "imzalayarak, iletilerinizin değiştirilmediğinin doğrulanmasına olanak "
-#~ "tanır.</p></body></html>"
-
-#~ msgid "Secure outgoing emails, if possible"
-#~ msgstr "Olanaklıysa giden e-postaları güvene al"
-
-#~ msgid "Select key for this account:"
-#~ msgstr "Bu hesap için anahtar seç:"
-
-#~ msgid "Checking key publishing support ..."
-#~ msgstr "Anahtar yayınlama desteği denetleniyor..."
-
-#~ msgid "Register &this key with your email provider"
-#~ msgstr "Bu anahtarı e-posta sağlayıcısına &kaydet"
-
-#~ msgid ""
-#~ "Your email service provider supports a service to provide your public key "
-#~ "so that others can find it.\n"
-#~ "This means that your public key can be queried from your email provider "
-#~ "and others can then use it to secure their email communication with you."
-#~ msgstr ""
-#~ "E-posta hizmet sağlayıcınız, genel anahtarınızı sunan ve diğerlerinin "
-#~ "bulmasını sağlayan bir hizmet destekliyor.\n"
-#~ "Bu da, genel anahtarınızın e-posta sağlayıcınızdan sorgulanabileceği ve "
-#~ "diğerlerinin sizinle güvenli e-posta iletişimi için kullanabilmesine "
-#~ "olanak tanıyor."
-
-#~ msgid "Publish &this key on public key server"
-#~ msgstr "Bu anahtarı genel anahtar sunucusuna &yayımla"
-
-#~ msgid ""
-#~ "Your email service provider does not support key publishing. You should "
-#~ "publish your key so that other users can retrieve it and use it to secure "
-#~ "their email communication with you.\n"
-#~ "You can alternatively publish your key on a public key server, but you "
-#~ "should be aware that your email address will be publicly listed and they "
-#~ "key cannot be removed from there, only revoked."
-#~ msgstr ""
-#~ "E-posta sağlayıcınız anahtar yayımlamayı desteklemiyor. Anahtarınızı "
-#~ "yayımlamalısınız ki, diğer kullanıcılar anahtarınızı edinip sizinle e-"
-#~ "posta iletişimini güven altına alabilsin.\n"
-#~ "Anahtarınızı alternatif olarak bir ortak anahtar sunucusunda da "
-#~ "yayınlayabilirsiniz; ancak bu durumda, e-posta adresiniz herkese açık "
-#~ "olarak listelenecektir ve anahtar buradan kaldırılamaz; yalnızca iptal "
-#~ "edilebilir."
-
-#~ msgid "Loading assistant..."
-#~ msgstr "Yardımcı yükleniyor..."
-
-#~ msgid ""
-#~ "With a few simple steps we create the right settings for you. Please "
-#~ "follow the steps of this wizard carefully."
-#~ msgstr ""
-#~ "Birkaç adımda sizin için doğru ayarları oluşturacağız. Sonraki adımları "
-#~ "dikkatlice izleyin."
-
-#~ msgid "Find pro&vider settings on the Internet"
-#~ msgstr "Sağlayıcı ayarlarını İnternet'te &bul"
-
-#~ msgid "IMAP account"
-#~ msgstr "IMAP hesabı"
-
-#~ msgid "POP&3 account"
-#~ msgstr "POP&3 hesabı"
-
-#~ msgid "Add Account"
-#~ msgstr "Hesap Ekle"
-
-#~ msgid ""
-#~ "Select your provider from the list below or click back if your provider "
-#~ "is not listed"
-#~ msgstr ""
-#~ "Aşağıdaki listeden sağlayıcınızı seçin veya listede yoksa geri tıklayın"
-
-#~ msgid "&Details..."
-#~ msgstr "&Ayrıntılar..."
-
-#~ msgid "Select which kind of account you want to create:"
-#~ msgstr "Oluşturmak istediğiniz hesap türünü seçin:"
-
-#~ msgid "Check for more on Internet"
-#~ msgstr "İnternette başkalarına da bak"
-
-#~ msgid "Unknown security setting for LDAP server"
-#~ msgstr "LDAP sunucusu için bilinmeyen güvenlik ayarı"
+msgstr "Kendiliğinden yapılandırma başarısız oldu."
