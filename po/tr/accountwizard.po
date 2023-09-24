@@ -632,10 +632,10 @@ msgstr "Kendiliğinden yapılandırma aranıyor..."
 #: legacy/setupautoconfigkolabldap.cpp:97 legacy/setupispdb.cpp:161
 #, kde-format
 msgid "Autoconfiguration found."
-msgstr "Kendiliğinden yapılandırma bulundu."
+msgstr "Otomatik yapılandırma bulundu."
 
 #: legacy/setupautoconfigkolabfreebusy.cpp:101
 #: legacy/setupautoconfigkolabldap.cpp:99 legacy/setupispdb.cpp:163
 #, kde-format
 msgid "Autoconfiguration failed."
-msgstr "Kendiliğinden yapılandırma başarısız oldu."
+msgstr "Otomatik yapılandırma başarısız oldu."
