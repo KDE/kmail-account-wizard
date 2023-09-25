@@ -361,7 +361,8 @@ msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:269
 #: apps/contents/ui/PersonalDataPage.qml:311
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Account"
 msgid "Create Account"
 msgstr "Crear unha conta"
 
