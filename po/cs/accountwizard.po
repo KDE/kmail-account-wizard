@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2021-08-16 12:38+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -54,18 +54,16 @@ msgstr "Identita odstraněna."
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:23
 #: accountwizard/manualconfiguration.cpp:23
-#, fuzzy, kde-format
-#| msgid "IMAP, %1"
+#, kde-format
 msgid "IMAP"
-msgstr "IMAP, %1"
+msgstr "IMAP"
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:26
 #: accountwizard/manualconfiguration.cpp:23
-#, fuzzy, kde-format
-#| msgid "POP3, %1"
+#, kde-format
 msgid "POP3"
-msgstr "POP3, %1"
+msgstr "POP3"
 
 #: accountwizard/ispdb/configurationmodel.cpp:38
 #, kde-format
@@ -78,16 +76,15 @@ msgid "Keep your folders and emails on your computer"
 msgstr ""
 
 #: accountwizard/ispdb/serverconfiguration.cpp:29
-#, fuzzy, kde-format
-#| msgid "SMTP, %1"
+#, kde-format
 msgid "SMTP"
-msgstr "SMTP, %1"
+msgstr "SMTP"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:35
 #: accountwizard/manualconfiguration.cpp:28
 #, kde-format
 msgid "SSL/TLS"
-msgstr ""
+msgstr "SSL/TLS"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:38
 #, kde-format
@@ -101,10 +98,9 @@ msgid "None"
 msgstr ""
 
 #: accountwizard/ispdbservice.cpp:133
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration failed."
+#, kde-format
 msgid "Configuration found auto config file."
-msgstr "Automatické nastavení selhalo."
+msgstr ""
 
 #: accountwizard/ispdbservice.cpp:136
 #, kde-format
@@ -119,52 +115,53 @@ msgstr ""
 #: accountwizard/manualconfiguration.cpp:23
 #, kde-format
 msgid "Kolab"
-msgstr ""
+msgstr "Kolab"
 
 #: accountwizard/manualconfiguration.cpp:28
 #, kde-format
 msgid "STARTTLS"
-msgstr ""
+msgstr "STARTTLS"
 
+# žádné parametry funkce v inspektoru funkcí
 #: accountwizard/manualconfiguration.cpp:28
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Nic"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "Clear text"
-msgstr ""
+msgstr "Čistý text"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "LOGIN"
-msgstr ""
+msgstr "LOGIN"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "PLAIN"
-msgstr ""
+msgstr "PLAIN"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "CRAM-MD5"
-msgstr ""
+msgstr "CRAM-MD5"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "DIGEST-MD5"
-msgstr ""
+msgstr "DIGEST-MD5"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "NTLM"
-msgstr ""
+msgstr "NTLM"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "GSSAPI"
-msgstr ""
+msgstr "GSSAPI"
 
 #: accountwizard/resource.cpp:63 legacy/resource.cpp:74
 #, kde-format
@@ -228,22 +225,20 @@ msgstr "Účet pro přenos pošty nastaven."
 
 #: apps/contents/ui/ConfigurationDelegate.qml:93
 #: apps/contents/ui/PersonalDataPage.qml:145
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming"
-msgstr "Příchozí:"
+msgstr "Příchozí"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
 #: apps/contents/ui/PersonalDataPage.qml:206
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing"
-msgstr "Odchozí:"
+msgstr "Odchozí"
 
 #: apps/contents/ui/PersonalDataPage.qml:14
 #, kde-format
 msgid "Personal Information"
-msgstr ""
+msgstr "Osobní informace"
 
 #: apps/contents/ui/PersonalDataPage.qml:31
 #, kde-format
@@ -287,22 +282,14 @@ msgstr "Heslo:"
 #: apps/contents/ui/PersonalDataPage.qml:82
 #, kde-format
 msgid "Continue"
-msgstr ""
+msgstr "Pokračovat"
 
 #: apps/contents/ui/PersonalDataPage.qml:91
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check online for the settings needed for this email provider. Only the "
-#| "domain name part of the e-mail address will be sent over the Internet at "
-#| "this point. If this option is unchecked, the account can be set up "
-#| "manually."
+#, kde-format
 msgid ""
 "Check online for the settings needed for this email provider. Only the "
 "domain name part of the e-mail address will be sent over the Internet."
 msgstr ""
-"Zjistí online nastavení potřebná pro tohoto poskytovatele e-mailu. V tomto "
-"případě bude přes internet odesláno pouze doménové jméno e-mailové adresy. "
-"Pokud je tato volba vypnuta, může být účet nastaven ručně."
 
 #: apps/contents/ui/PersonalDataPage.qml:125
 #, kde-format
@@ -316,33 +303,32 @@ msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:151
 #: apps/contents/ui/PersonalDataPage.qml:211
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgid "Hostname:"
-msgstr "Uživatelské jméno:"
+msgstr "Název počítače:"
 
 #: apps/contents/ui/PersonalDataPage.qml:160
 #, kde-format
 msgid "Protocol:"
-msgstr ""
+msgstr "Protokol:"
 
 #: apps/contents/ui/PersonalDataPage.qml:169
 #: apps/contents/ui/PersonalDataPage.qml:220
 #, kde-format
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
 #: apps/contents/ui/PersonalDataPage.qml:176
 #: apps/contents/ui/PersonalDataPage.qml:227
 #, kde-format
 msgid "Security:"
-msgstr ""
+msgstr "Zabezpečení:"
 
 #: apps/contents/ui/PersonalDataPage.qml:185
 #: apps/contents/ui/PersonalDataPage.qml:236
 #, kde-format
 msgid "Authentication Method:"
-msgstr ""
+msgstr "Metoda ověření:"
 
 #: apps/contents/ui/PersonalDataPage.qml:194
 #: apps/contents/ui/PersonalDataPage.qml:245
@@ -353,14 +339,13 @@ msgstr "Uživatelské jméno:"
 #: apps/contents/ui/PersonalDataPage.qml:256
 #, kde-format
 msgid "Recheck"
-msgstr ""
+msgstr "Zopakovat kontrolu"
 
 #: apps/contents/ui/PersonalDataPage.qml:269
 #: apps/contents/ui/PersonalDataPage.qml:311
-#, fuzzy, kde-format
-#| msgid "Add Account"
+#, kde-format
 msgid "Create Account"
-msgstr "Přidat účet"
+msgstr "Vytvořit účet"
 
 #: apps/contents/ui/PersonalDataPage.qml:291
 #, kde-format
@@ -378,10 +363,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "Pomáhá s nastavením účtů pro PIM"
 
 #: apps/main.cpp:36
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2020 the Akonadi developers"
+#, kde-format
 msgid "(c) 2009-2023 the Akonadi developers"
-msgstr "(c) 2009-2020 vývojáři Akonadi"
+msgstr ""
 
 #: apps/main.cpp:39
 #, kde-format
@@ -401,12 +385,12 @@ msgstr "Laurent Montel"
 #: apps/main.cpp:41
 #, kde-format
 msgid "Carl Schwan"
-msgstr ""
+msgstr "Carl Schwan"
 
 #: apps/main.cpp:41
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Správce"
 
 #: legacy/configfile.cpp:37
 #, kde-format
@@ -647,106 +631,3 @@ msgstr ""
 #, kde-format
 msgid "Autoconfiguration failed."
 msgstr "Automatické nastavení selhalo."
-
-#~ msgid "Provide personal data"
-#~ msgstr "Poskytněte osobní data"
-
-#~ msgid "Select Account Type"
-#~ msgstr "Vybrat typ účtu"
-
-#~ msgid "Select Provider"
-#~ msgstr "Zvolte poskytovatele"
-
-#~ msgid "Loading Assistant"
-#~ msgstr "Načítá se asistent"
-
-#~ msgid "Setting up Account"
-#~ msgstr "Nastavuji účet"
-
-#~ msgid "ISPDB Assistant"
-#~ msgstr "Asistent ISPDB"
-
-#~ msgid "(c) 2010 Omat Holding B.V."
-#~ msgstr "(c) 2010 Omat Holding B.V."
-
-#~ msgid "Tom Albers"
-#~ msgstr "Tom Albers"
-
-#~ msgid "No script specified in '%1'."
-#~ msgstr "Nezadán skript v '%1'."
-
-#~ msgid "Unable to load assistant: File '%1' does not exist."
-#~ msgstr "Nelze načíst asistenta. Soubor '%1' neexistuje."
-
-#~ msgid "Loading script '%1'..."
-#~ msgstr "Načítám skript '%1'..."
-
-#~ msgid "Failed to load script: '%1'."
-#~ msgstr "Selhalo načtení skriptu '%1'."
-
-#~ msgid "Only offer accounts that support the given type."
-#~ msgstr "Nabídnout pouze účty, které poskytují daný typ."
-
-#~ msgid "Run the specified assistant."
-#~ msgstr "Spustit zvoleného asistenta"
-
-#~ msgid "unpack fullpath on startup and launch that assistant"
-#~ msgstr "rozbalit fullpath při startu a spustit průvodce"
-
-#~ msgid "Returns types of assistants"
-#~ msgstr "Vrací typy asistentů"
-
-#~ msgid "The following assistants are available:"
-#~ msgstr "Jsou dostupní následující asistenti:"
-
-#~ msgid "Fetching provider list..."
-#~ msgstr "Stahuji seznam poskytovatelů..."
-
-#~ msgid "Setting up account..."
-#~ msgstr "Nastavuji účet..."
-
-#~ msgid "Setup complete."
-#~ msgstr "Nastavení dokončeno."
-
-#~ msgid "Failed to set up account, rolling back..."
-#~ msgstr "Selhalo nastavení účtu. Vracím se..."
-
-#~ msgid "Failed to set up account."
-#~ msgstr "Selhalo nastavení účtu."
-
-#~ msgid "Mail transport account deleted."
-#~ msgstr "Účet pro přenos pošty smazán."
-
-#~ msgid "Loading assistant..."
-#~ msgstr "Načítá se asistent..."
-
-#~ msgid ""
-#~ "With a few simple steps we create the right settings for you. Please "
-#~ "follow the steps of this wizard carefully."
-#~ msgstr ""
-#~ "Pomocí několika jednoduchých kroků pro vás vytvoříme správné nastavení. "
-#~ "Prosím, pečlivě následujte kroky průvodce."
-
-#~ msgid "Find pro&vider settings on the Internet"
-#~ msgstr "Najít nastavení poskyto&vatele na internetu"
-
-#~ msgid "IMAP account"
-#~ msgstr "Účet IMAP"
-
-#~ msgid "POP&3 account"
-#~ msgstr "Účet POP&3"
-
-#~ msgid ""
-#~ "Select your provider from the list below or click back if your provider "
-#~ "is not listed"
-#~ msgstr ""
-#~ "Zvolte poskytovatele ze seznamu, nebo klikněte zpět pokud v něm není"
-
-#~ msgid "&Details..."
-#~ msgstr "Po&drobnosti..."
-
-#~ msgid "Select which kind of account you want to create:"
-#~ msgstr "Vyberte, jaký typ účtu si přejete vytvořit:"
-
-#~ msgid "Check for more on Internet"
-#~ msgstr "Další najdete na internetu"
