@@ -34,7 +34,7 @@ include(ECMQmlModule)
 
 # Do NOT add quote
 set(KDEPIM_DEV_VERSION alpha)
-set(RELEASE_SERVICE_VERSION "23.11.40")
+set(RELEASE_SERVICE_VERSION "24.01.40")
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
     set(KDEPIM_DEV_VERSION " ${KDEPIM_DEV_VERSION}")
