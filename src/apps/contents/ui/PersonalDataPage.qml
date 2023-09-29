@@ -7,7 +7,7 @@ import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15 as QQC2
 import org.kde.kirigami 2.15 as Kirigami
 import org.kde.pim.accountwizard 1.0
-import org.kde.kirigamiaddons.labs.mobileform 0.1 as MobileForm
+import org.kde.kirigamiaddons.formcard 1 as FormCard
 
 Kirigami.ScrollablePage {
     id: root
@@ -21,10 +21,10 @@ Kirigami.ScrollablePage {
 
 
     ColumnLayout {
-        MobileForm.FormCard {
+        FormCard.FormCard {
             Layout.topMargin: Kirigami.Units.largeSpacing
             Layout.fillWidth: true
-            contentItem: ColumnLayout {
+            ColumnLayout {
                 spacing: 0
 
                 Kirigami.Heading {
@@ -47,16 +47,16 @@ Kirigami.ScrollablePage {
                     Layout.fillWidth: true
                 }
 
-                MobileForm.FormTextFieldDelegate {
+                FormCard.FormTextFieldDelegate {
                     label: i18n("Full name:")
                     placeholderText: i18nc("Generic name", "John Smith")
                     text: SetupManager.name
                     onTextChanged: SetupManager.name = text
                 }
 
-                MobileForm.FormDelegateSeparator {}
+                FormCard.FormDelegateSeparator {}
 
-                MobileForm.FormTextFieldDelegate {
+                FormCard.FormTextFieldDelegate {
                     id: addressEmailField
                     label: i18n("E-mail address:")
                     placeholderText: i18nc("Generic email address", "boss@example.corp")
@@ -66,18 +66,18 @@ Kirigami.ScrollablePage {
                     }
                 }
 
-                MobileForm.FormDelegateSeparator {}
+                FormCard.FormDelegateSeparator {}
 
-                MobileForm.FormTextFieldDelegate {
+                FormCard.FormTextFieldDelegate {
                     label: i18n("Password:")
                     onTextChanged: SetupManager.password = text
                     echoMode: TextInput.Password
                     inputMethodHints: Qt.ImhUrlCharactersOnly
                 }
 
-                MobileForm.FormDelegateSeparator { above: continueButton }
+                FormCard.FormDelegateSeparator { above: continueButton }
 
-                MobileForm.FormButtonDelegate {
+                FormCard.FormButtonDelegate {
                     id: continueButton
                     text: i18n("Continue")
                     checked: true
@@ -85,21 +85,21 @@ Kirigami.ScrollablePage {
                     enabled: isNotEmptyStr(addressEmailField.text) // Fix trimmed + is real email
                 }
 
-                MobileForm.FormDelegateSeparator { below: continueButton }
+                FormCard.FormDelegateSeparator { below: continueButton }
 
-                MobileForm.FormSectionText {
+                FormCard.FormSectionText {
                     text: i18n("Check online for the settings needed for this email provider. Only the domain name part of the e-mail address will be sent over the Internet.")
                     wrapMode: Text.WordWrap
                 }
             }
         }
 
-        MobileForm.FormCard {
+        FormCard.FormCard {
             id: ispdbSearchInfo
             Layout.topMargin: Kirigami.Units.largeSpacing
             Layout.fillWidth: true
             visible: SetupManager.searchIspdbFoundMessage.length > 0
-            contentItem: ColumnLayout {
+            ColumnLayout {
                 spacing: 0
 
                 Kirigami.InlineMessage {
@@ -111,12 +111,12 @@ Kirigami.ScrollablePage {
             }
         }
 
-        MobileForm.FormCard {
+        FormCard.FormCard {
             id: noIspdbConfigFound
             Layout.topMargin: Kirigami.Units.largeSpacing
             Layout.fillWidth: true
             visible: SetupManager.noConfigFound
-            contentItem: ColumnLayout {
+            ColumnLayout {
                 spacing: 0
 
                 Kirigami.InlineMessage {
@@ -128,15 +128,15 @@ Kirigami.ScrollablePage {
             }
         }
 
-        MobileForm.FormCard {
+        FormCard.FormCard {
             id: manualConfiguration
             Layout.topMargin: Kirigami.Units.largeSpacing
             Layout.fillWidth: true
             visible: SetupManager.noConfigFound
-            contentItem: ColumnLayout {
+            ColumnLayout {
                 spacing: 0
 
-                MobileForm.FormCardHeader {
+                FormCard.FormHeader {
                     title: i18n("Server Parameters")
                 }
 
@@ -146,7 +146,7 @@ Kirigami.ScrollablePage {
                     padding: Kirigami.Units.gridUnit
                 }
 
-                MobileForm.FormTextFieldDelegate {
+                FormCard.FormTextFieldDelegate {
                     id: manualIncomingHostName
                     label: i18n("Hostname:")
                     inputMethodHints: Qt.ImhUrlCharactersOnly
@@ -155,7 +155,7 @@ Kirigami.ScrollablePage {
                         SetupManager.manualConfiguration.incomingHostName = manualIncomingHostName.text
                     }
                 }
-                MobileForm.FormComboBoxDelegate {
+                FormCard.FormComboBoxDelegate {
                     id: manualIncomingProtocol
                     description: i18n("Protocol:")
                     model: SetupManager.manualConfiguration.incomingProtocols
@@ -164,14 +164,14 @@ Kirigami.ScrollablePage {
                         SetupManager.manualConfiguration.currentIncomingProtocol = currentIndex
                     }
                 }
-                MobileForm.FormSpinBoxDelegate {
+                FormCard.FormSpinBoxDelegate {
                     id: manualIncomingPort
                     label: i18n("Port:")
                     value: SetupManager.manualConfiguration.incomingPort
                     from: 1
                     to: 999
                 }
-                MobileForm.FormComboBoxDelegate {
+                FormCard.FormComboBoxDelegate {
                     id: manualIncomingSecurity
                     description: i18n("Security:")
                     model: SetupManager.manualConfiguration.securityProtocols
@@ -180,7 +180,7 @@ Kirigami.ScrollablePage {
                         SetupManager.manualConfiguration.currentIncomingAuthenticationProtocols = currentIndex
                     }
                 }
-                MobileForm.FormComboBoxDelegate {
+                FormCard.FormComboBoxDelegate {
                     id: manualIncomingAuthenticationMethod
                     description: i18n("Authentication Method:")
                     model: SetupManager.manualConfiguration.authenticationProtocols
@@ -189,7 +189,7 @@ Kirigami.ScrollablePage {
                         SetupManager.manualConfiguration.currentOutgoingSecurityProtocol = currentIndex
                     }
                 }
-                MobileForm.FormTextFieldDelegate {
+                FormCard.FormTextFieldDelegate {
                     id: manualIncomingUserName
                     label: i18n("Username:")
                     inputMethodHints: Qt.ImhUrlCharactersOnly
@@ -199,14 +199,14 @@ Kirigami.ScrollablePage {
                     }
                 }
 
-                MobileForm.FormDelegateSeparator {}
+                FormCard.FormDelegateSeparator {}
 
                 QQC2.Label {
                     font.bold: true
                     text: i18n("Outgoing")
                     padding: Kirigami.Units.gridUnit
                 }
-                MobileForm.FormTextFieldDelegate {
+                FormCard.FormTextFieldDelegate {
                     id: manualOutgoingHostName
                     label: i18n("Hostname:")
                     inputMethodHints: Qt.ImhUrlCharactersOnly
@@ -215,14 +215,14 @@ Kirigami.ScrollablePage {
                         SetupManager.manualConfiguration.outgoingHostName = manualOutgoingHostName.text
                     }
                 }
-                MobileForm.FormSpinBoxDelegate {
+                FormCard.FormSpinBoxDelegate {
                     id: manualOutgoingPort
                     label: i18n("Port:")
                     value: SetupManager.manualConfiguration.outgoingPort
                     from: 1
                     to: 999
                 }
-                MobileForm.FormComboBoxDelegate {
+                FormCard.FormComboBoxDelegate {
                     id: manualOutgoingSecurity
                     description: i18n("Security:")
                     model: SetupManager.manualConfiguration.securityProtocols
@@ -231,7 +231,7 @@ Kirigami.ScrollablePage {
                         SetupManager.manualConfiguration.currentOutgoingSecurityProtocol = currentIndex
                     }
                 }
-                MobileForm.FormComboBoxDelegate {
+                FormCard.FormComboBoxDelegate {
                     id: manualOutgoingAuthenticationMethod
                     description: i18n("Authentication Method:")
                     model: SetupManager.manualConfiguration.authenticationProtocols
@@ -240,7 +240,7 @@ Kirigami.ScrollablePage {
                         SetupManager.manualConfiguration.currentOutgoingAuthenticationProtocols = currentIndex
                     }
                 }
-                MobileForm.FormTextFieldDelegate {
+                FormCard.FormTextFieldDelegate {
                     id: manualOutgoingUserName
                     label: i18n("Username:")
                     inputMethodHints: Qt.ImhUrlCharactersOnly
@@ -249,9 +249,9 @@ Kirigami.ScrollablePage {
                         SetupManager.manualConfiguration.outgoingUserName = manualOutgoingUserName.text
                     }
                 }
-                MobileForm.FormDelegateSeparator {}
+                FormCard.FormDelegateSeparator {}
 
-                MobileForm.FormButtonDelegate {
+                FormCard.FormButtonDelegate {
                     id: recheckAccountManualConfiguration
                     text: i18n("Recheck")
                     checked: true
@@ -262,9 +262,9 @@ Kirigami.ScrollablePage {
                     enabled: SetupManager.manualConfiguration.configurationIsValid
                 }
 
-                MobileForm.FormDelegateSeparator {}
+                FormCard.FormDelegateSeparator {}
 
-                MobileForm.FormButtonDelegate {
+                FormCard.FormButtonDelegate {
                     id: createAccountManualConfiguration
                     text: i18n("Create Account")
                     checked: true
@@ -277,17 +277,17 @@ Kirigami.ScrollablePage {
             }
         }
 
-        MobileForm.FormCard {
+        FormCard.FormCard {
             id: availableConfigurations
             Layout.topMargin: Kirigami.Units.largeSpacing
             Layout.fillWidth: true
 
             visible: configurationRepeater.count > 0
 
-            contentItem: ColumnLayout {
+            ColumnLayout {
                 spacing: 0
 
-                MobileForm.FormCardHeader {
+                FormCard.FormHeader {
                     title: i18n("Available configurations")
                 }
 
@@ -304,9 +304,9 @@ Kirigami.ScrollablePage {
                     }
                 }
 
-                MobileForm.FormDelegateSeparator {}
+                FormCard.FormDelegateSeparator {}
 
-                MobileForm.FormButtonDelegate {
+                FormCard.FormButtonDelegate {
                     id: createAccount
                     text: i18n("Create Account")
                     checked: true
