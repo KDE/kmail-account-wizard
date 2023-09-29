@@ -64,6 +64,9 @@ Kirigami.ScrollablePage {
                     onTextChanged: {
                         SetupManager.email = text
                     }
+                    onEditingFinished: {
+                        SetupManager.searchConfiguration()
+                    }
                 }
 
                 FormCard.FormDelegateSeparator {}
