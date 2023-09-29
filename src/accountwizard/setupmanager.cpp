@@ -92,6 +92,7 @@ void SetupManager::createManualAccount()
 
 void SetupManager::setEmailProvider(const EmailProvider &emailProvider, const QString &messageInfo)
 {
+    qDebug() << " emailProvider " << emailProvider;
     mSearchIspdbFoundMessage = messageInfo;
     mConfigurationModel->setEmailProvider(emailProvider);
     Q_EMIT searchIspdbFoundMessageChanged();
