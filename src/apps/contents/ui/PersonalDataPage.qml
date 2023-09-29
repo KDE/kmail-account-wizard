@@ -310,6 +310,16 @@ Kirigami.ScrollablePage {
                 FormCard.FormDelegateSeparator {}
 
                 FormCard.FormButtonDelegate {
+                    id: configureManual
+                    text: i18n("Manual Configuration")
+                    checked: true
+                    onClicked: {
+                        // TODO
+                    }
+                    visible: availableConfigurations.visible
+                }
+
+                FormCard.FormButtonDelegate {
                     id: createAccount
                     text: i18n("Create Account")
                     checked: true
