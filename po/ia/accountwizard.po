@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-30 01:42+0000\n"
 "PO-Revision-Date: 2023-09-21 10:35+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -220,13 +220,13 @@ msgid "Mail transport account set up."
 msgstr "Conto de transporto de e-posta configurate."
 
 #: apps/contents/ui/ConfigurationDelegate.qml:93
-#: apps/contents/ui/PersonalDataPage.qml:145
+#: apps/contents/ui/PersonalDataPage.qml:148
 #, kde-format
 msgid "Incoming"
 msgstr "In arrivata"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
-#: apps/contents/ui/PersonalDataPage.qml:206
+#: apps/contents/ui/PersonalDataPage.qml:209
 #, kde-format
 msgid "Outgoing"
 msgstr "In exito"
@@ -273,17 +273,17 @@ msgctxt "Generic email address"
 msgid "boss@example.corp"
 msgstr "boss@example.corp"
 
-#: apps/contents/ui/PersonalDataPage.qml:72
+#: apps/contents/ui/PersonalDataPage.qml:75
 #, kde-format
 msgid "Password:"
 msgstr "Contrasigno:"
 
-#: apps/contents/ui/PersonalDataPage.qml:82
+#: apps/contents/ui/PersonalDataPage.qml:85
 #, kde-format
 msgid "Continue"
 msgstr "Continua"
 
-#: apps/contents/ui/PersonalDataPage.qml:91
+#: apps/contents/ui/PersonalDataPage.qml:94
 #, kde-format
 msgid ""
 "Check online for the settings needed for this email provider. Only the "
@@ -293,65 +293,71 @@ msgstr ""
 "Solo le parte de nomine de dominio del adresse de e-posta essera inviate "
 "super le Internet ."
 
-#: apps/contents/ui/PersonalDataPage.qml:125
+#: apps/contents/ui/PersonalDataPage.qml:128
 #, kde-format
 msgid "No config found from ispdb server."
 msgstr "Necun config trovate ex servitor ispdb."
 
-#: apps/contents/ui/PersonalDataPage.qml:140
+#: apps/contents/ui/PersonalDataPage.qml:143
 #, kde-format
 msgid "Server Parameters"
 msgstr "Parametros de servitor"
 
-#: apps/contents/ui/PersonalDataPage.qml:151
-#: apps/contents/ui/PersonalDataPage.qml:211
+#: apps/contents/ui/PersonalDataPage.qml:154
+#: apps/contents/ui/PersonalDataPage.qml:214
 #, kde-format
 msgid "Hostname:"
 msgstr "Nomine de Hospite:"
 
-#: apps/contents/ui/PersonalDataPage.qml:160
+#: apps/contents/ui/PersonalDataPage.qml:163
 #, kde-format
 msgid "Protocol:"
 msgstr "Protocollo:"
 
-#: apps/contents/ui/PersonalDataPage.qml:169
-#: apps/contents/ui/PersonalDataPage.qml:220
+#: apps/contents/ui/PersonalDataPage.qml:172
+#: apps/contents/ui/PersonalDataPage.qml:223
 #, kde-format
 msgid "Port:"
 msgstr "Porto:"
 
-#: apps/contents/ui/PersonalDataPage.qml:176
-#: apps/contents/ui/PersonalDataPage.qml:227
+#: apps/contents/ui/PersonalDataPage.qml:179
+#: apps/contents/ui/PersonalDataPage.qml:230
 #, kde-format
 msgid "Security:"
 msgstr "Securitate:"
 
-#: apps/contents/ui/PersonalDataPage.qml:185
-#: apps/contents/ui/PersonalDataPage.qml:236
+#: apps/contents/ui/PersonalDataPage.qml:188
+#: apps/contents/ui/PersonalDataPage.qml:239
 #, kde-format
 msgid "Authentication Method:"
 msgstr "Methodo de authentication:"
 
-#: apps/contents/ui/PersonalDataPage.qml:194
-#: apps/contents/ui/PersonalDataPage.qml:245
+#: apps/contents/ui/PersonalDataPage.qml:197
+#: apps/contents/ui/PersonalDataPage.qml:248
 #, kde-format
 msgid "Username:"
 msgstr "Nomine de usator:"
 
-#: apps/contents/ui/PersonalDataPage.qml:256
+#: apps/contents/ui/PersonalDataPage.qml:259
 #, kde-format
 msgid "Recheck"
 msgstr "Reverifica"
 
-#: apps/contents/ui/PersonalDataPage.qml:269
-#: apps/contents/ui/PersonalDataPage.qml:311
+#: apps/contents/ui/PersonalDataPage.qml:272
+#: apps/contents/ui/PersonalDataPage.qml:324
 #, kde-format
 msgid "Create Account"
 msgstr "Crea  conto"
 
-#: apps/contents/ui/PersonalDataPage.qml:291
+#: apps/contents/ui/PersonalDataPage.qml:294
 #, kde-format
 msgid "Available configurations"
+msgstr "Configurationes disponibile"
+
+#: apps/contents/ui/PersonalDataPage.qml:314
+#, fuzzy, kde-format
+#| msgid "Available configurations"
+msgid "Manual Configuration"
 msgstr "Configurationes disponibile"
 
 #: apps/main.cpp:32

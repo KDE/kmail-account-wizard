@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-runtime-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-30 01:42+0000\n"
 "PO-Revision-Date: 2023-04-02 17:26+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -228,13 +228,13 @@ msgid "Mail transport account set up."
 msgstr "Posta taşıma hesabı ayarlandı."
 
 #: apps/contents/ui/ConfigurationDelegate.qml:93
-#: apps/contents/ui/PersonalDataPage.qml:145
+#: apps/contents/ui/PersonalDataPage.qml:148
 #, kde-format
 msgid "Incoming"
 msgstr "Gelen"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
-#: apps/contents/ui/PersonalDataPage.qml:206
+#: apps/contents/ui/PersonalDataPage.qml:209
 #, kde-format
 msgid "Outgoing"
 msgstr "Giden"
@@ -280,17 +280,17 @@ msgctxt "Generic email address"
 msgid "boss@example.corp"
 msgstr "goekhan@ilteris.com"
 
-#: apps/contents/ui/PersonalDataPage.qml:72
+#: apps/contents/ui/PersonalDataPage.qml:75
 #, kde-format
 msgid "Password:"
 msgstr "Parola:"
 
-#: apps/contents/ui/PersonalDataPage.qml:82
+#: apps/contents/ui/PersonalDataPage.qml:85
 #, kde-format
 msgid "Continue"
 msgstr "Sürdür"
 
-#: apps/contents/ui/PersonalDataPage.qml:91
+#: apps/contents/ui/PersonalDataPage.qml:94
 #, kde-format
 msgid ""
 "Check online for the settings needed for this email provider. Only the "
@@ -299,65 +299,71 @@ msgstr ""
 "Bu e-posta sağlayıcısı için gerekli olan ayarları çevrimiçi arayın. E-posta "
 "adresinin yalnızca alan adı kısmı İnternet üzerinden gönderilir."
 
-#: apps/contents/ui/PersonalDataPage.qml:125
+#: apps/contents/ui/PersonalDataPage.qml:128
 #, kde-format
 msgid "No config found from ispdb server."
 msgstr "ispdb sunucusunda yapılandırma bulunamadı."
 
-#: apps/contents/ui/PersonalDataPage.qml:140
+#: apps/contents/ui/PersonalDataPage.qml:143
 #, kde-format
 msgid "Server Parameters"
 msgstr "Sunucu Parametreleri"
 
-#: apps/contents/ui/PersonalDataPage.qml:151
-#: apps/contents/ui/PersonalDataPage.qml:211
+#: apps/contents/ui/PersonalDataPage.qml:154
+#: apps/contents/ui/PersonalDataPage.qml:214
 #, kde-format
 msgid "Hostname:"
 msgstr "Makine adı:"
 
-#: apps/contents/ui/PersonalDataPage.qml:160
+#: apps/contents/ui/PersonalDataPage.qml:163
 #, kde-format
 msgid "Protocol:"
 msgstr "Protokol:"
 
-#: apps/contents/ui/PersonalDataPage.qml:169
-#: apps/contents/ui/PersonalDataPage.qml:220
+#: apps/contents/ui/PersonalDataPage.qml:172
+#: apps/contents/ui/PersonalDataPage.qml:223
 #, kde-format
 msgid "Port:"
 msgstr "Kapı:"
 
-#: apps/contents/ui/PersonalDataPage.qml:176
-#: apps/contents/ui/PersonalDataPage.qml:227
+#: apps/contents/ui/PersonalDataPage.qml:179
+#: apps/contents/ui/PersonalDataPage.qml:230
 #, kde-format
 msgid "Security:"
 msgstr "Güvenlik:"
 
-#: apps/contents/ui/PersonalDataPage.qml:185
-#: apps/contents/ui/PersonalDataPage.qml:236
+#: apps/contents/ui/PersonalDataPage.qml:188
+#: apps/contents/ui/PersonalDataPage.qml:239
 #, kde-format
 msgid "Authentication Method:"
 msgstr "Kimlik doğrulama yöntemi:"
 
-#: apps/contents/ui/PersonalDataPage.qml:194
-#: apps/contents/ui/PersonalDataPage.qml:245
+#: apps/contents/ui/PersonalDataPage.qml:197
+#: apps/contents/ui/PersonalDataPage.qml:248
 #, kde-format
 msgid "Username:"
 msgstr "Kullanıcı adı:"
 
-#: apps/contents/ui/PersonalDataPage.qml:256
+#: apps/contents/ui/PersonalDataPage.qml:259
 #, kde-format
 msgid "Recheck"
 msgstr "Yeniden Denetle"
 
-#: apps/contents/ui/PersonalDataPage.qml:269
-#: apps/contents/ui/PersonalDataPage.qml:311
+#: apps/contents/ui/PersonalDataPage.qml:272
+#: apps/contents/ui/PersonalDataPage.qml:324
 #, kde-format
 msgid "Create Account"
 msgstr "Hesap Oluştur"
 
-#: apps/contents/ui/PersonalDataPage.qml:291
+#: apps/contents/ui/PersonalDataPage.qml:294
 #, kde-format
 msgid "Available configurations"
+msgstr "Kullanılabilir yapılandırmalar"
+
+#: apps/contents/ui/PersonalDataPage.qml:314
+#, fuzzy, kde-format
+#| msgid "Available configurations"
+msgid "Manual Configuration"
 msgstr "Kullanılabilir yapılandırmalar"
 
 #: apps/main.cpp:32

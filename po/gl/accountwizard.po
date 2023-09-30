@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-30 01:42+0000\n"
 "PO-Revision-Date: 2023-04-24 07:41+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -229,14 +229,14 @@ msgid "Mail transport account set up."
 msgstr "Configurouse a conta de transporte de correo."
 
 #: apps/contents/ui/ConfigurationDelegate.qml:93
-#: apps/contents/ui/PersonalDataPage.qml:145
+#: apps/contents/ui/PersonalDataPage.qml:148
 #, fuzzy, kde-format
 #| msgid "Incoming:"
 msgid "Incoming"
 msgstr "Entrante:"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
-#: apps/contents/ui/PersonalDataPage.qml:206
+#: apps/contents/ui/PersonalDataPage.qml:209
 #, fuzzy, kde-format
 #| msgid "Outgoing:"
 msgid "Outgoing"
@@ -281,17 +281,17 @@ msgctxt "Generic email address"
 msgid "boss@example.corp"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:72
+#: apps/contents/ui/PersonalDataPage.qml:75
 #, kde-format
 msgid "Password:"
 msgstr "Contrasinal:"
 
-#: apps/contents/ui/PersonalDataPage.qml:82
+#: apps/contents/ui/PersonalDataPage.qml:85
 #, kde-format
 msgid "Continue"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:91
+#: apps/contents/ui/PersonalDataPage.qml:94
 #, fuzzy, kde-format
 #| msgid ""
 #| "Check online for the settings needed for this email provider. Only the "
@@ -307,68 +307,73 @@ msgstr ""
 "enderezo de correo. Se non se escolle esta opción, a conta pódese configurar "
 "manualmente."
 
-#: apps/contents/ui/PersonalDataPage.qml:125
+#: apps/contents/ui/PersonalDataPage.qml:128
 #, fuzzy, kde-format
 #| msgid "No config found to edit"
 msgid "No config found from ispdb server."
 msgstr "Non se atopou unha configuración para editar."
 
-#: apps/contents/ui/PersonalDataPage.qml:140
+#: apps/contents/ui/PersonalDataPage.qml:143
 #, kde-format
 msgid "Server Parameters"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:151
-#: apps/contents/ui/PersonalDataPage.qml:211
+#: apps/contents/ui/PersonalDataPage.qml:154
+#: apps/contents/ui/PersonalDataPage.qml:214
 #, fuzzy, kde-format
 #| msgid "Username:"
 msgid "Hostname:"
 msgstr "Nome de usuario:"
 
-#: apps/contents/ui/PersonalDataPage.qml:160
+#: apps/contents/ui/PersonalDataPage.qml:163
 #, kde-format
 msgid "Protocol:"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:169
-#: apps/contents/ui/PersonalDataPage.qml:220
+#: apps/contents/ui/PersonalDataPage.qml:172
+#: apps/contents/ui/PersonalDataPage.qml:223
 #, kde-format
 msgid "Port:"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:176
-#: apps/contents/ui/PersonalDataPage.qml:227
+#: apps/contents/ui/PersonalDataPage.qml:179
+#: apps/contents/ui/PersonalDataPage.qml:230
 #, kde-format
 msgid "Security:"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:185
-#: apps/contents/ui/PersonalDataPage.qml:236
+#: apps/contents/ui/PersonalDataPage.qml:188
+#: apps/contents/ui/PersonalDataPage.qml:239
 #, kde-format
 msgid "Authentication Method:"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:194
-#: apps/contents/ui/PersonalDataPage.qml:245
+#: apps/contents/ui/PersonalDataPage.qml:197
+#: apps/contents/ui/PersonalDataPage.qml:248
 #, kde-format
 msgid "Username:"
 msgstr "Nome de usuario:"
 
-#: apps/contents/ui/PersonalDataPage.qml:256
+#: apps/contents/ui/PersonalDataPage.qml:259
 #, kde-format
 msgid "Recheck"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:269
-#: apps/contents/ui/PersonalDataPage.qml:311
+#: apps/contents/ui/PersonalDataPage.qml:272
+#: apps/contents/ui/PersonalDataPage.qml:324
 #, fuzzy, kde-format
 #| msgid "Create Account"
 msgid "Create Account"
 msgstr "Crear unha conta"
 
-#: apps/contents/ui/PersonalDataPage.qml:291
+#: apps/contents/ui/PersonalDataPage.qml:294
 #, kde-format
 msgid "Available configurations"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:314
+#, kde-format
+msgid "Manual Configuration"
 msgstr ""
 
 #: apps/main.cpp:32
