@@ -33,7 +33,7 @@ msgstr "xosecalvo@gmail.com"
 #: accountwizard/identity.cpp:27
 #, kde-format
 msgid "Setting up identity..."
-msgstr "Estase a configurar a identidade…"
+msgstr "Configurando a identidade…"
 
 #: accountwizard/identity.cpp:38
 #, kde-format
@@ -181,37 +181,37 @@ msgstr "O recurso «%1» xa está configurado."
 #: accountwizard/resource.cpp:82 legacy/resource.cpp:94
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr "Estase a crear unha instancia de recurso para «%1»…"
+msgstr "Creando unha instancia de recurso para «%1»…"
 
 #: accountwizard/resource.cpp:91 legacy/resource.cpp:103
 #, kde-format
 msgid "Failed to create resource instance: %1"
-msgstr "Non se puido crear a instancia do recurso: %1"
+msgstr "Non foi posíbel crear a instancia do recurso: %1"
 
 #: accountwizard/resource.cpp:98 legacy/resource.cpp:110
 #, kde-format
 msgid "Configuring resource instance..."
-msgstr "Estase a configurar a instancia do recurso…"
+msgstr "Configurando a instancia do recurso…"
 
 #: accountwizard/resource.cpp:102 legacy/resource.cpp:114
 #, kde-format
 msgid "Unable to configure resource instance."
-msgstr "Non se pode configurar a instancia do recurso."
+msgstr "Non é posíbel configurar a instancia do recurso."
 
 #: accountwizard/resource.cpp:118 legacy/resource.cpp:129
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
-msgstr "Non se puido converter o valor da opción «%1» no tipo requirido %2."
+msgstr "Non foi posíbel converter o valor da opción «%1» no tipo requirido %2."
 
 #: accountwizard/resource.cpp:125 legacy/resource.cpp:136
 #, kde-format
 msgid "Could not set setting '%1': %2"
-msgstr "Non se puido configurar a opción «%1»: %2"
+msgstr "Non foi posíbel configurar a opción «%1»: %2"
 
 #: accountwizard/resource.cpp:131 legacy/resource.cpp:142
 #, kde-format
 msgid "Could not save settings: %1"
-msgstr "Non se puido gardar a configuración: %1"
+msgstr "Non foi posíbel gardar a configuración: %1"
 
 #: accountwizard/resource.cpp:137 legacy/resource.cpp:151
 #, kde-format
@@ -221,7 +221,7 @@ msgstr "Rematou a configuración do recurso."
 #: accountwizard/transport.cpp:23
 #, kde-format
 msgid "Setting up mail transport account..."
-msgstr "Estase a configurar a conta do transporte de correo…"
+msgstr "Configurando a conta do transporte de correo…"
 
 #: accountwizard/transport.cpp:47
 #, kde-format
@@ -420,12 +420,12 @@ msgstr ""
 #: legacy/configfile.cpp:37
 #, kde-format
 msgid "Writing config file for %1..."
-msgstr "Estase a escribir o ficheiro de configuración de %1…"
+msgstr "Escribindo o ficheiro de configuración de %1…"
 
 #: legacy/configfile.cpp:54
 #, kde-format
 msgid "Config file for %1 is writing."
-msgstr "Estase a escribir o ficheiro de configuración de %1."
+msgstr "Escribindo o ficheiro de configuración de %1."
 
 #: legacy/configfile.cpp:59
 #, kde-format
@@ -455,7 +455,7 @@ msgstr "Erro ao xerar unha nova parella de chaves para a súa conta %1: %2"
 #: legacy/cryptopage.cpp:257
 #, kde-format
 msgid "Could not detect valid key type"
-msgstr "Non se puido detectar un tipo de chave válido"
+msgstr "Non foi posíbel detectar un tipo de chave válido"
 
 #: legacy/cryptopage.cpp:257 legacy/cryptopage.cpp:266
 #: legacy/cryptopage.cpp:282 legacy/cryptopage.cpp:289
@@ -466,17 +466,17 @@ msgstr "Erro de importación"
 #: legacy/cryptopage.cpp:265
 #, kde-format
 msgid "Cannot read data from the certificate file: %1"
-msgstr "Non se poden ler os datos do ficheiro de certificado: %1"
+msgstr "Non é posíbel ler os datos do ficheiro de certificado: %1"
 
 #: legacy/cryptopage.cpp:281
 #, kde-format
 msgid "Failed to import key: %1"
-msgstr "Non se puido importar a chave: %1"
+msgstr "Non foi posíbel importar a chave: %1"
 
 #: legacy/cryptopage.cpp:289
 #, kde-format
 msgid "Failed to import key."
-msgstr "Non se puido importar a chave."
+msgstr "Non foi posíbel importar a chave."
 
 #: legacy/cryptopage.cpp:316
 #, kde-format
@@ -576,7 +576,7 @@ msgstr ""
 #: legacy/key.cpp:193
 #, kde-format
 msgid "Failed to send key publishing request: %1"
-msgstr "Non se puido enviar a solicitude de publicación da chave: %1"
+msgstr "Non foi posíbel enviar a solicitude de publicación da chave: %1"
 
 #: legacy/key.cpp:195
 #, kde-format
@@ -586,7 +586,7 @@ msgstr "Enviouse a solicitude de publicación da chave."
 #: legacy/key.cpp:231
 #, kde-format
 msgid "Failed to publish the key."
-msgstr "Non se puido publicar a chave."
+msgstr "Non foi posíbel publicar a chave."
 
 #: legacy/key.cpp:237
 #, kde-format
@@ -596,7 +596,7 @@ msgstr "A chave publicouse en %1"
 #: legacy/ldap.cpp:37
 #, kde-format
 msgid "Setting up LDAP server..."
-msgstr "Estase a configurar o servidor de LDAP…"
+msgstr "Configurando o servidor de LDAP…"
 
 #: legacy/ldap.cpp:40
 #, kde-format

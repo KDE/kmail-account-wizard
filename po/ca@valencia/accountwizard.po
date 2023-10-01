@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-30 01:42+0000\n"
-"PO-Revision-Date: 2023-09-21 16:53+0200\n"
+"PO-Revision-Date: 2023-09-30 14:00+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -360,10 +360,9 @@ msgid "Available configurations"
 msgstr "Configuracions disponibles"
 
 #: apps/contents/ui/PersonalDataPage.qml:314
-#, fuzzy, kde-format
-#| msgid "Available configurations"
+#, kde-format
 msgid "Manual Configuration"
-msgstr "Configuracions disponibles"
+msgstr "Configuració manual"
 
 #: apps/main.cpp:32
 #, kde-format

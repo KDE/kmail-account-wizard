@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-30 01:42+0000\n"
-"PO-Revision-Date: 2023-09-21 17:34+0200\n"
+"PO-Revision-Date: 2023-09-30 08:31+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -362,10 +362,9 @@ msgid "Available configurations"
 msgstr "Razpoložljive konfiguracije"
 
 #: apps/contents/ui/PersonalDataPage.qml:314
-#, fuzzy, kde-format
-#| msgid "Available configurations"
+#, kde-format
 msgid "Manual Configuration"
-msgstr "Razpoložljive konfiguracije"
+msgstr "Ročna konfiguracija"
 
 #: apps/main.cpp:32
 #, kde-format

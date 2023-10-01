@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-30 01:42+0000\n"
-"PO-Revision-Date: 2023-09-21 22:28+0200\n"
+"PO-Revision-Date: 2023-09-30 11:22+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -359,10 +359,9 @@ msgid "Available configurations"
 msgstr "Beschikbare configuraties"
 
 #: apps/contents/ui/PersonalDataPage.qml:314
-#, fuzzy, kde-format
-#| msgid "Available configurations"
+#, kde-format
 msgid "Manual Configuration"
-msgstr "Beschikbare configuraties"
+msgstr "Handmatige configuratie"
 
 #: apps/main.cpp:32
 #, kde-format
