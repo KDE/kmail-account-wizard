@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-30 01:42+0000\n"
-"PO-Revision-Date: 2023-09-22 06:36+0200\n"
+"PO-Revision-Date: 2023-10-01 03:57+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -354,10 +354,9 @@ msgid "Available configurations"
 msgstr "ხელმისაწვდომი კონფიგურაციები"
 
 #: apps/contents/ui/PersonalDataPage.qml:314
-#, fuzzy, kde-format
-#| msgid "Available configurations"
+#, kde-format
 msgid "Manual Configuration"
-msgstr "ხელმისაწვდომი კონფიგურაციები"
+msgstr "ხელით მორგება"
 
 #: apps/main.cpp:32
 #, kde-format
