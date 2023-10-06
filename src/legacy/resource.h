@@ -26,7 +26,7 @@ public:
 public Q_SLOTS:
     Q_SCRIPTABLE void setName(const QString &name);
     Q_SCRIPTABLE void setOption(const QString &key, const QVariant &value);
-    Q_SCRIPTABLE Q_REQUIRED_RESULT QString identifier();
+    Q_SCRIPTABLE [[nodiscard]] QString identifier();
     Q_SCRIPTABLE void reconfigure();
     Q_SCRIPTABLE void setEditMode(const bool editMode);
 

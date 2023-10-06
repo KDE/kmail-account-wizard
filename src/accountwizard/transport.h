@@ -28,7 +28,7 @@ public:
     ~Transport() override;
     void createTransport();
 
-    Q_REQUIRED_RESULT TransportInfo transportInfo() const;
+    [[nodiscard]] TransportInfo transportInfo() const;
     void setTransportInfo(const TransportInfo &newTransportInfo);
 
 private:

@@ -20,10 +20,10 @@ public:
     explicit Resource(const QString &resourceType, QObject *parent = nullptr);
     ~Resource() override;
 
-    Q_REQUIRED_RESULT QString name() const;
+    [[nodiscard]] QString name() const;
     void setName(const QString &newName);
 
-    Q_REQUIRED_RESULT QMap<QString, QVariant> settings() const;
+    [[nodiscard]] QMap<QString, QVariant> settings() const;
     void setSettings(const QMap<QString, QVariant> &newSettings);
 
     void createResource();

@@ -69,10 +69,10 @@ public:
     explicit Ispdb(QObject *parent = nullptr);
     ~Ispdb() override;
 
-    Q_REQUIRED_RESULT QString email() const;
+    [[nodiscard]] QString email() const;
     void setEmail(const QString &email);
 
-    Q_REQUIRED_RESULT QString password() const;
+    [[nodiscard]] QString password() const;
     void setPassword(const QString &password);
 
     /// After finished() has been emitted you can
@@ -149,17 +149,17 @@ protected:
                     (username is the emailaddress)
         @param crypt use https
      */
-    Q_REQUIRED_RESULT QUrl lookupUrl(const QString &type, const QString &version, bool auth, bool crypt);
+    [[nodiscard]] QUrl lookupUrl(const QString &type, const QString &version, bool auth, bool crypt);
 
     /** setter for serverType */
     void setServerType(Ispdb::SearchServerType type);
 
     /** getter for serverType */
-    Q_REQUIRED_RESULT Ispdb::SearchServerType serverType() const;
+    [[nodiscard]] Ispdb::SearchServerType serverType() const;
 
     /** replaces %EMAILLOCALPART%, %EMAILADDRESS% and %EMAILDOMAIN% with the
         parts of the emailaddress */
-    Q_REQUIRED_RESULT QString replacePlaceholders(const QString &);
+    [[nodiscard]] QString replacePlaceholders(const QString &);
 
     QByteArray mData; /** storage of incoming data from kio */
 protected Q_SLOTS:
@@ -193,7 +193,7 @@ struct Server {
 public:
     Server() = default;
 
-    Q_REQUIRED_RESULT bool isValid() const
+    [[nodiscard]] bool isValid() const
     {
         return port != -1;
     }
@@ -209,12 +209,12 @@ QDebug operator<<(QDebug d, const Server &t);
 struct Identity {
     Identity() = default;
 
-    Q_REQUIRED_RESULT bool isValid() const
+    [[nodiscard]] bool isValid() const
     {
         return !name.isEmpty();
     }
 
-    Q_REQUIRED_RESULT bool isDefault() const
+    [[nodiscard]] bool isDefault() const
     {
         return mDefault;
     }

@@ -47,22 +47,22 @@ public:
     Q_INVOKABLE void create();
     Q_INVOKABLE void destroy();
 
-    Q_REQUIRED_RESULT QString identityName() const;
+    [[nodiscard]] QString identityName() const;
     void setIdentityName(const QString &name);
 
-    Q_REQUIRED_RESULT QString fullName() const;
+    [[nodiscard]] QString fullName() const;
     void setFullName(const QString &name);
 
-    Q_REQUIRED_RESULT QString email() const;
+    [[nodiscard]] QString email() const;
     void setEmail(const QString &email);
 
-    Q_REQUIRED_RESULT QString organization() const;
+    [[nodiscard]] QString organization() const;
     void setOrganization(const QString &org);
 
-    Q_REQUIRED_RESULT QString signature() const;
+    [[nodiscard]] QString signature() const;
     void setSignature(const QString &sig);
 
-    Q_REQUIRED_RESULT uint uoid() const;
+    [[nodiscard]] uint uoid() const;
     void setTransport(MailTransport::Transport *transport);
     void setPreferredCryptoMessageFormat(const QString &format);
     void setXFace(const QString &xface);

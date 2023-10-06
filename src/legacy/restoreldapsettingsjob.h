@@ -20,8 +20,8 @@ public:
     void start();
     KConfig *config() const;
     void setConfig(KConfig *config);
-    Q_REQUIRED_RESULT bool canStart() const;
-    Q_REQUIRED_RESULT int entry() const;
+    [[nodiscard]] bool canStart() const;
+    [[nodiscard]] int entry() const;
     void setEntry(int entry);
 
 Q_SIGNALS:

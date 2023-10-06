@@ -38,41 +38,41 @@ public:
     explicit ManualConfiguration(QObject *parent = nullptr);
     ~ManualConfiguration() override;
 
-    Q_REQUIRED_RESULT QString incomingHostName() const;
+    [[nodiscard]] QString incomingHostName() const;
     void setIncomingHostName(const QString &newIncomingHostName);
 
-    Q_REQUIRED_RESULT int incomingPort() const;
+    [[nodiscard]] int incomingPort() const;
     void setIncomingPort(int newPort);
 
-    Q_REQUIRED_RESULT QString incomingUserName() const;
+    [[nodiscard]] QString incomingUserName() const;
     void setIncomingUserName(const QString &newIncomingUserName);
 
-    Q_REQUIRED_RESULT QString outgoingHostName() const;
+    [[nodiscard]] QString outgoingHostName() const;
     void setOutgoingHostName(const QString &newOutgoingHostName);
 
-    Q_REQUIRED_RESULT int outgoingPort() const;
+    [[nodiscard]] int outgoingPort() const;
     void setOutgoingPort(int newPort);
 
-    Q_REQUIRED_RESULT QString outgoingUserName() const;
+    [[nodiscard]] QString outgoingUserName() const;
     void setOutgoingUserName(const QString &newOutgoingUserName);
 
-    Q_REQUIRED_RESULT QStringList incomingProtocols() const;
-    Q_REQUIRED_RESULT QStringList securityProtocols() const;
-    Q_REQUIRED_RESULT QStringList authenticationProtocols() const;
+    [[nodiscard]] QStringList incomingProtocols() const;
+    [[nodiscard]] QStringList securityProtocols() const;
+    [[nodiscard]] QStringList authenticationProtocols() const;
 
-    Q_REQUIRED_RESULT int currentIncomingProtocol() const;
+    [[nodiscard]] int currentIncomingProtocol() const;
     void setCurrentIncomingProtocol(int newCurrentIncomingProtocol);
 
-    Q_REQUIRED_RESULT int currentIncomingSecurityProtocol() const;
+    [[nodiscard]] int currentIncomingSecurityProtocol() const;
     void setCurrentIncomingSecurityProtocol(int newCurrentIncomingSecurityProtocol);
 
-    Q_REQUIRED_RESULT int currentOutgoingSecurityProtocol() const;
+    [[nodiscard]] int currentOutgoingSecurityProtocol() const;
     void setCurrentOutgoingSecurityProtocol(int newCurrentOutgoingSecurityProtocol);
 
-    Q_REQUIRED_RESULT int currentIncomingAuthenticationProtocols() const;
+    [[nodiscard]] int currentIncomingAuthenticationProtocols() const;
     void setCurrentIncomingAuthenticationProtocols(int newCurrentIncomingAuthenticationProtocols);
 
-    Q_REQUIRED_RESULT int currentOutgoingAuthenticationProtocols() const;
+    [[nodiscard]] int currentOutgoingAuthenticationProtocols() const;
     void setCurrentOutgoingAuthenticationProtocols(int newCurrentOutgoingAuthenticationProtocols);
 
     Q_INVOKABLE void checkServer();
@@ -103,7 +103,7 @@ Q_SIGNALS:
 
 private:
     void checkConfiguration();
-    Q_REQUIRED_RESULT Transport::TransportInfo createTransportInfo() const;
+    [[nodiscard]] Transport::TransportInfo createTransportInfo() const;
     void createResource();
     void createTransport();
 
