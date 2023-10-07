@@ -649,7 +649,7 @@ msgid ""
 "With a few simple steps we create the right settings for you. Please follow "
 "the steps of this wizard carefully."
 msgstr ""
-"Amb uns pocs senzills passos es crearà la configuració adequada per a vós. "
+"Amb uns pocs senzills passos es crearà la configuració adequada per a tu. "
 "Seguiu els passos d'este assistent amb cura."
 
 #. i18n: ectx: property (text), widget (QLabel, nameLabel)
