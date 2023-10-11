@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-30 01:42+0000\n"
-"PO-Revision-Date: 2023-09-16 10:08\n"
+"PO-Revision-Date: 2023-10-10 14:25\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/kmail-account-wizard/accountwizard.pot\n"
-"X-Crowdin-File-ID: 3858\n"
+"X-Crowdin-File: /kf6-trunk/messages/kmail-account-wizard/accountwizard.pot\n"
+"X-Crowdin-File-ID: 45735\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -51,18 +51,16 @@ msgstr "身份已删除。"
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:23
 #: accountwizard/manualconfiguration.cpp:23
-#, fuzzy, kde-format
-#| msgid "IMAP, %1"
+#, kde-format
 msgid "IMAP"
-msgstr "IMAP, %1"
+msgstr ""
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:26
 #: accountwizard/manualconfiguration.cpp:23
-#, fuzzy, kde-format
-#| msgid "POP3, %1"
+#, kde-format
 msgid "POP3"
-msgstr "POP3, %1"
+msgstr ""
 
 #: accountwizard/ispdb/configurationmodel.cpp:38
 #, kde-format
@@ -75,10 +73,9 @@ msgid "Keep your folders and emails on your computer"
 msgstr ""
 
 #: accountwizard/ispdb/serverconfiguration.cpp:29
-#, fuzzy, kde-format
-#| msgid "SMTP, %1"
+#, kde-format
 msgid "SMTP"
-msgstr "SMTP, %1"
+msgstr ""
 
 #: accountwizard/ispdb/serverconfiguration.cpp:35
 #: accountwizard/manualconfiguration.cpp:28
@@ -98,22 +95,19 @@ msgid "None"
 msgstr ""
 
 #: accountwizard/ispdbservice.cpp:133
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgid "Configuration found auto config file."
-msgstr "没有找到自动配置。"
+msgstr ""
 
 #: accountwizard/ispdbservice.cpp:136
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgid "Configuration found in well-known file."
-msgstr "没有找到自动配置。"
+msgstr ""
 
 #: accountwizard/ispdbservice.cpp:139
-#, fuzzy, kde-format
-#| msgid "Lookup configuration: Mozilla database"
+#, kde-format
 msgid "Configuration found in Mozilla FAI Database."
-msgstr "查找配置：Mozilla 数据库"
+msgstr ""
 
 #: accountwizard/manualconfiguration.cpp:23
 #, kde-format
@@ -227,17 +221,15 @@ msgstr "邮件传送账户已设置。"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:93
 #: apps/contents/ui/PersonalDataPage.qml:148
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming"
-msgstr "收件："
+msgstr ""
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
 #: apps/contents/ui/PersonalDataPage.qml:209
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing"
-msgstr "发件："
+msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:14
 #, kde-format
@@ -289,24 +281,16 @@ msgid "Continue"
 msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:94
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check online for the settings needed for this email provider. Only the "
-#| "domain name part of the e-mail address will be sent over the Internet at "
-#| "this point. If this option is unchecked, the account can be set up "
-#| "manually."
+#, kde-format
 msgid ""
 "Check online for the settings needed for this email provider. Only the "
 "domain name part of the e-mail address will be sent over the Internet."
 msgstr ""
-"在线检查此电子邮件供应商的设置。此时，只有您电子邮件地址的域名部分会在 "
-"Internet 上发送。如果您取消此选项的话，可以手动设置您的账户。"
 
 #: apps/contents/ui/PersonalDataPage.qml:128
-#, fuzzy, kde-format
-#| msgid "No config found to edit"
+#, kde-format
 msgid "No config found from ispdb server."
-msgstr "未找到要编辑的配置"
+msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:143
 #, kde-format
@@ -315,10 +299,9 @@ msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:154
 #: apps/contents/ui/PersonalDataPage.qml:214
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgid "Hostname:"
-msgstr "用户名："
+msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:163
 #, kde-format
@@ -356,10 +339,9 @@ msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:272
 #: apps/contents/ui/PersonalDataPage.qml:324
-#, fuzzy, kde-format
-#| msgid "Add Account"
+#, kde-format
 msgid "Create Account"
-msgstr "添加账户"
+msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:294
 #, kde-format
@@ -382,10 +364,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "帮助设置个人账户"
 
 #: apps/main.cpp:36
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2020 the Akonadi developers"
+#, kde-format
 msgid "(c) 2009-2023 the Akonadi developers"
-msgstr "(c) 2009-2020 the Akonadi developers"
+msgstr ""
 
 #: apps/main.cpp:39
 #, kde-format
@@ -650,173 +631,3 @@ msgstr "没有找到自动配置。"
 #, kde-format
 msgid "Autoconfiguration failed."
 msgstr "自动配置失败。"
-
-#~ msgid "Provide personal data"
-#~ msgstr "提供个人数据"
-
-#~ msgid "Secure your Communication"
-#~ msgstr "强化您的通讯安全"
-
-#~ msgid "Select Account Type"
-#~ msgstr "选择账户类型"
-
-#~ msgid "Select Provider"
-#~ msgstr "选择供应商"
-
-#~ msgid "Loading Assistant"
-#~ msgstr "正在加载助手"
-
-#~ msgid "Setting up Account"
-#~ msgstr "设置账户"
-
-#~ msgid "ISPDB Assistant"
-#~ msgstr "ISPDB 助手"
-
-#~ msgid "(c) 2010 Omat Holding B.V."
-#~ msgstr "(c) 2010 Omat Holding B.V."
-
-#~ msgid "Tom Albers"
-#~ msgstr "Tom Albers"
-
-#~ msgid "Tries to fetch the settings for that email address"
-#~ msgstr "尝试获取电子邮件地址对应设置"
-
-#~ msgid "No script specified in '%1'."
-#~ msgstr "“%1”中未指定脚本。"
-
-#~ msgid "Unable to load assistant: File '%1' does not exist."
-#~ msgstr "无法加载助手：文件“%1”不存在。"
-
-#~ msgid "Loading script '%1'..."
-#~ msgstr "正在加载脚本“%1”..."
-
-#~ msgid "Failed to load script: '%1'."
-#~ msgstr "加载脚本失败：“%1”。"
-
-#~ msgid "Only offer accounts that support the given type."
-#~ msgstr "仅提供支持给定类型的账户。"
-
-#~ msgid "Run the specified assistant."
-#~ msgstr "运行指定的助手。"
-
-#~ msgid "unpack fullpath on startup and launch that assistant"
-#~ msgstr "启动时解开完整路径，并执行助手"
-
-#~ msgid "Returns types of assistants"
-#~ msgstr "绘画辅助尺返回类型"
-
-#~ msgid "The following assistants are available:"
-#~ msgstr "下列绘画辅助尺可用："
-
-#~ msgid "Fetching provider list..."
-#~ msgstr "正在获取供应商列表..."
-
-#~ msgid "Setting up account..."
-#~ msgstr "正在设置账户..."
-
-#~ msgid "Setup complete."
-#~ msgstr "设置完成。"
-
-#~ msgid "Failed to set up account, rolling back..."
-#~ msgstr "设置账户失败，正在回滚..."
-
-#~ msgid "Failed to set up account."
-#~ msgstr "设置账户失败。"
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr "邮件传输使用%1加密和%2身份验证。"
-
-#~ msgid "Mail transport account deleted."
-#~ msgstr "邮件传送账户已删除。"
-
-#~ msgid "Could not load config dialog for UID '%1'"
-#~ msgstr "无法为 UID “%1”加载配置对话框"
-
-#~ msgid ""
-#~ "Protect yourself against surveillance by encrypting your Mails with "
-#~ "GnuPG. By generating or selecting a public / private key pair now mails "
-#~ "can be encrypted using the public key while only you can decrypt them "
-#~ "with your private key."
-#~ msgstr ""
-#~ "用 GnuPG 加密您的邮件可以保护您免遭监视。生成新的或选择旧的公钥和私钥对，"
-#~ "用公钥加密邮件。只有拥有私钥的您可以解密邮件内容。"
-
-#~ msgid ""
-#~ "<html><head/><body><p>When sending mails KMail automatically looks for "
-#~ "encryption keys of your recipients and secures the mail when keys for "
-#~ "each recipient can be found.</p><p>It also signs your mails "
-#~ "cryptographically so that it can be verified that your messages have not "
-#~ "been tampered with.</p></body></html>"
-#~ msgstr ""
-#~ "发送邮件时，KMail 自动寻找收件人的加密密钥，如果能找到每个收件人的密钥，就"
-#~ "将邮件安全加密。它也会签名您的邮件，因此别人可以验证您的消息没有被篡改过。"
-
-#~ msgid "Secure outgoing emails, if possible"
-#~ msgstr "如果可能的话，强化外发邮件安全"
-
-#~ msgid "Select key for this account:"
-#~ msgstr "选择此账户的密钥："
-
-#~ msgid "Checking key publishing support ..."
-#~ msgstr "正在检查密钥发布支持..."
-
-#~ msgid "Register &this key with your email provider"
-#~ msgstr "通过您的邮件提供者注册此密钥(&T)"
-
-#~ msgid ""
-#~ "Your email service provider supports a service to provide your public key "
-#~ "so that others can find it.\n"
-#~ "This means that your public key can be queried from your email provider "
-#~ "and others can then use it to secure their email communication with you."
-#~ msgstr ""
-#~ "您的电子邮件服务提供者支持密钥发布服务，以便他人能够找到。\n"
-#~ "这意味着他人可以从您的邮件提供者处查询您的公钥，并用它加密和签名邮件通讯。"
-
-#~ msgid "Publish &this key on public key server"
-#~ msgstr "在公共密钥服务器上发布此密钥(&T)"
-
-#~ msgid ""
-#~ "Your email service provider does not support key publishing. You should "
-#~ "publish your key so that other users can retrieve it and use it to secure "
-#~ "their email communication with you.\n"
-#~ "You can alternatively publish your key on a public key server, but you "
-#~ "should be aware that your email address will be publicly listed and they "
-#~ "key cannot be removed from there, only revoked."
-#~ msgstr ""
-#~ "您的电子邮件提供者不支持密钥发布。您应当发布您的公钥，让别人可以查找到它，"
-#~ "用以加密他们和您之间的邮件通讯。\n"
-#~ "您还可以在公共的密钥服务器上发布您的公钥，但需注意，这样您的邮件地址就被公"
-#~ "开在互联网上了，您只能撤销，但无法删除它。"
-
-#~ msgid "Loading assistant..."
-#~ msgstr "正在加载助手..."
-
-#~ msgid ""
-#~ "With a few simple steps we create the right settings for you. Please "
-#~ "follow the steps of this wizard carefully."
-#~ msgstr ""
-#~ "我们会用简单的简单的几个步骤帮助您创建正确的设置。请按照此向导逐步进行。"
-
-#~ msgid "Find pro&vider settings on the Internet"
-#~ msgstr "在 Internet 上查找供应商设置(&V)"
-
-#~ msgid "IMAP account"
-#~ msgstr "IMAP 账户"
-
-#~ msgid "POP&3 account"
-#~ msgstr "POP&3 账户"
-
-#~ msgid ""
-#~ "Select your provider from the list below or click back if your provider "
-#~ "is not listed"
-#~ msgstr ""
-#~ "从下面的列表中选择您的供应商，如果您的供应商未列在其中的话，请点击后退"
-
-#~ msgid "&Details..."
-#~ msgstr "细节(&D)..."
-
-#~ msgid "Select which kind of account you want to create:"
-#~ msgstr "选择您想要创建哪种类型的账户："
-
-#~ msgid "Check for more on Internet"
-#~ msgstr "在 Internet 上查找更多内容"

@@ -353,10 +353,9 @@ msgid "Available configurations"
 msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:314
-#, fuzzy, kde-format
-#| msgid "Personal Information"
+#, kde-format
 msgid "Manual Configuration"
-msgstr "Osobní informace"
+msgstr ""
 
 #: apps/main.cpp:32
 #, kde-format
