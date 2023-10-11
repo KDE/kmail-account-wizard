@@ -3,14 +3,14 @@
 # Xosé <xosecalvo@gmail.com>, 2010, 2013.
 # Adrian Chaves Fernandez <adriyetichaves@gmail.com>, 2013, 2015, 2016, 2017.
 # Marce Villarino <mvillarino@kde-espana.org>, 2013, 2014.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-06-12 00:46+0000\n"
-"PO-Revision-Date: 2023-04-24 07:41+0200\n"
+"PO-Revision-Date: 2023-10-10 15:38+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -209,7 +209,7 @@ msgstr "© 2010 Omat Holding B.V."
 #: ispdb/main.cpp:77 main.cpp:45
 #, kde-format
 msgid "Author"
-msgstr "Autor"
+msgstr "Autoría"
 
 #: ispdb/main.cpp:77
 #, kde-format
@@ -320,7 +320,7 @@ msgstr "Non se atopou unha configuración para editar."
 #: loadpage.cpp:35
 #, kde-format
 msgid "No script specified in '%1'."
-msgstr "Non se indicou ningún script en «%1»."
+msgstr "Non se indicou ningún guión en «%1»."
 
 #: loadpage.cpp:39
 #, kde-format
@@ -335,7 +335,7 @@ msgstr "Cargando o guión «%1»…"
 #: loadpage.cpp:51
 #, kde-format
 msgid "Failed to load script: '%1'."
-msgstr "Non foi posíbel cargar script: «%1»."
+msgstr "Non foi posíbel cargar o guión: «%1»."
 
 #: main.cpp:38
 #, kde-format
@@ -365,7 +365,7 @@ msgstr "Ofrecer só contas que admitan o tipo dado."
 #: main.cpp:54
 #, kde-format
 msgid "Run the specified assistant."
-msgstr "Executar o asistente especificado."
+msgstr "Executar o asistente indicado."
 
 #: main.cpp:56
 #, kde-format
@@ -440,7 +440,7 @@ msgstr "Non foi posíbel converter o valor da opción «%1» no tipo requirido %
 #: resource.cpp:136
 #, kde-format
 msgid "Could not set setting '%1': %2"
-msgstr "Non foi posíbel configurar a opción «%1»: %2"
+msgstr "Non foi posíbel definir a opción «%1»: %2"
 
 #: resource.cpp:142
 #, kde-format
@@ -471,7 +471,7 @@ msgstr ""
 #: servertest.cpp:53
 #, kde-format
 msgid "Autodetecting settings failed"
-msgstr "Fallou a detección automática da configuración"
+msgstr "Produciuse un erro ao detectar automaticamente a configuración."
 
 #: setupautoconfigkolabfreebusy.cpp:74 setupautoconfigkolabldap.cpp:73
 #: setupispdb.cpp:138
@@ -571,7 +571,7 @@ msgstr ""
 #: ui/cryptopage.ui:55
 #, kde-format
 msgid "Secure outgoing emails, if possible"
-msgstr "Protexer as mensaxes saíntes cando se poida"
+msgstr "Protexer as mensaxes saíntes cando se poida."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/cryptopage.ui:65
@@ -600,11 +600,11 @@ msgid ""
 "This means that your public key can be queried from your email provider and "
 "others can then use it to secure their email communication with you."
 msgstr ""
-"O seu fornecedor de servido de correo electrónico fornece un servido para "
+"O seu fornecedor de servido de correo electrónico permite un servizo para "
 "expor a súa chave pública, de texto que outros poidan atopala.\n"
 "Isto significa que a súa chave pública pode consultarse desde o seu "
 "fornecedor de correo electrónico e que outros poden entón usala para "
-"protexer o correo que lle envíen a vostede."
+"protexer as súas comunicacións por correo electrónico con vostede."
 
 #. i18n: ectx: property (title), widget (QGroupBox, pksCheckBox)
 #: ui/cryptopage.ui:152
@@ -624,13 +624,13 @@ msgid ""
 "cannot be removed from there, only revoked."
 msgstr ""
 "O seu fornecedor de servizo de correo electrónico non permite publicar "
-"chaves. Debería publicar a súa chave para que outros usuarios poidan obtela "
-"e usala para protexer as súas comunicacións de correo electrónico con "
+"chaves. Debería publicar a súa chave para que outras persoas poidan obtela e "
+"usala para protexer as súas comunicacións de correo electrónico con "
 "vostede.\n"
 "De maneira alternativa, pode publicar a súa chave nun servidor público de "
 "chaves, pero debería ter en conta que o seu enderezo de correo electrónico "
-"estará listado publicamente e que a chave non pode retirarse dese servidor, "
-"unicamente pode revogarse."
+"estará listado publicamente e que non é posíbel retirar a chave dese "
+"servidor, unicamente pode revogarse."
 
 #. i18n: ectx: property (text), widget (QLabel, statusLabel)
 #: ui/loadpage.ui:30
@@ -713,7 +713,7 @@ msgstr "Saínte:"
 #: ui/personaldatapage.ui:239
 #, kde-format
 msgid "Username:"
-msgstr "Nome de usuario:"
+msgstr "Nome de usuaria:"
 
 #. i18n: ectx: property (text), widget (QPushButton, createAccountPb)
 #: ui/personaldatapage.ui:273
