@@ -88,6 +88,7 @@ if (Qt6Keychain_VERSION VERSION_LESS 0.14.99)
      MESSAGE(STATUS "Qt6KeyChain version is less 0.14.99. It will not support KWallet 6... It will not able to load password. Please update it.")
 endif()
 
+add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 ecm_set_disabled_deprecation_versions(QT 6.5  KF 5.240.0)
 
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
