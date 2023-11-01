@@ -51,6 +51,7 @@ target_link_libraries(libaccountwizard
     KF6::DBusAddons
     )
 
+set_target_properties(libaccountwizard PROPERTIES OUTPUT_NAME accountwizard)
 install(TARGETS libaccountwizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
 if (BUILD_TESTING)
