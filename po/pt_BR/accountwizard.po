@@ -3,21 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2010, 2011, 2012, 2013, 2015, 2016, 2018, 2019.
-# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2010, 2012, 2019, 2020, 2021.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2010, 2012, 2019, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-30 01:42+0000\n"
-"PO-Revision-Date: 2021-08-17 16:08-0300\n"
+"PO-Revision-Date: 2023-11-14 13:56-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
-"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -53,18 +53,16 @@ msgstr "A identidade foi removida."
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:23
 #: accountwizard/manualconfiguration.cpp:23
-#, fuzzy, kde-format
-#| msgid "IMAP, %1"
+#, kde-format
 msgid "IMAP"
-msgstr "IMAP, %1"
+msgstr "IMAP"
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:26
 #: accountwizard/manualconfiguration.cpp:23
-#, fuzzy, kde-format
-#| msgid "POP3, %1"
+#, kde-format
 msgid "POP3"
-msgstr "POP3, %1"
+msgstr "POP3"
 
 #: accountwizard/ispdb/configurationmodel.cpp:38
 #, kde-format
@@ -77,27 +75,26 @@ msgid "Keep your folders and emails on your computer"
 msgstr ""
 
 #: accountwizard/ispdb/serverconfiguration.cpp:29
-#, fuzzy, kde-format
-#| msgid "SMTP, %1"
+#, kde-format
 msgid "SMTP"
-msgstr "SMTP, %1"
+msgstr "SMTP"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:35
 #: accountwizard/manualconfiguration.cpp:28
 #, kde-format
 msgid "SSL/TLS"
-msgstr ""
+msgstr "SSL/TLS"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:38
 #, kde-format
 msgid "StartTLS"
-msgstr ""
+msgstr "StartTLS"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:41
 #, kde-format
 msgctxt "No security mechanism"
 msgid "None"
-msgstr ""
+msgstr "Nenhum"
 
 #: accountwizard/ispdbservice.cpp:133
 #, fuzzy, kde-format
@@ -120,22 +117,22 @@ msgstr "Busca de configuração: Banco de dados Mozilla"
 #: accountwizard/manualconfiguration.cpp:23
 #, kde-format
 msgid "Kolab"
-msgstr ""
+msgstr "Kolab"
 
 #: accountwizard/manualconfiguration.cpp:28
 #, kde-format
 msgid "STARTTLS"
-msgstr ""
+msgstr "STARTTLS"
 
 #: accountwizard/manualconfiguration.cpp:28
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Nenhum"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "Clear text"
-msgstr ""
+msgstr "Texto simples"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
@@ -150,22 +147,22 @@ msgstr ""
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "CRAM-MD5"
-msgstr ""
+msgstr "CRAM-MD5"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "DIGEST-MD5"
-msgstr ""
+msgstr "DIGEST-MD5"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "NTLM"
-msgstr ""
+msgstr "NTLM"
 
 #: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "GSSAPI"
-msgstr ""
+msgstr "GSSAPI"
 
 #: accountwizard/resource.cpp:63 legacy/resource.cpp:74
 #, kde-format
@@ -246,7 +243,7 @@ msgstr "Envio:"
 #: apps/contents/ui/PersonalDataPage.qml:14
 #, kde-format
 msgid "Personal Information"
-msgstr ""
+msgstr "Informações pessoais"
 
 #: apps/contents/ui/PersonalDataPage.qml:31
 #, kde-format
@@ -290,23 +287,17 @@ msgstr "Senha:"
 #: apps/contents/ui/PersonalDataPage.qml:85
 #, kde-format
 msgid "Continue"
-msgstr ""
+msgstr "Continuar"
 
 #: apps/contents/ui/PersonalDataPage.qml:94
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check online for the settings needed for this email provider. Only the "
-#| "domain name part of the e-mail address will be sent over the Internet at "
-#| "this point. If this option is unchecked, the account can be set up "
-#| "manually."
+#, kde-format
 msgid ""
 "Check online for the settings needed for this email provider. Only the "
 "domain name part of the e-mail address will be sent over the Internet."
 msgstr ""
 "Verificar online as configurações necessárias para este provedor de e-mail. "
 "Somente a parte do nome de domínio do endereço de e-mail será enviada pela "
-"Internet neste momento. Se esta opção for desmarcada, a conta poderá ser "
-"configurada manualmente."
+"Internet."
 
 #: apps/contents/ui/PersonalDataPage.qml:128
 #, fuzzy, kde-format
@@ -317,7 +308,7 @@ msgstr "Não foi encontrada nenhuma configuração para editar"
 #: apps/contents/ui/PersonalDataPage.qml:143
 #, kde-format
 msgid "Server Parameters"
-msgstr ""
+msgstr "Parâmetros do servidor"
 
 #: apps/contents/ui/PersonalDataPage.qml:154
 #: apps/contents/ui/PersonalDataPage.qml:214
@@ -329,25 +320,25 @@ msgstr "Nome de usuário:"
 #: apps/contents/ui/PersonalDataPage.qml:163
 #, kde-format
 msgid "Protocol:"
-msgstr ""
+msgstr "Protocolo:"
 
 #: apps/contents/ui/PersonalDataPage.qml:172
 #: apps/contents/ui/PersonalDataPage.qml:223
 #, kde-format
 msgid "Port:"
-msgstr ""
+msgstr "Porta:"
 
 #: apps/contents/ui/PersonalDataPage.qml:179
 #: apps/contents/ui/PersonalDataPage.qml:230
 #, kde-format
 msgid "Security:"
-msgstr ""
+msgstr "Segurança:"
 
 #: apps/contents/ui/PersonalDataPage.qml:188
 #: apps/contents/ui/PersonalDataPage.qml:239
 #, kde-format
 msgid "Authentication Method:"
-msgstr ""
+msgstr "Método de autenticação:"
 
 #: apps/contents/ui/PersonalDataPage.qml:197
 #: apps/contents/ui/PersonalDataPage.qml:248
@@ -362,20 +353,19 @@ msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:272
 #: apps/contents/ui/PersonalDataPage.qml:324
-#, fuzzy, kde-format
-#| msgid "Add Account"
+#, kde-format
 msgid "Create Account"
-msgstr "Adicionar conta"
+msgstr "Criar conta"
 
 #: apps/contents/ui/PersonalDataPage.qml:294
 #, kde-format
 msgid "Available configurations"
-msgstr ""
+msgstr "Configurações disponíveis"
 
 #: apps/contents/ui/PersonalDataPage.qml:314
 #, kde-format
 msgid "Manual Configuration"
-msgstr ""
+msgstr "Configuração manual"
 
 #: apps/main.cpp:32
 #, kde-format
@@ -388,10 +378,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "Ajuda na configuração das contas PIM"
 
 #: apps/main.cpp:36
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2020 the Akonadi developers"
+#, kde-format
 msgid "(c) 2009-2023 the Akonadi developers"
-msgstr "(c) 2009-2020 Os desenvolvedores do Akonadi"
+msgstr "(c) 2009-2023 Os desenvolvedores do Akonadi"
 
 #: apps/main.cpp:39
 #, kde-format
@@ -411,12 +400,12 @@ msgstr "Laurent Montel"
 #: apps/main.cpp:41
 #, kde-format
 msgid "Carl Schwan"
-msgstr ""
+msgstr "Carl Schwan"
 
 #: apps/main.cpp:41
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Mantenedor"
 
 #: legacy/configfile.cpp:37
 #, kde-format
