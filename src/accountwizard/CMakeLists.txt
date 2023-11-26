@@ -41,10 +41,7 @@ target_link_libraries(libaccountwizard
     KPim6::IdentityManagementCore
     KF6::WidgetsAddons
     KF6::I18n
-    KPim6::LdapCore
     KF6::Crash
-    KPim6::Libkleo
-    KF6::Package
     Qt::Xml
     Qt::Quick
     Qt::QuickControls2

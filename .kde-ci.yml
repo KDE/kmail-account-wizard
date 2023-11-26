@@ -7,16 +7,11 @@ Dependencies:
     'frameworks/extra-cmake-modules': '@latest-kf6'
     'frameworks/ki18n': '@latest-kf6'
     'pim/akonadi' : '@same'
-    'pim/akonadi-mime' : '@same'
     'pim/kidentitymanagement' : '@same'
-    'pim/kimap' : '@same'
-    'pim/kldap' : '@same'
     'pim/kmailtransport' : '@same'
-    'pim/libkleo' : '@same'
     'frameworks/kdbusaddons': '@latest-kf6'
     'frameworks/kdoctools': '@latest-kf6'
     'frameworks/kcrash': '@latest-kf6'
-    'frameworks/kpackage': '@latest-kf6'
     'pim/kmime' : '@same'
 
 Options:
