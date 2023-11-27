@@ -41,7 +41,7 @@ void Transport::createTransport()
         m_transportId = mt->id();
         */
     mt->save();
-    // TODO Q_EMIT info(i18n("Mail transport uses '%1' encryption and '%2' authentication.", m_encrStr, m_authStr));
+    Q_EMIT info(i18n("Mail transport uses '%1' encryption and '%2' authentication.", mTransportInfo.encrStr, mTransportInfo.authStr));
     MailTransport::TransportManager::self()->addTransport(mt);
     MailTransport::TransportManager::self()->setDefaultTransport(mt->id());
     Q_EMIT finished(i18n("Mail transport account set up."));
