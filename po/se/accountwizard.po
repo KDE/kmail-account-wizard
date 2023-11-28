@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-30 01:42+0000\n"
+"POT-Creation-Date: 2023-11-28 01:36+0000\n"
 "PO-Revision-Date: 2010-03-14 02:24+0100\n"
 "Last-Translator: Børre Gaup <boerre@skolelinux.no>\n"
 "Language-Team: Northern Sami <l10n-no@lister.huftis.org>\n"
@@ -215,6 +215,11 @@ msgstr "Ressursaheivehus lea geargan."
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Heiveheamen e-boastafievrridankonttu …"
+
+#: accountwizard/transport.cpp:44
+#, kde-format
+msgid "Mail transport uses '%1' encryption and '%2' authentication."
+msgstr ""
 
 #: accountwizard/transport.cpp:47
 #, kde-format

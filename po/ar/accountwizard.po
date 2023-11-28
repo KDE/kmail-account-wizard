@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-30 01:42+0000\n"
+"POT-Creation-Date: 2023-11-28 01:36+0000\n"
 "PO-Revision-Date: 2022-01-19 22:39+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -221,6 +221,11 @@ msgstr "اكتمل إعداد المورد."
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "يضبط حساب نقل البريد..."
+
+#: accountwizard/transport.cpp:44
+#, kde-format
+msgid "Mail transport uses '%1' encryption and '%2' authentication."
+msgstr "نقال البريد يستخدم تشفير '%1' و استيثاق '%2'"
 
 #: accountwizard/transport.cpp:47
 #, kde-format
@@ -725,9 +730,6 @@ msgstr "فشل الضّبط الآليّ."
 
 #~ msgid "Failed to set up account."
 #~ msgstr "فشل إعداد الحساب."
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr "نقال البريد يستخدم تشفير '%1' و استيثاق '%2'"
 
 #~ msgid "Mail transport account deleted."
 #~ msgstr "حُذف حساب نقل البريد."

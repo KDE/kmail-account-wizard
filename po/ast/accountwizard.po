@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-30 01:42+0000\n"
+"POT-Creation-Date: 2023-11-28 01:36+0000\n"
 "PO-Revision-Date: 2023-11-07 21:27+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -212,6 +212,11 @@ msgstr ""
 #: accountwizard/transport.cpp:23
 #, kde-format
 msgid "Setting up mail transport account..."
+msgstr ""
+
+#: accountwizard/transport.cpp:44
+#, kde-format
+msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr ""
 
 #: accountwizard/transport.cpp:47

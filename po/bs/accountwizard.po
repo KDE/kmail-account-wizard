@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-30 01:42+0000\n"
+"POT-Creation-Date: 2023-11-28 01:36+0000\n"
 "PO-Revision-Date: 2013-11-03 21:01+0000\n"
 "Last-Translator: Adna Rakić <adna.rakic@gmail.com>\n"
 "Language-Team: bs <bs@kde.org>\n"
@@ -222,6 +222,11 @@ msgstr "Postavljanje resursa završeno."
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Postavljam nalog za prenos e‑pošte..."
+
+#: accountwizard/transport.cpp:44
+#, kde-format
+msgid "Mail transport uses '%1' encryption and '%2' authentication."
+msgstr ""
 
 #: accountwizard/transport.cpp:47
 #, kde-format

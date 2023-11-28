@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-30 01:42+0000\n"
+"POT-Creation-Date: 2023-11-28 01:36+0000\n"
 "PO-Revision-Date: 2023-10-24 18:56+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -224,6 +224,13 @@ msgstr "Configuration de la ressource terminée."
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Configuration du compte de transport de courrier électronique..."
+
+#: accountwizard/transport.cpp:44
+#, kde-format
+msgid "Mail transport uses '%1' encryption and '%2' authentication."
+msgstr ""
+"La couche de transport de la messagerie électronique utilise le chiffrement "
+"« %1 » et l'authentification « %2 »."
 
 #: accountwizard/transport.cpp:47
 #, kde-format
@@ -735,11 +742,6 @@ msgstr "Échec de configuration automatique."
 
 #~ msgid "Failed to set up account."
 #~ msgstr "Impossible de configurer le compte."
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr ""
-#~ "La couche de transport de la messagerie électronique utilise le "
-#~ "chiffrement « %1 » et l'authentification « %2 »."
 
 #~ msgid "Mail transport account deleted."
 #~ msgstr "Compte de transport de courrier électronique supprimé."

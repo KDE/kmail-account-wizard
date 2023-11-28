@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-30 01:42+0000\n"
+"POT-Creation-Date: 2023-11-28 01:36+0000\n"
 "PO-Revision-Date: 2023-09-30 08:31+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -221,6 +221,12 @@ msgstr "Nastavitev vira je zaključena."
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Nastavljanje računa za prenos pošte ..."
+
+#: accountwizard/transport.cpp:44
+#, kde-format
+msgid "Mail transport uses '%1' encryption and '%2' authentication."
+msgstr ""
+"Transport pošte uporablja šifriranje '%1' in preverjanje pristnosti '%2'."
 
 #: accountwizard/transport.cpp:47
 #, kde-format
@@ -718,10 +724,6 @@ msgstr "Samonastavljanje ni uspelo."
 
 #~ msgid "Failed to set up account."
 #~ msgstr "Nastavljanje računa ni uspelo."
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr ""
-#~ "Transport pošte uporablja šifriranje '%1' in preverjanje pristnosti '%2'."
 
 #~ msgid "Mail transport account deleted."
 #~ msgstr "Račun za prenos pošte je izbrisan."

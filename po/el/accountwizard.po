@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-30 01:42+0000\n"
+"POT-Creation-Date: 2023-11-28 01:36+0000\n"
 "PO-Revision-Date: 2021-09-03 10:38+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -221,6 +221,12 @@ msgstr "Η προετοιμασία του πόρου ολοκληρώθηκε."
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Προετοιμασία λογαριασμού ηλεκτρονικού ταχυδρομείου..."
+
+#: accountwizard/transport.cpp:44
+#, kde-format
+msgid "Mail transport uses '%1' encryption and '%2' authentication."
+msgstr ""
+"Το ηλ. ταχυδρομείο χρησιμοποιεί '%1' κρυπτογράφηση και '%2' ταυτοποίηση."
 
 #: accountwizard/transport.cpp:47
 #, kde-format
@@ -736,10 +742,6 @@ msgstr "Αποτυχία αυτόματης διαμόρφωσης."
 
 #~ msgid "Failed to set up account."
 #~ msgstr "Αποτυχία προετοιμασίας λογαριασμού."
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr ""
-#~ "Το ηλ. ταχυδρομείο χρησιμοποιεί '%1' κρυπτογράφηση και '%2' ταυτοποίηση."
 
 #~ msgid "Mail transport account deleted."
 #~ msgstr "Ο λογαριασμός ηλ. ταχυδρομείου έχει διαγραφεί."

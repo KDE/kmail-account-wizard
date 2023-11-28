@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-30 01:42+0000\n"
+"POT-Creation-Date: 2023-11-28 01:36+0000\n"
 "PO-Revision-Date: 2021-08-14 08:50+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -220,6 +220,12 @@ msgstr "Resursinställning klar."
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Ställer in konto för e-postöverföring..."
+
+#: accountwizard/transport.cpp:44
+#, kde-format
+msgid "Mail transport uses '%1' encryption and '%2' authentication."
+msgstr ""
+"Brevöverföring använder krypteringen '%1' och behörighetskontrollen '%2'."
 
 #: accountwizard/transport.cpp:47
 #, kde-format
@@ -725,10 +731,6 @@ msgstr "Automatisk inställning misslyckades."
 
 #~ msgid "Failed to set up account."
 #~ msgstr "Misslyckades ställa in nytt konto."
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr ""
-#~ "Brevöverföring använder krypteringen '%1' och behörighetskontrollen '%2'."
 
 #~ msgid "Mail transport account deleted."
 #~ msgstr "Överföringskonto för e-post."

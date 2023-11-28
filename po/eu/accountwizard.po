@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-30 01:42+0000\n"
+"POT-Creation-Date: 2023-11-28 01:36+0000\n"
 "PO-Revision-Date: 2023-09-30 13:14+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -217,6 +217,12 @@ msgstr "Baliabidea ezartzea osatu da."
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Posta-garraio kontua ezartzen..."
+
+#: accountwizard/transport.cpp:44
+#, kde-format
+msgid "Mail transport uses '%1' encryption and '%2' authentication."
+msgstr ""
+"Posta-garraioak '%1' zifratzea eta '%2' autentifikazioa erabiltzen ditu."
 
 #: accountwizard/transport.cpp:47
 #, kde-format
@@ -716,10 +722,6 @@ msgstr "Konfiguratze automatikoak huts egin du."
 
 #~ msgid "Failed to set up account."
 #~ msgstr "Kontua ezartzea huts egin du."
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr ""
-#~ "Posta-garraioak '%1' zifratzea eta '%2' autentifikazioa erabiltzen ditu."
 
 #~ msgid "Mail transport account deleted."
 #~ msgstr "Posta-garraio kontua ezabatu da."

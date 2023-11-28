@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-30 01:42+0000\n"
+"POT-Creation-Date: 2023-11-28 01:36+0000\n"
 "PO-Revision-Date: 2022-10-01 15:05+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -228,6 +228,11 @@ msgstr "Создание источника данных завершено."
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Создание учётной записи для отправки почты..."
+
+#: accountwizard/transport.cpp:44
+#, kde-format
+msgid "Mail transport uses '%1' encryption and '%2' authentication."
+msgstr "Учётная запись использует шифрование %1 и проверку подлинности %2."
 
 #: accountwizard/transport.cpp:47
 #, kde-format
@@ -742,9 +747,6 @@ msgstr "Не удалось найти автоматическую конфиг
 
 #~ msgid "Failed to set up account."
 #~ msgstr "Не удалось создать учётную запись."
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr "Учётная запись использует шифрование %1 и проверку подлинности %2."
 
 #~ msgid "Mail transport account deleted."
 #~ msgstr "Учётная запись для отправки почты удалена."

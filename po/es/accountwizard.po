@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-30 01:42+0000\n"
+"POT-Creation-Date: 2023-11-28 01:36+0000\n"
 "PO-Revision-Date: 2023-09-30 04:19+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -217,6 +217,11 @@ msgstr "Configuración del recurso finalizada."
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Configurando cuenta de transporte de correo..."
+
+#: accountwizard/transport.cpp:44
+#, kde-format
+msgid "Mail transport uses '%1' encryption and '%2' authentication."
+msgstr "El transporte de correo usa cifrado «%1» y autenticación «%2»."
 
 #: accountwizard/transport.cpp:47
 #, kde-format
@@ -722,9 +727,6 @@ msgstr "La configuración automática ha fallado."
 
 #~ msgid "Failed to set up account."
 #~ msgstr "Ha fallado al configurar la cuenta."
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr "El transporte de correo usa cifrado «%1» y autenticación «%2»."
 
 #~ msgid "Mail transport account deleted."
 #~ msgstr "Cuenta de transporte de correo borrada."

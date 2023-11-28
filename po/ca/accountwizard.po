@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-30 01:42+0000\n"
+"POT-Creation-Date: 2023-11-28 01:36+0000\n"
 "PO-Revision-Date: 2023-09-30 14:00+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -219,6 +219,11 @@ msgstr "S'ha completat l'arranjament del recurs."
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "S'està arranjant el transport de correu del compte..."
+
+#: accountwizard/transport.cpp:44
+#, kde-format
+msgid "Mail transport uses '%1' encryption and '%2' authentication."
+msgstr "El transport de correu usa l'encriptatge «%1» i l'autenticació «%2»."
 
 #: accountwizard/transport.cpp:47
 #, kde-format
@@ -722,10 +727,6 @@ msgstr "Ha fallat la configuració automàtica."
 
 #~ msgid "Failed to set up account."
 #~ msgstr "Ha fallat en arranjar el compte."
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr ""
-#~ "El transport de correu usa l'encriptatge «%1» i l'autenticació «%2»."
 
 #~ msgid "Mail transport account deleted."
 #~ msgstr "S'ha eliminat el transport de correu del compte."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-30 01:42+0000\n"
+"POT-Creation-Date: 2023-11-28 01:36+0000\n"
 "PO-Revision-Date: 2023-09-30 08:58+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -218,6 +218,13 @@ msgstr "Налаштування ресурсу завершено."
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Налаштування облікового запису пересилання пошти…"
+
+#: accountwizard/transport.cpp:44
+#, kde-format
+msgid "Mail transport uses '%1' encryption and '%2' authentication."
+msgstr ""
+"У каналі передавання пошти використовується шифрування «%1» та розпізнавання "
+"«%2»."
 
 #: accountwizard/transport.cpp:47
 #, kde-format
@@ -729,11 +736,6 @@ msgstr "Невдала спроба автоматичного налаштов�
 
 #~ msgid "Failed to set up account."
 #~ msgstr "Не вдалося налаштувати обліковий запис."
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr ""
-#~ "У каналі передавання пошти використовується шифрування «%1» та "
-#~ "розпізнавання «%2»."
 
 #~ msgid "Mail transport account deleted."
 #~ msgstr "Обліковий запис пересилання пошти вилучено."

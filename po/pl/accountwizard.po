@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-30 01:42+0000\n"
+"POT-Creation-Date: 2023-11-28 01:36+0000\n"
 "PO-Revision-Date: 2023-09-30 11:07+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -216,6 +216,11 @@ msgstr "Ukończono ustawianie zasobu."
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Ustawianie serwera pocztowego..."
+
+#: accountwizard/transport.cpp:44
+#, kde-format
+msgid "Mail transport uses '%1' encryption and '%2' authentication."
+msgstr "Serwer pocztowy używa szyfrowania '%1' oraz uwierzytelniania '%2'."
 
 #: accountwizard/transport.cpp:47
 #, kde-format
@@ -714,9 +719,6 @@ msgstr "Niepowodzenie autoustawiania."
 
 #~ msgid "Failed to set up account."
 #~ msgstr "Nie udało się ustawić konta."
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr "Serwer pocztowy używa szyfrowania '%1' oraz uwierzytelniania '%2'."
 
 #~ msgid "Mail transport account deleted."
 #~ msgstr "Konto serwera pocztowego usunięte."

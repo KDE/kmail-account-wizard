@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-30 01:42+0000\n"
+"POT-Creation-Date: 2023-11-28 01:36+0000\n"
 "PO-Revision-Date: 2023-09-30 11:22+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -217,6 +217,11 @@ msgstr "Instellen van hulpbron voltooid."
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "E-mailtransportaccount instellen..."
+
+#: accountwizard/transport.cpp:44
+#, kde-format
+msgid "Mail transport uses '%1' encryption and '%2' authentication."
+msgstr "E-mailtransport gebruikt versleuteling '%1' en authenticatie '%2'."
 
 #: accountwizard/transport.cpp:47
 #, kde-format
@@ -717,9 +722,6 @@ msgstr "Automatische configuratie is mislukt."
 
 #~ msgid "Failed to set up account."
 #~ msgstr "Account instellen mislukt."
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr "E-mailtransport gebruikt versleuteling '%1' en authenticatie '%2'."
 
 #~ msgid "Mail transport account deleted."
 #~ msgstr "E-mailtransportaccount gewist."

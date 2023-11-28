@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-30 01:42+0000\n"
+"POT-Creation-Date: 2023-11-28 01:36+0000\n"
 "PO-Revision-Date: 2022-04-09 19:22+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -219,6 +219,11 @@ msgstr "Nastavenie zdroja dokončené."
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Nastavujem účet prenosu pošty..."
+
+#: accountwizard/transport.cpp:44
+#, kde-format
+msgid "Mail transport uses '%1' encryption and '%2' authentication."
+msgstr "Preprava pošty používa šifrovanie '%1' a autentifikáciu '%2'."
 
 #: accountwizard/transport.cpp:47
 #, kde-format
@@ -723,9 +728,6 @@ msgstr "Autodetekcia nastavení zlyhala."
 
 #~ msgid "Failed to set up account."
 #~ msgstr "Zlyhalo nastavenie účtu."
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr "Preprava pošty používa šifrovanie '%1' a autentifikáciu '%2'."
 
 #~ msgid "Mail transport account deleted."
 #~ msgstr "Účet prenosu pošty vymazaný."
