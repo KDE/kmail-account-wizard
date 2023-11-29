@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-06-12 00:46+0000\n"
-"PO-Revision-Date: 2023-01-08 21:45+0100\n"
+"PO-Revision-Date: 2023-10-01 05:27+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -32,97 +32,97 @@ msgstr "axel@esperanto-jeunes.org,okellogg@users.sourceforge.net"
 #: configfile.cpp:37
 #, kde-format
 msgid "Writing config file for %1..."
-msgstr ""
+msgstr "Skribante agordosieron por %1..."
 
 #: configfile.cpp:54
 #, kde-format
 msgid "Config file for %1 is writing."
-msgstr ""
+msgstr "Agorda dosiero por %1 estas skribata."
 
 #: configfile.cpp:59
 #, kde-format
 msgid "Config file for %1 was not changed."
-msgstr ""
+msgstr "Agorddosiero por %1 ne estis ŝanĝita."
 
 #: configfile.cpp:90
 #, kde-format
 msgid "No given name for the configuration."
-msgstr ""
+msgstr "Neniu donita nomo por la agordo."
 
 #: configfile.cpp:102
 #, kde-format
 msgid "Unknown configuration name '%1'"
-msgstr ""
+msgstr "Nekonata agorda nomo '%1'"
 
 #: cryptopage.cpp:80 cryptopage.cpp:101 cryptopage.cpp:202
 #, kde-format
 msgid "Account Wizard"
-msgstr ""
+msgstr "Konta Sorĉisto"
 
 #: cryptopage.cpp:81 cryptopage.cpp:102
 #, kde-format
 msgid "Error while generating new key pair for your account %1: %2"
-msgstr ""
+msgstr "Eraro dum generado de nova ŝlosilparo por via konto %1: %2"
 
 #: cryptopage.cpp:257
 #, kde-format
 msgid "Could not detect valid key type"
-msgstr ""
+msgstr "Ne eblis detekti validan ŝlosiltipo"
 
 #: cryptopage.cpp:257 cryptopage.cpp:266 cryptopage.cpp:282 cryptopage.cpp:289
 #, kde-format
 msgid "Import error"
-msgstr ""
+msgstr "Importa eraro"
 
 #: cryptopage.cpp:265
 #, kde-format
 msgid "Cannot read data from the certificate file: %1"
-msgstr ""
+msgstr "Ne povas legi datumojn de la atestilo: %1"
 
 #: cryptopage.cpp:281
 #, kde-format
 msgid "Failed to import key: %1"
-msgstr ""
+msgstr "Malsukcesis importi ŝlosilon: %1"
 
 #: cryptopage.cpp:289
 #, kde-format
 msgid "Failed to import key."
-msgstr ""
+msgstr "Malsukcesis importi ŝlosilon."
 
 #: cryptopage.cpp:316
 #, kde-format
 msgid "No key"
-msgstr ""
+msgstr "Neniu ŝlosilo"
 
 #: cryptopage.cpp:317
 #, kde-format
 msgid "Generate a new key pair"
-msgstr ""
+msgstr "Generi novan ŝlosilparon"
 
 #: cryptopage.cpp:318
 #, kde-format
 msgid "Import a key"
-msgstr ""
+msgstr "Importi ŝlosilon"
 
 #: cryptopage.cpp:425
 #, kde-format
 msgid "Certificates"
-msgstr ""
+msgstr "Atestiloj"
 
 #: cryptopage.cpp:426
 #, kde-format
 msgid "Any files"
-msgstr ""
+msgstr "Ajnaj dosieroj"
 
 #: cryptopage.cpp:429
 #, kde-format
 msgid "Select Certificate File"
-msgstr ""
+msgstr "Elekti Atestildosieron"
 
 #: cryptopage.cpp:435
 #, kde-format
 msgid "Importing key..."
-msgstr ""
+msgstr "Importante ŝlosilon..."
 
 #: dialog.cpp:46
 #, kde-format
@@ -157,12 +157,12 @@ msgstr ""
 #: identity.cpp:27
 #, kde-format
 msgid "Setting up identity..."
-msgstr ""
+msgstr "Agordi identecon..."
 
 #: identity.cpp:38
 #, kde-format
 msgid "Identity set up."
-msgstr ""
+msgstr "Identeco starigita."
 
 #: identity.cpp:46
 #, kde-format
@@ -173,22 +173,22 @@ msgstr "Sennoma"
 #: identity.cpp:78
 #, kde-format
 msgid "Identity removed."
-msgstr ""
+msgstr "Identeco forigita."
 
 #: ispdb/ispdb.cpp:351
 #, kde-format
 msgid "Lookup configuration: Email provider"
-msgstr ""
+msgstr "Serĉagordo: Retpoŝta provizanto"
 
 #: ispdb/ispdb.cpp:354
 #, kde-format
 msgid "Lookup configuration: Trying common server name"
-msgstr ""
+msgstr "Serĉa agordo: provante komunan servilon nomon"
 
 #: ispdb/ispdb.cpp:357
 #, kde-format
 msgid "Lookup configuration: Mozilla database"
-msgstr ""
+msgstr "Serĉagordo: Mozilla-datumbazo"
 
 #: ispdb/main.cpp:70
 #, kde-format
@@ -198,7 +198,7 @@ msgstr ""
 #: ispdb/main.cpp:72 main.cpp:40
 #, kde-format
 msgid "Helps setting up PIM accounts"
-msgstr ""
+msgstr "Helpas starigi PIM-kontojn"
 
 #: ispdb/main.cpp:74
 #, kde-format
@@ -223,92 +223,92 @@ msgstr ""
 #: key.cpp:68
 #, kde-format
 msgid "Skipping key publishing"
-msgstr ""
+msgstr "Preterlasi ŝlosilan eldonadon"
 
 #: key.cpp:82 key.cpp:203
 #, kde-format
 msgid "Publishing OpenPGP key..."
-msgstr ""
+msgstr "Eldonante OpenPGP-ŝlosilon..."
 
 #: key.cpp:96 key.cpp:123 key.cpp:193
 #, kde-format
 msgid "Key publishing was canceled."
-msgstr ""
+msgstr "Ŝlosila eldonado estis nuligita."
 
 #: key.cpp:102
 #, kde-format
 msgid "Key publishing failed: not online, or GnuPG too old."
-msgstr ""
+msgstr "Ŝlosila eldonado malsukcesis: ne rete, aŭ GnuPG tro malnova."
 
 #: key.cpp:105
 #, kde-format
 msgid "Your email provider does not support key publishing."
-msgstr ""
+msgstr "Via retpoŝta provizanto ne subtenas ŝlosilan eldonadon."
 
 #: key.cpp:128
 #, kde-format
 msgid "An error occurred while creating key publishing request."
-msgstr ""
+msgstr "Okazis eraro dum kreado de ŝlosila eldonpeto."
 
 #: key.cpp:151
 #, kde-format
 msgid "Key publishing error: mail transport is not configured"
-msgstr ""
+msgstr "Ŝlosila eldoneraro: poŝta transporto ne estas agordita"
 
 #: key.cpp:164
 #, kde-format
 msgid "Key publishing error: failed to create request email"
-msgstr ""
+msgstr "Ŝlosila publikiga eraro: malsukcesis krei petan retpoŝton"
 
 #: key.cpp:195
 #, kde-format
 msgid "Failed to send key publishing request: %1"
-msgstr ""
+msgstr "Malsukcesis sendi ŝlosilan eldonpeton: %1"
 
 #: key.cpp:197
 #, kde-format
 msgid "Key publishing request sent."
-msgstr ""
+msgstr "Ŝlosila eldonpeto sendita."
 
 #: key.cpp:233
 #, kde-format
 msgid "Failed to publish the key."
-msgstr ""
+msgstr "Malsukcesis publikigi la ŝlosilon."
 
 #: key.cpp:239
 #, kde-format
 msgid "Key has been published on %1"
-msgstr ""
+msgstr "Ŝlosilo estis publikigita sur %1"
 
 #: ldap.cpp:37
 #, kde-format
 msgid "Setting up LDAP server..."
-msgstr ""
+msgstr "Agordante LDAP-servilon..."
 
 #: ldap.cpp:40
 #, kde-format
 msgid "Needed parameters are missing for LDAP config: server '%1'"
-msgstr ""
+msgstr "Bezonataj parametroj mankas por LDAP-agordo: servilo '%1'"
 
 #: ldap.cpp:118
 #, kde-format
 msgid "LDAP set up."
-msgstr ""
+msgstr "LDAP instalita."
 
 #: ldap.cpp:136
 #, kde-format
 msgid "LDAP not configuring."
-msgstr ""
+msgstr "LDAP ne agordas."
 
 #: ldap.cpp:149
 #, kde-format
 msgid "Removed LDAP entry."
-msgstr ""
+msgstr "Forigita LDAP-eniro."
 
 #: ldap.cpp:155
 #, kde-format
 msgid "No config found to edit"
-msgstr ""
+msgstr "Neniu agordo trovita por redakti"
 
 #: loadpage.cpp:35
 #, kde-format
@@ -333,7 +333,7 @@ msgstr ""
 #: main.cpp:38
 #, kde-format
 msgid "Account Assistant"
-msgstr ""
+msgstr "Konta Asistanto"
 
 #: main.cpp:42
 #, kde-format
@@ -343,7 +343,7 @@ msgstr ""
 #: main.cpp:45
 #, kde-format
 msgid "Volker Krause"
-msgstr ""
+msgstr "Volker Krause"
 
 #: main.cpp:46
 #, kde-format
@@ -398,57 +398,57 @@ msgstr ""
 #: resource.cpp:74
 #, kde-format
 msgid "Resource type '%1' is not available."
-msgstr ""
+msgstr "Rimeda tipo '%1' ne disponeblas."
 
 #: resource.cpp:88
 #, kde-format
 msgid "Resource '%1' is already set up."
-msgstr ""
+msgstr "Rimedo '%1' jam estas agordita."
 
 #: resource.cpp:94
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr ""
+msgstr "Kreante rimedan ekzemplon por '%1'..."
 
 #: resource.cpp:103
 #, kde-format
 msgid "Failed to create resource instance: %1"
-msgstr ""
+msgstr "Malsukcesis krei rimedan ekzemplon: %1"
 
 #: resource.cpp:110
 #, kde-format
 msgid "Configuring resource instance..."
-msgstr ""
+msgstr "Agordante rimedan petskribon..."
 
 #: resource.cpp:114
 #, kde-format
 msgid "Unable to configure resource instance."
-msgstr ""
+msgstr "Ne eblas agordi rimedan petskribon."
 
 #: resource.cpp:129
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
-msgstr ""
+msgstr "Ne eblis konverti valoron de agordo '%1' al postulata tipo %2."
 
 #: resource.cpp:136
 #, kde-format
 msgid "Could not set setting '%1': %2"
-msgstr ""
+msgstr "Ne eblis agordi la agordon '%1': %2"
 
 #: resource.cpp:142
 #, kde-format
 msgid "Could not save settings: %1"
-msgstr ""
+msgstr "Ne eblis konservi agordojn: %1"
 
 #: resource.cpp:151
 #, kde-format
 msgid "Resource setup completed."
-msgstr ""
+msgstr "Rimeda agordo finiĝis."
 
 #: resource.cpp:167
 #, kde-format
 msgid "Removed resource instance for '%1'."
-msgstr ""
+msgstr "Forigita rimeda ekzemplo por '%1'."
 
 #: servertest.cpp:50
 #, kde-format
@@ -457,29 +457,32 @@ msgid ""
 "to sent the credentials to server. We advise you to check the settings of "
 "the account and adjust it manually if needed."
 msgstr ""
+"Ŝajnas esti problemo atingi ĉi tiun servilon aŭ elekti sekuran manieron "
+"sendi la akreditaĵojn al servilo. Ni konsilas vin kontroli la agordojn de la "
+"konto kaj ĝustigi ĝin permane se necese."
 
 #: servertest.cpp:53
 #, kde-format
 msgid "Autodetecting settings failed"
-msgstr ""
+msgstr "Aŭtomata detektado de agordoj malsukcesis"
 
 #: setupautoconfigkolabfreebusy.cpp:74 setupautoconfigkolabldap.cpp:73
 #: setupispdb.cpp:138
 #, kde-format
 msgid "Searching for autoconfiguration..."
-msgstr ""
+msgstr "Serĉante aŭtomatan agordon..."
 
 #: setupautoconfigkolabfreebusy.cpp:99 setupautoconfigkolabldap.cpp:98
 #: setupispdb.cpp:163
 #, kde-format
 msgid "Autoconfiguration found."
-msgstr ""
+msgstr "Aŭtomata agordo trovita."
 
 #: setupautoconfigkolabfreebusy.cpp:101 setupautoconfigkolabldap.cpp:100
 #: setupispdb.cpp:165
 #, kde-format
 msgid "Autoconfiguration failed."
-msgstr ""
+msgstr "Aŭtomata agordo malsukcesis."
 
 #. i18n: ectx: property (text), widget (QLabel, progressLabel)
 #: setupmanager.cpp:114 ui/setuppage.ui:37
@@ -505,7 +508,7 @@ msgstr ""
 #: transport.cpp:64
 #, kde-format
 msgid "Setting up mail transport account..."
-msgstr ""
+msgstr "Agordi poŝtan transportkonton..."
 
 #: transport.cpp:83
 #, kde-format
@@ -515,7 +518,7 @@ msgstr ""
 #: transport.cpp:89
 #, kde-format
 msgid "Mail transport account set up."
-msgstr ""
+msgstr "Poŝttransporta konto starigita."
 
 #: transport.cpp:95
 #, kde-format
