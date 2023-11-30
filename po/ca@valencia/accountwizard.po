@@ -224,6 +224,7 @@ msgstr "S'està configurant el transport de correu del compte..."
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr ""
+"El transport de correu utilitza l'encriptació «%1» i l'autenticació «%2»."
 
 #: accountwizard/transport.cpp:47
 #, kde-format
