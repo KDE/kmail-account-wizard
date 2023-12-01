@@ -228,7 +228,7 @@ msgstr "Set opp konto for e-postoverføring …"
 #: accountwizard/transport.cpp:44
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
-msgstr ""
+msgstr "E-postoverføring brukar «%1»-kryptering og «%2»-autentisering."
 
 #: accountwizard/transport.cpp:47
 #, kde-format
