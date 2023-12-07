@@ -314,7 +314,9 @@ Kirigami.ScrollablePage {
                     text: i18n("Manual Configuration")
                     checked: true
                     onClicked: {
-                        // TODO
+                        availableConfigurations.visible = false;
+                        manualConfiguration.visible = true;
+                        // FIXME => show
                     }
                     visible: availableConfigurations.visible
                 }
