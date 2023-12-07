@@ -178,18 +178,18 @@ Kirigami.ScrollablePage {
                     id: manualIncomingSecurity
                     description: i18n("Security:")
                     model: SetupManager.manualConfiguration.securityProtocols
-                    currentIndex: SetupManager.manualConfiguration.currentIncomingAuthenticationProtocols
+                    currentIndex: SetupManager.manualConfiguration.currentIncomingSecurityProtocol
                     onCurrentIndexChanged: {
-                        SetupManager.manualConfiguration.currentIncomingAuthenticationProtocols = currentIndex
+                        SetupManager.manualConfiguration.currentIncomingSecurityProtocol = currentIndex
                     }
                 }
                 FormCard.FormComboBoxDelegate {
                     id: manualIncomingAuthenticationMethod
                     description: i18n("Authentication Method:")
                     model: SetupManager.manualConfiguration.authenticationProtocols
-                    currentIndex: SetupManager.manualConfiguration.currentIncomingSecurityProtocol
+                    currentIndex: SetupManager.manualConfiguration. currentIncomingAuthenticationProtocols
                     onCurrentIndexChanged: {
-                        SetupManager.manualConfiguration.currentIncomingSecurityProtocol = currentIndex
+                        SetupManager.manualConfiguration.currentIncomingAuthenticationProtocols = currentIndex
                     }
                 }
                 FormCard.FormTextFieldDelegate {

@@ -153,6 +153,27 @@ void ManualConfiguration::setCurrentIncomingSecurityProtocol(int newCurrentIncom
     if (mCurrentIncomingSecurityProtocol == newCurrentIncomingSecurityProtocol)
         return;
     mCurrentIncomingSecurityProtocol = newCurrentIncomingSecurityProtocol;
+    if (mCurrentIncomingProtocol == 0) { // Pop3
+        if (mCurrentIncomingSecurityProtocol == 0) { // StartTLS
+            setIncomingPort(110);
+        } else if (mCurrentIncomingSecurityProtocol == 1) { // SSL
+            setIncomingPort(995);
+        } else {
+            setIncomingPort(110);
+        }
+    } else if (mCurrentIncomingProtocol == 1) { // Imap
+        if (mCurrentIncomingSecurityProtocol == 0) { // StartTLS
+            setIncomingPort(143);
+        } else if (mCurrentIncomingSecurityProtocol == 1) { // SSL
+            setIncomingPort(993);
+        } else {
+            setIncomingPort(143);
+        }
+    } else {
+        // FIXME ?
+        setIncomingPort(993);
+    }
+    qDebug() << " incommin" << mIncomingPort;
     checkConfiguration();
     Q_EMIT currentIncomingSecurityProtocolChanged();
 }
