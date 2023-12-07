@@ -173,7 +173,6 @@ void ManualConfiguration::setCurrentIncomingSecurityProtocol(int newCurrentIncom
         // FIXME ?
         setIncomingPort(993);
     }
-    qDebug() << " incommin" << mIncomingPort;
     checkConfiguration();
     Q_EMIT currentIncomingSecurityProtocolChanged();
 }
