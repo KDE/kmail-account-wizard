@@ -187,9 +187,9 @@ Kirigami.ScrollablePage {
                     id: manualIncomingAuthenticationMethod
                     description: i18n("Authentication Method:")
                     model: SetupManager.manualConfiguration.authenticationProtocols
-                    currentIndex: SetupManager.manualConfiguration.currentOutgoingSecurityProtocol
+                    currentIndex: SetupManager.manualConfiguration.currentIncomingSecurityProtocol
                     onCurrentIndexChanged: {
-                        SetupManager.manualConfiguration.currentOutgoingSecurityProtocol = currentIndex
+                        SetupManager.manualConfiguration.currentIncomingSecurityProtocol = currentIndex
                     }
                 }
                 FormCard.FormTextFieldDelegate {
