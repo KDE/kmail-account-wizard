@@ -38,17 +38,21 @@ void ManualConfiguration::createResource()
     // Create incoming account
     QString resourceType;
     qDebug() << " createManualAccount ";
-    if (mCurrentIncomingProtocol == 0) { // POP3
+    switch (mCurrentIncomingProtocol) {
+    case 0: // Pop3
         resourceType = QStringLiteral("akonadi_pop3_resource");
-    } else if (mCurrentIncomingProtocol == 1) { // IMAP
+        break;
+    case 1: // Imap
         resourceType = QStringLiteral("akonadi_imap_resource");
-    } else if (mCurrentIncomingProtocol == 2) { // KOLAB
-        // TODO port to webdav/imap ?
+        break;
+    case 2: // Kolab
         resourceType = QStringLiteral("akonadi_kolab_resource");
-    } else {
+        break;
+    default:
         qCWarning(ACCOUNTWIZARD_LOG) << " invalid protocol: " << mCurrentIncomingProtocol;
         return;
     }
+
     auto resource = new Resource(resourceType, this);
     // TODO add setSettings(...)
     connect(resource, &Resource::info, this, &ManualConfiguration::info);
