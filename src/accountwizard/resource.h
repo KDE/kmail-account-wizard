@@ -22,24 +22,21 @@ public:
         QString name;
         QString typeIdentifier;
         QMap<QString, QVariant> settings;
+        [[nodiscard]] bool isValid() const;
     };
 
-    explicit Resource(const QString &resourceType, QObject *parent = nullptr);
+    explicit Resource(QObject *parent = nullptr);
     ~Resource() override;
-
-    [[nodiscard]] QString name() const;
-    void setName(const QString &newName);
-
-    [[nodiscard]] QMap<QString, QVariant> settings() const;
-    void setSettings(const QMap<QString, QVariant> &newSettings);
 
     void createResource();
 
+    [[nodiscard]] ResourceInfo resourceInfo() const;
+    void setResourceInfo(const ResourceInfo &newResourceInfo);
+
 private:
     void instanceCreateResult(KJob *job);
-    QMap<QString, QVariant> mSettings;
     Akonadi::AgentInstance mInstance;
-    const QString mTypeIdentifier;
-    QString mName;
+    ResourceInfo mResourceInfo;
 };
+Q_DECLARE_TYPEINFO(Resource::ResourceInfo, Q_RELOCATABLE_TYPE);
 QDebug operator<<(QDebug d, const Resource::ResourceInfo &t);

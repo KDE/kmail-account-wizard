@@ -53,7 +53,13 @@ void ManualConfiguration::createResource()
         return;
     }
 
-    auto resource = new Resource(resourceType, this);
+    auto resource = new Resource(this);
+    Resource::ResourceInfo info;
+    info.typeIdentifier = resourceType;
+    // info.name = ...;
+    // info.settings = ...;
+    resource->setResourceInfo(std::move(info));
+
     // TODO add setSettings(...)
     connect(resource, &Resource::info, this, &ManualConfiguration::info);
     connect(resource, &Resource::finished, this, &ManualConfiguration::finished);

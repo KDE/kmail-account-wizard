@@ -48,9 +48,8 @@ static QMetaType::Type argumentType(const QMetaObject *mo, const QString &method
     return static_cast<QMetaType::Type>(QMetaType::fromName(argTypes.first().constData()).id());
 }
 
-Resource::Resource(const QString &resourceType, QObject *parent)
+Resource::Resource(QObject *parent)
     : SetupBase{parent}
-    , mTypeIdentifier(resourceType)
 {
 }
 
@@ -58,9 +57,14 @@ Resource::~Resource() = default;
 
 void Resource::createResource()
 {
-    const AgentType type = AgentManager::self()->type(mTypeIdentifier);
+    if (mResourceInfo.isValid()) {
+        qCWarning(ACCOUNTWIZARD_LOG) << "mResourceInfo is not valid. It's a bug.";
+        deleteLater();
+        return;
+    }
+    const AgentType type = AgentManager::self()->type(mResourceInfo.typeIdentifier);
     if (!type.isValid()) {
-        Q_EMIT error(i18n("Resource type '%1' is not available.", mTypeIdentifier));
+        Q_EMIT error(i18n("Resource type '%1' is not available.", mResourceInfo.typeIdentifier));
         deleteLater();
         return;
     }
@@ -94,7 +98,7 @@ void Resource::instanceCreateResult(KJob *job)
     }
     mInstance = qobject_cast<AgentInstanceCreateJob *>(job)->instance();
 
-    if (!mSettings.isEmpty()) {
+    if (!mResourceInfo.settings.isEmpty()) {
         Q_EMIT info(i18n("Configuring resource instance..."));
         const auto service = ServerManager::agentServiceName(ServerManager::Resource, mInstance.identifier());
         QDBusInterface iface(service, QStringLiteral("/Settings"));
@@ -105,11 +109,11 @@ void Resource::instanceCreateResult(KJob *job)
         }
 
         // configure resource
-        if (!mName.isEmpty()) {
-            mInstance.setName(mName);
+        if (!mResourceInfo.name.isEmpty()) {
+            mInstance.setName(mResourceInfo.name);
         }
-        QMap<QString, QVariant>::const_iterator end(mSettings.constEnd());
-        for (QMap<QString, QVariant>::const_iterator it = mSettings.constBegin(); it != end; ++it) {
+        QMap<QString, QVariant>::const_iterator end(mResourceInfo.settings.constEnd());
+        for (QMap<QString, QVariant>::const_iterator it = mResourceInfo.settings.constBegin(); it != end; ++it) {
             qCDebug(ACCOUNTWIZARD_LOG) << "Setting up " << it.key() << " for agent " << mInstance.identifier();
             const QString methodName = QStringLiteral("set%1").arg(it.key());
             QVariant arg = it.value();
@@ -138,24 +142,14 @@ void Resource::instanceCreateResult(KJob *job)
     deleteLater();
 }
 
-QMap<QString, QVariant> Resource::settings() const
+Resource::ResourceInfo Resource::resourceInfo() const
 {
-    return mSettings;
+    return mResourceInfo;
 }
 
-void Resource::setSettings(const QMap<QString, QVariant> &newSettings)
+void Resource::setResourceInfo(const ResourceInfo &newResourceInfo)
 {
-    mSettings = newSettings;
-}
-
-QString Resource::name() const
-{
-    return mName;
-}
-
-void Resource::setName(const QString &newName)
-{
-    mName = newName;
+    mResourceInfo = newResourceInfo;
 }
 
 QDebug operator<<(QDebug d, const Resource::ResourceInfo &t)
@@ -164,6 +158,11 @@ QDebug operator<<(QDebug d, const Resource::ResourceInfo &t)
     d << "typeIdentifier: " << t.typeIdentifier;
     d << "settings: " << t.settings;
     return d;
+}
+
+bool Resource::ResourceInfo::isValid() const
+{
+    return !name.isEmpty() && !typeIdentifier.isEmpty() && !settings.isEmpty();
 }
 
 #include "moc_resource.cpp"
