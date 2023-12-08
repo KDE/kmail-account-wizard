@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-28 01:36+0000\n"
+"POT-Creation-Date: 2023-12-08 01:35+0000\n"
 "PO-Revision-Date: 2023-09-30 13:14+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -354,7 +354,7 @@ msgid "Recheck"
 msgstr "Berregiaztatu"
 
 #: apps/contents/ui/PersonalDataPage.qml:272
-#: apps/contents/ui/PersonalDataPage.qml:324
+#: apps/contents/ui/PersonalDataPage.qml:326
 #, kde-format
 msgid "Create Account"
 msgstr "Sortu kontua"
