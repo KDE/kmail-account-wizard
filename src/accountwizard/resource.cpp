@@ -158,4 +158,12 @@ void Resource::setName(const QString &newName)
     mName = newName;
 }
 
+QDebug operator<<(QDebug d, const Resource::ResourceInfo &t)
+{
+    d << "name: " << t.name;
+    d << "typeIdentifier: " << t.typeIdentifier;
+    d << "settings: " << t.settings;
+    return d;
+}
+
 #include "moc_resource.cpp"
