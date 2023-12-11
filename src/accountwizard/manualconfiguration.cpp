@@ -37,6 +37,7 @@ Resource::ResourceInfo ManualConfiguration::createPop3Resource() const
 {
     Resource::ResourceInfo info;
     // TODO generate name
+    // TODO add setSettings(...)
     info.typeIdentifier = QStringLiteral("akonadi_pop3_resource");
     return info;
 }
@@ -45,6 +46,7 @@ Resource::ResourceInfo ManualConfiguration::createImapResource() const
 {
     Resource::ResourceInfo info;
     // TODO generate name
+    // TODO add setSettings(...)
     info.typeIdentifier = QStringLiteral("akonadi_imap_resource");
     return info;
 }
@@ -53,6 +55,7 @@ Resource::ResourceInfo ManualConfiguration::createKolabResource() const
 {
     Resource::ResourceInfo info;
     // TODO generate name
+    // TODO add setSettings(...)
     info.typeIdentifier = QStringLiteral("akonadi_kolab_resource");
     return info;
 }
@@ -81,7 +84,6 @@ void ManualConfiguration::createResource()
     auto resource = new Resource(this);
     resource->setResourceInfo(std::move(info));
 
-    // TODO add setSettings(...)
     connect(resource, &Resource::info, this, &ManualConfiguration::info);
     connect(resource, &Resource::finished, this, &ManualConfiguration::finished);
     connect(resource, &Resource::error, this, &ManualConfiguration::error);
