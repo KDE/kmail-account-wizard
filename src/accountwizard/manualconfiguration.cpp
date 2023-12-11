@@ -33,20 +33,45 @@ QStringList ManualConfiguration::authenticationProtocols() const
     return {i18n("Clear text"), i18n("LOGIN"), i18n("PLAIN"), i18n("CRAM-MD5"), i18n("DIGEST-MD5"), i18n("NTLM"), i18n("GSSAPI")};
 }
 
+Resource::ResourceInfo ManualConfiguration::createPop3Resource() const
+{
+    Resource::ResourceInfo info;
+    // TODO generate name
+    info.typeIdentifier = QStringLiteral("akonadi_pop3_resource");
+    return info;
+}
+
+Resource::ResourceInfo ManualConfiguration::createImapResource() const
+{
+    Resource::ResourceInfo info;
+    // TODO generate name
+    info.typeIdentifier = QStringLiteral("akonadi_imap_resource");
+    return info;
+}
+
+Resource::ResourceInfo ManualConfiguration::createKolabResource() const
+{
+    Resource::ResourceInfo info;
+    // TODO generate name
+    info.typeIdentifier = QStringLiteral("akonadi_kolab_resource");
+    return info;
+}
+
 void ManualConfiguration::createResource()
 {
     // Create incoming account
     QString resourceType;
     qDebug() << " createManualAccount ";
+    Resource::ResourceInfo info;
     switch (mCurrentIncomingProtocol) {
     case 0: // Pop3
-        resourceType = QStringLiteral("akonadi_pop3_resource");
+        info = createPop3Resource();
         break;
     case 1: // Imap
-        resourceType = QStringLiteral("akonadi_imap_resource");
+        info = createImapResource();
         break;
     case 2: // Kolab
-        resourceType = QStringLiteral("akonadi_kolab_resource");
+        info = createKolabResource();
         break;
     default:
         qCWarning(ACCOUNTWIZARD_LOG) << " invalid protocol: " << mCurrentIncomingProtocol;
@@ -54,10 +79,6 @@ void ManualConfiguration::createResource()
     }
 
     auto resource = new Resource(this);
-    Resource::ResourceInfo info;
-    info.typeIdentifier = resourceType;
-    // info.name = ...;
-    // info.settings = ...;
     resource->setResourceInfo(std::move(info));
 
     // TODO add setSettings(...)
@@ -71,7 +92,7 @@ void ManualConfiguration::createTransport()
 {
     // Create outgoing account
     auto transport = new Transport(QString() /* TODO */, this);
-    transport->setTransportInfo(createTransportInfo());
+    transport->setTransportInfo(std::move(createTransportInfo()));
 
     connect(transport, &Transport::info, this, &ManualConfiguration::info);
     connect(transport, &Transport::finished, this, &ManualConfiguration::finished);

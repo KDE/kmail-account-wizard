@@ -6,6 +6,7 @@
 #pragma once
 
 #include "libaccountwizard_export.h"
+#include "resource.h"
 #include "transport.h"
 #include <QDebug>
 #include <QObject>
@@ -102,10 +103,13 @@ Q_SIGNALS:
     void finished(const QString &msg);
 
 private:
-    void checkConfiguration();
-    [[nodiscard]] Transport::TransportInfo createTransportInfo() const;
-    void createResource();
-    void createTransport();
+    [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Resource::ResourceInfo createPop3Resource() const;
+    [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Resource::ResourceInfo createImapResource() const;
+    [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Resource::ResourceInfo createKolabResource() const;
+    LIBACCOUNTWIZARD_NO_EXPORT void checkConfiguration();
+    [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Transport::TransportInfo createTransportInfo() const;
+    LIBACCOUNTWIZARD_NO_EXPORT void createResource();
+    LIBACCOUNTWIZARD_NO_EXPORT void createTransport();
 
     // Incoming
     QString mIncomingUserName;

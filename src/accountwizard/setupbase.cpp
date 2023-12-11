@@ -11,8 +11,6 @@ SetupBase::SetupBase(QObject *parent)
 {
 }
 
-SetupBase::~SetupBase()
-{
-}
+SetupBase::~SetupBase() = default;
 
 #include "moc_setupbase.cpp"
