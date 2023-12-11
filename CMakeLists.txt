@@ -4,6 +4,7 @@
 set(PIM_VERSION "5.240.85")
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 project(kmail-account-wizard VERSION ${PIM_VERSION})
+set(KDEPIM_LIB_SOVERSION "6")
 
 set(KF_MIN_VERSION "5.246.0")
 
