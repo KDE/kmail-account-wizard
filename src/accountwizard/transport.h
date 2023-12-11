@@ -35,3 +35,4 @@ private:
     TransportInfo mTransportInfo;
 };
 QDebug operator<<(QDebug d, const Transport::TransportInfo &t);
+Q_DECLARE_TYPEINFO(Transport::TransportInfo, Q_RELOCATABLE_TYPE);
