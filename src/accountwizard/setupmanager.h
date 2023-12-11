@@ -52,10 +52,10 @@ Q_SIGNALS:
     void noConfigFoundChanged();
 
 private:
-    void setEmailProvider(const EmailProvider &emailProvider, const QString &messageInfo);
-    void setErrorOccured(const QString &errorMessage);
-    void clearConfiguration();
-    void noConfigFound();
+    LIBACCOUNTWIZARD_NO_EXPORT void setEmailProvider(const EmailProvider &emailProvider, const QString &messageInfo);
+    LIBACCOUNTWIZARD_NO_EXPORT void setErrorOccured(const QString &errorMessage);
+    LIBACCOUNTWIZARD_NO_EXPORT void clearConfiguration();
+    LIBACCOUNTWIZARD_NO_EXPORT void noConfigFound();
     QString mPassword;
     QString mSearchIspdbFoundMessage;
     Identity *const mIdentity;
