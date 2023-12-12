@@ -69,6 +69,7 @@ void Resource::createResource()
         return;
     }
 
+    // By default imap/kolab/pop3 can't be unique. Keep it only for be safe.
     // check if unique instance already exists
     // qCDebug(ACCOUNTWIZARD_LOG) << type.capabilities();
     if (type.capabilities().contains(QLatin1String("Unique"))) {
