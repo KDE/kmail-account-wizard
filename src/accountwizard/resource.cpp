@@ -117,7 +117,7 @@ void Resource::instanceCreateResult(KJob *job)
         for (QMap<QString, QVariant>::const_iterator it = mResourceInfo.settings.constBegin(); it != end; ++it) {
             qCDebug(ACCOUNTWIZARD_LOG) << "Setting up " << it.key() << " for agent " << mInstance.identifier();
             const QString methodName = QStringLiteral("set%1").arg(it.key());
-            QVariant arg = it.value();
+            const QVariant arg = it.value();
             const QMetaType::Type targetType = argumentType(iface.metaObject(), methodName);
             if (arg.metaType().id() != targetType) {
                 Q_EMIT error(i18n("Could not convert value of setting '%1' to required type %2.", it.key(), QLatin1String(QMetaType(targetType).name())));
