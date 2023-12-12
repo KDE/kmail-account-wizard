@@ -37,8 +37,17 @@ Resource::ResourceInfo ManualConfiguration::createPop3Resource() const
 {
     Resource::ResourceInfo info;
     // TODO generate name
-    // TODO add setSettings(...)
     info.typeIdentifier = QStringLiteral("akonadi_pop3_resource");
+    QMap<QString, QVariant> settings;
+    settings.insert(QStringLiteral("Port"), mIncomingPort);
+    settings.insert(QStringLiteral("Host"), mIncomingHostName);
+    settings.insert(QStringLiteral("Login"), mIncomingUserName);
+    // TODO settings.insert(QStringLiteral("Password"), );
+
+    // TODO pop3Res.setOption( "Password", SetupManager.password() );
+    // TODO pop3Res.setOption( "UseTLS", true );
+
+    info.settings = settings;
     return info;
 }
 
@@ -48,6 +57,39 @@ Resource::ResourceInfo ManualConfiguration::createImapResource() const
     // TODO generate name
     // TODO add setSettings(...)
     info.typeIdentifier = QStringLiteral("akonadi_imap_resource");
+    QMap<QString, QVariant> settings;
+    settings.insert(QStringLiteral("ImapServer"), mIncomingPort);
+    settings.insert(QStringLiteral("UserName"), mIncomingUserName);
+    // imapRes.setOption( "Password", SetupManager.password() );
+    // imapRes.setOption( "DisconnectedModeEnabled", page.widget().disconnectedMode.checked );
+    // imapRes.setOption( "UseDefaultIdentity", false );
+    // imapRes.setOption( "AccountIdentity", identity.uoid() );
+
+    // if ( server == "imap.gmail.com" ) {
+    //     imapRes.setOption( "Authentication", 9 ); // XOAuth2
+    //     arg = "ssl";
+    // } else {
+    //     imapRes.setOption( "Authentication", 7 ); // ClearText
+    // }
+    // if ( arg == "ssl" ) {
+    //   // The ENUM used for authentication (in the imap resource only)
+    //   imapRes.setOption( "Safety", "SSL"); // SSL/TLS
+    //   imapRes.setOption( "ImapPort", 993 );
+    // } else if ( arg == "tls" ) { // tls is really STARTTLS
+    //   imapRes.setOption( "Safety", "STARTTLS");  // STARTTLS
+    //   imapRes.setOption( "ImapPort", 143 );
+    // } else if ( arg == "none" ) {
+    //   imapRes.setOption( "Safety", "NONE" );  // No encryption
+    //   imapRes.setOption( "ImapPort", 143 );
+    // } else {
+    //   // safe default fallback when servertest failed
+    //   imapRes.setOption( "Safety", "STARTTLS");
+    //   imapRes.setOption( "ImapPort", 143 );
+    // }
+    // imapRes.setOption( "IntervalCheckTime", 60 );
+    // imapRes.setOption( "SubscriptionEnabled", true );
+
+    info.settings = settings;
     return info;
 }
 
