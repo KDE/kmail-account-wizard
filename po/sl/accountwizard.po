@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-09 01:37+0000\n"
+"POT-Creation-Date: 2023-12-13 01:35+0000\n"
 "PO-Revision-Date: 2023-09-30 08:31+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -171,48 +171,48 @@ msgstr "GSSAPI"
 msgid "Resource type '%1' is not available."
 msgstr "Vrsta vira '%1' ni na voljo."
 
-#: accountwizard/resource.cpp:79 legacy/resource.cpp:88
+#: accountwizard/resource.cpp:80 legacy/resource.cpp:88
 #, kde-format
 msgid "Resource '%1' is already set up."
 msgstr "Vir '%1' je že nastavljen."
 
-#: accountwizard/resource.cpp:86 legacy/resource.cpp:94
+#: accountwizard/resource.cpp:87 legacy/resource.cpp:94
 #, kde-format
 msgid "Creating resource instance for '%1'..."
 msgstr "Ustvarjanje primerka vira za '%1'..."
 
-#: accountwizard/resource.cpp:95 legacy/resource.cpp:103
+#: accountwizard/resource.cpp:96 legacy/resource.cpp:103
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Ustvaritev primerka vira ni uspela: %1"
 
-#: accountwizard/resource.cpp:102 legacy/resource.cpp:110
+#: accountwizard/resource.cpp:103 legacy/resource.cpp:110
 #, kde-format
 msgid "Configuring resource instance..."
 msgstr "Nastavljanje primerka vira ..."
 
-#: accountwizard/resource.cpp:106 legacy/resource.cpp:114
+#: accountwizard/resource.cpp:107 legacy/resource.cpp:114
 #, kde-format
 msgid "Unable to configure resource instance."
 msgstr "Primerka vira ni mogoče nastaviti."
 
-#: accountwizard/resource.cpp:122 legacy/resource.cpp:129
+#: accountwizard/resource.cpp:123 legacy/resource.cpp:129
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr ""
 "Vrednosti nastavitve '%1' ni bilo mogoče pretvoriti v zahtevano vrsto %2."
 
-#: accountwizard/resource.cpp:129 legacy/resource.cpp:136
+#: accountwizard/resource.cpp:130 legacy/resource.cpp:136
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Nastavitve '%1' ni bilo mogoče nastaviti: %2"
 
-#: accountwizard/resource.cpp:135 legacy/resource.cpp:142
+#: accountwizard/resource.cpp:136 legacy/resource.cpp:142
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Ni bilo mogoče shraniti nastavitev: %1"
 
-#: accountwizard/resource.cpp:141 legacy/resource.cpp:151
+#: accountwizard/resource.cpp:142 legacy/resource.cpp:151
 #, kde-format
 msgid "Resource setup completed."
 msgstr "Nastavitev vira je zaključena."
@@ -402,15 +402,15 @@ msgstr "Avtor"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
+#: apps/main.cpp:40 apps/main.cpp:41
+#, kde-format
+msgid "Maintainer"
+msgstr "Vzdrževalec"
+
 #: apps/main.cpp:41
 #, kde-format
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
-
-#: apps/main.cpp:41
-#, kde-format
-msgid "Maintainer"
-msgstr "Vzdrževalec"
 
 #: legacy/configfile.cpp:37
 #, kde-format

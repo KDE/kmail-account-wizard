@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-09 01:37+0000\n"
+"POT-Creation-Date: 2023-12-13 01:35+0000\n"
 "PO-Revision-Date: 2023-09-26 13:34+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -169,47 +169,47 @@ msgstr "GSSAPI"
 msgid "Resource type '%1' is not available."
 msgstr "Tyypin ”%1” resurssi ei ole käytettävissä."
 
-#: accountwizard/resource.cpp:79 legacy/resource.cpp:88
+#: accountwizard/resource.cpp:80 legacy/resource.cpp:88
 #, kde-format
 msgid "Resource '%1' is already set up."
 msgstr "Resurssi ”%1” on jo asetettu."
 
-#: accountwizard/resource.cpp:86 legacy/resource.cpp:94
+#: accountwizard/resource.cpp:87 legacy/resource.cpp:94
 #, kde-format
 msgid "Creating resource instance for '%1'..."
 msgstr "Luodaan resurssi-instanssia kohteelle ”%1”…"
 
-#: accountwizard/resource.cpp:95 legacy/resource.cpp:103
+#: accountwizard/resource.cpp:96 legacy/resource.cpp:103
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Resurssi-instanssin luominen epäonnistui: %1"
 
-#: accountwizard/resource.cpp:102 legacy/resource.cpp:110
+#: accountwizard/resource.cpp:103 legacy/resource.cpp:110
 #, kde-format
 msgid "Configuring resource instance..."
 msgstr "Asetetaan resurssi-instanssia…"
 
-#: accountwizard/resource.cpp:106 legacy/resource.cpp:114
+#: accountwizard/resource.cpp:107 legacy/resource.cpp:114
 #, kde-format
 msgid "Unable to configure resource instance."
 msgstr "Resurssi-instanssia ei voida määrittää."
 
-#: accountwizard/resource.cpp:122 legacy/resource.cpp:129
+#: accountwizard/resource.cpp:123 legacy/resource.cpp:129
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr "Asetuksen ”%1” arvoa ei voi muuntaa vaadittuun tyyppiin %2."
 
-#: accountwizard/resource.cpp:129 legacy/resource.cpp:136
+#: accountwizard/resource.cpp:130 legacy/resource.cpp:136
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Asetusta ”%1” ei voida asettaa: %2"
 
-#: accountwizard/resource.cpp:135 legacy/resource.cpp:142
+#: accountwizard/resource.cpp:136 legacy/resource.cpp:142
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Asetuksia ei voitu tallentaa: %1"
 
-#: accountwizard/resource.cpp:141 legacy/resource.cpp:151
+#: accountwizard/resource.cpp:142 legacy/resource.cpp:151
 #, kde-format
 msgid "Resource setup completed."
 msgstr "Resurssin asetus valmis."
@@ -398,15 +398,15 @@ msgstr "Tekijä"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
+#: apps/main.cpp:40 apps/main.cpp:41
+#, kde-format
+msgid "Maintainer"
+msgstr "Ylläpitäjä"
+
 #: apps/main.cpp:41
 #, kde-format
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
-
-#: apps/main.cpp:41
-#, kde-format
-msgid "Maintainer"
-msgstr "Ylläpitäjä"
 
 #: legacy/configfile.cpp:37
 #, kde-format

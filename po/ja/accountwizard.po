@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-09 01:37+0000\n"
+"POT-Creation-Date: 2023-12-13 01:35+0000\n"
 "PO-Revision-Date: 2010-10-22 23:45-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -163,48 +163,48 @@ msgstr ""
 msgid "Resource type '%1' is not available."
 msgstr "リソースタイプ “%1” がありません。"
 
-#: accountwizard/resource.cpp:79 legacy/resource.cpp:88
+#: accountwizard/resource.cpp:80 legacy/resource.cpp:88
 #, kde-format
 msgid "Resource '%1' is already set up."
 msgstr "リソース “%1” は既に設定されています。"
 
-#: accountwizard/resource.cpp:86 legacy/resource.cpp:94
+#: accountwizard/resource.cpp:87 legacy/resource.cpp:94
 #, kde-format
 msgid "Creating resource instance for '%1'..."
 msgstr "“%1” のリソースインスタンスを作成中..."
 
-#: accountwizard/resource.cpp:95 legacy/resource.cpp:103
+#: accountwizard/resource.cpp:96 legacy/resource.cpp:103
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "リソースインスタンスの作成に失敗しました: %1"
 
-#: accountwizard/resource.cpp:102 legacy/resource.cpp:110
+#: accountwizard/resource.cpp:103 legacy/resource.cpp:110
 #, kde-format
 msgid "Configuring resource instance..."
 msgstr "リソースインスタンスを設定中..."
 
-#: accountwizard/resource.cpp:106 legacy/resource.cpp:114
+#: accountwizard/resource.cpp:107 legacy/resource.cpp:114
 #, kde-format
 msgid "Unable to configure resource instance."
 msgstr "リソースインスタンスの設定ができませんでした。"
 
-#: accountwizard/resource.cpp:122 legacy/resource.cpp:129
+#: accountwizard/resource.cpp:123 legacy/resource.cpp:129
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr "設定「%1」の値を必要とされる型「%2」に変換できませんでした。"
 
-#: accountwizard/resource.cpp:129 legacy/resource.cpp:136
+#: accountwizard/resource.cpp:130 legacy/resource.cpp:136
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "「%1」を設定できませんでした: %2"
 
-#: accountwizard/resource.cpp:135 legacy/resource.cpp:142
+#: accountwizard/resource.cpp:136 legacy/resource.cpp:142
 #, fuzzy, kde-format
 #| msgid "Could not set setting '%1': %2"
 msgid "Could not save settings: %1"
 msgstr "「%1」を設定できませんでした: %2"
 
-#: accountwizard/resource.cpp:141 legacy/resource.cpp:151
+#: accountwizard/resource.cpp:142 legacy/resource.cpp:151
 #, kde-format
 msgid "Resource setup completed."
 msgstr "リソースの設定完了。"
@@ -404,14 +404,14 @@ msgstr "作者"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: apps/main.cpp:41
+#: apps/main.cpp:40 apps/main.cpp:41
 #, kde-format
-msgid "Carl Schwan"
+msgid "Maintainer"
 msgstr ""
 
 #: apps/main.cpp:41
 #, kde-format
-msgid "Maintainer"
+msgid "Carl Schwan"
 msgstr ""
 
 #: legacy/configfile.cpp:37
