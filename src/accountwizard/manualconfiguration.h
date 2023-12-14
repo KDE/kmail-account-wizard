@@ -37,6 +37,7 @@ class LIBACCOUNTWIZARD_EXPORT ManualConfiguration : public QObject
 
     Q_PROPERTY(bool disconnectedModeEnabled READ disconnectedModeEnabled WRITE setDisconnectedModeEnabled NOTIFY disconnectedModeEnabledChanged FINAL)
 
+    Q_PROPERTY(bool hasDisconnectedMode MEMBER mHasDisconnectedMode NOTIFY hasDisconnectedModeChanged)
 public:
     explicit ManualConfiguration(QObject *parent = nullptr);
     ~ManualConfiguration() override;
@@ -105,6 +106,8 @@ Q_SIGNALS:
 
     void disconnectedModeEnabledChanged();
 
+    void hasDisconnectedModeChanged();
+
     void error(const QString &msg);
     void info(const QString &msg);
     void finished(const QString &msg);
@@ -138,6 +141,9 @@ private:
 
     // configuration is Valid
     bool mConfigurationIsValid = false;
+
+    // Has DisconnectedMode
+    bool mHasDisconnectedMode = false;
 
     bool mDisconnectedModeEnabled = false;
 };

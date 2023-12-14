@@ -33,6 +33,7 @@ void ManualConfigurationTest::shouldHaveDefaultValues()
 
     QCOMPARE(w.incomingPort(), 995);
     QCOMPARE(w.outgoingPort(), 465);
+    QVERIFY(!w.disconnectedModeEnabled());
 }
 
 #include "moc_manualconfigurationtest.cpp"

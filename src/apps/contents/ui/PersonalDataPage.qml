@@ -204,6 +204,7 @@ Kirigami.ScrollablePage {
 
                 FormCard.FormCheckDelegate {
                     id: disconnectedModeEnabled
+                    visible: SetupManager.manualConfiguration.hasDisconnectedMode
                     description: i18n("Download all messages for offline use")
                     onCheckedChanged: (checked) => {
                         SetupManager.manualConfiguration.disconnectedModeEnabled = checked

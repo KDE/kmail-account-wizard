@@ -42,6 +42,8 @@ Resource::ResourceInfo ManualConfiguration::createPop3Resource() const
     settings.insert(QStringLiteral("Port"), mIncomingPort);
     settings.insert(QStringLiteral("Host"), mIncomingHostName);
     settings.insert(QStringLiteral("Login"), mIncomingUserName);
+    // TODO get password from personnal data page
+
     // TODO settings.insert(QStringLiteral("Password"), );
 
     // TODO pop3Res.setOption( "Password", SetupManager.password() );
@@ -270,13 +272,16 @@ void ManualConfiguration::setCurrentIncomingProtocol(int newCurrentIncomingProto
 {
     if (mCurrentIncomingProtocol != newCurrentIncomingProtocol) {
         mCurrentIncomingProtocol = newCurrentIncomingProtocol;
-        if (newCurrentIncomingProtocol == 0) {
+        if (newCurrentIncomingProtocol == 0) { // Pop3
             setIncomingPort(995);
+            mHasDisconnectedMode = false;
         } else {
             setIncomingPort(993);
+            mHasDisconnectedMode = true;
         }
         checkConfiguration();
         Q_EMIT currentIncomingProtocolChanged();
+        Q_EMIT hasDisconnectedModeChanged();
     }
 }
 
