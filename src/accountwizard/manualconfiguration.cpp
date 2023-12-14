@@ -55,13 +55,13 @@ Resource::ResourceInfo ManualConfiguration::createImapResource() const
 {
     Resource::ResourceInfo info;
     // TODO generate name
-    // TODO add setSettings(...)
     info.typeIdentifier = QStringLiteral("akonadi_imap_resource");
     QMap<QString, QVariant> settings;
     settings.insert(QStringLiteral("ImapServer"), mIncomingPort);
     settings.insert(QStringLiteral("UserName"), mIncomingUserName);
+    settings.insert(QStringLiteral("DisconnectedModeEnabled"), mDisconnectedModeEnabled);
+
     // imapRes.setOption( "Password", SetupManager.password() );
-    // imapRes.setOption( "DisconnectedModeEnabled", page.widget().disconnectedMode.checked );
     // imapRes.setOption( "UseDefaultIdentity", false );
     // imapRes.setOption( "AccountIdentity", identity.uoid() );
 
@@ -188,6 +188,20 @@ void ManualConfiguration::setCurrentOutgoingAuthenticationProtocols(int newCurre
     mCurrentOutgoingAuthenticationProtocols = newCurrentOutgoingAuthenticationProtocols;
     checkConfiguration();
     Q_EMIT currentOutgoingAuthenticationProtocolsChanged();
+}
+
+bool ManualConfiguration::disconnectedModeEnabled() const
+{
+    return mDisconnectedModeEnabled;
+}
+
+void ManualConfiguration::setDisconnectedModeEnabled(int disconnectedMode)
+{
+    if (mDisconnectedModeEnabled == disconnectedMode)
+        return;
+    mDisconnectedModeEnabled = disconnectedMode;
+    checkConfiguration();
+    Q_EMIT disconnectedModeEnabledChanged();
 }
 
 int ManualConfiguration::currentIncomingAuthenticationProtocols() const

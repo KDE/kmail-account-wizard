@@ -35,6 +35,8 @@ class LIBACCOUNTWIZARD_EXPORT ManualConfiguration : public QObject
     Q_PROPERTY(int currentOutgoingAuthenticationProtocols READ currentOutgoingAuthenticationProtocols WRITE setCurrentOutgoingAuthenticationProtocols NOTIFY
                    currentOutgoingAuthenticationProtocolsChanged FINAL)
 
+    Q_PROPERTY(bool disconnectedModeEnabled READ disconnectedModeEnabled WRITE setDisconnectedModeEnabled NOTIFY disconnectedModeEnabledChanged FINAL)
+
 public:
     explicit ManualConfiguration(QObject *parent = nullptr);
     ~ManualConfiguration() override;
@@ -76,6 +78,9 @@ public:
     [[nodiscard]] int currentOutgoingAuthenticationProtocols() const;
     void setCurrentOutgoingAuthenticationProtocols(int newCurrentOutgoingAuthenticationProtocols);
 
+    [[nodiscard]] bool disconnectedModeEnabled() const;
+    void setDisconnectedModeEnabled(int disconnectedMode);
+
     Q_INVOKABLE void checkServer();
 
     void createManualAccount();
@@ -97,6 +102,8 @@ Q_SIGNALS:
 
     void currentIncomingAuthenticationProtocolsChanged();
     void currentOutgoingAuthenticationProtocolsChanged();
+
+    void disconnectedModeEnabledChanged();
 
     void error(const QString &msg);
     void info(const QString &msg);
@@ -131,5 +138,7 @@ private:
 
     // configuration is Valid
     bool mConfigurationIsValid = false;
+
+    bool mDisconnectedModeEnabled = false;
 };
 QDebug operator<<(QDebug d, const ManualConfiguration &t);
