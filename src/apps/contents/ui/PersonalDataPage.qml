@@ -202,6 +202,15 @@ Kirigami.ScrollablePage {
                     }
                 }
 
+                FormCard.FormCheckDelegate {
+                    id: disconnectedModeEnabled
+                    description: i18n("Download all messages for offline use")
+                    onCheckedChanged: (checked) => {
+                        SetupManager.manualConfiguration.disconnectedModeEnabled = checked
+                    }
+                    checked: SetupManager.manualConfiguration.disconnectedModeEnabled
+                }
+
                 FormCard.FormDelegateSeparator {}
 
                 QQC2.Label {
