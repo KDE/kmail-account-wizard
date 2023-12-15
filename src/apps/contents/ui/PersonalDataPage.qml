@@ -157,7 +157,7 @@ Kirigami.ScrollablePage {
 
                 FormCard.FormTextFieldDelegate {
                     id: manualIncomingHostName
-                    label: i18n("Server Hostname:")
+                    label: i18n("Incoming server:")
                     inputMethodHints: Qt.ImhUrlCharactersOnly
                     text: SetupManager.manualConfiguration.incomingHostName
                     onTextChanged: {
@@ -227,7 +227,7 @@ Kirigami.ScrollablePage {
                 }
                 FormCard.FormTextFieldDelegate {
                     id: manualOutgoingHostName
-                    label: i18n("Hostname:")
+                    label: i18n("Outgoing server:")
                     inputMethodHints: Qt.ImhUrlCharactersOnly
                     text: SetupManager.manualConfiguration.outgoingHostName
                     onTextChanged: {
