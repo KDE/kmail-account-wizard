@@ -44,6 +44,8 @@ QString SetupManager::email() const
 void SetupManager::setEmail(const QString &email)
 {
     mIdentity->setEmail(email);
+    mManualConfiguration->setIncomingUserName(email);
+    mManualConfiguration->setOutgoingUserName(email);
     clearConfiguration();
 }
 

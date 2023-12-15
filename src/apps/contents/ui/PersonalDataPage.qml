@@ -196,9 +196,9 @@ Kirigami.ScrollablePage {
                     id: manualIncomingUserName
                     label: i18n("Username:")
                     inputMethodHints: Qt.ImhUrlCharactersOnly
-                    text: SetupManager.manualConfiguration.userName
+                    text: SetupManager.manualConfiguration.incomingUserName
                     onTextChanged: {
-                        SetupManager.manualConfiguration.userName = manualIncomingUserName.text
+                        SetupManager.manualConfiguration.incomingUserName = manualIncomingUserName.text
                     }
                 }
 
