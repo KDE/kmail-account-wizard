@@ -71,11 +71,17 @@ Kirigami.ScrollablePage {
 
                 FormCard.FormDelegateSeparator {}
 
-                FormCard.FormTextFieldDelegate {
-                    label: i18n("Password:")
-                    onTextChanged: SetupManager.password = text
-                    echoMode: TextInput.Password
-                    inputMethodHints: Qt.ImhUrlCharactersOnly
+                Kirigami.PasswordField {
+                    id: passwordField
+                    Layout.bottomMargin: Kirigami.Units.largeSpacing
+                    Layout.leftMargin: Kirigami.Units.gridUnit
+                    Layout.rightMargin: Kirigami.Units.gridUnit
+                    Layout.fillWidth: true
+                    onAccepted: {
+                        SetupManager.password = text
+                    }
+
+                    placeholderText: i18n("Password…")
                 }
 
                 FormCard.FormDelegateSeparator { above: continueButton }
