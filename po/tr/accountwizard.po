@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-runtime-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-13 01:35+0000\n"
+"POT-Creation-Date: 2023-12-15 01:36+0000\n"
 "PO-Revision-Date: 2023-11-28 20:09+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -241,7 +241,7 @@ msgid "Incoming"
 msgstr "Gelen"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
-#: apps/contents/ui/PersonalDataPage.qml:209
+#: apps/contents/ui/PersonalDataPage.qml:219
 #, kde-format
 msgid "Outgoing"
 msgstr "Giden"
@@ -317,7 +317,7 @@ msgid "Server Parameters"
 msgstr "Sunucu Parametreleri"
 
 #: apps/contents/ui/PersonalDataPage.qml:154
-#: apps/contents/ui/PersonalDataPage.qml:214
+#: apps/contents/ui/PersonalDataPage.qml:224
 #, kde-format
 msgid "Hostname:"
 msgstr "Makine adı:"
@@ -328,46 +328,51 @@ msgid "Protocol:"
 msgstr "Protokol:"
 
 #: apps/contents/ui/PersonalDataPage.qml:172
-#: apps/contents/ui/PersonalDataPage.qml:223
+#: apps/contents/ui/PersonalDataPage.qml:233
 #, kde-format
 msgid "Port:"
 msgstr "Kapı:"
 
 #: apps/contents/ui/PersonalDataPage.qml:179
-#: apps/contents/ui/PersonalDataPage.qml:230
+#: apps/contents/ui/PersonalDataPage.qml:240
 #, kde-format
 msgid "Security:"
 msgstr "Güvenlik:"
 
 #: apps/contents/ui/PersonalDataPage.qml:188
-#: apps/contents/ui/PersonalDataPage.qml:239
+#: apps/contents/ui/PersonalDataPage.qml:249
 #, kde-format
 msgid "Authentication Method:"
 msgstr "Kimlik doğrulama yöntemi:"
 
 #: apps/contents/ui/PersonalDataPage.qml:197
-#: apps/contents/ui/PersonalDataPage.qml:248
+#: apps/contents/ui/PersonalDataPage.qml:258
 #, kde-format
 msgid "Username:"
 msgstr "Kullanıcı adı:"
 
-#: apps/contents/ui/PersonalDataPage.qml:259
+#: apps/contents/ui/PersonalDataPage.qml:208
+#, kde-format
+msgid "Download all messages for offline use"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:269
 #, kde-format
 msgid "Recheck"
 msgstr "Yeniden Denetle"
 
-#: apps/contents/ui/PersonalDataPage.qml:272
-#: apps/contents/ui/PersonalDataPage.qml:326
+#: apps/contents/ui/PersonalDataPage.qml:282
+#: apps/contents/ui/PersonalDataPage.qml:336
 #, kde-format
 msgid "Create Account"
 msgstr "Hesap Oluştur"
 
-#: apps/contents/ui/PersonalDataPage.qml:294
+#: apps/contents/ui/PersonalDataPage.qml:304
 #, kde-format
 msgid "Available configurations"
 msgstr "Kullanılabilir yapılandırmalar"
 
-#: apps/contents/ui/PersonalDataPage.qml:314
+#: apps/contents/ui/PersonalDataPage.qml:324
 #, kde-format
 msgid "Manual Configuration"
 msgstr "Elle Yapılandırma"

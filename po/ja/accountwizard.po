@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-13 01:35+0000\n"
+"POT-Creation-Date: 2023-12-15 01:36+0000\n"
 "PO-Revision-Date: 2010-10-22 23:45-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -231,7 +231,7 @@ msgid "Incoming"
 msgstr ""
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
-#: apps/contents/ui/PersonalDataPage.qml:209
+#: apps/contents/ui/PersonalDataPage.qml:219
 #, kde-format
 msgid "Outgoing"
 msgstr ""
@@ -313,7 +313,7 @@ msgid "Server Parameters"
 msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:154
-#: apps/contents/ui/PersonalDataPage.qml:214
+#: apps/contents/ui/PersonalDataPage.qml:224
 #, fuzzy, kde-format
 #| msgctxt "Default name for new email accounts/identities."
 #| msgid "Unnamed"
@@ -326,49 +326,54 @@ msgid "Protocol:"
 msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:172
-#: apps/contents/ui/PersonalDataPage.qml:223
+#: apps/contents/ui/PersonalDataPage.qml:233
 #, kde-format
 msgid "Port:"
 msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:179
-#: apps/contents/ui/PersonalDataPage.qml:230
+#: apps/contents/ui/PersonalDataPage.qml:240
 #, kde-format
 msgid "Security:"
 msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:188
-#: apps/contents/ui/PersonalDataPage.qml:239
+#: apps/contents/ui/PersonalDataPage.qml:249
 #, kde-format
 msgid "Authentication Method:"
 msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:197
-#: apps/contents/ui/PersonalDataPage.qml:248
+#: apps/contents/ui/PersonalDataPage.qml:258
 #, fuzzy, kde-format
 #| msgctxt "Default name for new email accounts/identities."
 #| msgid "Unnamed"
 msgid "Username:"
 msgstr "無名"
 
-#: apps/contents/ui/PersonalDataPage.qml:259
+#: apps/contents/ui/PersonalDataPage.qml:208
+#, kde-format
+msgid "Download all messages for offline use"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:269
 #, kde-format
 msgid "Recheck"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:272
-#: apps/contents/ui/PersonalDataPage.qml:326
+#: apps/contents/ui/PersonalDataPage.qml:282
+#: apps/contents/ui/PersonalDataPage.qml:336
 #, fuzzy, kde-format
 #| msgid "Setting up Account"
 msgid "Create Account"
 msgstr "アカウントの設定"
 
-#: apps/contents/ui/PersonalDataPage.qml:294
+#: apps/contents/ui/PersonalDataPage.qml:304
 #, kde-format
 msgid "Available configurations"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:314
+#: apps/contents/ui/PersonalDataPage.qml:324
 #, kde-format
 msgid "Manual Configuration"
 msgstr ""

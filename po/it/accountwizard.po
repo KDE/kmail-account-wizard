@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-13 01:35+0000\n"
+"POT-Creation-Date: 2023-12-15 01:36+0000\n"
 "PO-Revision-Date: 2023-09-30 13:03+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -235,7 +235,7 @@ msgid "Incoming"
 msgstr "In entrata"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
-#: apps/contents/ui/PersonalDataPage.qml:209
+#: apps/contents/ui/PersonalDataPage.qml:219
 #, kde-format
 msgid "Outgoing"
 msgstr "In uscita"
@@ -313,7 +313,7 @@ msgid "Server Parameters"
 msgstr "Parametri del server"
 
 #: apps/contents/ui/PersonalDataPage.qml:154
-#: apps/contents/ui/PersonalDataPage.qml:214
+#: apps/contents/ui/PersonalDataPage.qml:224
 #, kde-format
 msgid "Hostname:"
 msgstr "Nome host:"
@@ -324,46 +324,51 @@ msgid "Protocol:"
 msgstr "Protocollo:"
 
 #: apps/contents/ui/PersonalDataPage.qml:172
-#: apps/contents/ui/PersonalDataPage.qml:223
+#: apps/contents/ui/PersonalDataPage.qml:233
 #, kde-format
 msgid "Port:"
 msgstr "Porta:"
 
 #: apps/contents/ui/PersonalDataPage.qml:179
-#: apps/contents/ui/PersonalDataPage.qml:230
+#: apps/contents/ui/PersonalDataPage.qml:240
 #, kde-format
 msgid "Security:"
 msgstr "Sicurezza:"
 
 #: apps/contents/ui/PersonalDataPage.qml:188
-#: apps/contents/ui/PersonalDataPage.qml:239
+#: apps/contents/ui/PersonalDataPage.qml:249
 #, kde-format
 msgid "Authentication Method:"
 msgstr "Metodo di autenticazione:"
 
 #: apps/contents/ui/PersonalDataPage.qml:197
-#: apps/contents/ui/PersonalDataPage.qml:248
+#: apps/contents/ui/PersonalDataPage.qml:258
 #, kde-format
 msgid "Username:"
 msgstr "Nome utente:"
 
-#: apps/contents/ui/PersonalDataPage.qml:259
+#: apps/contents/ui/PersonalDataPage.qml:208
+#, kde-format
+msgid "Download all messages for offline use"
+msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:269
 #, kde-format
 msgid "Recheck"
 msgstr "Ricontrolla"
 
-#: apps/contents/ui/PersonalDataPage.qml:272
-#: apps/contents/ui/PersonalDataPage.qml:326
+#: apps/contents/ui/PersonalDataPage.qml:282
+#: apps/contents/ui/PersonalDataPage.qml:336
 #, kde-format
 msgid "Create Account"
 msgstr "Crea account"
 
-#: apps/contents/ui/PersonalDataPage.qml:294
+#: apps/contents/ui/PersonalDataPage.qml:304
 #, kde-format
 msgid "Available configurations"
 msgstr "Configurazioni disponibili"
 
-#: apps/contents/ui/PersonalDataPage.qml:314
+#: apps/contents/ui/PersonalDataPage.qml:324
 #, kde-format
 msgid "Manual Configuration"
 msgstr "Configurazione manuale"
