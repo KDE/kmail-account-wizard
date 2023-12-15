@@ -7,6 +7,8 @@
 #include "manualconfiguration.h"
 #include "accountwizard_debug.h"
 #include <KLocalizedString>
+#include <QRegularExpression>
+#include <QUrl>
 
 ManualConfiguration::ManualConfiguration(QObject *parent)
     : QObject{parent}
@@ -14,6 +16,17 @@ ManualConfiguration::ManualConfiguration(QObject *parent)
 }
 
 ManualConfiguration::~ManualConfiguration() = default;
+
+void ManualConfiguration::setEmail(const QString &email)
+{
+    static QRegularExpression reg(QStringLiteral(".*@"));
+    QString hostname = email;
+    hostname.remove(reg);
+    setIncomingHostName(hostname);
+    setOutgoingHostName(hostname);
+    setIncomingUserName(email);
+    setOutgoingUserName(email);
+}
 
 QStringList ManualConfiguration::incomingProtocols() const
 {
@@ -39,11 +52,7 @@ Resource::ResourceInfo ManualConfiguration::createPop3Resource() const
     settings.insert(QStringLiteral("Port"), mIncomingPort);
     settings.insert(QStringLiteral("Host"), mIncomingHostName);
     settings.insert(QStringLiteral("Login"), mIncomingUserName);
-    // TODO get password from personnal data page
-
-    // TODO settings.insert(QStringLiteral("Password"), );
-
-    // TODO pop3Res.setOption( "Password", SetupManager.password() );
+    settings.insert(QStringLiteral("Password"), mPassword);
     // TODO pop3Res.setOption( "UseTLS", true );
 
     info.settings = settings;
@@ -59,8 +68,11 @@ Resource::ResourceInfo ManualConfiguration::createImapResource() const
     settings.insert(QStringLiteral("ImapServer"), mIncomingPort);
     settings.insert(QStringLiteral("UserName"), mIncomingUserName);
     settings.insert(QStringLiteral("DisconnectedModeEnabled"), mDisconnectedModeEnabled);
+    settings.insert(QStringLiteral("Password"), mPassword);
+    settings.insert(QStringLiteral("ImapPort"), mIncomingPort);
+    settings.insert(QStringLiteral("IntervalCheckTime"), 60);
+    settings.insert(QStringLiteral("SubscriptionEnabled"), true);
 
-    // imapRes.setOption( "Password", SetupManager.password() );
     // imapRes.setOption( "UseDefaultIdentity", false );
     // imapRes.setOption( "AccountIdentity", identity.uoid() );
 
@@ -85,8 +97,6 @@ Resource::ResourceInfo ManualConfiguration::createImapResource() const
     //   imapRes.setOption( "Safety", "STARTTLS");
     //   imapRes.setOption( "ImapPort", 143 );
     // }
-    // imapRes.setOption( "IntervalCheckTime", 60 );
-    // imapRes.setOption( "SubscriptionEnabled", true );
 
     info.settings = settings;
     return info;
@@ -98,6 +108,55 @@ Resource::ResourceInfo ManualConfiguration::createKolabResource() const
     // TODO generate name
     // TODO add setSettings(...)
     info.typeIdentifier = QStringLiteral("akonadi_kolab_resource");
+#if 0
+    if (servertest_mode < 3) {   // submission & smtp
+        if (arg == "tls" ) { // tls is really STARTTLS
+          smtp.setEncryption("TLS");
+          if (servertest_mode == 1) {   //submission port 587
+              smtp.setPort(587);
+          } else {
+              smtp.setPort(25);
+          }
+        } else if ( arg == "ssl" ) {    //only possible as smtps
+            smtp.setPort(465);
+            smtp.setEncryption("SSL");
+        } else if (servertest_mode == 2) { //test submission and smtp failed or only possible unencrypted -> set to standard value and open editor
+            smtp.setPort(587);
+            smtp.setEncryption("TLS");
+            smtp.setEditMode(true);
+        } else if (servertest_mode == 1) { // submission test failed -> start smtp request
+            servertest_mode = 2;
+            ServerTest.test(page2.widget().lineEditSmtp.text, "smtp");
+            return;
+        }
+
+        // start imap test
+        servertest_mode = 3;
+        if (page2.widget().lineEditImap.text) {
+            SetupManager.setupInfo(qsTr("Probing IMAP server..."));
+            ServerTest.test(page2.widget().lineEditImap.text, "imap");
+        } else {
+            SetupManager.execute();
+        }
+    } else if (servertest_mode == 3) {   //imap
+        if ( arg == "ssl" ) {
+          // The ENUM used for authentication (in the kolab resource only)
+          kolabRes.setOption( "Safety", "SSL" ); // SSL/TLS
+          kolabRes.setOption( "ImapPort", 993 );
+        } else if ( arg == "tls" ) { // tls is really STARTTLS
+          kolabRes.setOption( "Safety", "STARTTLS" );  // STARTTLS
+          kolabRes.setOption( "ImapPort", 143 );
+        } else {
+          // safe default fallback in case server test failed
+          kolabRes.setOption( "Safety", "STARTTLS" );
+          kolabRes.setOption( "ImapPort", 143 );
+          kolabRes.setEditMode(true);
+        }
+        SetupManager.execute();
+    } else {
+        print ("Unknown servertest_mode = ", servertest_mode);
+    }
+#endif
     return info;
 }
 
@@ -141,6 +200,11 @@ void ManualConfiguration::createTransport()
     connect(transport, &Transport::finished, this, &ManualConfiguration::finished);
     connect(transport, &Transport::error, this, &ManualConfiguration::error);
     transport->createTransport();
+}
+
+void ManualConfiguration::setPassword(const QString &newPassword)
+{
+    mPassword = newPassword;
 }
 
 void ManualConfiguration::createManualAccount()
@@ -388,6 +452,7 @@ QDebug operator<<(QDebug d, const ManualConfiguration &t)
     d << "mCurrentIncomingAuthenticationProtocols " << t.currentIncomingAuthenticationProtocols();
     d << "mCurrentOutgoingAuthenticationProtocols " << t.currentOutgoingAuthenticationProtocols();
 
+    d << "mDisconnectedModeEnabled " << t.disconnectedModeEnabled();
     return d;
 }
 

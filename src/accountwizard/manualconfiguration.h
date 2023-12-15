@@ -86,6 +86,10 @@ public:
 
     void createManualAccount();
 
+    void setEmail(const QString &email);
+
+    void setPassword(const QString &newPassword);
+
 Q_SIGNALS:
     void incomingHostNameChanged();
     void incomingPortChanged();
@@ -129,6 +133,9 @@ private:
     // Outgoing
     QString mOutgoingUserName;
     QString mOutgoingHostName;
+
+    QString mPassword;
+
     int mOutgoingPort = 465;
 
     int mCurrentIncomingProtocol = 0; // POP3
