@@ -6,10 +6,7 @@
 
 #include "manualconfiguration.h"
 #include "accountwizard_debug.h"
-#include "resource.h"
-#include "transport.h"
 #include <KLocalizedString>
-#include <QDebug>
 
 ManualConfiguration::ManualConfiguration(QObject *parent)
     : QObject{parent}
