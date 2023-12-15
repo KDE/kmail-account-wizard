@@ -64,7 +64,7 @@ Kirigami.ScrollablePage {
                     onTextChanged: {
                         SetupManager.email = text
                     }
-                    onEditingFinished: {
+                    onAccepted: {
                         SetupManager.searchConfiguration()
                     }
                 }
