@@ -35,11 +35,11 @@ void Transport::createTransport()
         mt->setStorePassword(true);
         mt->setPassword(mTransportInfo.password);
     }
+    mTransportId = mt->id();
     /*
       // Add convert to int method
         mt->setEncryption(mTransportInfo.encrStr);
         mt->setAuthenticationType(mTransportInfo.authStr);
-        // TODO ? useful ? m_transportId = mt->id();
         */
     mt->save();
     Q_EMIT info(i18n("Mail transport uses '%1' encryption and '%2' authentication.", mTransportInfo.encrStr, mTransportInfo.authStr));
