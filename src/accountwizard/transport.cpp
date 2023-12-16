@@ -36,6 +36,7 @@ void Transport::createTransport()
         mt->setPassword(mTransportInfo.password);
     }
     /*
+      // Add convert to int method
         mt->setEncryption(mTransportInfo.encrStr);
         mt->setAuthenticationType(mTransportInfo.authStr);
         // TODO ? useful ? m_transportId = mt->id();
@@ -55,6 +56,11 @@ Transport::TransportInfo Transport::transportInfo() const
 void Transport::setTransportInfo(const TransportInfo &newTransportInfo)
 {
     mTransportInfo = newTransportInfo;
+}
+
+int Transport::transportId() const
+{
+    return mTransportId;
 }
 
 QDebug operator<<(QDebug d, const Transport::TransportInfo &t)

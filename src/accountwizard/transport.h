@@ -31,8 +31,11 @@ public:
     [[nodiscard]] TransportInfo transportInfo() const;
     void setTransportInfo(const TransportInfo &newTransportInfo);
 
+    [[nodiscard]] int transportId() const;
+
 private:
     TransportInfo mTransportInfo;
+    int mTransportId = -1;
 };
 QDebug operator<<(QDebug d, const Transport::TransportInfo &t);
 Q_DECLARE_TYPEINFO(Transport::TransportInfo, Q_RELOCATABLE_TYPE);
