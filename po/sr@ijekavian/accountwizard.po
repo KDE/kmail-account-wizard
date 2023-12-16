@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-15 01:36+0000\n"
+"POT-Creation-Date: 2023-12-16 01:38+0000\n"
 "PO-Revision-Date: 2017-05-07 21:01+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -51,7 +51,7 @@ msgstr "Идентитет уклоњен."
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:23
-#: accountwizard/manualconfiguration.cpp:23
+#: accountwizard/manualconfiguration.cpp:33
 #, fuzzy, kde-format
 #| msgid "IMAP, %1"
 msgid "IMAP"
@@ -59,7 +59,7 @@ msgstr "ИМАП, %1"
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:26
-#: accountwizard/manualconfiguration.cpp:23
+#: accountwizard/manualconfiguration.cpp:33
 #, fuzzy, kde-format
 #| msgid "POP3, %1"
 msgid "POP3"
@@ -82,7 +82,7 @@ msgid "SMTP"
 msgstr "СМТП, %1"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:35
-#: accountwizard/manualconfiguration.cpp:28
+#: accountwizard/manualconfiguration.cpp:38
 #, kde-format
 msgid "SSL/TLS"
 msgstr ""
@@ -116,52 +116,52 @@ msgstr "Аутоматско подешавање нађено."
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Подешавање потраге: Мозилина база"
 
-#: accountwizard/manualconfiguration.cpp:23
+#: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "Kolab"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:28
+#: accountwizard/manualconfiguration.cpp:38
 #, kde-format
 msgid "STARTTLS"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:28
+#: accountwizard/manualconfiguration.cpp:38
 #, kde-format
 msgid "None"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:43
 #, kde-format
 msgid "Clear text"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:43
 #, kde-format
 msgid "LOGIN"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:43
 #, kde-format
 msgid "PLAIN"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:43
 #, kde-format
 msgid "CRAM-MD5"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:43
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:43
 #, kde-format
 msgid "NTLM"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:43
 #, kde-format
 msgid "GSSAPI"
 msgstr ""
@@ -233,14 +233,14 @@ msgid "Mail transport account set up."
 msgstr "Налог за пренос е‑поште постављен."
 
 #: apps/contents/ui/ConfigurationDelegate.qml:93
-#: apps/contents/ui/PersonalDataPage.qml:148
+#: apps/contents/ui/PersonalDataPage.qml:154
 #, fuzzy, kde-format
 #| msgid "Incoming:"
 msgid "Incoming"
 msgstr "Долазно:"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
-#: apps/contents/ui/PersonalDataPage.qml:219
+#: apps/contents/ui/PersonalDataPage.qml:225
 #, fuzzy, kde-format
 #| msgid "Outgoing:"
 msgid "Outgoing"
@@ -285,17 +285,18 @@ msgctxt "Generic email address"
 msgid "boss@example.corp"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:75
-#, kde-format
-msgid "Password:"
+#: apps/contents/ui/PersonalDataPage.qml:84
+#, fuzzy, kde-format
+#| msgid "Password:"
+msgid "Password…"
 msgstr "Лозинка:"
 
-#: apps/contents/ui/PersonalDataPage.qml:85
+#: apps/contents/ui/PersonalDataPage.qml:91
 #, kde-format
 msgid "Continue"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:94
+#: apps/contents/ui/PersonalDataPage.qml:100
 #, fuzzy, kde-format
 #| msgid ""
 #| "Check online for the settings needed for this email provider. Only the "
@@ -310,76 +311,81 @@ msgstr ""
 "тренутку ће само именски део адресе е‑поште бити послат преко Интернета. Ако "
 "искључите ову опцију, мораћете ручно да поставите налог."
 
-#: apps/contents/ui/PersonalDataPage.qml:128
+#: apps/contents/ui/PersonalDataPage.qml:134
 #, fuzzy, kde-format
 #| msgid "No config found to edit"
 msgid "No config found from ispdb server."
 msgstr "Нема ниједне поставе за уређивање."
 
-#: apps/contents/ui/PersonalDataPage.qml:143
+#: apps/contents/ui/PersonalDataPage.qml:149
 #, kde-format
 msgid "Server Parameters"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:154
-#: apps/contents/ui/PersonalDataPage.qml:224
+#: apps/contents/ui/PersonalDataPage.qml:160
 #, fuzzy, kde-format
-#| msgid "Username:"
-msgid "Hostname:"
-msgstr "Корисничко име:"
+#| msgid "Incoming:"
+msgid "Incoming server:"
+msgstr "Долазно:"
 
-#: apps/contents/ui/PersonalDataPage.qml:163
+#: apps/contents/ui/PersonalDataPage.qml:169
 #, kde-format
 msgid "Protocol:"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:172
-#: apps/contents/ui/PersonalDataPage.qml:233
+#: apps/contents/ui/PersonalDataPage.qml:178
+#: apps/contents/ui/PersonalDataPage.qml:239
 #, kde-format
 msgid "Port:"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:179
-#: apps/contents/ui/PersonalDataPage.qml:240
+#: apps/contents/ui/PersonalDataPage.qml:185
+#: apps/contents/ui/PersonalDataPage.qml:246
 #, kde-format
 msgid "Security:"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:188
-#: apps/contents/ui/PersonalDataPage.qml:249
+#: apps/contents/ui/PersonalDataPage.qml:194
+#: apps/contents/ui/PersonalDataPage.qml:255
 #, kde-format
 msgid "Authentication Method:"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:197
-#: apps/contents/ui/PersonalDataPage.qml:258
+#: apps/contents/ui/PersonalDataPage.qml:203
+#: apps/contents/ui/PersonalDataPage.qml:264
 #, kde-format
 msgid "Username:"
 msgstr "Корисничко име:"
 
-#: apps/contents/ui/PersonalDataPage.qml:208
+#: apps/contents/ui/PersonalDataPage.qml:214
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:269
+#: apps/contents/ui/PersonalDataPage.qml:230
+#, fuzzy, kde-format
+#| msgid "Outgoing:"
+msgid "Outgoing server:"
+msgstr "Одлазно:"
+
+#: apps/contents/ui/PersonalDataPage.qml:275
 #, kde-format
 msgid "Recheck"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:282
-#: apps/contents/ui/PersonalDataPage.qml:336
+#: apps/contents/ui/PersonalDataPage.qml:288
+#: apps/contents/ui/PersonalDataPage.qml:342
 #, fuzzy, kde-format
 #| msgid "Add Account"
 msgid "Create Account"
 msgstr "Додај налог"
 
-#: apps/contents/ui/PersonalDataPage.qml:304
+#: apps/contents/ui/PersonalDataPage.qml:310
 #, kde-format
 msgid "Available configurations"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:324
+#: apps/contents/ui/PersonalDataPage.qml:330
 #, kde-format
 msgid "Manual Configuration"
 msgstr ""
@@ -671,6 +677,11 @@ msgstr "Аутоматско подешавање нађено."
 #, kde-format
 msgid "Autoconfiguration failed."
 msgstr "Аутоматско подешавање пропало."
+
+#, fuzzy
+#~| msgid "Username:"
+#~ msgid "Hostname:"
+#~ msgstr "Корисничко име:"
 
 # >> @title:window
 #~ msgid "Provide personal data"

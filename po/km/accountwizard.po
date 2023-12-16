@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-15 01:36+0000\n"
+"POT-Creation-Date: 2023-12-16 01:38+0000\n"
 "PO-Revision-Date: 2012-07-09 11:22+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -52,7 +52,7 @@ msgstr "បាន​យក​អត្តសញ្ញាណ​ចេញ ។"
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:23
-#: accountwizard/manualconfiguration.cpp:23
+#: accountwizard/manualconfiguration.cpp:33
 #, fuzzy, kde-format
 #| msgid "Imap, %1"
 msgid "IMAP"
@@ -60,7 +60,7 @@ msgstr "Imap, %1"
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:26
-#: accountwizard/manualconfiguration.cpp:23
+#: accountwizard/manualconfiguration.cpp:33
 #, fuzzy, kde-format
 #| msgid "Pop3, %1"
 msgid "POP3"
@@ -83,7 +83,7 @@ msgid "SMTP"
 msgstr "Smtp, %1"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:35
-#: accountwizard/manualconfiguration.cpp:28
+#: accountwizard/manualconfiguration.cpp:38
 #, kde-format
 msgid "SSL/TLS"
 msgstr ""
@@ -115,52 +115,52 @@ msgstr ""
 msgid "Configuration found in Mozilla FAI Database."
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:23
+#: accountwizard/manualconfiguration.cpp:33
 #, kde-format
 msgid "Kolab"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:28
+#: accountwizard/manualconfiguration.cpp:38
 #, kde-format
 msgid "STARTTLS"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:28
+#: accountwizard/manualconfiguration.cpp:38
 #, kde-format
 msgid "None"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:43
 #, kde-format
 msgid "Clear text"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:43
 #, kde-format
 msgid "LOGIN"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:43
 #, kde-format
 msgid "PLAIN"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:43
 #, kde-format
 msgid "CRAM-MD5"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:43
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:43
 #, kde-format
 msgid "NTLM"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:43
 #, kde-format
 msgid "GSSAPI"
 msgstr ""
@@ -232,14 +232,14 @@ msgid "Mail transport account set up."
 msgstr "រៀបចំ​គណនី​បញ្ជូន​សំបុត្រ ។"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:93
-#: apps/contents/ui/PersonalDataPage.qml:148
+#: apps/contents/ui/PersonalDataPage.qml:154
 #, fuzzy, kde-format
 #| msgid "Incoming:"
 msgid "Incoming"
 msgstr "ចូល ៖"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
-#: apps/contents/ui/PersonalDataPage.qml:219
+#: apps/contents/ui/PersonalDataPage.qml:225
 #, fuzzy, kde-format
 #| msgid "Outgoing:"
 msgid "Outgoing"
@@ -285,18 +285,18 @@ msgctxt "Generic email address"
 msgid "boss@example.corp"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:75
+#: apps/contents/ui/PersonalDataPage.qml:84
 #, fuzzy, kde-format
 #| msgid "Password"
-msgid "Password:"
+msgid "Password…"
 msgstr "ពាក្យ​សមង្ងាត់"
 
-#: apps/contents/ui/PersonalDataPage.qml:85
+#: apps/contents/ui/PersonalDataPage.qml:91
 #, kde-format
 msgid "Continue"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:94
+#: apps/contents/ui/PersonalDataPage.qml:100
 #, fuzzy, kde-format
 #| msgid ""
 #| "Check online for the settings needed for this email provider. Only the "
@@ -311,74 +311,79 @@ msgstr ""
 "អាសយដ្ឋាន​អ៊ីមែល​នឹង​​ត្រូវ​បាន​ផ្ញើ​​តាម​អ៊ីនធឺណិត​នៅ​ចំណុច​នេះ ។ ប្រសិនបើ​ជម្រើស​នេះ​មិន​ត្រូវ​បាន​គូស​ធីក​ទេ គណនី​អាច​"
 "ត្រូវ​បាន​រៀបចំ​ដោយដៃ ។"
 
-#: apps/contents/ui/PersonalDataPage.qml:128
+#: apps/contents/ui/PersonalDataPage.qml:134
 #, kde-format
 msgid "No config found from ispdb server."
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:143
+#: apps/contents/ui/PersonalDataPage.qml:149
 #, kde-format
 msgid "Server Parameters"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:154
-#: apps/contents/ui/PersonalDataPage.qml:224
+#: apps/contents/ui/PersonalDataPage.qml:160
 #, fuzzy, kde-format
-#| msgid "Username:"
-msgid "Hostname:"
-msgstr "ឈ្មោះ​អ្នក​ប្រើ ៖"
+#| msgid "Incoming:"
+msgid "Incoming server:"
+msgstr "ចូល ៖"
 
-#: apps/contents/ui/PersonalDataPage.qml:163
+#: apps/contents/ui/PersonalDataPage.qml:169
 #, kde-format
 msgid "Protocol:"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:172
-#: apps/contents/ui/PersonalDataPage.qml:233
+#: apps/contents/ui/PersonalDataPage.qml:178
+#: apps/contents/ui/PersonalDataPage.qml:239
 #, kde-format
 msgid "Port:"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:179
-#: apps/contents/ui/PersonalDataPage.qml:240
+#: apps/contents/ui/PersonalDataPage.qml:185
+#: apps/contents/ui/PersonalDataPage.qml:246
 #, kde-format
 msgid "Security:"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:188
-#: apps/contents/ui/PersonalDataPage.qml:249
+#: apps/contents/ui/PersonalDataPage.qml:194
+#: apps/contents/ui/PersonalDataPage.qml:255
 #, kde-format
 msgid "Authentication Method:"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:197
-#: apps/contents/ui/PersonalDataPage.qml:258
+#: apps/contents/ui/PersonalDataPage.qml:203
+#: apps/contents/ui/PersonalDataPage.qml:264
 #, kde-format
 msgid "Username:"
 msgstr "ឈ្មោះ​អ្នក​ប្រើ ៖"
 
-#: apps/contents/ui/PersonalDataPage.qml:208
+#: apps/contents/ui/PersonalDataPage.qml:214
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:269
+#: apps/contents/ui/PersonalDataPage.qml:230
+#, fuzzy, kde-format
+#| msgid "Outgoing:"
+msgid "Outgoing server:"
+msgstr "ចេញ ៖"
+
+#: apps/contents/ui/PersonalDataPage.qml:275
 #, kde-format
 msgid "Recheck"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:282
-#: apps/contents/ui/PersonalDataPage.qml:336
+#: apps/contents/ui/PersonalDataPage.qml:288
+#: apps/contents/ui/PersonalDataPage.qml:342
 #, kde-format
 msgid "Create Account"
 msgstr "បង្កើត​គណនី"
 
-#: apps/contents/ui/PersonalDataPage.qml:304
+#: apps/contents/ui/PersonalDataPage.qml:310
 #, kde-format
 msgid "Available configurations"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:324
+#: apps/contents/ui/PersonalDataPage.qml:330
 #, kde-format
 msgid "Manual Configuration"
 msgstr ""
@@ -669,6 +674,11 @@ msgstr ""
 #| msgid "Autodetecting settings failed"
 msgid "Autoconfiguration failed."
 msgstr "បាន​បរាជ័យ​ក្នុង​ការ​កំណត់​ការ​​រក​ដោយ​ស្វ័យប្រវត្តិ"
+
+#, fuzzy
+#~| msgid "Username:"
+#~ msgid "Hostname:"
+#~ msgstr "ឈ្មោះ​អ្នក​ប្រើ ៖"
 
 #~ msgid "Provide personal data"
 #~ msgstr "ផ្ដល់​ទិន្នន័យ​ផ្ទាល់ខ្លួន"
