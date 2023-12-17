@@ -28,8 +28,8 @@ void ManualConfigurationTest::shouldHaveDefaultValues()
     QCOMPARE(w.currentIncomingProtocol(), 0);
     QCOMPARE(w.currentIncomingSecurityProtocol(), 2);
     QCOMPARE(w.currentOutgoingSecurityProtocol(), 2);
-    QCOMPARE(w.currentIncomingAuthenticationProtocols(), 0);
-    QCOMPARE(w.currentOutgoingAuthenticationProtocols(), 0);
+    QCOMPARE(w.currentIncomingAuthenticationProtocol(), 0);
+    QCOMPARE(w.currentOutgoingAuthenticationProtocol(), 0);
 
     QCOMPARE(w.incomingPort(), 995);
     QCOMPARE(w.outgoingPort(), 465);

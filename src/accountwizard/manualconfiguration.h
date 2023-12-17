@@ -30,10 +30,10 @@ class LIBACCOUNTWIZARD_EXPORT ManualConfiguration : public QObject
                    currentIncomingSecurityProtocolChanged FINAL)
     Q_PROPERTY(int currentOutgoingSecurityProtocol READ currentOutgoingSecurityProtocol WRITE setCurrentOutgoingSecurityProtocol NOTIFY
                    currentOutgoingSecurityProtocolChanged FINAL)
-    Q_PROPERTY(int currentIncomingAuthenticationProtocols READ currentIncomingAuthenticationProtocols WRITE setCurrentIncomingAuthenticationProtocols NOTIFY
-                   currentIncomingAuthenticationProtocolsChanged FINAL)
-    Q_PROPERTY(int currentOutgoingAuthenticationProtocols READ currentOutgoingAuthenticationProtocols WRITE setCurrentOutgoingAuthenticationProtocols NOTIFY
-                   currentOutgoingAuthenticationProtocolsChanged FINAL)
+    Q_PROPERTY(int currentIncomingAuthenticationProtocol READ currentIncomingAuthenticationProtocol WRITE setCurrentIncomingAuthenticationProtocol NOTIFY
+                   currentIncomingAuthenticationProtocolChanged FINAL)
+    Q_PROPERTY(int currentOutgoingAuthenticationProtocol READ currentOutgoingAuthenticationProtocol WRITE setCurrentOutgoingAuthenticationProtocol NOTIFY
+                   currentOutgoingAuthenticationProtocolChanged FINAL)
 
     Q_PROPERTY(bool disconnectedModeEnabled READ disconnectedModeEnabled WRITE setDisconnectedModeEnabled NOTIFY disconnectedModeEnabledChanged FINAL)
 
@@ -73,11 +73,11 @@ public:
     [[nodiscard]] int currentOutgoingSecurityProtocol() const;
     void setCurrentOutgoingSecurityProtocol(int newCurrentOutgoingSecurityProtocol);
 
-    [[nodiscard]] int currentIncomingAuthenticationProtocols() const;
-    void setCurrentIncomingAuthenticationProtocols(int newCurrentIncomingAuthenticationProtocols);
+    [[nodiscard]] int currentIncomingAuthenticationProtocol() const;
+    void setCurrentIncomingAuthenticationProtocol(int newCurrentIncomingAuthenticationProtocols);
 
-    [[nodiscard]] int currentOutgoingAuthenticationProtocols() const;
-    void setCurrentOutgoingAuthenticationProtocols(int newCurrentOutgoingAuthenticationProtocols);
+    [[nodiscard]] int currentOutgoingAuthenticationProtocol() const;
+    void setCurrentOutgoingAuthenticationProtocol(int newCurrentOutgoingAuthenticationProtocols);
 
     [[nodiscard]] bool disconnectedModeEnabled() const;
     void setDisconnectedModeEnabled(int disconnectedMode);
@@ -105,8 +105,8 @@ Q_SIGNALS:
     void currentIncomingSecurityProtocolChanged();
     void currentOutgoingSecurityProtocolChanged();
 
-    void currentIncomingAuthenticationProtocolsChanged();
-    void currentOutgoingAuthenticationProtocolsChanged();
+    void currentIncomingAuthenticationProtocolChanged();
+    void currentOutgoingAuthenticationProtocolChanged();
 
     void disconnectedModeEnabledChanged();
 
@@ -124,6 +124,8 @@ private:
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Transport::TransportInfo createTransportInfo() const;
     LIBACCOUNTWIZARD_NO_EXPORT void createResource();
     LIBACCOUNTWIZARD_NO_EXPORT void createTransport();
+    [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString convertOutgoingSecurityProtocol(int protocol) const;
+    [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString convertOutgoingAuthenticationProtocols(int protocol) const;
 
     // Incoming
     QString mIncomingUserName;
@@ -143,8 +145,8 @@ private:
     int mCurrentIncomingSecurityProtocol = 2; // NONE
     int mCurrentOutgoingSecurityProtocol = 2; // NONE
 
-    int mCurrentIncomingAuthenticationProtocols = 0;
-    int mCurrentOutgoingAuthenticationProtocols = 0;
+    int mCurrentIncomingAuthenticationProtocol = 0;
+    int mCurrentOutgoingAuthenticationProtocol = 0;
 
     // configuration is Valid
     bool mConfigurationIsValid = false;

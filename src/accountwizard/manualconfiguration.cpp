@@ -219,11 +219,21 @@ Transport::TransportInfo ManualConfiguration::createTransportInfo() const
     info.user = mOutgoingUserName;
     info.host = mOutgoingHostName;
     info.port = mOutgoingPort;
-    // TODO convert it.
-    // info.authStr = mCurrentOutgoingAuthenticationProtocols;
-    // info.encrStr = mCurrentOutgoingSecurityProtocol;
-    // TODO
+    info.authStr = convertOutgoingAuthenticationProtocols(mCurrentOutgoingAuthenticationProtocol);
+    info.encrStr = convertOutgoingSecurityProtocol(mCurrentOutgoingSecurityProtocol);
     return info;
+}
+
+QString ManualConfiguration::convertOutgoingSecurityProtocol(int protocol) const
+{
+    // TODO
+    return {};
+}
+
+QString ManualConfiguration::convertOutgoingAuthenticationProtocols(int protocol) const
+{
+    // TODO
+    return {};
 }
 
 void ManualConfiguration::checkServer()
@@ -239,18 +249,18 @@ void ManualConfiguration::checkConfiguration()
     Q_EMIT configurationIsValidChanged();
 }
 
-int ManualConfiguration::currentOutgoingAuthenticationProtocols() const
+int ManualConfiguration::currentOutgoingAuthenticationProtocol() const
 {
-    return mCurrentOutgoingAuthenticationProtocols;
+    return mCurrentOutgoingAuthenticationProtocol;
 }
 
-void ManualConfiguration::setCurrentOutgoingAuthenticationProtocols(int newCurrentOutgoingAuthenticationProtocols)
+void ManualConfiguration::setCurrentOutgoingAuthenticationProtocol(int newCurrentOutgoingAuthenticationProtocols)
 {
-    if (mCurrentOutgoingAuthenticationProtocols == newCurrentOutgoingAuthenticationProtocols)
+    if (mCurrentOutgoingAuthenticationProtocol == newCurrentOutgoingAuthenticationProtocols)
         return;
-    mCurrentOutgoingAuthenticationProtocols = newCurrentOutgoingAuthenticationProtocols;
+    mCurrentOutgoingAuthenticationProtocol = newCurrentOutgoingAuthenticationProtocols;
     checkConfiguration();
-    Q_EMIT currentOutgoingAuthenticationProtocolsChanged();
+    Q_EMIT currentOutgoingAuthenticationProtocolChanged();
 }
 
 bool ManualConfiguration::disconnectedModeEnabled() const
@@ -267,18 +277,18 @@ void ManualConfiguration::setDisconnectedModeEnabled(int disconnectedMode)
     Q_EMIT disconnectedModeEnabledChanged();
 }
 
-int ManualConfiguration::currentIncomingAuthenticationProtocols() const
+int ManualConfiguration::currentIncomingAuthenticationProtocol() const
 {
-    return mCurrentIncomingAuthenticationProtocols;
+    return mCurrentIncomingAuthenticationProtocol;
 }
 
-void ManualConfiguration::setCurrentIncomingAuthenticationProtocols(int newCurrentIncomingAuthenticationProtocols)
+void ManualConfiguration::setCurrentIncomingAuthenticationProtocol(int newCurrentIncomingAuthenticationProtocols)
 {
-    if (mCurrentIncomingAuthenticationProtocols == newCurrentIncomingAuthenticationProtocols)
+    if (mCurrentIncomingAuthenticationProtocol == newCurrentIncomingAuthenticationProtocols)
         return;
-    mCurrentIncomingAuthenticationProtocols = newCurrentIncomingAuthenticationProtocols;
+    mCurrentIncomingAuthenticationProtocol = newCurrentIncomingAuthenticationProtocols;
     checkConfiguration();
-    Q_EMIT currentIncomingAuthenticationProtocolsChanged();
+    Q_EMIT currentIncomingAuthenticationProtocolChanged();
 }
 
 int ManualConfiguration::currentOutgoingSecurityProtocol() const
@@ -449,8 +459,8 @@ QDebug operator<<(QDebug d, const ManualConfiguration &t)
     d << "mCurrentIncomingSecurityProtocol " << t.currentIncomingSecurityProtocol();
     d << "mCurrentOutgoingSecurityProtocol " << t.currentOutgoingSecurityProtocol();
 
-    d << "mCurrentIncomingAuthenticationProtocols " << t.currentIncomingAuthenticationProtocols();
-    d << "mCurrentOutgoingAuthenticationProtocols " << t.currentOutgoingAuthenticationProtocols();
+    d << "mCurrentIncomingAuthenticationProtocol " << t.currentIncomingAuthenticationProtocol();
+    d << "mCurrentOutgoingAuthenticationProtocol " << t.currentOutgoingAuthenticationProtocol();
 
     d << "mDisconnectedModeEnabled " << t.disconnectedModeEnabled();
     return d;
