@@ -219,19 +219,28 @@ Transport::TransportInfo ManualConfiguration::createTransportInfo() const
     info.user = mOutgoingUserName;
     info.host = mOutgoingHostName;
     info.port = mOutgoingPort;
-    info.authStr = convertOutgoingAuthenticationProtocols(mCurrentOutgoingAuthenticationProtocol);
+    info.authStr = convertOutgoingAuthenticationProtocol(mCurrentOutgoingAuthenticationProtocol);
     info.encrStr = convertOutgoingSecurityProtocol(mCurrentOutgoingSecurityProtocol);
     return info;
 }
 
 QString ManualConfiguration::convertOutgoingSecurityProtocol(int protocol) const
 {
+    switch (protocol) {
+    case 0:
+        break;
+    }
+
     // TODO
     return {};
 }
 
-QString ManualConfiguration::convertOutgoingAuthenticationProtocols(int protocol) const
+QString ManualConfiguration::convertOutgoingAuthenticationProtocol(int protocol) const
 {
+    switch (protocol) {
+    case 0:
+        break;
+    }
     // TODO
     return {};
 }
