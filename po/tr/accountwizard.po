@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-runtime-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-16 01:38+0000\n"
+"POT-Creation-Date: 2023-12-17 01:36+0000\n"
 "PO-Revision-Date: 2023-12-15 20:50+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -223,13 +223,13 @@ msgstr "Özkaynak kurulumu tamamlandı."
 msgid "Setting up mail transport account..."
 msgstr "Posta taşıma hesabı ayarlanıyor..."
 
-#: accountwizard/transport.cpp:44
+#: accountwizard/transport.cpp:45
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr ""
 "Posta taşıması, '%1' şifrelemesi ve '%2' kimlik doğrulaması kullanıyor."
 
-#: accountwizard/transport.cpp:47
+#: accountwizard/transport.cpp:48
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "Posta taşıma hesabı ayarlandı."

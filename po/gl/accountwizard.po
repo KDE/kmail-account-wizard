@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-16 01:38+0000\n"
+"POT-Creation-Date: 2023-12-17 01:36+0000\n"
 "PO-Revision-Date: 2023-12-15 20:32+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -217,12 +217,12 @@ msgstr "Rematou a configuración do recurso."
 msgid "Setting up mail transport account..."
 msgstr "Configurando a conta do transporte de correo…"
 
-#: accountwizard/transport.cpp:44
+#: accountwizard/transport.cpp:45
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr "O transporte de correo usa cifraxe «%1» e autenticación «%2»."
 
-#: accountwizard/transport.cpp:47
+#: accountwizard/transport.cpp:48
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "Configurouse a conta de transporte de correo."

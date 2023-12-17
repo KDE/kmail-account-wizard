@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-16 01:38+0000\n"
+"POT-Creation-Date: 2023-12-17 01:36+0000\n"
 "PO-Revision-Date: 2022-06-19 14:05+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -225,12 +225,12 @@ msgstr "Ferdig med å setja opp ressursen."
 msgid "Setting up mail transport account..."
 msgstr "Set opp konto for e-postoverføring …"
 
-#: accountwizard/transport.cpp:44
+#: accountwizard/transport.cpp:45
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr "E-postoverføring brukar «%1»-kryptering og «%2»-autentisering."
 
-#: accountwizard/transport.cpp:47
+#: accountwizard/transport.cpp:48
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "Kontoen for e-postoverføring er no sett opp."

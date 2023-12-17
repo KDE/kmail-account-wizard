@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-16 01:38+0000\n"
+"POT-Creation-Date: 2023-12-17 01:36+0000\n"
 "PO-Revision-Date: 2010-02-28 10:05+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -218,12 +218,12 @@ msgstr "ตั้งค่าทรัพยากรเสร็จสมบู
 msgid "Setting up mail transport account..."
 msgstr "กำลังตั้งค่าบัญชีผู้ใช้ของการส่งถ่ายอีเมล..."
 
-#: accountwizard/transport.cpp:44
+#: accountwizard/transport.cpp:45
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr ""
 
-#: accountwizard/transport.cpp:47
+#: accountwizard/transport.cpp:48
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "ตั้งค่าบัญชีผู้ใช้ของการส่งถ่ายอีเมล"

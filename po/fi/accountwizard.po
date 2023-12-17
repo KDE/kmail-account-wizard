@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-16 01:38+0000\n"
+"POT-Creation-Date: 2023-12-17 01:36+0000\n"
 "PO-Revision-Date: 2023-09-26 13:34+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -219,12 +219,12 @@ msgstr "Resurssin asetus valmis."
 msgid "Setting up mail transport account..."
 msgstr "Asetetaan postinvälitystiliä…"
 
-#: accountwizard/transport.cpp:44
+#: accountwizard/transport.cpp:45
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr "Postinvälitys käyttää salausta ”%1” ja todennusta ”%2”."
 
-#: accountwizard/transport.cpp:47
+#: accountwizard/transport.cpp:48
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "Postinvälitystili asetettu."

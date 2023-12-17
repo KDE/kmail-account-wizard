@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-16 01:38+0000\n"
-"PO-Revision-Date: 2023-12-15 07:17+0100\n"
+"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"PO-Revision-Date: 2023-12-16 08:55+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -222,13 +222,13 @@ msgstr "Nastavitev vira je zaključena."
 msgid "Setting up mail transport account..."
 msgstr "Nastavljanje računa za prenos pošte ..."
 
-#: accountwizard/transport.cpp:44
+#: accountwizard/transport.cpp:45
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr ""
 "Transport pošte uporablja šifriranje '%1' in preverjanje pristnosti '%2'."
 
-#: accountwizard/transport.cpp:47
+#: accountwizard/transport.cpp:48
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "Račun za prenos pošte je nastavljen."
@@ -288,10 +288,9 @@ msgid "boss@example.corp"
 msgstr "boss@example.corp"
 
 #: apps/contents/ui/PersonalDataPage.qml:84
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password…"
-msgstr "Geslo:"
+msgstr "Geslo…"
 
 #: apps/contents/ui/PersonalDataPage.qml:91
 #, kde-format
@@ -318,10 +317,9 @@ msgid "Server Parameters"
 msgstr "Parametri strežnika"
 
 #: apps/contents/ui/PersonalDataPage.qml:160
-#, fuzzy, kde-format
-#| msgid "Incoming"
+#, kde-format
 msgid "Incoming server:"
-msgstr "Prejemanje"
+msgstr "Strežnik za prejemanje:"
 
 #: apps/contents/ui/PersonalDataPage.qml:169
 #, kde-format
@@ -358,10 +356,9 @@ msgid "Download all messages for offline use"
 msgstr "Prenesi vsa sporočila za uporabo brez povezave"
 
 #: apps/contents/ui/PersonalDataPage.qml:230
-#, fuzzy, kde-format
-#| msgid "Outgoing"
+#, kde-format
 msgid "Outgoing server:"
-msgstr "Pošiljanje"
+msgstr "Strežnik za pošiljanje"
 
 #: apps/contents/ui/PersonalDataPage.qml:275
 #, kde-format

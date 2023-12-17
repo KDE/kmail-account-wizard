@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-16 01:38+0000\n"
-"PO-Revision-Date: 2023-12-15 10:05+0100\n"
+"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"PO-Revision-Date: 2023-12-16 13:02+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -220,12 +220,12 @@ msgstr "S'ha completat l'arranjament del recurs."
 msgid "Setting up mail transport account..."
 msgstr "S'està arranjant el transport de correu del compte..."
 
-#: accountwizard/transport.cpp:44
+#: accountwizard/transport.cpp:45
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr "El transport de correu usa l'encriptatge «%1» i l'autenticació «%2»."
 
-#: accountwizard/transport.cpp:47
+#: accountwizard/transport.cpp:48
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "S'ha arranjat el transport de correu del compte."
@@ -285,10 +285,9 @@ msgid "boss@example.corp"
 msgstr "director@exemple.corp"
 
 #: apps/contents/ui/PersonalDataPage.qml:84
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password…"
-msgstr "Contrasenya:"
+msgstr "Contrasenya…"
 
 #: apps/contents/ui/PersonalDataPage.qml:91
 #, kde-format
@@ -316,10 +315,9 @@ msgid "Server Parameters"
 msgstr "Paràmetres del servidor"
 
 #: apps/contents/ui/PersonalDataPage.qml:160
-#, fuzzy, kde-format
-#| msgid "Incoming"
+#, kde-format
 msgid "Incoming server:"
-msgstr "Entrant"
+msgstr "Servidor d'entrada:"
 
 #: apps/contents/ui/PersonalDataPage.qml:169
 #, kde-format
@@ -356,10 +354,9 @@ msgid "Download all messages for offline use"
 msgstr "Descarrega tots els missatges per a ús fora de línia"
 
 #: apps/contents/ui/PersonalDataPage.qml:230
-#, fuzzy, kde-format
-#| msgid "Outgoing"
+#, kde-format
 msgid "Outgoing server:"
-msgstr "Sortint"
+msgstr "Servidor de sortida:"
 
 #: apps/contents/ui/PersonalDataPage.qml:275
 #, kde-format
@@ -667,189 +664,3 @@ msgstr "S'ha trobat la configuració automàtica."
 #, kde-format
 msgid "Autoconfiguration failed."
 msgstr "Ha fallat la configuració automàtica."
-
-#~ msgid "Hostname:"
-#~ msgstr "Nom del servidor:"
-
-#~ msgid "Provide personal data"
-#~ msgstr "Proporcioneu les dades personals"
-
-#~ msgid "Secure your Communication"
-#~ msgstr "Assegura la vostra comunicació"
-
-#~ msgid "Select Account Type"
-#~ msgstr "Seleccioneu el tipus de compte"
-
-#~ msgid "Select Provider"
-#~ msgstr "Seleccioneu el proveïdor"
-
-#~ msgid "Loading Assistant"
-#~ msgstr "S'està carregant l'assistent"
-
-#~ msgid "Setting up Account"
-#~ msgstr "S'està arranjant el compte"
-
-#~ msgid "ISPDB Assistant"
-#~ msgstr "Assistent ISPDB"
-
-#~ msgid "(c) 2010 Omat Holding B.V."
-#~ msgstr "(c) 2010 Omat Holding B.V."
-
-#~ msgid "Tom Albers"
-#~ msgstr "Tom Albers"
-
-#~ msgid "Tries to fetch the settings for that email address"
-#~ msgstr "Intenta obtenir la configuració per a aquesta adreça de correu"
-
-#~ msgid "No script specified in '%1'."
-#~ msgstr "No s'ha especificat cap script a «%1»."
-
-#~ msgid "Unable to load assistant: File '%1' does not exist."
-#~ msgstr "No s'ha pogut carregar l'assistent: el fitxer «%1» no existeix."
-
-#~ msgid "Loading script '%1'..."
-#~ msgstr "S'està carregant l'script «%1»..."
-
-#~ msgid "Failed to load script: '%1'."
-#~ msgstr "Ha fallat en carregar l'script «%1»."
-
-#~ msgid "Only offer accounts that support the given type."
-#~ msgstr "Ofereix només comptes que admetin el tipus proporcionat."
-
-#~ msgid "Run the specified assistant."
-#~ msgstr "Executa l'assistent especificat."
-
-#~ msgid "unpack fullpath on startup and launch that assistant"
-#~ msgstr "descomprimeix el camí complet en iniciar i llança aquest assistent"
-
-#~ msgid "Returns types of assistants"
-#~ msgstr "Retorna els tipus d'assistents"
-
-#~ msgid "The following assistants are available:"
-#~ msgstr "Hi ha disponibles els següents assistents:"
-
-#~ msgid "Fetching provider list..."
-#~ msgstr "S'està recuperant la llista de proveïdors..."
-
-#~ msgid "Setting up account..."
-#~ msgstr "S'està arranjant el compte..."
-
-#~ msgid "Setup complete."
-#~ msgstr "S'ha completat l'arranjament."
-
-#~ msgid "Failed to set up account, rolling back..."
-#~ msgstr "Ha fallat en arranjar el compte, s'està tornant enrere..."
-
-#~ msgid "Failed to set up account."
-#~ msgstr "Ha fallat en arranjar el compte."
-
-#~ msgid "Mail transport account deleted."
-#~ msgstr "S'ha eliminat el transport de correu del compte."
-
-#~ msgid "Could not load config dialog for UID '%1'"
-#~ msgstr "No s'ha pogut carregar el diàleg de configuració per a l'UID «%1»"
-
-#~ msgid ""
-#~ "Protect yourself against surveillance by encrypting your Mails with "
-#~ "GnuPG. By generating or selecting a public / private key pair now mails "
-#~ "can be encrypted using the public key while only you can decrypt them "
-#~ "with your private key."
-#~ msgstr ""
-#~ "Protegiu-vos contra la vigilància encriptant els correus amb GnuPG. "
-#~ "Generant o seleccionant un parell de claus pública/privada. Ara podreu "
-#~ "encriptar el correu usant la clau pública, mentre que només el podreu "
-#~ "desencriptar amb la vostra clau privada."
-
-#~ msgid ""
-#~ "<html><head/><body><p>When sending mails KMail automatically looks for "
-#~ "encryption keys of your recipients and secures the mail when keys for "
-#~ "each recipient can be found.</p><p>It also signs your mails "
-#~ "cryptographically so that it can be verified that your messages have not "
-#~ "been tampered with.</p></body></html>"
-#~ msgstr ""
-#~ "<html><head/><body><p>Quan envieu correu, el KMail cercarà automàticament "
-#~ "les claus d'encriptatge dels destinataris i assegurarà el correu quan "
-#~ "trobi les claus per a cada destinatari.</p><p>També signarà el correu "
-#~ "criptogràficament de manera que es pugui verificar que els missatges no "
-#~ "han estat alterats.</p></body></html>"
-
-#~ msgid "Secure outgoing emails, if possible"
-#~ msgstr "Assegura el correu electrònic sortint, si és possible"
-
-#~ msgid "Select key for this account:"
-#~ msgstr "Selecciona la clau per a aquest compte:"
-
-#~ msgid "Checking key publishing support ..."
-#~ msgstr "S'està comprovant si s'admet la publicació de la clau..."
-
-#~ msgid "Register &this key with your email provider"
-#~ msgstr "Registra aques&ta clau amb el proveïdor de correu electrònic"
-
-#~ msgid ""
-#~ "Your email service provider supports a service to provide your public key "
-#~ "so that others can find it.\n"
-#~ "This means that your public key can be queried from your email provider "
-#~ "and others can then use it to secure their email communication with you."
-#~ msgstr ""
-#~ "El proveïdor del servei de correu electrònic admet un servei que "
-#~ "proporcioni la vostra clau pública perquè els altres la puguin trobar.\n"
-#~ "Això vol dir que la vostra clau pública es pot consultar des del vostre "
-#~ "proveïdor de correu electrònic, i llavors, els altres la podran usar per "
-#~ "a assegurar la seva comunicació per correu electrònic."
-
-#~ msgid "Publish &this key on public key server"
-#~ msgstr "Publica aques&ta clau al servidor de claus públic"
-
-#~ msgid ""
-#~ "Your email service provider does not support key publishing. You should "
-#~ "publish your key so that other users can retrieve it and use it to secure "
-#~ "their email communication with you.\n"
-#~ "You can alternatively publish your key on a public key server, but you "
-#~ "should be aware that your email address will be publicly listed and they "
-#~ "key cannot be removed from there, only revoked."
-#~ msgstr ""
-#~ "El proveïdor del servei de correu electrònic no admet la publicació de la "
-#~ "clau. L'haureu de publicar perquè els altres usuaris la puguin rebre i "
-#~ "usar per a assegurar la seva comunicació per correu electrònic.\n"
-#~ "De manera alternativa podeu publicar-la en un servidor de claus públic, "
-#~ "però haureu de tenir en compte que la vostra adreça de correu electrònic "
-#~ "es mostrarà públicament i la clau no es podrà eliminar d'allí, només "
-#~ "revocar."
-
-#~ msgid "Loading assistant..."
-#~ msgstr "S'està carregant l'assistent..."
-
-#~ msgid ""
-#~ "With a few simple steps we create the right settings for you. Please "
-#~ "follow the steps of this wizard carefully."
-#~ msgstr ""
-#~ "Amb uns pocs senzills passos es crearà la configuració adequada per a "
-#~ "vós. Seguiu els passos d'aquest assistent amb cura."
-
-#~ msgid "Find pro&vider settings on the Internet"
-#~ msgstr "Cerca la configuració del pro&veïdor a Internet"
-
-#~ msgid "IMAP account"
-#~ msgstr "Compte IMAP"
-
-#~ msgid "POP&3 account"
-#~ msgstr "Compte POP&3"
-
-#~ msgid ""
-#~ "Select your provider from the list below or click back if your provider "
-#~ "is not listed"
-#~ msgstr ""
-#~ "Seleccioneu el vostre proveïdor de la llista de sota o cliqueu enrere si "
-#~ "el proveïdor no està llistat"
-
-#~ msgid "&Details..."
-#~ msgstr "&Detalls..."
-
-#~ msgid "Select which kind of account you want to create:"
-#~ msgstr "Seleccioneu quin tipus de compte voleu crear:"
-
-#~ msgid "Check for more on Internet"
-#~ msgstr "Cerca'n més a Internet"
-
-#~ msgid "Unknown security setting for LDAP server"
-#~ msgstr "Configuració de seguretat desconeguda per al servidor LDAP"

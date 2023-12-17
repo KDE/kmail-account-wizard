@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-16 01:38+0000\n"
+"POT-Creation-Date: 2023-12-17 01:36+0000\n"
 "PO-Revision-Date: 2021-09-03 10:38+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -222,13 +222,13 @@ msgstr "Η προετοιμασία του πόρου ολοκληρώθηκε."
 msgid "Setting up mail transport account..."
 msgstr "Προετοιμασία λογαριασμού ηλεκτρονικού ταχυδρομείου..."
 
-#: accountwizard/transport.cpp:44
+#: accountwizard/transport.cpp:45
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr ""
 "Το ηλ. ταχυδρομείο χρησιμοποιεί '%1' κρυπτογράφηση και '%2' ταυτοποίηση."
 
-#: accountwizard/transport.cpp:47
+#: accountwizard/transport.cpp:48
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "Ο λογαριασμός ηλ. ταχυδρομείου έχει οριστεί."

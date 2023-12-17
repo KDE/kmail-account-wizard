@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-16 01:38+0000\n"
-"PO-Revision-Date: 2023-12-15 23:57+0200\n"
+"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"PO-Revision-Date: 2023-12-16 22:39+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -219,14 +219,14 @@ msgstr "Налаштування ресурсу завершено."
 msgid "Setting up mail transport account..."
 msgstr "Налаштування облікового запису пересилання пошти…"
 
-#: accountwizard/transport.cpp:44
+#: accountwizard/transport.cpp:45
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr ""
 "У каналі передавання пошти використовується шифрування «%1» та розпізнавання "
 "«%2»."
 
-#: accountwizard/transport.cpp:47
+#: accountwizard/transport.cpp:48
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "Обліковий запис пересилання пошти налаштовано."
@@ -286,10 +286,9 @@ msgid "boss@example.corp"
 msgstr "boss@example.corp"
 
 #: apps/contents/ui/PersonalDataPage.qml:84
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password…"
-msgstr "Пароль:"
+msgstr "Пароль…"
 
 #: apps/contents/ui/PersonalDataPage.qml:91
 #, kde-format
@@ -316,10 +315,9 @@ msgid "Server Parameters"
 msgstr "Параметри сервера"
 
 #: apps/contents/ui/PersonalDataPage.qml:160
-#, fuzzy, kde-format
-#| msgid "Incoming"
+#, kde-format
 msgid "Incoming server:"
-msgstr "Вхідні"
+msgstr "Вхідний сервер:"
 
 #: apps/contents/ui/PersonalDataPage.qml:169
 #, kde-format
@@ -356,10 +354,9 @@ msgid "Download all messages for offline use"
 msgstr "Отримати усі повідомлення для автономного використання"
 
 #: apps/contents/ui/PersonalDataPage.qml:230
-#, fuzzy, kde-format
-#| msgid "Outgoing"
+#, kde-format
 msgid "Outgoing server:"
-msgstr "Вихідні"
+msgstr "Вихідний сервер:"
 
 #: apps/contents/ui/PersonalDataPage.qml:275
 #, kde-format

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-16 01:38+0000\n"
-"PO-Revision-Date: 2023-12-15 04:30+0100\n"
+"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"PO-Revision-Date: 2023-12-16 06:05+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -215,12 +215,12 @@ msgstr "რესურსის მორგება დასრულდა.
 msgid "Setting up mail transport account..."
 msgstr "ფოსტის ტრანსპორტის ანგარიშის მორგება..."
 
-#: accountwizard/transport.cpp:44
+#: accountwizard/transport.cpp:45
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr "ელფოსტის ტრანსპორტი იყენებს '%1' შიფრაციას და '%2' ავთენტიკაციას."
 
-#: accountwizard/transport.cpp:47
+#: accountwizard/transport.cpp:48
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "ფოსტის ტრანსპორტის ანგარიში მორგებულია."
@@ -279,10 +279,9 @@ msgid "boss@example.corp"
 msgstr "ვითომუფროსი@მაგალითი.კომპ"
 
 #: apps/contents/ui/PersonalDataPage.qml:84
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password…"
-msgstr "პაროლი:"
+msgstr "პაროლი…"
 
 #: apps/contents/ui/PersonalDataPage.qml:91
 #, kde-format
@@ -309,10 +308,9 @@ msgid "Server Parameters"
 msgstr "სერვერის პარამეტრები"
 
 #: apps/contents/ui/PersonalDataPage.qml:160
-#, fuzzy, kde-format
-#| msgid "Incoming"
+#, kde-format
 msgid "Incoming server:"
-msgstr "შემომავალი"
+msgstr "შემომავალი სერვერი:"
 
 #: apps/contents/ui/PersonalDataPage.qml:169
 #, kde-format
@@ -349,10 +347,9 @@ msgid "Download all messages for offline use"
 msgstr "ყველა შეტყობინების გადმოწერა ინტერნეტის გარეშე სანახავად"
 
 #: apps/contents/ui/PersonalDataPage.qml:230
-#, fuzzy, kde-format
-#| msgid "Outgoing"
+#, kde-format
 msgid "Outgoing server:"
-msgstr "გამავალი"
+msgstr "გამავალი სერვერი:"
 
 #: apps/contents/ui/PersonalDataPage.qml:275
 #, kde-format

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-16 01:38+0000\n"
-"PO-Revision-Date: 2023-12-15 09:58+0100\n"
+"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"PO-Revision-Date: 2023-12-16 11:04+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -218,12 +218,12 @@ msgstr "Instellen van hulpbron voltooid."
 msgid "Setting up mail transport account..."
 msgstr "E-mailtransportaccount instellen..."
 
-#: accountwizard/transport.cpp:44
+#: accountwizard/transport.cpp:45
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr "E-mailtransport gebruikt versleuteling '%1' en authenticatie '%2'."
 
-#: accountwizard/transport.cpp:47
+#: accountwizard/transport.cpp:48
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "E-mailtransportaccount instellen."
@@ -283,10 +283,9 @@ msgid "boss@example.corp"
 msgstr "boss@example.corp"
 
 #: apps/contents/ui/PersonalDataPage.qml:84
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password…"
-msgstr "Wachtwoord:"
+msgstr "Wachtwoord…"
 
 #: apps/contents/ui/PersonalDataPage.qml:91
 #, kde-format
@@ -314,10 +313,9 @@ msgid "Server Parameters"
 msgstr "Serverparameters"
 
 #: apps/contents/ui/PersonalDataPage.qml:160
-#, fuzzy, kde-format
-#| msgid "Incoming"
+#, kde-format
 msgid "Incoming server:"
-msgstr "Inkomend"
+msgstr "Inkomende server:"
 
 #: apps/contents/ui/PersonalDataPage.qml:169
 #, kde-format
@@ -354,10 +352,9 @@ msgid "Download all messages for offline use"
 msgstr "Alle berichten downloaden voor offline gebruik"
 
 #: apps/contents/ui/PersonalDataPage.qml:230
-#, fuzzy, kde-format
-#| msgid "Outgoing"
+#, kde-format
 msgid "Outgoing server:"
-msgstr "Uitgaand"
+msgstr "Uitgaande server:"
 
 #: apps/contents/ui/PersonalDataPage.qml:275
 #, kde-format

@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-16 01:38+0000\n"
-"PO-Revision-Date: 2023-09-30 14:00+0200\n"
+"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"PO-Revision-Date: 2023-12-16 13:02+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -220,13 +220,13 @@ msgstr "S'ha completat la configuració del recurs."
 msgid "Setting up mail transport account..."
 msgstr "S'està configurant el transport de correu del compte..."
 
-#: accountwizard/transport.cpp:44
+#: accountwizard/transport.cpp:45
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr ""
 "El transport de correu utilitza l'encriptació «%1» i l'autenticació «%2»."
 
-#: accountwizard/transport.cpp:47
+#: accountwizard/transport.cpp:48
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "S'ha configurat el transport de correu del compte."
@@ -286,10 +286,9 @@ msgid "boss@example.corp"
 msgstr "director@exemple.corp"
 
 #: apps/contents/ui/PersonalDataPage.qml:84
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password…"
-msgstr "Contrasenya:"
+msgstr "Contrasenya…"
 
 #: apps/contents/ui/PersonalDataPage.qml:91
 #, kde-format
@@ -316,10 +315,9 @@ msgid "Server Parameters"
 msgstr "Paràmetres del servidor"
 
 #: apps/contents/ui/PersonalDataPage.qml:160
-#, fuzzy, kde-format
-#| msgid "Incoming"
+#, kde-format
 msgid "Incoming server:"
-msgstr "Entrant"
+msgstr "Servidor d'entrada:"
 
 #: apps/contents/ui/PersonalDataPage.qml:169
 #, kde-format
@@ -353,13 +351,12 @@ msgstr "Nom d'usuari:"
 #: apps/contents/ui/PersonalDataPage.qml:214
 #, kde-format
 msgid "Download all messages for offline use"
-msgstr ""
+msgstr "Descarrega tots els missatges per a ús fora de línia"
 
 #: apps/contents/ui/PersonalDataPage.qml:230
-#, fuzzy, kde-format
-#| msgid "Outgoing"
+#, kde-format
 msgid "Outgoing server:"
-msgstr "Eixint"
+msgstr "Servidor d'eixida:"
 
 #: apps/contents/ui/PersonalDataPage.qml:275
 #, kde-format
@@ -670,6 +667,3 @@ msgstr "S'ha trobat la configuració automàtica."
 #, kde-format
 msgid "Autoconfiguration failed."
 msgstr "No s'ha pogut configurar automàtica."
-
-#~ msgid "Hostname:"
-#~ msgstr "Nom del servidor:"

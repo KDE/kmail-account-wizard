@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-16 01:38+0000\n"
-"PO-Revision-Date: 2023-12-15 14:24+0100\n"
+"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"PO-Revision-Date: 2023-12-16 07:44+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -218,13 +218,13 @@ msgstr "Baliabidea ezartzea osatu da."
 msgid "Setting up mail transport account..."
 msgstr "Posta-garraio kontua ezartzen..."
 
-#: accountwizard/transport.cpp:44
+#: accountwizard/transport.cpp:45
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr ""
 "Posta-garraioak '%1' zifratzea eta '%2' autentifikazioa erabiltzen ditu."
 
-#: accountwizard/transport.cpp:47
+#: accountwizard/transport.cpp:48
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "Posta-garraio kontua ezarri da."
@@ -284,10 +284,9 @@ msgid "boss@example.corp"
 msgstr "zuzendaria@adibide.corp"
 
 #: apps/contents/ui/PersonalDataPage.qml:84
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password…"
-msgstr "Pasahitza:"
+msgstr "Pasahitza…"
 
 #: apps/contents/ui/PersonalDataPage.qml:91
 #, kde-format
@@ -315,10 +314,9 @@ msgid "Server Parameters"
 msgstr "Zerbitzariaren parametroak"
 
 #: apps/contents/ui/PersonalDataPage.qml:160
-#, fuzzy, kde-format
-#| msgid "Incoming"
+#, kde-format
 msgid "Incoming server:"
-msgstr "Sarrerakoa"
+msgstr "Sarrerako zerbitzaria:"
 
 #: apps/contents/ui/PersonalDataPage.qml:169
 #, kde-format
@@ -355,10 +353,9 @@ msgid "Download all messages for offline use"
 msgstr "Zama-jaitsi mezu guztiak lerroz-kanpo erabiltzeko"
 
 #: apps/contents/ui/PersonalDataPage.qml:230
-#, fuzzy, kde-format
-#| msgid "Outgoing"
+#, kde-format
 msgid "Outgoing server:"
-msgstr "Irteerakoa"
+msgstr "Irteerako zerbitzaria:"
 
 #: apps/contents/ui/PersonalDataPage.qml:275
 #, kde-format
