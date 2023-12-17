@@ -25,7 +25,7 @@ class LIBACCOUNTWIZARD_EXPORT SetupManager : public QObject
 
 public:
     explicit SetupManager(QObject *parent = nullptr);
-    ~SetupManager();
+    ~SetupManager() override;
 
     [[nodiscard]] QString fullName() const;
     void setFullName(const QString &fullName);
