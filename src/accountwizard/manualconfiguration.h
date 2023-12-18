@@ -90,6 +90,8 @@ public:
 
     void setPassword(const QString &newPassword);
 
+    void setIdentityId(uint id);
+
 Q_SIGNALS:
     void incomingHostNameChanged();
     void incomingPortChanged();
@@ -147,6 +149,8 @@ private:
 
     int mCurrentIncomingAuthenticationProtocol = 0;
     int mCurrentOutgoingAuthenticationProtocol = 0;
+
+    uint mIdentityId = 0;
 
     // configuration is Valid
     bool mConfigurationIsValid = false;

@@ -88,6 +88,9 @@ void SetupManager::createAutomaticAccount()
 void SetupManager::createManualAccount()
 {
     qDebug() << " Create MAnual Account";
+    mIdentity->create();
+    const uint id = mIdentity->uoid();
+    mManualConfiguration->setIdentityId(id);
     mManualConfiguration->createManualAccount();
 }
 

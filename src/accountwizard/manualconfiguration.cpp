@@ -72,9 +72,8 @@ Resource::ResourceInfo ManualConfiguration::createImapResource() const
     settings.insert(QStringLiteral("ImapPort"), mIncomingPort);
     settings.insert(QStringLiteral("IntervalCheckTime"), 60);
     settings.insert(QStringLiteral("SubscriptionEnabled"), true);
-
-    // imapRes.setOption( "UseDefaultIdentity", false );
-    // imapRes.setOption( "AccountIdentity", identity.uoid() );
+    settings.insert(QStringLiteral("UseDefaultIdentity"), false);
+    settings.insert(QStringLiteral("AccountIdentity"), mIdentityId);
 
     // if ( server == "imap.gmail.com" ) {
     //     imapRes.setOption( "Authentication", 9 ); // XOAuth2
@@ -205,6 +204,11 @@ void ManualConfiguration::createTransport()
 void ManualConfiguration::setPassword(const QString &newPassword)
 {
     mPassword = newPassword;
+}
+
+void ManualConfiguration::setIdentityId(uint id)
+{
+    mIdentityId = id;
 }
 
 void ManualConfiguration::createManualAccount()
