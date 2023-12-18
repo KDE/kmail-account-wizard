@@ -104,6 +104,18 @@ Resource::ResourceInfo ManualConfiguration::createImapResource() const
 Resource::ResourceInfo ManualConfiguration::createKolabResource() const
 {
     Resource::ResourceInfo info;
+    QMap<QString, QVariant> settings;
+    settings.insert(QStringLiteral("ImapServer"), mIncomingPort);
+    settings.insert(QStringLiteral("UserName"), mIncomingUserName);
+    settings.insert(QStringLiteral("DisconnectedModeEnabled"), true);
+    settings.insert(QStringLiteral("AccountIdentity"), mIdentityId);
+    settings.insert(QStringLiteral("UseDefaultIdentity"), false);
+    settings.insert(QStringLiteral("SieveSupport"), true);
+    settings.insert(QStringLiteral("IntervalCheckTime"), 60);
+    settings.insert(QStringLiteral("SubscriptionEnabled"), true);
+    settings.insert(QStringLiteral("Password"), mPassword);
+    settings.insert(QStringLiteral("ImapPort"), mIncomingPort);
+
     // TODO generate name
     // TODO add setSettings(...)
     info.typeIdentifier = QStringLiteral("akonadi_kolab_resource");
