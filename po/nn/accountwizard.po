@@ -680,8 +680,3 @@ msgstr "Fann automatisk oppsett."
 #, kde-format
 msgid "Autoconfiguration failed."
 msgstr "Fann ikkje automatisk oppsett."
-
-#, fuzzy
-#~| msgid "Username:"
-#~ msgid "Hostname:"
-#~ msgstr "Brukarnamn:"

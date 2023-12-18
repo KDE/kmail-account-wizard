@@ -667,8 +667,3 @@ msgstr ""
 #, kde-format
 msgid "Autoconfiguration failed."
 msgstr ""
-
-#, fuzzy
-#~| msgid "Username:"
-#~ msgid "Hostname:"
-#~ msgstr "Brukernavn:"
