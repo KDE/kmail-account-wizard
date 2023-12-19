@@ -45,8 +45,22 @@ QStringList ManualConfiguration::authenticationProtocols() const
 
 QString ManualConfiguration::generateUniqueAccountName() const
 {
-    // TODO
-    return {};
+    QString name;
+    switch (mCurrentIncomingProtocol) {
+    case 0: // Pop3
+        name = QStringLiteral("Pop3 (%1)").arg(mIncomingHostName);
+        break;
+    case 1: // Imap
+        name = QStringLiteral("Imap (%1)").arg(mIncomingHostName);
+        break;
+    case 2: // Kolab
+        name = QStringLiteral("Kolab (%1)").arg(mIncomingHostName);
+        break;
+    default:
+        qCWarning(ACCOUNTWIZARD_LOG) << " invalid protocol: " << mCurrentIncomingProtocol;
+        break;
+    }
+    return name;
 }
 
 Resource::ResourceInfo ManualConfiguration::createPop3Resource() const
