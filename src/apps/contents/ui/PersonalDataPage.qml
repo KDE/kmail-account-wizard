@@ -193,7 +193,7 @@ Kirigami.ScrollablePage {
                     id: manualIncomingAuthenticationMethod
                     description: i18n("Authentication Method:")
                     model: SetupManager.manualConfiguration.authenticationProtocols
-                    currentIndex: SetupManager.manualConfiguration. currentIncomingAuthenticationProtocols
+                    currentIndex: SetupManager.manualConfiguration.currentIncomingAuthenticationProtocol
                     onCurrentIndexChanged: {
                         SetupManager.manualConfiguration.currentIncomingAuthenticationProtocols = currentIndex
                     }
@@ -254,7 +254,7 @@ Kirigami.ScrollablePage {
                     id: manualOutgoingAuthenticationMethod
                     description: i18n("Authentication Method:")
                     model: SetupManager.manualConfiguration.authenticationProtocols
-                    currentIndex: SetupManager.manualConfiguration.currentOutgoingAuthenticationProtocols
+                    currentIndex: SetupManager.manualConfiguration.currentOutgoingAuthenticationProtocol
                     onCurrentIndexChanged: {
                         SetupManager.manualConfiguration.currentOutgoingAuthenticationProtocols = currentIndex
                     }
