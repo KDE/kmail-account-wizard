@@ -254,7 +254,7 @@ void ManualConfiguration::createResource()
 void ManualConfiguration::createTransport()
 {
     // Create outgoing account
-    auto transport = new Transport(QString() /* TODO */, this);
+    auto transport = new Transport(this);
     transport->setTransportInfo(std::move(createTransportInfo()));
 
     connect(transport, &Transport::info, this, &ManualConfiguration::info);

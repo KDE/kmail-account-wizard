@@ -24,7 +24,7 @@ public:
         QString authStr;
         int port = -1;
     };
-    explicit Transport(const QString &type, QObject *parent);
+    explicit Transport(QObject *parent);
     ~Transport() override;
     void createTransport();
 

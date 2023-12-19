@@ -51,14 +51,9 @@ static typename T::value_type stringToValue(const T *table, const int tableSize,
     return table[0].value; // TODO: error handling
 }
 
-Transport::Transport(const QString &type, QObject *parent)
+Transport::Transport(QObject *parent)
     : SetupBase(parent)
 {
-    // if (type == QLatin1String("smtp")) {
-    //     m_port = 25;
-    // }
-    // TODO use it
-    Q_UNUSED(type)
 }
 
 Transport::~Transport() = default;
