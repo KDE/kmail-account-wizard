@@ -128,6 +128,7 @@ private:
     LIBACCOUNTWIZARD_NO_EXPORT void createTransport();
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString convertOutgoingSecurityProtocol(int protocol) const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString convertOutgoingAuthenticationProtocol(int protocol) const;
+    [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString generateUniqueAccountName() const;
 
     // Incoming
     QString mIncomingUserName;

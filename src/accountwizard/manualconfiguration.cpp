@@ -43,11 +43,17 @@ QStringList ManualConfiguration::authenticationProtocols() const
     return {i18n("Clear text"), i18n("LOGIN"), i18n("PLAIN"), i18n("CRAM-MD5"), i18n("DIGEST-MD5"), i18n("NTLM"), i18n("GSSAPI")};
 }
 
+QString ManualConfiguration::generateUniqueAccountName() const
+{
+    // TODO
+    return {};
+}
+
 Resource::ResourceInfo ManualConfiguration::createPop3Resource() const
 {
     Resource::ResourceInfo info;
-    // TODO generate name
     info.typeIdentifier = QStringLiteral("akonadi_pop3_resource");
+    info.name = generateUniqueAccountName();
     QMap<QString, QVariant> settings;
     settings.insert(QStringLiteral("Port"), mIncomingPort);
     settings.insert(QStringLiteral("Host"), mIncomingHostName);
@@ -62,8 +68,8 @@ Resource::ResourceInfo ManualConfiguration::createPop3Resource() const
 Resource::ResourceInfo ManualConfiguration::createImapResource() const
 {
     Resource::ResourceInfo info;
-    // TODO generate name
     info.typeIdentifier = QStringLiteral("akonadi_imap_resource");
+    info.name = generateUniqueAccountName();
     QMap<QString, QVariant> settings;
     settings.insert(QStringLiteral("ImapServer"), mIncomingPort);
     settings.insert(QStringLiteral("UserName"), mIncomingUserName);
@@ -104,6 +110,7 @@ Resource::ResourceInfo ManualConfiguration::createImapResource() const
 Resource::ResourceInfo ManualConfiguration::createKolabResource() const
 {
     Resource::ResourceInfo info;
+    info.name = generateUniqueAccountName();
     QMap<QString, QVariant> settings;
     settings.insert(QStringLiteral("ImapServer"), mIncomingPort);
     settings.insert(QStringLiteral("UserName"), mIncomingUserName);
