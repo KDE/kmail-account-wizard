@@ -79,6 +79,34 @@ Resource::ResourceInfo ManualConfiguration::createPop3Resource() const
     return info;
 }
 
+QString ManualConfiguration::convertIncomingAuthenticationProtocol(int index) const
+{
+    switch (index) {
+    case 0:
+        return QStringLiteral("STARTTLS");
+    case 1:
+        return QStringLiteral("SSL");
+    case 2:
+        return QStringLiteral("NONE");
+    }
+    Q_UNREACHABLE();
+    return {};
+}
+
+QString ManualConfiguration::convertIncomingSecurityProtocol(int index) const
+{
+    switch (index) {
+    case 0:
+        return QStringLiteral("STARTTLS");
+    case 1:
+        return QStringLiteral("SSL");
+    case 2:
+        return QStringLiteral("NONE");
+    }
+    Q_UNREACHABLE();
+    return {};
+}
+
 Resource::ResourceInfo ManualConfiguration::createImapResource() const
 {
     Resource::ResourceInfo info;
@@ -94,6 +122,8 @@ Resource::ResourceInfo ManualConfiguration::createImapResource() const
     settings.insert(QStringLiteral("SubscriptionEnabled"), true);
     settings.insert(QStringLiteral("UseDefaultIdentity"), false);
     settings.insert(QStringLiteral("AccountIdentity"), mIdentityId);
+    settings.insert(QStringLiteral("Authentication"), convertIncomingAuthenticationProtocol(mCurrentIncomingAuthenticationProtocol));
+    settings.insert(QStringLiteral("Safety"), convertIncomingSecurityProtocol(mCurrentIncomingSecurityProtocol));
 
     // if ( server == "imap.gmail.com" ) {
     //     imapRes.setOption( "Authentication", 9 ); // XOAuth2
@@ -264,10 +294,13 @@ QString ManualConfiguration::convertOutgoingSecurityProtocol(int protocol) const
 {
     switch (protocol) {
     case 0:
-        break;
+        return QStringLiteral("TLS");
+    case 1:
+        return QStringLiteral("SSL");
+    case 2:
+        return QStringLiteral("None");
     }
-
-    // TODO
+    Q_UNREACHABLE();
     return {};
 }
 
