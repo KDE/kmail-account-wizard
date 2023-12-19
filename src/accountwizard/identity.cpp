@@ -4,8 +4,6 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-// This code was taken from kmail-account-wizard
-
 #include "identity.h"
 #include "accountwizard_debug.h"
 

@@ -4,6 +4,7 @@
 
 #include "setupmanager.h"
 
+#include "accountwizard_debug.h"
 #include "identity.h"
 #include "ispdbservice.h"
 #include <KEMailSettings>
@@ -82,12 +83,12 @@ void SetupManager::searchConfiguration()
 
 void SetupManager::createAutomaticAccount()
 {
-    qDebug() << " Create Automatic Account";
+    qCDebug(ACCOUNTWIZARD_LOG) << " Create Automatic Account";
 }
 
 void SetupManager::createManualAccount()
 {
-    qDebug() << " Create MAnual Account";
+    qCDebug(ACCOUNTWIZARD_LOG) << " Create MAnual Account";
     mIdentity->create();
     const uint id = mIdentity->uoid();
     mManualConfiguration->setIdentityId(id);
@@ -96,7 +97,7 @@ void SetupManager::createManualAccount()
 
 void SetupManager::setEmailProvider(const EmailProvider &emailProvider, const QString &messageInfo)
 {
-    qDebug() << " emailProvider " << emailProvider;
+    qCDebug(ACCOUNTWIZARD_LOG) << " emailProvider " << emailProvider;
     mSearchIspdbFoundMessage = messageInfo;
     mConfigurationModel->setEmailProvider(emailProvider);
     Q_EMIT searchIspdbFoundMessageChanged();
