@@ -7,11 +7,56 @@
 
 #include "transport.h"
 #include <KLocalizedString>
+#include <MailTransport/Transport>
 #include <MailTransport/TransportManager>
+
+#define TABLE_SIZE x
+
+template<typename T>
+struct StringValueTable {
+    const char *name;
+    using value_type = T;
+    value_type value;
+};
+
+static const StringValueTable<MailTransport::Transport::EnumEncryption> encryptionEnum[] = {{"none", MailTransport::Transport::EnumEncryption::None},
+                                                                                            {"ssl", MailTransport::Transport::EnumEncryption::SSL},
+                                                                                            {"tls", MailTransport::Transport::EnumEncryption::TLS}};
+static const int encryptionEnumSize = sizeof(encryptionEnum) / sizeof(*encryptionEnum);
+
+static const StringValueTable<MailTransport::Transport::EnumAuthenticationType> authenticationTypeEnum[] = {
+    {"login", MailTransport::Transport::EnumAuthenticationType::LOGIN},
+    {"plain", MailTransport::Transport::EnumAuthenticationType::PLAIN},
+    {"cram-md5", MailTransport::Transport::EnumAuthenticationType::CRAM_MD5},
+    {"digest-md5", MailTransport::Transport::EnumAuthenticationType::DIGEST_MD5},
+    {"gssapi", MailTransport::Transport::EnumAuthenticationType::GSSAPI},
+    {"ntlm", MailTransport::Transport::EnumAuthenticationType::NTLM},
+    {"apop", MailTransport::Transport::EnumAuthenticationType::APOP},
+    {"clear", MailTransport::Transport::EnumAuthenticationType::CLEAR},
+    {"oauth2", MailTransport::Transport::EnumAuthenticationType::XOAUTH2},
+    {"anonymous", MailTransport::Transport::EnumAuthenticationType::ANONYMOUS}};
+static const int authenticationTypeEnumSize = sizeof(authenticationTypeEnum) / sizeof(*authenticationTypeEnum);
+
+template<typename T>
+static typename T::value_type stringToValue(const T *table, const int tableSize, const QString &string, bool &valid)
+{
+    const QString ref = string.toLower();
+    for (int i = 0; i < tableSize; ++i) {
+        if (ref == QLatin1String(table[i].name)) {
+            valid = true;
+            return table[i].value;
+        }
+    }
+    valid = false;
+    return table[0].value; // TODO: error handling
+}
 
 Transport::Transport(const QString &type, QObject *parent)
     : SetupBase(parent)
 {
+    // if (type == QLatin1String("smtp")) {
+    //     m_port = 25;
+    // }
     // TODO use it
     Q_UNUSED(type)
 }
@@ -36,13 +81,24 @@ void Transport::createTransport()
         mt->setPassword(mTransportInfo.password);
     }
     mTransportId = mt->id();
-    /*
-      // Add convert to int method
-        mt->setEncryption(mTransportInfo.encrStr);
-        mt->setAuthenticationType(mTransportInfo.authStr);
-        */
+
+    bool valid;
+    QString encrStr;
+    MailTransport::Transport::EnumEncryption encr = stringToValue(encryptionEnum, encryptionEnumSize, mTransportInfo.encrStr, valid);
+    if (valid) {
+        encrStr = mTransportInfo.encrStr;
+    }
+    mt->setEncryption(encr);
+
+    QString authStr;
+    MailTransport::Transport::EnumAuthenticationType auth = stringToValue(authenticationTypeEnum, authenticationTypeEnumSize, mTransportInfo.authStr, valid);
+    if (valid) {
+        authStr = mTransportInfo.authStr;
+    }
+    mt->setAuthenticationType(auth);
+
     mt->save();
-    Q_EMIT info(i18n("Mail transport uses '%1' encryption and '%2' authentication.", mTransportInfo.encrStr, mTransportInfo.authStr));
+    Q_EMIT info(i18n("Mail transport uses '%1' encryption and '%2' authentication.", encrStr, authStr));
     MailTransport::TransportManager::self()->addTransport(mt);
     MailTransport::TransportManager::self()->setDefaultTransport(mt->id());
     Q_EMIT finished(i18n("Mail transport account set up."));
