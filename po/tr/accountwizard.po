@@ -288,10 +288,9 @@ msgid "boss@example.corp"
 msgstr "goekhan@ilteris.com"
 
 #: apps/contents/ui/PersonalDataPage.qml:84
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password…"
-msgstr "Parola:"
+msgstr "Parola…"
 
 #: apps/contents/ui/PersonalDataPage.qml:91
 #, kde-format
@@ -318,10 +317,9 @@ msgid "Server Parameters"
 msgstr "Sunucu Parametreleri"
 
 #: apps/contents/ui/PersonalDataPage.qml:160
-#, fuzzy, kde-format
-#| msgid "Incoming"
+#, kde-format
 msgid "Incoming server:"
-msgstr "Gelen"
+msgstr "Gelen sunucusu:"
 
 #: apps/contents/ui/PersonalDataPage.qml:169
 #, kde-format
@@ -358,10 +356,9 @@ msgid "Download all messages for offline use"
 msgstr "Tüm iletileri çevrimdışı kullanım için indir"
 
 #: apps/contents/ui/PersonalDataPage.qml:230
-#, fuzzy, kde-format
-#| msgid "Outgoing"
+#, kde-format
 msgid "Outgoing server:"
-msgstr "Giden"
+msgstr "Giden sunucusu:"
 
 #: apps/contents/ui/PersonalDataPage.qml:275
 #, kde-format
@@ -663,6 +660,3 @@ msgstr "Otomatik yapılandırma bulundu."
 #, kde-format
 msgid "Autoconfiguration failed."
 msgstr "Otomatik yapılandırma başarısız oldu."
-
-#~ msgid "Hostname:"
-#~ msgstr "Makine adı:"
