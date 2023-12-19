@@ -181,7 +181,6 @@ Resource::ResourceInfo ManualConfiguration::createKolabResource() const
 void ManualConfiguration::createResource()
 {
     // Create incoming account
-    QString resourceType;
     qDebug() << " createManualAccount ";
     Resource::ResourceInfo info;
     switch (mCurrentIncomingProtocol) {
