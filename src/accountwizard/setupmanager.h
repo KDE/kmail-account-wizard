@@ -55,6 +55,9 @@ private:
     LIBACCOUNTWIZARD_NO_EXPORT void setEmailProvider(const EmailProvider &emailProvider, const QString &messageInfo);
     LIBACCOUNTWIZARD_NO_EXPORT void clearConfiguration();
     LIBACCOUNTWIZARD_NO_EXPORT void noConfigFound();
+    LIBACCOUNTWIZARD_NO_EXPORT void slotError(const QString &str);
+    LIBACCOUNTWIZARD_NO_EXPORT void slotFinished(const QString &str);
+    LIBACCOUNTWIZARD_NO_EXPORT void slotInfo(const QString &str);
     QString mPassword;
     QString mSearchIspdbFoundMessage;
     Identity *const mIdentity;

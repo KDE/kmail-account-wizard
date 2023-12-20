@@ -23,9 +23,28 @@ SetupManager::SetupManager(QObject *parent)
     connect(mIdentity, &Identity::emailChanged, this, &SetupManager::emailChanged);
     connect(mIspdbService, &IspdbService::finished, this, &SetupManager::setEmailProvider);
     connect(mIspdbService, &IspdbService::notConfigFound, this, &SetupManager::noConfigFound);
+
+    connect(mManualConfiguration, &ManualConfiguration::error, this, &SetupManager::slotError);
+    connect(mManualConfiguration, &ManualConfiguration::finished, this, &SetupManager::slotFinished);
+    connect(mManualConfiguration, &ManualConfiguration::info, this, &SetupManager::slotInfo);
 }
 
 SetupManager::~SetupManager() = default;
+
+void SetupManager::slotError(const QString &str)
+{
+    // TODO
+}
+
+void SetupManager::slotFinished(const QString &str)
+{
+    // TODO
+}
+
+void SetupManager::slotInfo(const QString &str)
+{
+    // TODO
+}
 
 QString SetupManager::fullName() const
 {
