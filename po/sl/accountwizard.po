@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"POT-Creation-Date: 2023-12-20 01:34+0000\n"
 "PO-Revision-Date: 2023-12-16 08:55+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -34,23 +34,23 @@ msgstr ""
 "jlp@holodeck1.com,andrej.vernekar@gmail.com,andrejm@ubuntu.si,matjaz."
 "jeran@amis.net"
 
-#: accountwizard/identity.cpp:27
+#: accountwizard/identity.cpp:25
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Nastavljanje istovetnosti ..."
 
-#: accountwizard/identity.cpp:38
+#: accountwizard/identity.cpp:36
 #, kde-format
 msgid "Identity set up."
 msgstr "Istovetnost je nastavljena."
 
-#: accountwizard/identity.cpp:46
+#: accountwizard/identity.cpp:44
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Neimenovano"
 
-#: accountwizard/identity.cpp:78
+#: accountwizard/identity.cpp:76
 #, kde-format
 msgid "Identity removed."
 msgstr "Istovetnost je odstranjena."
@@ -217,18 +217,18 @@ msgstr "Ni bilo mogoče shraniti nastavitev: %1"
 msgid "Resource setup completed."
 msgstr "Nastavitev vira je zaključena."
 
-#: accountwizard/transport.cpp:23
+#: accountwizard/transport.cpp:63
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Nastavljanje računa za prenos pošte ..."
 
-#: accountwizard/transport.cpp:45
+#: accountwizard/transport.cpp:96
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr ""
 "Transport pošte uporablja šifriranje '%1' in preverjanje pristnosti '%2'."
 
-#: accountwizard/transport.cpp:48
+#: accountwizard/transport.cpp:99
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "Račun za prenos pošte je nastavljen."
@@ -380,6 +380,12 @@ msgstr "Razpoložljive konfiguracije"
 #, kde-format
 msgid "Manual Configuration"
 msgstr "Ročna konfiguracija"
+
+#: apps/contents/ui/PersonalDataPage.qml:357
+#, fuzzy, kde-format
+#| msgid "&Details..."
+msgid "Details"
+msgstr "Po&drobnosti ..."
 
 #: apps/main.cpp:32
 #, kde-format
@@ -834,9 +840,6 @@ msgstr "Samonastavljanje ni uspelo."
 #~ msgstr ""
 #~ "S spodnjega seznama izberite svojega ponudnika. Če vašega ponudnika ni na "
 #~ "seznamu, kliknite Nazaj"
-
-#~ msgid "&Details..."
-#~ msgstr "Po&drobnosti ..."
 
 #~ msgid "Select which kind of account you want to create:"
 #~ msgstr "Izberite vrsto računa, ki ga želite ustvariti:"

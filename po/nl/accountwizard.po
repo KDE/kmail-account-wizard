@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"POT-Creation-Date: 2023-12-20 01:34+0000\n"
 "PO-Revision-Date: 2023-12-16 11:04+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -29,23 +29,23 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
 
-#: accountwizard/identity.cpp:27
+#: accountwizard/identity.cpp:25
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Identiteit instellen..."
 
-#: accountwizard/identity.cpp:38
+#: accountwizard/identity.cpp:36
 #, kde-format
 msgid "Identity set up."
 msgstr "Identiteit ingesteld"
 
-#: accountwizard/identity.cpp:46
+#: accountwizard/identity.cpp:44
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Naamloos"
 
-#: accountwizard/identity.cpp:78
+#: accountwizard/identity.cpp:76
 #, kde-format
 msgid "Identity removed."
 msgstr "Identiteit verwijderd."
@@ -213,17 +213,17 @@ msgstr "Instellingen opslaan lukt niet: %1"
 msgid "Resource setup completed."
 msgstr "Instellen van hulpbron voltooid."
 
-#: accountwizard/transport.cpp:23
+#: accountwizard/transport.cpp:63
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "E-mailtransportaccount instellen..."
 
-#: accountwizard/transport.cpp:45
+#: accountwizard/transport.cpp:96
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr "E-mailtransport gebruikt versleuteling '%1' en authenticatie '%2'."
 
-#: accountwizard/transport.cpp:48
+#: accountwizard/transport.cpp:99
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "E-mailtransportaccount instellen."
@@ -376,6 +376,12 @@ msgstr "Beschikbare configuraties"
 #, kde-format
 msgid "Manual Configuration"
 msgstr "Handmatige configuratie"
+
+#: apps/contents/ui/PersonalDataPage.qml:357
+#, fuzzy, kde-format
+#| msgid "&Details..."
+msgid "Details"
+msgstr "&Details..."
 
 #: apps/main.cpp:32
 #, kde-format
@@ -837,9 +843,6 @@ msgstr "Automatische configuratie is mislukt."
 #~ msgstr ""
 #~ "Uw provider uit de onderstaande lijst selecteren of klik op Terug als uw "
 #~ "provider niet in de lijst staat"
-
-#~ msgid "&Details..."
-#~ msgstr "&Details..."
 
 #~ msgid "Select which kind of account you want to create:"
 #~ msgstr "selecteer welk soort account u wilt aanmaken:"

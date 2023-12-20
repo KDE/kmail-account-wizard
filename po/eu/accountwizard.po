@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"POT-Creation-Date: 2023-12-20 01:34+0000\n"
 "PO-Revision-Date: 2023-12-16 07:44+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -30,23 +30,23 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xalba@ni.eus"
 
-#: accountwizard/identity.cpp:27
+#: accountwizard/identity.cpp:25
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Identitatea ezartzen..."
 
-#: accountwizard/identity.cpp:38
+#: accountwizard/identity.cpp:36
 #, kde-format
 msgid "Identity set up."
 msgstr "Nortasuna ezarri da."
 
-#: accountwizard/identity.cpp:46
+#: accountwizard/identity.cpp:44
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Izengabea"
 
-#: accountwizard/identity.cpp:78
+#: accountwizard/identity.cpp:76
 #, kde-format
 msgid "Identity removed."
 msgstr "Identitatea kendu da."
@@ -213,18 +213,18 @@ msgstr "Ezin izan ditu ezarpenak gorde: %1"
 msgid "Resource setup completed."
 msgstr "Baliabidea ezartzea osatu da."
 
-#: accountwizard/transport.cpp:23
+#: accountwizard/transport.cpp:63
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Posta-garraio kontua ezartzen..."
 
-#: accountwizard/transport.cpp:45
+#: accountwizard/transport.cpp:96
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr ""
 "Posta-garraioak '%1' zifratzea eta '%2' autentifikazioa erabiltzen ditu."
 
-#: accountwizard/transport.cpp:48
+#: accountwizard/transport.cpp:99
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "Posta-garraio kontua ezarri da."
@@ -377,6 +377,12 @@ msgstr "Konfigurazio erabilgarriak"
 #, kde-format
 msgid "Manual Configuration"
 msgstr "Eskuzko konfigurazioa"
+
+#: apps/contents/ui/PersonalDataPage.qml:357
+#, fuzzy, kde-format
+#| msgid "&Details..."
+msgid "Details"
+msgstr "&Xehetasunak..."
 
 #: apps/main.cpp:32
 #, kde-format
@@ -833,9 +839,6 @@ msgstr "Konfiguratze automatikoak huts egin du."
 #~ msgstr ""
 #~ "Hautatu zure hornitzailea beheko zerrendatik, edo egin klik atzera zure "
 #~ "hornitzailea zerrendan ez badago"
-
-#~ msgid "&Details..."
-#~ msgstr "&Xehetasunak..."
 
 #~ msgid "Select which kind of account you want to create:"
 #~ msgstr "Aukeratu sortu nahi duzun kontu mota:"

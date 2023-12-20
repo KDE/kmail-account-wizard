@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"POT-Creation-Date: 2023-12-20 01:34+0000\n"
 "PO-Revision-Date: 2013-09-22 04:25+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -27,23 +27,23 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sairan@computer.org"
 
-#: accountwizard/identity.cpp:27
+#: accountwizard/identity.cpp:25
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Іс-әлпетін орнату..."
 
-#: accountwizard/identity.cpp:38
+#: accountwizard/identity.cpp:36
 #, kde-format
 msgid "Identity set up."
 msgstr "Іс-әлпетін орнатылды."
 
-#: accountwizard/identity.cpp:46
+#: accountwizard/identity.cpp:44
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Аталмаған"
 
-#: accountwizard/identity.cpp:78
+#: accountwizard/identity.cpp:76
 #, kde-format
 msgid "Identity removed."
 msgstr "Іс-әлпеті жылжытылды."
@@ -215,17 +215,17 @@ msgstr "'%1' параметрі орнатылмады: %2"
 msgid "Resource setup completed."
 msgstr "Ресурсты орнату бітті."
 
-#: accountwizard/transport.cpp:23
+#: accountwizard/transport.cpp:63
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Пошта тасымалының тіркелгісін баптау..."
 
-#: accountwizard/transport.cpp:45
+#: accountwizard/transport.cpp:96
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr ""
 
-#: accountwizard/transport.cpp:48
+#: accountwizard/transport.cpp:99
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "Пошта тасымалының тіркелгісі бапталды."
@@ -385,6 +385,12 @@ msgstr ""
 #, kde-format
 msgid "Manual Configuration"
 msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:357
+#, fuzzy, kde-format
+#| msgid "&Details..."
+msgid "Details"
+msgstr "&Егжей-тегжейі"
 
 #: apps/main.cpp:32
 #, kde-format
@@ -789,9 +795,6 @@ msgstr "Параметрлерін автобайқау жаңылысы"
 #~ msgstr ""
 #~ "Провайдеріңізді төмендегі тізімінен таңдап алыңыз, онда ол болмаса - "
 #~ "\"Қосымша\" дегенді басыңыз."
-
-#~ msgid "&Details..."
-#~ msgstr "&Егжей-тегжейі"
 
 #~ msgid "Select which kind of account you want to create:"
 #~ msgstr "Тіркелгінің қай түрін қалайсыз - таңдаңыз."

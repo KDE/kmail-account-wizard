@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-runtime-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"POT-Creation-Date: 2023-12-20 01:34+0000\n"
 "PO-Revision-Date: 2023-12-15 20:50+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -36,23 +36,23 @@ msgstr ""
 "tulliana@gmail.com, volkangezer@gmail.com, kaanozdincer@gmail.com, "
 "emir_sari@icloud.com"
 
-#: accountwizard/identity.cpp:27
+#: accountwizard/identity.cpp:25
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Kimlik ayarlanıyor..."
 
-#: accountwizard/identity.cpp:38
+#: accountwizard/identity.cpp:36
 #, kde-format
 msgid "Identity set up."
 msgstr "Kimlik ayarlandı."
 
-#: accountwizard/identity.cpp:46
+#: accountwizard/identity.cpp:44
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Adsız"
 
-#: accountwizard/identity.cpp:78
+#: accountwizard/identity.cpp:76
 #, kde-format
 msgid "Identity removed."
 msgstr "Kimlik kaldırıldı."
@@ -218,18 +218,18 @@ msgstr "Ayarlar kaydedilemedi: %1"
 msgid "Resource setup completed."
 msgstr "Özkaynak kurulumu tamamlandı."
 
-#: accountwizard/transport.cpp:23
+#: accountwizard/transport.cpp:63
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Posta taşıma hesabı ayarlanıyor..."
 
-#: accountwizard/transport.cpp:45
+#: accountwizard/transport.cpp:96
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr ""
 "Posta taşıması, '%1' şifrelemesi ve '%2' kimlik doğrulaması kullanıyor."
 
-#: accountwizard/transport.cpp:48
+#: accountwizard/transport.cpp:99
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "Posta taşıma hesabı ayarlandı."
@@ -380,6 +380,11 @@ msgstr "Kullanılabilir yapılandırmalar"
 #, kde-format
 msgid "Manual Configuration"
 msgstr "Elle Yapılandırma"
+
+#: apps/contents/ui/PersonalDataPage.qml:357
+#, kde-format
+msgid "Details"
+msgstr ""
 
 #: apps/main.cpp:32
 #, kde-format

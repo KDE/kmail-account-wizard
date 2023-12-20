@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"POT-Creation-Date: 2023-12-20 01:34+0000\n"
 "PO-Revision-Date: 2011-07-13 01:26+0300\n"
 "Last-Translator: Einars Sprugis <einars8@gmail.com>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -28,23 +28,23 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "einars8@gmail.com"
 
-#: accountwizard/identity.cpp:27
+#: accountwizard/identity.cpp:25
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Iestata identitāti..."
 
-#: accountwizard/identity.cpp:38
+#: accountwizard/identity.cpp:36
 #, kde-format
 msgid "Identity set up."
 msgstr "Identitāte iestatīta."
 
-#: accountwizard/identity.cpp:46
+#: accountwizard/identity.cpp:44
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Nenosaukts"
 
-#: accountwizard/identity.cpp:78
+#: accountwizard/identity.cpp:76
 #, kde-format
 msgid "Identity removed."
 msgstr "Identitāte izņemta."
@@ -212,17 +212,17 @@ msgstr "Neizdevās iestatīt iestatījumu '%1': %2"
 msgid "Resource setup completed."
 msgstr "Resursa iestatīšana pabeigta."
 
-#: accountwizard/transport.cpp:23
+#: accountwizard/transport.cpp:63
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Iestata pasta transporta kontu..."
 
-#: accountwizard/transport.cpp:45
+#: accountwizard/transport.cpp:96
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr ""
 
-#: accountwizard/transport.cpp:48
+#: accountwizard/transport.cpp:99
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "Pasta transporta konts iestatīts."
@@ -382,6 +382,12 @@ msgstr ""
 #, kde-format
 msgid "Manual Configuration"
 msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:357
+#, fuzzy, kde-format
+#| msgid "&Details..."
+msgid "Details"
+msgstr "&Detaļas..."
 
 #: apps/main.cpp:32
 #, kde-format
@@ -777,9 +783,6 @@ msgstr "Iestatījumu autonoteikšana neizdevās"
 #~ msgstr ""
 #~ "Izvēlieties jūsu nodrošinātāju no saraksta zemāk vai noklikšķiniet uz "
 #~ "'Paplašināti', ja nodrošinātāja nav sarakstā."
-
-#~ msgid "&Details..."
-#~ msgstr "&Detaļas..."
 
 #~ msgid "Select which kind of account you want to create:"
 #~ msgstr "Izvēlieties, kāda veida kontu vēlaties izveidot:"

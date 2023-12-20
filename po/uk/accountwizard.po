@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"POT-Creation-Date: 2023-12-20 01:34+0000\n"
 "PO-Revision-Date: 2023-12-16 22:39+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -30,23 +30,23 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yurchor@ukr.net"
 
-#: accountwizard/identity.cpp:27
+#: accountwizard/identity.cpp:25
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Налаштування профілю..."
 
-#: accountwizard/identity.cpp:38
+#: accountwizard/identity.cpp:36
 #, kde-format
 msgid "Identity set up."
 msgstr "Профіль налаштовано."
 
-#: accountwizard/identity.cpp:46
+#: accountwizard/identity.cpp:44
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Без назви"
 
-#: accountwizard/identity.cpp:78
+#: accountwizard/identity.cpp:76
 #, kde-format
 msgid "Identity removed."
 msgstr "Профіль вилучено."
@@ -214,19 +214,19 @@ msgstr "Не вдалося зберегти параметри: %1"
 msgid "Resource setup completed."
 msgstr "Налаштування ресурсу завершено."
 
-#: accountwizard/transport.cpp:23
+#: accountwizard/transport.cpp:63
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Налаштування облікового запису пересилання пошти…"
 
-#: accountwizard/transport.cpp:45
+#: accountwizard/transport.cpp:96
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr ""
 "У каналі передавання пошти використовується шифрування «%1» та розпізнавання "
 "«%2»."
 
-#: accountwizard/transport.cpp:48
+#: accountwizard/transport.cpp:99
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "Обліковий запис пересилання пошти налаштовано."
@@ -378,6 +378,12 @@ msgstr "Доступні налаштування"
 #, kde-format
 msgid "Manual Configuration"
 msgstr "Налаштування вручну"
+
+#: apps/contents/ui/PersonalDataPage.qml:357
+#, fuzzy, kde-format
+#| msgid "&Details..."
+msgid "Details"
+msgstr "П&одробиці..."
 
 #: apps/main.cpp:32
 #, kde-format
@@ -851,9 +857,6 @@ msgstr "Невдала спроба автоматичного налаштов�
 #~ msgstr ""
 #~ "Виберіть надавача послуг з наведеного нижче списку або натисніть кнопку "
 #~ "«Назад», якщо вашого надавача послуг немає у списку"
-
-#~ msgid "&Details..."
-#~ msgstr "П&одробиці..."
 
 #~ msgid "Select which kind of account you want to create:"
 #~ msgstr "Оберіть тип облікового запису, який ви бажаєте створити:"

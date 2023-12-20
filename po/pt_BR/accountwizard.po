@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"POT-Creation-Date: 2023-12-20 01:34+0000\n"
 "PO-Revision-Date: 2023-11-14 13:56-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -29,23 +29,23 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "alvarenga@kde.org"
 
-#: accountwizard/identity.cpp:27
+#: accountwizard/identity.cpp:25
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Configurando a identidade..."
 
-#: accountwizard/identity.cpp:38
+#: accountwizard/identity.cpp:36
 #, kde-format
 msgid "Identity set up."
 msgstr "A identidade foi configurada."
 
-#: accountwizard/identity.cpp:46
+#: accountwizard/identity.cpp:44
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Sem nome"
 
-#: accountwizard/identity.cpp:78
+#: accountwizard/identity.cpp:76
 #, kde-format
 msgid "Identity removed."
 msgstr "A identidade foi removida."
@@ -216,17 +216,17 @@ msgstr "Não foi possível salvar as configurações: %1"
 msgid "Resource setup completed."
 msgstr "A configuração do recurso foi concluída."
 
-#: accountwizard/transport.cpp:23
+#: accountwizard/transport.cpp:63
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Configurando a conta de transporte de e-mail..."
 
-#: accountwizard/transport.cpp:45
+#: accountwizard/transport.cpp:96
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr "O transporte de e-mail usa a criptografia '%1' e autenticação '%2'."
 
-#: accountwizard/transport.cpp:48
+#: accountwizard/transport.cpp:99
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "A conta de transporte de e-mail foi configurada."
@@ -382,6 +382,12 @@ msgstr "Configurações disponíveis"
 #, kde-format
 msgid "Manual Configuration"
 msgstr "Configuração manual"
+
+#: apps/contents/ui/PersonalDataPage.qml:357
+#, fuzzy, kde-format
+#| msgid "&Details..."
+msgid "Details"
+msgstr "&Detalhes..."
 
 #: apps/main.cpp:32
 #, kde-format
@@ -847,9 +853,6 @@ msgstr "Falha na configuração automática."
 #~ msgstr ""
 #~ "Selecione seu provedor na lista abaixo ou clique no botão Voltar, caso "
 #~ "não esteja na lista"
-
-#~ msgid "&Details..."
-#~ msgstr "&Detalhes..."
 
 #~ msgid "Select which kind of account you want to create:"
 #~ msgstr "Selecione o tipo de conta que deseja criar:"

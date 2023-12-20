@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"POT-Creation-Date: 2023-12-20 01:34+0000\n"
 "PO-Revision-Date: 2023-12-15 23:58+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -27,23 +27,23 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mkondarev@yahoo.de"
 
-#: accountwizard/identity.cpp:27
+#: accountwizard/identity.cpp:25
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Настройване на самоличността..."
 
-#: accountwizard/identity.cpp:38
+#: accountwizard/identity.cpp:36
 #, kde-format
 msgid "Identity set up."
 msgstr "Създадена самоличност."
 
-#: accountwizard/identity.cpp:46
+#: accountwizard/identity.cpp:44
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Неозаглавен"
 
-#: accountwizard/identity.cpp:78
+#: accountwizard/identity.cpp:76
 #, kde-format
 msgid "Identity removed."
 msgstr "Самоличността е премахната."
@@ -211,18 +211,18 @@ msgstr "Не може да се запазят настройките %1"
 msgid "Resource setup completed."
 msgstr "Настройката на ресурса завърши."
 
-#: accountwizard/transport.cpp:23
+#: accountwizard/transport.cpp:63
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Настройване на пощенския транспорт на акаунт..."
 
-#: accountwizard/transport.cpp:45
+#: accountwizard/transport.cpp:96
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr ""
 "Транспортът на поща използва криптиране \"%1\" и удостоверяване \"%2\"."
 
-#: accountwizard/transport.cpp:48
+#: accountwizard/transport.cpp:99
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "Настройка на акаунт за пощенски транспорт."
@@ -378,6 +378,12 @@ msgstr "Налични конфигурации"
 #, kde-format
 msgid "Manual Configuration"
 msgstr "Ръчна конфигурация"
+
+#: apps/contents/ui/PersonalDataPage.qml:357
+#, fuzzy, kde-format
+#| msgid "&Details..."
+msgid "Details"
+msgstr "&Подробности..."
 
 #: apps/main.cpp:32
 #, kde-format
@@ -836,9 +842,6 @@ msgstr "Автоматичното конфигуриране е неуспеш�
 #~ msgstr ""
 #~ "Изберете вашия доставчик от списъка по-долу или щракнете обратно, ако той "
 #~ "не е в списъка"
-
-#~ msgid "&Details..."
-#~ msgstr "&Подробности..."
 
 #~ msgid "Select which kind of account you want to create:"
 #~ msgstr "Изберете какъв вид акаунт искате да създадете:"

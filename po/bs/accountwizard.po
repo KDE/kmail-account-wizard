@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"POT-Creation-Date: 2023-12-20 01:34+0000\n"
 "PO-Revision-Date: 2013-11-03 21:01+0000\n"
 "Last-Translator: Adna Rakić <adna.rakic@gmail.com>\n"
 "Language-Team: bs <bs@kde.org>\n"
@@ -30,23 +30,23 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Samir.ribic@etf.unsa.ba,adna.rakic@gmail.com,nameisoverated@aol.com"
 
-#: accountwizard/identity.cpp:27
+#: accountwizard/identity.cpp:25
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Postavljam identitet..."
 
-#: accountwizard/identity.cpp:38
+#: accountwizard/identity.cpp:36
 #, kde-format
 msgid "Identity set up."
 msgstr "Identitet postavljen."
 
-#: accountwizard/identity.cpp:46
+#: accountwizard/identity.cpp:44
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Neimenovano"
 
-#: accountwizard/identity.cpp:78
+#: accountwizard/identity.cpp:76
 #, kde-format
 msgid "Identity removed."
 msgstr "Identitet uklonjen."
@@ -218,17 +218,17 @@ msgstr "Ne mogu da postavim postavku „%1“: %2"
 msgid "Resource setup completed."
 msgstr "Postavljanje resursa završeno."
 
-#: accountwizard/transport.cpp:23
+#: accountwizard/transport.cpp:63
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Postavljam nalog za prenos e‑pošte..."
 
-#: accountwizard/transport.cpp:45
+#: accountwizard/transport.cpp:96
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr ""
 
-#: accountwizard/transport.cpp:48
+#: accountwizard/transport.cpp:99
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "Nalog za prenos e‑pošte postavljen."
@@ -388,6 +388,12 @@ msgstr ""
 #, kde-format
 msgid "Manual Configuration"
 msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:357
+#, fuzzy, kde-format
+#| msgid "&Details..."
+msgid "Details"
+msgstr "&Detalji..."
 
 #: apps/main.cpp:32
 #, kde-format
@@ -791,9 +797,6 @@ msgstr "Automatsko otkrivanje postavki nije uspjelo"
 #~ msgstr ""
 #~ "Izaberite svog provajdera sa donjeg spiska ili kliknite na „Napredno“ ako "
 #~ "vaš provajder nije naveden."
-
-#~ msgid "&Details..."
-#~ msgstr "&Detalji..."
 
 #~ msgid "Select which kind of account you want to create:"
 #~ msgstr "Izaberite željenu vrstu naloga:"

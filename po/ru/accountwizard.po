@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"POT-Creation-Date: 2023-12-20 01:34+0000\n"
 "PO-Revision-Date: 2022-10-01 15:05+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -35,24 +35,24 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "vovan2482@mail.ru,kolyadas89@gmail.com,walker@mail.ru"
 
-#: accountwizard/identity.cpp:27
+#: accountwizard/identity.cpp:25
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Настройка профиля..."
 
-#: accountwizard/identity.cpp:38
+#: accountwizard/identity.cpp:36
 #, kde-format
 msgid "Identity set up."
 msgstr "Профиль настроен."
 
 # Не "Безымянный", потому что "учётная запись" женского рода, а "профиль" -- мужского. --aspotashev
-#: accountwizard/identity.cpp:46
+#: accountwizard/identity.cpp:44
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Без имени"
 
-#: accountwizard/identity.cpp:78
+#: accountwizard/identity.cpp:76
 #, kde-format
 msgid "Identity removed."
 msgstr "Профиль удалён."
@@ -224,17 +224,17 @@ msgstr "Не удалось сохранить параметры: %1"
 msgid "Resource setup completed."
 msgstr "Создание источника данных завершено."
 
-#: accountwizard/transport.cpp:23
+#: accountwizard/transport.cpp:63
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Создание учётной записи для отправки почты..."
 
-#: accountwizard/transport.cpp:45
+#: accountwizard/transport.cpp:96
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr "Учётная запись использует шифрование %1 и проверку подлинности %2."
 
-#: accountwizard/transport.cpp:48
+#: accountwizard/transport.cpp:99
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "Учётная запись для отправки почты создана."
@@ -396,6 +396,12 @@ msgstr ""
 #, kde-format
 msgid "Manual Configuration"
 msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:357
+#, fuzzy, kde-format
+#| msgid "&Details..."
+msgid "Details"
+msgstr "&Подробнее..."
 
 #: apps/main.cpp:32
 #, kde-format
@@ -868,9 +874,6 @@ msgstr "Не удалось найти автоматическую конфиг
 #~ msgstr ""
 #~ "Выберите поставщика из списка ниже или нажмите кнопку «Назад», если ваш "
 #~ "поставщик отсутствует в списке"
-
-#~ msgid "&Details..."
-#~ msgstr "&Подробнее..."
 
 #~ msgid "Select which kind of account you want to create:"
 #~ msgstr "Выберите тип создаваемой учётной записи:"

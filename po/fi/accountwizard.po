@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"POT-Creation-Date: 2023-12-20 01:34+0000\n"
 "PO-Revision-Date: 2023-09-26 13:34+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -32,23 +32,23 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "translator@legisign.org"
 
-#: accountwizard/identity.cpp:27
+#: accountwizard/identity.cpp:25
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Asetetaan henkilöyttä…"
 
-#: accountwizard/identity.cpp:38
+#: accountwizard/identity.cpp:36
 #, kde-format
 msgid "Identity set up."
 msgstr "Henkilöys asetettu."
 
-#: accountwizard/identity.cpp:46
+#: accountwizard/identity.cpp:44
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Nimetön"
 
-#: accountwizard/identity.cpp:78
+#: accountwizard/identity.cpp:76
 #, kde-format
 msgid "Identity removed."
 msgstr "Henkilöys poistettu."
@@ -214,17 +214,17 @@ msgstr "Asetuksia ei voitu tallentaa: %1"
 msgid "Resource setup completed."
 msgstr "Resurssin asetus valmis."
 
-#: accountwizard/transport.cpp:23
+#: accountwizard/transport.cpp:63
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Asetetaan postinvälitystiliä…"
 
-#: accountwizard/transport.cpp:45
+#: accountwizard/transport.cpp:96
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr "Postinvälitys käyttää salausta ”%1” ja todennusta ”%2”."
 
-#: accountwizard/transport.cpp:48
+#: accountwizard/transport.cpp:99
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "Postinvälitystili asetettu."
@@ -379,6 +379,12 @@ msgstr "Saatavilla olevat määritykset"
 #, kde-format
 msgid "Manual Configuration"
 msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:357
+#, fuzzy, kde-format
+#| msgid "&Details..."
+msgid "Details"
+msgstr "&Yksityiskohdat…"
 
 #: apps/main.cpp:32
 #, kde-format
@@ -836,9 +842,6 @@ msgstr "Automaattimääritys epäonnistui."
 #~ msgstr ""
 #~ "Valitse sähköpostintarjoaja luettelosta tai napsauta Takaisin, ellei "
 #~ "tarjoajaasi löydy"
-
-#~ msgid "&Details..."
-#~ msgstr "&Yksityiskohdat…"
 
 #~ msgid "Select which kind of account you want to create:"
 #~ msgstr "Valitse, millaisen tilin haluat luoda:"

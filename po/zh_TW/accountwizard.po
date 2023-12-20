@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"POT-Creation-Date: 2023-12-20 01:34+0000\n"
 "PO-Revision-Date: 2023-12-17 19:47+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -31,23 +31,23 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "franklin@goodhorse.idv.tw"
 
-#: accountwizard/identity.cpp:27
+#: accountwizard/identity.cpp:25
 #, kde-format
 msgid "Setting up identity..."
 msgstr "設定身份..."
 
-#: accountwizard/identity.cpp:38
+#: accountwizard/identity.cpp:36
 #, kde-format
 msgid "Identity set up."
 msgstr "身份已設定。"
 
-#: accountwizard/identity.cpp:46
+#: accountwizard/identity.cpp:44
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "未命名"
 
-#: accountwizard/identity.cpp:78
+#: accountwizard/identity.cpp:76
 #, kde-format
 msgid "Identity removed."
 msgstr "身份已移除。"
@@ -216,17 +216,17 @@ msgstr "無法儲存設定：%1"
 msgid "Resource setup completed."
 msgstr "資源設定完成。"
 
-#: accountwizard/transport.cpp:23
+#: accountwizard/transport.cpp:63
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "設定郵件傳遞帳號中..."
 
-#: accountwizard/transport.cpp:45
+#: accountwizard/transport.cpp:96
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr ""
 
-#: accountwizard/transport.cpp:48
+#: accountwizard/transport.cpp:99
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "郵件傳遞帳號已設定。"
@@ -385,6 +385,12 @@ msgstr "可用的組態"
 #, kde-format
 msgid "Manual Configuration"
 msgstr "手動設定"
+
+#: apps/contents/ui/PersonalDataPage.qml:357
+#, fuzzy, kde-format
+#| msgid "&Details..."
+msgid "Details"
+msgstr "詳情(&D)..."
 
 #: apps/main.cpp:32
 #, kde-format
@@ -827,9 +833,6 @@ msgstr "自動偵測設定失敗"
 #~ "Select your provider from the list below or click back if your provider "
 #~ "is not listed"
 #~ msgstr "從底下的清單中選擇您的提供者。若清單中沒有，請點擊「返回」"
-
-#~ msgid "&Details..."
-#~ msgstr "詳情(&D)..."
 
 #~ msgid "Select which kind of account you want to create:"
 #~ msgstr "選擇您要建立哪種帳號："

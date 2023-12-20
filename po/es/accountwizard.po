@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-17 01:36+0000\n"
-"PO-Revision-Date: 2023-12-15 22:28+0100\n"
+"POT-Creation-Date: 2023-12-20 01:34+0000\n"
+"PO-Revision-Date: 2023-12-19 17:40+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -30,23 +30,23 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ecuadra@eloihr.net,fjvinal@gmail.com"
 
-#: accountwizard/identity.cpp:27
+#: accountwizard/identity.cpp:25
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Configurando identidad..."
 
-#: accountwizard/identity.cpp:38
+#: accountwizard/identity.cpp:36
 #, kde-format
 msgid "Identity set up."
 msgstr "Identidad configurada."
 
-#: accountwizard/identity.cpp:46
+#: accountwizard/identity.cpp:44
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Sin nombre"
 
-#: accountwizard/identity.cpp:78
+#: accountwizard/identity.cpp:76
 #, kde-format
 msgid "Identity removed."
 msgstr "Identidad eliminada."
@@ -213,17 +213,17 @@ msgstr "No se han podido guardar las preferencias: %1"
 msgid "Resource setup completed."
 msgstr "Configuración del recurso finalizada."
 
-#: accountwizard/transport.cpp:23
+#: accountwizard/transport.cpp:63
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Configurando cuenta de transporte de correo..."
 
-#: accountwizard/transport.cpp:45
+#: accountwizard/transport.cpp:96
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr "El transporte de correo usa cifrado «%1» y autenticación «%2»."
 
-#: accountwizard/transport.cpp:48
+#: accountwizard/transport.cpp:99
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "Configuración de cuenta de transporte de correo."
@@ -283,10 +283,9 @@ msgid "boss@example.corp"
 msgstr "jefe@ejemplo.org"
 
 #: apps/contents/ui/PersonalDataPage.qml:84
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password…"
-msgstr "Contraseña:"
+msgstr "Contraseña..."
 
 #: apps/contents/ui/PersonalDataPage.qml:91
 #, kde-format
@@ -314,10 +313,9 @@ msgid "Server Parameters"
 msgstr "Parámetros del servidor"
 
 #: apps/contents/ui/PersonalDataPage.qml:160
-#, fuzzy, kde-format
-#| msgid "Incoming"
+#, kde-format
 msgid "Incoming server:"
-msgstr "Entrante"
+msgstr "Servidor de entrada:"
 
 #: apps/contents/ui/PersonalDataPage.qml:169
 #, kde-format
@@ -354,10 +352,9 @@ msgid "Download all messages for offline use"
 msgstr "Descargar todos los mensajes para usarlos sin conexión"
 
 #: apps/contents/ui/PersonalDataPage.qml:230
-#, fuzzy, kde-format
-#| msgid "Outgoing"
+#, kde-format
 msgid "Outgoing server:"
-msgstr "Saliente"
+msgstr "Servidor de salida:"
 
 #: apps/contents/ui/PersonalDataPage.qml:275
 #, kde-format
@@ -379,6 +376,12 @@ msgstr "Configuraciones disponibles"
 #, kde-format
 msgid "Manual Configuration"
 msgstr "Configuración manual"
+
+#: apps/contents/ui/PersonalDataPage.qml:357
+#, fuzzy, kde-format
+#| msgid "&Details..."
+msgid "Details"
+msgstr "&Detalles..."
 
 #: apps/main.cpp:32
 #, kde-format
@@ -840,9 +843,6 @@ msgstr "La configuración automática ha fallado."
 #~ msgstr ""
 #~ "Seleccione su proveedor de la lista inferior o pulse atrás si su "
 #~ "proveedor no está listado"
-
-#~ msgid "&Details..."
-#~ msgstr "&Detalles..."
 
 #~ msgid "Select which kind of account you want to create:"
 #~ msgstr "Seleccione que clase de cuentas quiere crear:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"POT-Creation-Date: 2023-12-20 01:34+0000\n"
 "PO-Revision-Date: 2014-01-20 22:02+0100\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -28,23 +28,23 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ulysses@kubuntu.org"
 
-#: accountwizard/identity.cpp:27
+#: accountwizard/identity.cpp:25
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Identitás beállítása…"
 
-#: accountwizard/identity.cpp:38
+#: accountwizard/identity.cpp:36
 #, kde-format
 msgid "Identity set up."
 msgstr "Az azonosító beállítva."
 
-#: accountwizard/identity.cpp:46
+#: accountwizard/identity.cpp:44
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Névtelen"
 
-#: accountwizard/identity.cpp:78
+#: accountwizard/identity.cpp:76
 #, kde-format
 msgid "Identity removed."
 msgstr "Az azonosító eltávolítva."
@@ -216,17 +216,17 @@ msgstr "Nem sikerült beállítani a(z) „%1” beállítást: %2"
 msgid "Resource setup completed."
 msgstr "Az erőforrás beállítása befejeződött."
 
-#: accountwizard/transport.cpp:23
+#: accountwizard/transport.cpp:63
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Levéltovábbító azonosító beállítása…"
 
-#: accountwizard/transport.cpp:45
+#: accountwizard/transport.cpp:96
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr ""
 
-#: accountwizard/transport.cpp:48
+#: accountwizard/transport.cpp:99
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "A levéltovábbító azonosító beállítva."
@@ -386,6 +386,12 @@ msgstr ""
 #, kde-format
 msgid "Manual Configuration"
 msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:357
+#, fuzzy, kde-format
+#| msgid "&Details..."
+msgid "Details"
+msgstr "&Részletek…"
 
 #: apps/main.cpp:32
 #, kde-format
@@ -788,9 +794,6 @@ msgstr "A beállítások automatikus felismerése meghiúsult"
 #~ msgstr ""
 #~ "Válassza ki a szolgáltatóját az alábbi listából, vagy kattintson a "
 #~ "Speciális gombra, ha a szolgáltató nincs a listában"
-
-#~ msgid "&Details..."
-#~ msgstr "&Részletek…"
 
 #~ msgid "Select which kind of account you want to create:"
 #~ msgstr "Válassza ki a létrehozandó azonosító típusát:"

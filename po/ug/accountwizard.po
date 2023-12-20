@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"POT-Creation-Date: 2023-12-20 01:34+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -27,23 +27,23 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
 
-#: accountwizard/identity.cpp:27
+#: accountwizard/identity.cpp:25
 #, kde-format
 msgid "Setting up identity..."
 msgstr "كىملىك تەڭشەۋاتىدۇ…"
 
-#: accountwizard/identity.cpp:38
+#: accountwizard/identity.cpp:36
 #, kde-format
 msgid "Identity set up."
 msgstr "كىملىك تەڭشەلدى."
 
-#: accountwizard/identity.cpp:46
+#: accountwizard/identity.cpp:44
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "ئاتسىز"
 
-#: accountwizard/identity.cpp:78
+#: accountwizard/identity.cpp:76
 #, kde-format
 msgid "Identity removed."
 msgstr "كىملىك چىقىرىۋېتىلدى"
@@ -215,17 +215,17 @@ msgstr "تەڭشەك ‹%1› نى بەلگىلىگىلى بولمىدى: %2"
 msgid "Resource setup completed."
 msgstr "مەنبە تەڭشەش تاماملاندى."
 
-#: accountwizard/transport.cpp:23
+#: accountwizard/transport.cpp:63
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "ئېلخەت يوللاش ھېساباتىنى تەڭشەۋاتىدۇ…"
 
-#: accountwizard/transport.cpp:45
+#: accountwizard/transport.cpp:96
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr ""
 
-#: accountwizard/transport.cpp:48
+#: accountwizard/transport.cpp:99
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "ئېلخەت يوللاش ھېساباتىنى تەڭشەلدى."
@@ -385,6 +385,12 @@ msgstr ""
 #, kde-format
 msgid "Manual Configuration"
 msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:357
+#, fuzzy, kde-format
+#| msgid "&Details..."
+msgid "Details"
+msgstr "تەپسىلاتلار(&D)..."
 
 #: apps/main.cpp:32
 #, kde-format
@@ -781,9 +787,6 @@ msgstr "تەڭشەكنى ئاپتوماتىك بايقاش مەغلۇپ بولد
 #~ msgstr ""
 #~ "تۆۋەندىكى تىزىمدىن تەمىنلىگۈچىنى تاللاڭ، ئەگەر تەمىنلىگۈچى تىزىمدا يوق "
 #~ "بولسا ‹ئالىي› نى چېكىڭ."
-
-#~ msgid "&Details..."
-#~ msgstr "تەپسىلاتلار(&D)..."
 
 #~ msgid "Select which kind of account you want to create:"
 #~ msgstr "قۇرماقچى بولغان ھېساباتىڭىزنىڭ تىپىنى تاللاڭ:"

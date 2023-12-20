@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-17 01:36+0000\n"
+"POT-Creation-Date: 2023-12-20 01:34+0000\n"
 "PO-Revision-Date: 2021-09-09 21:52+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -27,23 +27,23 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mschlander@opensuse.org"
 
-#: accountwizard/identity.cpp:27
+#: accountwizard/identity.cpp:25
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Opsætning af identitet..."
 
-#: accountwizard/identity.cpp:38
+#: accountwizard/identity.cpp:36
 #, kde-format
 msgid "Identity set up."
 msgstr "Identitet er sat op."
 
-#: accountwizard/identity.cpp:46
+#: accountwizard/identity.cpp:44
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Unavngiven"
 
-#: accountwizard/identity.cpp:78
+#: accountwizard/identity.cpp:76
 #, kde-format
 msgid "Identity removed."
 msgstr "Identitet fjernet."
@@ -216,17 +216,17 @@ msgstr "Kunne ikke gemme indstillinger: %1"
 msgid "Resource setup completed."
 msgstr "Opsætning af ressource gennemført."
 
-#: accountwizard/transport.cpp:23
+#: accountwizard/transport.cpp:63
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Opsætning af mail-transport-konto..."
 
-#: accountwizard/transport.cpp:45
+#: accountwizard/transport.cpp:96
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr "Mailtransport bruger \"%1\"-kryptering og \"%2\"-autentificering."
 
-#: accountwizard/transport.cpp:48
+#: accountwizard/transport.cpp:99
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "Mail-transport-konto er sat op."
@@ -387,6 +387,12 @@ msgstr ""
 #, kde-format
 msgid "Manual Configuration"
 msgstr ""
+
+#: apps/contents/ui/PersonalDataPage.qml:357
+#, fuzzy, kde-format
+#| msgid "&Details..."
+msgid "Details"
+msgstr "&Detaljer..."
 
 #: apps/main.cpp:32
 #, kde-format
@@ -846,9 +852,6 @@ msgstr "Autokonfiguration mislykkedes."
 #~ msgstr ""
 #~ "Vælg din udbyder på listen nedenfor eller klik tilbage hvis din udbyder "
 #~ "ikke er på listen."
-
-#~ msgid "&Details..."
-#~ msgstr "&Detaljer..."
 
 #~ msgid "Select which kind of account you want to create:"
 #~ msgstr "Vælg hvilken slags konto du vil oprette:"
