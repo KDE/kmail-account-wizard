@@ -22,6 +22,7 @@ class LIBACCOUNTWIZARD_EXPORT SetupManager : public QObject
     Q_PROPERTY(QString searchIspdbFoundMessage MEMBER mSearchIspdbFoundMessage NOTIFY searchIspdbFoundMessageChanged)
     Q_PROPERTY(bool noConfigFound MEMBER mNoConfigFound NOTIFY noConfigFoundChanged)
     Q_PROPERTY(ManualConfiguration *manualConfiguration READ manualConfiguration CONSTANT)
+    Q_PROPERTY(QString details READ details NOTIFY detailsChanged)
 
 public:
     explicit SetupManager(QObject *parent = nullptr);
@@ -44,12 +45,15 @@ public:
     Q_INVOKABLE void createAutomaticAccount();
     Q_INVOKABLE void createManualAccount();
 
+    [[nodiscard]] QString details() const;
+
 Q_SIGNALS:
     void fullNameChanged();
     void emailChanged();
     void passwordChanged();
     void searchIspdbFoundMessageChanged();
     void noConfigFoundChanged();
+    void detailsChanged();
 
 private:
     LIBACCOUNTWIZARD_NO_EXPORT void setEmailProvider(const EmailProvider &emailProvider, const QString &messageInfo);
@@ -60,6 +64,7 @@ private:
     LIBACCOUNTWIZARD_NO_EXPORT void slotInfo(const QString &str);
     QString mPassword;
     QString mSearchIspdbFoundMessage;
+    QString mDetails;
     Identity *const mIdentity;
     IspdbService *const mIspdbService;
     ConfigurationModel *const mConfigurationModel;
