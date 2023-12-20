@@ -351,7 +351,7 @@ Kirigami.ScrollablePage {
             Layout.topMargin: Kirigami.Units.largeSpacing
             Layout.fillWidth: true
             // TODO add visible when we have messages
-            // visible: SetupManager.noConfigFound
+            visible: SetupManager.details.length > 0
             ColumnLayout {
                 FormCard.FormHeader {
                     title: i18n("Details")
