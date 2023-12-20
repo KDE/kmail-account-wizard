@@ -53,7 +53,6 @@ Q_SIGNALS:
 
 private:
     LIBACCOUNTWIZARD_NO_EXPORT void setEmailProvider(const EmailProvider &emailProvider, const QString &messageInfo);
-    LIBACCOUNTWIZARD_NO_EXPORT void setErrorOccured(const QString &errorMessage);
     LIBACCOUNTWIZARD_NO_EXPORT void clearConfiguration();
     LIBACCOUNTWIZARD_NO_EXPORT void noConfigFound();
     QString mPassword;
