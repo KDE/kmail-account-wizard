@@ -46,11 +46,13 @@ void ServerTest::testFinished(const QVector<int> &list)
     } else if (list.contains(MailTransport::Transport::EnumEncryption::SSL)) {
         Q_EMIT testResult(QStringLiteral("ssl"));
     } else {
+#if 0 // TODO show warning in qml directly
         KMessageBox::information(nullptr,
                                  i18n("There seems to be a problem in reaching this server "
                                       "or choosing a safe way to sent the credentials to server. We advise you to "
                                       "check the settings of the account and adjust it manually if needed."),
                                  i18n("Autodetecting settings failed"));
+#endif
         Q_EMIT testFail();
     }
 }
