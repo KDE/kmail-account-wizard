@@ -166,9 +166,7 @@ Resource::ResourceInfo ManualConfiguration::createKolabResource() const
     settings.insert(QStringLiteral("SubscriptionEnabled"), true);
     settings.insert(QStringLiteral("Password"), mPassword);
     settings.insert(QStringLiteral("ImapPort"), mIncomingPort);
-
-    // TODO generate name
-    // TODO add setSettings(...)
+    info.settings = settings;
     info.typeIdentifier = QStringLiteral("akonadi_kolab_resource");
 #if 0
     if (servertest_mode < 3) {   // submission & smtp
