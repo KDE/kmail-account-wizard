@@ -23,6 +23,8 @@ target_sources(libaccountwizard PRIVATE
     transport.cpp
     setupbase.h
     setupbase.cpp
+    servertest.h
+    servertest.cpp
 )
 
 generate_export_header(libaccountwizard BASE_NAME libaccountwizard)
