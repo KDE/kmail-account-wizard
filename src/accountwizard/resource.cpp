@@ -57,8 +57,9 @@ Resource::~Resource() = default;
 
 void Resource::createResource()
 {
-    if (mResourceInfo.isValid()) {
+    if (!mResourceInfo.isValid()) {
         qCWarning(ACCOUNTWIZARD_LOG) << "mResourceInfo is not valid. It's a bug.";
+        qCWarning(ACCOUNTWIZARD_LOG) << " mResourceInfo " << mResourceInfo;
         deleteLater();
         return;
     }
