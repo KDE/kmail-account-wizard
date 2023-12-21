@@ -241,6 +241,8 @@ void ManualConfiguration::createResource()
         qCWarning(ACCOUNTWIZARD_LOG) << " invalid protocol: " << mCurrentIncomingProtocol;
         return;
     }
+    // Debug it
+    qCDebug(ACCOUNTWIZARD_LOG) << " info " << info;
 
     auto resource = new Resource(this);
     resource->setResourceInfo(std::move(info));
