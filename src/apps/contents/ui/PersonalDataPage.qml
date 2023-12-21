@@ -357,6 +357,10 @@ Kirigami.ScrollablePage {
                     title: i18n("Details")
                     // TODO show list of messages
                 }
+                FormCard.FormTextDelegate {
+                    id: detailsInfo
+                    text: SetupManager.details
+                }
             }
         }
     }

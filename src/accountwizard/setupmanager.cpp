@@ -33,18 +33,21 @@ SetupManager::~SetupManager() = default;
 
 void SetupManager::slotError(const QString &str)
 {
+    mDetails += str;
     // TODO
     Q_EMIT detailsChanged();
 }
 
 void SetupManager::slotFinished(const QString &str)
 {
+    mDetails += str;
     // TODO
     Q_EMIT detailsChanged();
 }
 
 void SetupManager::slotInfo(const QString &str)
 {
+    mDetails += str;
     // TODO
     Q_EMIT detailsChanged();
 }
