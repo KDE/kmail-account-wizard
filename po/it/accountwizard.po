@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-20 01:34+0000\n"
-"PO-Revision-Date: 2023-09-30 13:03+0200\n"
+"PO-Revision-Date: 2023-12-20 13:53+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -283,10 +283,9 @@ msgid "boss@example.corp"
 msgstr "capo@esempio.corp"
 
 #: apps/contents/ui/PersonalDataPage.qml:84
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password…"
-msgstr "Password:"
+msgstr "Password…"
 
 #: apps/contents/ui/PersonalDataPage.qml:91
 #, kde-format
@@ -314,10 +313,9 @@ msgid "Server Parameters"
 msgstr "Parametri del server"
 
 #: apps/contents/ui/PersonalDataPage.qml:160
-#, fuzzy, kde-format
-#| msgid "Incoming"
+#, kde-format
 msgid "Incoming server:"
-msgstr "In entrata"
+msgstr "Server in entrata:"
 
 #: apps/contents/ui/PersonalDataPage.qml:169
 #, kde-format
@@ -351,13 +349,12 @@ msgstr "Nome utente:"
 #: apps/contents/ui/PersonalDataPage.qml:214
 #, kde-format
 msgid "Download all messages for offline use"
-msgstr ""
+msgstr "Scarica tutti i messaggi per un uso fuori linea"
 
 #: apps/contents/ui/PersonalDataPage.qml:230
-#, fuzzy, kde-format
-#| msgid "Outgoing"
+#, kde-format
 msgid "Outgoing server:"
-msgstr "In uscita"
+msgstr "Server in uscita:"
 
 #: apps/contents/ui/PersonalDataPage.qml:275
 #, kde-format
@@ -381,10 +378,9 @@ msgid "Manual Configuration"
 msgstr "Configurazione manuale"
 
 #: apps/contents/ui/PersonalDataPage.qml:357
-#, fuzzy, kde-format
-#| msgid "&Details..."
+#, kde-format
 msgid "Details"
-msgstr "&Dettagli..."
+msgstr "Dettagli"
 
 #: apps/main.cpp:32
 #, kde-format

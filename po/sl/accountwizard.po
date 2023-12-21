@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-20 01:34+0000\n"
-"PO-Revision-Date: 2023-12-16 08:55+0100\n"
+"PO-Revision-Date: 2023-12-20 07:21+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -358,12 +358,12 @@ msgstr "Prenesi vsa sporočila za uporabo brez povezave"
 #: apps/contents/ui/PersonalDataPage.qml:230
 #, kde-format
 msgid "Outgoing server:"
-msgstr "Strežnik za pošiljanje"
+msgstr "Strežnik za pošiljanje:"
 
 #: apps/contents/ui/PersonalDataPage.qml:275
 #, kde-format
 msgid "Recheck"
-msgstr "Ponovno preverjanje"
+msgstr "Ponovno preveri"
 
 #: apps/contents/ui/PersonalDataPage.qml:288
 #: apps/contents/ui/PersonalDataPage.qml:342
@@ -382,10 +382,9 @@ msgid "Manual Configuration"
 msgstr "Ročna konfiguracija"
 
 #: apps/contents/ui/PersonalDataPage.qml:357
-#, fuzzy, kde-format
-#| msgid "&Details..."
+#, kde-format
 msgid "Details"
-msgstr "Po&drobnosti ..."
+msgstr "Podrobnosti"
 
 #: apps/main.cpp:32
 #, kde-format
