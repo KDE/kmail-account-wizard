@@ -122,7 +122,10 @@ void Resource::instanceCreateResult(KJob *job)
             const QMetaType::Type targetType = argumentType(iface.metaObject(), methodName);
             if (arg.metaType().id() != targetType) {
                 Q_EMIT error(i18n("Could not convert value of setting '%1' to required type %2.", it.key(), QLatin1String(QMetaType(targetType).name())));
-                qCWarning(ACCOUNTWIZARD_LOG) << "Impossible to convert argument : " << arg;
+
+                qCWarning(ACCOUNTWIZARD_LOG) << "Impossible to convert argument : " << arg
+                                             << QStringLiteral("Could not convert value of setting '%1' to required type %2.")
+                                                    .arg(it.key(), QLatin1String(QMetaType(targetType).name()));
                 return;
             }
             // arg.convert(targetType);

@@ -15,7 +15,7 @@ class LIBACCOUNTWIZARD_EXPORT ManualConfiguration : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString incomingHostName READ incomingHostName WRITE setIncomingHostName NOTIFY incomingHostNameChanged FINAL)
-    Q_PROPERTY(int incomingPort READ incomingPort WRITE setIncomingPort NOTIFY incomingPortChanged FINAL)
+    Q_PROPERTY(uint incomingPort READ incomingPort WRITE setIncomingPort NOTIFY incomingPortChanged FINAL)
     Q_PROPERTY(QString incomingUserName READ incomingUserName WRITE setIncomingUserName NOTIFY incomingUserNameChanged FINAL)
 
     Q_PROPERTY(QString outgoingHostName READ outgoingHostName WRITE setOutgoingHostName NOTIFY outgoingHostNameChanged FINAL)
@@ -45,8 +45,8 @@ public:
     [[nodiscard]] QString incomingHostName() const;
     void setIncomingHostName(const QString &newIncomingHostName);
 
-    [[nodiscard]] int incomingPort() const;
-    void setIncomingPort(int newPort);
+    [[nodiscard]] uint incomingPort() const;
+    void setIncomingPort(uint newPort);
 
     [[nodiscard]] QString incomingUserName() const;
     void setIncomingUserName(const QString &newIncomingUserName);
@@ -137,7 +137,7 @@ private:
     // Incoming
     QString mIncomingUserName;
     QString mIncomingHostName;
-    int mIncomingPort = 995;
+    uint mIncomingPort = 995;
 
     // Outgoing
     QString mOutgoingUserName;

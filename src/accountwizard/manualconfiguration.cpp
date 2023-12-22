@@ -485,12 +485,12 @@ void ManualConfiguration::setIncomingHostName(const QString &newIncomingHostName
     }
 }
 
-int ManualConfiguration::incomingPort() const
+uint ManualConfiguration::incomingPort() const
 {
     return mIncomingPort;
 }
 
-void ManualConfiguration::setIncomingPort(int newPort)
+void ManualConfiguration::setIncomingPort(uint newPort)
 {
     if (mIncomingPort != newPort) {
         mIncomingPort = newPort;
