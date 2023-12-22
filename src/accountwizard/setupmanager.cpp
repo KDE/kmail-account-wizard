@@ -34,21 +34,21 @@ SetupManager::~SetupManager() = default;
 void SetupManager::slotError(const QString &str)
 {
     mDetails += str + QLatin1Char('\n');
-    // TODO
+    // TODO add color ?
     Q_EMIT detailsChanged();
 }
 
 void SetupManager::slotFinished(const QString &str)
 {
     mDetails += str + QLatin1Char('\n');
-    // TODO
+    // TODO add color ?
     Q_EMIT detailsChanged();
 }
 
 void SetupManager::slotInfo(const QString &str)
 {
     mDetails += str + QLatin1Char('\n');
-    // TODO
+    // TODO add color ?
     Q_EMIT detailsChanged();
 }
 
