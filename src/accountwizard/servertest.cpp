@@ -10,7 +10,6 @@
 
 #include "accountwizard_debug.h"
 #include <KLocalizedString>
-#include <KMessageBox>
 
 ServerTest::ServerTest(QObject *parent)
     : QObject(parent)
