@@ -323,8 +323,20 @@ void ManualConfiguration::checkServer()
         connect(mServerTest, &ServerTest::testFail, this, &ManualConfiguration::slotTestFail);
         connect(mServerTest, &ServerTest::testResult, this, &ManualConfiguration::slotTestResult);
     }
+    QString protocol;
+    switch (mCurrentIncomingProtocol) {
+    case 0: // Pop3
+        protocol = QStringLiteral("pop");
+        break;
+    case 1: // Imap
+        protocol = QStringLiteral("imap");
+        break;
+    case 2: // Kolab
+        protocol = QStringLiteral("imap");
+        break;
+    }
     // Test input
-    // mServerTest->test()
+    mServerTest->test(mIncomingHostName, protocol);
 }
 
 void ManualConfiguration::slotTestFail()
