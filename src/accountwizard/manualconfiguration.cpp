@@ -329,11 +329,13 @@ void ManualConfiguration::checkServer()
 
 void ManualConfiguration::slotTestFail()
 {
+    qDebug() << "slotTestFail  ";
     // TODO
 }
 
 void ManualConfiguration::slotTestResult(const QString &result)
 {
+    qDebug() << "slotTestResult  " << result;
     // TODO
 }
 

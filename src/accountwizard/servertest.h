@@ -22,7 +22,7 @@ public:
 
 public Q_SLOTS:
     /* @p protocol being 'imap' 'smtp' or 'pop3' */
-    Q_SCRIPTABLE void test(const QString &server, const QString &protocol);
+    void test(const QString &server, const QString &protocol);
 
 Q_SIGNALS:
     /* returns the advised setting, @p result begin 'ssl' 'tls' or 'none'. */
