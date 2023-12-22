@@ -20,29 +20,40 @@ FormCard.FormCardPage {
         return str.trim().length > 0;
     }
 
+    readonly property Connections manuConfigurationConnections: Connections {
+        target: SetupManager.manualConfiguration
+
+        function onIncomingHostNameChanged(): void {
+            manualIncomingHostName.text = SetupManager.manualConfiguration.incomingHostName;
+        }
+
+        function onOutgoingHostNameChanged(): void {
+            manualOutgoingHostName.text = SetupManager.manualConfiguration.outgoingHostName;
+        }
+    }
+
     FormCard.FormHeader {
         title: i18n("Set Up Your Existing Email Address")
     }
 
     FormCard.FormCard {
-        Kirigami.Heading {
+        QQC2.Label {
             text: i18n("To use your current email address fill in your credentials.<br />This wizard will automatically search for a working and recommended server configuration.")
             padding: Kirigami.Units.gridUnit
             bottomPadding: Kirigami.Units.largeSpacing
             topPadding: Kirigami.Units.largeSpacing
             wrapMode: Text.WordWrap
-            level: 4
-
             Layout.fillWidth: true
         }
 
         FormCard.FormDelegateSeparator {}
 
         FormCard.FormTextFieldDelegate {
+            id: nameField
             label: i18n("Full name:")
             placeholderText: i18nc("Generic name", "John Smith")
             text: SetupManager.name
-            onTextChanged: SetupManager.name = text
+            onTextEdited: SetupManager.name = text
         }
 
         FormCard.FormDelegateSeparator {}
@@ -52,22 +63,17 @@ FormCard.FormCardPage {
             label: i18n("E-mail address:")
             placeholderText: i18nc("Generic email address", "boss@example.corp")
             text: SetupManager.email
-            onTextChanged: {
-                SetupManager.email = text
-            }
-            onAccepted: {
-                SetupManager.searchConfiguration()
-            }
+            onTextEdited: SetupManager.email = text
+            onAccepted: continueButton.clicked()
         }
 
         FormCard.FormDelegateSeparator {}
 
         FormCard.FormPasswordFieldDelegate {
             id: passwordField
-            onAccepted: {
-                SetupManager.password = text
-            }
             label: i18n("Password:")
+            onTextEdited: SetupManager.password = text
+            onAccepted: continueButton.clicked()
         }
 
         FormCard.FormDelegateSeparator { above: continueButton }
@@ -76,7 +82,12 @@ FormCard.FormCardPage {
             id: continueButton
             text: i18n("Continue")
             checked: true
-            onClicked: SetupManager.searchConfiguration()
+            onClicked: {
+                SetupManager.name = nameField.text;
+                SetupManager.email = addressEmailField.text;
+                SetupManager.password = passwordField.text;
+                SetupManager.searchConfiguration()
+            }
             enabled: isNotEmptyStr(addressEmailField.text) // Fix trimmed + is real email
         }
 
@@ -126,14 +137,16 @@ FormCard.FormCardPage {
             id: manualIncomingHostName
             label: i18n("Incoming server:")
             inputMethodHints: Qt.ImhUrlCharactersOnly
-            text: SetupManager.manualConfiguration.incomingHostName
-            onTextChanged: {
+            text: SetupManager.manualConfiguration.incomingHostName;
+            onTextEdited: {
                 SetupManager.manualConfiguration.incomingHostName = manualIncomingHostName.text
             }
+
         }
+
         FormCard.FormComboBoxDelegate {
             id: manualIncomingProtocol
-            description: i18n("Protocol:")
+            text: i18n("Protocol:")
             model: SetupManager.manualConfiguration.incomingProtocols
             currentIndex: SetupManager.manualConfiguration.currentIncomingProtocol
             onCurrentIndexChanged: {
@@ -149,7 +162,7 @@ FormCard.FormCardPage {
         }
         FormCard.FormComboBoxDelegate {
             id: manualIncomingSecurity
-            description: i18n("Security:")
+            text: i18n("Security:")
             model: SetupManager.manualConfiguration.securityProtocols
             currentIndex: SetupManager.manualConfiguration.currentIncomingSecurityProtocol
             onCurrentIndexChanged: {
@@ -158,7 +171,7 @@ FormCard.FormCardPage {
         }
         FormCard.FormComboBoxDelegate {
             id: manualIncomingAuthenticationMethod
-            description: i18n("Authentication Method:")
+            text: i18n("Authentication Method:")
             model: SetupManager.manualConfiguration.authenticationProtocols
             currentIndex: SetupManager.manualConfiguration.currentIncomingAuthenticationProtocol
             onCurrentIndexChanged: {
@@ -170,7 +183,7 @@ FormCard.FormCardPage {
             label: i18n("Username:")
             inputMethodHints: Qt.ImhUrlCharactersOnly
             text: SetupManager.manualConfiguration.incomingUserName
-            onTextChanged: {
+            onTextEdited: {
                 SetupManager.manualConfiguration.incomingUserName = manualIncomingUserName.text
             }
         }
@@ -198,7 +211,7 @@ FormCard.FormCardPage {
             label: i18n("Outgoing server:")
             inputMethodHints: Qt.ImhUrlCharactersOnly
             text: SetupManager.manualConfiguration.outgoingHostName
-            onTextChanged: {
+            onTextEdited: {
                 SetupManager.manualConfiguration.outgoingHostName = manualOutgoingHostName.text
             }
         }
@@ -211,7 +224,7 @@ FormCard.FormCardPage {
         }
         FormCard.FormComboBoxDelegate {
             id: manualOutgoingSecurity
-            description: i18n("Security:")
+            text: i18n("Security:")
             model: SetupManager.manualConfiguration.securityProtocols
             currentIndex: SetupManager.manualConfiguration.currentOutgoingSecurityProtocol
             onCurrentIndexChanged: {
@@ -220,7 +233,7 @@ FormCard.FormCardPage {
         }
         FormCard.FormComboBoxDelegate {
             id: manualOutgoingAuthenticationMethod
-            description: i18n("Authentication Method:")
+            text: i18n("Authentication Method:")
             model: SetupManager.manualConfiguration.authenticationProtocols
             currentIndex: SetupManager.manualConfiguration.currentOutgoingAuthenticationProtocol
             onCurrentIndexChanged: {
@@ -232,11 +245,15 @@ FormCard.FormCardPage {
             label: i18n("Username:")
             inputMethodHints: Qt.ImhUrlCharactersOnly
             text: SetupManager.manualConfiguration.outgoingUserName
-            onTextChanged: {
+            onTextEdited: {
                 SetupManager.manualConfiguration.outgoingUserName = manualOutgoingUserName.text
             }
         }
-        FormCard.FormDelegateSeparator {}
+    }
+
+    FormCard.FormCard {
+        Layout.topMargin: Kirigami.Units.largeSpacing
+        visible: SetupManager.noConfigFound || root.explicitManualConfiguration
 
         FormCard.FormButtonDelegate {
             id: recheckAccountManualConfiguration
@@ -285,8 +302,11 @@ FormCard.FormCardPage {
                 Layout.fillWidth: true
             }
         }
+    }
 
-        FormCard.FormDelegateSeparator {}
+    FormCard.FormCard {
+        Layout.topMargin: Kirigami.Units.largeSpacing
+        visible: configurationRepeater.count > 0 && !root.explicitManualConfiguration
 
         FormCard.FormButtonDelegate {
             id: configureManual
@@ -295,7 +315,6 @@ FormCard.FormCardPage {
             onClicked: {
                 root.explicitManualConfiguration = true;
             }
-            visible: availableConfigurations.visible
         }
 
         FormCard.FormButtonDelegate {
@@ -303,7 +322,6 @@ FormCard.FormCardPage {
             text: i18n("Create Account")
             checked: true
             onClicked: SetupManager.createAutomaticAccount()
-            visible: availableConfigurations.visible
         }
     }
 
