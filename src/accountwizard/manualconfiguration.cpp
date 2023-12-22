@@ -269,7 +269,7 @@ void ManualConfiguration::setPassword(const QString &newPassword)
     mPassword = newPassword;
 }
 
-void ManualConfiguration::setIdentityId(uint id)
+void ManualConfiguration::setIdentityId(int id)
 {
     mIdentityId = id;
 }
