@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-20 01:34+0000\n"
+"POT-Creation-Date: 2023-12-22 01:39+0000\n"
 "PO-Revision-Date: 2023-12-17 19:47+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -166,55 +166,70 @@ msgstr ""
 msgid "GSSAPI"
 msgstr ""
 
-#: accountwizard/resource.cpp:67 legacy/resource.cpp:74
+#: accountwizard/resource.cpp:68
 #, kde-format
 msgid "Resource type '%1' is not available."
 msgstr "無法取得資源型態 %1"
 
-#: accountwizard/resource.cpp:80 legacy/resource.cpp:88
+#: accountwizard/resource.cpp:81
 #, kde-format
 msgid "Resource '%1' is already set up."
 msgstr "資源 %1 早已設定。"
 
-#: accountwizard/resource.cpp:87 legacy/resource.cpp:94
+#: accountwizard/resource.cpp:88
 #, kde-format
 msgid "Creating resource instance for '%1'..."
 msgstr "建立 %1 的資源實體中..."
 
-#: accountwizard/resource.cpp:96 legacy/resource.cpp:103
+#: accountwizard/resource.cpp:97
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "建立資源實體失敗：%1"
 
-#: accountwizard/resource.cpp:103 legacy/resource.cpp:110
+#: accountwizard/resource.cpp:104
 #, kde-format
 msgid "Configuring resource instance..."
 msgstr "設定資源實體中..."
 
-#: accountwizard/resource.cpp:107 legacy/resource.cpp:114
+#: accountwizard/resource.cpp:108
 #, kde-format
 msgid "Unable to configure resource instance."
 msgstr "無法設定資源實體。"
 
-#: accountwizard/resource.cpp:123 legacy/resource.cpp:129
+#: accountwizard/resource.cpp:124
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr "無法轉換設定 %1 的值為需要的型態 %2。"
 
-#: accountwizard/resource.cpp:130 legacy/resource.cpp:136
+#: accountwizard/resource.cpp:131
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "無法設定 %1：%2"
 
-#: accountwizard/resource.cpp:136 legacy/resource.cpp:142
+#: accountwizard/resource.cpp:137
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "無法儲存設定：%1"
 
-#: accountwizard/resource.cpp:142 legacy/resource.cpp:151
+#: accountwizard/resource.cpp:143
 #, kde-format
 msgid "Resource setup completed."
 msgstr "資源設定完成。"
+
+#: accountwizard/servertest.cpp:51
+#, kde-format
+msgid ""
+"There seems to be a problem in reaching this server or choosing a safe way "
+"to sent the credentials to server. We advise you to check the settings of "
+"the account and adjust it manually if needed."
+msgstr ""
+"連線到此伺服器或選擇安全方式傳送憑證給伺服器時發生問題。我們建議您檢查帳號設"
+"定，必要時手動調整。"
+
+#: accountwizard/servertest.cpp:54
+#, kde-format
+msgid "Autodetecting settings failed"
+msgstr "自動偵測設定失敗"
 
 #: accountwizard/transport.cpp:63
 #, kde-format
@@ -386,7 +401,7 @@ msgstr "可用的組態"
 msgid "Manual Configuration"
 msgstr "手動設定"
 
-#: apps/contents/ui/PersonalDataPage.qml:357
+#: apps/contents/ui/PersonalDataPage.qml:356
 #, fuzzy, kde-format
 #| msgid "&Details..."
 msgid "Details"
@@ -432,244 +447,137 @@ msgstr "維護者"
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
 
-#: legacy/configfile.cpp:37
-#, kde-format
-msgid "Writing config file for %1..."
-msgstr "寫入 %1 設定檔..."
+#~ msgid "Writing config file for %1..."
+#~ msgstr "寫入 %1 設定檔..."
 
-#: legacy/configfile.cpp:54
-#, kde-format
-msgid "Config file for %1 is writing."
-msgstr "正在寫入 %1 的設定檔。"
+#~ msgid "Config file for %1 is writing."
+#~ msgstr "正在寫入 %1 的設定檔。"
 
-#: legacy/configfile.cpp:59
-#, kde-format
-msgid "Config file for %1 was not changed."
-msgstr "%1 的設定檔未變更。"
+#~ msgid "Config file for %1 was not changed."
+#~ msgstr "%1 的設定檔未變更。"
 
-#: legacy/configfile.cpp:90
-#, kde-format
-msgid "No given name for the configuration."
-msgstr "設定檔未命名。"
+#~ msgid "No given name for the configuration."
+#~ msgstr "設定檔未命名。"
 
-#: legacy/configfile.cpp:102
-#, kde-format
-msgid "Unknown configuration name '%1'"
-msgstr "未知的設定檔名稱「%1」"
+#~ msgid "Unknown configuration name '%1'"
+#~ msgstr "未知的設定檔名稱「%1」"
 
-#: legacy/cryptopage.cpp:80 legacy/cryptopage.cpp:101 legacy/cryptopage.cpp:202
-#, kde-format
-msgid "Account Wizard"
-msgstr "帳號精靈"
+#~ msgid "Account Wizard"
+#~ msgstr "帳號精靈"
 
-#: legacy/cryptopage.cpp:81 legacy/cryptopage.cpp:102
-#, kde-format
-msgid "Error while generating new key pair for your account %1: %2"
-msgstr "在為你的帳號生成新金鑰對時發生錯誤 %1: %2"
+#~ msgid "Error while generating new key pair for your account %1: %2"
+#~ msgstr "在為你的帳號生成新金鑰對時發生錯誤 %1: %2"
 
-#: legacy/cryptopage.cpp:257
-#, kde-format
-msgid "Could not detect valid key type"
-msgstr "無法偵測有效的金鑰類型"
+#~ msgid "Could not detect valid key type"
+#~ msgstr "無法偵測有效的金鑰類型"
 
-#: legacy/cryptopage.cpp:257 legacy/cryptopage.cpp:266
-#: legacy/cryptopage.cpp:282 legacy/cryptopage.cpp:289
-#, kde-format
-msgid "Import error"
-msgstr "匯入失敗"
+#~ msgid "Import error"
+#~ msgstr "匯入失敗"
 
-#: legacy/cryptopage.cpp:265
-#, kde-format
-msgid "Cannot read data from the certificate file: %1"
-msgstr "無法從憑證檔案中讀取資料：%1"
+#~ msgid "Cannot read data from the certificate file: %1"
+#~ msgstr "無法從憑證檔案中讀取資料：%1"
 
-#: legacy/cryptopage.cpp:281
-#, kde-format
-msgid "Failed to import key: %1"
-msgstr "載入金鑰失敗：%1"
+#~ msgid "Failed to import key: %1"
+#~ msgstr "載入金鑰失敗：%1"
 
-#: legacy/cryptopage.cpp:289
-#, kde-format
-msgid "Failed to import key."
-msgstr "載入金鑰失敗。"
+#~ msgid "Failed to import key."
+#~ msgstr "載入金鑰失敗。"
 
-#: legacy/cryptopage.cpp:316
-#, kde-format
-msgid "No key"
-msgstr "沒有金鑰"
+#~ msgid "No key"
+#~ msgstr "沒有金鑰"
 
-#: legacy/cryptopage.cpp:317
-#, kde-format
-msgid "Generate a new key pair"
-msgstr "生成新金鑰對"
+#~ msgid "Generate a new key pair"
+#~ msgstr "生成新金鑰對"
 
-#: legacy/cryptopage.cpp:318
-#, kde-format
-msgid "Import a key"
-msgstr "匯入一個金鑰"
+#~ msgid "Import a key"
+#~ msgstr "匯入一個金鑰"
 
-#: legacy/cryptopage.cpp:425
-#, kde-format
-msgid "Certificates"
-msgstr "憑證"
+#~ msgid "Certificates"
+#~ msgstr "憑證"
 
-#: legacy/cryptopage.cpp:426
-#, kde-format
-msgid "Any files"
-msgstr "任何檔案"
+#~ msgid "Any files"
+#~ msgstr "任何檔案"
 
-#: legacy/cryptopage.cpp:429
-#, kde-format
-msgid "Select Certificate File"
-msgstr "選擇憑證檔案"
+#~ msgid "Select Certificate File"
+#~ msgstr "選擇憑證檔案"
 
-#: legacy/cryptopage.cpp:435
-#, kde-format
-msgid "Importing key..."
-msgstr "匯入金鑰中…"
+#~ msgid "Importing key..."
+#~ msgstr "匯入金鑰中…"
 
-#: legacy/ispdb.cpp:367
-#, kde-format
-msgid "Lookup configuration: Email provider"
-msgstr "搜尋設定：電子郵件提供者"
+#~ msgid "Lookup configuration: Email provider"
+#~ msgstr "搜尋設定：電子郵件提供者"
 
-#: legacy/ispdb.cpp:370
-#, kde-format
-msgid "Lookup configuration: Trying common server name"
-msgstr "搜尋設定：嘗試共用伺服器名稱"
+#~ msgid "Lookup configuration: Trying common server name"
+#~ msgstr "搜尋設定：嘗試共用伺服器名稱"
 
-#: legacy/ispdb.cpp:373
-#, kde-format
-msgid "Lookup configuration: Mozilla database"
-msgstr "搜尋設定：Mozilla 資料庫"
+#~ msgid "Lookup configuration: Mozilla database"
+#~ msgstr "搜尋設定：Mozilla 資料庫"
 
-#: legacy/key.cpp:66
-#, kde-format
-msgid "Skipping key publishing"
-msgstr "跳過金鑰發布"
+#~ msgid "Skipping key publishing"
+#~ msgstr "跳過金鑰發布"
 
-#: legacy/key.cpp:80 legacy/key.cpp:201
-#, kde-format
-msgid "Publishing OpenPGP key..."
-msgstr "發布 OpenPGP 金鑰中..."
+#~ msgid "Publishing OpenPGP key..."
+#~ msgstr "發布 OpenPGP 金鑰中..."
 
-#: legacy/key.cpp:94 legacy/key.cpp:121 legacy/key.cpp:191
-#, kde-format
-msgid "Key publishing was canceled."
-msgstr "金鑰發布被取消。"
+#~ msgid "Key publishing was canceled."
+#~ msgstr "金鑰發布被取消。"
 
-#: legacy/key.cpp:100
-#, kde-format
-msgid "Key publishing failed: not online, or GnuPG too old."
-msgstr "金鑰發布失敗：未連線至網路、或 GnuPG 過舊。"
+#~ msgid "Key publishing failed: not online, or GnuPG too old."
+#~ msgstr "金鑰發布失敗：未連線至網路、或 GnuPG 過舊。"
 
-#: legacy/key.cpp:103
-#, kde-format
-msgid "Your email provider does not support key publishing."
-msgstr "您的電子郵件提供者不支援金鑰發布。"
+#~ msgid "Your email provider does not support key publishing."
+#~ msgstr "您的電子郵件提供者不支援金鑰發布。"
 
-#: legacy/key.cpp:126
-#, kde-format
-msgid "An error occurred while creating key publishing request."
-msgstr "在建立金鑰發布請求時發生錯誤。"
+#~ msgid "An error occurred while creating key publishing request."
+#~ msgstr "在建立金鑰發布請求時發生錯誤。"
 
-#: legacy/key.cpp:149
-#, kde-format
-msgid "Key publishing error: mail transport is not configured"
-msgstr "金鑰發布失敗：郵件傳輸未設定"
+#~ msgid "Key publishing error: mail transport is not configured"
+#~ msgstr "金鑰發布失敗：郵件傳輸未設定"
 
-#: legacy/key.cpp:162
-#, kde-format
-msgid "Key publishing error: failed to create request email"
-msgstr "金鑰發布失敗：無法建立請求電子郵件"
+#~ msgid "Key publishing error: failed to create request email"
+#~ msgstr "金鑰發布失敗：無法建立請求電子郵件"
 
-#: legacy/key.cpp:193
-#, kde-format
-msgid "Failed to send key publishing request: %1"
-msgstr "無法傳送代碼發布請求：%1"
+#~ msgid "Failed to send key publishing request: %1"
+#~ msgstr "無法傳送代碼發布請求：%1"
 
-#: legacy/key.cpp:195
-#, kde-format
-msgid "Key publishing request sent."
-msgstr "代碼發布請求傳送。"
+#~ msgid "Key publishing request sent."
+#~ msgstr "代碼發布請求傳送。"
 
-#: legacy/key.cpp:231
-#, kde-format
-msgid "Failed to publish the key."
-msgstr "發布金鑰失敗。"
+#~ msgid "Failed to publish the key."
+#~ msgstr "發布金鑰失敗。"
 
-#: legacy/key.cpp:237
-#, kde-format
-msgid "Key has been published on %1"
-msgstr "代碼已經發布於 %1"
+#~ msgid "Key has been published on %1"
+#~ msgstr "代碼已經發布於 %1"
 
-#: legacy/ldap.cpp:37
-#, kde-format
-msgid "Setting up LDAP server..."
-msgstr "設定 LDAP 伺服器..."
+#~ msgid "Setting up LDAP server..."
+#~ msgstr "設定 LDAP 伺服器..."
 
-#: legacy/ldap.cpp:40
-#, kde-format
-msgid "Needed parameters are missing for LDAP config: server '%1'"
-msgstr "在 LDAP 的設定中缺乏需要的參數：伺服器 '%1'"
+#~ msgid "Needed parameters are missing for LDAP config: server '%1'"
+#~ msgstr "在 LDAP 的設定中缺乏需要的參數：伺服器 '%1'"
 
-#: legacy/ldap.cpp:118
-#, kde-format
-msgid "LDAP set up."
-msgstr "LDAP 已設定。"
+#~ msgid "LDAP set up."
+#~ msgstr "LDAP 已設定。"
 
-#: legacy/ldap.cpp:136
-#, kde-format
-msgid "LDAP not configuring."
-msgstr "LDAP 尚未設定。"
+#~ msgid "LDAP not configuring."
+#~ msgstr "LDAP 尚未設定。"
 
-#: legacy/ldap.cpp:149
-#, kde-format
-msgid "Removed LDAP entry."
-msgstr "LDAP項目已刪除"
+#~ msgid "Removed LDAP entry."
+#~ msgstr "LDAP項目已刪除"
 
-#: legacy/ldap.cpp:155
-#, kde-format
-msgid "No config found to edit"
-msgstr "找不到指定的設定"
+#~ msgid "No config found to edit"
+#~ msgstr "找不到指定的設定"
 
-#: legacy/resource.cpp:167
-#, kde-format
-msgid "Removed resource instance for '%1'."
-msgstr "已移除 %1 的資源實體。"
+#~ msgid "Removed resource instance for '%1'."
+#~ msgstr "已移除 %1 的資源實體。"
 
-#: legacy/servertest.cpp:50
-#, kde-format
-msgid ""
-"There seems to be a problem in reaching this server or choosing a safe way "
-"to sent the credentials to server. We advise you to check the settings of "
-"the account and adjust it manually if needed."
-msgstr ""
-"連線到此伺服器或選擇安全方式傳送憑證給伺服器時發生問題。我們建議您檢查帳號設"
-"定，必要時手動調整。"
+#~ msgid "Searching for autoconfiguration..."
+#~ msgstr "搜尋自動設定檔"
 
-#: legacy/servertest.cpp:53
-#, kde-format
-msgid "Autodetecting settings failed"
-msgstr "自動偵測設定失敗"
+#~ msgid "Autoconfiguration found."
+#~ msgstr "找到自動設定檔"
 
-#: legacy/setupautoconfigkolabfreebusy.cpp:74
-#: legacy/setupautoconfigkolabldap.cpp:72 legacy/setupispdb.cpp:136
-#, kde-format
-msgid "Searching for autoconfiguration..."
-msgstr "搜尋自動設定檔"
-
-#: legacy/setupautoconfigkolabfreebusy.cpp:99
-#: legacy/setupautoconfigkolabldap.cpp:97 legacy/setupispdb.cpp:161
-#, kde-format
-msgid "Autoconfiguration found."
-msgstr "找到自動設定檔"
-
-#: legacy/setupautoconfigkolabfreebusy.cpp:101
-#: legacy/setupautoconfigkolabldap.cpp:99 legacy/setupispdb.cpp:163
-#, kde-format
-msgid "Autoconfiguration failed."
-msgstr "自動偵測設定失敗"
+#~ msgid "Autoconfiguration failed."
+#~ msgstr "自動偵測設定失敗"
 
 #, fuzzy
 #~| msgid "Username:"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-20 01:34+0000\n"
+"POT-Creation-Date: 2023-12-22 01:39+0000\n"
 "PO-Revision-Date: 2017-05-07 21:01+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -166,56 +166,72 @@ msgstr ""
 msgid "GSSAPI"
 msgstr ""
 
-#: accountwizard/resource.cpp:67 legacy/resource.cpp:74
+#: accountwizard/resource.cpp:68
 #, kde-format
 msgid "Resource type '%1' is not available."
 msgstr "Tip resursa „%1“ nije dostupan."
 
-#: accountwizard/resource.cpp:80 legacy/resource.cpp:88
+#: accountwizard/resource.cpp:81
 #, kde-format
 msgid "Resource '%1' is already set up."
 msgstr "Resurs „%1“ je već postavljen."
 
-#: accountwizard/resource.cpp:87 legacy/resource.cpp:94
+#: accountwizard/resource.cpp:88
 #, kde-format
 msgid "Creating resource instance for '%1'..."
 msgstr "Stvaram primerak resursa za „%1“..."
 
-#: accountwizard/resource.cpp:96 legacy/resource.cpp:103
+#: accountwizard/resource.cpp:97
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Ne mogu da napravim primerak resurs: %1"
 
-#: accountwizard/resource.cpp:103 legacy/resource.cpp:110
+#: accountwizard/resource.cpp:104
 #, kde-format
 msgid "Configuring resource instance..."
 msgstr "Podešavam primerak resursa..."
 
-#: accountwizard/resource.cpp:107 legacy/resource.cpp:114
+#: accountwizard/resource.cpp:108
 #, kde-format
 msgid "Unable to configure resource instance."
 msgstr "Ne mogu da podesim primerak resursa."
 
-#: accountwizard/resource.cpp:123 legacy/resource.cpp:129
+#: accountwizard/resource.cpp:124
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr "Ne mogu da pretvorim vrednost postavke „%1“ u traženi tip %2."
 
-#: accountwizard/resource.cpp:130 legacy/resource.cpp:136
+#: accountwizard/resource.cpp:131
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Ne mogu da postavim postavku „%1“: %2"
 
-#: accountwizard/resource.cpp:136 legacy/resource.cpp:142
+#: accountwizard/resource.cpp:137
 #, fuzzy, kde-format
 #| msgid "Could not set setting '%1': %2"
 msgid "Could not save settings: %1"
 msgstr "Ne mogu da postavim postavku „%1“: %2"
 
-#: accountwizard/resource.cpp:142 legacy/resource.cpp:151
+#: accountwizard/resource.cpp:143
 #, kde-format
 msgid "Resource setup completed."
 msgstr "Postavljanje resursa završeno."
+
+#: accountwizard/servertest.cpp:51
+#, kde-format
+msgid ""
+"There seems to be a problem in reaching this server or choosing a safe way "
+"to sent the credentials to server. We advise you to check the settings of "
+"the account and adjust it manually if needed."
+msgstr ""
+"Izgleda da postoji problem sa kontaktiranjem ovog servera ili biranjem "
+"bezbednog načina za slanje akreditiva na njega. Savetujemo vam da proverite "
+"postavke naloga i ručno ih uskladite ako je potrebno."
+
+#: accountwizard/servertest.cpp:54
+#, kde-format
+msgid "Autodetecting settings failed"
+msgstr "Automatsko otkrivanje postavki nije uspelo"
 
 #: accountwizard/transport.cpp:63
 #, kde-format
@@ -390,7 +406,7 @@ msgstr ""
 msgid "Manual Configuration"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:357
+#: apps/contents/ui/PersonalDataPage.qml:356
 #, fuzzy, kde-format
 #| msgid "&Details..."
 msgid "Details"
@@ -437,252 +453,144 @@ msgstr ""
 msgid "Carl Schwan"
 msgstr ""
 
-#: legacy/configfile.cpp:37
-#, kde-format
-msgid "Writing config file for %1..."
-msgstr "Upisujem postavni fajl za %1..."
+#~ msgid "Writing config file for %1..."
+#~ msgstr "Upisujem postavni fajl za %1..."
 
 # rewrite-msgid: /is writing/has been written/
-#: legacy/configfile.cpp:54
-#, kde-format
-msgid "Config file for %1 is writing."
-msgstr "Postavni fajl za %1 je zapisan."
+#~ msgid "Config file for %1 is writing."
+#~ msgstr "Postavni fajl za %1 je zapisan."
 
-#: legacy/configfile.cpp:59
-#, kde-format
-msgid "Config file for %1 was not changed."
-msgstr "Postavni fajl za %1 nije izmenjen."
+#~ msgid "Config file for %1 was not changed."
+#~ msgstr "Postavni fajl za %1 nije izmenjen."
 
-#: legacy/configfile.cpp:90
-#, kde-format
-msgid "No given name for the configuration."
-msgstr "Nije dato ime postave."
+#~ msgid "No given name for the configuration."
+#~ msgstr "Nije dato ime postave."
 
-#: legacy/configfile.cpp:102
-#, kde-format
-msgid "Unknown configuration name '%1'"
-msgstr "Nepoznato ime postave „%1“"
+#~ msgid "Unknown configuration name '%1'"
+#~ msgstr "Nepoznato ime postave „%1“"
 
-#: legacy/cryptopage.cpp:80 legacy/cryptopage.cpp:101 legacy/cryptopage.cpp:202
-#, kde-format
-msgid "Account Wizard"
-msgstr "Čarobnjak naloga"
+#~ msgid "Account Wizard"
+#~ msgstr "Čarobnjak naloga"
 
-#: legacy/cryptopage.cpp:81 legacy/cryptopage.cpp:102
-#, kde-format
-msgid "Error while generating new key pair for your account %1: %2"
-msgstr "Greška pri generisanju novog para ključeva za nalog %1: %2"
+#~ msgid "Error while generating new key pair for your account %1: %2"
+#~ msgstr "Greška pri generisanju novog para ključeva za nalog %1: %2"
 
 # skip-rule: t-valid2
-#: legacy/cryptopage.cpp:257
-#, kde-format
-msgid "Could not detect valid key type"
-msgstr "Ne mogu da otkrijem dobar tip ključa"
+#~ msgid "Could not detect valid key type"
+#~ msgstr "Ne mogu da otkrijem dobar tip ključa"
 
-#: legacy/cryptopage.cpp:257 legacy/cryptopage.cpp:266
-#: legacy/cryptopage.cpp:282 legacy/cryptopage.cpp:289
-#, kde-format
-msgid "Import error"
-msgstr "Greška pri uvozu"
+#~ msgid "Import error"
+#~ msgstr "Greška pri uvozu"
 
-#: legacy/cryptopage.cpp:265
-#, kde-format
-msgid "Cannot read data from the certificate file: %1"
-msgstr "Ne mogu da pročitam podatke iz fajla sertifikata: %1"
+#~ msgid "Cannot read data from the certificate file: %1"
+#~ msgstr "Ne mogu da pročitam podatke iz fajla sertifikata: %1"
 
-#: legacy/cryptopage.cpp:281
-#, kde-format
-msgid "Failed to import key: %1"
-msgstr "Ne mogu da učitam ključ: %1"
+#~ msgid "Failed to import key: %1"
+#~ msgstr "Ne mogu da učitam ključ: %1"
 
-#: legacy/cryptopage.cpp:289
-#, kde-format
-msgid "Failed to import key."
-msgstr "Ne mogu da uvezem ključ."
+#~ msgid "Failed to import key."
+#~ msgstr "Ne mogu da uvezem ključ."
 
-#: legacy/cryptopage.cpp:316
-#, kde-format
-msgid "No key"
-msgstr "Bez ključa"
+#~ msgid "No key"
+#~ msgstr "Bez ključa"
 
-#: legacy/cryptopage.cpp:317
-#, kde-format
-msgid "Generate a new key pair"
-msgstr "Generiši novi par ključeva"
+#~ msgid "Generate a new key pair"
+#~ msgstr "Generiši novi par ključeva"
 
-#: legacy/cryptopage.cpp:318
-#, kde-format
-msgid "Import a key"
-msgstr "Uvezi ključ"
+#~ msgid "Import a key"
+#~ msgstr "Uvezi ključ"
 
 # >> @item
-#: legacy/cryptopage.cpp:425
-#, kde-format
-msgid "Certificates"
-msgstr "sertifikati"
+#~ msgid "Certificates"
+#~ msgstr "sertifikati"
 
 # >> @item
-#: legacy/cryptopage.cpp:426
-#, kde-format
-msgid "Any files"
-msgstr "svi fajlovi"
+#~ msgid "Any files"
+#~ msgstr "svi fajlovi"
 
 # >> @title:window
-#: legacy/cryptopage.cpp:429
-#, kde-format
-msgid "Select Certificate File"
-msgstr "Izbor fajla sertifikata"
+#~ msgid "Select Certificate File"
+#~ msgstr "Izbor fajla sertifikata"
 
-#: legacy/cryptopage.cpp:435
-#, kde-format
-msgid "Importing key..."
-msgstr "Uvozim ključ..."
+#~ msgid "Importing key..."
+#~ msgstr "Uvozim ključ..."
 
-#: legacy/ispdb.cpp:367
-#, kde-format
-msgid "Lookup configuration: Email provider"
-msgstr "Podešavanje potrage: dobavljač e‑pošte"
+#~ msgid "Lookup configuration: Email provider"
+#~ msgstr "Podešavanje potrage: dobavljač e‑pošte"
 
-#: legacy/ispdb.cpp:370
-#, kde-format
-msgid "Lookup configuration: Trying common server name"
-msgstr "Podešavanje potrage: isprobavam uobičajeno ime servera"
+#~ msgid "Lookup configuration: Trying common server name"
+#~ msgstr "Podešavanje potrage: isprobavam uobičajeno ime servera"
 
-#: legacy/ispdb.cpp:373
-#, kde-format
-msgid "Lookup configuration: Mozilla database"
-msgstr "Podešavanje potrage: Mozillina baza"
+#~ msgid "Lookup configuration: Mozilla database"
+#~ msgstr "Podešavanje potrage: Mozillina baza"
 
-#: legacy/key.cpp:66
-#, kde-format
-msgid "Skipping key publishing"
-msgstr "Preskačem objavljivanje ključa"
+#~ msgid "Skipping key publishing"
+#~ msgstr "Preskačem objavljivanje ključa"
 
-#: legacy/key.cpp:80 legacy/key.cpp:201
-#, kde-format
-msgid "Publishing OpenPGP key..."
-msgstr "Objavljujem OpenPGP ključ..."
+#~ msgid "Publishing OpenPGP key..."
+#~ msgstr "Objavljujem OpenPGP ključ..."
 
-#: legacy/key.cpp:94 legacy/key.cpp:121 legacy/key.cpp:191
-#, kde-format
-msgid "Key publishing was canceled."
-msgstr "Objavljivanje ključa otkazano."
+#~ msgid "Key publishing was canceled."
+#~ msgstr "Objavljivanje ključa otkazano."
 
-#: legacy/key.cpp:100
-#, kde-format
-msgid "Key publishing failed: not online, or GnuPG too old."
-msgstr "Objavljivanje ključa propalo: nije na vezi, ili je GnuPG prestar."
+#~ msgid "Key publishing failed: not online, or GnuPG too old."
+#~ msgstr "Objavljivanje ključa propalo: nije na vezi, ili je GnuPG prestar."
 
-#: legacy/key.cpp:103
-#, kde-format
-msgid "Your email provider does not support key publishing."
-msgstr "Vaš provajder e‑pošte ne podržava objavljivanje ključa."
+#~ msgid "Your email provider does not support key publishing."
+#~ msgstr "Vaš provajder e‑pošte ne podržava objavljivanje ključa."
 
-#: legacy/key.cpp:126
-#, kde-format
-msgid "An error occurred while creating key publishing request."
-msgstr "Greška pri stvaranju zahteva za objavljivanje ključa."
+#~ msgid "An error occurred while creating key publishing request."
+#~ msgstr "Greška pri stvaranju zahteva za objavljivanje ključa."
 
-#: legacy/key.cpp:149
-#, kde-format
-msgid "Key publishing error: mail transport is not configured"
-msgstr "Greška u objavljivanju ključa: transport pošte nije podešen."
+#~ msgid "Key publishing error: mail transport is not configured"
+#~ msgstr "Greška u objavljivanju ključa: transport pošte nije podešen."
 
 # rewrite-msgid: /email/message/
-#: legacy/key.cpp:162
-#, kde-format
-msgid "Key publishing error: failed to create request email"
-msgstr "Greška u objavljivanju ključa: ne mogu da napravim poruku zahteva."
+#~ msgid "Key publishing error: failed to create request email"
+#~ msgstr "Greška u objavljivanju ključa: ne mogu da napravim poruku zahteva."
 
-#: legacy/key.cpp:193
-#, kde-format
-msgid "Failed to send key publishing request: %1"
-msgstr "Ne mogu da pošaljem zahtev za objavljivanje ključa: %1"
+#~ msgid "Failed to send key publishing request: %1"
+#~ msgstr "Ne mogu da pošaljem zahtev za objavljivanje ključa: %1"
 
-#: legacy/key.cpp:195
-#, kde-format
-msgid "Key publishing request sent."
-msgstr "Zahtev za objavljivanje ključa poslat."
+#~ msgid "Key publishing request sent."
+#~ msgstr "Zahtev za objavljivanje ključa poslat."
 
-#: legacy/key.cpp:231
-#, kde-format
-msgid "Failed to publish the key."
-msgstr "Ne mogu da objavim ključ."
+#~ msgid "Failed to publish the key."
+#~ msgstr "Ne mogu da objavim ključ."
 
-#: legacy/key.cpp:237
-#, kde-format
-msgid "Key has been published on %1"
-msgstr "Ključ je objavljen na %1."
+#~ msgid "Key has been published on %1"
+#~ msgstr "Ključ je objavljen na %1."
 
-#: legacy/ldap.cpp:37
-#, kde-format
-msgid "Setting up LDAP server..."
-msgstr "Postavljam LDAP server..."
+#~ msgid "Setting up LDAP server..."
+#~ msgstr "Postavljam LDAP server..."
 
-#: legacy/ldap.cpp:40
-#, kde-format
-msgid "Needed parameters are missing for LDAP config: server '%1'"
-msgstr "Nedostaju neophodni parametri za LDAP postavu: server „%1“."
+#~ msgid "Needed parameters are missing for LDAP config: server '%1'"
+#~ msgstr "Nedostaju neophodni parametri za LDAP postavu: server „%1“."
 
-#: legacy/ldap.cpp:118
-#, kde-format
-msgid "LDAP set up."
-msgstr "LDAP postavljen."
+#~ msgid "LDAP set up."
+#~ msgstr "LDAP postavljen."
 
 # >? Wtf?
-#: legacy/ldap.cpp:136
-#, kde-format
-msgid "LDAP not configuring."
-msgstr "LDAP se ne podešava."
+#~ msgid "LDAP not configuring."
+#~ msgstr "LDAP se ne podešava."
 
-#: legacy/ldap.cpp:149
-#, kde-format
-msgid "Removed LDAP entry."
-msgstr "Uklonjena LDAP stavka."
+#~ msgid "Removed LDAP entry."
+#~ msgstr "Uklonjena LDAP stavka."
 
-#: legacy/ldap.cpp:155
-#, kde-format
-msgid "No config found to edit"
-msgstr "Nema nijedne postave za uređivanje."
+#~ msgid "No config found to edit"
+#~ msgstr "Nema nijedne postave za uređivanje."
 
-#: legacy/resource.cpp:167
-#, kde-format
-msgid "Removed resource instance for '%1'."
-msgstr "Uklonjen primerak resursa za „%1“."
+#~ msgid "Removed resource instance for '%1'."
+#~ msgstr "Uklonjen primerak resursa za „%1“."
 
-#: legacy/servertest.cpp:50
-#, kde-format
-msgid ""
-"There seems to be a problem in reaching this server or choosing a safe way "
-"to sent the credentials to server. We advise you to check the settings of "
-"the account and adjust it manually if needed."
-msgstr ""
-"Izgleda da postoji problem sa kontaktiranjem ovog servera ili biranjem "
-"bezbednog načina za slanje akreditiva na njega. Savetujemo vam da proverite "
-"postavke naloga i ručno ih uskladite ako je potrebno."
+#~ msgid "Searching for autoconfiguration..."
+#~ msgstr "Tražim automatsko podešavanje..."
 
-#: legacy/servertest.cpp:53
-#, kde-format
-msgid "Autodetecting settings failed"
-msgstr "Automatsko otkrivanje postavki nije uspelo"
+#~ msgid "Autoconfiguration found."
+#~ msgstr "Automatsko podešavanje nađeno."
 
-#: legacy/setupautoconfigkolabfreebusy.cpp:74
-#: legacy/setupautoconfigkolabldap.cpp:72 legacy/setupispdb.cpp:136
-#, kde-format
-msgid "Searching for autoconfiguration..."
-msgstr "Tražim automatsko podešavanje..."
-
-#: legacy/setupautoconfigkolabfreebusy.cpp:99
-#: legacy/setupautoconfigkolabldap.cpp:97 legacy/setupispdb.cpp:161
-#, kde-format
-msgid "Autoconfiguration found."
-msgstr "Automatsko podešavanje nađeno."
-
-#: legacy/setupautoconfigkolabfreebusy.cpp:101
-#: legacy/setupautoconfigkolabldap.cpp:99 legacy/setupispdb.cpp:163
-#, kde-format
-msgid "Autoconfiguration failed."
-msgstr "Automatsko podešavanje propalo."
+#~ msgid "Autoconfiguration failed."
+#~ msgstr "Automatsko podešavanje propalo."
 
 #, fuzzy
 #~| msgid "Username:"

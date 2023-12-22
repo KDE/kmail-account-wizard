@@ -4,21 +4,21 @@
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Manuel Tortosa Moreno <manutortosa@gmail.com>, 2010.
-# Josep M. Ferrer <txemaq@gmail.com>, 2010, 2012, 2015, 2016, 2017, 2018, 2020, 2021, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2010, 2012, 2015, 2016, 2017, 2018, 2020, 2021, 2023
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2013, 2014, 2015, 2016, 2017, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-20 01:34+0000\n"
-"PO-Revision-Date: 2023-12-16 13:02+0100\n"
+"POT-Creation-Date: 2023-12-22 01:39+0000\n"
+"PO-Revision-Date: 2023-12-20 09:09+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -165,55 +165,71 @@ msgstr "NTLM"
 msgid "GSSAPI"
 msgstr "GSSAPI"
 
-#: accountwizard/resource.cpp:67 legacy/resource.cpp:74
+#: accountwizard/resource.cpp:68
 #, kde-format
 msgid "Resource type '%1' is not available."
 msgstr "El tipus de recurs «%1» no està disponible."
 
-#: accountwizard/resource.cpp:80 legacy/resource.cpp:88
+#: accountwizard/resource.cpp:81
 #, kde-format
 msgid "Resource '%1' is already set up."
 msgstr "El recurs «%1» ja s'ha configurat."
 
-#: accountwizard/resource.cpp:87 legacy/resource.cpp:94
+#: accountwizard/resource.cpp:88
 #, kde-format
 msgid "Creating resource instance for '%1'..."
 msgstr "S'està creant la instància del recurs per a «%1»..."
 
-#: accountwizard/resource.cpp:96 legacy/resource.cpp:103
+#: accountwizard/resource.cpp:97
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "No s'ha pogut crear la instància del recurs: %1"
 
-#: accountwizard/resource.cpp:103 legacy/resource.cpp:110
+#: accountwizard/resource.cpp:104
 #, kde-format
 msgid "Configuring resource instance..."
 msgstr "S'està configurant la instància del recurs..."
 
-#: accountwizard/resource.cpp:107 legacy/resource.cpp:114
+#: accountwizard/resource.cpp:108
 #, kde-format
 msgid "Unable to configure resource instance."
 msgstr "No s'ha pogut configurar la instància del recurs."
 
-#: accountwizard/resource.cpp:123 legacy/resource.cpp:129
+#: accountwizard/resource.cpp:124
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr "No s'ha pogut convertir el valor de l'opció «%1» al tipus requerit %2."
 
-#: accountwizard/resource.cpp:130 legacy/resource.cpp:136
+#: accountwizard/resource.cpp:131
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "No s'ha pogut establir l'opció «%1»: %2"
 
-#: accountwizard/resource.cpp:136 legacy/resource.cpp:142
+#: accountwizard/resource.cpp:137
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "No s'ha pogut guardar la configuració: %1"
 
-#: accountwizard/resource.cpp:142 legacy/resource.cpp:151
+#: accountwizard/resource.cpp:143
 #, kde-format
 msgid "Resource setup completed."
 msgstr "S'ha completat la configuració del recurs."
+
+#: accountwizard/servertest.cpp:51
+#, kde-format
+msgid ""
+"There seems to be a problem in reaching this server or choosing a safe way "
+"to sent the credentials to server. We advise you to check the settings of "
+"the account and adjust it manually if needed."
+msgstr ""
+"Pareix que hi ha un problema en arribar a este servidor o en seleccionar una "
+"forma segura d'enviar les credencials al servidor. Recomanem que comproveu "
+"la configuració del compte i si és necessari, que l'ajusteu manualment."
+
+#: accountwizard/servertest.cpp:54
+#, kde-format
+msgid "Autodetecting settings failed"
+msgstr "Ha fallat la detecció automàtica de la configuració"
 
 #: accountwizard/transport.cpp:63
 #, kde-format
@@ -379,10 +395,10 @@ msgstr "Configuracions disponibles"
 msgid "Manual Configuration"
 msgstr "Configuració manual"
 
-#: apps/contents/ui/PersonalDataPage.qml:357
+#: apps/contents/ui/PersonalDataPage.qml:356
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "Detalls"
 
 #: apps/main.cpp:32
 #, kde-format
@@ -424,251 +440,145 @@ msgstr "Mantenidor"
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
 
-#: legacy/configfile.cpp:37
-#, kde-format
-msgid "Writing config file for %1..."
-msgstr "S'està escrivint el fitxer de configuració de %1..."
+#~ msgid "Writing config file for %1..."
+#~ msgstr "S'està escrivint el fitxer de configuració de %1..."
 
-#: legacy/configfile.cpp:54
-#, kde-format
-msgid "Config file for %1 is writing."
-msgstr "El fitxer de configuració de %1 s'està escrivint."
+#~ msgid "Config file for %1 is writing."
+#~ msgstr "El fitxer de configuració de %1 s'està escrivint."
 
-#: legacy/configfile.cpp:59
-#, kde-format
-msgid "Config file for %1 was not changed."
-msgstr "El fitxer de configuració de %1 no s'ha canviat."
+#~ msgid "Config file for %1 was not changed."
+#~ msgstr "El fitxer de configuració de %1 no s'ha canviat."
 
-#: legacy/configfile.cpp:90
-#, kde-format
-msgid "No given name for the configuration."
-msgstr "No s'ha indicat un nom per a la configuració."
+#~ msgid "No given name for the configuration."
+#~ msgstr "No s'ha indicat un nom per a la configuració."
 
-#: legacy/configfile.cpp:102
-#, kde-format
-msgid "Unknown configuration name '%1'"
-msgstr "El nom de la configuració «%1» és desconegut"
+#~ msgid "Unknown configuration name '%1'"
+#~ msgstr "El nom de la configuració «%1» és desconegut"
 
-#: legacy/cryptopage.cpp:80 legacy/cryptopage.cpp:101 legacy/cryptopage.cpp:202
-#, kde-format
-msgid "Account Wizard"
-msgstr "Assistent de comptes"
+#~ msgid "Account Wizard"
+#~ msgstr "Assistent de comptes"
 
-#: legacy/cryptopage.cpp:81 legacy/cryptopage.cpp:102
-#, kde-format
-msgid "Error while generating new key pair for your account %1: %2"
-msgstr ""
-"S'ha produït un error en generar un parell nou de claus per al vostre compte "
-"%1: %2"
+#~ msgid "Error while generating new key pair for your account %1: %2"
+#~ msgstr ""
+#~ "S'ha produït un error en generar un parell nou de claus per al vostre "
+#~ "compte %1: %2"
 
-#: legacy/cryptopage.cpp:257
-#, kde-format
-msgid "Could not detect valid key type"
-msgstr "No s'ha pogut detectar un tipus de clau vàlid"
+#~ msgid "Could not detect valid key type"
+#~ msgstr "No s'ha pogut detectar un tipus de clau vàlid"
 
-#: legacy/cryptopage.cpp:257 legacy/cryptopage.cpp:266
-#: legacy/cryptopage.cpp:282 legacy/cryptopage.cpp:289
-#, kde-format
-msgid "Import error"
-msgstr "S'ha produït un error d'importació"
+#~ msgid "Import error"
+#~ msgstr "S'ha produït un error d'importació"
 
-#: legacy/cryptopage.cpp:265
-#, kde-format
-msgid "Cannot read data from the certificate file: %1"
-msgstr "No s'han pogut llegir les dades des del fitxer de certificat: %1"
+#~ msgid "Cannot read data from the certificate file: %1"
+#~ msgstr "No s'han pogut llegir les dades des del fitxer de certificat: %1"
 
-#: legacy/cryptopage.cpp:281
-#, kde-format
-msgid "Failed to import key: %1"
-msgstr "No s'ha pogut importar la clau: %1"
+#~ msgid "Failed to import key: %1"
+#~ msgstr "No s'ha pogut importar la clau: %1"
 
-#: legacy/cryptopage.cpp:289
-#, kde-format
-msgid "Failed to import key."
-msgstr "No s'ha pogut importar la clau."
+#~ msgid "Failed to import key."
+#~ msgstr "No s'ha pogut importar la clau."
 
-#: legacy/cryptopage.cpp:316
-#, kde-format
-msgid "No key"
-msgstr "Sense clau"
+#~ msgid "No key"
+#~ msgstr "Sense clau"
 
-#: legacy/cryptopage.cpp:317
-#, kde-format
-msgid "Generate a new key pair"
-msgstr "Genera un parell nou de claus"
+#~ msgid "Generate a new key pair"
+#~ msgstr "Genera un parell nou de claus"
 
-#: legacy/cryptopage.cpp:318
-#, kde-format
-msgid "Import a key"
-msgstr "Importa una clau"
+#~ msgid "Import a key"
+#~ msgstr "Importa una clau"
 
-#: legacy/cryptopage.cpp:425
-#, kde-format
-msgid "Certificates"
-msgstr "Certificats"
+#~ msgid "Certificates"
+#~ msgstr "Certificats"
 
-#: legacy/cryptopage.cpp:426
-#, kde-format
-msgid "Any files"
-msgstr "Qualsevol fitxer"
+#~ msgid "Any files"
+#~ msgstr "Qualsevol fitxer"
 
-#: legacy/cryptopage.cpp:429
-#, kde-format
-msgid "Select Certificate File"
-msgstr "Seleccioneu el fitxer de certificat"
+#~ msgid "Select Certificate File"
+#~ msgstr "Seleccioneu el fitxer de certificat"
 
-#: legacy/cryptopage.cpp:435
-#, kde-format
-msgid "Importing key..."
-msgstr "S'està important la clau..."
+#~ msgid "Importing key..."
+#~ msgstr "S'està important la clau..."
 
-#: legacy/ispdb.cpp:367
-#, kde-format
-msgid "Lookup configuration: Email provider"
-msgstr "Busca de la configuració: Proveïdor de correu electrònic"
+#~ msgid "Lookup configuration: Email provider"
+#~ msgstr "Busca de la configuració: Proveïdor de correu electrònic"
 
-#: legacy/ispdb.cpp:370
-#, kde-format
-msgid "Lookup configuration: Trying common server name"
-msgstr "Busca de la configuració: Es prova el nom comú del servidor"
+#~ msgid "Lookup configuration: Trying common server name"
+#~ msgstr "Busca de la configuració: Es prova el nom comú del servidor"
 
-#: legacy/ispdb.cpp:373
-#, kde-format
-msgid "Lookup configuration: Mozilla database"
-msgstr "Busca de la configuració: Base de dades de Mozilla"
+#~ msgid "Lookup configuration: Mozilla database"
+#~ msgstr "Busca de la configuració: Base de dades de Mozilla"
 
-#: legacy/key.cpp:66
-#, kde-format
-msgid "Skipping key publishing"
-msgstr "Omet la publicació de la clau"
+#~ msgid "Skipping key publishing"
+#~ msgstr "Omet la publicació de la clau"
 
-#: legacy/key.cpp:80 legacy/key.cpp:201
-#, kde-format
-msgid "Publishing OpenPGP key..."
-msgstr "S'està publicant la clau OpenPGP..."
+#~ msgid "Publishing OpenPGP key..."
+#~ msgstr "S'està publicant la clau OpenPGP..."
 
-#: legacy/key.cpp:94 legacy/key.cpp:121 legacy/key.cpp:191
-#, kde-format
-msgid "Key publishing was canceled."
-msgstr "La publicació de la clau ha sigut cancel·lada."
+#~ msgid "Key publishing was canceled."
+#~ msgstr "La publicació de la clau ha sigut cancel·lada."
 
-#: legacy/key.cpp:100
-#, kde-format
-msgid "Key publishing failed: not online, or GnuPG too old."
-msgstr "La publicació de clau ha fallat: no en línia, o GnuPG massa antic."
+#~ msgid "Key publishing failed: not online, or GnuPG too old."
+#~ msgstr "La publicació de clau ha fallat: no en línia, o GnuPG massa antic."
 
-#: legacy/key.cpp:103
-#, kde-format
-msgid "Your email provider does not support key publishing."
-msgstr ""
-"El vostre proveïdor de correu electrònic no admet la publicació de la clau."
+#~ msgid "Your email provider does not support key publishing."
+#~ msgstr ""
+#~ "El vostre proveïdor de correu electrònic no admet la publicació de la "
+#~ "clau."
 
-#: legacy/key.cpp:126
-#, kde-format
-msgid "An error occurred while creating key publishing request."
-msgstr ""
-"S'ha produït un error en crear la sol·licitud de publicació de la clau."
+#~ msgid "An error occurred while creating key publishing request."
+#~ msgstr ""
+#~ "S'ha produït un error en crear la sol·licitud de publicació de la clau."
 
-#: legacy/key.cpp:149
-#, kde-format
-msgid "Key publishing error: mail transport is not configured"
-msgstr ""
-"S'ha produït un error en la publicació de la clau: el transport de correu no "
-"està configurat"
+#~ msgid "Key publishing error: mail transport is not configured"
+#~ msgstr ""
+#~ "S'ha produït un error en la publicació de la clau: el transport de correu "
+#~ "no està configurat"
 
-#: legacy/key.cpp:162
-#, kde-format
-msgid "Key publishing error: failed to create request email"
-msgstr ""
-"S'ha produït un error en la publicació de la clau: ha fallat en crear la "
-"sol·licitud per correu electrònic"
+#~ msgid "Key publishing error: failed to create request email"
+#~ msgstr ""
+#~ "S'ha produït un error en la publicació de la clau: ha fallat en crear la "
+#~ "sol·licitud per correu electrònic"
 
-#: legacy/key.cpp:193
-#, kde-format
-msgid "Failed to send key publishing request: %1"
-msgstr "No s'ha pogut enviar la sol·licitud de publicació de la clau: %1"
+#~ msgid "Failed to send key publishing request: %1"
+#~ msgstr "No s'ha pogut enviar la sol·licitud de publicació de la clau: %1"
 
-#: legacy/key.cpp:195
-#, kde-format
-msgid "Key publishing request sent."
-msgstr "S'ha enviat la sol·licitud de publicació de la clau."
+#~ msgid "Key publishing request sent."
+#~ msgstr "S'ha enviat la sol·licitud de publicació de la clau."
 
-#: legacy/key.cpp:231
-#, kde-format
-msgid "Failed to publish the key."
-msgstr "No s'ha pogut publicar la clau."
+#~ msgid "Failed to publish the key."
+#~ msgstr "No s'ha pogut publicar la clau."
 
-#: legacy/key.cpp:237
-#, kde-format
-msgid "Key has been published on %1"
-msgstr "La clau ha sigut publicada a %1"
+#~ msgid "Key has been published on %1"
+#~ msgstr "La clau ha sigut publicada a %1"
 
-#: legacy/ldap.cpp:37
-#, kde-format
-msgid "Setting up LDAP server..."
-msgstr "S'està configurant el servidor LDAP..."
+#~ msgid "Setting up LDAP server..."
+#~ msgstr "S'està configurant el servidor LDAP..."
 
-#: legacy/ldap.cpp:40
-#, kde-format
-msgid "Needed parameters are missing for LDAP config: server '%1'"
-msgstr ""
-"Falten els paràmetres necessaris per a la configuració de LDAP: servidor «%1»"
+#~ msgid "Needed parameters are missing for LDAP config: server '%1'"
+#~ msgstr ""
+#~ "Falten els paràmetres necessaris per a la configuració de LDAP: servidor "
+#~ "«%1»"
 
-#: legacy/ldap.cpp:118
-#, kde-format
-msgid "LDAP set up."
-msgstr "S'ha establit LDAP."
+#~ msgid "LDAP set up."
+#~ msgstr "S'ha establit LDAP."
 
-#: legacy/ldap.cpp:136
-#, kde-format
-msgid "LDAP not configuring."
-msgstr "No s'està establint LDAP."
+#~ msgid "LDAP not configuring."
+#~ msgstr "No s'està establint LDAP."
 
-#: legacy/ldap.cpp:149
-#, kde-format
-msgid "Removed LDAP entry."
-msgstr "S'ha suprimit una entrada LDAP."
+#~ msgid "Removed LDAP entry."
+#~ msgstr "S'ha suprimit una entrada LDAP."
 
-#: legacy/ldap.cpp:155
-#, kde-format
-msgid "No config found to edit"
-msgstr "No s'ha trobat la configuració que s'ha d'editar"
+#~ msgid "No config found to edit"
+#~ msgstr "No s'ha trobat la configuració que s'ha d'editar"
 
-#: legacy/resource.cpp:167
-#, kde-format
-msgid "Removed resource instance for '%1'."
-msgstr "S'ha eliminat la instància del recurs per a «%1»."
+#~ msgid "Removed resource instance for '%1'."
+#~ msgstr "S'ha eliminat la instància del recurs per a «%1»."
 
-#: legacy/servertest.cpp:50
-#, kde-format
-msgid ""
-"There seems to be a problem in reaching this server or choosing a safe way "
-"to sent the credentials to server. We advise you to check the settings of "
-"the account and adjust it manually if needed."
-msgstr ""
-"Pareix que hi ha un problema en arribar a este servidor o en seleccionar una "
-"forma segura d'enviar les credencials al servidor. Recomanem que comproveu "
-"la configuració del compte i si és necessari, que l'ajusteu manualment."
+#~ msgid "Searching for autoconfiguration..."
+#~ msgstr "S'està buscant la configuració automàtica..."
 
-#: legacy/servertest.cpp:53
-#, kde-format
-msgid "Autodetecting settings failed"
-msgstr "Ha fallat la detecció automàtica de la configuració"
+#~ msgid "Autoconfiguration found."
+#~ msgstr "S'ha trobat la configuració automàtica."
 
-#: legacy/setupautoconfigkolabfreebusy.cpp:74
-#: legacy/setupautoconfigkolabldap.cpp:72 legacy/setupispdb.cpp:136
-#, kde-format
-msgid "Searching for autoconfiguration..."
-msgstr "S'està buscant la configuració automàtica..."
-
-#: legacy/setupautoconfigkolabfreebusy.cpp:99
-#: legacy/setupautoconfigkolabldap.cpp:97 legacy/setupispdb.cpp:161
-#, kde-format
-msgid "Autoconfiguration found."
-msgstr "S'ha trobat la configuració automàtica."
-
-#: legacy/setupautoconfigkolabfreebusy.cpp:101
-#: legacy/setupautoconfigkolabldap.cpp:99 legacy/setupispdb.cpp:163
-#, kde-format
-msgid "Autoconfiguration failed."
-msgstr "No s'ha pogut configurar automàtica."
+#~ msgid "Autoconfiguration failed."
+#~ msgstr "No s'ha pogut configurar automàtica."

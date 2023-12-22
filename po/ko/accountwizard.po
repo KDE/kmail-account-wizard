@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-20 01:34+0000\n"
+"POT-Creation-Date: 2023-12-22 01:39+0000\n"
 "PO-Revision-Date: 2023-10-08 23:27+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -159,55 +159,70 @@ msgstr "NTLM"
 msgid "GSSAPI"
 msgstr "GSSAPI"
 
-#: accountwizard/resource.cpp:67 legacy/resource.cpp:74
+#: accountwizard/resource.cpp:68
 #, kde-format
 msgid "Resource type '%1' is not available."
 msgstr "리소스 형식 '%1'을(를) 사용할 수 없습니다."
 
-#: accountwizard/resource.cpp:80 legacy/resource.cpp:88
+#: accountwizard/resource.cpp:81
 #, kde-format
 msgid "Resource '%1' is already set up."
 msgstr "리소스 '%1'이(가) 이미 설정되었습니다."
 
-#: accountwizard/resource.cpp:87 legacy/resource.cpp:94
+#: accountwizard/resource.cpp:88
 #, kde-format
 msgid "Creating resource instance for '%1'..."
 msgstr "'%1'의 인스턴스를 만드는 중..."
 
-#: accountwizard/resource.cpp:96 legacy/resource.cpp:103
+#: accountwizard/resource.cpp:97
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "리소스 인스턴스를 만들 수 없음: %1"
 
-#: accountwizard/resource.cpp:103 legacy/resource.cpp:110
+#: accountwizard/resource.cpp:104
 #, kde-format
 msgid "Configuring resource instance..."
 msgstr "리소스 인스턴스 설정 중..."
 
-#: accountwizard/resource.cpp:107 legacy/resource.cpp:114
+#: accountwizard/resource.cpp:108
 #, kde-format
 msgid "Unable to configure resource instance."
 msgstr "리소스 인스턴스를 설정할 수 없습니다."
 
-#: accountwizard/resource.cpp:123 legacy/resource.cpp:129
+#: accountwizard/resource.cpp:124
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr "설정 '%1'의 값을 요청한 형식 %2(으)로 변환할 수 없습니다."
 
-#: accountwizard/resource.cpp:130 legacy/resource.cpp:136
+#: accountwizard/resource.cpp:131
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "설정 '%1'을(를) 지정할 수 없음: %2"
 
-#: accountwizard/resource.cpp:136 legacy/resource.cpp:142
+#: accountwizard/resource.cpp:137
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "설정을 저장할 수 없음: %1"
 
-#: accountwizard/resource.cpp:142 legacy/resource.cpp:151
+#: accountwizard/resource.cpp:143
 #, kde-format
 msgid "Resource setup completed."
 msgstr "리소스 설정이 완료되었습니다."
+
+#: accountwizard/servertest.cpp:51
+#, kde-format
+msgid ""
+"There seems to be a problem in reaching this server or choosing a safe way "
+"to sent the credentials to server. We advise you to check the settings of "
+"the account and adjust it manually if needed."
+msgstr ""
+"이 서버에 접근하거나 서버에 안전한 방법으로 인증 정보를 보낼 수 없습니다. 계"
+"정 설정을 직접 확인하고 필요한 경우 수정하십시오."
+
+#: accountwizard/servertest.cpp:54
+#, kde-format
+msgid "Autodetecting settings failed"
+msgstr "설정 자동 감지 실패"
 
 #: accountwizard/transport.cpp:63
 #, kde-format
@@ -374,7 +389,7 @@ msgstr "사용 가능한 설정"
 msgid "Manual Configuration"
 msgstr "수동 설정"
 
-#: apps/contents/ui/PersonalDataPage.qml:357
+#: apps/contents/ui/PersonalDataPage.qml:356
 #, fuzzy, kde-format
 #| msgid "&Details..."
 msgid "Details"
@@ -420,244 +435,137 @@ msgstr "관리자"
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
 
-#: legacy/configfile.cpp:37
-#, kde-format
-msgid "Writing config file for %1..."
-msgstr "%1의 설정 파일 쓰는 중..."
+#~ msgid "Writing config file for %1..."
+#~ msgstr "%1의 설정 파일 쓰는 중..."
 
-#: legacy/configfile.cpp:54
-#, kde-format
-msgid "Config file for %1 is writing."
-msgstr "%1의 설정 파일을 쓰고 있습니다."
+#~ msgid "Config file for %1 is writing."
+#~ msgstr "%1의 설정 파일을 쓰고 있습니다."
 
-#: legacy/configfile.cpp:59
-#, kde-format
-msgid "Config file for %1 was not changed."
-msgstr "%1의 설정 파일이 변경되지 않았습니다."
+#~ msgid "Config file for %1 was not changed."
+#~ msgstr "%1의 설정 파일이 변경되지 않았습니다."
 
-#: legacy/configfile.cpp:90
-#, kde-format
-msgid "No given name for the configuration."
-msgstr "설정의 이름을 지정하지 않았습니다."
+#~ msgid "No given name for the configuration."
+#~ msgstr "설정의 이름을 지정하지 않았습니다."
 
-#: legacy/configfile.cpp:102
-#, kde-format
-msgid "Unknown configuration name '%1'"
-msgstr "알 수 없는 설정 이름 '%1'"
+#~ msgid "Unknown configuration name '%1'"
+#~ msgstr "알 수 없는 설정 이름 '%1'"
 
-#: legacy/cryptopage.cpp:80 legacy/cryptopage.cpp:101 legacy/cryptopage.cpp:202
-#, kde-format
-msgid "Account Wizard"
-msgstr "계정 마법사"
+#~ msgid "Account Wizard"
+#~ msgstr "계정 마법사"
 
-#: legacy/cryptopage.cpp:81 legacy/cryptopage.cpp:102
-#, kde-format
-msgid "Error while generating new key pair for your account %1: %2"
-msgstr "%1의 새로운 키 쌍을 생성하는 중 오류 발생: %2"
+#~ msgid "Error while generating new key pair for your account %1: %2"
+#~ msgstr "%1의 새로운 키 쌍을 생성하는 중 오류 발생: %2"
 
-#: legacy/cryptopage.cpp:257
-#, kde-format
-msgid "Could not detect valid key type"
-msgstr "올바른 키 형식을 감지할 수 없음"
+#~ msgid "Could not detect valid key type"
+#~ msgstr "올바른 키 형식을 감지할 수 없음"
 
-#: legacy/cryptopage.cpp:257 legacy/cryptopage.cpp:266
-#: legacy/cryptopage.cpp:282 legacy/cryptopage.cpp:289
-#, kde-format
-msgid "Import error"
-msgstr "가져오기 오류"
+#~ msgid "Import error"
+#~ msgstr "가져오기 오류"
 
-#: legacy/cryptopage.cpp:265
-#, kde-format
-msgid "Cannot read data from the certificate file: %1"
-msgstr "인증서 파일에서 데이터를 읽을 수 없음: %1"
+#~ msgid "Cannot read data from the certificate file: %1"
+#~ msgstr "인증서 파일에서 데이터를 읽을 수 없음: %1"
 
-#: legacy/cryptopage.cpp:281
-#, kde-format
-msgid "Failed to import key: %1"
-msgstr "키를 가져올 수 없음: %1"
+#~ msgid "Failed to import key: %1"
+#~ msgstr "키를 가져올 수 없음: %1"
 
-#: legacy/cryptopage.cpp:289
-#, kde-format
-msgid "Failed to import key."
-msgstr "키를 가져올 수 없습니다."
+#~ msgid "Failed to import key."
+#~ msgstr "키를 가져올 수 없습니다."
 
-#: legacy/cryptopage.cpp:316
-#, kde-format
-msgid "No key"
-msgstr "키 없음"
+#~ msgid "No key"
+#~ msgstr "키 없음"
 
-#: legacy/cryptopage.cpp:317
-#, kde-format
-msgid "Generate a new key pair"
-msgstr "새 키 쌍 만들기"
+#~ msgid "Generate a new key pair"
+#~ msgstr "새 키 쌍 만들기"
 
-#: legacy/cryptopage.cpp:318
-#, kde-format
-msgid "Import a key"
-msgstr "키 가져오기"
+#~ msgid "Import a key"
+#~ msgstr "키 가져오기"
 
-#: legacy/cryptopage.cpp:425
-#, kde-format
-msgid "Certificates"
-msgstr "인증서"
+#~ msgid "Certificates"
+#~ msgstr "인증서"
 
-#: legacy/cryptopage.cpp:426
-#, kde-format
-msgid "Any files"
-msgstr "임의 파일"
+#~ msgid "Any files"
+#~ msgstr "임의 파일"
 
-#: legacy/cryptopage.cpp:429
-#, kde-format
-msgid "Select Certificate File"
-msgstr "인증서 파일 선택"
+#~ msgid "Select Certificate File"
+#~ msgstr "인증서 파일 선택"
 
-#: legacy/cryptopage.cpp:435
-#, kde-format
-msgid "Importing key..."
-msgstr "키 가져오는 중..."
+#~ msgid "Importing key..."
+#~ msgstr "키 가져오는 중..."
 
-#: legacy/ispdb.cpp:367
-#, kde-format
-msgid "Lookup configuration: Email provider"
-msgstr "설정 찾기: 이메일 공급자"
+#~ msgid "Lookup configuration: Email provider"
+#~ msgstr "설정 찾기: 이메일 공급자"
 
-#: legacy/ispdb.cpp:370
-#, kde-format
-msgid "Lookup configuration: Trying common server name"
-msgstr "설정 찾기: 일반적인 서버 이름 시도하는 중"
+#~ msgid "Lookup configuration: Trying common server name"
+#~ msgstr "설정 찾기: 일반적인 서버 이름 시도하는 중"
 
-#: legacy/ispdb.cpp:373
-#, kde-format
-msgid "Lookup configuration: Mozilla database"
-msgstr "설정 찾기: 모질라 데이터베이스"
+#~ msgid "Lookup configuration: Mozilla database"
+#~ msgstr "설정 찾기: 모질라 데이터베이스"
 
-#: legacy/key.cpp:66
-#, kde-format
-msgid "Skipping key publishing"
-msgstr "키 공개 건너뛰기"
+#~ msgid "Skipping key publishing"
+#~ msgstr "키 공개 건너뛰기"
 
-#: legacy/key.cpp:80 legacy/key.cpp:201
-#, kde-format
-msgid "Publishing OpenPGP key..."
-msgstr "OpenPGP 키 공개 중..."
+#~ msgid "Publishing OpenPGP key..."
+#~ msgstr "OpenPGP 키 공개 중..."
 
-#: legacy/key.cpp:94 legacy/key.cpp:121 legacy/key.cpp:191
-#, kde-format
-msgid "Key publishing was canceled."
-msgstr "키 공개 작업이 취소되었습니다."
+#~ msgid "Key publishing was canceled."
+#~ msgstr "키 공개 작업이 취소되었습니다."
 
-#: legacy/key.cpp:100
-#, kde-format
-msgid "Key publishing failed: not online, or GnuPG too old."
-msgstr "키 공개 실패: 온라인 상태가 아니거나 GnuPG가 너무 오래되었습니다."
+#~ msgid "Key publishing failed: not online, or GnuPG too old."
+#~ msgstr "키 공개 실패: 온라인 상태가 아니거나 GnuPG가 너무 오래되었습니다."
 
-#: legacy/key.cpp:103
-#, kde-format
-msgid "Your email provider does not support key publishing."
-msgstr "이메일 공급자가 키 공개를 지원하지 않습니다."
+#~ msgid "Your email provider does not support key publishing."
+#~ msgstr "이메일 공급자가 키 공개를 지원하지 않습니다."
 
-#: legacy/key.cpp:126
-#, kde-format
-msgid "An error occurred while creating key publishing request."
-msgstr "키 공개 요청을 만드는 중 오류가 발생했습니다."
+#~ msgid "An error occurred while creating key publishing request."
+#~ msgstr "키 공개 요청을 만드는 중 오류가 발생했습니다."
 
-#: legacy/key.cpp:149
-#, kde-format
-msgid "Key publishing error: mail transport is not configured"
-msgstr "키 공개 오류: 메일 전송이 설정되지 않았음"
+#~ msgid "Key publishing error: mail transport is not configured"
+#~ msgstr "키 공개 오류: 메일 전송이 설정되지 않았음"
 
-#: legacy/key.cpp:162
-#, kde-format
-msgid "Key publishing error: failed to create request email"
-msgstr "키 공개 오류: 요청 이메일을 만들 수 없음"
+#~ msgid "Key publishing error: failed to create request email"
+#~ msgstr "키 공개 오류: 요청 이메일을 만들 수 없음"
 
-#: legacy/key.cpp:193
-#, kde-format
-msgid "Failed to send key publishing request: %1"
-msgstr "키 공개 요청을 보낼 수 없음: %1"
+#~ msgid "Failed to send key publishing request: %1"
+#~ msgstr "키 공개 요청을 보낼 수 없음: %1"
 
-#: legacy/key.cpp:195
-#, kde-format
-msgid "Key publishing request sent."
-msgstr "키 공개 요청을 보냈습니다."
+#~ msgid "Key publishing request sent."
+#~ msgstr "키 공개 요청을 보냈습니다."
 
-#: legacy/key.cpp:231
-#, kde-format
-msgid "Failed to publish the key."
-msgstr "키를 공개할 수 없습니다."
+#~ msgid "Failed to publish the key."
+#~ msgstr "키를 공개할 수 없습니다."
 
-#: legacy/key.cpp:237
-#, kde-format
-msgid "Key has been published on %1"
-msgstr "%1에 키를 공개했습니다"
+#~ msgid "Key has been published on %1"
+#~ msgstr "%1에 키를 공개했습니다"
 
-#: legacy/ldap.cpp:37
-#, kde-format
-msgid "Setting up LDAP server..."
-msgstr "LDAP 서버 설정 중..."
+#~ msgid "Setting up LDAP server..."
+#~ msgstr "LDAP 서버 설정 중..."
 
-#: legacy/ldap.cpp:40
-#, kde-format
-msgid "Needed parameters are missing for LDAP config: server '%1'"
-msgstr "LDAP 설정에 필요한 인자가 없음: server '%1'"
+#~ msgid "Needed parameters are missing for LDAP config: server '%1'"
+#~ msgstr "LDAP 설정에 필요한 인자가 없음: server '%1'"
 
-#: legacy/ldap.cpp:118
-#, kde-format
-msgid "LDAP set up."
-msgstr "LDAP를 설정했습니다."
+#~ msgid "LDAP set up."
+#~ msgstr "LDAP를 설정했습니다."
 
-#: legacy/ldap.cpp:136
-#, kde-format
-msgid "LDAP not configuring."
-msgstr "LDAP를 설정하지 않습니다."
+#~ msgid "LDAP not configuring."
+#~ msgstr "LDAP를 설정하지 않습니다."
 
-#: legacy/ldap.cpp:149
-#, kde-format
-msgid "Removed LDAP entry."
-msgstr "LDAP 항목을 삭제했습니다."
+#~ msgid "Removed LDAP entry."
+#~ msgstr "LDAP 항목을 삭제했습니다."
 
-#: legacy/ldap.cpp:155
-#, kde-format
-msgid "No config found to edit"
-msgstr "편집할 설정을 찾을 수 없음"
+#~ msgid "No config found to edit"
+#~ msgstr "편집할 설정을 찾을 수 없음"
 
-#: legacy/resource.cpp:167
-#, kde-format
-msgid "Removed resource instance for '%1'."
-msgstr "'%1'의 리소스 인스턴스를 삭제합니다."
+#~ msgid "Removed resource instance for '%1'."
+#~ msgstr "'%1'의 리소스 인스턴스를 삭제합니다."
 
-#: legacy/servertest.cpp:50
-#, kde-format
-msgid ""
-"There seems to be a problem in reaching this server or choosing a safe way "
-"to sent the credentials to server. We advise you to check the settings of "
-"the account and adjust it manually if needed."
-msgstr ""
-"이 서버에 접근하거나 서버에 안전한 방법으로 인증 정보를 보낼 수 없습니다. 계"
-"정 설정을 직접 확인하고 필요한 경우 수정하십시오."
+#~ msgid "Searching for autoconfiguration..."
+#~ msgstr "자동 설정 검색 중..."
 
-#: legacy/servertest.cpp:53
-#, kde-format
-msgid "Autodetecting settings failed"
-msgstr "설정 자동 감지 실패"
+#~ msgid "Autoconfiguration found."
+#~ msgstr "자동 설정을 찾았습니다."
 
-#: legacy/setupautoconfigkolabfreebusy.cpp:74
-#: legacy/setupautoconfigkolabldap.cpp:72 legacy/setupispdb.cpp:136
-#, kde-format
-msgid "Searching for autoconfiguration..."
-msgstr "자동 설정 검색 중..."
-
-#: legacy/setupautoconfigkolabfreebusy.cpp:99
-#: legacy/setupautoconfigkolabldap.cpp:97 legacy/setupispdb.cpp:161
-#, kde-format
-msgid "Autoconfiguration found."
-msgstr "자동 설정을 찾았습니다."
-
-#: legacy/setupautoconfigkolabfreebusy.cpp:101
-#: legacy/setupautoconfigkolabldap.cpp:99 legacy/setupispdb.cpp:163
-#, kde-format
-msgid "Autoconfiguration failed."
-msgstr "자동 설정이 실패했습니다."
+#~ msgid "Autoconfiguration failed."
+#~ msgstr "자동 설정이 실패했습니다."
 
 #~ msgid "Hostname:"
 #~ msgstr "호스트 이름:"

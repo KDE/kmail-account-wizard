@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-20 01:34+0000\n"
+"POT-Creation-Date: 2023-12-22 01:39+0000\n"
 "PO-Revision-Date: 2023-12-20 13:53+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -160,56 +160,73 @@ msgstr "NTLM"
 msgid "GSSAPI"
 msgstr "GSSAPI"
 
-#: accountwizard/resource.cpp:67 legacy/resource.cpp:74
+#: accountwizard/resource.cpp:68
 #, kde-format
 msgid "Resource type '%1' is not available."
 msgstr "Il tipo di risorsa «%1» non è disponibile."
 
-#: accountwizard/resource.cpp:80 legacy/resource.cpp:88
+#: accountwizard/resource.cpp:81
 #, kde-format
 msgid "Resource '%1' is already set up."
 msgstr "La risorsa «%1» è già stata configurata."
 
-#: accountwizard/resource.cpp:87 legacy/resource.cpp:94
+#: accountwizard/resource.cpp:88
 #, kde-format
 msgid "Creating resource instance for '%1'..."
 msgstr "Creazione dell'istanza di risorsa di «%1»..."
 
-#: accountwizard/resource.cpp:96 legacy/resource.cpp:103
+#: accountwizard/resource.cpp:97
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Creazione dell'istanza della risorsa non riuscita: %1"
 
-#: accountwizard/resource.cpp:103 legacy/resource.cpp:110
+#: accountwizard/resource.cpp:104
 #, kde-format
 msgid "Configuring resource instance..."
 msgstr "Configurazione dell'istanza della risorsa..."
 
-#: accountwizard/resource.cpp:107 legacy/resource.cpp:114
+#: accountwizard/resource.cpp:108
 #, kde-format
 msgid "Unable to configure resource instance."
 msgstr "Impossibile configurare l'istanza della risorsa."
 
-#: accountwizard/resource.cpp:123 legacy/resource.cpp:129
+#: accountwizard/resource.cpp:124
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr ""
 "Impossibile convertire il valore dell'impostazione «%1» nel tipo richiesto %2"
 
-#: accountwizard/resource.cpp:130 legacy/resource.cpp:136
+#: accountwizard/resource.cpp:131
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Impossibile configurare l'impostazione «%1»: %2"
 
-#: accountwizard/resource.cpp:136 legacy/resource.cpp:142
+#: accountwizard/resource.cpp:137
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Impossibile salvare le impostazioni: %1"
 
-#: accountwizard/resource.cpp:142 legacy/resource.cpp:151
+#: accountwizard/resource.cpp:143
 #, kde-format
 msgid "Resource setup completed."
 msgstr "Configurazione della risorsa completata."
+
+#: accountwizard/servertest.cpp:51
+#, kde-format
+msgid ""
+"There seems to be a problem in reaching this server or choosing a safe way "
+"to sent the credentials to server. We advise you to check the settings of "
+"the account and adjust it manually if needed."
+msgstr ""
+"Sembra esserci un problema nel contattare il server o nello scegliere un "
+"modo sicuro per inviare le credenziali al server. Ti consigliamo di "
+"controllare le impostazioni dell'account e aggiustarle manualmente se "
+"necessario."
+
+#: accountwizard/servertest.cpp:54
+#, kde-format
+msgid "Autodetecting settings failed"
+msgstr "Autorilevamento delle impostazioni non riuscito"
 
 #: accountwizard/transport.cpp:63
 #, kde-format
@@ -377,7 +394,7 @@ msgstr "Configurazioni disponibili"
 msgid "Manual Configuration"
 msgstr "Configurazione manuale"
 
-#: apps/contents/ui/PersonalDataPage.qml:357
+#: apps/contents/ui/PersonalDataPage.qml:356
 #, kde-format
 msgid "Details"
 msgstr "Dettagli"
@@ -422,259 +439,152 @@ msgstr "Responsabile"
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
 
-#: legacy/configfile.cpp:37
-#, kde-format
-msgid "Writing config file for %1..."
-msgstr "Scrittura del file di configurazione di %1..."
+#~ msgid "Writing config file for %1..."
+#~ msgstr "Scrittura del file di configurazione di %1..."
 
-#: legacy/configfile.cpp:54
-#, kde-format
-msgid "Config file for %1 is writing."
-msgstr "La scrittura del file di configurazione di %1 è in corso."
+#~ msgid "Config file for %1 is writing."
+#~ msgstr "La scrittura del file di configurazione di %1 è in corso."
 
-#: legacy/configfile.cpp:59
-#, kde-format
-msgid "Config file for %1 was not changed."
-msgstr "Il file di configurazione di %1 non è stato cambiato."
+#~ msgid "Config file for %1 was not changed."
+#~ msgstr "Il file di configurazione di %1 non è stato cambiato."
 
-#: legacy/configfile.cpp:90
-#, kde-format
-msgid "No given name for the configuration."
-msgstr "Nome non fornito per la configurazione."
+#~ msgid "No given name for the configuration."
+#~ msgstr "Nome non fornito per la configurazione."
 
-#: legacy/configfile.cpp:102
-#, kde-format
-msgid "Unknown configuration name '%1'"
-msgstr "Nome configurazione «%1» sconosciuto"
+#~ msgid "Unknown configuration name '%1'"
+#~ msgstr "Nome configurazione «%1» sconosciuto"
 
-#: legacy/cryptopage.cpp:80 legacy/cryptopage.cpp:101 legacy/cryptopage.cpp:202
-#, kde-format
-msgid "Account Wizard"
-msgstr "Procedura guidata per la creazione di account"
+#~ msgid "Account Wizard"
+#~ msgstr "Procedura guidata per la creazione di account"
 
-#: legacy/cryptopage.cpp:81 legacy/cryptopage.cpp:102
-#, kde-format
-msgid "Error while generating new key pair for your account %1: %2"
-msgstr ""
-"Errore durante la generazione di una nuova coppia di chiavi per l'account "
-"%1: %2"
+#~ msgid "Error while generating new key pair for your account %1: %2"
+#~ msgstr ""
+#~ "Errore durante la generazione di una nuova coppia di chiavi per l'account "
+#~ "%1: %2"
 
-#: legacy/cryptopage.cpp:257
-#, kde-format
-msgid "Could not detect valid key type"
-msgstr "Impossibile identificare un tipo di chiave valido"
+#~ msgid "Could not detect valid key type"
+#~ msgstr "Impossibile identificare un tipo di chiave valido"
 
-#: legacy/cryptopage.cpp:257 legacy/cryptopage.cpp:266
-#: legacy/cryptopage.cpp:282 legacy/cryptopage.cpp:289
-#, kde-format
-msgid "Import error"
-msgstr "Errore di importazione"
+#~ msgid "Import error"
+#~ msgstr "Errore di importazione"
 
-#: legacy/cryptopage.cpp:265
-#, kde-format
-msgid "Cannot read data from the certificate file: %1"
-msgstr "Impossibile leggere i dati dal file di certificato: %1"
+#~ msgid "Cannot read data from the certificate file: %1"
+#~ msgstr "Impossibile leggere i dati dal file di certificato: %1"
 
-#: legacy/cryptopage.cpp:281
-#, kde-format
-msgid "Failed to import key: %1"
-msgstr "Importazione della chiave non riuscita: %1"
+#~ msgid "Failed to import key: %1"
+#~ msgstr "Importazione della chiave non riuscita: %1"
 
-#: legacy/cryptopage.cpp:289
-#, kde-format
-msgid "Failed to import key."
-msgstr "Importazione della chiave non riuscita."
+#~ msgid "Failed to import key."
+#~ msgstr "Importazione della chiave non riuscita."
 
-#: legacy/cryptopage.cpp:316
-#, kde-format
-msgid "No key"
-msgstr "Nessuna chiave"
+#~ msgid "No key"
+#~ msgstr "Nessuna chiave"
 
-#: legacy/cryptopage.cpp:317
-#, kde-format
-msgid "Generate a new key pair"
-msgstr "Genera una nuova coppia di chiavi"
+#~ msgid "Generate a new key pair"
+#~ msgstr "Genera una nuova coppia di chiavi"
 
-#: legacy/cryptopage.cpp:318
-#, kde-format
-msgid "Import a key"
-msgstr "Importa una chiave"
+#~ msgid "Import a key"
+#~ msgstr "Importa una chiave"
 
-#: legacy/cryptopage.cpp:425
-#, kde-format
-msgid "Certificates"
-msgstr "Certificati"
+#~ msgid "Certificates"
+#~ msgstr "Certificati"
 
-#: legacy/cryptopage.cpp:426
-#, kde-format
-msgid "Any files"
-msgstr "Qualsiasi file"
+#~ msgid "Any files"
+#~ msgstr "Qualsiasi file"
 
-#: legacy/cryptopage.cpp:429
-#, kde-format
-msgid "Select Certificate File"
-msgstr "Seleziona file di certificato"
+#~ msgid "Select Certificate File"
+#~ msgstr "Seleziona file di certificato"
 
-#: legacy/cryptopage.cpp:435
-#, kde-format
-msgid "Importing key..."
-msgstr "Importazione della chiave..."
+#~ msgid "Importing key..."
+#~ msgstr "Importazione della chiave..."
 
-#: legacy/ispdb.cpp:367
-#, kde-format
-msgid "Lookup configuration: Email provider"
-msgstr "Ricerca configurazione: fornitore della posta elettronica"
+#~ msgid "Lookup configuration: Email provider"
+#~ msgstr "Ricerca configurazione: fornitore della posta elettronica"
 
-#: legacy/ispdb.cpp:370
-#, kde-format
-msgid "Lookup configuration: Trying common server name"
-msgstr "Ricerca configurazione: prova usando il nome del server"
+#~ msgid "Lookup configuration: Trying common server name"
+#~ msgstr "Ricerca configurazione: prova usando il nome del server"
 
-#: legacy/ispdb.cpp:373
-#, kde-format
-msgid "Lookup configuration: Mozilla database"
-msgstr "Ricerca configurazione: banca dati di Mozilla"
+#~ msgid "Lookup configuration: Mozilla database"
+#~ msgstr "Ricerca configurazione: banca dati di Mozilla"
 
-#: legacy/key.cpp:66
-#, kde-format
-msgid "Skipping key publishing"
-msgstr "Viene saltata la pubblicazione della chiave"
+#~ msgid "Skipping key publishing"
+#~ msgstr "Viene saltata la pubblicazione della chiave"
 
-#: legacy/key.cpp:80 legacy/key.cpp:201
-#, kde-format
-msgid "Publishing OpenPGP key..."
-msgstr "Pubblicazione della chiave OpenPGP in corso..."
+#~ msgid "Publishing OpenPGP key..."
+#~ msgstr "Pubblicazione della chiave OpenPGP in corso..."
 
-#: legacy/key.cpp:94 legacy/key.cpp:121 legacy/key.cpp:191
-#, kde-format
-msgid "Key publishing was canceled."
-msgstr "La pubblicazione della chiave è stata annullata."
+#~ msgid "Key publishing was canceled."
+#~ msgstr "La pubblicazione della chiave è stata annullata."
 
-#: legacy/key.cpp:100
-#, kde-format
-msgid "Key publishing failed: not online, or GnuPG too old."
-msgstr ""
-"La pubblicazione della chiave non è riuscita: non in linea o GnuPG troppo "
-"vecchio."
+#~ msgid "Key publishing failed: not online, or GnuPG too old."
+#~ msgstr ""
+#~ "La pubblicazione della chiave non è riuscita: non in linea o GnuPG troppo "
+#~ "vecchio."
 
-#: legacy/key.cpp:103
-#, kde-format
-msgid "Your email provider does not support key publishing."
-msgstr ""
-"Il tuo fornitore di posta elettronica non supporta la pubblicazione della "
-"chiave."
+#~ msgid "Your email provider does not support key publishing."
+#~ msgstr ""
+#~ "Il tuo fornitore di posta elettronica non supporta la pubblicazione della "
+#~ "chiave."
 
-#: legacy/key.cpp:126
-#, kde-format
-msgid "An error occurred while creating key publishing request."
-msgstr ""
-"Si è verificato un errore durante la creazione della richiesta di "
-"pubblicazione della chiave."
+#~ msgid "An error occurred while creating key publishing request."
+#~ msgstr ""
+#~ "Si è verificato un errore durante la creazione della richiesta di "
+#~ "pubblicazione della chiave."
 
-#: legacy/key.cpp:149
-#, kde-format
-msgid "Key publishing error: mail transport is not configured"
-msgstr ""
-"Errore nella pubblicazione della chiave: il trasporto della posta non è "
-"configurato"
+#~ msgid "Key publishing error: mail transport is not configured"
+#~ msgstr ""
+#~ "Errore nella pubblicazione della chiave: il trasporto della posta non è "
+#~ "configurato"
 
-#: legacy/key.cpp:162
-#, kde-format
-msgid "Key publishing error: failed to create request email"
-msgstr ""
-"Errore nella pubblicazione della chiave: creazione del messaggio di "
-"richiesta non riuscita"
+#~ msgid "Key publishing error: failed to create request email"
+#~ msgstr ""
+#~ "Errore nella pubblicazione della chiave: creazione del messaggio di "
+#~ "richiesta non riuscita"
 
-#: legacy/key.cpp:193
-#, kde-format
-msgid "Failed to send key publishing request: %1"
-msgstr "Invio della richiesta di pubblicazione della chiave non riuscito: %1"
+#~ msgid "Failed to send key publishing request: %1"
+#~ msgstr ""
+#~ "Invio della richiesta di pubblicazione della chiave non riuscito: %1"
 
-#: legacy/key.cpp:195
-#, kde-format
-msgid "Key publishing request sent."
-msgstr "Richiesta di pubblicazione della chiave inviata."
+#~ msgid "Key publishing request sent."
+#~ msgstr "Richiesta di pubblicazione della chiave inviata."
 
-#: legacy/key.cpp:231
-#, kde-format
-msgid "Failed to publish the key."
-msgstr "Pubblicazione della chiave non riuscita."
+#~ msgid "Failed to publish the key."
+#~ msgstr "Pubblicazione della chiave non riuscita."
 
-#: legacy/key.cpp:237
-#, kde-format
-msgid "Key has been published on %1"
-msgstr "La chiave è stata pubblicata su %1"
+#~ msgid "Key has been published on %1"
+#~ msgstr "La chiave è stata pubblicata su %1"
 
-#: legacy/ldap.cpp:37
-#, kde-format
-msgid "Setting up LDAP server..."
-msgstr "Impostazione server LDAP..."
+#~ msgid "Setting up LDAP server..."
+#~ msgstr "Impostazione server LDAP..."
 
-#: legacy/ldap.cpp:40
-#, kde-format
-msgid "Needed parameters are missing for LDAP config: server '%1'"
-msgstr ""
-"Dei parametri necessari sono mancanti per la configurazione LDAP: server «%1»"
+#~ msgid "Needed parameters are missing for LDAP config: server '%1'"
+#~ msgstr ""
+#~ "Dei parametri necessari sono mancanti per la configurazione LDAP: server "
+#~ "«%1»"
 
-#: legacy/ldap.cpp:118
-#, kde-format
-msgid "LDAP set up."
-msgstr "LDAP configurato."
+#~ msgid "LDAP set up."
+#~ msgstr "LDAP configurato."
 
-#: legacy/ldap.cpp:136
-#, kde-format
-msgid "LDAP not configuring."
-msgstr "LDAP non in fase di configurazione."
+#~ msgid "LDAP not configuring."
+#~ msgstr "LDAP non in fase di configurazione."
 
-#: legacy/ldap.cpp:149
-#, kde-format
-msgid "Removed LDAP entry."
-msgstr "Rimossa voce LDAP."
+#~ msgid "Removed LDAP entry."
+#~ msgstr "Rimossa voce LDAP."
 
-#: legacy/ldap.cpp:155
-#, kde-format
-msgid "No config found to edit"
-msgstr "Nessuna configurazione da modificare trovata"
+#~ msgid "No config found to edit"
+#~ msgstr "Nessuna configurazione da modificare trovata"
 
-#: legacy/resource.cpp:167
-#, kde-format
-msgid "Removed resource instance for '%1'."
-msgstr "Istanza della risorsa di «%1» rimossa."
+#~ msgid "Removed resource instance for '%1'."
+#~ msgstr "Istanza della risorsa di «%1» rimossa."
 
-#: legacy/servertest.cpp:50
-#, kde-format
-msgid ""
-"There seems to be a problem in reaching this server or choosing a safe way "
-"to sent the credentials to server. We advise you to check the settings of "
-"the account and adjust it manually if needed."
-msgstr ""
-"Sembra esserci un problema nel contattare il server o nello scegliere un "
-"modo sicuro per inviare le credenziali al server. Ti consigliamo di "
-"controllare le impostazioni dell'account e aggiustarle manualmente se "
-"necessario."
+#~ msgid "Searching for autoconfiguration..."
+#~ msgstr "Ricerca di autoconfigurazione..."
 
-#: legacy/servertest.cpp:53
-#, kde-format
-msgid "Autodetecting settings failed"
-msgstr "Autorilevamento delle impostazioni non riuscito"
+#~ msgid "Autoconfiguration found."
+#~ msgstr "Trovata configurazione automatica."
 
-#: legacy/setupautoconfigkolabfreebusy.cpp:74
-#: legacy/setupautoconfigkolabldap.cpp:72 legacy/setupispdb.cpp:136
-#, kde-format
-msgid "Searching for autoconfiguration..."
-msgstr "Ricerca di autoconfigurazione..."
-
-#: legacy/setupautoconfigkolabfreebusy.cpp:99
-#: legacy/setupautoconfigkolabldap.cpp:97 legacy/setupispdb.cpp:161
-#, kde-format
-msgid "Autoconfiguration found."
-msgstr "Trovata configurazione automatica."
-
-#: legacy/setupautoconfigkolabfreebusy.cpp:101
-#: legacy/setupautoconfigkolabldap.cpp:99 legacy/setupispdb.cpp:163
-#, kde-format
-msgid "Autoconfiguration failed."
-msgstr "Configurazione automatica non riuscita."
+#~ msgid "Autoconfiguration failed."
+#~ msgstr "Configurazione automatica non riuscita."
 
 #~ msgid "Hostname:"
 #~ msgstr "Nome host:"

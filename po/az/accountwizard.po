@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-20 01:34+0000\n"
+"POT-Creation-Date: 2023-12-22 01:39+0000\n"
 "PO-Revision-Date: 2021-08-16 18:42+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -165,55 +165,72 @@ msgstr ""
 msgid "GSSAPI"
 msgstr ""
 
-#: accountwizard/resource.cpp:67 legacy/resource.cpp:74
+#: accountwizard/resource.cpp:68
 #, kde-format
 msgid "Resource type '%1' is not available."
 msgstr "Mənbənin növü '%1' əlçatandır."
 
-#: accountwizard/resource.cpp:80 legacy/resource.cpp:88
+#: accountwizard/resource.cpp:81
 #, kde-format
 msgid "Resource '%1' is already set up."
 msgstr "Mənbə '%1' artıq ayarlanıb."
 
-#: accountwizard/resource.cpp:87 legacy/resource.cpp:94
+#: accountwizard/resource.cpp:88
 #, kde-format
 msgid "Creating resource instance for '%1'..."
 msgstr "'%1' üçün mənbənin nümunəsi yaradılır..."
 
-#: accountwizard/resource.cpp:96 legacy/resource.cpp:103
+#: accountwizard/resource.cpp:97
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Mənbənin nümunəsi yaradıla bilmədi: %1"
 
-#: accountwizard/resource.cpp:103 legacy/resource.cpp:110
+#: accountwizard/resource.cpp:104
 #, kde-format
 msgid "Configuring resource instance..."
 msgstr "Mənbənin nümunəsi tənzimlənir..."
 
-#: accountwizard/resource.cpp:107 legacy/resource.cpp:114
+#: accountwizard/resource.cpp:108
 #, kde-format
 msgid "Unable to configure resource instance."
 msgstr "Mənbənin nümunəsinin tənzimlənməsi baş tutmadı."
 
-#: accountwizard/resource.cpp:123 legacy/resource.cpp:129
+#: accountwizard/resource.cpp:124
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr "'%1' ayarının  dəyəri tələb olunan %2 növünə çevirilə bilmədi."
 
-#: accountwizard/resource.cpp:130 legacy/resource.cpp:136
+#: accountwizard/resource.cpp:131
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "'%1' ayarı quraçdırıla bilmədi: %2"
 
-#: accountwizard/resource.cpp:136 legacy/resource.cpp:142
+#: accountwizard/resource.cpp:137
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Ayarlar saxlanıla bilmədi: %1"
 
-#: accountwizard/resource.cpp:142 legacy/resource.cpp:151
+#: accountwizard/resource.cpp:143
 #, kde-format
 msgid "Resource setup completed."
 msgstr "Mənbənin quraçdırılması tamamlandı."
+
+#: accountwizard/servertest.cpp:51
+#, kde-format
+msgid ""
+"There seems to be a problem in reaching this server or choosing a safe way "
+"to sent the credentials to server. We advise you to check the settings of "
+"the account and adjust it manually if needed."
+msgstr ""
+"Belə görünür ki, bu serverə qoşulmaqda və ya kimlik məlumatlarının serverə "
+"göndərilməsinin təhlükəsiz yolunun seçilməsində problem var. Biz sizə hesab "
+"ayarlarını yoxlamağı və lazım gələrsə onu əl ilə təyin etməyi məsləhət "
+"görürük."
+
+#: accountwizard/servertest.cpp:54
+#, kde-format
+msgid "Autodetecting settings failed"
+msgstr "Ayarların avtomatik aşkarlanması baş tutmadı"
 
 #: accountwizard/transport.cpp:63
 #, kde-format
@@ -390,7 +407,7 @@ msgstr ""
 msgid "Manual Configuration"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:357
+#: apps/contents/ui/PersonalDataPage.qml:356
 #, fuzzy, kde-format
 #| msgid "&Details..."
 msgid "Details"
@@ -437,247 +454,138 @@ msgstr ""
 msgid "Carl Schwan"
 msgstr ""
 
-#: legacy/configfile.cpp:37
-#, kde-format
-msgid "Writing config file for %1..."
-msgstr "%1 üçün tənzimləmə faylı yazılır..."
+#~ msgid "Writing config file for %1..."
+#~ msgstr "%1 üçün tənzimləmə faylı yazılır..."
 
-#: legacy/configfile.cpp:54
-#, kde-format
-msgid "Config file for %1 is writing."
-msgstr "%1 üçün tənzimləmə faylı yazılır."
+#~ msgid "Config file for %1 is writing."
+#~ msgstr "%1 üçün tənzimləmə faylı yazılır."
 
-#: legacy/configfile.cpp:59
-#, kde-format
-msgid "Config file for %1 was not changed."
-msgstr "%1 üçün tənzimləmə faylı dəyişdirilmədi."
+#~ msgid "Config file for %1 was not changed."
+#~ msgstr "%1 üçün tənzimləmə faylı dəyişdirilmədi."
 
-#: legacy/configfile.cpp:90
-#, kde-format
-msgid "No given name for the configuration."
-msgstr "Tənzimləməyə ad verilməyib."
+#~ msgid "No given name for the configuration."
+#~ msgstr "Tənzimləməyə ad verilməyib."
 
-#: legacy/configfile.cpp:102
-#, kde-format
-msgid "Unknown configuration name '%1'"
-msgstr "'Bilinməyən tənzimləmə adı '%1'"
+#~ msgid "Unknown configuration name '%1'"
+#~ msgstr "'Bilinməyən tənzimləmə adı '%1'"
 
-#: legacy/cryptopage.cpp:80 legacy/cryptopage.cpp:101 legacy/cryptopage.cpp:202
-#, kde-format
-msgid "Account Wizard"
-msgstr "Hesab bələdçisi"
+#~ msgid "Account Wizard"
+#~ msgstr "Hesab bələdçisi"
 
-#: legacy/cryptopage.cpp:81 legacy/cryptopage.cpp:102
-#, kde-format
-msgid "Error while generating new key pair for your account %1: %2"
-msgstr ""
-"%1 hesabınız üçün yeni açar cütünün yaradılması zamanı xıta baş verdi: %2"
+#~ msgid "Error while generating new key pair for your account %1: %2"
+#~ msgstr ""
+#~ "%1 hesabınız üçün yeni açar cütünün yaradılması zamanı xıta baş verdi: %2"
 
-#: legacy/cryptopage.cpp:257
-#, kde-format
-msgid "Could not detect valid key type"
-msgstr "Etibarlı açar növü aşkarlanmadı"
+#~ msgid "Could not detect valid key type"
+#~ msgstr "Etibarlı açar növü aşkarlanmadı"
 
-#: legacy/cryptopage.cpp:257 legacy/cryptopage.cpp:266
-#: legacy/cryptopage.cpp:282 legacy/cryptopage.cpp:289
-#, kde-format
-msgid "Import error"
-msgstr "İdxal xətası"
+#~ msgid "Import error"
+#~ msgstr "İdxal xətası"
 
-#: legacy/cryptopage.cpp:265
-#, kde-format
-msgid "Cannot read data from the certificate file: %1"
-msgstr "Verilənlər, sertifikat faylından oxuna bilmir: %1"
+#~ msgid "Cannot read data from the certificate file: %1"
+#~ msgstr "Verilənlər, sertifikat faylından oxuna bilmir: %1"
 
-#: legacy/cryptopage.cpp:281
-#, kde-format
-msgid "Failed to import key: %1"
-msgstr "Açar idxal edilə bilmədi: %1"
+#~ msgid "Failed to import key: %1"
+#~ msgstr "Açar idxal edilə bilmədi: %1"
 
-#: legacy/cryptopage.cpp:289
-#, kde-format
-msgid "Failed to import key."
-msgstr "Açar idxal edilə bilmədi."
+#~ msgid "Failed to import key."
+#~ msgstr "Açar idxal edilə bilmədi."
 
-#: legacy/cryptopage.cpp:316
-#, kde-format
-msgid "No key"
-msgstr "Açar yoxdur"
+#~ msgid "No key"
+#~ msgstr "Açar yoxdur"
 
-#: legacy/cryptopage.cpp:317
-#, kde-format
-msgid "Generate a new key pair"
-msgstr "Yeni açar cütü yaradın"
+#~ msgid "Generate a new key pair"
+#~ msgstr "Yeni açar cütü yaradın"
 
-#: legacy/cryptopage.cpp:318
-#, kde-format
-msgid "Import a key"
-msgstr "Açarı idxal edin"
+#~ msgid "Import a key"
+#~ msgstr "Açarı idxal edin"
 
-#: legacy/cryptopage.cpp:425
-#, kde-format
-msgid "Certificates"
-msgstr "Sertifikatlar"
+#~ msgid "Certificates"
+#~ msgstr "Sertifikatlar"
 
-#: legacy/cryptopage.cpp:426
-#, kde-format
-msgid "Any files"
-msgstr "İstənilən fayllar"
+#~ msgid "Any files"
+#~ msgstr "İstənilən fayllar"
 
-#: legacy/cryptopage.cpp:429
-#, kde-format
-msgid "Select Certificate File"
-msgstr "Sertifikat faylını seçin"
+#~ msgid "Select Certificate File"
+#~ msgstr "Sertifikat faylını seçin"
 
-#: legacy/cryptopage.cpp:435
-#, kde-format
-msgid "Importing key..."
-msgstr "Açarlar idxal olunur"
+#~ msgid "Importing key..."
+#~ msgstr "Açarlar idxal olunur"
 
-#: legacy/ispdb.cpp:367
-#, kde-format
-msgid "Lookup configuration: Email provider"
-msgstr "Axtarış tənzimlənməsi: E-poçt təhcizatçısı"
+#~ msgid "Lookup configuration: Email provider"
+#~ msgstr "Axtarış tənzimlənməsi: E-poçt təhcizatçısı"
 
-#: legacy/ispdb.cpp:370
-#, kde-format
-msgid "Lookup configuration: Trying common server name"
-msgstr "Axtarış tənzimləməsi: Ümumi serverin adını yoxlamaq"
+#~ msgid "Lookup configuration: Trying common server name"
+#~ msgstr "Axtarış tənzimləməsi: Ümumi serverin adını yoxlamaq"
 
-#: legacy/ispdb.cpp:373
-#, kde-format
-msgid "Lookup configuration: Mozilla database"
-msgstr "Axtarış tənzimləməsi: Mozilla verilənlər bazası"
+#~ msgid "Lookup configuration: Mozilla database"
+#~ msgstr "Axtarış tənzimləməsi: Mozilla verilənlər bazası"
 
-#: legacy/key.cpp:66
-#, kde-format
-msgid "Skipping key publishing"
-msgstr "Açarın paylaşılması ötürülür"
+#~ msgid "Skipping key publishing"
+#~ msgstr "Açarın paylaşılması ötürülür"
 
-#: legacy/key.cpp:80 legacy/key.cpp:201
-#, kde-format
-msgid "Publishing OpenPGP key..."
-msgstr "OpenPGP açarının paylaşılması..."
+#~ msgid "Publishing OpenPGP key..."
+#~ msgstr "OpenPGP açarının paylaşılması..."
 
-#: legacy/key.cpp:94 legacy/key.cpp:121 legacy/key.cpp:191
-#, kde-format
-msgid "Key publishing was canceled."
-msgstr "Açar paylaşımı ləğv edildi."
+#~ msgid "Key publishing was canceled."
+#~ msgstr "Açar paylaşımı ləğv edildi."
 
-#: legacy/key.cpp:100
-#, kde-format
-msgid "Key publishing failed: not online, or GnuPG too old."
-msgstr "Açar paylaşımı alınmadı: şəbəkədə deyil və ya GnuPG çox köhnədir."
+#~ msgid "Key publishing failed: not online, or GnuPG too old."
+#~ msgstr "Açar paylaşımı alınmadı: şəbəkədə deyil və ya GnuPG çox köhnədir."
 
-#: legacy/key.cpp:103
-#, kde-format
-msgid "Your email provider does not support key publishing."
-msgstr "Sizin e-poçt təhcizatçınız açar paylaşımını dəstəkləmir."
+#~ msgid "Your email provider does not support key publishing."
+#~ msgstr "Sizin e-poçt təhcizatçınız açar paylaşımını dəstəkləmir."
 
-#: legacy/key.cpp:126
-#, kde-format
-msgid "An error occurred while creating key publishing request."
-msgstr "Açar paylaşımı sorğusu yaradılması zamanı xəta baş verdi."
+#~ msgid "An error occurred while creating key publishing request."
+#~ msgstr "Açar paylaşımı sorğusu yaradılması zamanı xəta baş verdi."
 
-#: legacy/key.cpp:149
-#, kde-format
-msgid "Key publishing error: mail transport is not configured"
-msgstr "Açar paylaşımı xətası: poçt köçürməsi tənzimlənməyib"
+#~ msgid "Key publishing error: mail transport is not configured"
+#~ msgstr "Açar paylaşımı xətası: poçt köçürməsi tənzimlənməyib"
 
-#: legacy/key.cpp:162
-#, kde-format
-msgid "Key publishing error: failed to create request email"
-msgstr "Açar paylaşımı xətası: sorğu üçün məktub yaradıla bilmədi"
+#~ msgid "Key publishing error: failed to create request email"
+#~ msgstr "Açar paylaşımı xətası: sorğu üçün məktub yaradıla bilmədi"
 
-#: legacy/key.cpp:193
-#, kde-format
-msgid "Failed to send key publishing request: %1"
-msgstr "Açarın paylaşılması sorğusu göndərilə bilmədi: %1"
+#~ msgid "Failed to send key publishing request: %1"
+#~ msgstr "Açarın paylaşılması sorğusu göndərilə bilmədi: %1"
 
-#: legacy/key.cpp:195
-#, kde-format
-msgid "Key publishing request sent."
-msgstr "Açar paylaşımı sorğusu göndərildi."
+#~ msgid "Key publishing request sent."
+#~ msgstr "Açar paylaşımı sorğusu göndərildi."
 
-#: legacy/key.cpp:231
-#, kde-format
-msgid "Failed to publish the key."
-msgstr "Açar paylaşılması baş tutmadı."
+#~ msgid "Failed to publish the key."
+#~ msgstr "Açar paylaşılması baş tutmadı."
 
-#: legacy/key.cpp:237
-#, kde-format
-msgid "Key has been published on %1"
-msgstr "Açar, %1 üzərində paylaşıldı"
+#~ msgid "Key has been published on %1"
+#~ msgstr "Açar, %1 üzərində paylaşıldı"
 
-#: legacy/ldap.cpp:37
-#, kde-format
-msgid "Setting up LDAP server..."
-msgstr "LDAP serveri ayarlanır..."
+#~ msgid "Setting up LDAP server..."
+#~ msgstr "LDAP serveri ayarlanır..."
 
-#: legacy/ldap.cpp:40
-#, kde-format
-msgid "Needed parameters are missing for LDAP config: server '%1'"
-msgstr "LDAP tənzimləmə serveri '%1' üçün lazımi parametrlər çatışmır"
+#~ msgid "Needed parameters are missing for LDAP config: server '%1'"
+#~ msgstr "LDAP tənzimləmə serveri '%1' üçün lazımi parametrlər çatışmır"
 
-#: legacy/ldap.cpp:118
-#, kde-format
-msgid "LDAP set up."
-msgstr "LDAP ayarlandı."
+#~ msgid "LDAP set up."
+#~ msgstr "LDAP ayarlandı."
 
-#: legacy/ldap.cpp:136
-#, kde-format
-msgid "LDAP not configuring."
-msgstr "LDAP tənzimlənməsi."
+#~ msgid "LDAP not configuring."
+#~ msgstr "LDAP tənzimlənməsi."
 
-#: legacy/ldap.cpp:149
-#, kde-format
-msgid "Removed LDAP entry."
-msgstr "LDAP girişi silindi."
+#~ msgid "Removed LDAP entry."
+#~ msgstr "LDAP girişi silindi."
 
-#: legacy/ldap.cpp:155
-#, kde-format
-msgid "No config found to edit"
-msgstr "Düzəliş ediləcək ayar tapılmadı"
+#~ msgid "No config found to edit"
+#~ msgstr "Düzəliş ediləcək ayar tapılmadı"
 
-#: legacy/resource.cpp:167
-#, kde-format
-msgid "Removed resource instance for '%1'."
-msgstr "'%1' üçün mənbə nümunəsi silindi."
+#~ msgid "Removed resource instance for '%1'."
+#~ msgstr "'%1' üçün mənbə nümunəsi silindi."
 
-#: legacy/servertest.cpp:50
-#, kde-format
-msgid ""
-"There seems to be a problem in reaching this server or choosing a safe way "
-"to sent the credentials to server. We advise you to check the settings of "
-"the account and adjust it manually if needed."
-msgstr ""
-"Belə görünür ki, bu serverə qoşulmaqda və ya kimlik məlumatlarının serverə "
-"göndərilməsinin təhlükəsiz yolunun seçilməsində problem var. Biz sizə hesab "
-"ayarlarını yoxlamağı və lazım gələrsə onu əl ilə təyin etməyi məsləhət "
-"görürük."
+#~ msgid "Searching for autoconfiguration..."
+#~ msgstr "Avtomatik tənzimləmələr axtarılır..."
 
-#: legacy/servertest.cpp:53
-#, kde-format
-msgid "Autodetecting settings failed"
-msgstr "Ayarların avtomatik aşkarlanması baş tutmadı"
+#~ msgid "Autoconfiguration found."
+#~ msgstr "Avtomatik tənzimləmə tapıldı."
 
-#: legacy/setupautoconfigkolabfreebusy.cpp:74
-#: legacy/setupautoconfigkolabldap.cpp:72 legacy/setupispdb.cpp:136
-#, kde-format
-msgid "Searching for autoconfiguration..."
-msgstr "Avtomatik tənzimləmələr axtarılır..."
-
-#: legacy/setupautoconfigkolabfreebusy.cpp:99
-#: legacy/setupautoconfigkolabldap.cpp:97 legacy/setupispdb.cpp:161
-#, kde-format
-msgid "Autoconfiguration found."
-msgstr "Avtomatik tənzimləmə tapıldı."
-
-#: legacy/setupautoconfigkolabfreebusy.cpp:101
-#: legacy/setupautoconfigkolabldap.cpp:99 legacy/setupispdb.cpp:163
-#, kde-format
-msgid "Autoconfiguration failed."
-msgstr "Avtomatik tənzimləmə baş tutmadı."
+#~ msgid "Autoconfiguration failed."
+#~ msgstr "Avtomatik tənzimləmə baş tutmadı."
 
 #, fuzzy
 #~| msgid "Username:"

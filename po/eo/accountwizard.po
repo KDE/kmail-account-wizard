@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-20 01:34+0000\n"
+"POT-Creation-Date: 2023-12-22 01:39+0000\n"
 "PO-Revision-Date: 2023-12-20 07:31+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -161,55 +161,71 @@ msgstr "NTLM"
 msgid "GSSAPI"
 msgstr "GSSAPI"
 
-#: accountwizard/resource.cpp:67 legacy/resource.cpp:74
+#: accountwizard/resource.cpp:68
 #, kde-format
 msgid "Resource type '%1' is not available."
 msgstr "Rimeda tipo '%1' ne disponeblas."
 
-#: accountwizard/resource.cpp:80 legacy/resource.cpp:88
+#: accountwizard/resource.cpp:81
 #, kde-format
 msgid "Resource '%1' is already set up."
 msgstr "Rimedo '%1' jam estas agordita."
 
-#: accountwizard/resource.cpp:87 legacy/resource.cpp:94
+#: accountwizard/resource.cpp:88
 #, kde-format
 msgid "Creating resource instance for '%1'..."
 msgstr "Kreante rimedan ekzemplon por '%1'..."
 
-#: accountwizard/resource.cpp:96 legacy/resource.cpp:103
+#: accountwizard/resource.cpp:97
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Malsukcesis krei rimedan ekzemplon: %1"
 
-#: accountwizard/resource.cpp:103 legacy/resource.cpp:110
+#: accountwizard/resource.cpp:104
 #, kde-format
 msgid "Configuring resource instance..."
 msgstr "Agordante rimedan petskribon..."
 
-#: accountwizard/resource.cpp:107 legacy/resource.cpp:114
+#: accountwizard/resource.cpp:108
 #, kde-format
 msgid "Unable to configure resource instance."
 msgstr "Ne eblas agordi rimedan petskribon."
 
-#: accountwizard/resource.cpp:123 legacy/resource.cpp:129
+#: accountwizard/resource.cpp:124
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr "Ne eblis konverti valoron de agordo '%1' al postulata tipo %2."
 
-#: accountwizard/resource.cpp:130 legacy/resource.cpp:136
+#: accountwizard/resource.cpp:131
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Ne eblis agordi la agordon '%1': %2"
 
-#: accountwizard/resource.cpp:136 legacy/resource.cpp:142
+#: accountwizard/resource.cpp:137
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Ne eblis konservi agordojn: %1"
 
-#: accountwizard/resource.cpp:142 legacy/resource.cpp:151
+#: accountwizard/resource.cpp:143
 #, kde-format
 msgid "Resource setup completed."
 msgstr "Rimeda agordo finiĝis."
+
+#: accountwizard/servertest.cpp:51
+#, kde-format
+msgid ""
+"There seems to be a problem in reaching this server or choosing a safe way "
+"to sent the credentials to server. We advise you to check the settings of "
+"the account and adjust it manually if needed."
+msgstr ""
+"Ŝajnas esti problemo atingi ĉi tiun servilon aŭ elekti sekuran manieron "
+"sendi la akreditaĵojn al servilo. Ni konsilas vin kontroli la agordojn de la "
+"konto kaj ĝustigi ĝin permane se necese."
+
+#: accountwizard/servertest.cpp:54
+#, kde-format
+msgid "Autodetecting settings failed"
+msgstr "Aŭtomata detektado de agordoj malsukcesis"
 
 #: accountwizard/transport.cpp:63
 #, kde-format
@@ -373,7 +389,7 @@ msgstr "Disponeblaj agordoj"
 msgid "Manual Configuration"
 msgstr "Permana Agordo"
 
-#: apps/contents/ui/PersonalDataPage.qml:357
+#: apps/contents/ui/PersonalDataPage.qml:356
 #, kde-format
 msgid "Details"
 msgstr "Detaloj"
@@ -418,242 +434,134 @@ msgstr "Prizorganto"
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
 
-#: legacy/configfile.cpp:37
-#, kde-format
-msgid "Writing config file for %1..."
-msgstr "Skribante agordosieron por %1..."
+#~ msgid "Writing config file for %1..."
+#~ msgstr "Skribante agordosieron por %1..."
 
-#: legacy/configfile.cpp:54
-#, kde-format
-msgid "Config file for %1 is writing."
-msgstr "Agorda dosiero por %1 estas skribata."
+#~ msgid "Config file for %1 is writing."
+#~ msgstr "Agorda dosiero por %1 estas skribata."
 
-#: legacy/configfile.cpp:59
-#, kde-format
-msgid "Config file for %1 was not changed."
-msgstr "Agorddosiero por %1 ne estis ŝanĝita."
+#~ msgid "Config file for %1 was not changed."
+#~ msgstr "Agorddosiero por %1 ne estis ŝanĝita."
 
-#: legacy/configfile.cpp:90
-#, kde-format
-msgid "No given name for the configuration."
-msgstr "Neniu donita nomo por la agordo."
+#~ msgid "No given name for the configuration."
+#~ msgstr "Neniu donita nomo por la agordo."
 
-#: legacy/configfile.cpp:102
-#, kde-format
-msgid "Unknown configuration name '%1'"
-msgstr "Nekonata agorda nomo '%1'"
+#~ msgid "Unknown configuration name '%1'"
+#~ msgstr "Nekonata agorda nomo '%1'"
 
-#: legacy/cryptopage.cpp:80 legacy/cryptopage.cpp:101 legacy/cryptopage.cpp:202
-#, kde-format
-msgid "Account Wizard"
-msgstr "Konta Sorĉisto"
+#~ msgid "Account Wizard"
+#~ msgstr "Konta Sorĉisto"
 
-#: legacy/cryptopage.cpp:81 legacy/cryptopage.cpp:102
-#, kde-format
-msgid "Error while generating new key pair for your account %1: %2"
-msgstr "Eraro dum generado de nova ŝlosilparo por via konto %1: %2"
+#~ msgid "Error while generating new key pair for your account %1: %2"
+#~ msgstr "Eraro dum generado de nova ŝlosilparo por via konto %1: %2"
 
-#: legacy/cryptopage.cpp:257
-#, kde-format
-msgid "Could not detect valid key type"
-msgstr "Ne eblis detekti validan ŝlosiltipo"
+#~ msgid "Could not detect valid key type"
+#~ msgstr "Ne eblis detekti validan ŝlosiltipo"
 
-#: legacy/cryptopage.cpp:257 legacy/cryptopage.cpp:266
-#: legacy/cryptopage.cpp:282 legacy/cryptopage.cpp:289
-#, kde-format
-msgid "Import error"
-msgstr "Importa eraro"
+#~ msgid "Import error"
+#~ msgstr "Importa eraro"
 
-#: legacy/cryptopage.cpp:265
-#, kde-format
-msgid "Cannot read data from the certificate file: %1"
-msgstr "Ne povas legi datumojn de la atestilo: %1"
+#~ msgid "Cannot read data from the certificate file: %1"
+#~ msgstr "Ne povas legi datumojn de la atestilo: %1"
 
-#: legacy/cryptopage.cpp:281
-#, kde-format
-msgid "Failed to import key: %1"
-msgstr "Malsukcesis importi ŝlosilon: %1"
+#~ msgid "Failed to import key: %1"
+#~ msgstr "Malsukcesis importi ŝlosilon: %1"
 
-#: legacy/cryptopage.cpp:289
-#, kde-format
-msgid "Failed to import key."
-msgstr "Malsukcesis importi ŝlosilon."
+#~ msgid "Failed to import key."
+#~ msgstr "Malsukcesis importi ŝlosilon."
 
-#: legacy/cryptopage.cpp:316
-#, kde-format
-msgid "No key"
-msgstr "Neniu ŝlosilo"
+#~ msgid "No key"
+#~ msgstr "Neniu ŝlosilo"
 
-#: legacy/cryptopage.cpp:317
-#, kde-format
-msgid "Generate a new key pair"
-msgstr "Generi novan ŝlosilparon"
+#~ msgid "Generate a new key pair"
+#~ msgstr "Generi novan ŝlosilparon"
 
-#: legacy/cryptopage.cpp:318
-#, kde-format
-msgid "Import a key"
-msgstr "Importi ŝlosilon"
+#~ msgid "Import a key"
+#~ msgstr "Importi ŝlosilon"
 
-#: legacy/cryptopage.cpp:425
-#, kde-format
-msgid "Certificates"
-msgstr "Atestiloj"
+#~ msgid "Certificates"
+#~ msgstr "Atestiloj"
 
-#: legacy/cryptopage.cpp:426
-#, kde-format
-msgid "Any files"
-msgstr "Ajnaj dosieroj"
+#~ msgid "Any files"
+#~ msgstr "Ajnaj dosieroj"
 
-#: legacy/cryptopage.cpp:429
-#, kde-format
-msgid "Select Certificate File"
-msgstr "Elekti Atestildosieron"
+#~ msgid "Select Certificate File"
+#~ msgstr "Elekti Atestildosieron"
 
-#: legacy/cryptopage.cpp:435
-#, kde-format
-msgid "Importing key..."
-msgstr "Importante ŝlosilon..."
+#~ msgid "Importing key..."
+#~ msgstr "Importante ŝlosilon..."
 
-#: legacy/ispdb.cpp:367
-#, kde-format
-msgid "Lookup configuration: Email provider"
-msgstr "Serĉagordo: Retpoŝta provizanto"
+#~ msgid "Lookup configuration: Email provider"
+#~ msgstr "Serĉagordo: Retpoŝta provizanto"
 
-#: legacy/ispdb.cpp:370
-#, kde-format
-msgid "Lookup configuration: Trying common server name"
-msgstr "Serĉa agordo: provante komunan servilon nomon"
+#~ msgid "Lookup configuration: Trying common server name"
+#~ msgstr "Serĉa agordo: provante komunan servilon nomon"
 
-#: legacy/ispdb.cpp:373
-#, kde-format
-msgid "Lookup configuration: Mozilla database"
-msgstr "Serĉagordo: Mozilla-datumbazo"
+#~ msgid "Lookup configuration: Mozilla database"
+#~ msgstr "Serĉagordo: Mozilla-datumbazo"
 
-#: legacy/key.cpp:66
-#, kde-format
-msgid "Skipping key publishing"
-msgstr "Preterlasi ŝlosilan eldonadon"
+#~ msgid "Skipping key publishing"
+#~ msgstr "Preterlasi ŝlosilan eldonadon"
 
-#: legacy/key.cpp:80 legacy/key.cpp:201
-#, kde-format
-msgid "Publishing OpenPGP key..."
-msgstr "Eldonante OpenPGP-ŝlosilon..."
+#~ msgid "Publishing OpenPGP key..."
+#~ msgstr "Eldonante OpenPGP-ŝlosilon..."
 
-#: legacy/key.cpp:94 legacy/key.cpp:121 legacy/key.cpp:191
-#, kde-format
-msgid "Key publishing was canceled."
-msgstr "Ŝlosila eldonado estis nuligita."
+#~ msgid "Key publishing was canceled."
+#~ msgstr "Ŝlosila eldonado estis nuligita."
 
-#: legacy/key.cpp:100
-#, kde-format
-msgid "Key publishing failed: not online, or GnuPG too old."
-msgstr "Ŝlosila eldonado malsukcesis: ne rete, aŭ GnuPG tro malnova."
+#~ msgid "Key publishing failed: not online, or GnuPG too old."
+#~ msgstr "Ŝlosila eldonado malsukcesis: ne rete, aŭ GnuPG tro malnova."
 
-#: legacy/key.cpp:103
-#, kde-format
-msgid "Your email provider does not support key publishing."
-msgstr "Via retpoŝta provizanto ne subtenas ŝlosilan eldonadon."
+#~ msgid "Your email provider does not support key publishing."
+#~ msgstr "Via retpoŝta provizanto ne subtenas ŝlosilan eldonadon."
 
-#: legacy/key.cpp:126
-#, kde-format
-msgid "An error occurred while creating key publishing request."
-msgstr "Okazis eraro dum kreado de ŝlosila eldonpeto."
+#~ msgid "An error occurred while creating key publishing request."
+#~ msgstr "Okazis eraro dum kreado de ŝlosila eldonpeto."
 
-#: legacy/key.cpp:149
-#, kde-format
-msgid "Key publishing error: mail transport is not configured"
-msgstr "Ŝlosila eldoneraro: poŝta transporto ne estas agordita"
+#~ msgid "Key publishing error: mail transport is not configured"
+#~ msgstr "Ŝlosila eldoneraro: poŝta transporto ne estas agordita"
 
-#: legacy/key.cpp:162
-#, kde-format
-msgid "Key publishing error: failed to create request email"
-msgstr "Ŝlosila publikiga eraro: malsukcesis krei petan retpoŝton"
+#~ msgid "Key publishing error: failed to create request email"
+#~ msgstr "Ŝlosila publikiga eraro: malsukcesis krei petan retpoŝton"
 
-#: legacy/key.cpp:193
-#, kde-format
-msgid "Failed to send key publishing request: %1"
-msgstr "Malsukcesis sendi ŝlosilan eldonpeton: %1"
+#~ msgid "Failed to send key publishing request: %1"
+#~ msgstr "Malsukcesis sendi ŝlosilan eldonpeton: %1"
 
-#: legacy/key.cpp:195
-#, kde-format
-msgid "Key publishing request sent."
-msgstr "Ŝlosila eldonpeto sendita."
+#~ msgid "Key publishing request sent."
+#~ msgstr "Ŝlosila eldonpeto sendita."
 
-#: legacy/key.cpp:231
-#, kde-format
-msgid "Failed to publish the key."
-msgstr "Malsukcesis publikigi la ŝlosilon."
+#~ msgid "Failed to publish the key."
+#~ msgstr "Malsukcesis publikigi la ŝlosilon."
 
-#: legacy/key.cpp:237
-#, kde-format
-msgid "Key has been published on %1"
-msgstr "Ŝlosilo estis publikigita sur %1"
+#~ msgid "Key has been published on %1"
+#~ msgstr "Ŝlosilo estis publikigita sur %1"
 
-#: legacy/ldap.cpp:37
-#, kde-format
-msgid "Setting up LDAP server..."
-msgstr "Agordante LDAP-servilon..."
+#~ msgid "Setting up LDAP server..."
+#~ msgstr "Agordante LDAP-servilon..."
 
-#: legacy/ldap.cpp:40
-#, kde-format
-msgid "Needed parameters are missing for LDAP config: server '%1'"
-msgstr "Bezonataj parametroj mankas por LDAP-agordo: servilo '%1'"
+#~ msgid "Needed parameters are missing for LDAP config: server '%1'"
+#~ msgstr "Bezonataj parametroj mankas por LDAP-agordo: servilo '%1'"
 
-#: legacy/ldap.cpp:118
-#, kde-format
-msgid "LDAP set up."
-msgstr "LDAP instalita."
+#~ msgid "LDAP set up."
+#~ msgstr "LDAP instalita."
 
-#: legacy/ldap.cpp:136
-#, kde-format
-msgid "LDAP not configuring."
-msgstr "LDAP ne agordas."
+#~ msgid "LDAP not configuring."
+#~ msgstr "LDAP ne agordas."
 
-#: legacy/ldap.cpp:149
-#, kde-format
-msgid "Removed LDAP entry."
-msgstr "Forigita LDAP-eniro."
+#~ msgid "Removed LDAP entry."
+#~ msgstr "Forigita LDAP-eniro."
 
-#: legacy/ldap.cpp:155
-#, kde-format
-msgid "No config found to edit"
-msgstr "Neniu agordo trovita por redakti"
+#~ msgid "No config found to edit"
+#~ msgstr "Neniu agordo trovita por redakti"
 
-#: legacy/resource.cpp:167
-#, kde-format
-msgid "Removed resource instance for '%1'."
-msgstr "Forigita rimeda ekzemplo por '%1'."
+#~ msgid "Removed resource instance for '%1'."
+#~ msgstr "Forigita rimeda ekzemplo por '%1'."
 
-#: legacy/servertest.cpp:50
-#, kde-format
-msgid ""
-"There seems to be a problem in reaching this server or choosing a safe way "
-"to sent the credentials to server. We advise you to check the settings of "
-"the account and adjust it manually if needed."
-msgstr ""
-"Ŝajnas esti problemo atingi ĉi tiun servilon aŭ elekti sekuran manieron "
-"sendi la akreditaĵojn al servilo. Ni konsilas vin kontroli la agordojn de la "
-"konto kaj ĝustigi ĝin permane se necese."
+#~ msgid "Searching for autoconfiguration..."
+#~ msgstr "Serĉante aŭtomatan agordon..."
 
-#: legacy/servertest.cpp:53
-#, kde-format
-msgid "Autodetecting settings failed"
-msgstr "Aŭtomata detektado de agordoj malsukcesis"
+#~ msgid "Autoconfiguration found."
+#~ msgstr "Aŭtomata agordo trovita."
 
-#: legacy/setupautoconfigkolabfreebusy.cpp:74
-#: legacy/setupautoconfigkolabldap.cpp:72 legacy/setupispdb.cpp:136
-#, kde-format
-msgid "Searching for autoconfiguration..."
-msgstr "Serĉante aŭtomatan agordon..."
-
-#: legacy/setupautoconfigkolabfreebusy.cpp:99
-#: legacy/setupautoconfigkolabldap.cpp:97 legacy/setupispdb.cpp:161
-#, kde-format
-msgid "Autoconfiguration found."
-msgstr "Aŭtomata agordo trovita."
-
-#: legacy/setupautoconfigkolabfreebusy.cpp:101
-#: legacy/setupautoconfigkolabldap.cpp:99 legacy/setupispdb.cpp:163
-#, kde-format
-msgid "Autoconfiguration failed."
-msgstr "Aŭtomata agordo malsukcesis."
+#~ msgid "Autoconfiguration failed."
+#~ msgstr "Aŭtomata agordo malsukcesis."

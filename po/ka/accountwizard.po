@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-20 01:34+0000\n"
+"POT-Creation-Date: 2023-12-22 01:39+0000\n"
 "PO-Revision-Date: 2023-12-20 05:10+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -160,55 +160,71 @@ msgstr "NTLM"
 msgid "GSSAPI"
 msgstr "GSSAPI"
 
-#: accountwizard/resource.cpp:67 legacy/resource.cpp:74
+#: accountwizard/resource.cpp:68
 #, kde-format
 msgid "Resource type '%1' is not available."
 msgstr "რესურსის ტიპი \"%1\" ხელმიუწვდომელია."
 
-#: accountwizard/resource.cpp:80 legacy/resource.cpp:88
+#: accountwizard/resource.cpp:81
 #, kde-format
 msgid "Resource '%1' is already set up."
 msgstr "რესურსი '%1' უკვე გაშვებულია."
 
-#: accountwizard/resource.cpp:87 legacy/resource.cpp:94
+#: accountwizard/resource.cpp:88
 #, kde-format
 msgid "Creating resource instance for '%1'..."
 msgstr "მიმდინარეობს რესურსის გაშვებული ასლის შექმნა '%1'-სთვის..."
 
-#: accountwizard/resource.cpp:96 legacy/resource.cpp:103
+#: accountwizard/resource.cpp:97
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "რესურსის გაშვებული ასლის შექმნის შეცდომა: %1"
 
-#: accountwizard/resource.cpp:103 legacy/resource.cpp:110
+#: accountwizard/resource.cpp:104
 #, kde-format
 msgid "Configuring resource instance..."
 msgstr "რესურსის გაშვებული ასლის მორგება..."
 
-#: accountwizard/resource.cpp:107 legacy/resource.cpp:114
+#: accountwizard/resource.cpp:108
 #, kde-format
 msgid "Unable to configure resource instance."
 msgstr "რესურსის გაშვებული ასლის მორგების შეცდომა."
 
-#: accountwizard/resource.cpp:123 legacy/resource.cpp:129
+#: accountwizard/resource.cpp:124
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr "პარამეტრის მნიშვნელობის '%1' საჭირო ტიპამდე '%2' გარდაქმნის შეცდომა."
 
-#: accountwizard/resource.cpp:130 legacy/resource.cpp:136
+#: accountwizard/resource.cpp:131
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "'%1' პარამეტრის დაყენების შეცდომა: %2"
 
-#: accountwizard/resource.cpp:136 legacy/resource.cpp:142
+#: accountwizard/resource.cpp:137
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "პარამეტრების შენახვის შეცდომა: %1"
 
-#: accountwizard/resource.cpp:142 legacy/resource.cpp:151
+#: accountwizard/resource.cpp:143
 #, kde-format
 msgid "Resource setup completed."
 msgstr "რესურსის მორგება დასრულდა."
+
+#: accountwizard/servertest.cpp:51
+#, kde-format
+msgid ""
+"There seems to be a problem in reaching this server or choosing a safe way "
+"to sent the credentials to server. We advise you to check the settings of "
+"the account and adjust it manually if needed."
+msgstr ""
+"სერვერამდე წვდომის ან ავტორიზაციის დეტალების სერვერამდე უსაფრთხოდ გაგზავნის "
+"პრობლემა. გირჩევთ, გადაამოწმოთ ანგარიშის დეტალები და ხელით შეცვალოთ, თუ ეს "
+"საჭიროა."
+
+#: accountwizard/servertest.cpp:54
+#, kde-format
+msgid "Autodetecting settings failed"
+msgstr "პარამეტრების ავტომატური აღმოჩენის შეცდომა"
 
 #: accountwizard/transport.cpp:63
 #, kde-format
@@ -372,7 +388,7 @@ msgstr "ხელმისაწვდომი კონფიგურაც�
 msgid "Manual Configuration"
 msgstr "ხელით მორგება"
 
-#: apps/contents/ui/PersonalDataPage.qml:357
+#: apps/contents/ui/PersonalDataPage.qml:356
 #, kde-format
 msgid "Details"
 msgstr "დეტალები"
@@ -417,248 +433,140 @@ msgstr "წამყვანი პროგრამისტი"
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
 
-#: legacy/configfile.cpp:37
-#, kde-format
-msgid "Writing config file for %1..."
-msgstr "კონფიგურაცის ჩაწერის შეცდომა: %1..."
+#~ msgid "Writing config file for %1..."
+#~ msgstr "კონფიგურაცის ჩაწერის შეცდომა: %1..."
 
-#: legacy/configfile.cpp:54
-#, kde-format
-msgid "Config file for %1 is writing."
-msgstr "მიმდინარეობს %1-ის კონფიგურაციის ფაილის ჩაწერა."
+#~ msgid "Config file for %1 is writing."
+#~ msgstr "მიმდინარეობს %1-ის კონფიგურაციის ფაილის ჩაწერა."
 
-#: legacy/configfile.cpp:59
-#, kde-format
-msgid "Config file for %1 was not changed."
-msgstr "კონფიგურაციის ფაილი %1-სთვის არ შეცვლილა."
+#~ msgid "Config file for %1 was not changed."
+#~ msgstr "კონფიგურაციის ფაილი %1-სთვის არ შეცვლილა."
 
-#: legacy/configfile.cpp:90
-#, kde-format
-msgid "No given name for the configuration."
-msgstr "კონფიგურაციისთვის სახელი მითითებული არაა."
+#~ msgid "No given name for the configuration."
+#~ msgstr "კონფიგურაციისთვის სახელი მითითებული არაა."
 
-#: legacy/configfile.cpp:102
-#, kde-format
-msgid "Unknown configuration name '%1'"
-msgstr "უცნობი კონფიგურაციის სახელი '%1'"
+#~ msgid "Unknown configuration name '%1'"
+#~ msgstr "უცნობი კონფიგურაციის სახელი '%1'"
 
-#: legacy/cryptopage.cpp:80 legacy/cryptopage.cpp:101 legacy/cryptopage.cpp:202
-#, kde-format
-msgid "Account Wizard"
-msgstr "ანგარიშის მორგება"
+#~ msgid "Account Wizard"
+#~ msgstr "ანგარიშის მორგება"
 
-#: legacy/cryptopage.cpp:81 legacy/cryptopage.cpp:102
-#, kde-format
-msgid "Error while generating new key pair for your account %1: %2"
-msgstr "შეცდომა ახალი გასაღების წყვილის გენერაციისას ანგარიშისთვის %1: %2"
+#~ msgid "Error while generating new key pair for your account %1: %2"
+#~ msgstr "შეცდომა ახალი გასაღების წყვილის გენერაციისას ანგარიშისთვის %1: %2"
 
-#: legacy/cryptopage.cpp:257
-#, kde-format
-msgid "Could not detect valid key type"
-msgstr "სწორი გასაღების ტიპის პოვნის შეცდომა"
+#~ msgid "Could not detect valid key type"
+#~ msgstr "სწორი გასაღების ტიპის პოვნის შეცდომა"
 
-#: legacy/cryptopage.cpp:257 legacy/cryptopage.cpp:266
-#: legacy/cryptopage.cpp:282 legacy/cryptopage.cpp:289
-#, kde-format
-msgid "Import error"
-msgstr "შემოტანის შეცდომა"
+#~ msgid "Import error"
+#~ msgstr "შემოტანის შეცდომა"
 
-#: legacy/cryptopage.cpp:265
-#, kde-format
-msgid "Cannot read data from the certificate file: %1"
-msgstr "სერტიფიკატის ფაილიდან მონაცემების წაკითხვა შეუძლებელია: %1"
+#~ msgid "Cannot read data from the certificate file: %1"
+#~ msgstr "სერტიფიკატის ფაილიდან მონაცემების წაკითხვა შეუძლებელია: %1"
 
-#: legacy/cryptopage.cpp:281
-#, kde-format
-msgid "Failed to import key: %1"
-msgstr "გასაღების შემოტანის შეცდომა: %1"
+#~ msgid "Failed to import key: %1"
+#~ msgstr "გასაღების შემოტანის შეცდომა: %1"
 
-#: legacy/cryptopage.cpp:289
-#, kde-format
-msgid "Failed to import key."
-msgstr "გასაღების შემოტანის შეცდომა."
+#~ msgid "Failed to import key."
+#~ msgstr "გასაღების შემოტანის შეცდომა."
 
-#: legacy/cryptopage.cpp:316
-#, kde-format
-msgid "No key"
-msgstr "გასაღების გარეშე"
+#~ msgid "No key"
+#~ msgstr "გასაღების გარეშე"
 
-#: legacy/cryptopage.cpp:317
-#, kde-format
-msgid "Generate a new key pair"
-msgstr "გასაღების ახალი წყვილის გენერაცია"
+#~ msgid "Generate a new key pair"
+#~ msgstr "გასაღების ახალი წყვილის გენერაცია"
 
-#: legacy/cryptopage.cpp:318
-#, kde-format
-msgid "Import a key"
-msgstr "გასაღების შემოტანა"
+#~ msgid "Import a key"
+#~ msgstr "გასაღების შემოტანა"
 
-#: legacy/cryptopage.cpp:425
-#, kde-format
-msgid "Certificates"
-msgstr "სერტიფიკატები"
+#~ msgid "Certificates"
+#~ msgstr "სერტიფიკატები"
 
-#: legacy/cryptopage.cpp:426
-#, kde-format
-msgid "Any files"
-msgstr "ყველა ფაილი"
+#~ msgid "Any files"
+#~ msgstr "ყველა ფაილი"
 
-#: legacy/cryptopage.cpp:429
-#, kde-format
-msgid "Select Certificate File"
-msgstr "აირჩიეთ სერტიფიკატის ფაილი"
+#~ msgid "Select Certificate File"
+#~ msgstr "აირჩიეთ სერტიფიკატის ფაილი"
 
-#: legacy/cryptopage.cpp:435
-#, kde-format
-msgid "Importing key..."
-msgstr "გასაღების შემოტანა..."
+#~ msgid "Importing key..."
+#~ msgstr "გასაღების შემოტანა..."
 
-#: legacy/ispdb.cpp:367
-#, kde-format
-msgid "Lookup configuration: Email provider"
-msgstr "კონფიგურაციის მოძებნა: ელფოსტის მომწოდებელი"
+#~ msgid "Lookup configuration: Email provider"
+#~ msgstr "კონფიგურაციის მოძებნა: ელფოსტის მომწოდებელი"
 
-#: legacy/ispdb.cpp:370
-#, kde-format
-msgid "Lookup configuration: Trying common server name"
-msgstr "კონფიგურაციის მოძებნა: საერთო სერვერის სახელის ცდა"
+#~ msgid "Lookup configuration: Trying common server name"
+#~ msgstr "კონფიგურაციის მოძებნა: საერთო სერვერის სახელის ცდა"
 
-#: legacy/ispdb.cpp:373
-#, kde-format
-msgid "Lookup configuration: Mozilla database"
-msgstr "კონფიგურაციის მოძებნა: Mozilla-ის ბაზა"
+#~ msgid "Lookup configuration: Mozilla database"
+#~ msgstr "კონფიგურაციის მოძებნა: Mozilla-ის ბაზა"
 
-#: legacy/key.cpp:66
-#, kde-format
-msgid "Skipping key publishing"
-msgstr "გასაღების გამოქვეყნების გამოტოვება"
+#~ msgid "Skipping key publishing"
+#~ msgstr "გასაღების გამოქვეყნების გამოტოვება"
 
-#: legacy/key.cpp:80 legacy/key.cpp:201
-#, kde-format
-msgid "Publishing OpenPGP key..."
-msgstr "OpenPGP გასაღების გამოქვეყნება..."
+#~ msgid "Publishing OpenPGP key..."
+#~ msgstr "OpenPGP გასაღების გამოქვეყნება..."
 
-#: legacy/key.cpp:94 legacy/key.cpp:121 legacy/key.cpp:191
-#, kde-format
-msgid "Key publishing was canceled."
-msgstr "გასაღების გამოქვეყნება გაუქმდა."
+#~ msgid "Key publishing was canceled."
+#~ msgstr "გასაღების გამოქვეყნება გაუქმდა."
 
-#: legacy/key.cpp:100
-#, kde-format
-msgid "Key publishing failed: not online, or GnuPG too old."
-msgstr ""
-"გასაღბის გამოქვეყნების შეცდომა: ონლაინ არ ბრძანდებით ან GnuPG მეტისმეტად "
-"ძველია."
+#~ msgid "Key publishing failed: not online, or GnuPG too old."
+#~ msgstr ""
+#~ "გასაღბის გამოქვეყნების შეცდომა: ონლაინ არ ბრძანდებით ან GnuPG მეტისმეტად "
+#~ "ძველია."
 
-#: legacy/key.cpp:103
-#, kde-format
-msgid "Your email provider does not support key publishing."
-msgstr ""
-"თქვენს ელფოსტის მომწოდებელს გასაღების გამოქვეყნების მხარდაჭერა არ გააჩნია."
+#~ msgid "Your email provider does not support key publishing."
+#~ msgstr ""
+#~ "თქვენს ელფოსტის მომწოდებელს გასაღების გამოქვეყნების მხარდაჭერა არ გააჩნია."
 
-#: legacy/key.cpp:126
-#, kde-format
-msgid "An error occurred while creating key publishing request."
-msgstr "შეცდომა გასაღების გამოქვეყნების მოთხოვნის შექმნისას."
+#~ msgid "An error occurred while creating key publishing request."
+#~ msgstr "შეცდომა გასაღების გამოქვეყნების მოთხოვნის შექმნისას."
 
-#: legacy/key.cpp:149
-#, kde-format
-msgid "Key publishing error: mail transport is not configured"
-msgstr "გასაღების გამოქვეყნების შეცდომა: ელფოსტის ტრანსპორტი მორგებული არაა"
+#~ msgid "Key publishing error: mail transport is not configured"
+#~ msgstr "გასაღების გამოქვეყნების შეცდომა: ელფოსტის ტრანსპორტი მორგებული არაა"
 
-#: legacy/key.cpp:162
-#, kde-format
-msgid "Key publishing error: failed to create request email"
-msgstr "გასაღების გამოქვეყნების შეცდომა: მოთხოვნის ელფოსტის შექმნის შეცდომა"
+#~ msgid "Key publishing error: failed to create request email"
+#~ msgstr "გასაღების გამოქვეყნების შეცდომა: მოთხოვნის ელფოსტის შექმნის შეცდომა"
 
-#: legacy/key.cpp:193
-#, kde-format
-msgid "Failed to send key publishing request: %1"
-msgstr "გასაღების გამოქვეყნების მოთხოვნის გაგზავნის შეცდომა: %1"
+#~ msgid "Failed to send key publishing request: %1"
+#~ msgstr "გასაღების გამოქვეყნების მოთხოვნის გაგზავნის შეცდომა: %1"
 
-#: legacy/key.cpp:195
-#, kde-format
-msgid "Key publishing request sent."
-msgstr "გასაღების გამოქვეყნების მოთხოვნა გაგზავნილია."
+#~ msgid "Key publishing request sent."
+#~ msgstr "გასაღების გამოქვეყნების მოთხოვნა გაგზავნილია."
 
-#: legacy/key.cpp:231
-#, kde-format
-msgid "Failed to publish the key."
-msgstr "გასაღების გამოქვეყნების შეცდომა."
+#~ msgid "Failed to publish the key."
+#~ msgstr "გასაღების გამოქვეყნების შეცდომა."
 
-#: legacy/key.cpp:237
-#, kde-format
-msgid "Key has been published on %1"
-msgstr "გასაღები გამოქვეყნდა %1-ზე"
+#~ msgid "Key has been published on %1"
+#~ msgstr "გასაღები გამოქვეყნდა %1-ზე"
 
-#: legacy/ldap.cpp:37
-#, kde-format
-msgid "Setting up LDAP server..."
-msgstr "LDAP სერვერის მორგება..."
+#~ msgid "Setting up LDAP server..."
+#~ msgstr "LDAP სერვერის მორგება..."
 
-#: legacy/ldap.cpp:40
-#, kde-format
-msgid "Needed parameters are missing for LDAP config: server '%1'"
-msgstr "LDAP სერვერს აუცილებელი პარამეტრები აკლია: სერვერი '%1'"
+#~ msgid "Needed parameters are missing for LDAP config: server '%1'"
+#~ msgstr "LDAP სერვერს აუცილებელი პარამეტრები აკლია: სერვერი '%1'"
 
-#: legacy/ldap.cpp:118
-#, kde-format
-msgid "LDAP set up."
-msgstr "LDAP მორგებულია."
+#~ msgid "LDAP set up."
+#~ msgstr "LDAP მორგებულია."
 
-#: legacy/ldap.cpp:136
-#, kde-format
-msgid "LDAP not configuring."
-msgstr "LDAP მორგებული არაა."
+#~ msgid "LDAP not configuring."
+#~ msgstr "LDAP მორგებული არაა."
 
-#: legacy/ldap.cpp:149
-#, kde-format
-msgid "Removed LDAP entry."
-msgstr "LDAP ჩანაწერი წაშლილია."
+#~ msgid "Removed LDAP entry."
+#~ msgstr "LDAP ჩანაწერი წაშლილია."
 
-#: legacy/ldap.cpp:155
-#, kde-format
-msgid "No config found to edit"
-msgstr "ჩასასწორებელი კონფიგურაცია ვერ ვიპოვე"
+#~ msgid "No config found to edit"
+#~ msgstr "ჩასასწორებელი კონფიგურაცია ვერ ვიპოვე"
 
-#: legacy/resource.cpp:167
-#, kde-format
-msgid "Removed resource instance for '%1'."
-msgstr "რესურსის გაშვებული ასლი '%1' წაშლილია."
+#~ msgid "Removed resource instance for '%1'."
+#~ msgstr "რესურსის გაშვებული ასლი '%1' წაშლილია."
 
-#: legacy/servertest.cpp:50
-#, kde-format
-msgid ""
-"There seems to be a problem in reaching this server or choosing a safe way "
-"to sent the credentials to server. We advise you to check the settings of "
-"the account and adjust it manually if needed."
-msgstr ""
-"სერვერამდე წვდომის ან ავტორიზაციის დეტალების სერვერამდე უსაფრთხოდ გაგზავნის "
-"პრობლემა. გირჩევთ, გადაამოწმოთ ანგარიშის დეტალები და ხელით შეცვალოთ, თუ ეს "
-"საჭიროა."
+#~ msgid "Searching for autoconfiguration..."
+#~ msgstr "ავტოკონფიგურაციის ძებნა..."
 
-#: legacy/servertest.cpp:53
-#, kde-format
-msgid "Autodetecting settings failed"
-msgstr "პარამეტრების ავტომატური აღმოჩენის შეცდომა"
+#~ msgid "Autoconfiguration found."
+#~ msgstr "ავტოკონფიგურაცია ნაპოვნია."
 
-#: legacy/setupautoconfigkolabfreebusy.cpp:74
-#: legacy/setupautoconfigkolabldap.cpp:72 legacy/setupispdb.cpp:136
-#, kde-format
-msgid "Searching for autoconfiguration..."
-msgstr "ავტოკონფიგურაციის ძებნა..."
-
-#: legacy/setupautoconfigkolabfreebusy.cpp:99
-#: legacy/setupautoconfigkolabldap.cpp:97 legacy/setupispdb.cpp:161
-#, kde-format
-msgid "Autoconfiguration found."
-msgstr "ავტოკონფიგურაცია ნაპოვნია."
-
-#: legacy/setupautoconfigkolabfreebusy.cpp:101
-#: legacy/setupautoconfigkolabldap.cpp:99 legacy/setupispdb.cpp:163
-#, kde-format
-msgid "Autoconfiguration failed."
-msgstr "ავტოკონფიგურაციის შეცდომა."
+#~ msgid "Autoconfiguration failed."
+#~ msgstr "ავტოკონფიგურაციის შეცდომა."
 
 #~ msgid "Hostname:"
 #~ msgstr "ჰოსტის სახელი:"

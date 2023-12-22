@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-20 01:34+0000\n"
+"POT-Creation-Date: 2023-12-22 01:39+0000\n"
 "PO-Revision-Date: 2021-09-03 10:38+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -167,55 +167,71 @@ msgstr ""
 msgid "GSSAPI"
 msgstr ""
 
-#: accountwizard/resource.cpp:67 legacy/resource.cpp:74
+#: accountwizard/resource.cpp:68
 #, kde-format
 msgid "Resource type '%1' is not available."
 msgstr "Ο τύπος πόρου '%1' δεν είναι διαθέσιμος."
 
-#: accountwizard/resource.cpp:80 legacy/resource.cpp:88
+#: accountwizard/resource.cpp:81
 #, kde-format
 msgid "Resource '%1' is already set up."
 msgstr "Ο πόρος '%1' έχει ήδη οριστεί."
 
-#: accountwizard/resource.cpp:87 legacy/resource.cpp:94
+#: accountwizard/resource.cpp:88
 #, kde-format
 msgid "Creating resource instance for '%1'..."
 msgstr "Δημιουργία αντικειμένου πόρου για το '%1'..."
 
-#: accountwizard/resource.cpp:96 legacy/resource.cpp:103
+#: accountwizard/resource.cpp:97
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Αποτυχία δημιουργίας αντικειμένου πόρου: %1"
 
-#: accountwizard/resource.cpp:103 legacy/resource.cpp:110
+#: accountwizard/resource.cpp:104
 #, kde-format
 msgid "Configuring resource instance..."
 msgstr "Διαμόρφωση αντικειμένου πόρου..."
 
-#: accountwizard/resource.cpp:107 legacy/resource.cpp:114
+#: accountwizard/resource.cpp:108
 #, kde-format
 msgid "Unable to configure resource instance."
 msgstr "Αποτυχία διαμόρφωσης αντικειμένου πόρου."
 
-#: accountwizard/resource.cpp:123 legacy/resource.cpp:129
+#: accountwizard/resource.cpp:124
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr "Αδυναμία μετατροπής της ρύθμισης '%1' στον απαιτούμενο τύπο %2."
 
-#: accountwizard/resource.cpp:130 legacy/resource.cpp:136
+#: accountwizard/resource.cpp:131
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Αδυναμία ρύθμισης '%1': %2"
 
-#: accountwizard/resource.cpp:136 legacy/resource.cpp:142
+#: accountwizard/resource.cpp:137
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Αδυναμία αποθήκευσης ρυθμίσεων: %1"
 
-#: accountwizard/resource.cpp:142 legacy/resource.cpp:151
+#: accountwizard/resource.cpp:143
 #, kde-format
 msgid "Resource setup completed."
 msgstr "Η προετοιμασία του πόρου ολοκληρώθηκε."
+
+#: accountwizard/servertest.cpp:51
+#, kde-format
+msgid ""
+"There seems to be a problem in reaching this server or choosing a safe way "
+"to sent the credentials to server. We advise you to check the settings of "
+"the account and adjust it manually if needed."
+msgstr ""
+"Φαίνεται ότι υπάρχει πρόβλημα στην επαφή με τον εξυπηρετητή ή με την ασφαλή "
+"αποστολή των στοιχείων. Σας συμβουλεύουμε να ελέγξετε τις ρυθμίσεις του "
+"λογαριασμού και να τις προσαρμόσετε χειροκίνητα αν είναι απαραίτητο."
+
+#: accountwizard/servertest.cpp:54
+#, kde-format
+msgid "Autodetecting settings failed"
+msgstr "Αποτυχία αυτόματου εντοπισμού ρυθμίσεων"
 
 #: accountwizard/transport.cpp:63
 #, kde-format
@@ -391,7 +407,7 @@ msgstr ""
 msgid "Manual Configuration"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:357
+#: apps/contents/ui/PersonalDataPage.qml:356
 #, fuzzy, kde-format
 #| msgid "&Details..."
 msgid "Details"
@@ -438,253 +454,149 @@ msgstr ""
 msgid "Carl Schwan"
 msgstr ""
 
-#: legacy/configfile.cpp:37
-#, kde-format
-msgid "Writing config file for %1..."
-msgstr "Ενημέρωση αρχείου διαμόρφωσης για %1..."
+#~ msgid "Writing config file for %1..."
+#~ msgstr "Ενημέρωση αρχείου διαμόρφωσης για %1..."
 
-#: legacy/configfile.cpp:54
-#, kde-format
-msgid "Config file for %1 is writing."
-msgstr "Το αρχείο διαμόρφωσης %1 ενημερώνεται."
+#~ msgid "Config file for %1 is writing."
+#~ msgstr "Το αρχείο διαμόρφωσης %1 ενημερώνεται."
 
-#: legacy/configfile.cpp:59
-#, kde-format
-msgid "Config file for %1 was not changed."
-msgstr "Το αρχείο διαμόρφωσης %1 δεν άλλαξε."
+#~ msgid "Config file for %1 was not changed."
+#~ msgstr "Το αρχείο διαμόρφωσης %1 δεν άλλαξε."
 
-#: legacy/configfile.cpp:90
-#, kde-format
-msgid "No given name for the configuration."
-msgstr "Δεν δόθηκε όνομα για τη διαμόρφωση."
+#~ msgid "No given name for the configuration."
+#~ msgstr "Δεν δόθηκε όνομα για τη διαμόρφωση."
 
-#: legacy/configfile.cpp:102
-#, kde-format
-msgid "Unknown configuration name '%1'"
-msgstr "Άγνωστο όνομα διαμόρφωσης '%1'"
+#~ msgid "Unknown configuration name '%1'"
+#~ msgstr "Άγνωστο όνομα διαμόρφωσης '%1'"
 
-#: legacy/cryptopage.cpp:80 legacy/cryptopage.cpp:101 legacy/cryptopage.cpp:202
-#, kde-format
-msgid "Account Wizard"
-msgstr "Βοηθός λογαριασμών"
+#~ msgid "Account Wizard"
+#~ msgstr "Βοηθός λογαριασμών"
 
-#: legacy/cryptopage.cpp:81 legacy/cryptopage.cpp:102
-#, kde-format
-msgid "Error while generating new key pair for your account %1: %2"
-msgstr ""
-"Σφάλμα κατά τη δημιουργία νέου ζεύγους κλειδιών για τον λογαριασμό σας %1: %2"
+#~ msgid "Error while generating new key pair for your account %1: %2"
+#~ msgstr ""
+#~ "Σφάλμα κατά τη δημιουργία νέου ζεύγους κλειδιών για τον λογαριασμό σας "
+#~ "%1: %2"
 
-#: legacy/cryptopage.cpp:257
-#, kde-format
-msgid "Could not detect valid key type"
-msgstr "Αδυναμία εντοπισμού έγκυρου τύπου κλειδιού"
+#~ msgid "Could not detect valid key type"
+#~ msgstr "Αδυναμία εντοπισμού έγκυρου τύπου κλειδιού"
 
-#: legacy/cryptopage.cpp:257 legacy/cryptopage.cpp:266
-#: legacy/cryptopage.cpp:282 legacy/cryptopage.cpp:289
-#, kde-format
-msgid "Import error"
-msgstr "Σφάλμα εισαγωγής"
+#~ msgid "Import error"
+#~ msgstr "Σφάλμα εισαγωγής"
 
-#: legacy/cryptopage.cpp:265
-#, kde-format
-msgid "Cannot read data from the certificate file: %1"
-msgstr "Αδυναμία ανάγνωσης δεδομένων από το αρχείο πιστοποιητικού: %1"
+#~ msgid "Cannot read data from the certificate file: %1"
+#~ msgstr "Αδυναμία ανάγνωσης δεδομένων από το αρχείο πιστοποιητικού: %1"
 
-#: legacy/cryptopage.cpp:281
-#, kde-format
-msgid "Failed to import key: %1"
-msgstr "Αποτυχία εισαγωγής κλειδιού: %1"
+#~ msgid "Failed to import key: %1"
+#~ msgstr "Αποτυχία εισαγωγής κλειδιού: %1"
 
-#: legacy/cryptopage.cpp:289
-#, kde-format
-msgid "Failed to import key."
-msgstr "Αποτυχία εισαγωγής κλειδιού."
+#~ msgid "Failed to import key."
+#~ msgstr "Αποτυχία εισαγωγής κλειδιού."
 
-#: legacy/cryptopage.cpp:316
-#, kde-format
-msgid "No key"
-msgstr "Χωρίς κλειδί"
+#~ msgid "No key"
+#~ msgstr "Χωρίς κλειδί"
 
-#: legacy/cryptopage.cpp:317
-#, kde-format
-msgid "Generate a new key pair"
-msgstr "Δημιουργία νέου ζεύγους κλειδιών"
+#~ msgid "Generate a new key pair"
+#~ msgstr "Δημιουργία νέου ζεύγους κλειδιών"
 
-#: legacy/cryptopage.cpp:318
-#, kde-format
-msgid "Import a key"
-msgstr "Εισαγωγή κλειδιού"
+#~ msgid "Import a key"
+#~ msgstr "Εισαγωγή κλειδιού"
 
-#: legacy/cryptopage.cpp:425
-#, kde-format
-msgid "Certificates"
-msgstr "Πιστοποιητικά"
+#~ msgid "Certificates"
+#~ msgstr "Πιστοποιητικά"
 
-#: legacy/cryptopage.cpp:426
-#, kde-format
-msgid "Any files"
-msgstr "Οποιαδήποτε αρχεία"
+#~ msgid "Any files"
+#~ msgstr "Οποιαδήποτε αρχεία"
 
-#: legacy/cryptopage.cpp:429
-#, kde-format
-msgid "Select Certificate File"
-msgstr "Επιλογή αρχείου πιστοποιητικού"
+#~ msgid "Select Certificate File"
+#~ msgstr "Επιλογή αρχείου πιστοποιητικού"
 
-#: legacy/cryptopage.cpp:435
-#, kde-format
-msgid "Importing key..."
-msgstr "Γίνεται εισαγωγή κλειδιού..."
+#~ msgid "Importing key..."
+#~ msgstr "Γίνεται εισαγωγή κλειδιού..."
 
-#: legacy/ispdb.cpp:367
-#, kde-format
-msgid "Lookup configuration: Email provider"
-msgstr "Αναζήτηση διαμόρφωσης: Πάροχος ηλ. αλληλογραφίας"
+#~ msgid "Lookup configuration: Email provider"
+#~ msgstr "Αναζήτηση διαμόρφωσης: Πάροχος ηλ. αλληλογραφίας"
 
-#: legacy/ispdb.cpp:370
-#, kde-format
-msgid "Lookup configuration: Trying common server name"
-msgstr "Αναζήτηση διαμόρφωσης: Δοκιμή κοινού ονόματος εξυπηρετητή"
+#~ msgid "Lookup configuration: Trying common server name"
+#~ msgstr "Αναζήτηση διαμόρφωσης: Δοκιμή κοινού ονόματος εξυπηρετητή"
 
-#: legacy/ispdb.cpp:373
-#, kde-format
-msgid "Lookup configuration: Mozilla database"
-msgstr "Αναζήτηση διαμόρφωσης: Βάση δεδομένων Mozilla"
+#~ msgid "Lookup configuration: Mozilla database"
+#~ msgstr "Αναζήτηση διαμόρφωσης: Βάση δεδομένων Mozilla"
 
-#: legacy/key.cpp:66
-#, kde-format
-msgid "Skipping key publishing"
-msgstr "Παράλειψη δημοσίευσης κλειδιού"
+#~ msgid "Skipping key publishing"
+#~ msgstr "Παράλειψη δημοσίευσης κλειδιού"
 
-#: legacy/key.cpp:80 legacy/key.cpp:201
-#, kde-format
-msgid "Publishing OpenPGP key..."
-msgstr "Δημοσιεύεται το OpenPGP κλειδί..."
+#~ msgid "Publishing OpenPGP key..."
+#~ msgstr "Δημοσιεύεται το OpenPGP κλειδί..."
 
-#: legacy/key.cpp:94 legacy/key.cpp:121 legacy/key.cpp:191
-#, kde-format
-msgid "Key publishing was canceled."
-msgstr "Η δημοσίευση του κλειδιού ακυρώθηκε."
+#~ msgid "Key publishing was canceled."
+#~ msgstr "Η δημοσίευση του κλειδιού ακυρώθηκε."
 
-#: legacy/key.cpp:100
-#, kde-format
-msgid "Key publishing failed: not online, or GnuPG too old."
-msgstr ""
-"Αποτυχία δημοσίευσης κλειδιού: εκτός σύνδεσης ή το GnuPG είναι πολύ παλιό."
+#~ msgid "Key publishing failed: not online, or GnuPG too old."
+#~ msgstr ""
+#~ "Αποτυχία δημοσίευσης κλειδιού: εκτός σύνδεσης ή το GnuPG είναι πολύ παλιό."
 
-#: legacy/key.cpp:103
-#, kde-format
-msgid "Your email provider does not support key publishing."
-msgstr ""
-"Ο πάροχος της ηλεκτρονικής σας αλληλογραφίας δεν υποστηρίζει δημοσίευση "
-"κλειδιού."
+#~ msgid "Your email provider does not support key publishing."
+#~ msgstr ""
+#~ "Ο πάροχος της ηλεκτρονικής σας αλληλογραφίας δεν υποστηρίζει δημοσίευση "
+#~ "κλειδιού."
 
-#: legacy/key.cpp:126
-#, kde-format
-msgid "An error occurred while creating key publishing request."
-msgstr ""
-"Παρουσιάστηκε σφάλμα κατά τη δημιουργία της αίτησης για τη δημοσίευση του "
-"κλειδιού."
+#~ msgid "An error occurred while creating key publishing request."
+#~ msgstr ""
+#~ "Παρουσιάστηκε σφάλμα κατά τη δημιουργία της αίτησης για τη δημοσίευση του "
+#~ "κλειδιού."
 
-#: legacy/key.cpp:149
-#, kde-format
-msgid "Key publishing error: mail transport is not configured"
-msgstr "Σφάλμα δημοσίευσης κλειδιού: το ηλ. ταχυδρομείο δεν έχει διαμορφωθεί"
+#~ msgid "Key publishing error: mail transport is not configured"
+#~ msgstr ""
+#~ "Σφάλμα δημοσίευσης κλειδιού: το ηλ. ταχυδρομείο δεν έχει διαμορφωθεί"
 
-#: legacy/key.cpp:162
-#, kde-format
-msgid "Key publishing error: failed to create request email"
-msgstr ""
-"Σφάλμα δημοσίευσης κλειδιού: αποτυχία δημιουργίας του μηνύματος της αίτησης"
+#~ msgid "Key publishing error: failed to create request email"
+#~ msgstr ""
+#~ "Σφάλμα δημοσίευσης κλειδιού: αποτυχία δημιουργίας του μηνύματος της "
+#~ "αίτησης"
 
-#: legacy/key.cpp:193
-#, kde-format
-msgid "Failed to send key publishing request: %1"
-msgstr "Αποτυχία αποστολής της αίτησης για δημοσίευση του κλειδιού: %1"
+#~ msgid "Failed to send key publishing request: %1"
+#~ msgstr "Αποτυχία αποστολής της αίτησης για δημοσίευση του κλειδιού: %1"
 
-#: legacy/key.cpp:195
-#, kde-format
-msgid "Key publishing request sent."
-msgstr "Έγινε αποστολή της αίτησης για τη δημοσίευση του κλειδιού."
+#~ msgid "Key publishing request sent."
+#~ msgstr "Έγινε αποστολή της αίτησης για τη δημοσίευση του κλειδιού."
 
-#: legacy/key.cpp:231
-#, kde-format
-msgid "Failed to publish the key."
-msgstr "Αποτυχία δημοσίευσης του κλειδιού."
+#~ msgid "Failed to publish the key."
+#~ msgstr "Αποτυχία δημοσίευσης του κλειδιού."
 
-#: legacy/key.cpp:237
-#, kde-format
-msgid "Key has been published on %1"
-msgstr "Το κλειδί έχει δημοσιευθεί στο %1"
+#~ msgid "Key has been published on %1"
+#~ msgstr "Το κλειδί έχει δημοσιευθεί στο %1"
 
-#: legacy/ldap.cpp:37
-#, kde-format
-msgid "Setting up LDAP server..."
-msgstr "Προετοιμασία εξυπηρετητή LDAP..."
+#~ msgid "Setting up LDAP server..."
+#~ msgstr "Προετοιμασία εξυπηρετητή LDAP..."
 
-#: legacy/ldap.cpp:40
-#, kde-format
-msgid "Needed parameters are missing for LDAP config: server '%1'"
-msgstr ""
-"Λείπουν απαραίτητες παράμετροι για τη διαμόρφωση του LDAP: εξυπηρετητής '%1'"
+#~ msgid "Needed parameters are missing for LDAP config: server '%1'"
+#~ msgstr ""
+#~ "Λείπουν απαραίτητες παράμετροι για τη διαμόρφωση του LDAP: εξυπηρετητής "
+#~ "'%1'"
 
-#: legacy/ldap.cpp:118
-#, kde-format
-msgid "LDAP set up."
-msgstr "Προετοιμασία LDAP."
+#~ msgid "LDAP set up."
+#~ msgstr "Προετοιμασία LDAP."
 
-#: legacy/ldap.cpp:136
-#, kde-format
-msgid "LDAP not configuring."
-msgstr "Το LDAP δεν έχει διαμορφωθεί."
+#~ msgid "LDAP not configuring."
+#~ msgstr "Το LDAP δεν έχει διαμορφωθεί."
 
-#: legacy/ldap.cpp:149
-#, kde-format
-msgid "Removed LDAP entry."
-msgstr "διαγραμμένη εγγραφή LDAP."
+#~ msgid "Removed LDAP entry."
+#~ msgstr "διαγραμμένη εγγραφή LDAP."
 
-#: legacy/ldap.cpp:155
-#, kde-format
-msgid "No config found to edit"
-msgstr "Δε βρέθηκε διαμόρφωση για επεξεργασία"
+#~ msgid "No config found to edit"
+#~ msgstr "Δε βρέθηκε διαμόρφωση για επεξεργασία"
 
-#: legacy/resource.cpp:167
-#, kde-format
-msgid "Removed resource instance for '%1'."
-msgstr "Αφαίρεση αντικειμένου πόρου για το '%1'."
+#~ msgid "Removed resource instance for '%1'."
+#~ msgstr "Αφαίρεση αντικειμένου πόρου για το '%1'."
 
-#: legacy/servertest.cpp:50
-#, kde-format
-msgid ""
-"There seems to be a problem in reaching this server or choosing a safe way "
-"to sent the credentials to server. We advise you to check the settings of "
-"the account and adjust it manually if needed."
-msgstr ""
-"Φαίνεται ότι υπάρχει πρόβλημα στην επαφή με τον εξυπηρετητή ή με την ασφαλή "
-"αποστολή των στοιχείων. Σας συμβουλεύουμε να ελέγξετε τις ρυθμίσεις του "
-"λογαριασμού και να τις προσαρμόσετε χειροκίνητα αν είναι απαραίτητο."
+#~ msgid "Searching for autoconfiguration..."
+#~ msgstr "Αναζήτηση για αυτόματη διαμόρφωση..."
 
-#: legacy/servertest.cpp:53
-#, kde-format
-msgid "Autodetecting settings failed"
-msgstr "Αποτυχία αυτόματου εντοπισμού ρυθμίσεων"
+#~ msgid "Autoconfiguration found."
+#~ msgstr "Η αυτόματη διαμόρφωση βρέθηκε."
 
-#: legacy/setupautoconfigkolabfreebusy.cpp:74
-#: legacy/setupautoconfigkolabldap.cpp:72 legacy/setupispdb.cpp:136
-#, kde-format
-msgid "Searching for autoconfiguration..."
-msgstr "Αναζήτηση για αυτόματη διαμόρφωση..."
-
-#: legacy/setupautoconfigkolabfreebusy.cpp:99
-#: legacy/setupautoconfigkolabldap.cpp:97 legacy/setupispdb.cpp:161
-#, kde-format
-msgid "Autoconfiguration found."
-msgstr "Η αυτόματη διαμόρφωση βρέθηκε."
-
-#: legacy/setupautoconfigkolabfreebusy.cpp:101
-#: legacy/setupautoconfigkolabldap.cpp:99 legacy/setupispdb.cpp:163
-#, kde-format
-msgid "Autoconfiguration failed."
-msgstr "Αποτυχία αυτόματης διαμόρφωσης."
+#~ msgid "Autoconfiguration failed."
+#~ msgstr "Αποτυχία αυτόματης διαμόρφωσης."
 
 #, fuzzy
 #~| msgid "Username:"

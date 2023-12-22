@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-20 01:34+0000\n"
+"POT-Creation-Date: 2023-12-22 01:39+0000\n"
 "PO-Revision-Date: 2023-09-26 13:34+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -164,55 +164,71 @@ msgstr "NTLM"
 msgid "GSSAPI"
 msgstr "GSSAPI"
 
-#: accountwizard/resource.cpp:67 legacy/resource.cpp:74
+#: accountwizard/resource.cpp:68
 #, kde-format
 msgid "Resource type '%1' is not available."
 msgstr "Tyypin ”%1” resurssi ei ole käytettävissä."
 
-#: accountwizard/resource.cpp:80 legacy/resource.cpp:88
+#: accountwizard/resource.cpp:81
 #, kde-format
 msgid "Resource '%1' is already set up."
 msgstr "Resurssi ”%1” on jo asetettu."
 
-#: accountwizard/resource.cpp:87 legacy/resource.cpp:94
+#: accountwizard/resource.cpp:88
 #, kde-format
 msgid "Creating resource instance for '%1'..."
 msgstr "Luodaan resurssi-instanssia kohteelle ”%1”…"
 
-#: accountwizard/resource.cpp:96 legacy/resource.cpp:103
+#: accountwizard/resource.cpp:97
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Resurssi-instanssin luominen epäonnistui: %1"
 
-#: accountwizard/resource.cpp:103 legacy/resource.cpp:110
+#: accountwizard/resource.cpp:104
 #, kde-format
 msgid "Configuring resource instance..."
 msgstr "Asetetaan resurssi-instanssia…"
 
-#: accountwizard/resource.cpp:107 legacy/resource.cpp:114
+#: accountwizard/resource.cpp:108
 #, kde-format
 msgid "Unable to configure resource instance."
 msgstr "Resurssi-instanssia ei voida määrittää."
 
-#: accountwizard/resource.cpp:123 legacy/resource.cpp:129
+#: accountwizard/resource.cpp:124
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr "Asetuksen ”%1” arvoa ei voi muuntaa vaadittuun tyyppiin %2."
 
-#: accountwizard/resource.cpp:130 legacy/resource.cpp:136
+#: accountwizard/resource.cpp:131
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Asetusta ”%1” ei voida asettaa: %2"
 
-#: accountwizard/resource.cpp:136 legacy/resource.cpp:142
+#: accountwizard/resource.cpp:137
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Asetuksia ei voitu tallentaa: %1"
 
-#: accountwizard/resource.cpp:142 legacy/resource.cpp:151
+#: accountwizard/resource.cpp:143
 #, kde-format
 msgid "Resource setup completed."
 msgstr "Resurssin asetus valmis."
+
+#: accountwizard/servertest.cpp:51
+#, kde-format
+msgid ""
+"There seems to be a problem in reaching this server or choosing a safe way "
+"to sent the credentials to server. We advise you to check the settings of "
+"the account and adjust it manually if needed."
+msgstr ""
+"Joko palvelimeen yhdistämisessä tai turvallisen tunnistautumistietojen "
+"lähettämistavan valinnassa on ongelma. Tarkista tilisi asetukset ja korjaa "
+"ne, jos tarpeen."
+
+#: accountwizard/servertest.cpp:54
+#, kde-format
+msgid "Autodetecting settings failed"
+msgstr "Asetusten automaattitunnistus epäonnistui"
 
 #: accountwizard/transport.cpp:63
 #, kde-format
@@ -380,7 +396,7 @@ msgstr "Saatavilla olevat määritykset"
 msgid "Manual Configuration"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:357
+#: apps/contents/ui/PersonalDataPage.qml:356
 #, fuzzy, kde-format
 #| msgid "&Details..."
 msgid "Details"
@@ -426,247 +442,139 @@ msgstr "Ylläpitäjä"
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
 
-#: legacy/configfile.cpp:37
-#, kde-format
-msgid "Writing config file for %1..."
-msgstr "Kirjoitetaan kohteen %1 asetustiedostoa…"
+#~ msgid "Writing config file for %1..."
+#~ msgstr "Kirjoitetaan kohteen %1 asetustiedostoa…"
 
-#: legacy/configfile.cpp:54
-#, kde-format
-msgid "Config file for %1 is writing."
-msgstr "Kohteen %1 asetustiedostoa kirjoitetaan."
+#~ msgid "Config file for %1 is writing."
+#~ msgstr "Kohteen %1 asetustiedostoa kirjoitetaan."
 
-#: legacy/configfile.cpp:59
-#, kde-format
-msgid "Config file for %1 was not changed."
-msgstr "Kohteen %1 asetustiedostoa ei muutettu."
+#~ msgid "Config file for %1 was not changed."
+#~ msgstr "Kohteen %1 asetustiedostoa ei muutettu."
 
-#: legacy/configfile.cpp:90
-#, kde-format
-msgid "No given name for the configuration."
-msgstr "Määritykselle ei ole annettu nimeä."
+#~ msgid "No given name for the configuration."
+#~ msgstr "Määritykselle ei ole annettu nimeä."
 
-#: legacy/configfile.cpp:102
-#, kde-format
-msgid "Unknown configuration name '%1'"
-msgstr "Tuntematon määrityksen nimi ”%1”"
+#~ msgid "Unknown configuration name '%1'"
+#~ msgstr "Tuntematon määrityksen nimi ”%1”"
 
-#: legacy/cryptopage.cpp:80 legacy/cryptopage.cpp:101 legacy/cryptopage.cpp:202
-#, kde-format
-msgid "Account Wizard"
-msgstr "Opastettu tilin luonti"
+#~ msgid "Account Wizard"
+#~ msgstr "Opastettu tilin luonti"
 
-#: legacy/cryptopage.cpp:81 legacy/cryptopage.cpp:102
-#, kde-format
-msgid "Error while generating new key pair for your account %1: %2"
-msgstr "Virhe luotaessa uutta avainparia tilillesi %1: %2"
+#~ msgid "Error while generating new key pair for your account %1: %2"
+#~ msgstr "Virhe luotaessa uutta avainparia tilillesi %1: %2"
 
-#: legacy/cryptopage.cpp:257
-#, kde-format
-msgid "Could not detect valid key type"
-msgstr "Kelvollista avaintyyppiä ei tunnistettu"
+#~ msgid "Could not detect valid key type"
+#~ msgstr "Kelvollista avaintyyppiä ei tunnistettu"
 
-#: legacy/cryptopage.cpp:257 legacy/cryptopage.cpp:266
-#: legacy/cryptopage.cpp:282 legacy/cryptopage.cpp:289
-#, kde-format
-msgid "Import error"
-msgstr "Tuontivirhe"
+#~ msgid "Import error"
+#~ msgstr "Tuontivirhe"
 
-#: legacy/cryptopage.cpp:265
-#, kde-format
-msgid "Cannot read data from the certificate file: %1"
-msgstr "Ei voida lukea tietoja varmennetiedostosta: %1"
+#~ msgid "Cannot read data from the certificate file: %1"
+#~ msgstr "Ei voida lukea tietoja varmennetiedostosta: %1"
 
-#: legacy/cryptopage.cpp:281
-#, kde-format
-msgid "Failed to import key: %1"
-msgstr "Avaimen tuonti epäonnistui: %1"
+#~ msgid "Failed to import key: %1"
+#~ msgstr "Avaimen tuonti epäonnistui: %1"
 
-#: legacy/cryptopage.cpp:289
-#, kde-format
-msgid "Failed to import key."
-msgstr "Avaimen tuonti epäonnistui."
+#~ msgid "Failed to import key."
+#~ msgstr "Avaimen tuonti epäonnistui."
 
-#: legacy/cryptopage.cpp:316
-#, kde-format
-msgid "No key"
-msgstr "Ei avainta"
+#~ msgid "No key"
+#~ msgstr "Ei avainta"
 
-#: legacy/cryptopage.cpp:317
-#, kde-format
-msgid "Generate a new key pair"
-msgstr "Luo uusi avainpari"
+#~ msgid "Generate a new key pair"
+#~ msgstr "Luo uusi avainpari"
 
-#: legacy/cryptopage.cpp:318
-#, kde-format
-msgid "Import a key"
-msgstr "Tuo avain"
+#~ msgid "Import a key"
+#~ msgstr "Tuo avain"
 
-#: legacy/cryptopage.cpp:425
-#, kde-format
-msgid "Certificates"
-msgstr "Varmenteet"
+#~ msgid "Certificates"
+#~ msgstr "Varmenteet"
 
-#: legacy/cryptopage.cpp:426
-#, kde-format
-msgid "Any files"
-msgstr "Kaikki tiedostot"
+#~ msgid "Any files"
+#~ msgstr "Kaikki tiedostot"
 
-#: legacy/cryptopage.cpp:429
-#, kde-format
-msgid "Select Certificate File"
-msgstr "Valitse varmennetiedosto"
+#~ msgid "Select Certificate File"
+#~ msgstr "Valitse varmennetiedosto"
 
-#: legacy/cryptopage.cpp:435
-#, kde-format
-msgid "Importing key..."
-msgstr "Tuodaan avainta…"
+#~ msgid "Importing key..."
+#~ msgstr "Tuodaan avainta…"
 
 # *** TARKISTA: Onko ”lookup configuration” hakua koskevat asetukset (joksi ymmärsin tässä) vai jokin haku, joka tässä ilmoittelee toiminnastaan?
-#: legacy/ispdb.cpp:367
-#, kde-format
-msgid "Lookup configuration: Email provider"
-msgstr "Hakuasetukset: Sähköpostitarjoaja"
+#~ msgid "Lookup configuration: Email provider"
+#~ msgstr "Hakuasetukset: Sähköpostitarjoaja"
 
-#: legacy/ispdb.cpp:370
-#, kde-format
-msgid "Lookup configuration: Trying common server name"
-msgstr "Hakuasetukset: Yritetään yleistä palvelinnimeä"
+#~ msgid "Lookup configuration: Trying common server name"
+#~ msgstr "Hakuasetukset: Yritetään yleistä palvelinnimeä"
 
-#: legacy/ispdb.cpp:373
-#, kde-format
-msgid "Lookup configuration: Mozilla database"
-msgstr "Hakuasetukset: Mozillan tietokanta"
+#~ msgid "Lookup configuration: Mozilla database"
+#~ msgstr "Hakuasetukset: Mozillan tietokanta"
 
-#: legacy/key.cpp:66
-#, kde-format
-msgid "Skipping key publishing"
-msgstr "Ohitetaan avaimen julkaisu"
+#~ msgid "Skipping key publishing"
+#~ msgstr "Ohitetaan avaimen julkaisu"
 
-#: legacy/key.cpp:80 legacy/key.cpp:201
-#, kde-format
-msgid "Publishing OpenPGP key..."
-msgstr "Julkaistaan OpenPGP-avainta…"
+#~ msgid "Publishing OpenPGP key..."
+#~ msgstr "Julkaistaan OpenPGP-avainta…"
 
-#: legacy/key.cpp:94 legacy/key.cpp:121 legacy/key.cpp:191
-#, kde-format
-msgid "Key publishing was canceled."
-msgstr "Avaimen julkaisu peruttiin."
+#~ msgid "Key publishing was canceled."
+#~ msgstr "Avaimen julkaisu peruttiin."
 
-#: legacy/key.cpp:100
-#, kde-format
-msgid "Key publishing failed: not online, or GnuPG too old."
-msgstr ""
-"Avaimen julkaisu epäonnistui: ei olla verkossa tai GnuPG on liian vanha."
+#~ msgid "Key publishing failed: not online, or GnuPG too old."
+#~ msgstr ""
+#~ "Avaimen julkaisu epäonnistui: ei olla verkossa tai GnuPG on liian vanha."
 
-#: legacy/key.cpp:103
-#, kde-format
-msgid "Your email provider does not support key publishing."
-msgstr "Sähköpostintarjoajasi ei tue avaimen julkaisua."
+#~ msgid "Your email provider does not support key publishing."
+#~ msgstr "Sähköpostintarjoajasi ei tue avaimen julkaisua."
 
-#: legacy/key.cpp:126
-#, kde-format
-msgid "An error occurred while creating key publishing request."
-msgstr "Sattui virhe luotaessa avaimen julkaisupyyntöä."
+#~ msgid "An error occurred while creating key publishing request."
+#~ msgstr "Sattui virhe luotaessa avaimen julkaisupyyntöä."
 
-#: legacy/key.cpp:149
-#, kde-format
-msgid "Key publishing error: mail transport is not configured"
-msgstr "Avaimen julkaisuvirhe: postinvälitystä ei ole määritetty"
+#~ msgid "Key publishing error: mail transport is not configured"
+#~ msgstr "Avaimen julkaisuvirhe: postinvälitystä ei ole määritetty"
 
-#: legacy/key.cpp:162
-#, kde-format
-msgid "Key publishing error: failed to create request email"
-msgstr "Avaimen julkaisuvirhe: pyyntöviestin luonti epäonnistui"
+#~ msgid "Key publishing error: failed to create request email"
+#~ msgstr "Avaimen julkaisuvirhe: pyyntöviestin luonti epäonnistui"
 
-#: legacy/key.cpp:193
-#, kde-format
-msgid "Failed to send key publishing request: %1"
-msgstr "Avaimen julkaisupyynnön lähetys epäonnistui: %1"
+#~ msgid "Failed to send key publishing request: %1"
+#~ msgstr "Avaimen julkaisupyynnön lähetys epäonnistui: %1"
 
-#: legacy/key.cpp:195
-#, kde-format
-msgid "Key publishing request sent."
-msgstr "Avaimen julkaisupyyntö lähetetty."
+#~ msgid "Key publishing request sent."
+#~ msgstr "Avaimen julkaisupyyntö lähetetty."
 
-#: legacy/key.cpp:231
-#, kde-format
-msgid "Failed to publish the key."
-msgstr "Avaimen julkaisu epäonnistui."
+#~ msgid "Failed to publish the key."
+#~ msgstr "Avaimen julkaisu epäonnistui."
 
-#: legacy/key.cpp:237
-#, kde-format
-msgid "Key has been published on %1"
-msgstr "Avain on julkaistu kohteessa %1"
+#~ msgid "Key has been published on %1"
+#~ msgstr "Avain on julkaistu kohteessa %1"
 
-#: legacy/ldap.cpp:37
-#, kde-format
-msgid "Setting up LDAP server..."
-msgstr "Asetetaan LDAP-palvelinta…"
+#~ msgid "Setting up LDAP server..."
+#~ msgstr "Asetetaan LDAP-palvelinta…"
 
-#: legacy/ldap.cpp:40
-#, kde-format
-msgid "Needed parameters are missing for LDAP config: server '%1'"
-msgstr "LDAP-määrityksestä puuttuu vaadittuja parametreja: palvelin ”%1”"
+#~ msgid "Needed parameters are missing for LDAP config: server '%1'"
+#~ msgstr "LDAP-määrityksestä puuttuu vaadittuja parametreja: palvelin ”%1”"
 
-#: legacy/ldap.cpp:118
-#, kde-format
-msgid "LDAP set up."
-msgstr "LDAP asetettu."
+#~ msgid "LDAP set up."
+#~ msgstr "LDAP asetettu."
 
-#: legacy/ldap.cpp:136
-#, kde-format
-msgid "LDAP not configuring."
-msgstr "LDAP ei määrity."
+#~ msgid "LDAP not configuring."
+#~ msgstr "LDAP ei määrity."
 
-#: legacy/ldap.cpp:149
-#, kde-format
-msgid "Removed LDAP entry."
-msgstr "Poistettiin LDAP-tietue."
+#~ msgid "Removed LDAP entry."
+#~ msgstr "Poistettiin LDAP-tietue."
 
-#: legacy/ldap.cpp:155
-#, kde-format
-msgid "No config found to edit"
-msgstr "Muokattavaa määritystä ei löytynyt"
+#~ msgid "No config found to edit"
+#~ msgstr "Muokattavaa määritystä ei löytynyt"
 
-#: legacy/resource.cpp:167
-#, kde-format
-msgid "Removed resource instance for '%1'."
-msgstr "Poistettiin kohteen ”%1” resurssi-instanssi."
+#~ msgid "Removed resource instance for '%1'."
+#~ msgstr "Poistettiin kohteen ”%1” resurssi-instanssi."
 
-#: legacy/servertest.cpp:50
-#, kde-format
-msgid ""
-"There seems to be a problem in reaching this server or choosing a safe way "
-"to sent the credentials to server. We advise you to check the settings of "
-"the account and adjust it manually if needed."
-msgstr ""
-"Joko palvelimeen yhdistämisessä tai turvallisen tunnistautumistietojen "
-"lähettämistavan valinnassa on ongelma. Tarkista tilisi asetukset ja korjaa "
-"ne, jos tarpeen."
+#~ msgid "Searching for autoconfiguration..."
+#~ msgstr "Etsitään automaattimääritystä…"
 
-#: legacy/servertest.cpp:53
-#, kde-format
-msgid "Autodetecting settings failed"
-msgstr "Asetusten automaattitunnistus epäonnistui"
+#~ msgid "Autoconfiguration found."
+#~ msgstr "Löydettiin automaattimääritys."
 
-#: legacy/setupautoconfigkolabfreebusy.cpp:74
-#: legacy/setupautoconfigkolabldap.cpp:72 legacy/setupispdb.cpp:136
-#, kde-format
-msgid "Searching for autoconfiguration..."
-msgstr "Etsitään automaattimääritystä…"
-
-#: legacy/setupautoconfigkolabfreebusy.cpp:99
-#: legacy/setupautoconfigkolabldap.cpp:97 legacy/setupispdb.cpp:161
-#, kde-format
-msgid "Autoconfiguration found."
-msgstr "Löydettiin automaattimääritys."
-
-#: legacy/setupautoconfigkolabfreebusy.cpp:101
-#: legacy/setupautoconfigkolabldap.cpp:99 legacy/setupispdb.cpp:163
-#, kde-format
-msgid "Autoconfiguration failed."
-msgstr "Automaattimääritys epäonnistui."
+#~ msgid "Autoconfiguration failed."
+#~ msgstr "Automaattimääritys epäonnistui."
 
 #~ msgid "Hostname:"
 #~ msgstr "Konenimi:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-20 01:34+0000\n"
+"POT-Creation-Date: 2023-12-22 01:39+0000\n"
 "PO-Revision-Date: 2022-04-09 19:22+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -165,55 +165,71 @@ msgstr ""
 msgid "GSSAPI"
 msgstr ""
 
-#: accountwizard/resource.cpp:67 legacy/resource.cpp:74
+#: accountwizard/resource.cpp:68
 #, kde-format
 msgid "Resource type '%1' is not available."
 msgstr "Typ zdroja '%1' nie je dostupný."
 
-#: accountwizard/resource.cpp:80 legacy/resource.cpp:88
+#: accountwizard/resource.cpp:81
 #, kde-format
 msgid "Resource '%1' is already set up."
 msgstr "Zdroj '%1' je už nastavený."
 
-#: accountwizard/resource.cpp:87 legacy/resource.cpp:94
+#: accountwizard/resource.cpp:88
 #, kde-format
 msgid "Creating resource instance for '%1'..."
 msgstr "Vytváram inštanciu zdroja pre '%1'..."
 
-#: accountwizard/resource.cpp:96 legacy/resource.cpp:103
+#: accountwizard/resource.cpp:97
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Zlyhalo vytvorenie inštancie zdroja: %1"
 
-#: accountwizard/resource.cpp:103 legacy/resource.cpp:110
+#: accountwizard/resource.cpp:104
 #, kde-format
 msgid "Configuring resource instance..."
 msgstr "Nastavovanie inštancie zdroja..."
 
-#: accountwizard/resource.cpp:107 legacy/resource.cpp:114
+#: accountwizard/resource.cpp:108
 #, kde-format
 msgid "Unable to configure resource instance."
 msgstr "Zlyhalo nastavenie inštancie zdroja."
 
-#: accountwizard/resource.cpp:123 legacy/resource.cpp:129
+#: accountwizard/resource.cpp:124
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr "Nemôžem previesť hodnotu nastavenia '%1' na vyžadovaný typ %2."
 
-#: accountwizard/resource.cpp:130 legacy/resource.cpp:136
+#: accountwizard/resource.cpp:131
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Nemôžem nastaviť nastavenie '%1': %2"
 
-#: accountwizard/resource.cpp:136 legacy/resource.cpp:142
+#: accountwizard/resource.cpp:137
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Nemôžem uložiť nastavenie %1"
 
-#: accountwizard/resource.cpp:142 legacy/resource.cpp:151
+#: accountwizard/resource.cpp:143
 #, kde-format
 msgid "Resource setup completed."
 msgstr "Nastavenie zdroja dokončené."
+
+#: accountwizard/servertest.cpp:51
+#, kde-format
+msgid ""
+"There seems to be a problem in reaching this server or choosing a safe way "
+"to sent the credentials to server. We advise you to check the settings of "
+"the account and adjust it manually if needed."
+msgstr ""
+"Zdá sa, že je problém s dostupnosťou servera alebo zvolením bezpečnej cesty "
+"na poslanie prihlasovacích údajov na server. Radíme vám skontrolovať "
+"nastavenie účtu a upraviť ich ručne, ak je treba."
+
+#: accountwizard/servertest.cpp:54
+#, kde-format
+msgid "Autodetecting settings failed"
+msgstr "Autodetekcia nastavení zlyhala"
 
 #: accountwizard/transport.cpp:63
 #, kde-format
@@ -387,7 +403,7 @@ msgstr ""
 msgid "Manual Configuration"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:357
+#: apps/contents/ui/PersonalDataPage.qml:356
 #, fuzzy, kde-format
 #| msgid "&Details..."
 msgid "Details"
@@ -434,245 +450,137 @@ msgstr ""
 msgid "Carl Schwan"
 msgstr ""
 
-#: legacy/configfile.cpp:37
-#, kde-format
-msgid "Writing config file for %1..."
-msgstr "Zapisujem konfiguračný súbor pre %1..."
+#~ msgid "Writing config file for %1..."
+#~ msgstr "Zapisujem konfiguračný súbor pre %1..."
 
-#: legacy/configfile.cpp:54
-#, kde-format
-msgid "Config file for %1 is writing."
-msgstr "Konfiguračný súbor pre %1 sa zapisuje."
+#~ msgid "Config file for %1 is writing."
+#~ msgstr "Konfiguračný súbor pre %1 sa zapisuje."
 
-#: legacy/configfile.cpp:59
-#, kde-format
-msgid "Config file for %1 was not changed."
-msgstr "Konfiguračný súbor pre %1 nebol zmenený."
+#~ msgid "Config file for %1 was not changed."
+#~ msgstr "Konfiguračný súbor pre %1 nebol zmenený."
 
-#: legacy/configfile.cpp:90
-#, kde-format
-msgid "No given name for the configuration."
-msgstr "Nie je zadané meno pre nastavenie-"
+#~ msgid "No given name for the configuration."
+#~ msgstr "Nie je zadané meno pre nastavenie-"
 
-#: legacy/configfile.cpp:102
-#, kde-format
-msgid "Unknown configuration name '%1'"
-msgstr "Neznámy konfiguračný názov '%1'"
+#~ msgid "Unknown configuration name '%1'"
+#~ msgstr "Neznámy konfiguračný názov '%1'"
 
-#: legacy/cryptopage.cpp:80 legacy/cryptopage.cpp:101 legacy/cryptopage.cpp:202
-#, kde-format
-msgid "Account Wizard"
-msgstr "Sprievodca účtom"
+#~ msgid "Account Wizard"
+#~ msgstr "Sprievodca účtom"
 
-#: legacy/cryptopage.cpp:81 legacy/cryptopage.cpp:102
-#, kde-format
-msgid "Error while generating new key pair for your account %1: %2"
-msgstr "Chyba počas generovania nového páru pre váš účet: %1: %2"
+#~ msgid "Error while generating new key pair for your account %1: %2"
+#~ msgstr "Chyba počas generovania nového páru pre váš účet: %1: %2"
 
-#: legacy/cryptopage.cpp:257
-#, kde-format
-msgid "Could not detect valid key type"
-msgstr "Nemôžem zistiť platný typ kľúča"
+#~ msgid "Could not detect valid key type"
+#~ msgstr "Nemôžem zistiť platný typ kľúča"
 
-#: legacy/cryptopage.cpp:257 legacy/cryptopage.cpp:266
-#: legacy/cryptopage.cpp:282 legacy/cryptopage.cpp:289
-#, kde-format
-msgid "Import error"
-msgstr "Chyba importu"
+#~ msgid "Import error"
+#~ msgstr "Chyba importu"
 
-#: legacy/cryptopage.cpp:265
-#, kde-format
-msgid "Cannot read data from the certificate file: %1"
-msgstr "Nemôžem čítať dáta zo súboru certifikátu: %1"
+#~ msgid "Cannot read data from the certificate file: %1"
+#~ msgstr "Nemôžem čítať dáta zo súboru certifikátu: %1"
 
-#: legacy/cryptopage.cpp:281
-#, kde-format
-msgid "Failed to import key: %1"
-msgstr "Zlyhal import kľúča: %1"
+#~ msgid "Failed to import key: %1"
+#~ msgstr "Zlyhal import kľúča: %1"
 
-#: legacy/cryptopage.cpp:289
-#, kde-format
-msgid "Failed to import key."
-msgstr "Zlyhal import kľúča."
+#~ msgid "Failed to import key."
+#~ msgstr "Zlyhal import kľúča."
 
-#: legacy/cryptopage.cpp:316
-#, kde-format
-msgid "No key"
-msgstr "Žiadny kľúč"
+#~ msgid "No key"
+#~ msgstr "Žiadny kľúč"
 
-#: legacy/cryptopage.cpp:317
-#, kde-format
-msgid "Generate a new key pair"
-msgstr "Generujem nový pár kľúčov"
+#~ msgid "Generate a new key pair"
+#~ msgstr "Generujem nový pár kľúčov"
 
-#: legacy/cryptopage.cpp:318
-#, kde-format
-msgid "Import a key"
-msgstr "Importovať kľúč"
+#~ msgid "Import a key"
+#~ msgstr "Importovať kľúč"
 
-#: legacy/cryptopage.cpp:425
-#, kde-format
-msgid "Certificates"
-msgstr "Certifikáty"
+#~ msgid "Certificates"
+#~ msgstr "Certifikáty"
 
-#: legacy/cryptopage.cpp:426
-#, kde-format
-msgid "Any files"
-msgstr "Akékoľvek súbory"
+#~ msgid "Any files"
+#~ msgstr "Akékoľvek súbory"
 
-#: legacy/cryptopage.cpp:429
-#, kde-format
-msgid "Select Certificate File"
-msgstr "Vyberte súbor certifikátu"
+#~ msgid "Select Certificate File"
+#~ msgstr "Vyberte súbor certifikátu"
 
-#: legacy/cryptopage.cpp:435
-#, kde-format
-msgid "Importing key..."
-msgstr "Importujem kľúč..."
+#~ msgid "Importing key..."
+#~ msgstr "Importujem kľúč..."
 
-#: legacy/ispdb.cpp:367
-#, kde-format
-msgid "Lookup configuration: Email provider"
-msgstr "Nastavenie vyhľadávania: Poskytovateľ e-mailu"
+#~ msgid "Lookup configuration: Email provider"
+#~ msgstr "Nastavenie vyhľadávania: Poskytovateľ e-mailu"
 
-#: legacy/ispdb.cpp:370
-#, kde-format
-msgid "Lookup configuration: Trying common server name"
-msgstr "Nastavenie vyhľadávania: Skúšam bežný názov servera"
+#~ msgid "Lookup configuration: Trying common server name"
+#~ msgstr "Nastavenie vyhľadávania: Skúšam bežný názov servera"
 
-#: legacy/ispdb.cpp:373
-#, kde-format
-msgid "Lookup configuration: Mozilla database"
-msgstr "Nastavenie vyhľadávania: Databáza Mozilla"
+#~ msgid "Lookup configuration: Mozilla database"
+#~ msgstr "Nastavenie vyhľadávania: Databáza Mozilla"
 
-#: legacy/key.cpp:66
-#, kde-format
-msgid "Skipping key publishing"
-msgstr "Preskakujem publikovanie kľúča"
+#~ msgid "Skipping key publishing"
+#~ msgstr "Preskakujem publikovanie kľúča"
 
-#: legacy/key.cpp:80 legacy/key.cpp:201
-#, kde-format
-msgid "Publishing OpenPGP key..."
-msgstr "Publikujem OpenPGP kľúč..."
+#~ msgid "Publishing OpenPGP key..."
+#~ msgstr "Publikujem OpenPGP kľúč..."
 
-#: legacy/key.cpp:94 legacy/key.cpp:121 legacy/key.cpp:191
-#, kde-format
-msgid "Key publishing was canceled."
-msgstr "Publikovanie kľúča bolo zrušené."
+#~ msgid "Key publishing was canceled."
+#~ msgstr "Publikovanie kľúča bolo zrušené."
 
-#: legacy/key.cpp:100
-#, kde-format
-msgid "Key publishing failed: not online, or GnuPG too old."
-msgstr "Publikovanie kľúča zlyhalo: nie online alebo GnuPG príliš staré."
+#~ msgid "Key publishing failed: not online, or GnuPG too old."
+#~ msgstr "Publikovanie kľúča zlyhalo: nie online alebo GnuPG príliš staré."
 
-#: legacy/key.cpp:103
-#, kde-format
-msgid "Your email provider does not support key publishing."
-msgstr "Váš poskytovateľ e-mailu nepodporuje publikovanie kľúčov."
+#~ msgid "Your email provider does not support key publishing."
+#~ msgstr "Váš poskytovateľ e-mailu nepodporuje publikovanie kľúčov."
 
-#: legacy/key.cpp:126
-#, kde-format
-msgid "An error occurred while creating key publishing request."
-msgstr "Nastala chyba počas vytvárania požiadavky na publikovanie kľúča."
+#~ msgid "An error occurred while creating key publishing request."
+#~ msgstr "Nastala chyba počas vytvárania požiadavky na publikovanie kľúča."
 
-#: legacy/key.cpp:149
-#, kde-format
-msgid "Key publishing error: mail transport is not configured"
-msgstr "Chyba publikovania kľúča: poštový prenos nie je nastavený"
+#~ msgid "Key publishing error: mail transport is not configured"
+#~ msgstr "Chyba publikovania kľúča: poštový prenos nie je nastavený"
 
-#: legacy/key.cpp:162
-#, kde-format
-msgid "Key publishing error: failed to create request email"
-msgstr "Chyba publikovania kľúča: zlyhalo vytvorenie e-mailu požiadavky"
+#~ msgid "Key publishing error: failed to create request email"
+#~ msgstr "Chyba publikovania kľúča: zlyhalo vytvorenie e-mailu požiadavky"
 
-#: legacy/key.cpp:193
-#, kde-format
-msgid "Failed to send key publishing request: %1"
-msgstr "Zlyhalo poslanie požiadavky na publikovanie kľúča: %1"
+#~ msgid "Failed to send key publishing request: %1"
+#~ msgstr "Zlyhalo poslanie požiadavky na publikovanie kľúča: %1"
 
-#: legacy/key.cpp:195
-#, kde-format
-msgid "Key publishing request sent."
-msgstr "Požiadavka na publikovanie kľúča odoslaná."
+#~ msgid "Key publishing request sent."
+#~ msgstr "Požiadavka na publikovanie kľúča odoslaná."
 
-#: legacy/key.cpp:231
-#, kde-format
-msgid "Failed to publish the key."
-msgstr "Zlyhalo publikovanie kľúča."
+#~ msgid "Failed to publish the key."
+#~ msgstr "Zlyhalo publikovanie kľúča."
 
-#: legacy/key.cpp:237
-#, kde-format
-msgid "Key has been published on %1"
-msgstr "Kľúč bol publikovaný na %1"
+#~ msgid "Key has been published on %1"
+#~ msgstr "Kľúč bol publikovaný na %1"
 
-#: legacy/ldap.cpp:37
-#, kde-format
-msgid "Setting up LDAP server..."
-msgstr "Nastavovanie LDAP servera..."
+#~ msgid "Setting up LDAP server..."
+#~ msgstr "Nastavovanie LDAP servera..."
 
-#: legacy/ldap.cpp:40
-#, kde-format
-msgid "Needed parameters are missing for LDAP config: server '%1'"
-msgstr "Potrebné parametre chýbajú v nastavení LDAP: server '%1'"
+#~ msgid "Needed parameters are missing for LDAP config: server '%1'"
+#~ msgstr "Potrebné parametre chýbajú v nastavení LDAP: server '%1'"
 
-#: legacy/ldap.cpp:118
-#, kde-format
-msgid "LDAP set up."
-msgstr "LDAP nastavený."
+#~ msgid "LDAP set up."
+#~ msgstr "LDAP nastavený."
 
-#: legacy/ldap.cpp:136
-#, kde-format
-msgid "LDAP not configuring."
-msgstr "LDAP nenastavený."
+#~ msgid "LDAP not configuring."
+#~ msgstr "LDAP nenastavený."
 
-#: legacy/ldap.cpp:149
-#, kde-format
-msgid "Removed LDAP entry."
-msgstr "Odstránená LDAP položka."
+#~ msgid "Removed LDAP entry."
+#~ msgstr "Odstránená LDAP položka."
 
-#: legacy/ldap.cpp:155
-#, kde-format
-msgid "No config found to edit"
-msgstr "Nenájdené nastavenie na úpravu"
+#~ msgid "No config found to edit"
+#~ msgstr "Nenájdené nastavenie na úpravu"
 
-#: legacy/resource.cpp:167
-#, kde-format
-msgid "Removed resource instance for '%1'."
-msgstr "Odstránená inštancia zdroja pre '%1'."
+#~ msgid "Removed resource instance for '%1'."
+#~ msgstr "Odstránená inštancia zdroja pre '%1'."
 
-#: legacy/servertest.cpp:50
-#, kde-format
-msgid ""
-"There seems to be a problem in reaching this server or choosing a safe way "
-"to sent the credentials to server. We advise you to check the settings of "
-"the account and adjust it manually if needed."
-msgstr ""
-"Zdá sa, že je problém s dostupnosťou servera alebo zvolením bezpečnej cesty "
-"na poslanie prihlasovacích údajov na server. Radíme vám skontrolovať "
-"nastavenie účtu a upraviť ich ručne, ak je treba."
+#~ msgid "Searching for autoconfiguration..."
+#~ msgstr "Hľadám automatické nastavenie..."
 
-#: legacy/servertest.cpp:53
-#, kde-format
-msgid "Autodetecting settings failed"
-msgstr "Autodetekcia nastavení zlyhala"
+#~ msgid "Autoconfiguration found."
+#~ msgstr "Automatické nastavenie nájdené."
 
-#: legacy/setupautoconfigkolabfreebusy.cpp:74
-#: legacy/setupautoconfigkolabldap.cpp:72 legacy/setupispdb.cpp:136
-#, kde-format
-msgid "Searching for autoconfiguration..."
-msgstr "Hľadám automatické nastavenie..."
-
-#: legacy/setupautoconfigkolabfreebusy.cpp:99
-#: legacy/setupautoconfigkolabldap.cpp:97 legacy/setupispdb.cpp:161
-#, kde-format
-msgid "Autoconfiguration found."
-msgstr "Automatické nastavenie nájdené."
-
-#: legacy/setupautoconfigkolabfreebusy.cpp:101
-#: legacy/setupautoconfigkolabldap.cpp:99 legacy/setupispdb.cpp:163
-#, kde-format
-msgid "Autoconfiguration failed."
-msgstr "Autodetekcia nastavení zlyhala."
+#~ msgid "Autoconfiguration failed."
+#~ msgstr "Autodetekcia nastavení zlyhala."
 
 #, fuzzy
 #~| msgid "Username:"
