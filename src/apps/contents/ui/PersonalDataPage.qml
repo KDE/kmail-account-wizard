@@ -11,7 +11,10 @@ import org.kde.kirigamiaddons.formcard as FormCard
 
 FormCard.FormCardPage {
     id: root
+
     title: i18n("Personal Information")
+
+    property bool explicitManualConfiguration: false
 
     function isNotEmptyStr(str) {
         return str.trim().length > 0;
@@ -112,13 +115,13 @@ FormCard.FormCardPage {
     }
 
     FormCard.FormHeader {
-        visible: SetupManager.noConfigFound
+        visible: SetupManager.noConfigFound || root.explicitManualConfiguration
         title: i18n("Incoming Server Parameters")
     }
 
     FormCard.FormCard {
         id: manualConfiguration
-        visible: SetupManager.noConfigFound
+        visible: SetupManager.noConfigFound || root.explicitManualConfiguration
         FormCard.FormTextFieldDelegate {
             id: manualIncomingHostName
             label: i18n("Incoming server:")
@@ -184,12 +187,12 @@ FormCard.FormCardPage {
     }
 
     FormCard.FormHeader {
-        visible: SetupManager.noConfigFound
+        visible: SetupManager.noConfigFound || root.explicitManualConfiguration
         title: i18n("Outgoing Server Parameters")
     }
 
     FormCard.FormCard {
-        visible: SetupManager.noConfigFound
+        visible: SetupManager.noConfigFound || root.explicitManualConfiguration
         FormCard.FormTextFieldDelegate {
             id: manualOutgoingHostName
             label: i18n("Outgoing server:")
@@ -262,13 +265,13 @@ FormCard.FormCardPage {
 
     FormCard.FormHeader {
         title: i18n("Available configurations")
-        visible: configurationRepeater.count > 0
+        visible: configurationRepeater.count > 0 && !root.explicitManualConfiguration
     }
 
     FormCard.FormCard {
         id: availableConfigurations
 
-        visible: configurationRepeater.count > 0
+        visible: configurationRepeater.count > 0 && !root.explicitManualConfiguration
 
         Repeater {
             id: configurationRepeater
@@ -290,9 +293,7 @@ FormCard.FormCardPage {
             text: i18n("Manual Configuration")
             checked: true
             onClicked: {
-                availableConfigurations.visible = false;
-                manualConfiguration.visible = true;
-                // FIXME => show
+                root.explicitManualConfiguration = true;
             }
             visible: availableConfigurations.visible
         }
