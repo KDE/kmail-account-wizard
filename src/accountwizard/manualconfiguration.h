@@ -149,8 +149,8 @@ private:
     int mCurrentIncomingSecurityProtocol = 2; // NONE
     int mCurrentOutgoingSecurityProtocol = 2; // NONE
 
-    int mCurrentIncomingAuthenticationProtocol = 0;
-    int mCurrentOutgoingAuthenticationProtocol = 0;
+    int mCurrentIncomingAuthenticationProtocol = 0; // Clear Text
+    int mCurrentOutgoingAuthenticationProtocol = 0; // Clear Text
 
     uint mIdentityId = 0;
 
