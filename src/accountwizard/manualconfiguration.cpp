@@ -6,6 +6,7 @@
 
 #include "manualconfiguration.h"
 #include "accountwizard_debug.h"
+#include "servertest.h"
 #include <KLocalizedString>
 #include <QRegularExpression>
 #include <QUrl>
@@ -317,6 +318,23 @@ QString ManualConfiguration::convertOutgoingAuthenticationProtocol(int protocol)
 void ManualConfiguration::checkServer()
 {
     qDebug() << " Verify server";
+    if (!mServerTest) {
+        mServerTest = new ServerTest(this);
+        connect(mServerTest, &ServerTest::testFail, this, &ManualConfiguration::slotTestFail);
+        connect(mServerTest, &ServerTest::testResult, this, &ManualConfiguration::slotTestResult);
+    }
+    // Test input
+    // mServerTest->test()
+}
+
+void ManualConfiguration::slotTestFail()
+{
+    // TODO
+}
+
+void ManualConfiguration::slotTestResult(const QString &result)
+{
+    // TODO
 }
 
 void ManualConfiguration::checkConfiguration()

@@ -10,7 +10,7 @@
 #include "transport.h"
 #include <QDebug>
 #include <QObject>
-
+class ServerTest;
 class LIBACCOUNTWIZARD_EXPORT ManualConfiguration : public QObject
 {
     Q_OBJECT
@@ -131,6 +131,9 @@ private:
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString generateUniqueAccountName() const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString convertIncomingAuthenticationProtocol(int index) const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString convertIncomingSecurityProtocol(int index) const;
+    LIBACCOUNTWIZARD_NO_EXPORT void slotTestFail();
+    LIBACCOUNTWIZARD_NO_EXPORT void slotTestResult(const QString &result);
+
     // Incoming
     QString mIncomingUserName;
     QString mIncomingHostName;
@@ -161,5 +164,7 @@ private:
     bool mHasDisconnectedMode = false;
 
     bool mDisconnectedModeEnabled = false;
+
+    ServerTest *mServerTest = nullptr;
 };
 QDebug operator<<(QDebug d, const ManualConfiguration &t);
