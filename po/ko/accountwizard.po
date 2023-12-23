@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-22 01:39+0000\n"
+"POT-Creation-Date: 2023-12-23 01:45+0000\n"
 "PO-Revision-Date: 2023-10-08 23:27+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -50,14 +50,14 @@ msgstr "프로필을 삭제했습니다."
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:23
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:34
 #, kde-format
 msgid "IMAP"
 msgstr "IMAP"
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:26
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:34
 #, kde-format
 msgid "POP3"
 msgstr "POP3"
@@ -78,7 +78,7 @@ msgid "SMTP"
 msgstr "SMTP"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:35
-#: accountwizard/manualconfiguration.cpp:38
+#: accountwizard/manualconfiguration.cpp:39
 #, kde-format
 msgid "SSL/TLS"
 msgstr "SSL/TLS"
@@ -109,52 +109,52 @@ msgstr "well-known 파일에서 설정을 찾았습니다."
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Mozilla FAI 데이터베이스에서 설정을 찾았습니다."
 
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:34
 #, kde-format
 msgid "Kolab"
 msgstr "Kolab"
 
-#: accountwizard/manualconfiguration.cpp:38
+#: accountwizard/manualconfiguration.cpp:39
 #, kde-format
 msgid "STARTTLS"
 msgstr "STARTTLS"
 
-#: accountwizard/manualconfiguration.cpp:38
+#: accountwizard/manualconfiguration.cpp:39
 #, kde-format
 msgid "None"
 msgstr "없음"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "Clear text"
 msgstr "평문 텍스트"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "LOGIN"
 msgstr "LOGIN"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "PLAIN"
 msgstr "PLAIN"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "CRAM-MD5"
 msgstr "CRAM-MD5"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr "DIGEST-MD5"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "NTLM"
 msgstr "NTLM"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "GSSAPI"
 msgstr "GSSAPI"
@@ -194,35 +194,20 @@ msgstr "리소스 인스턴스를 설정할 수 없습니다."
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr "설정 '%1'의 값을 요청한 형식 %2(으)로 변환할 수 없습니다."
 
-#: accountwizard/resource.cpp:131
+#: accountwizard/resource.cpp:134
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "설정 '%1'을(를) 지정할 수 없음: %2"
 
-#: accountwizard/resource.cpp:137
+#: accountwizard/resource.cpp:140
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "설정을 저장할 수 없음: %1"
 
-#: accountwizard/resource.cpp:143
+#: accountwizard/resource.cpp:146
 #, kde-format
 msgid "Resource setup completed."
 msgstr "리소스 설정이 완료되었습니다."
-
-#: accountwizard/servertest.cpp:51
-#, kde-format
-msgid ""
-"There seems to be a problem in reaching this server or choosing a safe way "
-"to sent the credentials to server. We advise you to check the settings of "
-"the account and adjust it manually if needed."
-msgstr ""
-"이 서버에 접근하거나 서버에 안전한 방법으로 인증 정보를 보낼 수 없습니다. 계"
-"정 설정을 직접 확인하고 필요한 경우 수정하십시오."
-
-#: accountwizard/servertest.cpp:54
-#, kde-format
-msgid "Autodetecting settings failed"
-msgstr "설정 자동 감지 실패"
 
 #: accountwizard/transport.cpp:63
 #, kde-format
@@ -240,28 +225,26 @@ msgid "Mail transport account set up."
 msgstr "메일 전송 계정을 설정했습니다."
 
 #: apps/contents/ui/ConfigurationDelegate.qml:93
-#: apps/contents/ui/PersonalDataPage.qml:154
 #, kde-format
 msgid "Incoming"
 msgstr "수신"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
-#: apps/contents/ui/PersonalDataPage.qml:225
 #, kde-format
 msgid "Outgoing"
 msgstr "발신"
 
-#: apps/contents/ui/PersonalDataPage.qml:14
+#: apps/contents/ui/PersonalDataPage.qml:15
 #, kde-format
 msgid "Personal Information"
 msgstr "개인 정보"
 
-#: apps/contents/ui/PersonalDataPage.qml:31
+#: apps/contents/ui/PersonalDataPage.qml:36
 #, kde-format
 msgid "Set Up Your Existing Email Address"
 msgstr "내 이메일 주소 설정"
 
-#: apps/contents/ui/PersonalDataPage.qml:40
+#: apps/contents/ui/PersonalDataPage.qml:41
 #, kde-format
 msgid ""
 "To use your current email address fill in your credentials.<br />This wizard "
@@ -270,40 +253,40 @@ msgstr ""
 "내 이메일 주소를 사용하려면 인증 정보를 입력해야 합니다.<br />이 마법사에서"
 "는 자동으로 서버 설정을 검색합니다."
 
-#: apps/contents/ui/PersonalDataPage.qml:51
+#: apps/contents/ui/PersonalDataPage.qml:53
 #, kde-format
 msgid "Full name:"
 msgstr "전체 이름:"
 
-#: apps/contents/ui/PersonalDataPage.qml:52
+#: apps/contents/ui/PersonalDataPage.qml:54
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
 msgstr "홍길동"
 
-#: apps/contents/ui/PersonalDataPage.qml:61
+#: apps/contents/ui/PersonalDataPage.qml:63
 #, kde-format
 msgid "E-mail address:"
 msgstr "이메일 주소:"
 
-#: apps/contents/ui/PersonalDataPage.qml:62
+#: apps/contents/ui/PersonalDataPage.qml:64
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
 msgstr "boss@example.corp"
 
-#: apps/contents/ui/PersonalDataPage.qml:84
+#: apps/contents/ui/PersonalDataPage.qml:74
 #, fuzzy, kde-format
 #| msgid "Password:"
-msgid "Password…"
+msgid "Password:"
 msgstr "암호:"
 
-#: apps/contents/ui/PersonalDataPage.qml:91
+#: apps/contents/ui/PersonalDataPage.qml:83
 #, kde-format
 msgid "Continue"
 msgstr "계속"
 
-#: apps/contents/ui/PersonalDataPage.qml:100
+#: apps/contents/ui/PersonalDataPage.qml:97
 #, kde-format
 msgid ""
 "Check online for the settings needed for this email provider. Only the "
@@ -312,84 +295,91 @@ msgstr ""
 "이메일 공급자의 설정을 인터넷에서 확인합니다. 이메일 주소의 도메인 이름 정보"
 "만 인터넷으로 전송됩니다."
 
-#: apps/contents/ui/PersonalDataPage.qml:134
+#: apps/contents/ui/PersonalDataPage.qml:123
 #, kde-format
 msgid "No config found from ispdb server."
 msgstr "ispdb 서버에서 설정을 찾을 수 없습니다."
 
-#: apps/contents/ui/PersonalDataPage.qml:149
-#, kde-format
-msgid "Server Parameters"
+#: apps/contents/ui/PersonalDataPage.qml:130
+#, fuzzy, kde-format
+#| msgid "Server Parameters"
+msgid "Incoming Server Parameters"
 msgstr "서버 인자"
 
-#: apps/contents/ui/PersonalDataPage.qml:160
+#: apps/contents/ui/PersonalDataPage.qml:138
 #, fuzzy, kde-format
 #| msgid "Incoming"
 msgid "Incoming server:"
 msgstr "수신"
 
-#: apps/contents/ui/PersonalDataPage.qml:169
+#: apps/contents/ui/PersonalDataPage.qml:149
 #, kde-format
 msgid "Protocol:"
 msgstr "프로토콜:"
 
-#: apps/contents/ui/PersonalDataPage.qml:178
-#: apps/contents/ui/PersonalDataPage.qml:239
+#: apps/contents/ui/PersonalDataPage.qml:158
+#: apps/contents/ui/PersonalDataPage.qml:220
 #, kde-format
 msgid "Port:"
 msgstr "포트:"
 
-#: apps/contents/ui/PersonalDataPage.qml:185
-#: apps/contents/ui/PersonalDataPage.qml:246
+#: apps/contents/ui/PersonalDataPage.qml:165
+#: apps/contents/ui/PersonalDataPage.qml:227
 #, kde-format
 msgid "Security:"
 msgstr "보안:"
 
-#: apps/contents/ui/PersonalDataPage.qml:194
-#: apps/contents/ui/PersonalDataPage.qml:255
+#: apps/contents/ui/PersonalDataPage.qml:174
+#: apps/contents/ui/PersonalDataPage.qml:236
 #, kde-format
 msgid "Authentication Method:"
 msgstr "인증 방식:"
 
-#: apps/contents/ui/PersonalDataPage.qml:203
-#: apps/contents/ui/PersonalDataPage.qml:264
+#: apps/contents/ui/PersonalDataPage.qml:183
+#: apps/contents/ui/PersonalDataPage.qml:245
 #, kde-format
 msgid "Username:"
 msgstr "사용자 이름:"
 
-#: apps/contents/ui/PersonalDataPage.qml:214
+#: apps/contents/ui/PersonalDataPage.qml:194
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:230
+#: apps/contents/ui/PersonalDataPage.qml:204
+#, fuzzy, kde-format
+#| msgid "Server Parameters"
+msgid "Outgoing Server Parameters"
+msgstr "서버 인자"
+
+#: apps/contents/ui/PersonalDataPage.qml:211
 #, fuzzy, kde-format
 #| msgid "Outgoing"
 msgid "Outgoing server:"
 msgstr "발신"
 
-#: apps/contents/ui/PersonalDataPage.qml:275
+#: apps/contents/ui/PersonalDataPage.qml:260
 #, kde-format
 msgid "Recheck"
 msgstr "다시 검사하기"
 
-#: apps/contents/ui/PersonalDataPage.qml:288
-#: apps/contents/ui/PersonalDataPage.qml:342
+#: apps/contents/ui/PersonalDataPage.qml:273
+#: apps/contents/ui/PersonalDataPage.qml:322
 #, kde-format
 msgid "Create Account"
 msgstr "계정 만들기"
 
-#: apps/contents/ui/PersonalDataPage.qml:310
+#: apps/contents/ui/PersonalDataPage.qml:284
 #, kde-format
 msgid "Available configurations"
 msgstr "사용 가능한 설정"
 
-#: apps/contents/ui/PersonalDataPage.qml:330
+#: apps/contents/ui/PersonalDataPage.qml:313
 #, kde-format
 msgid "Manual Configuration"
 msgstr "수동 설정"
 
-#: apps/contents/ui/PersonalDataPage.qml:356
+#: apps/contents/ui/PersonalDataPage.qml:330
 #, fuzzy, kde-format
 #| msgid "&Details..."
 msgid "Details"
@@ -434,6 +424,17 @@ msgstr "관리자"
 #, kde-format
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
+
+#~ msgid ""
+#~ "There seems to be a problem in reaching this server or choosing a safe "
+#~ "way to sent the credentials to server. We advise you to check the "
+#~ "settings of the account and adjust it manually if needed."
+#~ msgstr ""
+#~ "이 서버에 접근하거나 서버에 안전한 방법으로 인증 정보를 보낼 수 없습니다. "
+#~ "계정 설정을 직접 확인하고 필요한 경우 수정하십시오."
+
+#~ msgid "Autodetecting settings failed"
+#~ msgstr "설정 자동 감지 실패"
 
 #~ msgid "Writing config file for %1..."
 #~ msgstr "%1의 설정 파일 쓰는 중..."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-22 01:39+0000\n"
+"POT-Creation-Date: 2023-12-23 01:45+0000\n"
 "PO-Revision-Date: 2023-12-20 10:21+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -52,14 +52,14 @@ msgstr "Identiteit verwijderd."
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:23
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:34
 #, kde-format
 msgid "IMAP"
 msgstr "IMAP"
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:26
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:34
 #, kde-format
 msgid "POP3"
 msgstr "POP3"
@@ -80,7 +80,7 @@ msgid "SMTP"
 msgstr "SMTP"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:35
-#: accountwizard/manualconfiguration.cpp:38
+#: accountwizard/manualconfiguration.cpp:39
 #, kde-format
 msgid "SSL/TLS"
 msgstr "SSL/TLS"
@@ -111,52 +111,52 @@ msgstr "Configuratie gevonden in bekend bestand."
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Configuratie gevonden in Mozilla FAI-database."
 
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:34
 #, kde-format
 msgid "Kolab"
 msgstr "Kolab"
 
-#: accountwizard/manualconfiguration.cpp:38
+#: accountwizard/manualconfiguration.cpp:39
 #, kde-format
 msgid "STARTTLS"
 msgstr "STARTTLS"
 
-#: accountwizard/manualconfiguration.cpp:38
+#: accountwizard/manualconfiguration.cpp:39
 #, kde-format
 msgid "None"
 msgstr "Geen"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "Clear text"
 msgstr "Leesbare tekst"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "LOGIN"
 msgstr "LOGIN"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "PLAIN"
 msgstr "PLAIN"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "CRAM-MD5"
 msgstr "CRAM-MD5"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr "DIGEST-MD5"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "NTLM"
 msgstr "NTLM"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "GSSAPI"
 msgstr "GSSAPI"
@@ -198,36 +198,20 @@ msgstr ""
 "De waarde van instelling '%1' kan niet worden geconverteerd naar het "
 "vereiste type %2."
 
-#: accountwizard/resource.cpp:131
+#: accountwizard/resource.cpp:134
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Instelling '%1' kon niet worden ingesteld: %2"
 
-#: accountwizard/resource.cpp:137
+#: accountwizard/resource.cpp:140
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Instellingen opslaan lukt niet: %1"
 
-#: accountwizard/resource.cpp:143
+#: accountwizard/resource.cpp:146
 #, kde-format
 msgid "Resource setup completed."
 msgstr "Instellen van hulpbron voltooid."
-
-#: accountwizard/servertest.cpp:51
-#, kde-format
-msgid ""
-"There seems to be a problem in reaching this server or choosing a safe way "
-"to sent the credentials to server. We advise you to check the settings of "
-"the account and adjust it manually if needed."
-msgstr ""
-"Er doet zich een probleem voor bij de poging deze server te bereiken of bij "
-"het kiezen van een veilige manier om vertrouwensgegevens naar de server te "
-"sturen."
-
-#: accountwizard/servertest.cpp:54
-#, kde-format
-msgid "Autodetecting settings failed"
-msgstr "Autodetectie van instellingen mislukt"
 
 #: accountwizard/transport.cpp:63
 #, kde-format
@@ -245,28 +229,26 @@ msgid "Mail transport account set up."
 msgstr "E-mailtransportaccount instellen."
 
 #: apps/contents/ui/ConfigurationDelegate.qml:93
-#: apps/contents/ui/PersonalDataPage.qml:154
 #, kde-format
 msgid "Incoming"
 msgstr "Inkomend"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
-#: apps/contents/ui/PersonalDataPage.qml:225
 #, kde-format
 msgid "Outgoing"
 msgstr "Uitgaand"
 
-#: apps/contents/ui/PersonalDataPage.qml:14
+#: apps/contents/ui/PersonalDataPage.qml:15
 #, kde-format
 msgid "Personal Information"
 msgstr "Persoonlijke informatie"
 
-#: apps/contents/ui/PersonalDataPage.qml:31
+#: apps/contents/ui/PersonalDataPage.qml:36
 #, kde-format
 msgid "Set Up Your Existing Email Address"
 msgstr "Uw bestaande e-mailadres opzetten"
 
-#: apps/contents/ui/PersonalDataPage.qml:40
+#: apps/contents/ui/PersonalDataPage.qml:41
 #, kde-format
 msgid ""
 "To use your current email address fill in your credentials.<br />This wizard "
@@ -276,39 +258,40 @@ msgstr ""
 "assistent zal automatisch zoeken naar een werkende en aanbevolen "
 "serverconfiguratie."
 
-#: apps/contents/ui/PersonalDataPage.qml:51
+#: apps/contents/ui/PersonalDataPage.qml:53
 #, kde-format
 msgid "Full name:"
 msgstr "Volledige naam:"
 
-#: apps/contents/ui/PersonalDataPage.qml:52
+#: apps/contents/ui/PersonalDataPage.qml:54
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
 msgstr "Jan Jansen"
 
-#: apps/contents/ui/PersonalDataPage.qml:61
+#: apps/contents/ui/PersonalDataPage.qml:63
 #, kde-format
 msgid "E-mail address:"
 msgstr "E-mailadres:"
 
-#: apps/contents/ui/PersonalDataPage.qml:62
+#: apps/contents/ui/PersonalDataPage.qml:64
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
 msgstr "boss@example.corp"
 
-#: apps/contents/ui/PersonalDataPage.qml:84
-#, kde-format
-msgid "Password…"
+#: apps/contents/ui/PersonalDataPage.qml:74
+#, fuzzy, kde-format
+#| msgid "Password…"
+msgid "Password:"
 msgstr "Wachtwoord…"
 
-#: apps/contents/ui/PersonalDataPage.qml:91
+#: apps/contents/ui/PersonalDataPage.qml:83
 #, kde-format
 msgid "Continue"
 msgstr "Doorgaan"
 
-#: apps/contents/ui/PersonalDataPage.qml:100
+#: apps/contents/ui/PersonalDataPage.qml:97
 #, kde-format
 msgid ""
 "Check online for the settings needed for this email provider. Only the "
@@ -318,82 +301,89 @@ msgstr ""
 "In dit stadium wordt alleen het domeinnaamgedeelte van het e-mailadres via "
 "het internet verstuurd."
 
-#: apps/contents/ui/PersonalDataPage.qml:134
+#: apps/contents/ui/PersonalDataPage.qml:123
 #, kde-format
 msgid "No config found from ispdb server."
 msgstr "Geen configuratie gevonden van de ispdb-server"
 
-#: apps/contents/ui/PersonalDataPage.qml:149
-#, kde-format
-msgid "Server Parameters"
+#: apps/contents/ui/PersonalDataPage.qml:130
+#, fuzzy, kde-format
+#| msgid "Server Parameters"
+msgid "Incoming Server Parameters"
 msgstr "Serverparameters"
 
-#: apps/contents/ui/PersonalDataPage.qml:160
+#: apps/contents/ui/PersonalDataPage.qml:138
 #, kde-format
 msgid "Incoming server:"
 msgstr "Inkomende server:"
 
-#: apps/contents/ui/PersonalDataPage.qml:169
+#: apps/contents/ui/PersonalDataPage.qml:149
 #, kde-format
 msgid "Protocol:"
 msgstr "Protocol:"
 
-#: apps/contents/ui/PersonalDataPage.qml:178
-#: apps/contents/ui/PersonalDataPage.qml:239
+#: apps/contents/ui/PersonalDataPage.qml:158
+#: apps/contents/ui/PersonalDataPage.qml:220
 #, kde-format
 msgid "Port:"
 msgstr "Poort:"
 
-#: apps/contents/ui/PersonalDataPage.qml:185
-#: apps/contents/ui/PersonalDataPage.qml:246
+#: apps/contents/ui/PersonalDataPage.qml:165
+#: apps/contents/ui/PersonalDataPage.qml:227
 #, kde-format
 msgid "Security:"
 msgstr "Beveiliging:"
 
-#: apps/contents/ui/PersonalDataPage.qml:194
-#: apps/contents/ui/PersonalDataPage.qml:255
+#: apps/contents/ui/PersonalDataPage.qml:174
+#: apps/contents/ui/PersonalDataPage.qml:236
 #, kde-format
 msgid "Authentication Method:"
 msgstr "Authenticatiemethode:"
 
-#: apps/contents/ui/PersonalDataPage.qml:203
-#: apps/contents/ui/PersonalDataPage.qml:264
+#: apps/contents/ui/PersonalDataPage.qml:183
+#: apps/contents/ui/PersonalDataPage.qml:245
 #, kde-format
 msgid "Username:"
 msgstr "Gebruikersnaam:"
 
-#: apps/contents/ui/PersonalDataPage.qml:214
+#: apps/contents/ui/PersonalDataPage.qml:194
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr "Alle berichten downloaden voor offline gebruik"
 
-#: apps/contents/ui/PersonalDataPage.qml:230
+#: apps/contents/ui/PersonalDataPage.qml:204
+#, fuzzy, kde-format
+#| msgid "Server Parameters"
+msgid "Outgoing Server Parameters"
+msgstr "Serverparameters"
+
+#: apps/contents/ui/PersonalDataPage.qml:211
 #, kde-format
 msgid "Outgoing server:"
 msgstr "Uitgaande server:"
 
-#: apps/contents/ui/PersonalDataPage.qml:275
+#: apps/contents/ui/PersonalDataPage.qml:260
 #, kde-format
 msgid "Recheck"
 msgstr "Opnieuw controleren"
 
-#: apps/contents/ui/PersonalDataPage.qml:288
-#: apps/contents/ui/PersonalDataPage.qml:342
+#: apps/contents/ui/PersonalDataPage.qml:273
+#: apps/contents/ui/PersonalDataPage.qml:322
 #, kde-format
 msgid "Create Account"
 msgstr "Account aanmaken"
 
-#: apps/contents/ui/PersonalDataPage.qml:310
+#: apps/contents/ui/PersonalDataPage.qml:284
 #, kde-format
 msgid "Available configurations"
 msgstr "Beschikbare configuraties"
 
-#: apps/contents/ui/PersonalDataPage.qml:330
+#: apps/contents/ui/PersonalDataPage.qml:313
 #, kde-format
 msgid "Manual Configuration"
 msgstr "Handmatige configuratie"
 
-#: apps/contents/ui/PersonalDataPage.qml:356
+#: apps/contents/ui/PersonalDataPage.qml:330
 #, kde-format
 msgid "Details"
 msgstr "Details"
@@ -437,6 +427,18 @@ msgstr "Onderhouder"
 #, kde-format
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
+
+#~ msgid ""
+#~ "There seems to be a problem in reaching this server or choosing a safe "
+#~ "way to sent the credentials to server. We advise you to check the "
+#~ "settings of the account and adjust it manually if needed."
+#~ msgstr ""
+#~ "Er doet zich een probleem voor bij de poging deze server te bereiken of "
+#~ "bij het kiezen van een veilige manier om vertrouwensgegevens naar de "
+#~ "server te sturen."
+
+#~ msgid "Autodetecting settings failed"
+#~ msgstr "Autodetectie van instellingen mislukt"
 
 #~ msgid "Writing config file for %1..."
 #~ msgstr "Configuratiebestand schrijven voor %1..."

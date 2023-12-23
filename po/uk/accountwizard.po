@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-22 01:39+0000\n"
+"POT-Creation-Date: 2023-12-23 01:45+0000\n"
 "PO-Revision-Date: 2023-12-20 08:58+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -53,14 +53,14 @@ msgstr "Профіль вилучено."
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:23
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:34
 #, kde-format
 msgid "IMAP"
 msgstr "IMAP"
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:26
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:34
 #, kde-format
 msgid "POP3"
 msgstr "POP3"
@@ -81,7 +81,7 @@ msgid "SMTP"
 msgstr "SMTP"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:35
-#: accountwizard/manualconfiguration.cpp:38
+#: accountwizard/manualconfiguration.cpp:39
 #, kde-format
 msgid "SSL/TLS"
 msgstr "SSL/TLS"
@@ -112,52 +112,52 @@ msgstr "Виявлено налаштування у відомому файлі
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Виявлено налаштування у базі даних Mozilla FAI."
 
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:34
 #, kde-format
 msgid "Kolab"
 msgstr "Kolab"
 
-#: accountwizard/manualconfiguration.cpp:38
+#: accountwizard/manualconfiguration.cpp:39
 #, kde-format
 msgid "STARTTLS"
 msgstr "STARTTLS"
 
-#: accountwizard/manualconfiguration.cpp:38
+#: accountwizard/manualconfiguration.cpp:39
 #, kde-format
 msgid "None"
 msgstr "Немає"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "Clear text"
 msgstr "Звичайний текстовий"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "LOGIN"
 msgstr "LOGIN"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "PLAIN"
 msgstr "PLAIN"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "CRAM-MD5"
 msgstr "CRAM-MD5"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr "DIGEST-MD5"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "NTLM"
 msgstr "NTLM"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "GSSAPI"
 msgstr "GSSAPI"
@@ -199,36 +199,20 @@ msgstr ""
 "Не вдалося перетворити значення параметра «%1» на значення потрібного типу "
 "%2."
 
-#: accountwizard/resource.cpp:131
+#: accountwizard/resource.cpp:134
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Не вдалося встановити значення параметра «%1»: %2"
 
-#: accountwizard/resource.cpp:137
+#: accountwizard/resource.cpp:140
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Не вдалося зберегти параметри: %1"
 
-#: accountwizard/resource.cpp:143
+#: accountwizard/resource.cpp:146
 #, kde-format
 msgid "Resource setup completed."
 msgstr "Налаштування ресурсу завершено."
-
-#: accountwizard/servertest.cpp:51
-#, kde-format
-msgid ""
-"There seems to be a problem in reaching this server or choosing a safe way "
-"to sent the credentials to server. We advise you to check the settings of "
-"the account and adjust it manually if needed."
-msgstr ""
-"Здається, маємо проблему з доступністю цього сервера або вибором безпечного "
-"способу пересилання на сервер реєстраційних даних. Радимо вам перевірити "
-"параметри облікового запису і змінити їх, якщо буде виявлено помилки."
-
-#: accountwizard/servertest.cpp:54
-#, kde-format
-msgid "Autodetecting settings failed"
-msgstr "Невдала спроба автоматичного визначення параметрів"
 
 #: accountwizard/transport.cpp:63
 #, kde-format
@@ -248,28 +232,26 @@ msgid "Mail transport account set up."
 msgstr "Обліковий запис пересилання пошти налаштовано."
 
 #: apps/contents/ui/ConfigurationDelegate.qml:93
-#: apps/contents/ui/PersonalDataPage.qml:154
 #, kde-format
 msgid "Incoming"
 msgstr "Вхідні"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
-#: apps/contents/ui/PersonalDataPage.qml:225
 #, kde-format
 msgid "Outgoing"
 msgstr "Вихідні"
 
-#: apps/contents/ui/PersonalDataPage.qml:14
+#: apps/contents/ui/PersonalDataPage.qml:15
 #, kde-format
 msgid "Personal Information"
 msgstr "Особисті відомості"
 
-#: apps/contents/ui/PersonalDataPage.qml:31
+#: apps/contents/ui/PersonalDataPage.qml:36
 #, kde-format
 msgid "Set Up Your Existing Email Address"
 msgstr "Налаштовування вашої наявної адреси ел. пошти"
 
-#: apps/contents/ui/PersonalDataPage.qml:40
+#: apps/contents/ui/PersonalDataPage.qml:41
 #, kde-format
 msgid ""
 "To use your current email address fill in your credentials.<br />This wizard "
@@ -279,39 +261,40 @@ msgstr ""
 "дані.<br />Цей майстер виконає автоматичний пошук працездатних і "
 "рекомендованих налаштувань сервера."
 
-#: apps/contents/ui/PersonalDataPage.qml:51
+#: apps/contents/ui/PersonalDataPage.qml:53
 #, kde-format
 msgid "Full name:"
 msgstr "Ім’я повністю:"
 
-#: apps/contents/ui/PersonalDataPage.qml:52
+#: apps/contents/ui/PersonalDataPage.qml:54
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
 msgstr "Іван Іваненко"
 
-#: apps/contents/ui/PersonalDataPage.qml:61
+#: apps/contents/ui/PersonalDataPage.qml:63
 #, kde-format
 msgid "E-mail address:"
 msgstr "Адреса ел. пошти:"
 
-#: apps/contents/ui/PersonalDataPage.qml:62
+#: apps/contents/ui/PersonalDataPage.qml:64
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
 msgstr "boss@example.corp"
 
-#: apps/contents/ui/PersonalDataPage.qml:84
-#, kde-format
-msgid "Password…"
+#: apps/contents/ui/PersonalDataPage.qml:74
+#, fuzzy, kde-format
+#| msgid "Password…"
+msgid "Password:"
 msgstr "Пароль…"
 
-#: apps/contents/ui/PersonalDataPage.qml:91
+#: apps/contents/ui/PersonalDataPage.qml:83
 #, kde-format
 msgid "Continue"
 msgstr "Продовжити"
 
-#: apps/contents/ui/PersonalDataPage.qml:100
+#: apps/contents/ui/PersonalDataPage.qml:97
 #, kde-format
 msgid ""
 "Check online for the settings needed for this email provider. Only the "
@@ -320,82 +303,89 @@ msgstr ""
 "Знайти дані вашого постачальника послуг у інтернеті. За допомогою інтернету "
 "з вашої адреси електронної пошти буде надіслано лише назву домену."
 
-#: apps/contents/ui/PersonalDataPage.qml:134
+#: apps/contents/ui/PersonalDataPage.qml:123
 #, kde-format
 msgid "No config found from ispdb server."
 msgstr "Не знайдено налаштувань від сервера ispdb."
 
-#: apps/contents/ui/PersonalDataPage.qml:149
-#, kde-format
-msgid "Server Parameters"
+#: apps/contents/ui/PersonalDataPage.qml:130
+#, fuzzy, kde-format
+#| msgid "Server Parameters"
+msgid "Incoming Server Parameters"
 msgstr "Параметри сервера"
 
-#: apps/contents/ui/PersonalDataPage.qml:160
+#: apps/contents/ui/PersonalDataPage.qml:138
 #, kde-format
 msgid "Incoming server:"
 msgstr "Вхідний сервер:"
 
-#: apps/contents/ui/PersonalDataPage.qml:169
+#: apps/contents/ui/PersonalDataPage.qml:149
 #, kde-format
 msgid "Protocol:"
 msgstr "Протокол:"
 
-#: apps/contents/ui/PersonalDataPage.qml:178
-#: apps/contents/ui/PersonalDataPage.qml:239
+#: apps/contents/ui/PersonalDataPage.qml:158
+#: apps/contents/ui/PersonalDataPage.qml:220
 #, kde-format
 msgid "Port:"
 msgstr "Порт:"
 
-#: apps/contents/ui/PersonalDataPage.qml:185
-#: apps/contents/ui/PersonalDataPage.qml:246
+#: apps/contents/ui/PersonalDataPage.qml:165
+#: apps/contents/ui/PersonalDataPage.qml:227
 #, kde-format
 msgid "Security:"
 msgstr "Захист:"
 
-#: apps/contents/ui/PersonalDataPage.qml:194
-#: apps/contents/ui/PersonalDataPage.qml:255
+#: apps/contents/ui/PersonalDataPage.qml:174
+#: apps/contents/ui/PersonalDataPage.qml:236
 #, kde-format
 msgid "Authentication Method:"
 msgstr "Спосіб розпізнавання:"
 
-#: apps/contents/ui/PersonalDataPage.qml:203
-#: apps/contents/ui/PersonalDataPage.qml:264
+#: apps/contents/ui/PersonalDataPage.qml:183
+#: apps/contents/ui/PersonalDataPage.qml:245
 #, kde-format
 msgid "Username:"
 msgstr "Користувач:"
 
-#: apps/contents/ui/PersonalDataPage.qml:214
+#: apps/contents/ui/PersonalDataPage.qml:194
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr "Отримати усі повідомлення для автономного використання"
 
-#: apps/contents/ui/PersonalDataPage.qml:230
+#: apps/contents/ui/PersonalDataPage.qml:204
+#, fuzzy, kde-format
+#| msgid "Server Parameters"
+msgid "Outgoing Server Parameters"
+msgstr "Параметри сервера"
+
+#: apps/contents/ui/PersonalDataPage.qml:211
 #, kde-format
 msgid "Outgoing server:"
 msgstr "Вихідний сервер:"
 
-#: apps/contents/ui/PersonalDataPage.qml:275
+#: apps/contents/ui/PersonalDataPage.qml:260
 #, kde-format
 msgid "Recheck"
 msgstr "Повторна перевірка"
 
-#: apps/contents/ui/PersonalDataPage.qml:288
-#: apps/contents/ui/PersonalDataPage.qml:342
+#: apps/contents/ui/PersonalDataPage.qml:273
+#: apps/contents/ui/PersonalDataPage.qml:322
 #, kde-format
 msgid "Create Account"
 msgstr "Створити обліковий запис"
 
-#: apps/contents/ui/PersonalDataPage.qml:310
+#: apps/contents/ui/PersonalDataPage.qml:284
 #, kde-format
 msgid "Available configurations"
 msgstr "Доступні налаштування"
 
-#: apps/contents/ui/PersonalDataPage.qml:330
+#: apps/contents/ui/PersonalDataPage.qml:313
 #, kde-format
 msgid "Manual Configuration"
 msgstr "Налаштування вручну"
 
-#: apps/contents/ui/PersonalDataPage.qml:356
+#: apps/contents/ui/PersonalDataPage.qml:330
 #, kde-format
 msgid "Details"
 msgstr "Подробиці"
@@ -439,6 +429,19 @@ msgstr "Супровідник"
 #, kde-format
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
+
+#~ msgid ""
+#~ "There seems to be a problem in reaching this server or choosing a safe "
+#~ "way to sent the credentials to server. We advise you to check the "
+#~ "settings of the account and adjust it manually if needed."
+#~ msgstr ""
+#~ "Здається, маємо проблему з доступністю цього сервера або вибором "
+#~ "безпечного способу пересилання на сервер реєстраційних даних. Радимо вам "
+#~ "перевірити параметри облікового запису і змінити їх, якщо буде виявлено "
+#~ "помилки."
+
+#~ msgid "Autodetecting settings failed"
+#~ msgstr "Невдала спроба автоматичного визначення параметрів"
 
 #~ msgid "Writing config file for %1..."
 #~ msgstr "Запис файла налаштувань для %1..."

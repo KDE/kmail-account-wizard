@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-22 01:39+0000\n"
+"POT-Creation-Date: 2023-12-23 01:45+0000\n"
 "PO-Revision-Date: 2021-09-03 10:38+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -52,7 +52,7 @@ msgstr "Η ταυτότητα αφαιρέθηκε."
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:23
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:34
 #, fuzzy, kde-format
 #| msgid "IMAP, %1"
 msgid "IMAP"
@@ -60,7 +60,7 @@ msgstr "IMAP, %1"
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:26
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:34
 #, fuzzy, kde-format
 #| msgid "POP3, %1"
 msgid "POP3"
@@ -83,7 +83,7 @@ msgid "SMTP"
 msgstr "SMTP, %1"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:35
-#: accountwizard/manualconfiguration.cpp:38
+#: accountwizard/manualconfiguration.cpp:39
 #, kde-format
 msgid "SSL/TLS"
 msgstr ""
@@ -117,52 +117,52 @@ msgstr "Η αυτόματη διαμόρφωση βρέθηκε."
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Αναζήτηση διαμόρφωσης: Βάση δεδομένων Mozilla"
 
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:34
 #, kde-format
 msgid "Kolab"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:38
+#: accountwizard/manualconfiguration.cpp:39
 #, kde-format
 msgid "STARTTLS"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:38
+#: accountwizard/manualconfiguration.cpp:39
 #, kde-format
 msgid "None"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "Clear text"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "LOGIN"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "PLAIN"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "CRAM-MD5"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "NTLM"
 msgstr ""
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "GSSAPI"
 msgstr ""
@@ -202,36 +202,20 @@ msgstr "Αποτυχία διαμόρφωσης αντικειμένου πόρ�
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr "Αδυναμία μετατροπής της ρύθμισης '%1' στον απαιτούμενο τύπο %2."
 
-#: accountwizard/resource.cpp:131
+#: accountwizard/resource.cpp:134
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Αδυναμία ρύθμισης '%1': %2"
 
-#: accountwizard/resource.cpp:137
+#: accountwizard/resource.cpp:140
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Αδυναμία αποθήκευσης ρυθμίσεων: %1"
 
-#: accountwizard/resource.cpp:143
+#: accountwizard/resource.cpp:146
 #, kde-format
 msgid "Resource setup completed."
 msgstr "Η προετοιμασία του πόρου ολοκληρώθηκε."
-
-#: accountwizard/servertest.cpp:51
-#, kde-format
-msgid ""
-"There seems to be a problem in reaching this server or choosing a safe way "
-"to sent the credentials to server. We advise you to check the settings of "
-"the account and adjust it manually if needed."
-msgstr ""
-"Φαίνεται ότι υπάρχει πρόβλημα στην επαφή με τον εξυπηρετητή ή με την ασφαλή "
-"αποστολή των στοιχείων. Σας συμβουλεύουμε να ελέγξετε τις ρυθμίσεις του "
-"λογαριασμού και να τις προσαρμόσετε χειροκίνητα αν είναι απαραίτητο."
-
-#: accountwizard/servertest.cpp:54
-#, kde-format
-msgid "Autodetecting settings failed"
-msgstr "Αποτυχία αυτόματου εντοπισμού ρυθμίσεων"
 
 #: accountwizard/transport.cpp:63
 #, kde-format
@@ -250,70 +234,68 @@ msgid "Mail transport account set up."
 msgstr "Ο λογαριασμός ηλ. ταχυδρομείου έχει οριστεί."
 
 #: apps/contents/ui/ConfigurationDelegate.qml:93
-#: apps/contents/ui/PersonalDataPage.qml:154
 #, fuzzy, kde-format
 #| msgid "Incoming:"
 msgid "Incoming"
 msgstr "Εισερχόμενα:"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
-#: apps/contents/ui/PersonalDataPage.qml:225
 #, fuzzy, kde-format
 #| msgid "Outgoing:"
 msgid "Outgoing"
 msgstr "Εξερχόμενα:"
 
-#: apps/contents/ui/PersonalDataPage.qml:14
+#: apps/contents/ui/PersonalDataPage.qml:15
 #, kde-format
 msgid "Personal Information"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:31
+#: apps/contents/ui/PersonalDataPage.qml:36
 #, kde-format
 msgid "Set Up Your Existing Email Address"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:40
+#: apps/contents/ui/PersonalDataPage.qml:41
 #, kde-format
 msgid ""
 "To use your current email address fill in your credentials.<br />This wizard "
 "will automatically search for a working and recommended server configuration."
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:51
+#: apps/contents/ui/PersonalDataPage.qml:53
 #, kde-format
 msgid "Full name:"
 msgstr "Ονοματεπώνυμο:"
 
-#: apps/contents/ui/PersonalDataPage.qml:52
+#: apps/contents/ui/PersonalDataPage.qml:54
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:61
+#: apps/contents/ui/PersonalDataPage.qml:63
 #, kde-format
 msgid "E-mail address:"
 msgstr "Ηλ. ταχυδρομείο:"
 
-#: apps/contents/ui/PersonalDataPage.qml:62
+#: apps/contents/ui/PersonalDataPage.qml:64
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:84
+#: apps/contents/ui/PersonalDataPage.qml:74
 #, fuzzy, kde-format
 #| msgid "Password:"
-msgid "Password…"
+msgid "Password:"
 msgstr "Κωδικός πρόσβασης:"
 
-#: apps/contents/ui/PersonalDataPage.qml:91
+#: apps/contents/ui/PersonalDataPage.qml:83
 #, kde-format
 msgid "Continue"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:100
+#: apps/contents/ui/PersonalDataPage.qml:97
 #, fuzzy, kde-format
 #| msgid ""
 #| "Check online for the settings needed for this email provider. Only the "
@@ -329,85 +311,92 @@ msgstr ""
 "ιστοχώρου θα αποσταλεί μέσω του διαδικτύου αυτή τη στιγμή. Αν αυτή η επιλογή "
 "δεν έχει ενεργοποιηθεί, ο λογαριασμός μπορεί να προετοιμαστεί χειροκίνητα."
 
-#: apps/contents/ui/PersonalDataPage.qml:134
+#: apps/contents/ui/PersonalDataPage.qml:123
 #, fuzzy, kde-format
 #| msgid "No config found to edit"
 msgid "No config found from ispdb server."
 msgstr "Δε βρέθηκε διαμόρφωση για επεξεργασία"
 
-#: apps/contents/ui/PersonalDataPage.qml:149
-#, kde-format
-msgid "Server Parameters"
-msgstr ""
+#: apps/contents/ui/PersonalDataPage.qml:130
+#, fuzzy, kde-format
+#| msgid "Incoming:"
+msgid "Incoming Server Parameters"
+msgstr "Εισερχόμενα:"
 
-#: apps/contents/ui/PersonalDataPage.qml:160
+#: apps/contents/ui/PersonalDataPage.qml:138
 #, fuzzy, kde-format
 #| msgid "Incoming:"
 msgid "Incoming server:"
 msgstr "Εισερχόμενα:"
 
-#: apps/contents/ui/PersonalDataPage.qml:169
+#: apps/contents/ui/PersonalDataPage.qml:149
 #, kde-format
 msgid "Protocol:"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:178
-#: apps/contents/ui/PersonalDataPage.qml:239
+#: apps/contents/ui/PersonalDataPage.qml:158
+#: apps/contents/ui/PersonalDataPage.qml:220
 #, kde-format
 msgid "Port:"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:185
-#: apps/contents/ui/PersonalDataPage.qml:246
+#: apps/contents/ui/PersonalDataPage.qml:165
+#: apps/contents/ui/PersonalDataPage.qml:227
 #, kde-format
 msgid "Security:"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:194
-#: apps/contents/ui/PersonalDataPage.qml:255
+#: apps/contents/ui/PersonalDataPage.qml:174
+#: apps/contents/ui/PersonalDataPage.qml:236
 #, kde-format
 msgid "Authentication Method:"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:203
-#: apps/contents/ui/PersonalDataPage.qml:264
+#: apps/contents/ui/PersonalDataPage.qml:183
+#: apps/contents/ui/PersonalDataPage.qml:245
 #, kde-format
 msgid "Username:"
 msgstr "Όνομα χρήστη:"
 
-#: apps/contents/ui/PersonalDataPage.qml:214
+#: apps/contents/ui/PersonalDataPage.qml:194
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:230
+#: apps/contents/ui/PersonalDataPage.qml:204
+#, fuzzy, kde-format
+#| msgid "Outgoing:"
+msgid "Outgoing Server Parameters"
+msgstr "Εξερχόμενα:"
+
+#: apps/contents/ui/PersonalDataPage.qml:211
 #, fuzzy, kde-format
 #| msgid "Outgoing:"
 msgid "Outgoing server:"
 msgstr "Εξερχόμενα:"
 
-#: apps/contents/ui/PersonalDataPage.qml:275
+#: apps/contents/ui/PersonalDataPage.qml:260
 #, kde-format
 msgid "Recheck"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:288
-#: apps/contents/ui/PersonalDataPage.qml:342
+#: apps/contents/ui/PersonalDataPage.qml:273
+#: apps/contents/ui/PersonalDataPage.qml:322
 #, kde-format
 msgid "Create Account"
 msgstr "Δημιουργία λογαριασμού"
 
-#: apps/contents/ui/PersonalDataPage.qml:310
+#: apps/contents/ui/PersonalDataPage.qml:284
 #, kde-format
 msgid "Available configurations"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:330
+#: apps/contents/ui/PersonalDataPage.qml:313
 #, kde-format
 msgid "Manual Configuration"
 msgstr ""
 
-#: apps/contents/ui/PersonalDataPage.qml:356
+#: apps/contents/ui/PersonalDataPage.qml:330
 #, fuzzy, kde-format
 #| msgid "&Details..."
 msgid "Details"
@@ -453,6 +442,19 @@ msgstr ""
 #, kde-format
 msgid "Carl Schwan"
 msgstr ""
+
+#~ msgid ""
+#~ "There seems to be a problem in reaching this server or choosing a safe "
+#~ "way to sent the credentials to server. We advise you to check the "
+#~ "settings of the account and adjust it manually if needed."
+#~ msgstr ""
+#~ "Φαίνεται ότι υπάρχει πρόβλημα στην επαφή με τον εξυπηρετητή ή με την "
+#~ "ασφαλή αποστολή των στοιχείων. Σας συμβουλεύουμε να ελέγξετε τις "
+#~ "ρυθμίσεις του λογαριασμού και να τις προσαρμόσετε χειροκίνητα αν είναι "
+#~ "απαραίτητο."
+
+#~ msgid "Autodetecting settings failed"
+#~ msgstr "Αποτυχία αυτόματου εντοπισμού ρυθμίσεων"
 
 #~ msgid "Writing config file for %1..."
 #~ msgstr "Ενημέρωση αρχείου διαμόρφωσης για %1..."

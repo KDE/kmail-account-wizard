@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-22 01:39+0000\n"
+"POT-Creation-Date: 2023-12-23 01:45+0000\n"
 "PO-Revision-Date: 2023-12-20 09:09+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -55,14 +55,14 @@ msgstr "S'ha eliminat la identitat."
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:23
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:34
 #, kde-format
 msgid "IMAP"
 msgstr "IMAP"
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:26
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:34
 #, kde-format
 msgid "POP3"
 msgstr "POP3"
@@ -84,7 +84,7 @@ msgid "SMTP"
 msgstr "SMTP"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:35
-#: accountwizard/manualconfiguration.cpp:38
+#: accountwizard/manualconfiguration.cpp:39
 #, kde-format
 msgid "SSL/TLS"
 msgstr "SSL/TLS"
@@ -115,52 +115,52 @@ msgstr "S'ha trobat la configuració en un fitxer ben conegut."
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "S'ha trobat la configuració en la Base de dades FAI de Mozilla."
 
-#: accountwizard/manualconfiguration.cpp:33
+#: accountwizard/manualconfiguration.cpp:34
 #, kde-format
 msgid "Kolab"
 msgstr "Kolab"
 
-#: accountwizard/manualconfiguration.cpp:38
+#: accountwizard/manualconfiguration.cpp:39
 #, kde-format
 msgid "STARTTLS"
 msgstr "STARTTLS"
 
-#: accountwizard/manualconfiguration.cpp:38
+#: accountwizard/manualconfiguration.cpp:39
 #, kde-format
 msgid "None"
 msgstr "Cap"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "Clear text"
 msgstr "Text en clar"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "LOGIN"
 msgstr "LOGIN"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "PLAIN"
 msgstr "PLAIN"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "CRAM-MD5"
 msgstr "CRAM-MD5"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr "DIGEST-MD5"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "NTLM"
 msgstr "NTLM"
 
-#: accountwizard/manualconfiguration.cpp:43
+#: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "GSSAPI"
 msgstr "GSSAPI"
@@ -200,36 +200,20 @@ msgstr "No s'ha pogut configurar la instància del recurs."
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr "No s'ha pogut convertir el valor de l'opció «%1» al tipus requerit %2."
 
-#: accountwizard/resource.cpp:131
+#: accountwizard/resource.cpp:134
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "No s'ha pogut establir l'opció «%1»: %2"
 
-#: accountwizard/resource.cpp:137
+#: accountwizard/resource.cpp:140
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "No s'ha pogut guardar la configuració: %1"
 
-#: accountwizard/resource.cpp:143
+#: accountwizard/resource.cpp:146
 #, kde-format
 msgid "Resource setup completed."
 msgstr "S'ha completat la configuració del recurs."
-
-#: accountwizard/servertest.cpp:51
-#, kde-format
-msgid ""
-"There seems to be a problem in reaching this server or choosing a safe way "
-"to sent the credentials to server. We advise you to check the settings of "
-"the account and adjust it manually if needed."
-msgstr ""
-"Pareix que hi ha un problema en arribar a este servidor o en seleccionar una "
-"forma segura d'enviar les credencials al servidor. Recomanem que comproveu "
-"la configuració del compte i si és necessari, que l'ajusteu manualment."
-
-#: accountwizard/servertest.cpp:54
-#, kde-format
-msgid "Autodetecting settings failed"
-msgstr "Ha fallat la detecció automàtica de la configuració"
 
 #: accountwizard/transport.cpp:63
 #, kde-format
@@ -248,28 +232,26 @@ msgid "Mail transport account set up."
 msgstr "S'ha configurat el transport de correu del compte."
 
 #: apps/contents/ui/ConfigurationDelegate.qml:93
-#: apps/contents/ui/PersonalDataPage.qml:154
 #, kde-format
 msgid "Incoming"
 msgstr "Entrant"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
-#: apps/contents/ui/PersonalDataPage.qml:225
 #, kde-format
 msgid "Outgoing"
 msgstr "Eixint"
 
-#: apps/contents/ui/PersonalDataPage.qml:14
+#: apps/contents/ui/PersonalDataPage.qml:15
 #, kde-format
 msgid "Personal Information"
 msgstr "Informació personal"
 
-#: apps/contents/ui/PersonalDataPage.qml:31
+#: apps/contents/ui/PersonalDataPage.qml:36
 #, kde-format
 msgid "Set Up Your Existing Email Address"
 msgstr "Configureu la vostra adreça de correu existent"
 
-#: apps/contents/ui/PersonalDataPage.qml:40
+#: apps/contents/ui/PersonalDataPage.qml:41
 #, kde-format
 msgid ""
 "To use your current email address fill in your credentials.<br />This wizard "
@@ -279,39 +261,40 @@ msgstr ""
 "electrònic actual.<br />Este assistent buscarà automàticament una "
 "configuració de servidor que funcione i que es recomane."
 
-#: apps/contents/ui/PersonalDataPage.qml:51
+#: apps/contents/ui/PersonalDataPage.qml:53
 #, kde-format
 msgid "Full name:"
 msgstr "Nom complet:"
 
-#: apps/contents/ui/PersonalDataPage.qml:52
+#: apps/contents/ui/PersonalDataPage.qml:54
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
 msgstr "Joana Llopis"
 
-#: apps/contents/ui/PersonalDataPage.qml:61
+#: apps/contents/ui/PersonalDataPage.qml:63
 #, kde-format
 msgid "E-mail address:"
 msgstr "Adreça de correu:"
 
-#: apps/contents/ui/PersonalDataPage.qml:62
+#: apps/contents/ui/PersonalDataPage.qml:64
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
 msgstr "director@exemple.corp"
 
-#: apps/contents/ui/PersonalDataPage.qml:84
-#, kde-format
-msgid "Password…"
+#: apps/contents/ui/PersonalDataPage.qml:74
+#, fuzzy, kde-format
+#| msgid "Password…"
+msgid "Password:"
 msgstr "Contrasenya…"
 
-#: apps/contents/ui/PersonalDataPage.qml:91
+#: apps/contents/ui/PersonalDataPage.qml:83
 #, kde-format
 msgid "Continue"
 msgstr "Continua"
 
-#: apps/contents/ui/PersonalDataPage.qml:100
+#: apps/contents/ui/PersonalDataPage.qml:97
 #, kde-format
 msgid ""
 "Check online for the settings needed for this email provider. Only the "
@@ -320,82 +303,89 @@ msgstr ""
 "Comprova en línia la configuració necessària per a este proveïdor de correu. "
 "Només s'enviarà a Internet la part del nom del domini de l'adreça de correu."
 
-#: apps/contents/ui/PersonalDataPage.qml:134
+#: apps/contents/ui/PersonalDataPage.qml:123
 #, kde-format
 msgid "No config found from ispdb server."
 msgstr "No s'ha trobat la configuració des del servidor «ispdb»."
 
-#: apps/contents/ui/PersonalDataPage.qml:149
-#, kde-format
-msgid "Server Parameters"
+#: apps/contents/ui/PersonalDataPage.qml:130
+#, fuzzy, kde-format
+#| msgid "Server Parameters"
+msgid "Incoming Server Parameters"
 msgstr "Paràmetres del servidor"
 
-#: apps/contents/ui/PersonalDataPage.qml:160
+#: apps/contents/ui/PersonalDataPage.qml:138
 #, kde-format
 msgid "Incoming server:"
 msgstr "Servidor d'entrada:"
 
-#: apps/contents/ui/PersonalDataPage.qml:169
+#: apps/contents/ui/PersonalDataPage.qml:149
 #, kde-format
 msgid "Protocol:"
 msgstr "Protocol:"
 
-#: apps/contents/ui/PersonalDataPage.qml:178
-#: apps/contents/ui/PersonalDataPage.qml:239
+#: apps/contents/ui/PersonalDataPage.qml:158
+#: apps/contents/ui/PersonalDataPage.qml:220
 #, kde-format
 msgid "Port:"
 msgstr "Port:"
 
-#: apps/contents/ui/PersonalDataPage.qml:185
-#: apps/contents/ui/PersonalDataPage.qml:246
+#: apps/contents/ui/PersonalDataPage.qml:165
+#: apps/contents/ui/PersonalDataPage.qml:227
 #, kde-format
 msgid "Security:"
 msgstr "Seguretat:"
 
-#: apps/contents/ui/PersonalDataPage.qml:194
-#: apps/contents/ui/PersonalDataPage.qml:255
+#: apps/contents/ui/PersonalDataPage.qml:174
+#: apps/contents/ui/PersonalDataPage.qml:236
 #, kde-format
 msgid "Authentication Method:"
 msgstr "Mètode d'autenticació:"
 
-#: apps/contents/ui/PersonalDataPage.qml:203
-#: apps/contents/ui/PersonalDataPage.qml:264
+#: apps/contents/ui/PersonalDataPage.qml:183
+#: apps/contents/ui/PersonalDataPage.qml:245
 #, kde-format
 msgid "Username:"
 msgstr "Nom d'usuari:"
 
-#: apps/contents/ui/PersonalDataPage.qml:214
+#: apps/contents/ui/PersonalDataPage.qml:194
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr "Descarrega tots els missatges per a ús fora de línia"
 
-#: apps/contents/ui/PersonalDataPage.qml:230
+#: apps/contents/ui/PersonalDataPage.qml:204
+#, fuzzy, kde-format
+#| msgid "Server Parameters"
+msgid "Outgoing Server Parameters"
+msgstr "Paràmetres del servidor"
+
+#: apps/contents/ui/PersonalDataPage.qml:211
 #, kde-format
 msgid "Outgoing server:"
 msgstr "Servidor d'eixida:"
 
-#: apps/contents/ui/PersonalDataPage.qml:275
+#: apps/contents/ui/PersonalDataPage.qml:260
 #, kde-format
 msgid "Recheck"
 msgstr "Torna a comprovar"
 
-#: apps/contents/ui/PersonalDataPage.qml:288
-#: apps/contents/ui/PersonalDataPage.qml:342
+#: apps/contents/ui/PersonalDataPage.qml:273
+#: apps/contents/ui/PersonalDataPage.qml:322
 #, kde-format
 msgid "Create Account"
 msgstr "Crea un compte"
 
-#: apps/contents/ui/PersonalDataPage.qml:310
+#: apps/contents/ui/PersonalDataPage.qml:284
 #, kde-format
 msgid "Available configurations"
 msgstr "Configuracions disponibles"
 
-#: apps/contents/ui/PersonalDataPage.qml:330
+#: apps/contents/ui/PersonalDataPage.qml:313
 #, kde-format
 msgid "Manual Configuration"
 msgstr "Configuració manual"
 
-#: apps/contents/ui/PersonalDataPage.qml:356
+#: apps/contents/ui/PersonalDataPage.qml:330
 #, kde-format
 msgid "Details"
 msgstr "Detalls"
@@ -439,6 +429,19 @@ msgstr "Mantenidor"
 #, kde-format
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
+
+#~ msgid ""
+#~ "There seems to be a problem in reaching this server or choosing a safe "
+#~ "way to sent the credentials to server. We advise you to check the "
+#~ "settings of the account and adjust it manually if needed."
+#~ msgstr ""
+#~ "Pareix que hi ha un problema en arribar a este servidor o en seleccionar "
+#~ "una forma segura d'enviar les credencials al servidor. Recomanem que "
+#~ "comproveu la configuració del compte i si és necessari, que l'ajusteu "
+#~ "manualment."
+
+#~ msgid "Autodetecting settings failed"
+#~ msgstr "Ha fallat la detecció automàtica de la configuració"
 
 #~ msgid "Writing config file for %1..."
 #~ msgstr "S'està escrivint el fitxer de configuració de %1..."
