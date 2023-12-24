@@ -291,10 +291,9 @@ msgid "boss@example.corp"
 msgstr "boss@example.corp"
 
 #: apps/contents/ui/PersonalDataPage.qml:74
-#, fuzzy, kde-format
-#| msgid "Password…"
+#, kde-format
 msgid "Password:"
-msgstr "Mot de passe..."
+msgstr "Mot de passe :"
 
 #: apps/contents/ui/PersonalDataPage.qml:83
 #, kde-format

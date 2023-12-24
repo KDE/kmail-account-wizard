@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-23 01:45+0000\n"
-"PO-Revision-Date: 2023-12-20 08:58+0200\n"
+"PO-Revision-Date: 2023-12-23 09:41+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -284,10 +284,9 @@ msgid "boss@example.corp"
 msgstr "boss@example.corp"
 
 #: apps/contents/ui/PersonalDataPage.qml:74
-#, fuzzy, kde-format
-#| msgid "Password…"
+#, kde-format
 msgid "Password:"
-msgstr "Пароль…"
+msgstr "Пароль:"
 
 #: apps/contents/ui/PersonalDataPage.qml:83
 #, kde-format
@@ -309,10 +308,9 @@ msgid "No config found from ispdb server."
 msgstr "Не знайдено налаштувань від сервера ispdb."
 
 #: apps/contents/ui/PersonalDataPage.qml:130
-#, fuzzy, kde-format
-#| msgid "Server Parameters"
+#, kde-format
 msgid "Incoming Server Parameters"
-msgstr "Параметри сервера"
+msgstr "Параметри сервера вхідної пошти"
 
 #: apps/contents/ui/PersonalDataPage.qml:138
 #, kde-format
@@ -354,10 +352,9 @@ msgid "Download all messages for offline use"
 msgstr "Отримати усі повідомлення для автономного використання"
 
 #: apps/contents/ui/PersonalDataPage.qml:204
-#, fuzzy, kde-format
-#| msgid "Server Parameters"
+#, kde-format
 msgid "Outgoing Server Parameters"
-msgstr "Параметри сервера"
+msgstr "Параметри сервера вихідної пошти"
 
 #: apps/contents/ui/PersonalDataPage.qml:211
 #, kde-format

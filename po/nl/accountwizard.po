@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-23 01:45+0000\n"
-"PO-Revision-Date: 2023-12-20 10:21+0100\n"
+"PO-Revision-Date: 2023-12-23 10:48+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -281,10 +281,9 @@ msgid "boss@example.corp"
 msgstr "boss@example.corp"
 
 #: apps/contents/ui/PersonalDataPage.qml:74
-#, fuzzy, kde-format
-#| msgid "Password…"
+#, kde-format
 msgid "Password:"
-msgstr "Wachtwoord…"
+msgstr "Wachtwoord:"
 
 #: apps/contents/ui/PersonalDataPage.qml:83
 #, kde-format
@@ -307,10 +306,9 @@ msgid "No config found from ispdb server."
 msgstr "Geen configuratie gevonden van de ispdb-server"
 
 #: apps/contents/ui/PersonalDataPage.qml:130
-#, fuzzy, kde-format
-#| msgid "Server Parameters"
+#, kde-format
 msgid "Incoming Server Parameters"
-msgstr "Serverparameters"
+msgstr "Inkomende serverparameters"
 
 #: apps/contents/ui/PersonalDataPage.qml:138
 #, kde-format
@@ -352,10 +350,9 @@ msgid "Download all messages for offline use"
 msgstr "Alle berichten downloaden voor offline gebruik"
 
 #: apps/contents/ui/PersonalDataPage.qml:204
-#, fuzzy, kde-format
-#| msgid "Server Parameters"
+#, kde-format
 msgid "Outgoing Server Parameters"
-msgstr "Serverparameters"
+msgstr "Uitgaande serverparameters"
 
 #: apps/contents/ui/PersonalDataPage.qml:211
 #, kde-format

@@ -4,21 +4,21 @@
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Manuel Tortosa Moreno <manutortosa@gmail.com>, 2010.
-# Josep M. Ferrer <txemaq@gmail.com>, 2010, 2012, 2015, 2016, 2017, 2018, 2020, 2021, 2023
+# Josep M. Ferrer <txemaq@gmail.com>, 2010, 2012, 2015, 2016, 2017, 2018, 2020, 2021, 2023.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2013, 2014, 2015, 2016, 2017, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-23 01:45+0000\n"
-"PO-Revision-Date: 2023-12-20 09:09+0100\n"
+"PO-Revision-Date: 2023-12-23 10:24+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -284,10 +284,9 @@ msgid "boss@example.corp"
 msgstr "director@exemple.corp"
 
 #: apps/contents/ui/PersonalDataPage.qml:74
-#, fuzzy, kde-format
-#| msgid "Password…"
+#, kde-format
 msgid "Password:"
-msgstr "Contrasenya…"
+msgstr "Contrasenya:"
 
 #: apps/contents/ui/PersonalDataPage.qml:83
 #, kde-format
@@ -309,10 +308,9 @@ msgid "No config found from ispdb server."
 msgstr "No s'ha trobat la configuració des del servidor «ispdb»."
 
 #: apps/contents/ui/PersonalDataPage.qml:130
-#, fuzzy, kde-format
-#| msgid "Server Parameters"
+#, kde-format
 msgid "Incoming Server Parameters"
-msgstr "Paràmetres del servidor"
+msgstr "Paràmetres del servidor d'entrada"
 
 #: apps/contents/ui/PersonalDataPage.qml:138
 #, kde-format
@@ -354,10 +352,9 @@ msgid "Download all messages for offline use"
 msgstr "Descarrega tots els missatges per a ús fora de línia"
 
 #: apps/contents/ui/PersonalDataPage.qml:204
-#, fuzzy, kde-format
-#| msgid "Server Parameters"
+#, kde-format
 msgid "Outgoing Server Parameters"
-msgstr "Paràmetres del servidor"
+msgstr "Paràmetres del servidor d'eixida"
 
 #: apps/contents/ui/PersonalDataPage.qml:211
 #, kde-format
@@ -429,159 +426,3 @@ msgstr "Mantenidor"
 #, kde-format
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
-
-#~ msgid ""
-#~ "There seems to be a problem in reaching this server or choosing a safe "
-#~ "way to sent the credentials to server. We advise you to check the "
-#~ "settings of the account and adjust it manually if needed."
-#~ msgstr ""
-#~ "Pareix que hi ha un problema en arribar a este servidor o en seleccionar "
-#~ "una forma segura d'enviar les credencials al servidor. Recomanem que "
-#~ "comproveu la configuració del compte i si és necessari, que l'ajusteu "
-#~ "manualment."
-
-#~ msgid "Autodetecting settings failed"
-#~ msgstr "Ha fallat la detecció automàtica de la configuració"
-
-#~ msgid "Writing config file for %1..."
-#~ msgstr "S'està escrivint el fitxer de configuració de %1..."
-
-#~ msgid "Config file for %1 is writing."
-#~ msgstr "El fitxer de configuració de %1 s'està escrivint."
-
-#~ msgid "Config file for %1 was not changed."
-#~ msgstr "El fitxer de configuració de %1 no s'ha canviat."
-
-#~ msgid "No given name for the configuration."
-#~ msgstr "No s'ha indicat un nom per a la configuració."
-
-#~ msgid "Unknown configuration name '%1'"
-#~ msgstr "El nom de la configuració «%1» és desconegut"
-
-#~ msgid "Account Wizard"
-#~ msgstr "Assistent de comptes"
-
-#~ msgid "Error while generating new key pair for your account %1: %2"
-#~ msgstr ""
-#~ "S'ha produït un error en generar un parell nou de claus per al vostre "
-#~ "compte %1: %2"
-
-#~ msgid "Could not detect valid key type"
-#~ msgstr "No s'ha pogut detectar un tipus de clau vàlid"
-
-#~ msgid "Import error"
-#~ msgstr "S'ha produït un error d'importació"
-
-#~ msgid "Cannot read data from the certificate file: %1"
-#~ msgstr "No s'han pogut llegir les dades des del fitxer de certificat: %1"
-
-#~ msgid "Failed to import key: %1"
-#~ msgstr "No s'ha pogut importar la clau: %1"
-
-#~ msgid "Failed to import key."
-#~ msgstr "No s'ha pogut importar la clau."
-
-#~ msgid "No key"
-#~ msgstr "Sense clau"
-
-#~ msgid "Generate a new key pair"
-#~ msgstr "Genera un parell nou de claus"
-
-#~ msgid "Import a key"
-#~ msgstr "Importa una clau"
-
-#~ msgid "Certificates"
-#~ msgstr "Certificats"
-
-#~ msgid "Any files"
-#~ msgstr "Qualsevol fitxer"
-
-#~ msgid "Select Certificate File"
-#~ msgstr "Seleccioneu el fitxer de certificat"
-
-#~ msgid "Importing key..."
-#~ msgstr "S'està important la clau..."
-
-#~ msgid "Lookup configuration: Email provider"
-#~ msgstr "Busca de la configuració: Proveïdor de correu electrònic"
-
-#~ msgid "Lookup configuration: Trying common server name"
-#~ msgstr "Busca de la configuració: Es prova el nom comú del servidor"
-
-#~ msgid "Lookup configuration: Mozilla database"
-#~ msgstr "Busca de la configuració: Base de dades de Mozilla"
-
-#~ msgid "Skipping key publishing"
-#~ msgstr "Omet la publicació de la clau"
-
-#~ msgid "Publishing OpenPGP key..."
-#~ msgstr "S'està publicant la clau OpenPGP..."
-
-#~ msgid "Key publishing was canceled."
-#~ msgstr "La publicació de la clau ha sigut cancel·lada."
-
-#~ msgid "Key publishing failed: not online, or GnuPG too old."
-#~ msgstr "La publicació de clau ha fallat: no en línia, o GnuPG massa antic."
-
-#~ msgid "Your email provider does not support key publishing."
-#~ msgstr ""
-#~ "El vostre proveïdor de correu electrònic no admet la publicació de la "
-#~ "clau."
-
-#~ msgid "An error occurred while creating key publishing request."
-#~ msgstr ""
-#~ "S'ha produït un error en crear la sol·licitud de publicació de la clau."
-
-#~ msgid "Key publishing error: mail transport is not configured"
-#~ msgstr ""
-#~ "S'ha produït un error en la publicació de la clau: el transport de correu "
-#~ "no està configurat"
-
-#~ msgid "Key publishing error: failed to create request email"
-#~ msgstr ""
-#~ "S'ha produït un error en la publicació de la clau: ha fallat en crear la "
-#~ "sol·licitud per correu electrònic"
-
-#~ msgid "Failed to send key publishing request: %1"
-#~ msgstr "No s'ha pogut enviar la sol·licitud de publicació de la clau: %1"
-
-#~ msgid "Key publishing request sent."
-#~ msgstr "S'ha enviat la sol·licitud de publicació de la clau."
-
-#~ msgid "Failed to publish the key."
-#~ msgstr "No s'ha pogut publicar la clau."
-
-#~ msgid "Key has been published on %1"
-#~ msgstr "La clau ha sigut publicada a %1"
-
-#~ msgid "Setting up LDAP server..."
-#~ msgstr "S'està configurant el servidor LDAP..."
-
-#~ msgid "Needed parameters are missing for LDAP config: server '%1'"
-#~ msgstr ""
-#~ "Falten els paràmetres necessaris per a la configuració de LDAP: servidor "
-#~ "«%1»"
-
-#~ msgid "LDAP set up."
-#~ msgstr "S'ha establit LDAP."
-
-#~ msgid "LDAP not configuring."
-#~ msgstr "No s'està establint LDAP."
-
-#~ msgid "Removed LDAP entry."
-#~ msgstr "S'ha suprimit una entrada LDAP."
-
-#~ msgid "No config found to edit"
-#~ msgstr "No s'ha trobat la configuració que s'ha d'editar"
-
-#~ msgid "Removed resource instance for '%1'."
-#~ msgstr "S'ha eliminat la instància del recurs per a «%1»."
-
-#~ msgid "Searching for autoconfiguration..."
-#~ msgstr "S'està buscant la configuració automàtica..."
-
-#~ msgid "Autoconfiguration found."
-#~ msgstr "S'ha trobat la configuració automàtica."
-
-#~ msgid "Autoconfiguration failed."
-#~ msgstr "No s'ha pogut configurar automàtica."
