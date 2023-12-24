@@ -30,6 +30,13 @@ FormCard.FormCardPage {
         function onOutgoingHostNameChanged(): void {
             manualOutgoingHostName.text = SetupManager.manualConfiguration.outgoingHostName;
         }
+
+        function onIncomingUserNameChanged(): void {
+            manualIncomingUserName.text = SetupManager.manualConfiguration.incomingUserName;
+        }
+        function onOutgoingUserNameChanged(): void {
+            manualOutgoingUserName.text = SetupManager.manualConfiguration.outgoingUserName;
+        }
     }
 
     FormCard.FormHeader {
