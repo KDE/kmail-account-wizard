@@ -336,6 +336,8 @@ void ManualConfiguration::checkServer()
         break;
     }
     // Test input
+    mServerTestInProgress = true;
+    Q_EMIT serverTestInProgressModeChanged();
     mServerTest->test(mIncomingHostName, protocol);
 }
 
@@ -343,12 +345,16 @@ void ManualConfiguration::slotTestFail()
 {
     qDebug() << "slotTestFail  ";
     // TODO
+    mServerTestInProgress = false;
+    Q_EMIT serverTestInProgressModeChanged();
 }
 
 void ManualConfiguration::slotTestResult(const QString &result)
 {
     qDebug() << "slotTestResult  " << result;
     // TODO
+    mServerTestInProgress = false;
+    Q_EMIT serverTestInProgressModeChanged();
 }
 
 void ManualConfiguration::checkConfiguration()

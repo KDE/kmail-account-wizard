@@ -38,6 +38,7 @@ class LIBACCOUNTWIZARD_EXPORT ManualConfiguration : public QObject
     Q_PROPERTY(bool disconnectedModeEnabled READ disconnectedModeEnabled WRITE setDisconnectedModeEnabled NOTIFY disconnectedModeEnabledChanged FINAL)
 
     Q_PROPERTY(bool hasDisconnectedMode MEMBER mHasDisconnectedMode NOTIFY hasDisconnectedModeChanged)
+    Q_PROPERTY(bool serverTestInProgress MEMBER mServerTestInProgress NOTIFY serverTestInProgressModeChanged)
 public:
     explicit ManualConfiguration(QObject *parent = nullptr);
     ~ManualConfiguration() override;
@@ -118,6 +119,9 @@ Q_SIGNALS:
     void info(const QString &msg);
     void finished(const QString &msg);
 
+    void serverTestInProgressModeChanged();
+    void serverTestDone();
+
 private:
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Resource::ResourceInfo createPop3Resource() const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Resource::ResourceInfo createImapResource() const;
@@ -164,6 +168,8 @@ private:
     bool mHasDisconnectedMode = false;
 
     bool mDisconnectedModeEnabled = false;
+
+    bool mServerTestInProgress = false;
 
     ServerTest *mServerTest = nullptr;
 };

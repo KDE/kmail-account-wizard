@@ -263,7 +263,7 @@ FormCard.FormCardPage {
                 SetupManager.manualConfiguration.checkServer()
             }
             visible: manualConfiguration.visible
-            enabled: SetupManager.manualConfiguration.configurationIsValid
+            enabled: SetupManager.manualConfiguration.configurationIsValid && !SetupManager.manualConfiguration.serverTestInProgress
         }
 
         FormCard.FormDelegateSeparator {}
