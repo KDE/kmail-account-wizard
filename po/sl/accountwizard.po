@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-23 01:45+0000\n"
-"PO-Revision-Date: 2023-12-20 07:21+0100\n"
+"POT-Creation-Date: 2023-12-25 01:33+0000\n"
+"PO-Revision-Date: 2023-12-23 07:52+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -248,12 +248,12 @@ msgstr "Pošiljanje"
 msgid "Personal Information"
 msgstr "Osebni podatki"
 
-#: apps/contents/ui/PersonalDataPage.qml:36
+#: apps/contents/ui/PersonalDataPage.qml:43
 #, kde-format
 msgid "Set Up Your Existing Email Address"
 msgstr "Nastavi vaš obstoječi naslov e-pošte"
 
-#: apps/contents/ui/PersonalDataPage.qml:41
+#: apps/contents/ui/PersonalDataPage.qml:48
 #, kde-format
 msgid ""
 "To use your current email address fill in your credentials.<br />This wizard "
@@ -263,40 +263,39 @@ msgstr ""
 "<br />Ta čarovnik bo samodejno poiskal delujočo in priporočeno konfiguracijo "
 "strežnika."
 
-#: apps/contents/ui/PersonalDataPage.qml:53
+#: apps/contents/ui/PersonalDataPage.qml:60
 #, kde-format
 msgid "Full name:"
 msgstr "Polno ime:"
 
-#: apps/contents/ui/PersonalDataPage.qml:54
+#: apps/contents/ui/PersonalDataPage.qml:61
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
 msgstr "Janez Novak"
 
-#: apps/contents/ui/PersonalDataPage.qml:63
+#: apps/contents/ui/PersonalDataPage.qml:70
 #, kde-format
 msgid "E-mail address:"
 msgstr "E-poštni naslov:"
 
-#: apps/contents/ui/PersonalDataPage.qml:64
+#: apps/contents/ui/PersonalDataPage.qml:71
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
 msgstr "boss@example.corp"
 
-#: apps/contents/ui/PersonalDataPage.qml:74
-#, fuzzy, kde-format
-#| msgid "Password…"
+#: apps/contents/ui/PersonalDataPage.qml:81
+#, kde-format
 msgid "Password:"
-msgstr "Geslo…"
+msgstr "Geslo:"
 
-#: apps/contents/ui/PersonalDataPage.qml:83
+#: apps/contents/ui/PersonalDataPage.qml:90
 #, kde-format
 msgid "Continue"
 msgstr "Nadaljuj"
 
-#: apps/contents/ui/PersonalDataPage.qml:97
+#: apps/contents/ui/PersonalDataPage.qml:104
 #, kde-format
 msgid ""
 "Check online for the settings needed for this email provider. Only the "
@@ -305,89 +304,87 @@ msgstr ""
 "V spletu preverite potrebne nastavitve za tega ponudnika e-pošte. Prek "
 "interneta bo poslan le del e-poštnega naslova z imenom domene."
 
-#: apps/contents/ui/PersonalDataPage.qml:123
+#: apps/contents/ui/PersonalDataPage.qml:130
 #, kde-format
 msgid "No config found from ispdb server."
 msgstr "Na strežniku ispdb ni bilo mogoče najti nobene konfiguracije."
 
-#: apps/contents/ui/PersonalDataPage.qml:130
-#, fuzzy, kde-format
-#| msgid "Server Parameters"
+#: apps/contents/ui/PersonalDataPage.qml:137
+#, kde-format
 msgid "Incoming Server Parameters"
-msgstr "Parametri strežnika"
+msgstr "Parametri sprejemnega strežnika"
 
-#: apps/contents/ui/PersonalDataPage.qml:138
+#: apps/contents/ui/PersonalDataPage.qml:145
 #, kde-format
 msgid "Incoming server:"
 msgstr "Strežnik za prejemanje:"
 
-#: apps/contents/ui/PersonalDataPage.qml:149
+#: apps/contents/ui/PersonalDataPage.qml:156
 #, kde-format
 msgid "Protocol:"
 msgstr "Protokol:"
 
-#: apps/contents/ui/PersonalDataPage.qml:158
-#: apps/contents/ui/PersonalDataPage.qml:220
+#: apps/contents/ui/PersonalDataPage.qml:165
+#: apps/contents/ui/PersonalDataPage.qml:227
 #, kde-format
 msgid "Port:"
 msgstr "Vrata:"
 
-#: apps/contents/ui/PersonalDataPage.qml:165
-#: apps/contents/ui/PersonalDataPage.qml:227
+#: apps/contents/ui/PersonalDataPage.qml:172
+#: apps/contents/ui/PersonalDataPage.qml:234
 #, kde-format
 msgid "Security:"
 msgstr "Varnost:"
 
-#: apps/contents/ui/PersonalDataPage.qml:174
-#: apps/contents/ui/PersonalDataPage.qml:236
+#: apps/contents/ui/PersonalDataPage.qml:181
+#: apps/contents/ui/PersonalDataPage.qml:243
 #, kde-format
 msgid "Authentication Method:"
 msgstr "Metoda avtentikacije:"
 
-#: apps/contents/ui/PersonalDataPage.qml:183
-#: apps/contents/ui/PersonalDataPage.qml:245
+#: apps/contents/ui/PersonalDataPage.qml:190
+#: apps/contents/ui/PersonalDataPage.qml:252
 #, kde-format
 msgid "Username:"
 msgstr "Uporabniško ime:"
 
-#: apps/contents/ui/PersonalDataPage.qml:194
+#: apps/contents/ui/PersonalDataPage.qml:201
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr "Prenesi vsa sporočila za uporabo brez povezave"
 
-#: apps/contents/ui/PersonalDataPage.qml:204
-#, fuzzy, kde-format
-#| msgid "Server Parameters"
-msgid "Outgoing Server Parameters"
-msgstr "Parametri strežnika"
-
 #: apps/contents/ui/PersonalDataPage.qml:211
+#, kde-format
+msgid "Outgoing Server Parameters"
+msgstr "Parametri strežnika pošiljanja"
+
+#: apps/contents/ui/PersonalDataPage.qml:218
 #, kde-format
 msgid "Outgoing server:"
 msgstr "Strežnik za pošiljanje:"
 
-#: apps/contents/ui/PersonalDataPage.qml:260
+#: apps/contents/ui/PersonalDataPage.qml:267
 #, kde-format
 msgid "Recheck"
 msgstr "Ponovno preveri"
 
-#: apps/contents/ui/PersonalDataPage.qml:273
-#: apps/contents/ui/PersonalDataPage.qml:322
+#: apps/contents/ui/PersonalDataPage.qml:280
+#: apps/contents/ui/PersonalDataPage.qml:329
 #, kde-format
 msgid "Create Account"
 msgstr "Ustvari račun"
 
-#: apps/contents/ui/PersonalDataPage.qml:284
+#: apps/contents/ui/PersonalDataPage.qml:291
 #, kde-format
 msgid "Available configurations"
 msgstr "Razpoložljive konfiguracije"
 
-#: apps/contents/ui/PersonalDataPage.qml:313
+#: apps/contents/ui/PersonalDataPage.qml:320
 #, kde-format
 msgid "Manual Configuration"
 msgstr "Ročna konfiguracija"
 
-#: apps/contents/ui/PersonalDataPage.qml:330
+#: apps/contents/ui/PersonalDataPage.qml:337
 #, kde-format
 msgid "Details"
 msgstr "Podrobnosti"
