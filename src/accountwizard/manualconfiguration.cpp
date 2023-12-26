@@ -311,6 +311,21 @@ QString ManualConfiguration::convertOutgoingAuthenticationProtocol(int protocol)
     case 0:
         break;
     }
+#if 0
+    return {i18n("Clear text"), i18n("LOGIN"), i18n("PLAIN"), i18n("CRAM-MD5"), i18n("DIGEST-MD5"), i18n("NTLM"), i18n("GSSAPI")};
+
+    {"login", MailTransport::Transport::EnumAuthenticationType::LOGIN},
+    {"plain", MailTransport::Transport::EnumAuthenticationType::PLAIN},
+    {"cram-md5", MailTransport::Transport::EnumAuthenticationType::CRAM_MD5},
+    {"digest-md5", MailTransport::Transport::EnumAuthenticationType::DIGEST_MD5},
+    {"gssapi", MailTransport::Transport::EnumAuthenticationType::GSSAPI},
+    {"ntlm", MailTransport::Transport::EnumAuthenticationType::NTLM},
+    {"apop", MailTransport::Transport::EnumAuthenticationType::APOP},
+    {"clear", MailTransport::Transport::EnumAuthenticationType::CLEAR},
+    {"oauth2", MailTransport::Transport::EnumAuthenticationType::XOAUTH2},
+    {"anonymous", MailTransport::Transport::EnumAuthenticationType::ANONYMOUS}};
+#endif
+
     // TODO
     return {};
 }
