@@ -6,6 +6,7 @@
 */
 
 #include "transport.h"
+#include "accountwizard_debug.h"
 #include <KLocalizedString>
 #include <MailTransport/Transport>
 #include <MailTransport/TransportManager>
@@ -81,6 +82,7 @@ void Transport::createTransport()
     QString encrStr;
     MailTransport::Transport::EnumEncryption encr = stringToValue(encryptionEnum, encryptionEnumSize, mTransportInfo.encrStr, valid);
     if (valid) {
+        qCWarning(ACCOUNTWIZARD_LOG) << "encr " << encr;
         encrStr = mTransportInfo.encrStr;
     }
     mt->setEncryption(encr);
@@ -88,6 +90,7 @@ void Transport::createTransport()
     QString authStr;
     MailTransport::Transport::EnumAuthenticationType auth = stringToValue(authenticationTypeEnum, authenticationTypeEnumSize, mTransportInfo.authStr, valid);
     if (valid) {
+        qCWarning(ACCOUNTWIZARD_LOG) << "auth " << auth;
         authStr = mTransportInfo.authStr;
     }
     mt->setAuthenticationType(auth);
