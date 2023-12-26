@@ -308,25 +308,22 @@ QString ManualConfiguration::convertOutgoingSecurityProtocol(int protocol) const
 QString ManualConfiguration::convertOutgoingAuthenticationProtocol(int protocol) const
 {
     switch (protocol) {
-    case 0:
-        break;
+    case 0: // Clear Text
+        return QStringLiteral("clear");
+    case 1: // LOGIN
+        return QStringLiteral("login");
+    case 2: // PLAIN
+        return QStringLiteral("plain");
+    case 3: // CRAM-MD5
+        return QStringLiteral("cram-md5");
+    case 4: // DIGEST-MD5
+        return QStringLiteral("digest-md5");
+    case 5: // NTLM
+        return QStringLiteral("ntlm");
+    case 6: // GSSAPI
+        return QStringLiteral("gssapi");
     }
-#if 0
-    return {i18n("Clear text"), i18n("LOGIN"), i18n("PLAIN"), i18n("CRAM-MD5"), i18n("DIGEST-MD5"), i18n("NTLM"), i18n("GSSAPI")};
-
-    {"login", MailTransport::Transport::EnumAuthenticationType::LOGIN},
-    {"plain", MailTransport::Transport::EnumAuthenticationType::PLAIN},
-    {"cram-md5", MailTransport::Transport::EnumAuthenticationType::CRAM_MD5},
-    {"digest-md5", MailTransport::Transport::EnumAuthenticationType::DIGEST_MD5},
-    {"gssapi", MailTransport::Transport::EnumAuthenticationType::GSSAPI},
-    {"ntlm", MailTransport::Transport::EnumAuthenticationType::NTLM},
-    {"apop", MailTransport::Transport::EnumAuthenticationType::APOP},
-    {"clear", MailTransport::Transport::EnumAuthenticationType::CLEAR},
-    {"oauth2", MailTransport::Transport::EnumAuthenticationType::XOAUTH2},
-    {"anonymous", MailTransport::Transport::EnumAuthenticationType::ANONYMOUS}};
-#endif
-
-    // TODO
+    qCWarning(ACCOUNTWIZARD_LOG) << " Impossible to convert protocol: " << protocol;
     return {};
 }
 
