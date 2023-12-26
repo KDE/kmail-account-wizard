@@ -64,6 +64,10 @@ int main(int argc, char **argv)
     qRegisterMetaType<Identity *>("Identity *");
     qRegisterMetaType<ConfigurationModel *>("ConfigurationModel *");
     engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
-
+    // Exit on QML load error.
+    if (engine.rootObjects().isEmpty()) {
+        qWarning() << " Error during loading main.qml";
+        return 1;
+    }
     return app.exec();
 }
