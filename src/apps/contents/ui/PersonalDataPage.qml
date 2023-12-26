@@ -70,7 +70,10 @@ FormCard.FormCardPage {
             label: i18n("E-mail address:")
             placeholderText: i18nc("Generic email address", "boss@example.corp")
             text: SetupManager.email
-            onTextEdited: SetupManager.email = text
+            onTextEdited: {
+                SetupManager.email = text
+                root.explicitManualConfiguration = false;
+            }
             onAccepted: continueButton.clicked()
         }
 
