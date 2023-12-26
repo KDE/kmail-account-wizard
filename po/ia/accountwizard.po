@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-25 01:33+0000\n"
-"PO-Revision-Date: 2023-12-20 08:40+0100\n"
+"PO-Revision-Date: 2023-12-25 18:56+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -278,10 +278,9 @@ msgid "boss@example.corp"
 msgstr "boss@example.corp"
 
 #: apps/contents/ui/PersonalDataPage.qml:81
-#, fuzzy, kde-format
-#| msgid "Password…"
+#, kde-format
 msgid "Password:"
-msgstr "Contrasigno…"
+msgstr "Contrasigno:"
 
 #: apps/contents/ui/PersonalDataPage.qml:90
 #, kde-format
@@ -304,10 +303,9 @@ msgid "No config found from ispdb server."
 msgstr "Necun config trovate ex servitor ispdb."
 
 #: apps/contents/ui/PersonalDataPage.qml:137
-#, fuzzy, kde-format
-#| msgid "Server Parameters"
+#, kde-format
 msgid "Incoming Server Parameters"
-msgstr "Parametros de servitor"
+msgstr "Parametros de servitor in arrivata"
 
 #: apps/contents/ui/PersonalDataPage.qml:145
 #, kde-format
@@ -349,10 +347,9 @@ msgid "Download all messages for offline use"
 msgstr "Discargar omne messages pro uso foras de linea"
 
 #: apps/contents/ui/PersonalDataPage.qml:211
-#, fuzzy, kde-format
-#| msgid "Server Parameters"
+#, kde-format
 msgid "Outgoing Server Parameters"
-msgstr "Parametros de servitor"
+msgstr "Parametros de servitor in Egresso"
 
 #: apps/contents/ui/PersonalDataPage.qml:218
 #, kde-format
