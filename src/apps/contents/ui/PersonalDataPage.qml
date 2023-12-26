@@ -151,7 +151,6 @@ FormCard.FormCardPage {
             onTextEdited: {
                 SetupManager.manualConfiguration.incomingHostName = manualIncomingHostName.text
             }
-
         }
 
         FormCard.FormComboBoxDelegate {
@@ -303,7 +302,6 @@ FormCard.FormCardPage {
         Repeater {
             id: configurationRepeater
             model: SetupManager.configurationModel
-            // Component.onCompleted: console.log(SetupManager.configurationModel)
 
             delegate: ConfigurationDelegate {
                 required property int index
@@ -343,9 +341,14 @@ FormCard.FormCardPage {
     FormCard.FormCard {
         id: details
         visible: SetupManager.details.length > 0
-        FormCard.FormTextDelegate {
+        QQC2.Label {
             id: detailsInfo
             text: SetupManager.details
+            wrapMode: Text.WordWrap
+            Layout.fillWidth: true
+            padding: Kirigami.Units.gridUnit
+            bottomPadding: Kirigami.Units.largeSpacing
+            topPadding: Kirigami.Units.largeSpacing
         }
     }
 }
