@@ -396,7 +396,7 @@ bool ManualConfiguration::disconnectedModeEnabled() const
     return mDisconnectedModeEnabled;
 }
 
-void ManualConfiguration::setDisconnectedModeEnabled(int disconnectedMode)
+void ManualConfiguration::setDisconnectedModeEnabled(bool disconnectedMode)
 {
     if (mDisconnectedModeEnabled == disconnectedMode)
         return;

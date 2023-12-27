@@ -81,7 +81,7 @@ public:
     void setCurrentOutgoingAuthenticationProtocol(int newCurrentOutgoingAuthenticationProtocols);
 
     [[nodiscard]] bool disconnectedModeEnabled() const;
-    void setDisconnectedModeEnabled(int disconnectedMode);
+    void setDisconnectedModeEnabled(bool disconnectedMode);
 
     Q_INVOKABLE void checkServer();
 
