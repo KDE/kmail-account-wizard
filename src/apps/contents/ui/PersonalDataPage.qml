@@ -201,7 +201,7 @@ FormCard.FormCardPage {
             id: disconnectedModeEnabled
             visible: SetupManager.manualConfiguration.hasDisconnectedMode
             description: i18n("Download all messages for offline use")
-            onCheckedChanged: (checked) => {
+            onCheckedChanged: {
                 SetupManager.manualConfiguration.disconnectedModeEnabled = checked
             }
             checked: SetupManager.manualConfiguration.disconnectedModeEnabled
