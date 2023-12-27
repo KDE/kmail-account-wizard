@@ -363,6 +363,11 @@ void ManualConfiguration::slotTestFail()
 
 void ManualConfiguration::slotTestResult(const QString &result)
 {
+    if (result == QLatin1String("tls")) {
+        // TODO
+    } else {
+        // TODO
+    }
     qDebug() << "slotTestResult  " << result;
     // TODO
     mServerTestInProgress = false;
