@@ -374,6 +374,11 @@ void ManualConfiguration::slotTestResult(const QString &result)
     Q_EMIT serverTestInProgressModeChanged();
 }
 
+int ManualConfiguration::identityId() const
+{
+    return mIdentityId;
+}
+
 void ManualConfiguration::checkConfiguration()
 {
     const bool valid = !mIncomingUserName.trimmed().isEmpty() && !mIncomingHostName.trimmed().isEmpty() && !mOutgoingHostName.trimmed().isEmpty()
@@ -580,22 +585,23 @@ void ManualConfiguration::setOutgoingUserName(const QString &newOutgoingUserName
 
 QDebug operator<<(QDebug d, const ManualConfiguration &t)
 {
-    d << "mIncomingUserName " << t.incomingUserName();
-    d << "mIncomingHostName " << t.incomingHostName();
-    d << "mIncomingPort " << t.incomingPort();
+    d.space() << "mIncomingUserName" << t.incomingUserName();
+    d.space() << "mIncomingHostName" << t.incomingHostName();
+    d.space() << "mIncomingPort" << t.incomingPort();
 
-    d << "mOutgoingUserName " << t.outgoingUserName();
-    d << "mOutgoingHostName " << t.outgoingHostName();
-    d << "mOutgoingPort " << t.outgoingPort();
+    d.space() << "mOutgoingUserName" << t.outgoingUserName();
+    d.space() << "mOutgoingHostName" << t.outgoingHostName();
+    d.space() << "mOutgoingPort" << t.outgoingPort();
 
-    d << "mCurrentIncomingProtocol " << t.currentIncomingProtocol();
-    d << "mCurrentIncomingSecurityProtocol " << t.currentIncomingSecurityProtocol();
-    d << "mCurrentOutgoingSecurityProtocol " << t.currentOutgoingSecurityProtocol();
+    d.space() << "mCurrentIncomingProtocol" << t.currentIncomingProtocol();
+    d.space() << "mCurrentIncomingSecurityProtocol" << t.currentIncomingSecurityProtocol();
+    d.space() << "mCurrentOutgoingSecurityProtocol" << t.currentOutgoingSecurityProtocol();
 
-    d << "mCurrentIncomingAuthenticationProtocol " << t.currentIncomingAuthenticationProtocol();
-    d << "mCurrentOutgoingAuthenticationProtocol " << t.currentOutgoingAuthenticationProtocol();
+    d.space() << "mCurrentIncomingAuthenticationProtocol" << t.currentIncomingAuthenticationProtocol();
+    d.space() << "mCurrentOutgoingAuthenticationProtocol" << t.currentOutgoingAuthenticationProtocol();
 
-    d << "mDisconnectedModeEnabled " << t.disconnectedModeEnabled();
+    d.space() << "mDisconnectedModeEnabled" << t.disconnectedModeEnabled();
+    d.space() << "identity" << t.identityId();
     return d;
 }
 

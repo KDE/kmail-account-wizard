@@ -93,6 +93,8 @@ public:
 
     void setIdentityId(int id);
 
+    int identityId() const;
+
 Q_SIGNALS:
     void incomingHostNameChanged();
     void incomingPortChanged();
