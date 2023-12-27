@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-25 01:33+0000\n"
+"POT-Creation-Date: 2023-12-27 01:34+0000\n"
 "PO-Revision-Date: 2023-12-24 12:49+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -213,17 +213,17 @@ msgstr "No se han podido guardar las preferencias: %1"
 msgid "Resource setup completed."
 msgstr "Configuración del recurso finalizada."
 
-#: accountwizard/transport.cpp:63
+#: accountwizard/transport.cpp:64
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Configurando cuenta de transporte de correo..."
 
-#: accountwizard/transport.cpp:96
+#: accountwizard/transport.cpp:99
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr "El transporte de correo usa cifrado «%1» y autenticación «%2»."
 
-#: accountwizard/transport.cpp:99
+#: accountwizard/transport.cpp:102
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "Configuración de cuenta de transporte de correo."
@@ -280,17 +280,17 @@ msgctxt "Generic email address"
 msgid "boss@example.corp"
 msgstr "jefe@ejemplo.org"
 
-#: apps/contents/ui/PersonalDataPage.qml:81
+#: apps/contents/ui/PersonalDataPage.qml:84
 #, kde-format
 msgid "Password:"
 msgstr "Contraseña:"
 
-#: apps/contents/ui/PersonalDataPage.qml:90
+#: apps/contents/ui/PersonalDataPage.qml:93
 #, kde-format
 msgid "Continue"
 msgstr "Continuar"
 
-#: apps/contents/ui/PersonalDataPage.qml:104
+#: apps/contents/ui/PersonalDataPage.qml:107
 #, kde-format
 msgid ""
 "Check online for the settings needed for this email provider. Only the "
@@ -300,87 +300,87 @@ msgstr ""
 "se enviará a internet la parte del nombre de dominio de su dirección de "
 "correo."
 
-#: apps/contents/ui/PersonalDataPage.qml:130
+#: apps/contents/ui/PersonalDataPage.qml:133
 #, kde-format
 msgid "No config found from ispdb server."
 msgstr "No se ha encontrado ninguna configuración en el servidor ispdb."
 
-#: apps/contents/ui/PersonalDataPage.qml:137
+#: apps/contents/ui/PersonalDataPage.qml:140
 #, kde-format
 msgid "Incoming Server Parameters"
 msgstr "Parámetros del servidor entrante"
 
-#: apps/contents/ui/PersonalDataPage.qml:145
+#: apps/contents/ui/PersonalDataPage.qml:148
 #, kde-format
 msgid "Incoming server:"
 msgstr "Servidor de entrada:"
 
-#: apps/contents/ui/PersonalDataPage.qml:156
+#: apps/contents/ui/PersonalDataPage.qml:158
 #, kde-format
 msgid "Protocol:"
 msgstr "Protocolo:"
 
-#: apps/contents/ui/PersonalDataPage.qml:165
-#: apps/contents/ui/PersonalDataPage.qml:227
+#: apps/contents/ui/PersonalDataPage.qml:167
+#: apps/contents/ui/PersonalDataPage.qml:229
 #, kde-format
 msgid "Port:"
 msgstr "Puerto:"
 
-#: apps/contents/ui/PersonalDataPage.qml:172
-#: apps/contents/ui/PersonalDataPage.qml:234
+#: apps/contents/ui/PersonalDataPage.qml:174
+#: apps/contents/ui/PersonalDataPage.qml:236
 #, kde-format
 msgid "Security:"
 msgstr "Seguridad:"
 
-#: apps/contents/ui/PersonalDataPage.qml:181
-#: apps/contents/ui/PersonalDataPage.qml:243
+#: apps/contents/ui/PersonalDataPage.qml:183
+#: apps/contents/ui/PersonalDataPage.qml:245
 #, kde-format
 msgid "Authentication Method:"
 msgstr "Método de autenticación:"
 
-#: apps/contents/ui/PersonalDataPage.qml:190
-#: apps/contents/ui/PersonalDataPage.qml:252
+#: apps/contents/ui/PersonalDataPage.qml:192
+#: apps/contents/ui/PersonalDataPage.qml:254
 #, kde-format
 msgid "Username:"
 msgstr "Nombre de usuario:"
 
-#: apps/contents/ui/PersonalDataPage.qml:201
+#: apps/contents/ui/PersonalDataPage.qml:203
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr "Descargar todos los mensajes para usarlos sin conexión"
 
-#: apps/contents/ui/PersonalDataPage.qml:211
+#: apps/contents/ui/PersonalDataPage.qml:213
 #, kde-format
 msgid "Outgoing Server Parameters"
 msgstr "Parámetros del servidor saliente"
 
-#: apps/contents/ui/PersonalDataPage.qml:218
+#: apps/contents/ui/PersonalDataPage.qml:220
 #, kde-format
 msgid "Outgoing server:"
 msgstr "Servidor de salida:"
 
-#: apps/contents/ui/PersonalDataPage.qml:267
+#: apps/contents/ui/PersonalDataPage.qml:269
 #, kde-format
 msgid "Recheck"
 msgstr "Volver a comprobar"
 
-#: apps/contents/ui/PersonalDataPage.qml:280
-#: apps/contents/ui/PersonalDataPage.qml:329
+#: apps/contents/ui/PersonalDataPage.qml:282
+#: apps/contents/ui/PersonalDataPage.qml:330
 #, kde-format
 msgid "Create Account"
 msgstr "Crear cuenta"
 
-#: apps/contents/ui/PersonalDataPage.qml:291
+#: apps/contents/ui/PersonalDataPage.qml:293
 #, kde-format
 msgid "Available configurations"
 msgstr "Configuraciones disponibles"
 
-#: apps/contents/ui/PersonalDataPage.qml:320
+#: apps/contents/ui/PersonalDataPage.qml:321
 #, kde-format
 msgid "Manual Configuration"
 msgstr "Configuración manual"
 
-#: apps/contents/ui/PersonalDataPage.qml:337
+#: apps/contents/ui/PersonalDataPage.qml:338
 #, kde-format
 msgid "Details"
 msgstr "Detalles"

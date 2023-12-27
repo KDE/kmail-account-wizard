@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-25 01:33+0000\n"
+"POT-Creation-Date: 2023-12-27 01:34+0000\n"
 "PO-Revision-Date: 2023-12-16 07:44+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -213,18 +213,18 @@ msgstr "Ezin izan ditu ezarpenak gorde: %1"
 msgid "Resource setup completed."
 msgstr "Baliabidea ezartzea osatu da."
 
-#: accountwizard/transport.cpp:63
+#: accountwizard/transport.cpp:64
 #, kde-format
 msgid "Setting up mail transport account..."
 msgstr "Posta-garraio kontua ezartzen..."
 
-#: accountwizard/transport.cpp:96
+#: accountwizard/transport.cpp:99
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
 msgstr ""
 "Posta-garraioak '%1' zifratzea eta '%2' autentifikazioa erabiltzen ditu."
 
-#: accountwizard/transport.cpp:99
+#: accountwizard/transport.cpp:102
 #, kde-format
 msgid "Mail transport account set up."
 msgstr "Posta-garraio kontua ezarri da."
@@ -281,18 +281,18 @@ msgctxt "Generic email address"
 msgid "boss@example.corp"
 msgstr "zuzendaria@adibide.corp"
 
-#: apps/contents/ui/PersonalDataPage.qml:81
+#: apps/contents/ui/PersonalDataPage.qml:84
 #, fuzzy, kde-format
 #| msgid "Password…"
 msgid "Password:"
 msgstr "Pasahitza…"
 
-#: apps/contents/ui/PersonalDataPage.qml:90
+#: apps/contents/ui/PersonalDataPage.qml:93
 #, kde-format
 msgid "Continue"
 msgstr "Jarraitu"
 
-#: apps/contents/ui/PersonalDataPage.qml:104
+#: apps/contents/ui/PersonalDataPage.qml:107
 #, kde-format
 msgid ""
 "Check online for the settings needed for this email provider. Only the "
@@ -302,89 +302,89 @@ msgstr ""
 "ezarpenak. Internet bidez, e-postaren domeinu-izenaren zatia bakarrik "
 "bidaliko da."
 
-#: apps/contents/ui/PersonalDataPage.qml:130
+#: apps/contents/ui/PersonalDataPage.qml:133
 #, kde-format
 msgid "No config found from ispdb server."
 msgstr "«ispdb» zerbitzaritik ez da konfiguraziorik aurkitu."
 
-#: apps/contents/ui/PersonalDataPage.qml:137
+#: apps/contents/ui/PersonalDataPage.qml:140
 #, fuzzy, kde-format
 #| msgid "Server Parameters"
 msgid "Incoming Server Parameters"
 msgstr "Zerbitzariaren parametroak"
 
-#: apps/contents/ui/PersonalDataPage.qml:145
+#: apps/contents/ui/PersonalDataPage.qml:148
 #, kde-format
 msgid "Incoming server:"
 msgstr "Sarrerako zerbitzaria:"
 
-#: apps/contents/ui/PersonalDataPage.qml:156
+#: apps/contents/ui/PersonalDataPage.qml:158
 #, kde-format
 msgid "Protocol:"
 msgstr "Protokoloa:"
 
-#: apps/contents/ui/PersonalDataPage.qml:165
-#: apps/contents/ui/PersonalDataPage.qml:227
+#: apps/contents/ui/PersonalDataPage.qml:167
+#: apps/contents/ui/PersonalDataPage.qml:229
 #, kde-format
 msgid "Port:"
 msgstr "Ataka:"
 
-#: apps/contents/ui/PersonalDataPage.qml:172
-#: apps/contents/ui/PersonalDataPage.qml:234
+#: apps/contents/ui/PersonalDataPage.qml:174
+#: apps/contents/ui/PersonalDataPage.qml:236
 #, kde-format
 msgid "Security:"
 msgstr "Segurtasuna:"
 
-#: apps/contents/ui/PersonalDataPage.qml:181
-#: apps/contents/ui/PersonalDataPage.qml:243
+#: apps/contents/ui/PersonalDataPage.qml:183
+#: apps/contents/ui/PersonalDataPage.qml:245
 #, kde-format
 msgid "Authentication Method:"
 msgstr "Autentifikazio metodoa:"
 
-#: apps/contents/ui/PersonalDataPage.qml:190
-#: apps/contents/ui/PersonalDataPage.qml:252
+#: apps/contents/ui/PersonalDataPage.qml:192
+#: apps/contents/ui/PersonalDataPage.qml:254
 #, kde-format
 msgid "Username:"
 msgstr "Erabiltzaile-izena:"
 
-#: apps/contents/ui/PersonalDataPage.qml:201
+#: apps/contents/ui/PersonalDataPage.qml:203
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr "Zama-jaitsi mezu guztiak lerroz-kanpo erabiltzeko"
 
-#: apps/contents/ui/PersonalDataPage.qml:211
+#: apps/contents/ui/PersonalDataPage.qml:213
 #, fuzzy, kde-format
 #| msgid "Server Parameters"
 msgid "Outgoing Server Parameters"
 msgstr "Zerbitzariaren parametroak"
 
-#: apps/contents/ui/PersonalDataPage.qml:218
+#: apps/contents/ui/PersonalDataPage.qml:220
 #, kde-format
 msgid "Outgoing server:"
 msgstr "Irteerako zerbitzaria:"
 
-#: apps/contents/ui/PersonalDataPage.qml:267
+#: apps/contents/ui/PersonalDataPage.qml:269
 #, kde-format
 msgid "Recheck"
 msgstr "Berregiaztatu"
 
-#: apps/contents/ui/PersonalDataPage.qml:280
-#: apps/contents/ui/PersonalDataPage.qml:329
+#: apps/contents/ui/PersonalDataPage.qml:282
+#: apps/contents/ui/PersonalDataPage.qml:330
 #, kde-format
 msgid "Create Account"
 msgstr "Sortu kontua"
 
-#: apps/contents/ui/PersonalDataPage.qml:291
+#: apps/contents/ui/PersonalDataPage.qml:293
 #, kde-format
 msgid "Available configurations"
 msgstr "Konfigurazio erabilgarriak"
 
-#: apps/contents/ui/PersonalDataPage.qml:320
+#: apps/contents/ui/PersonalDataPage.qml:321
 #, kde-format
 msgid "Manual Configuration"
 msgstr "Eskuzko konfigurazioa"
 
-#: apps/contents/ui/PersonalDataPage.qml:337
+#: apps/contents/ui/PersonalDataPage.qml:338
 #, fuzzy, kde-format
 #| msgid "&Details..."
 msgid "Details"
