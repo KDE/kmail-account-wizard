@@ -24,7 +24,7 @@ class LIBACCOUNTWIZARD_EXPORT ManualConfiguration : public QObject
     Q_PROPERTY(QStringList incomingProtocols READ incomingProtocols CONSTANT)
     Q_PROPERTY(QStringList securityProtocols READ securityProtocols CONSTANT)
     Q_PROPERTY(QStringList authenticationProtocols READ authenticationProtocols CONSTANT)
-    Q_PROPERTY(bool configurationIsValid MEMBER mConfigurationIsValid NOTIFY configurationIsValidChanged)
+    Q_PROPERTY(bool configurationIsValid MEMBER mConfigurationIsValid NOTIFY configurationIsValidChanged FINAL)
     Q_PROPERTY(int currentIncomingProtocol READ currentIncomingProtocol WRITE setCurrentIncomingProtocol NOTIFY currentIncomingProtocolChanged FINAL)
     Q_PROPERTY(int currentIncomingSecurityProtocol READ currentIncomingSecurityProtocol WRITE setCurrentIncomingSecurityProtocol NOTIFY
                    currentIncomingSecurityProtocolChanged FINAL)
@@ -37,8 +37,8 @@ class LIBACCOUNTWIZARD_EXPORT ManualConfiguration : public QObject
 
     Q_PROPERTY(bool disconnectedModeEnabled READ disconnectedModeEnabled WRITE setDisconnectedModeEnabled NOTIFY disconnectedModeEnabledChanged FINAL)
 
-    Q_PROPERTY(bool hasDisconnectedMode MEMBER mHasDisconnectedMode NOTIFY hasDisconnectedModeChanged)
-    Q_PROPERTY(bool serverTestInProgress MEMBER mServerTestInProgress NOTIFY serverTestInProgressModeChanged)
+    Q_PROPERTY(bool hasDisconnectedMode MEMBER mHasDisconnectedMode NOTIFY hasDisconnectedModeChanged FINAL)
+    Q_PROPERTY(bool serverTestInProgress MEMBER mServerTestInProgress NOTIFY serverTestInProgressModeChanged FINAL)
 public:
     explicit ManualConfiguration(QObject *parent = nullptr);
     ~ManualConfiguration() override;
