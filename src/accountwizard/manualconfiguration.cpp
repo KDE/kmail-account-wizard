@@ -363,12 +363,62 @@ void ManualConfiguration::slotTestFail()
 
 void ManualConfiguration::slotTestResult(const QString &result)
 {
-    if (result == QLatin1String("tls")) {
-        // TODO
-    } else {
-        // TODO
-    }
     qDebug() << "slotTestResult  " << result;
+    switch (mCurrentIncomingProtocol) {
+    case 0: { // Pop3
+        if (result == QStringLiteral("ssl")) {
+            setIncomingPort(995);
+            // pop3Res.setOption( "UseTLS", true );
+        } else if (result == QStringLiteral("tls")) { // tls is really STARTTLS
+            setIncomingPort(110);
+            // pop3Res.setOption( "UseTLS", true );
+        } else if (result == QStringLiteral("none")) {
+            setIncomingPort(110);
+        } else {
+            setIncomingPort(110);
+        }
+        break;
+    }
+    case 1: { // Imap
+        if (result == QStringLiteral("ssl")) {
+            setIncomingPort(993);
+            // pop3Res.setOption( "UseTLS", true );
+        } else if (result == QStringLiteral("tls")) { // tls is really STARTTLS
+            setIncomingPort(143);
+            // pop3Res.setOption( "UseTLS", true );
+        } else if (result == QStringLiteral("none")) {
+            setIncomingPort(143);
+        } else {
+            setIncomingPort(143);
+        }
+        break;
+#if 0
+        // if ( server == "imap.gmail.com" ) {
+        //     imapRes.setOption( "Authentication", 9 ); // XOAuth2
+        //     arg = "ssl";
+        // } else {
+        //     imapRes.setOption( "Authentication", 7 ); // ClearText
+        // }
+        // if ( arg == "ssl" ) {
+        //   // The ENUM used for authentication (in the imap resource only)
+        //   imapRes.setOption( "Safety", "SSL"); // SSL/TLS
+        //   imapRes.setOption( "ImapPort", 993 );
+        // } else if ( arg == "tls" ) { // tls is really STARTTLS
+        //   imapRes.setOption( "Safety", "STARTTLS");  // STARTTLS
+        //   imapRes.setOption( "ImapPort", 143 );
+        // } else if ( arg == "none" ) {
+        //   imapRes.setOption( "Safety", "NONE" );  // No encryption
+        //   imapRes.setOption( "ImapPort", 143 );
+        // } else {
+        //   // safe default fallback when servertest failed
+        //   imapRes.setOption( "Safety", "STARTTLS");
+        //   imapRes.setOption( "ImapPort", 143 );
+        // }
+#endif
+        break;
+    }
+    }
+
     // TODO
     mServerTestInProgress = false;
     Q_EMIT serverTestInProgressModeChanged();
