@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-27 01:34+0000\n"
-"PO-Revision-Date: 2023-12-17 19:47+0900\n"
+"PO-Revision-Date: 2023-12-27 17:28+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -69,12 +69,12 @@ msgstr "POP3"
 #: accountwizard/ispdb/configurationmodel.cpp:38
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
-msgstr ""
+msgstr "將您的資料夾與郵件同步到您的伺服器上"
 
 #: accountwizard/ispdb/configurationmodel.cpp:39
 #, kde-format
 msgid "Keep your folders and emails on your computer"
-msgstr ""
+msgstr "將您的資料夾與郵件儲存在您的電腦上"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:29
 #, kde-format
@@ -99,22 +99,19 @@ msgid "None"
 msgstr "無"
 
 #: accountwizard/ispdbservice.cpp:133
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgid "Configuration found auto config file."
-msgstr "找到自動設定檔"
+msgstr "在自動設定檔案中找到了設定找到。"
 
 #: accountwizard/ispdbservice.cpp:136
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgid "Configuration found in well-known file."
-msgstr "找到自動設定檔"
+msgstr "在 well-known 檔案中找到了設定。"
 
 #: accountwizard/ispdbservice.cpp:139
-#, fuzzy, kde-format
-#| msgid "Lookup configuration: Mozilla database"
+#, kde-format
 msgid "Configuration found in Mozilla FAI Database."
-msgstr "搜尋設定：Mozilla 資料庫"
+msgstr "在 Mozilla FAI 資料庫中找到了設定設定。"
 
 #: accountwizard/manualconfiguration.cpp:34
 #, kde-format
@@ -139,32 +136,32 @@ msgstr "明碼"
 #: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "LOGIN"
-msgstr ""
+msgstr "LOGIN"
 
 #: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "PLAIN"
-msgstr ""
+msgstr "PLAIN"
 
 #: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "CRAM-MD5"
-msgstr ""
+msgstr "CRAM-MD5"
 
 #: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "DIGEST-MD5"
-msgstr ""
+msgstr "DIGEST-MD5"
 
 #: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "NTLM"
-msgstr ""
+msgstr "NTLM"
 
 #: accountwizard/manualconfiguration.cpp:44
 #, kde-format
 msgid "GSSAPI"
-msgstr ""
+msgstr "GSSAPI"
 
 #: accountwizard/resource.cpp:68
 #, kde-format
@@ -224,7 +221,7 @@ msgstr "設定郵件傳遞帳號中..."
 #: accountwizard/transport.cpp:99
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
-msgstr ""
+msgstr "郵件傳輸使用 '%1' 加密與 '%2' 認證。"
 
 #: accountwizard/transport.cpp:102
 #, kde-format
@@ -232,16 +229,14 @@ msgid "Mail transport account set up."
 msgstr "郵件傳遞帳號已設定。"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:93
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming"
-msgstr "內送："
+msgstr "內送"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing"
-msgstr "外傳："
+msgstr "外傳"
 
 #: apps/contents/ui/PersonalDataPage.qml:15
 #, kde-format
@@ -259,6 +254,8 @@ msgid ""
 "To use your current email address fill in your credentials.<br />This wizard "
 "will automatically search for a working and recommended server configuration."
 msgstr ""
+"要使用您目前的電子郵件地址，請填入您的登入資訊。<br />這個精靈會自動依您填入"
+"的資訊搜尋可正常運作且推薦使用的伺服器設定。"
 
 #: apps/contents/ui/PersonalDataPage.qml:60
 #, kde-format
@@ -269,7 +266,7 @@ msgstr "全名："
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
-msgstr ""
+msgstr "無名氏"
 
 #: apps/contents/ui/PersonalDataPage.qml:70
 #, kde-format
@@ -280,13 +277,12 @@ msgstr "電子郵件地址："
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
-msgstr ""
+msgstr "boss@example.corp"
 
 #: apps/contents/ui/PersonalDataPage.qml:84
-#, fuzzy, kde-format
-#| msgid "Password…"
+#, kde-format
 msgid "Password:"
-msgstr "密碼…"
+msgstr "密碼："
 
 #: apps/contents/ui/PersonalDataPage.qml:93
 #, kde-format
@@ -294,36 +290,28 @@ msgid "Continue"
 msgstr "繼續"
 
 #: apps/contents/ui/PersonalDataPage.qml:107
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check online for the settings needed for this email provider. Only the "
-#| "domain name part of the e-mail address will be sent over the Internet at "
-#| "this point. If this option is unchecked, the account can be set up "
-#| "manually."
+#, kde-format
 msgid ""
 "Check online for the settings needed for this email provider. Only the "
 "domain name part of the e-mail address will be sent over the Internet."
 msgstr ""
-"在網路上尋找電子郵件提供者的設定。此時只有您的電子郵件地址中的網域名稱部份會"
-"被送到網路上。若您取消勾選此選項，您可以手動設定您的帳號。"
+"在網路上尋找電子郵件提供者的設定。只有您的電子郵件地址中的網域名稱部份會被送"
+"到網路上。"
 
 #: apps/contents/ui/PersonalDataPage.qml:133
-#, fuzzy, kde-format
-#| msgid "No config found to edit"
+#, kde-format
 msgid "No config found from ispdb server."
-msgstr "找不到指定的設定"
+msgstr "找不到從 ispdb 伺服器來的設定。"
 
 #: apps/contents/ui/PersonalDataPage.qml:140
-#, fuzzy, kde-format
-#| msgid "Server Parameters"
+#, kde-format
 msgid "Incoming Server Parameters"
-msgstr "伺服器參數"
+msgstr "內送伺服器參數"
 
 #: apps/contents/ui/PersonalDataPage.qml:148
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming server:"
-msgstr "內送："
+msgstr "內送信件伺服器："
 
 #: apps/contents/ui/PersonalDataPage.qml:158
 #, kde-format
@@ -360,16 +348,14 @@ msgid "Download all messages for offline use"
 msgstr "下載所有信件以便離線檢視"
 
 #: apps/contents/ui/PersonalDataPage.qml:213
-#, fuzzy, kde-format
-#| msgid "Server Parameters"
+#, kde-format
 msgid "Outgoing Server Parameters"
-msgstr "伺服器參數"
+msgstr "外傳伺服器參數"
 
 #: apps/contents/ui/PersonalDataPage.qml:220
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing server:"
-msgstr "外傳："
+msgstr "外寄信件伺服器："
 
 #: apps/contents/ui/PersonalDataPage.qml:269
 #, kde-format
@@ -393,10 +379,9 @@ msgid "Manual Configuration"
 msgstr "手動設定"
 
 #: apps/contents/ui/PersonalDataPage.qml:338
-#, fuzzy, kde-format
-#| msgid "&Details..."
+#, kde-format
 msgid "Details"
-msgstr "詳情(&D)..."
+msgstr "詳細資料"
 
 #: apps/main.cpp:32
 #, kde-format
