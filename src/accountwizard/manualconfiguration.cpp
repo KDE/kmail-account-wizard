@@ -82,6 +82,7 @@ Resource::ResourceInfo ManualConfiguration::createPop3Resource() const
 
 QString ManualConfiguration::convertIncomingAuthenticationProtocol(int index) const
 {
+    // TODO fix me!!!!
     switch (index) {
     case 0:
         return QStringLiteral("STARTTLS");
@@ -125,29 +126,6 @@ Resource::ResourceInfo ManualConfiguration::createImapResource() const
     settings.insert(QStringLiteral("AccountIdentity"), mIdentityId);
     settings.insert(QStringLiteral("Authentication"), convertIncomingAuthenticationProtocol(mCurrentIncomingAuthenticationProtocol));
     settings.insert(QStringLiteral("Safety"), convertIncomingSecurityProtocol(mCurrentIncomingSecurityProtocol));
-
-    // if ( server == "imap.gmail.com" ) {
-    //     imapRes.setOption( "Authentication", 9 ); // XOAuth2
-    //     arg = "ssl";
-    // } else {
-    //     imapRes.setOption( "Authentication", 7 ); // ClearText
-    // }
-    // if ( arg == "ssl" ) {
-    //   // The ENUM used for authentication (in the imap resource only)
-    //   imapRes.setOption( "Safety", "SSL"); // SSL/TLS
-    //   imapRes.setOption( "ImapPort", 993 );
-    // } else if ( arg == "tls" ) { // tls is really STARTTLS
-    //   imapRes.setOption( "Safety", "STARTTLS");  // STARTTLS
-    //   imapRes.setOption( "ImapPort", 143 );
-    // } else if ( arg == "none" ) {
-    //   imapRes.setOption( "Safety", "NONE" );  // No encryption
-    //   imapRes.setOption( "ImapPort", 143 );
-    // } else {
-    //   // safe default fallback when servertest failed
-    //   imapRes.setOption( "Safety", "STARTTLS");
-    //   imapRes.setOption( "ImapPort", 143 );
-    // }
-
     info.settings = settings;
     return info;
 }
@@ -169,55 +147,6 @@ Resource::ResourceInfo ManualConfiguration::createKolabResource() const
     settings.insert(QStringLiteral("ImapPort"), mIncomingPort);
     info.settings = settings;
     info.typeIdentifier = QStringLiteral("akonadi_kolab_resource");
-#if 0
-    if (servertest_mode < 3) {   // submission & smtp
-        if (arg == "tls" ) { // tls is really STARTTLS
-          smtp.setEncryption("TLS");
-          if (servertest_mode == 1) {   //submission port 587
-              smtp.setPort(587);
-          } else {
-              smtp.setPort(25);
-          }
-        } else if ( arg == "ssl" ) {    //only possible as smtps
-            smtp.setPort(465);
-            smtp.setEncryption("SSL");
-        } else if (servertest_mode == 2) { //test submission and smtp failed or only possible unencrypted -> set to standard value and open editor
-            smtp.setPort(587);
-            smtp.setEncryption("TLS");
-            smtp.setEditMode(true);
-        } else if (servertest_mode == 1) { // submission test failed -> start smtp request
-            servertest_mode = 2;
-            ServerTest.test(page2.widget().lineEditSmtp.text, "smtp");
-            return;
-        }
-
-        // start imap test
-        servertest_mode = 3;
-        if (page2.widget().lineEditImap.text) {
-            SetupManager.setupInfo(qsTr("Probing IMAP server..."));
-            ServerTest.test(page2.widget().lineEditImap.text, "imap");
-        } else {
-            SetupManager.execute();
-        }
-    } else if (servertest_mode == 3) {   //imap
-        if ( arg == "ssl" ) {
-          // The ENUM used for authentication (in the kolab resource only)
-          kolabRes.setOption( "Safety", "SSL" ); // SSL/TLS
-          kolabRes.setOption( "ImapPort", 993 );
-        } else if ( arg == "tls" ) { // tls is really STARTTLS
-          kolabRes.setOption( "Safety", "STARTTLS" );  // STARTTLS
-          kolabRes.setOption( "ImapPort", 143 );
-        } else {
-          // safe default fallback in case server test failed
-          kolabRes.setOption( "Safety", "STARTTLS" );
-          kolabRes.setOption( "ImapPort", 143 );
-          kolabRes.setEditMode(true);
-        }
-        SetupManager.execute();
-    } else {
-        print ("Unknown servertest_mode = ", servertest_mode);
-    }
-#endif
     return info;
 }
 
