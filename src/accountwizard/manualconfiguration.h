@@ -135,7 +135,7 @@ private:
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString convertOutgoingSecurityProtocol(int protocol) const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString convertOutgoingAuthenticationProtocol(int protocol) const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString generateUniqueAccountName() const;
-    [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString convertIncomingAuthenticationProtocol(int index) const;
+    [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString convertIncomingAuthenticationProtocol(int protocol) const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString convertIncomingSecurityProtocol(int index) const;
     LIBACCOUNTWIZARD_NO_EXPORT void slotTestFail();
     LIBACCOUNTWIZARD_NO_EXPORT void slotTestResult(const QString &result);

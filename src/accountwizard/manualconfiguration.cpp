@@ -80,18 +80,25 @@ Resource::ResourceInfo ManualConfiguration::createPop3Resource() const
     return info;
 }
 
-QString ManualConfiguration::convertIncomingAuthenticationProtocol(int index) const
+QString ManualConfiguration::convertIncomingAuthenticationProtocol(int protocol) const
 {
-    // TODO fix me!!!!
-    switch (index) {
-    case 0:
-        return QStringLiteral("STARTTLS");
-    case 1:
-        return QStringLiteral("SSL");
-    case 2:
-        return QStringLiteral("NONE");
+    switch (protocol) {
+    case 0: // Clear Text
+        return QStringLiteral("clear");
+    case 1: // LOGIN
+        return QStringLiteral("login");
+    case 2: // PLAIN
+        return QStringLiteral("plain");
+    case 3: // CRAM-MD5
+        return QStringLiteral("cram-md5");
+    case 4: // DIGEST-MD5
+        return QStringLiteral("digest-md5");
+    case 5: // NTLM
+        return QStringLiteral("ntlm");
+    case 6: // GSSAPI
+        return QStringLiteral("gssapi");
     }
-    Q_UNREACHABLE();
+    qCWarning(ACCOUNTWIZARD_LOG) << " Impossible to convert protocol: " << protocol;
     return {};
 }
 
