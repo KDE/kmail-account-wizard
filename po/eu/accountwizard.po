@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-27 01:34+0000\n"
-"PO-Revision-Date: 2023-12-16 07:44+0100\n"
+"PO-Revision-Date: 2023-12-28 23:03+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -282,10 +282,9 @@ msgid "boss@example.corp"
 msgstr "zuzendaria@adibide.corp"
 
 #: apps/contents/ui/PersonalDataPage.qml:84
-#, fuzzy, kde-format
-#| msgid "Password…"
+#, kde-format
 msgid "Password:"
-msgstr "Pasahitza…"
+msgstr "Pasahitza:"
 
 #: apps/contents/ui/PersonalDataPage.qml:93
 #, kde-format
@@ -308,10 +307,9 @@ msgid "No config found from ispdb server."
 msgstr "«ispdb» zerbitzaritik ez da konfiguraziorik aurkitu."
 
 #: apps/contents/ui/PersonalDataPage.qml:140
-#, fuzzy, kde-format
-#| msgid "Server Parameters"
+#, kde-format
 msgid "Incoming Server Parameters"
-msgstr "Zerbitzariaren parametroak"
+msgstr "Sarrerako zerbitzariaren parametroak"
 
 #: apps/contents/ui/PersonalDataPage.qml:148
 #, kde-format
@@ -353,10 +351,9 @@ msgid "Download all messages for offline use"
 msgstr "Zama-jaitsi mezu guztiak lerroz-kanpo erabiltzeko"
 
 #: apps/contents/ui/PersonalDataPage.qml:213
-#, fuzzy, kde-format
-#| msgid "Server Parameters"
+#, kde-format
 msgid "Outgoing Server Parameters"
-msgstr "Zerbitzariaren parametroak"
+msgstr "Irteerako zerbitzariaren parametroak"
 
 #: apps/contents/ui/PersonalDataPage.qml:220
 #, kde-format
@@ -385,10 +382,9 @@ msgid "Manual Configuration"
 msgstr "Eskuzko konfigurazioa"
 
 #: apps/contents/ui/PersonalDataPage.qml:338
-#, fuzzy, kde-format
-#| msgid "&Details..."
+#, kde-format
 msgid "Details"
-msgstr "&Xehetasunak..."
+msgstr "Xehetasunak"
 
 #: apps/main.cpp:32
 #, kde-format
