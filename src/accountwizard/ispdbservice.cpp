@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2010 Omat Holding B.V. <info@omat.nl>
 // SPDX-FileCopyrightText: 2014 Sandro Knauß <knauss@kolabsys.com>
 // SPDX-FileCopyrightText: 2023 Carl Schwan <carl@carlschwan.eu>
-// SPDX-FileCopyrightText: 2023 Laurent Montel <montel@kde.org>
+// SPDX-FileCopyrightText: 2023-2024 Laurent Montel <montel.org>
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 #include "ispdbservice.h"

@@ -1,6 +1,6 @@
 // SPDX-FileCopyrightText: 2009 Volker Krause <vkrause@kde.org>
 // SPDX-FileCopyrightText: 2023 Carl Schwan <carl@carlschwan.eu>
-// SPDX-FileCopyrightText: 2023 Laurent Montel <montel@kde.org>
+// SPDX-FileCopyrightText: 2023-2024 Laurent Montel <montel.org>
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 #include "identity.h"
@@ -33,7 +33,7 @@ int main(int argc, char **argv)
                          QStringLiteral("0.3"),
                          i18n("Helps setting up PIM accounts"),
                          KAboutLicense::LGPL,
-                         i18n("(c) 2009-2023 the Akonadi developers"),
+                         i18n("(c) 2009-2024 the Akonadi developers"),
                          QString(),
                          QStringLiteral("https://community.kde.org/KDE_PIM/Akonadi"));
     aboutData.addAuthor(i18n("Volker Krause"), i18n("Author"), QStringLiteral("vkrause@kde.org"));
