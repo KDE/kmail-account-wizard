@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-27 01:34+0000\n"
+"POT-Creation-Date: 2024-01-02 01:32+0000\n"
 "PO-Revision-Date: 2010-02-28 10:05+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -394,7 +394,7 @@ msgstr "ช่วยเหลือในการตั้งค่าบัญ
 #: apps/main.cpp:36
 #, fuzzy, kde-format
 #| msgid "(c) 2009 the Akonadi developers"
-msgid "(c) 2009-2023 the Akonadi developers"
+msgid "(c) 2009-2024 the Akonadi developers"
 msgstr "สงวนลิขสิทธิ์ (c) 2009 กลุ่มผู้พัฒนา Akonadi"
 
 #: apps/main.cpp:39

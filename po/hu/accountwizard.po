@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-27 01:34+0000\n"
+"POT-Creation-Date: 2024-01-02 01:32+0000\n"
 "PO-Revision-Date: 2014-01-20 22:02+0100\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -411,7 +411,7 @@ msgstr "Segít a PIM azonosítók beállításában"
 #: apps/main.cpp:36
 #, fuzzy, kde-format
 #| msgid "(c) 2009 the Akonadi developers"
-msgid "(c) 2009-2023 the Akonadi developers"
+msgid "(c) 2009-2024 the Akonadi developers"
 msgstr "© Az Akonadi fejlesztői, 2009."
 
 #: apps/main.cpp:39

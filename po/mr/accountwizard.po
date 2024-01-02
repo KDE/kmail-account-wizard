@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-27 01:34+0000\n"
+"POT-Creation-Date: 2024-01-02 01:32+0000\n"
 "PO-Revision-Date: 2013-03-15 11:14+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -399,7 +399,7 @@ msgstr ""
 
 #: apps/main.cpp:36
 #, kde-format
-msgid "(c) 2009-2023 the Akonadi developers"
+msgid "(c) 2009-2024 the Akonadi developers"
 msgstr ""
 
 #: apps/main.cpp:39

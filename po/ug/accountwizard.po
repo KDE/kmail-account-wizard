@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-27 01:34+0000\n"
+"POT-Creation-Date: 2024-01-02 01:32+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -410,7 +410,7 @@ msgstr "PIM ھېساباتىنى تەڭشەشكە ياردەملىشىدۇ"
 #: apps/main.cpp:36
 #, fuzzy, kde-format
 #| msgid "(c) 2009 the Akonadi developers"
-msgid "(c) 2009-2023 the Akonadi developers"
+msgid "(c) 2009-2024 the Akonadi developers"
 msgstr "(c) 2009 the Akonadi developers"
 
 #: apps/main.cpp:39

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-27 01:34+0000\n"
+"POT-Creation-Date: 2024-01-02 01:32+0000\n"
 "PO-Revision-Date: 2021-09-09 21:52+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -412,7 +412,7 @@ msgstr "Hjælper med opsætning af PIM-konti"
 #: apps/main.cpp:36
 #, fuzzy, kde-format
 #| msgid "(c) 2009-2020 the Akonadi developers"
-msgid "(c) 2009-2023 the Akonadi developers"
+msgid "(c) 2009-2024 the Akonadi developers"
 msgstr "(c) 2009-2020 Akonadi-udviklerne"
 
 #: apps/main.cpp:39

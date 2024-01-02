@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-27 01:34+0000\n"
+"POT-Creation-Date: 2024-01-02 01:32+0000\n"
 "PO-Revision-Date: 2023-12-27 17:28+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -394,8 +394,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "協助設定 PIM 帳號"
 
 #: apps/main.cpp:36
-#, kde-format
-msgid "(c) 2009-2023 the Akonadi developers"
+#, fuzzy, kde-format
+#| msgid "(c) 2009-2023 the Akonadi developers"
+msgid "(c) 2009-2024 the Akonadi developers"
 msgstr "(c) 2009-2023 Akonadi 開發群"
 
 #: apps/main.cpp:39
