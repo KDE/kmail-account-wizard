@@ -1,17 +1,17 @@
 # Translation of accountwizard.po to Catalan (Valencian)
-# Copyright (C) 2010-2023 This_file_is_part_of_KDE
+# Copyright (C) 2010-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Manuel Tortosa Moreno <manutortosa@gmail.com>, 2010.
-# Josep M. Ferrer <txemaq@gmail.com>, 2010, 2012, 2015, 2016, 2017, 2018, 2020, 2021, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2010, 2012, 2015, 2016, 2017, 2018, 2020, 2021, 2023, 2024.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2013, 2014, 2015, 2016, 2017, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-02 01:32+0000\n"
-"PO-Revision-Date: 2023-12-23 10:24+0100\n"
+"PO-Revision-Date: 2024-01-02 08:18+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -398,10 +398,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "Ajuda a configurar els comptes PIM"
 
 #: apps/main.cpp:36
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2023 the Akonadi developers"
+#, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
-msgstr "(c) 2009-2023, els desenvolupadors d'Akonadi"
+msgstr "(c) 2009-2024, els desenvolupadors d'Akonadi"
 
 #: apps/main.cpp:39
 #, kde-format

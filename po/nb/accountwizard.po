@@ -283,8 +283,7 @@ msgid "boss@example.corp"
 msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:84
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password:"
 msgstr "Passord:"
 
@@ -437,55 +436,3 @@ msgstr ""
 #, kde-format
 msgid "Carl Schwan"
 msgstr ""
-
-#~ msgid ""
-#~ "There seems to be a problem in reaching this server or choosing a safe "
-#~ "way to sent the credentials to server. We advise you to check the "
-#~ "settings of the account and adjust it manually if needed."
-#~ msgstr ""
-#~ "Det ser ut til at det er et problem med å nå denne tjeneren eller velge "
-#~ "en sikker måte å sende autentiseringsinformasjon til tjeneren. Vi råder "
-#~ "deg til å kontrollere kontoens innstillinger og justere manuelt om "
-#~ "nødvendig."
-
-#~ msgid "Autodetecting settings failed"
-#~ msgstr "Automatisk oppdaging av innstillinger lyktes ikke"
-
-#~ msgid "Writing config file for %1..."
-#~ msgstr "Skriver oppsettsfil for %1 …"
-
-#~ msgid "Config file for %1 is writing."
-#~ msgstr "Oppsettsfila for %1 blir skrevet."
-
-#~ msgid "Config file for %1 was not changed."
-#~ msgstr "Oppsettsfila for %1 ble ikke endret."
-
-#~ msgid "Certificates"
-#~ msgstr "Sertifikater"
-
-#~ msgid "Any files"
-#~ msgstr "Alle filer"
-
-#~ msgid "Select Certificate File"
-#~ msgstr "Velg sertifikatfil"
-
-#~ msgid "Lookup configuration: Email provider"
-#~ msgstr "Slår opp oppsett: E-post-leverandør"
-
-#~ msgid "Lookup configuration: Trying common server name"
-#~ msgstr "Slår opp oppsett: Forsøker vanlige tjenernavn"
-
-#~ msgid "Lookup configuration: Mozilla database"
-#~ msgstr "Slår opp oppsett: Mozilla database"
-
-#~ msgid "Setting up LDAP server..."
-#~ msgstr "Setter opp LDAP-tjeneren …"
-
-#~ msgid "LDAP set up."
-#~ msgstr "LDAP satt opp"
-
-#~ msgid "LDAP not configuring."
-#~ msgstr "LDAP blir ikke satt opp."
-
-#~ msgid "Removed resource instance for '%1'."
-#~ msgstr "Fjernet ressursinstansen for «%1»."

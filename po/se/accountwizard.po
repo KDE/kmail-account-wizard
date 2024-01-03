@@ -276,8 +276,7 @@ msgid "boss@example.corp"
 msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:84
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password:"
 msgstr "Beassansátni:"
 
@@ -418,15 +417,3 @@ msgstr ""
 #, kde-format
 msgid "Carl Schwan"
 msgstr ""
-
-#~ msgid "Writing config file for %1..."
-#~ msgstr "Čállimin heivehusfiilla %1 várás …"
-
-#~ msgid "Config file for %1 is writing."
-#~ msgstr "Čállimin %1-heivehusfiilla."
-
-#~ msgid "Config file for %1 was not changed."
-#~ msgstr "%1-heivehusfiila ii rievdaduvvon."
-
-#~ msgid "Account Wizard"
-#~ msgstr "Kontoofelaš"
