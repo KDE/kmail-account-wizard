@@ -44,8 +44,8 @@ class LIBACCOUNTWIZARD_EXPORT Identity : public QObject
 public:
     explicit Identity(QObject *parent = nullptr);
 
-    Q_INVOKABLE void create();
-    Q_INVOKABLE void destroy();
+    void create();
+    void destroy();
 
     [[nodiscard]] QString identityName() const;
     void setIdentityName(const QString &name);
