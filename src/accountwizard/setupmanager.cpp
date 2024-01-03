@@ -29,7 +29,12 @@ SetupManager::SetupManager(QObject *parent)
     connect(mManualConfiguration, &ManualConfiguration::info, this, &SetupManager::slotInfo);
 }
 
-SetupManager::~SetupManager() = default;
+SetupManager::~SetupManager()
+{
+    if (!mAccountCreated) {
+        mIdentity->destroy();
+    }
+}
 
 void SetupManager::slotError(const QString &str)
 {
@@ -114,6 +119,7 @@ void SetupManager::searchConfiguration()
 void SetupManager::createAutomaticAccount()
 {
     qCDebug(ACCOUNTWIZARD_LOG) << " Create Automatic Account";
+    mAccountCreated = true;
 }
 
 void SetupManager::createManualAccount()
@@ -123,6 +129,7 @@ void SetupManager::createManualAccount()
     const uint id = mIdentity->uoid();
     mManualConfiguration->setIdentityId(id);
     mManualConfiguration->createManualAccount();
+    mAccountCreated = true;
 }
 
 void SetupManager::setEmailProvider(const EmailProvider &emailProvider, const QString &messageInfo)

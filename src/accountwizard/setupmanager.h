@@ -70,4 +70,5 @@ private:
     ConfigurationModel *const mConfigurationModel;
     ManualConfiguration *const mManualConfiguration;
     bool mNoConfigFound = false;
+    bool mAccountCreated = false;
 };
