@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # SPDX-FileCopyrightText: 2010, 2012, 2013, 2020, 2021, 2023 g.sora <g.sora@tiscali.it>
-# giovanni <g.sora@tiscali.it>, 2023.
+# giovanni <g.sora@tiscali.it>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-02 01:32+0000\n"
-"PO-Revision-Date: 2023-12-25 18:56+0100\n"
+"PO-Revision-Date: 2024-01-03 12:28+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -393,10 +393,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "Il adjuta a configurar contos de PIM"
 
 #: apps/main.cpp:36
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2023 the Akonadi developers"
+#, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
-msgstr "(c) 2009-2023 le disveloppatores de Akonadi"
+msgstr "(c) 2009-2024 le disveloppatores de Akonadi"
 
 #: apps/main.cpp:39
 #, kde-format
