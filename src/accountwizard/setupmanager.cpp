@@ -119,6 +119,8 @@ void SetupManager::searchConfiguration()
 void SetupManager::createAutomaticAccount()
 {
     qCDebug(ACCOUNTWIZARD_LOG) << " Create Automatic Account";
+    const uint id = mIdentity->uoid();
+    // TODO
     mAccountCreated = true;
 }
 
@@ -147,6 +149,7 @@ void SetupManager::clearConfiguration()
     Q_EMIT searchIspdbFoundMessageChanged();
 
     mNoConfigFound = false;
+    mAccountCreated = false;
     Q_EMIT noConfigFoundChanged();
 }
 
