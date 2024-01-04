@@ -119,8 +119,11 @@ void SetupManager::searchConfiguration()
 void SetupManager::createAutomaticAccount()
 {
     qCDebug(ACCOUNTWIZARD_LOG) << " Create Automatic Account";
+    mIdentity->create();
     const uint id = mIdentity->uoid();
-    // TODO
+    // TODO use password
+    // TODO use selected account
+
     mAccountCreated = true;
 }
 
