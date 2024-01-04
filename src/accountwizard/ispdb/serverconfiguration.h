@@ -33,7 +33,11 @@ enum AuthType {
 };
 
 struct Server {
-    enum Type { IMAP, POP3, SMTP };
+    enum Type {
+        IMAP,
+        POP3,
+        SMTP,
+    };
     Type type;
     QString hostname;
     int port = -1;
