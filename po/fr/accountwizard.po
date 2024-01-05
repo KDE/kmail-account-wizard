@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Joëlle Cornavin <jcornavin@laposte.net>, 2010.
 # Sébastien Renard <renard@kde.org>, 2012, 2013, 2015.
-# SPDX-FileCopyrightText: 2013, 2020, 2021, 2023 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2013, 2020, 2021, 2023, 2024 Xavier Besnard <xavier.besnard@kde.org>
 # Vincent Pinon <vpinon@kde.org>, 2017, 2018.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019.
 # SPDX-FileCopyrightText: 2023 Xavier Besnard <xavier.besnard@kde.org>
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-02 01:32+0000\n"
-"PO-Revision-Date: 2023-12-24 15:37+0100\n"
+"PO-Revision-Date: 2024-01-03 09:48+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -406,10 +406,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "Aide à configurer des comptes PIM"
 
 #: apps/main.cpp:36
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2023 the Akonadi developers"
+#, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
-msgstr "(c) 2009-2023 l'équipe de développement de Akonadi"
+msgstr "(c) 2009 - 2024 L'équipe de développement de Akonadi"
 
 #: apps/main.cpp:39
 #, kde-format
