@@ -1,14 +1,14 @@
 # translation of accountwizard.po to Italian
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the accountwizard package.
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2010, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023.
+# Luigi Toscano <luigi.toscano@tiscali.it>, 2010, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-02 01:32+0000\n"
-"PO-Revision-Date: 2023-12-25 19:07+0100\n"
+"PO-Revision-Date: 2024-01-02 19:27+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -396,10 +396,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "Aiuta a configurare gli account di PIM"
 
 #: apps/main.cpp:36
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2023 the Akonadi developers"
+#, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
-msgstr "© 2009-2023 gli sviluppatori di Akonadi"
+msgstr "© 2009-2024 gli sviluppatori di Akonadi"
 
 #: apps/main.cpp:39
 #, kde-format
