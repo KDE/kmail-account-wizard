@@ -4,7 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "identity.h"
+#include "identitybase.h"
 #include "accountwizard_debug.h"
 
 #include <KIdentityManagementCore/Identity>
@@ -13,14 +13,14 @@
 
 #include <KLocalizedString>
 
-Identity::Identity(QObject *parent)
+IdentityBase::IdentityBase(QObject *parent)
     : QObject(parent)
 {
     mIdentity = &KIdentityManagementCore::IdentityManager::self()->newFromScratch(QString());
     Q_ASSERT(mIdentity != nullptr);
 }
 
-void Identity::create()
+void IdentityBase::create()
 {
     Q_EMIT info(i18n("Setting up identity..."));
 
@@ -36,7 +36,7 @@ void Identity::create()
     Q_EMIT finished(i18n("Identity set up."));
 }
 
-QString Identity::identityName() const
+QString IdentityBase::identityName() const
 {
     // create identity name
     QString name(mIdentityName);
@@ -65,7 +65,7 @@ QString Identity::identityName() const
     return name;
 }
 
-void Identity::destroy()
+void IdentityBase::destroy()
 {
     auto manager = KIdentityManagementCore::IdentityManager::self();
     if (!manager->removeIdentityForced(mIdentityName)) {
@@ -76,17 +76,17 @@ void Identity::destroy()
     Q_EMIT info(i18n("Identity removed."));
 }
 
-void Identity::setIdentityName(const QString &name)
+void IdentityBase::setIdentityName(const QString &name)
 {
     mIdentityName = name;
 }
 
-QString Identity::fullName() const
+QString IdentityBase::fullName() const
 {
     return mIdentity->fullName();
 }
 
-void Identity::setFullName(const QString &name)
+void IdentityBase::setFullName(const QString &name)
 {
     if (name == fullName()) {
         return;
@@ -95,12 +95,12 @@ void Identity::setFullName(const QString &name)
     Q_EMIT fullNameChanged();
 }
 
-QString Identity::organization() const
+QString IdentityBase::organization() const
 {
     return mIdentity->organization();
 }
 
-void Identity::setOrganization(const QString &org)
+void IdentityBase::setOrganization(const QString &org)
 {
     if (org == this->organization()) {
         return;
@@ -109,12 +109,12 @@ void Identity::setOrganization(const QString &org)
     Q_EMIT organizationChanged();
 }
 
-QString Identity::email() const
+QString IdentityBase::email() const
 {
     return mIdentity->primaryEmailAddress();
 }
 
-void Identity::setEmail(const QString &email)
+void IdentityBase::setEmail(const QString &email)
 {
     if (email == this->email()) {
         return;
@@ -123,12 +123,12 @@ void Identity::setEmail(const QString &email)
     Q_EMIT emailChanged();
 }
 
-uint Identity::uoid() const
+uint IdentityBase::uoid() const
 {
     return mIdentity->uoid();
 }
 
-void Identity::setTransport(MailTransport::Transport *transport)
+void IdentityBase::setTransport(MailTransport::Transport *transport)
 {
     if (transport) {
         mIdentity->setTransport(QString::number(transport->id()));
@@ -137,12 +137,12 @@ void Identity::setTransport(MailTransport::Transport *transport)
     }
 }
 
-QString Identity::signature() const
+QString IdentityBase::signature() const
 {
     return mIdentity->signature().text();
 }
 
-void Identity::setSignature(const QString &sig)
+void IdentityBase::setSignature(const QString &sig)
 {
     if (!sig.isEmpty()) {
         const KIdentityManagementCore::Signature signature(sig);
@@ -152,28 +152,28 @@ void Identity::setSignature(const QString &sig)
     }
 }
 
-void Identity::setPreferredCryptoMessageFormat(const QString &format)
+void IdentityBase::setPreferredCryptoMessageFormat(const QString &format)
 {
     mIdentity->setPreferredCryptoMessageFormat(format);
 }
 
-void Identity::setXFace(const QString &xface)
+void IdentityBase::setXFace(const QString &xface)
 {
     mIdentity->setXFaceEnabled(!xface.isEmpty());
     mIdentity->setXFace(xface);
 }
 
-void Identity::setPgpAutoEncrypt(bool autoencrypt)
+void IdentityBase::setPgpAutoEncrypt(bool autoencrypt)
 {
     mIdentity->setPgpAutoEncrypt(autoencrypt);
 }
 
-void Identity::setPgpAutoSign(bool autosign)
+void IdentityBase::setPgpAutoSign(bool autosign)
 {
     mIdentity->setPgpAutoSign(autosign);
 }
 
-void Identity::setKey(GpgME::Protocol protocol, const QByteArray &fingerprint)
+void IdentityBase::setKey(GpgME::Protocol protocol, const QByteArray &fingerprint)
 {
     if (fingerprint.isEmpty()) {
         mIdentity->setPGPEncryptionKey(QByteArray());
@@ -189,4 +189,4 @@ void Identity::setKey(GpgME::Protocol protocol, const QByteArray &fingerprint)
     }
 }
 
-#include "moc_identity.cpp"
+#include "moc_identitybase.cpp"

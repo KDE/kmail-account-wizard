@@ -5,13 +5,13 @@
 #include "setupmanager.h"
 
 #include "accountwizard_debug.h"
-#include "identity.h"
+#include "identitybase.h"
 #include "ispdbservice.h"
 #include <KEMailSettings>
 
 SetupManager::SetupManager(QObject *parent)
     : QObject(parent)
-    , mIdentity(new Identity(this))
+    , mIdentity(new IdentityBase(this))
     , mIspdbService(new IspdbService(this))
     , mConfigurationModel(new ConfigurationModel(this))
     , mManualConfiguration(new ManualConfigurationBase(this))
@@ -20,7 +20,7 @@ SetupManager::SetupManager(QObject *parent)
     setFullName(emailSettings.getSetting(KEMailSettings::RealName));
     setEmail(emailSettings.getSetting(KEMailSettings::EmailAddress));
 
-    connect(mIdentity, &Identity::emailChanged, this, &SetupManager::emailChanged);
+    connect(mIdentity, &IdentityBase::emailChanged, this, &SetupManager::emailChanged);
     connect(mIspdbService, &IspdbService::finished, this, &SetupManager::setEmailProvider);
     connect(mIspdbService, &IspdbService::notConfigFound, this, &SetupManager::noConfigFound);
 
@@ -98,7 +98,7 @@ void SetupManager::setPassword(const QString &password)
     Q_EMIT passwordChanged();
 }
 
-Identity *SetupManager::identity() const
+IdentityBase *SetupManager::identity() const
 {
     return mIdentity;
 }

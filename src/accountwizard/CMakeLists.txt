@@ -4,8 +4,8 @@
 
 add_library(libaccountwizard SHARED)
 target_sources(libaccountwizard PRIVATE
-    identity.h
-    identity.cpp
+    identitybase.h
+    identitybase.cpp
     setupmanager.h
     setupmanager.cpp
 

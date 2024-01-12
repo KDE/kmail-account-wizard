@@ -3,7 +3,7 @@
 // SPDX-FileCopyrightText: 2023-2024 Laurent Montel <montel.org>
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
-#include "identity.h"
+#include "identitybase.h"
 #include "ispdb/configurationmodel.h"
 #include "setupmanager.h"
 
@@ -61,7 +61,7 @@ int main(int argc, char **argv)
 
     SetupManager setupManager;
     qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "SetupManager", &setupManager);
-    qRegisterMetaType<Identity *>("Identity *");
+    qRegisterMetaType<IdentityBase *>("Identity *");
     qRegisterMetaType<ConfigurationModel *>("ConfigurationModel *");
     engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
     // Exit on QML load error.
