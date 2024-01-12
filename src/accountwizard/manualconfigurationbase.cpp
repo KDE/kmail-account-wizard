@@ -179,13 +179,12 @@ void ManualConfigurationBase::createResource()
     // Debug it
     qCDebug(ACCOUNTWIZARD_LOG) << " info " << info;
 
-    auto resource = new Resource(this);
-    resource->setResourceInfo(std::move(info));
+    generateResource(std::move(info));
+}
 
-    connect(resource, &Resource::info, this, &ManualConfigurationBase::info);
-    connect(resource, &Resource::finished, this, &ManualConfigurationBase::finished);
-    connect(resource, &Resource::error, this, &ManualConfigurationBase::error);
-    resource->createResource();
+void ManualConfigurationBase::generateResource(const Resource::ResourceInfo &info)
+{
+    // Reimplement
 }
 
 void ManualConfigurationBase::createTransport()
