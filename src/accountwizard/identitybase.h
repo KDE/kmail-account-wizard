@@ -44,7 +44,7 @@ class LIBACCOUNTWIZARD_EXPORT IdentityBase : public QObject
 public:
     explicit IdentityBase(QObject *parent = nullptr);
 
-    void create();
+    virtual void create();
     void destroy();
 
     [[nodiscard]] QString identityName() const;
