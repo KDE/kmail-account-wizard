@@ -79,7 +79,7 @@ Q_SIGNALS:
     void organizationChanged();
     void signatureChanged();
 
-private:
+protected:
     QString mIdentityName;
     KIdentityManagementCore::Identity *mIdentity = nullptr;
 };
