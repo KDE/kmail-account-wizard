@@ -125,15 +125,16 @@ Q_SIGNALS:
     void serverTestDone();
 
 protected:
-    LIBACCOUNTWIZARD_NO_EXPORT virtual void createResource();
     LIBACCOUNTWIZARD_NO_EXPORT virtual void createTransport();
+    [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Transport::TransportInfo createTransportInfo() const;
+    LIBACCOUNTWIZARD_NO_EXPORT virtual void generateResource(const Resource::ResourceInfo &info);
 
 private:
+    LIBACCOUNTWIZARD_NO_EXPORT void createResource();
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Resource::ResourceInfo createPop3Resource() const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Resource::ResourceInfo createImapResource() const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Resource::ResourceInfo createKolabResource() const;
     LIBACCOUNTWIZARD_NO_EXPORT void checkConfiguration();
-    [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Transport::TransportInfo createTransportInfo() const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString convertOutgoingSecurityProtocol(int protocol) const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString convertOutgoingAuthenticationProtocol(int protocol) const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString generateUniqueAccountName() const;

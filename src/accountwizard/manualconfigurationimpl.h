@@ -7,6 +7,7 @@
 #pragma once
 
 #include "manualconfigurationbase.h"
+#include "resource.h"
 
 class ManualConfigurationImpl : public ManualConfigurationBase
 {
@@ -16,6 +17,6 @@ public:
     ~ManualConfigurationImpl() override;
 
 protected:
-    LIBACCOUNTWIZARD_NO_EXPORT void createResource() override;
     LIBACCOUNTWIZARD_NO_EXPORT void createTransport() override;
+    LIBACCOUNTWIZARD_NO_EXPORT void generateResource(const Resource::ResourceInfo &info) override;
 };

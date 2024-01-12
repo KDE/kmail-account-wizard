@@ -5,16 +5,15 @@
 #include "setupmanager.h"
 
 #include "accountwizard_debug.h"
-#include "identitybase.h"
 #include "ispdbservice.h"
 #include <KEMailSettings>
 
 SetupManager::SetupManager(QObject *parent)
     : QObject(parent)
-    , mIdentity(new IdentityBase(this))
+    , mIdentity(new IdentityImpl(this))
     , mIspdbService(new IspdbService(this))
     , mConfigurationModel(new ConfigurationModel(this))
-    , mManualConfiguration(new ManualConfigurationBase(this))
+    , mManualConfiguration(new ManualConfigurationImpl(this))
 {
     KEMailSettings emailSettings;
     setFullName(emailSettings.getSetting(KEMailSettings::RealName));
