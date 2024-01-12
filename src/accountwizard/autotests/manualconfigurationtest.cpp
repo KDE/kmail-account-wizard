@@ -5,7 +5,7 @@
 */
 
 #include "manualconfigurationtest.h"
-#include "manualconfiguration.h"
+#include "manualconfigurationbase.h"
 #include <QTest>
 QTEST_MAIN(ManualConfigurationTest)
 ManualConfigurationTest::ManualConfigurationTest(QObject *parent)
@@ -15,7 +15,7 @@ ManualConfigurationTest::ManualConfigurationTest(QObject *parent)
 
 void ManualConfigurationTest::shouldHaveDefaultValues()
 {
-    ManualConfiguration w;
+    ManualConfigurationBase w;
     QVERIFY(w.incomingHostName().isEmpty());
     QVERIFY(w.incomingUserName().isEmpty());
     QVERIFY(w.outgoingHostName().isEmpty());

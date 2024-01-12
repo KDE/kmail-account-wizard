@@ -11,7 +11,7 @@
 #include <QDebug>
 #include <QObject>
 class ServerTest;
-class LIBACCOUNTWIZARD_EXPORT ManualConfiguration : public QObject
+class LIBACCOUNTWIZARD_EXPORT ManualConfigurationBase : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString incomingHostName READ incomingHostName WRITE setIncomingHostName NOTIFY incomingHostNameChanged FINAL)
@@ -40,8 +40,8 @@ class LIBACCOUNTWIZARD_EXPORT ManualConfiguration : public QObject
     Q_PROPERTY(bool hasDisconnectedMode MEMBER mHasDisconnectedMode NOTIFY hasDisconnectedModeChanged FINAL)
     Q_PROPERTY(bool serverTestInProgress MEMBER mServerTestInProgress NOTIFY serverTestInProgressModeChanged FINAL)
 public:
-    explicit ManualConfiguration(QObject *parent = nullptr);
-    ~ManualConfiguration() override;
+    explicit ManualConfigurationBase(QObject *parent = nullptr);
+    ~ManualConfigurationBase() override;
 
     [[nodiscard]] QString incomingHostName() const;
     void setIncomingHostName(const QString &newIncomingHostName);
@@ -124,14 +124,16 @@ Q_SIGNALS:
     void serverTestInProgressModeChanged();
     void serverTestDone();
 
+protected:
+    LIBACCOUNTWIZARD_NO_EXPORT virtual void createResource();
+    LIBACCOUNTWIZARD_NO_EXPORT virtual void createTransport();
+
 private:
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Resource::ResourceInfo createPop3Resource() const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Resource::ResourceInfo createImapResource() const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Resource::ResourceInfo createKolabResource() const;
     LIBACCOUNTWIZARD_NO_EXPORT void checkConfiguration();
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Transport::TransportInfo createTransportInfo() const;
-    LIBACCOUNTWIZARD_NO_EXPORT void createResource();
-    LIBACCOUNTWIZARD_NO_EXPORT void createTransport();
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString convertOutgoingSecurityProtocol(int protocol) const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString convertOutgoingAuthenticationProtocol(int protocol) const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString generateUniqueAccountName() const;
@@ -175,4 +177,4 @@ private:
 
     ServerTest *mServerTest = nullptr;
 };
-QDebug operator<<(QDebug d, const ManualConfiguration &t);
+QDebug operator<<(QDebug d, const ManualConfigurationBase &t);

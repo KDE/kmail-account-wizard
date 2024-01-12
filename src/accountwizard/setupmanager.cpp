@@ -5,28 +5,28 @@
 #include "setupmanager.h"
 
 #include "accountwizard_debug.h"
-#include "identity.h"
+#include "identitybase.h"
 #include "ispdbservice.h"
 #include <KEMailSettings>
 
 SetupManager::SetupManager(QObject *parent)
     : QObject(parent)
-    , mIdentity(new Identity(this))
+    , mIdentity(new IdentityBase(this))
     , mIspdbService(new IspdbService(this))
     , mConfigurationModel(new ConfigurationModel(this))
-    , mManualConfiguration(new ManualConfiguration(this))
+    , mManualConfiguration(new ManualConfigurationBase(this))
 {
     KEMailSettings emailSettings;
     setFullName(emailSettings.getSetting(KEMailSettings::RealName));
     setEmail(emailSettings.getSetting(KEMailSettings::EmailAddress));
 
-    connect(mIdentity, &Identity::emailChanged, this, &SetupManager::emailChanged);
+    connect(mIdentity, &IdentityBase::emailChanged, this, &SetupManager::emailChanged);
     connect(mIspdbService, &IspdbService::finished, this, &SetupManager::setEmailProvider);
     connect(mIspdbService, &IspdbService::notConfigFound, this, &SetupManager::noConfigFound);
 
-    connect(mManualConfiguration, &ManualConfiguration::error, this, &SetupManager::slotError);
-    connect(mManualConfiguration, &ManualConfiguration::finished, this, &SetupManager::slotFinished);
-    connect(mManualConfiguration, &ManualConfiguration::info, this, &SetupManager::slotInfo);
+    connect(mManualConfiguration, &ManualConfigurationBase::error, this, &SetupManager::slotError);
+    connect(mManualConfiguration, &ManualConfigurationBase::finished, this, &SetupManager::slotFinished);
+    connect(mManualConfiguration, &ManualConfigurationBase::info, this, &SetupManager::slotInfo);
 }
 
 SetupManager::~SetupManager()
@@ -98,7 +98,7 @@ void SetupManager::setPassword(const QString &password)
     Q_EMIT passwordChanged();
 }
 
-Identity *SetupManager::identity() const
+IdentityBase *SetupManager::identity() const
 {
     return mIdentity;
 }
@@ -162,7 +162,7 @@ void SetupManager::noConfigFound()
     Q_EMIT noConfigFoundChanged();
 }
 
-ManualConfiguration *SetupManager::manualConfiguration() const
+ManualConfigurationBase *SetupManager::manualConfiguration() const
 {
     return mManualConfiguration;
 }

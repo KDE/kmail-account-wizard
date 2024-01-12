@@ -4,10 +4,10 @@
 #pragma once
 #include "ispdb/configurationmodel.h"
 #include "libaccountwizard_export.h"
-#include "manualconfiguration.h"
+#include "manualconfigurationbase.h"
 #include <QObject>
 
-class Identity;
+class IdentityBase;
 class IspdbService;
 
 class LIBACCOUNTWIZARD_EXPORT SetupManager : public QObject
@@ -17,11 +17,11 @@ class LIBACCOUNTWIZARD_EXPORT SetupManager : public QObject
     Q_PROPERTY(QString email READ email WRITE setEmail NOTIFY emailChanged)
     Q_PROPERTY(QString password READ password WRITE setPassword NOTIFY passwordChanged)
     Q_PROPERTY(QString fullName READ fullName WRITE setFullName NOTIFY fullNameChanged)
-    Q_PROPERTY(Identity *identity READ identity CONSTANT)
+    Q_PROPERTY(IdentityBase *identity READ identity CONSTANT)
     Q_PROPERTY(ConfigurationModel *configurationModel READ configurationModel CONSTANT)
     Q_PROPERTY(QString searchIspdbFoundMessage MEMBER mSearchIspdbFoundMessage NOTIFY searchIspdbFoundMessageChanged)
     Q_PROPERTY(bool noConfigFound MEMBER mNoConfigFound NOTIFY noConfigFoundChanged)
-    Q_PROPERTY(ManualConfiguration *manualConfiguration READ manualConfiguration CONSTANT)
+    Q_PROPERTY(ManualConfigurationBase *manualConfiguration READ manualConfiguration CONSTANT)
     Q_PROPERTY(QString details READ details NOTIFY detailsChanged)
 
 public:
@@ -37,9 +37,9 @@ public:
     [[nodiscard]] QString password() const;
     void setPassword(const QString &password);
 
-    Identity *identity() const;
+    IdentityBase *identity() const;
     ConfigurationModel *configurationModel() const;
-    ManualConfiguration *manualConfiguration() const;
+    ManualConfigurationBase *manualConfiguration() const;
 
     Q_INVOKABLE void searchConfiguration();
     Q_INVOKABLE void createAutomaticAccount();
@@ -65,10 +65,10 @@ private:
     QString mPassword;
     QString mSearchIspdbFoundMessage;
     QString mDetails;
-    Identity *const mIdentity;
+    IdentityBase *const mIdentity;
     IspdbService *const mIspdbService;
     ConfigurationModel *const mConfigurationModel;
-    ManualConfiguration *const mManualConfiguration;
+    ManualConfigurationBase *const mManualConfiguration;
     bool mNoConfigFound = false;
     bool mAccountCreated = false;
 };

@@ -22,7 +22,7 @@ class Transport;
 /// QObject-wrapper around a KIdentityManagement
 ///
 /// Allow to configure an account
-class LIBACCOUNTWIZARD_EXPORT Identity : public QObject
+class LIBACCOUNTWIZARD_EXPORT IdentityBase : public QObject
 {
     Q_OBJECT
 
@@ -42,7 +42,7 @@ class LIBACCOUNTWIZARD_EXPORT Identity : public QObject
     Q_PROPERTY(QString signature READ signature WRITE setSignature NOTIFY signatureChanged)
 
 public:
-    explicit Identity(QObject *parent = nullptr);
+    explicit IdentityBase(QObject *parent = nullptr);
 
     void create();
     void destroy();
@@ -79,7 +79,8 @@ Q_SIGNALS:
     void organizationChanged();
     void signatureChanged();
 
-private:
+protected:
+    virtual void createNewIdentity();
     QString mIdentityName;
     KIdentityManagementCore::Identity *mIdentity = nullptr;
 };

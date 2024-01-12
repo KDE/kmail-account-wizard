@@ -2,10 +2,12 @@
 # SPDX-FileCopyrightText: 2023-2024 Laurent Montel <montel.org>
 # SPDX-License-Identifier: BSD-3-Clause
 
-add_library(libaccountwizard SHARED)
+add_library(libaccountwizard SHARED
+    identityimpl.h identityimpl.cpp
+    manualconfigurationimpl.h manualconfigurationimpl.cpp)
 target_sources(libaccountwizard PRIVATE
-    identity.h
-    identity.cpp
+    identitybase.h
+    identitybase.cpp
     setupmanager.h
     setupmanager.cpp
 
@@ -15,8 +17,8 @@ target_sources(libaccountwizard PRIVATE
     ispdb/serverconfiguration.cpp
     ispdbservice.h
     ispdbservice.cpp
-    manualconfiguration.h
-    manualconfiguration.cpp
+    manualconfigurationbase.h
+    manualconfigurationbase.cpp
     resource.h
     resource.cpp
     transport.h
