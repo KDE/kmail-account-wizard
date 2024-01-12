@@ -11,7 +11,7 @@
 #include <QDebug>
 #include <QObject>
 class ServerTest;
-class LIBACCOUNTWIZARD_EXPORT ManualConfiguration : public QObject
+class LIBACCOUNTWIZARD_EXPORT ManualConfigurationBase : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString incomingHostName READ incomingHostName WRITE setIncomingHostName NOTIFY incomingHostNameChanged FINAL)
@@ -40,8 +40,8 @@ class LIBACCOUNTWIZARD_EXPORT ManualConfiguration : public QObject
     Q_PROPERTY(bool hasDisconnectedMode MEMBER mHasDisconnectedMode NOTIFY hasDisconnectedModeChanged FINAL)
     Q_PROPERTY(bool serverTestInProgress MEMBER mServerTestInProgress NOTIFY serverTestInProgressModeChanged FINAL)
 public:
-    explicit ManualConfiguration(QObject *parent = nullptr);
-    ~ManualConfiguration() override;
+    explicit ManualConfigurationBase(QObject *parent = nullptr);
+    ~ManualConfigurationBase() override;
 
     [[nodiscard]] QString incomingHostName() const;
     void setIncomingHostName(const QString &newIncomingHostName);
@@ -175,4 +175,4 @@ private:
 
     ServerTest *mServerTest = nullptr;
 };
-QDebug operator<<(QDebug d, const ManualConfiguration &t);
+QDebug operator<<(QDebug d, const ManualConfigurationBase &t);

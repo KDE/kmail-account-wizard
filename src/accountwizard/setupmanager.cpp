@@ -14,7 +14,7 @@ SetupManager::SetupManager(QObject *parent)
     , mIdentity(new Identity(this))
     , mIspdbService(new IspdbService(this))
     , mConfigurationModel(new ConfigurationModel(this))
-    , mManualConfiguration(new ManualConfiguration(this))
+    , mManualConfiguration(new ManualConfigurationBase(this))
 {
     KEMailSettings emailSettings;
     setFullName(emailSettings.getSetting(KEMailSettings::RealName));
@@ -24,9 +24,9 @@ SetupManager::SetupManager(QObject *parent)
     connect(mIspdbService, &IspdbService::finished, this, &SetupManager::setEmailProvider);
     connect(mIspdbService, &IspdbService::notConfigFound, this, &SetupManager::noConfigFound);
 
-    connect(mManualConfiguration, &ManualConfiguration::error, this, &SetupManager::slotError);
-    connect(mManualConfiguration, &ManualConfiguration::finished, this, &SetupManager::slotFinished);
-    connect(mManualConfiguration, &ManualConfiguration::info, this, &SetupManager::slotInfo);
+    connect(mManualConfiguration, &ManualConfigurationBase::error, this, &SetupManager::slotError);
+    connect(mManualConfiguration, &ManualConfigurationBase::finished, this, &SetupManager::slotFinished);
+    connect(mManualConfiguration, &ManualConfigurationBase::info, this, &SetupManager::slotInfo);
 }
 
 SetupManager::~SetupManager()
@@ -162,7 +162,7 @@ void SetupManager::noConfigFound()
     Q_EMIT noConfigFoundChanged();
 }
 
-ManualConfiguration *SetupManager::manualConfiguration() const
+ManualConfigurationBase *SetupManager::manualConfiguration() const
 {
     return mManualConfiguration;
 }
