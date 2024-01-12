@@ -3,7 +3,8 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 add_library(libaccountwizard SHARED
-    identityimpl.h identityimpl.cpp)
+    identityimpl.h identityimpl.cpp
+    manualconfigurationimpl.h manualconfigurationimpl.cpp)
 target_sources(libaccountwizard PRIVATE
     identitybase.h
     identitybase.cpp

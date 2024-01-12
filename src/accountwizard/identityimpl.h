@@ -15,5 +15,5 @@ public:
     explicit IdentityImpl(QObject *parent = nullptr);
     ~IdentityImpl() override;
 
-    void create() override;
+    void createNewIdentity() override;
 };

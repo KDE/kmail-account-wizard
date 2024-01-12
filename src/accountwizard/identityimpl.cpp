@@ -5,6 +5,9 @@
 */
 
 #include "identityimpl.h"
+#include "accountwizard_debug.h"
+#include <KIdentityManagementCore/Identity>
+#include <KIdentityManagementCore/IdentityManager>
 
 IdentityImpl::IdentityImpl(QObject *parent)
     : IdentityBase{parent}
@@ -13,9 +16,13 @@ IdentityImpl::IdentityImpl(QObject *parent)
 
 IdentityImpl::~IdentityImpl() = default;
 
-void IdentityImpl::create()
+void IdentityImpl::createNewIdentity()
 {
-    // TODO
+    auto manager = KIdentityManagementCore::IdentityManager::self();
+    manager->commit();
+    if (!manager->setAsDefault(mIdentity->uoid())) {
+        qCWarning(ACCOUNTWIZARD_LOG) << "Impossible to find identity";
+    }
 }
 
 #include "moc_identityimpl.cpp"

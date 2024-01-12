@@ -27,13 +27,18 @@ void IdentityBase::create()
     // store identity information
     mIdentityName = identityName();
     mIdentity->setIdentityName(mIdentityName);
+    createNewIdentity();
+    Q_EMIT finished(i18n("Identity set up."));
+}
+
+void IdentityBase::createNewIdentity()
+{
+    // TODO remove it for base. Add debug output only
     auto manager = KIdentityManagementCore::IdentityManager::self();
     manager->commit();
     if (!manager->setAsDefault(mIdentity->uoid())) {
         qCWarning(ACCOUNTWIZARD_LOG) << "Impossible to find identity";
     }
-
-    Q_EMIT finished(i18n("Identity set up."));
 }
 
 QString IdentityBase::identityName() const
