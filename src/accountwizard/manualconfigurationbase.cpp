@@ -184,6 +184,7 @@ void ManualConfigurationBase::createResource()
 
 void ManualConfigurationBase::generateResource(const Resource::ResourceInfo &info)
 {
+    qDebug() << " info " << info;
     // Reimplement
 }
 
