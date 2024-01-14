@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-runtime-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-02 01:32+0000\n"
+"POT-Creation-Date: 2024-01-14 03:08+0000\n"
 "PO-Revision-Date: 2024-01-02 16:04+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -36,40 +36,40 @@ msgstr ""
 "tulliana@gmail.com, volkangezer@gmail.com, kaanozdincer@gmail.com, "
 "emir_sari@icloud.com"
 
-#: accountwizard/identity.cpp:25
+#: accountwizard/identitybase.cpp:25
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Kimlik ayarlanıyor..."
 
-#: accountwizard/identity.cpp:36
+#: accountwizard/identitybase.cpp:31
 #, kde-format
 msgid "Identity set up."
 msgstr "Kimlik ayarlandı."
 
-#: accountwizard/identity.cpp:44
+#: accountwizard/identitybase.cpp:45
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Adsız"
 
-#: accountwizard/identity.cpp:76
+#: accountwizard/identitybase.cpp:77
 #, kde-format
 msgid "Identity removed."
 msgstr "Kimlik kaldırıldı."
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
-#: accountwizard/ispdb/serverconfiguration.cpp:23
-#: accountwizard/manualconfiguration.cpp:34
-#, kde-format
-msgid "IMAP"
-msgstr "IMAP"
-
-#: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:26
-#: accountwizard/manualconfiguration.cpp:34
+#: accountwizard/manualconfigurationbase.cpp:34
 #, kde-format
 msgid "POP3"
 msgstr "POP3"
+
+#: accountwizard/ispdb/configurationmodel.cpp:36
+#: accountwizard/ispdb/serverconfiguration.cpp:23
+#: accountwizard/manualconfigurationbase.cpp:34
+#, kde-format
+msgid "IMAP"
+msgstr "IMAP"
 
 #: accountwizard/ispdb/configurationmodel.cpp:38
 #, kde-format
@@ -87,7 +87,7 @@ msgid "SMTP"
 msgstr "SMTP"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:35
-#: accountwizard/manualconfiguration.cpp:39
+#: accountwizard/manualconfigurationbase.cpp:39
 #, kde-format
 msgid "SSL/TLS"
 msgstr "SSL/TLS"
@@ -118,52 +118,52 @@ msgstr "Yapılandırma, iyi bilinen dosyada bulundu."
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Yapılandırma, Mozilla FAI veritabanında bulundu."
 
-#: accountwizard/manualconfiguration.cpp:34
+#: accountwizard/manualconfigurationbase.cpp:34
 #, kde-format
 msgid "Kolab"
 msgstr "Kolab"
 
-#: accountwizard/manualconfiguration.cpp:39
+#: accountwizard/manualconfigurationbase.cpp:39
 #, kde-format
 msgid "STARTTLS"
 msgstr "STARTTLS"
 
-#: accountwizard/manualconfiguration.cpp:39
+#: accountwizard/manualconfigurationbase.cpp:39
 #, kde-format
 msgid "None"
 msgstr "Yok"
 
-#: accountwizard/manualconfiguration.cpp:44
+#: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "Clear text"
 msgstr "Metni temizle"
 
-#: accountwizard/manualconfiguration.cpp:44
+#: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "LOGIN"
 msgstr "LOGIN"
 
-#: accountwizard/manualconfiguration.cpp:44
+#: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "PLAIN"
 msgstr "PLAIN"
 
-#: accountwizard/manualconfiguration.cpp:44
+#: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "CRAM-MD5"
 msgstr "CRAM-MD5"
 
-#: accountwizard/manualconfiguration.cpp:44
+#: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr "DIGEST-MD5"
 
-#: accountwizard/manualconfiguration.cpp:44
+#: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "NTLM"
 msgstr "NTLM"
 
-#: accountwizard/manualconfiguration.cpp:44
+#: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "GSSAPI"
 msgstr "GSSAPI"

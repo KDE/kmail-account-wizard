@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-02 01:32+0000\n"
+"POT-Creation-Date: 2024-01-14 03:08+0000\n"
 "PO-Revision-Date: 2024-01-03 12:28+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -28,40 +28,40 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "g.sora@tiscali.it"
 
-#: accountwizard/identity.cpp:25
+#: accountwizard/identitybase.cpp:25
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Il configura identitate..."
 
-#: accountwizard/identity.cpp:36
+#: accountwizard/identitybase.cpp:31
 #, kde-format
 msgid "Identity set up."
 msgstr "Identitate configurate."
 
-#: accountwizard/identity.cpp:44
+#: accountwizard/identitybase.cpp:45
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Sin nomine"
 
-#: accountwizard/identity.cpp:76
+#: accountwizard/identitybase.cpp:77
 #, kde-format
 msgid "Identity removed."
 msgstr "Identitate Removite."
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
-#: accountwizard/ispdb/serverconfiguration.cpp:23
-#: accountwizard/manualconfiguration.cpp:34
-#, kde-format
-msgid "IMAP"
-msgstr "IMAP"
-
-#: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:26
-#: accountwizard/manualconfiguration.cpp:34
+#: accountwizard/manualconfigurationbase.cpp:34
 #, kde-format
 msgid "POP3"
 msgstr "POP3"
+
+#: accountwizard/ispdb/configurationmodel.cpp:36
+#: accountwizard/ispdb/serverconfiguration.cpp:23
+#: accountwizard/manualconfigurationbase.cpp:34
+#, kde-format
+msgid "IMAP"
+msgstr "IMAP"
 
 #: accountwizard/ispdb/configurationmodel.cpp:38
 #, kde-format
@@ -79,7 +79,7 @@ msgid "SMTP"
 msgstr "SMTP"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:35
-#: accountwizard/manualconfiguration.cpp:39
+#: accountwizard/manualconfigurationbase.cpp:39
 #, kde-format
 msgid "SSL/TLS"
 msgstr "SSL/TLS"
@@ -110,52 +110,52 @@ msgstr "Configuration trovate in file ben cognoscite."
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Configuration trovate in Base de datos FAI de Mozilla"
 
-#: accountwizard/manualconfiguration.cpp:34
+#: accountwizard/manualconfigurationbase.cpp:34
 #, kde-format
 msgid "Kolab"
 msgstr "Kolab"
 
-#: accountwizard/manualconfiguration.cpp:39
+#: accountwizard/manualconfigurationbase.cpp:39
 #, kde-format
 msgid "STARTTLS"
 msgstr "STARTTLS"
 
-#: accountwizard/manualconfiguration.cpp:39
+#: accountwizard/manualconfigurationbase.cpp:39
 #, kde-format
 msgid "None"
 msgstr "Necun"
 
-#: accountwizard/manualconfiguration.cpp:44
+#: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "Clear text"
 msgstr "Netta texto"
 
-#: accountwizard/manualconfiguration.cpp:44
+#: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "LOGIN"
 msgstr "Accesso de identification (LOGIN)"
 
-#: accountwizard/manualconfiguration.cpp:44
+#: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "PLAIN"
 msgstr "PLAIN"
 
-#: accountwizard/manualconfiguration.cpp:44
+#: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "CRAM-MD5"
 msgstr "CRAM-MD5"
 
-#: accountwizard/manualconfiguration.cpp:44
+#: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr "DIGEST-MD5"
 
-#: accountwizard/manualconfiguration.cpp:44
+#: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "NTLM"
 msgstr "NTLM"
 
-#: accountwizard/manualconfiguration.cpp:44
+#: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "GSSAPI"
 msgstr "GSSAPI"
