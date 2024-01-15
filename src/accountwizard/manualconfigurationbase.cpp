@@ -190,14 +190,7 @@ void ManualConfigurationBase::generateResource(const Resource::ResourceInfo &inf
 
 void ManualConfigurationBase::createTransport()
 {
-    // Create outgoing account
-    auto transport = new Transport(this);
-    transport->setTransportInfo(std::move(createTransportInfo()));
-
-    connect(transport, &Transport::info, this, &ManualConfigurationBase::info);
-    connect(transport, &Transport::finished, this, &ManualConfigurationBase::finished);
-    connect(transport, &Transport::error, this, &ManualConfigurationBase::error);
-    transport->createTransport();
+    // TODO reimplement
 }
 
 void ManualConfigurationBase::setPassword(const QString &newPassword)
