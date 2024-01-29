@@ -9,9 +9,9 @@
 QString replacePlaceholders(const QString &in, const KMime::Types::AddrSpec &addrSpec)
 {
     QString out(in);
-    out.replace(QLatin1String("%EMAILLOCALPART%"), addrSpec.localPart);
-    out.replace(QLatin1String("%EMAILADDRESS%"), addrSpec.asString());
-    out.replace(QLatin1String("%EMAILDOMAIN%"), addrSpec.domain);
+    out.replace(QLatin1StringView("%EMAILLOCALPART%"), addrSpec.localPart);
+    out.replace(QLatin1StringView("%EMAILADDRESS%"), addrSpec.asString());
+    out.replace(QLatin1StringView("%EMAILDOMAIN%"), addrSpec.domain);
     return out;
 }
 
@@ -57,37 +57,37 @@ std::optional<Server> Server::fromDomElement(const QDomElement &element, const K
         }
 
         const QString tagName(f.tagName());
-        if (tagName == QLatin1String("hostname")) {
+        if (tagName == QLatin1StringView("hostname")) {
             server.hostname = replacePlaceholders(f.text(), addrSpec);
-        } else if (tagName == QLatin1String("port")) {
+        } else if (tagName == QLatin1StringView("port")) {
             server.port = f.text().toInt();
-        } else if (tagName == QLatin1String("socketType")) {
+        } else if (tagName == QLatin1StringView("socketType")) {
             const QString type(f.text());
-            if (type == QLatin1String("plain")) {
+            if (type == QLatin1StringView("plain")) {
                 server.socketType = None;
-            } else if (type == QLatin1String("SSL")) {
+            } else if (type == QLatin1StringView("SSL")) {
                 server.socketType = SSL;
             }
-            if (type == QLatin1String("STARTTLS")) {
+            if (type == QLatin1StringView("STARTTLS")) {
                 server.socketType = StartTLS;
             }
-        } else if (tagName == QLatin1String("username")) {
+        } else if (tagName == QLatin1StringView("username")) {
             server.username = replacePlaceholders(f.text(), addrSpec);
-        } else if (tagName == QLatin1String("authentication") && server.authType == 0) {
+        } else if (tagName == QLatin1StringView("authentication") && server.authType == 0) {
             const QString type(f.text());
-            if (type == QLatin1String("password-cleartext") || type == QLatin1String("plain")) {
+            if (type == QLatin1StringView("password-cleartext") || type == QLatin1String("plain")) {
                 server.authType = Plain;
-            } else if (type == QLatin1String("password-encrypted") || type == QLatin1String("secure")) {
+            } else if (type == QLatin1StringView("password-encrypted") || type == QLatin1String("secure")) {
                 server.authType = CramMD5;
-            } else if (type == QLatin1String("NTLM")) {
+            } else if (type == QLatin1StringView("NTLM")) {
                 server.authType = NTLM;
-            } else if (type == QLatin1String("GSSAPI")) {
+            } else if (type == QLatin1StringView("GSSAPI")) {
                 server.authType = GSSAPI;
-            } else if (type == QLatin1String("client-ip-based")) {
+            } else if (type == QLatin1StringView("client-ip-based")) {
                 server.authType = ClientIP;
-            } else if (type == QLatin1String("none")) {
+            } else if (type == QLatin1StringView("none")) {
                 server.authType = NoAuth;
-            } else if (type == QLatin1String("OAuth2")) {
+            } else if (type == QLatin1StringView("OAuth2")) {
                 server.authType = OAuth2;
             }
         }

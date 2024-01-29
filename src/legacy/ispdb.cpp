@@ -159,28 +159,28 @@ void Ispdb::parseResult(const QDomDocument &document)
         if (!e.isNull()) {
             // qCDebug(ACCOUNTWIZARD_LOG)  << qPrintable(e.tagName());
             const QString tagName(e.tagName());
-            if (tagName == QLatin1String("domain")) {
+            if (tagName == QLatin1StringView("domain")) {
                 mDomains << e.text();
-            } else if (tagName == QLatin1String("displayName")) {
+            } else if (tagName == QLatin1StringView("displayName")) {
                 mDisplayName = e.text();
-            } else if (tagName == QLatin1String("displayShortName")) {
+            } else if (tagName == QLatin1StringView("displayShortName")) {
                 mDisplayShortName = e.text();
-            } else if (tagName == QLatin1String("incomingServer") && e.attribute(QStringLiteral("type")) == QLatin1String("imap")) {
+            } else if (tagName == QLatin1StringView("incomingServer") && e.attribute(QStringLiteral("type")) == QLatin1String("imap")) {
                 Server s = createServer(e);
                 if (s.isValid()) {
                     mImapServers.append(s);
                 }
-            } else if (tagName == QLatin1String("incomingServer") && e.attribute(QStringLiteral("type")) == QLatin1String("pop3")) {
+            } else if (tagName == QLatin1StringView("incomingServer") && e.attribute(QStringLiteral("type")) == QLatin1String("pop3")) {
                 Server s = createServer(e);
                 if (s.isValid()) {
                     mPop3Servers.append(s);
                 }
-            } else if (tagName == QLatin1String("outgoingServer") && e.attribute(QStringLiteral("type")) == QLatin1String("smtp")) {
+            } else if (tagName == QLatin1StringView("outgoingServer") && e.attribute(QStringLiteral("type")) == QLatin1String("smtp")) {
                 Server s = createServer(e);
                 if (s.isValid()) {
                     mSmtpServers.append(s);
                 }
-            } else if (tagName == QLatin1String("identity")) {
+            } else if (tagName == QLatin1StringView("identity")) {
                 Identity i = createIdentity(e);
                 if (i.isValid()) {
                     mIdentities.append(i);
@@ -222,37 +222,37 @@ Server Ispdb::createServer(const QDomElement &n)
         QDomElement f = o.toElement();
         if (!f.isNull()) {
             const QString tagName(f.tagName());
-            if (tagName == QLatin1String("hostname")) {
+            if (tagName == QLatin1StringView("hostname")) {
                 s.hostname = replacePlaceholders(f.text());
-            } else if (tagName == QLatin1String("port")) {
+            } else if (tagName == QLatin1StringView("port")) {
                 s.port = f.text().toInt();
-            } else if (tagName == QLatin1String("socketType")) {
+            } else if (tagName == QLatin1StringView("socketType")) {
                 const QString type(f.text());
-                if (type == QLatin1String("plain")) {
+                if (type == QLatin1StringView("plain")) {
                     s.socketType = None;
-                } else if (type == QLatin1String("SSL")) {
+                } else if (type == QLatin1StringView("SSL")) {
                     s.socketType = SSL;
                 }
-                if (type == QLatin1String("STARTTLS")) {
+                if (type == QLatin1StringView("STARTTLS")) {
                     s.socketType = StartTLS;
                 }
-            } else if (tagName == QLatin1String("username")) {
+            } else if (tagName == QLatin1StringView("username")) {
                 s.username = replacePlaceholders(f.text());
-            } else if (tagName == QLatin1String("authentication") && s.authentication == 0) {
+            } else if (tagName == QLatin1StringView("authentication") && s.authentication == 0) {
                 const QString type(f.text());
-                if (type == QLatin1String("password-cleartext") || type == QLatin1String("plain")) {
+                if (type == QLatin1StringView("password-cleartext") || type == QLatin1String("plain")) {
                     s.authentication = Plain;
-                } else if (type == QLatin1String("password-encrypted") || type == QLatin1String("secure")) {
+                } else if (type == QLatin1StringView("password-encrypted") || type == QLatin1String("secure")) {
                     s.authentication = CramMD5;
-                } else if (type == QLatin1String("NTLM")) {
+                } else if (type == QLatin1StringView("NTLM")) {
                     s.authentication = NTLM;
-                } else if (type == QLatin1String("GSSAPI")) {
+                } else if (type == QLatin1StringView("GSSAPI")) {
                     s.authentication = GSSAPI;
-                } else if (type == QLatin1String("client-ip-based")) {
+                } else if (type == QLatin1StringView("client-ip-based")) {
                     s.authentication = ClientIP;
-                } else if (type == QLatin1String("none")) {
+                } else if (type == QLatin1StringView("none")) {
                     s.authentication = NoAuth;
-                } else if (type == QLatin1String("OAuth2")) {
+                } else if (type == QLatin1StringView("OAuth2")) {
                     s.authentication = OAuth2;
                 }
             }
@@ -268,7 +268,7 @@ Identity Ispdb::createIdentity(const QDomElement &n)
     Identity i;
 
     // type="kolab" version="1.0" is the only identity that is defined
-    if (n.attribute(QStringLiteral("type")) != QLatin1String("kolab") || n.attribute(QStringLiteral("version")) != QLatin1String("1.0")) {
+    if (n.attribute(QStringLiteral("type")) != QLatin1StringView("kolab") || n.attribute(QStringLiteral("version")) != QLatin1String("1.0")) {
         qCDebug(ACCOUNTWIZARD_LOG) << "unknown type of identity element.";
     }
 
@@ -276,19 +276,19 @@ Identity Ispdb::createIdentity(const QDomElement &n)
         QDomElement f = o.toElement();
         if (!f.isNull()) {
             const QString tagName(f.tagName());
-            if (tagName == QLatin1String("default")) {
-                i.mDefault = f.text().toLower() == QLatin1String("true");
-            } else if (tagName == QLatin1String("email")) {
+            if (tagName == QLatin1StringView("default")) {
+                i.mDefault = f.text().toLower() == QLatin1StringView("true");
+            } else if (tagName == QLatin1StringView("email")) {
                 i.email = f.text();
-            } else if (tagName == QLatin1String("name")) {
+            } else if (tagName == QLatin1StringView("name")) {
                 i.name = f.text();
-            } else if (tagName == QLatin1String("organization")) {
+            } else if (tagName == QLatin1StringView("organization")) {
                 i.organization = f.text();
-            } else if (tagName == QLatin1String("signature")) {
+            } else if (tagName == QLatin1StringView("signature")) {
                 QTextStream stream(&i.signature);
                 f.save(stream, 0);
                 i.signature = i.signature.trimmed();
-                if (i.signature.startsWith(QLatin1String("<signature>"))) {
+                if (i.signature.startsWith(QLatin1StringView("<signature>"))) {
                     i.signature = i.signature.mid(11, i.signature.length() - 23);
                     i.signature = i.signature.trimmed();
                 }
@@ -303,9 +303,9 @@ Identity Ispdb::createIdentity(const QDomElement &n)
 QString Ispdb::replacePlaceholders(const QString &in)
 {
     QString out(in);
-    out.replace(QLatin1String("%EMAILLOCALPART%"), mAddr.localPart);
-    out.replace(QLatin1String("%EMAILADDRESS%"), mAddr.asString());
-    out.replace(QLatin1String("%EMAILDOMAIN%"), mAddr.domain);
+    out.replace(QLatin1StringView("%EMAILLOCALPART%"), mAddr.localPart);
+    out.replace(QLatin1StringView("%EMAILADDRESS%"), mAddr.asString());
+    out.replace(QLatin1StringView("%EMAILDOMAIN%"), mAddr.domain);
     return out;
 }
 

@@ -43,7 +43,7 @@ static typename T::value_type stringToValue(const T *table, const int tableSize,
 {
     const QString ref = string.toLower();
     for (int i = 0; i < tableSize; ++i) {
-        if (ref == QLatin1String(table[i].name)) {
+        if (ref == QLatin1StringView(table[i].name)) {
             valid = true;
             return table[i].value;
         }

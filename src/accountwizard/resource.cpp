@@ -25,7 +25,7 @@ static QMetaType::Type argumentType(const QMetaObject *mo, const QString &method
     QMetaMethod m;
     const int numberOfMethod(mo->methodCount());
     for (int i = 0; i < numberOfMethod; ++i) {
-        const QString signature = QLatin1String(mo->method(i).methodSignature());
+        const QString signature = QLatin1StringView(mo->method(i).methodSignature());
         if (signature.contains(method + QLatin1Char('('))) {
             m = mo->method(i);
             break;
@@ -73,7 +73,7 @@ void Resource::createResource()
     // By default imap/kolab/pop3 can't be unique. Keep it only for be safe.
     // check if unique instance already exists
     // qCDebug(ACCOUNTWIZARD_LOG) << type.capabilities();
-    if (type.capabilities().contains(QLatin1String("Unique"))) {
+    if (type.capabilities().contains(QLatin1StringView("Unique"))) {
         const Akonadi::AgentInstance::List lstAgent = AgentManager::self()->instances();
         for (const AgentInstance &instance : lstAgent) {
             // qCDebug(ACCOUNTWIZARD_LOG) << instance.type().identifier() << (instance.type() == type);
@@ -121,11 +121,11 @@ void Resource::instanceCreateResult(KJob *job)
             const QVariant arg = it.value();
             const QMetaType::Type targetType = argumentType(iface.metaObject(), methodName);
             if (arg.metaType().id() != targetType) {
-                Q_EMIT error(i18n("Could not convert value of setting '%1' to required type %2.", it.key(), QLatin1String(QMetaType(targetType).name())));
+                Q_EMIT error(i18n("Could not convert value of setting '%1' to required type %2.", it.key(), QLatin1StringView(QMetaType(targetType).name())));
 
                 qCWarning(ACCOUNTWIZARD_LOG) << "Impossible to convert argument : " << arg
                                              << QStringLiteral("Could not convert value of setting '%1' to required type %2.")
-                                                    .arg(it.key(), QLatin1String(QMetaType(targetType).name()));
+                                                    .arg(it.key(), QLatin1StringView(QMetaType(targetType).name()));
                 return;
             }
             // arg.convert(targetType);

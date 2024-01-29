@@ -99,25 +99,25 @@ void IspdbService::handleReply(QNetworkReply *const reply, const KMime::Types::A
         }
 
         const QString tagName(element.tagName());
-        if (tagName == QLatin1String("domain")) {
+        if (tagName == QLatin1StringView("domain")) {
             emailProvider.domains << element.text();
-        } else if (tagName == QLatin1String("displayName")) {
+        } else if (tagName == QLatin1StringView("displayName")) {
             emailProvider.displayName = element.text();
-        } else if (tagName == QLatin1String("displayShortName")) {
+        } else if (tagName == QLatin1StringView("displayShortName")) {
             emailProvider.shortDisplayName = element.text();
-        } else if (tagName == QLatin1String("incomingServer") && element.attribute(QStringLiteral("type")) == QLatin1String("imap")) {
+        } else if (tagName == QLatin1StringView("incomingServer") && element.attribute(QStringLiteral("type")) == QLatin1String("imap")) {
             auto server = Server::fromDomElement(element, addrSpec);
             if (server) {
                 server->type = Server::Type::IMAP;
                 emailProvider.imapServers.append(*server);
             }
-        } else if (tagName == QLatin1String("incomingServer") && element.attribute(QStringLiteral("type")) == QLatin1String("pop3")) {
+        } else if (tagName == QLatin1StringView("incomingServer") && element.attribute(QStringLiteral("type")) == QLatin1String("pop3")) {
             auto server = Server::fromDomElement(element, addrSpec);
             if (server) {
                 server->type = Server::Type::POP3;
                 emailProvider.popServers.append(*server);
             }
-        } else if (tagName == QLatin1String("outgoingServer") && element.attribute(QStringLiteral("type")) == QLatin1String("smtp")) {
+        } else if (tagName == QLatin1StringView("outgoingServer") && element.attribute(QStringLiteral("type")) == QLatin1String("smtp")) {
             auto server = Server::fromDomElement(element, addrSpec);
             if (server) {
                 server->type = Server::Type::SMTP;
