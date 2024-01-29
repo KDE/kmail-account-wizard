@@ -8,6 +8,22 @@
 #include "identitybase.h"
 #include <QTest>
 QTEST_MAIN(IdentityBaseTest)
+
+class IdentityTest : public IdentityBase
+{
+public:
+    explicit IdentityTest(QObject *parent = nullptr)
+        : IdentityBase(parent)
+    {
+    }
+
+protected:
+    void createNewIdentity() override
+    {
+        // TODO
+    }
+};
+
 IdentityBaseTest::IdentityBaseTest(QObject *parent)
     : QObject{parent}
 {

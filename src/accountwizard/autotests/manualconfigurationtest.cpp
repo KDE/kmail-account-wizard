@@ -8,6 +8,25 @@
 #include "manualconfigurationbase.h"
 #include <QTest>
 QTEST_MAIN(ManualConfigurationTest)
+class ManualConfigurationImplTest : public ManualConfigurationBase
+{
+public:
+    explicit ManualConfigurationImplTest(QObject *parent = nullptr)
+        : ManualConfigurationBase(parent)
+    {
+    }
+
+protected:
+    void createTransport() override
+    {
+        // TODO
+    }
+    void generateResource(const Resource::ResourceInfo &info) override
+    {
+        // TODO
+    }
+};
+
 ManualConfigurationTest::ManualConfigurationTest(QObject *parent)
     : QObject{parent}
 {
@@ -15,7 +34,7 @@ ManualConfigurationTest::ManualConfigurationTest(QObject *parent)
 
 void ManualConfigurationTest::shouldHaveDefaultValues()
 {
-    ManualConfigurationBase w;
+    ManualConfigurationImplTest w;
     QVERIFY(w.incomingHostName().isEmpty());
     QVERIFY(w.incomingUserName().isEmpty());
     QVERIFY(w.outgoingHostName().isEmpty());
