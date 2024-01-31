@@ -1,6 +1,6 @@
 # Copyright © 2011, 2012 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdepim-runtime package.
-# Tommi Nieminen <translator@legisign.org>, 2011, 2012, 2013, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023.
+# Tommi Nieminen <translator@legisign.org>, 2011, 2012, 2013, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2024.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2012, 2013, 2014, 2015, 2016.
 # Jiri Grönroos <jiri.gronroos+kde@iki.fi>, 2012.
 #
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-06-12 00:46+0000\n"
-"PO-Revision-Date: 2021-09-05 15:54+0300\n"
+"PO-Revision-Date: 2024-01-29 21:42+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -414,22 +414,22 @@ msgstr "Resurssi ”%1” on jo asetettu."
 #: resource.cpp:94
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr "Luodaan resurssi-instanssia kohteelle ”%1”…"
+msgstr "Luodaan resurssi-ilmentymää kohteelle ”%1”…"
 
 #: resource.cpp:103
 #, kde-format
 msgid "Failed to create resource instance: %1"
-msgstr "Resurssi-instanssin luominen epäonnistui: %1"
+msgstr "Resurssi-ilmentymän luominen epäonnistui: %1"
 
 #: resource.cpp:110
 #, kde-format
 msgid "Configuring resource instance..."
-msgstr "Asetetaan resurssi-instanssia…"
+msgstr "Asetetaan resurssi-ilmentymää…"
 
 #: resource.cpp:114
 #, kde-format
 msgid "Unable to configure resource instance."
-msgstr "Resurssi-instanssia ei voida määrittää."
+msgstr "Resurssi-ilmentymää ei voida määrittää."
 
 #: resource.cpp:129
 #, kde-format
@@ -454,7 +454,7 @@ msgstr "Resurssin asetus valmis."
 #: resource.cpp:167
 #, kde-format
 msgid "Removed resource instance for '%1'."
-msgstr "Poistettiin kohteen ”%1” resurssi-instanssi."
+msgstr "Poistettiin kohteen ”%1” resurssi-ilmentymä."
 
 #: servertest.cpp:50
 #, kde-format
