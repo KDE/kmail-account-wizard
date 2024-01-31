@@ -1,6 +1,6 @@
 # Copyright © 2011, 2012 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdepim-runtime package.
-# Tommi Nieminen <translator@legisign.org>, 2011, 2012, 2013, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023.
+# Tommi Nieminen <translator@legisign.org>, 2011, 2012, 2013, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2024.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2012, 2013, 2014, 2015, 2016.
 # Jiri Grönroos <jiri.gronroos+kde@iki.fi>, 2012.
 #
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-14 03:08+0000\n"
-"PO-Revision-Date: 2023-09-26 13:34+0300\n"
+"PO-Revision-Date: 2024-01-29 21:42+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -177,22 +177,22 @@ msgstr "Resurssi ”%1” on jo asetettu."
 #: accountwizard/resource.cpp:88
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr "Luodaan resurssi-instanssia kohteelle ”%1”…"
+msgstr "Luodaan resurssi-ilmentymää kohteelle ”%1”…"
 
 #: accountwizard/resource.cpp:97
 #, kde-format
 msgid "Failed to create resource instance: %1"
-msgstr "Resurssi-instanssin luominen epäonnistui: %1"
+msgstr "Resurssi-ilmentymän luominen epäonnistui: %1"
 
 #: accountwizard/resource.cpp:104
 #, kde-format
 msgid "Configuring resource instance..."
-msgstr "Asetetaan resurssi-instanssia…"
+msgstr "Asetetaan resurssi-ilmentymää…"
 
 #: accountwizard/resource.cpp:108
 #, kde-format
 msgid "Unable to configure resource instance."
-msgstr "Resurssi-instanssia ei voida määrittää."
+msgstr "Resurssi-ilmentymää ei voida määrittää."
 
 #: accountwizard/resource.cpp:124
 #, kde-format
@@ -282,8 +282,7 @@ msgid "boss@example.corp"
 msgstr "pomo@yritys.fi"
 
 #: apps/contents/ui/PersonalDataPage.qml:84
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password:"
 msgstr "Salasana:"
 
@@ -383,7 +382,7 @@ msgstr "Saatavilla olevat määritykset"
 #: apps/contents/ui/PersonalDataPage.qml:321
 #, kde-format
 msgid "Manual Configuration"
-msgstr ""
+msgstr "Manuaalinen asetus"
 
 #: apps/contents/ui/PersonalDataPage.qml:338
 #, fuzzy, kde-format
