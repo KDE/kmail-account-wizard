@@ -105,19 +105,19 @@ void IspdbService::handleReply(QNetworkReply *const reply, const KMime::Types::A
             emailProvider.displayName = element.text();
         } else if (tagName == QLatin1StringView("displayShortName")) {
             emailProvider.shortDisplayName = element.text();
-        } else if (tagName == QLatin1StringView("incomingServer") && element.attribute(QStringLiteral("type")) == QLatin1String("imap")) {
+        } else if (tagName == QLatin1StringView("incomingServer") && element.attribute(QStringLiteral("type")) == QLatin1StringView("imap")) {
             auto server = Server::fromDomElement(element, addrSpec);
             if (server) {
                 server->type = Server::Type::IMAP;
                 emailProvider.imapServers.append(*server);
             }
-        } else if (tagName == QLatin1StringView("incomingServer") && element.attribute(QStringLiteral("type")) == QLatin1String("pop3")) {
+        } else if (tagName == QLatin1StringView("incomingServer") && element.attribute(QStringLiteral("type")) == QLatin1StringView("pop3")) {
             auto server = Server::fromDomElement(element, addrSpec);
             if (server) {
                 server->type = Server::Type::POP3;
                 emailProvider.popServers.append(*server);
             }
-        } else if (tagName == QLatin1StringView("outgoingServer") && element.attribute(QStringLiteral("type")) == QLatin1String("smtp")) {
+        } else if (tagName == QLatin1StringView("outgoingServer") && element.attribute(QStringLiteral("type")) == QLatin1StringView("smtp")) {
             auto server = Server::fromDomElement(element, addrSpec);
             if (server) {
                 server->type = Server::Type::SMTP;

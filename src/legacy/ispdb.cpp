@@ -165,17 +165,17 @@ void Ispdb::parseResult(const QDomDocument &document)
                 mDisplayName = e.text();
             } else if (tagName == QLatin1StringView("displayShortName")) {
                 mDisplayShortName = e.text();
-            } else if (tagName == QLatin1StringView("incomingServer") && e.attribute(QStringLiteral("type")) == QLatin1String("imap")) {
+            } else if (tagName == QLatin1StringView("incomingServer") && e.attribute(QStringLiteral("type")) == QLatin1StringView("imap")) {
                 Server s = createServer(e);
                 if (s.isValid()) {
                     mImapServers.append(s);
                 }
-            } else if (tagName == QLatin1StringView("incomingServer") && e.attribute(QStringLiteral("type")) == QLatin1String("pop3")) {
+            } else if (tagName == QLatin1StringView("incomingServer") && e.attribute(QStringLiteral("type")) == QLatin1StringView("pop3")) {
                 Server s = createServer(e);
                 if (s.isValid()) {
                     mPop3Servers.append(s);
                 }
-            } else if (tagName == QLatin1StringView("outgoingServer") && e.attribute(QStringLiteral("type")) == QLatin1String("smtp")) {
+            } else if (tagName == QLatin1StringView("outgoingServer") && e.attribute(QStringLiteral("type")) == QLatin1StringView("smtp")) {
                 Server s = createServer(e);
                 if (s.isValid()) {
                     mSmtpServers.append(s);
@@ -240,9 +240,9 @@ Server Ispdb::createServer(const QDomElement &n)
                 s.username = replacePlaceholders(f.text());
             } else if (tagName == QLatin1StringView("authentication") && s.authentication == 0) {
                 const QString type(f.text());
-                if (type == QLatin1StringView("password-cleartext") || type == QLatin1String("plain")) {
+                if (type == QLatin1StringView("password-cleartext") || type == QLatin1StringView("plain")) {
                     s.authentication = Plain;
-                } else if (type == QLatin1StringView("password-encrypted") || type == QLatin1String("secure")) {
+                } else if (type == QLatin1StringView("password-encrypted") || type == QLatin1StringView("secure")) {
                     s.authentication = CramMD5;
                 } else if (type == QLatin1StringView("NTLM")) {
                     s.authentication = NTLM;
@@ -268,7 +268,7 @@ Identity Ispdb::createIdentity(const QDomElement &n)
     Identity i;
 
     // type="kolab" version="1.0" is the only identity that is defined
-    if (n.attribute(QStringLiteral("type")) != QLatin1StringView("kolab") || n.attribute(QStringLiteral("version")) != QLatin1String("1.0")) {
+    if (n.attribute(QStringLiteral("type")) != QLatin1StringView("kolab") || n.attribute(QStringLiteral("version")) != QLatin1StringView("1.0")) {
         qCDebug(ACCOUNTWIZARD_LOG) << "unknown type of identity element.";
     }
 

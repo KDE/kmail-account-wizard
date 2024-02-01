@@ -75,9 +75,9 @@ std::optional<Server> Server::fromDomElement(const QDomElement &element, const K
             server.username = replacePlaceholders(f.text(), addrSpec);
         } else if (tagName == QLatin1StringView("authentication") && server.authType == 0) {
             const QString type(f.text());
-            if (type == QLatin1StringView("password-cleartext") || type == QLatin1String("plain")) {
+            if (type == QLatin1StringView("password-cleartext") || type == QLatin1StringView("plain")) {
                 server.authType = Plain;
-            } else if (type == QLatin1StringView("password-encrypted") || type == QLatin1String("secure")) {
+            } else if (type == QLatin1StringView("password-encrypted") || type == QLatin1StringView("secure")) {
                 server.authType = CramMD5;
             } else if (type == QLatin1StringView("NTLM")) {
                 server.authType = NTLM;
