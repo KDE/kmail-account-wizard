@@ -21,7 +21,7 @@ void IdentityImpl::createNewIdentity()
     auto manager = KIdentityManagementCore::IdentityManager::self();
     manager->commit();
     if (!manager->setAsDefault(mIdentity->uoid())) {
-        qCWarning(ACCOUNTWIZARD_LOG) << "Impossible to find identity";
+        qCWarning(ACCOUNTWIZARD_LOG) << "Impossible to find identity" << mIdentity;
     }
 }
 
