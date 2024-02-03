@@ -2,179 +2,179 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Einars Sprugis <einars8@gmail.com>, 2011.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-13 00:38+0000\n"
-"PO-Revision-Date: 2011-07-13 01:26+0300\n"
-"Last-Translator: Einars Sprugis <einars8@gmail.com>\n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2024-02-01 12:58+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Einārs Sprūģis"
+msgstr "Einārs Sprūģis, Toms Trasūns"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "einars8@gmail.com"
+msgstr "einars8@gmail.com, toms.trasuns@posteo.net"
 
 #: accountwizard/identitybase.cpp:25
 #, kde-format
 msgid "Setting up identity..."
-msgstr "Iestata identitāti..."
+msgstr "Veido identitāti..."
 
 #: accountwizard/identitybase.cpp:31
 #, kde-format
 msgid "Identity set up."
-msgstr "Identitāte iestatīta."
+msgstr "Identitāte ir izveidota."
 
 #: accountwizard/identitybase.cpp:45
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
-msgstr "Nenosaukts"
+msgstr "Nenosaukta"
 
 #: accountwizard/identitybase.cpp:77
 #, kde-format
 msgid "Identity removed."
-msgstr "Identitāte izņemta."
+msgstr "Identitāte noņemta."
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:26
 #: accountwizard/manualconfigurationbase.cpp:34
 #, kde-format
 msgid "POP3"
-msgstr ""
+msgstr "POP3"
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:23
 #: accountwizard/manualconfigurationbase.cpp:34
 #, kde-format
 msgid "IMAP"
-msgstr ""
+msgstr "IMAP"
 
 #: accountwizard/ispdb/configurationmodel.cpp:38
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
-msgstr ""
+msgstr "Turiet mapes un vēstules sinhronizētas ar serveri"
 
 #: accountwizard/ispdb/configurationmodel.cpp:39
 #, kde-format
 msgid "Keep your folders and emails on your computer"
-msgstr ""
+msgstr "Turiet mapes un e-pastus savā datorā"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:29
 #, kde-format
 msgid "SMTP"
-msgstr ""
+msgstr "SMTP"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:35
 #: accountwizard/manualconfigurationbase.cpp:39
 #, kde-format
 msgid "SSL/TLS"
-msgstr ""
+msgstr "SSL/TLS"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:38
 #, kde-format
 msgid "StartTLS"
-msgstr ""
+msgstr "StartTLS"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:41
 #, kde-format
 msgctxt "No security mechanism"
 msgid "None"
-msgstr ""
+msgstr "Nav"
 
 #: accountwizard/ispdbservice.cpp:133
-#, fuzzy, kde-format
-#| msgid "Autodetecting settings failed"
+#, kde-format
 msgid "Configuration found auto config file."
-msgstr "Iestatījumu autonoteikšana neizdevās"
+msgstr "Konfigurācijas rīks ir atradis automātiskas konfigurācijas datni."
 
 #: accountwizard/ispdbservice.cpp:136
 #, kde-format
 msgid "Configuration found in well-known file."
-msgstr ""
+msgstr "Konfigurācija ir atrasta labi zināmā datnē."
 
 #: accountwizard/ispdbservice.cpp:139
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
-msgstr ""
+msgstr "Konfigurācija atrasta „Mozilla“ FAI datubāzē."
 
 #: accountwizard/manualconfigurationbase.cpp:34
 #, kde-format
 msgid "Kolab"
-msgstr ""
+msgstr "Kolab"
 
 #: accountwizard/manualconfigurationbase.cpp:39
 #, kde-format
 msgid "STARTTLS"
-msgstr ""
+msgstr "STARTTLS"
 
 #: accountwizard/manualconfigurationbase.cpp:39
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Nav"
 
 #: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "Clear text"
-msgstr ""
+msgstr "Vienkāršs teksts"
 
 #: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "LOGIN"
-msgstr ""
+msgstr "LOGIN"
 
 #: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "PLAIN"
-msgstr ""
+msgstr "PLAIN"
 
 #: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "CRAM-MD5"
-msgstr ""
+msgstr "CRAM-MD5"
 
 #: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "DIGEST-MD5"
-msgstr ""
+msgstr "DIGEST-MD5"
 
 #: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "NTLM"
-msgstr ""
+msgstr "NTLM"
 
 #: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "GSSAPI"
-msgstr ""
+msgstr "GSSAPI"
 
 #: accountwizard/resource.cpp:68
 #, kde-format
 msgid "Resource type '%1' is not available."
-msgstr "Resursa tips '%1' nav pieejams."
+msgstr "Resursa tips „%1“ nav pieejams."
 
 #: accountwizard/resource.cpp:81
 #, kde-format
 msgid "Resource '%1' is already set up."
-msgstr "Resurss '%1' jau ir iestatīts."
+msgstr "Resurss „%1“ jau ir iestatīts."
 
 #: accountwizard/resource.cpp:88
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr "Izveido resursa instanci priekš '%1'..."
+msgstr "Izveido „%1“ resursa instanci..."
 
 #: accountwizard/resource.cpp:97
 #, kde-format
@@ -194,18 +194,17 @@ msgstr "Neizdevās konfigurēt resursa instanci."
 #: accountwizard/resource.cpp:124
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
-msgstr "Neizdevās pārveidot iestatījuma '%1' vērtību uz vajadzīgo tipu %2."
+msgstr "Neizdevās pārveidot iestatījuma „%1“ vērtību uz vajadzīgo tipu %2."
 
 #: accountwizard/resource.cpp:134
 #, kde-format
 msgid "Could not set setting '%1': %2"
-msgstr "Neizdevās iestatīt iestatījumu '%1': %2"
+msgstr "Neizdevās iestatīt iestatījumu „%1“: %2"
 
 #: accountwizard/resource.cpp:140
-#, fuzzy, kde-format
-#| msgid "Could not set setting '%1': %2"
+#, kde-format
 msgid "Could not save settings: %1"
-msgstr "Neizdevās iestatīt iestatījumu '%1': %2"
+msgstr "Neizdevās saglabāt iestatījumus: %1"
 
 #: accountwizard/resource.cpp:146
 #, kde-format
@@ -220,32 +219,32 @@ msgstr "Iestata pasta transporta kontu..."
 #: accountwizard/transport.cpp:99
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
-msgstr ""
+msgstr "Pasta transports izmanto „%1“ šifrēšanu un „%2“ autentifikāciju."
 
 #: accountwizard/transport.cpp:102
 #, kde-format
 msgid "Mail transport account set up."
-msgstr "Pasta transporta konts iestatīts."
+msgstr "Pasta transporta konts ir iestatīts."
 
 #: apps/contents/ui/ConfigurationDelegate.qml:93
 #, kde-format
 msgid "Incoming"
-msgstr ""
+msgstr "Ienākošās"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
 #, kde-format
 msgid "Outgoing"
-msgstr ""
+msgstr "Izejošās"
 
 #: apps/contents/ui/PersonalDataPage.qml:15
 #, kde-format
 msgid "Personal Information"
-msgstr ""
+msgstr "Personas dati"
 
 #: apps/contents/ui/PersonalDataPage.qml:43
 #, kde-format
 msgid "Set Up Your Existing Email Address"
-msgstr ""
+msgstr "Iestatiet savu eksistējošo e-pasta adresi"
 
 #: apps/contents/ui/PersonalDataPage.qml:48
 #, kde-format
@@ -253,18 +252,20 @@ msgid ""
 "To use your current email address fill in your credentials.<br />This wizard "
 "will automatically search for a working and recommended server configuration."
 msgstr ""
+"Lai izmantotu savu pašreizējo e-pasta adresi, ievadiet tās datus.<br /> Šis "
+"vednis mēģinās automātiski sameklēt darbojošos un ieteicamo servera "
+"konfigurāciju."
 
 #: apps/contents/ui/PersonalDataPage.qml:60
-#, fuzzy, kde-format
-#| msgid "Full Name"
+#, kde-format
 msgid "Full name:"
-msgstr "Pilns vārds"
+msgstr "Pilns vārds:"
 
 #: apps/contents/ui/PersonalDataPage.qml:61
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
-msgstr ""
+msgstr "Jānis Bērziņš"
 
 #: apps/contents/ui/PersonalDataPage.qml:70
 #, kde-format
@@ -275,122 +276,111 @@ msgstr "E-pasta adrese:"
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
-msgstr ""
+msgstr "boss@paraugs.lv"
 
 #: apps/contents/ui/PersonalDataPage.qml:84
-#, fuzzy, kde-format
-#| msgid "Password"
+#, kde-format
 msgid "Password:"
-msgstr "Parole"
+msgstr "Parole:"
 
 #: apps/contents/ui/PersonalDataPage.qml:93
 #, kde-format
 msgid "Continue"
-msgstr ""
+msgstr "Turpināt"
 
 #: apps/contents/ui/PersonalDataPage.qml:107
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check online for the settings needed for this email provider. Only the "
-#| "domain name part of the e-mail address will be sent over the Internet at "
-#| "this point. If this option is unchecked, the account can be set up "
-#| "manually."
+#, kde-format
 msgid ""
 "Check online for the settings needed for this email provider. Only the "
 "domain name part of the e-mail address will be sent over the Internet."
 msgstr ""
-"Tiešsaistē pārbaudīt vajadzīgos iestatījumus šim e-pasta nodrošinātājam. "
-"Šajā brīdī internetā tiks nosūtīta tikai e-pasta adreses domēna daļa. Ja šī "
-"opcija nav atzīmēta, konts var tikt iestatīts pašrocīgi."
+"Meklēt tiešsaistē šī e-pasta sniedzēja iestatījumus. Meklēšanai no e-pasta "
+"adreses tiks sūtīta tikai daļa ar domēna vārdu, bet ne viss e-pasts."
 
 #: apps/contents/ui/PersonalDataPage.qml:133
 #, kde-format
 msgid "No config found from ispdb server."
-msgstr ""
+msgstr "„ispdb“ serverī nav atrasta konfigurācija"
 
 #: apps/contents/ui/PersonalDataPage.qml:140
 #, kde-format
 msgid "Incoming Server Parameters"
-msgstr ""
+msgstr "Ienākošā servera parametri"
 
 #: apps/contents/ui/PersonalDataPage.qml:148
 #, kde-format
 msgid "Incoming server:"
-msgstr ""
+msgstr "Ienākošais serveris:"
 
 #: apps/contents/ui/PersonalDataPage.qml:158
 #, kde-format
 msgid "Protocol:"
-msgstr ""
+msgstr "Protokols:"
 
 #: apps/contents/ui/PersonalDataPage.qml:167
 #: apps/contents/ui/PersonalDataPage.qml:229
 #, kde-format
 msgid "Port:"
-msgstr ""
+msgstr "Ports:"
 
 #: apps/contents/ui/PersonalDataPage.qml:174
 #: apps/contents/ui/PersonalDataPage.qml:236
 #, kde-format
 msgid "Security:"
-msgstr ""
+msgstr "Drošība:"
 
 #: apps/contents/ui/PersonalDataPage.qml:183
 #: apps/contents/ui/PersonalDataPage.qml:245
 #, kde-format
 msgid "Authentication Method:"
-msgstr ""
+msgstr "Autentifikācijas metode:"
 
 #: apps/contents/ui/PersonalDataPage.qml:192
 #: apps/contents/ui/PersonalDataPage.qml:254
-#, fuzzy, kde-format
-#| msgctxt "Default name for new email accounts/identities."
-#| msgid "Unnamed"
+#, kde-format
 msgid "Username:"
-msgstr "Nenosaukts"
+msgstr "Lietotājvārds:"
 
 #: apps/contents/ui/PersonalDataPage.qml:203
 #, kde-format
 msgid "Download all messages for offline use"
-msgstr ""
+msgstr "Lejupielādēt visus ziņojumus izmantošanai nesaistē"
 
 #: apps/contents/ui/PersonalDataPage.qml:213
 #, kde-format
 msgid "Outgoing Server Parameters"
-msgstr ""
+msgstr "Izejošā servera parametri"
 
 #: apps/contents/ui/PersonalDataPage.qml:220
 #, kde-format
 msgid "Outgoing server:"
-msgstr ""
+msgstr "Izejošais serveris:"
 
 #: apps/contents/ui/PersonalDataPage.qml:269
 #, kde-format
 msgid "Recheck"
-msgstr ""
+msgstr "Pārbaudīt vēlreiz"
 
 #: apps/contents/ui/PersonalDataPage.qml:282
 #: apps/contents/ui/PersonalDataPage.qml:330
-#, fuzzy, kde-format
-#| msgid "Setting up Account"
+#, kde-format
 msgid "Create Account"
-msgstr "Iestata kontu"
+msgstr "Izveidot kontu"
 
 #: apps/contents/ui/PersonalDataPage.qml:293
 #, kde-format
 msgid "Available configurations"
-msgstr ""
+msgstr "Pieejamās konfigurācijas"
 
 #: apps/contents/ui/PersonalDataPage.qml:321
 #, kde-format
 msgid "Manual Configuration"
-msgstr ""
+msgstr "Manuālā konfigurācija"
 
 #: apps/contents/ui/PersonalDataPage.qml:338
-#, fuzzy, kde-format
-#| msgid "&Details..."
+#, kde-format
 msgid "Details"
-msgstr "&Detaļas..."
+msgstr "Informācija"
 
 #: apps/main.cpp:32
 #, kde-format
@@ -403,10 +393,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "Palīdz iestatīt PIM kontus"
 
 #: apps/main.cpp:36
-#, fuzzy, kde-format
-#| msgid "(c) 2009 the Akonadi developers"
+#, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
-msgstr "(c) 2009 Akonadi izstrādātāji"
+msgstr "(c) 2009–2024 „Akonadi“ izstrādātāji"
 
 #: apps/main.cpp:39
 #, kde-format
@@ -426,12 +415,12 @@ msgstr "Laurent Montel"
 #: apps/main.cpp:40 apps/main.cpp:41
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Uzturētājs"
 
 #: apps/main.cpp:41
 #, kde-format
 msgid "Carl Schwan"
-msgstr ""
+msgstr "Carl Schwan"
 
 #~ msgid ""
 #~ "There seems to be a problem in reaching this server or choosing a safe "
