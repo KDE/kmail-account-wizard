@@ -6,6 +6,7 @@
 
 #include "manualconfigurationtest.h"
 #include "manualconfigurationbase.h"
+#include <QSignalSpy>
 #include <QTest>
 QTEST_MAIN(ManualConfigurationTest)
 class ManualConfigurationImplTest : public ManualConfigurationBase
@@ -62,12 +63,20 @@ void ManualConfigurationTest::shouldHaveDefaultValues()
 void ManualConfigurationTest::shouldAssignEmail()
 {
     ManualConfigurationImplTest w;
+    QSignalSpy incomingHostNameChanged(&w, &ManualConfigurationImplTest::incomingHostNameChanged);
+    QSignalSpy outgoingHostNameChanged(&w, &ManualConfigurationImplTest::outgoingHostNameChanged);
+    QSignalSpy incomingUserNameChanged(&w, &ManualConfigurationImplTest::incomingUserNameChanged);
+    QSignalSpy outgoingUserNameChanged(&w, &ManualConfigurationImplTest::outgoingUserNameChanged);
+
     w.setEmail(QStringLiteral("foo@kde.org"));
     QCOMPARE(w.incomingHostName(), QStringLiteral("kde.org"));
     QCOMPARE(w.outgoingHostName(), QStringLiteral("kde.org"));
     QCOMPARE(w.incomingUserName(), QStringLiteral("foo@kde.org"));
     QCOMPARE(w.outgoingUserName(), QStringLiteral("foo@kde.org"));
-    // FIXME: test signal
+    QCOMPARE(incomingHostNameChanged.count(), 1);
+    QCOMPARE(outgoingHostNameChanged.count(), 1);
+    QCOMPARE(incomingUserNameChanged.count(), 1);
+    QCOMPARE(outgoingUserNameChanged.count(), 1);
 }
 
 #include "moc_manualconfigurationtest.cpp"
