@@ -25,6 +25,10 @@ protected:
     {
         // TODO
     }
+
+private:
+    QString mResourceInfo;
+    QString mTransportInfo;
 };
 
 ManualConfigurationTest::ManualConfigurationTest(QObject *parent)
