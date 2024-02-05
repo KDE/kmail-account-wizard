@@ -60,6 +60,10 @@ void ManualConfigurationTest::shouldAssignEmail()
     ManualConfigurationImplTest w;
     w.setEmail(QStringLiteral("foo@kde.org"));
     QCOMPARE(w.incomingHostName(), QStringLiteral("kde.org"));
+    QCOMPARE(w.outgoingHostName(), QStringLiteral("kde.org"));
+    QCOMPARE(w.incomingUserName(), QStringLiteral("foo@kde.org"));
+    QCOMPARE(w.outgoingUserName(), QStringLiteral("foo@kde.org"));
+    // FIXME: test signal
 }
 
 #include "moc_manualconfigurationtest.cpp"
