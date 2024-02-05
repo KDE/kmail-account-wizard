@@ -79,4 +79,9 @@ void ManualConfigurationTest::shouldAssignEmail()
     QCOMPARE(outgoingUserNameChanged.count(), 1);
 }
 
+void ManualConfigurationTest::createResource()
+{
+    // TODO
+}
+
 #include "moc_manualconfigurationtest.cpp"
