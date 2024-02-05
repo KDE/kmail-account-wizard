@@ -25,7 +25,6 @@ protected:
     void generateResource(const Resource::ResourceInfo &info) override
     {
         mResourceInfo = info;
-        // TODO
     }
 
 private:
