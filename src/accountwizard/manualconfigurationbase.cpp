@@ -160,7 +160,7 @@ Resource::ResourceInfo ManualConfigurationBase::createKolabResource() const
 void ManualConfigurationBase::createResource()
 {
     // Create incoming account
-    qDebug() << " createManualAccount ";
+    qCDebug(ACCOUNTWIZARD_LOG) << " createManualAccount ";
     Resource::ResourceInfo info;
     switch (mCurrentIncomingProtocol) {
     case 0: // Pop3
