@@ -82,6 +82,9 @@ void ManualConfigurationTest::shouldAssignEmail()
 void ManualConfigurationTest::createResource()
 {
     // TODO
+    ManualConfigurationImplTest w;
+    w.createManualAccount();
+    // TODO
 }
 
 void ManualConfigurationTest::createResource_data()
