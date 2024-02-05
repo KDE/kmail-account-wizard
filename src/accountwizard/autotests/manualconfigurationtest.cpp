@@ -55,4 +55,11 @@ void ManualConfigurationTest::shouldHaveDefaultValues()
     QVERIFY(!w.disconnectedModeEnabled());
 }
 
+void ManualConfigurationTest::shouldAssignEmail()
+{
+    ManualConfigurationImplTest w;
+    w.setEmail(QStringLiteral("foo@kde.org"));
+    QCOMPARE(w.incomingHostName(), QStringLiteral("kde.org"));
+}
+
 #include "moc_manualconfigurationtest.cpp"
