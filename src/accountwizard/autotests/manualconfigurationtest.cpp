@@ -84,4 +84,11 @@ void ManualConfigurationTest::createResource()
     // TODO
 }
 
+void ManualConfigurationTest::createResource_data()
+{
+    QTest::addColumn<Resource::ResourceInfo>("resourceInfo");
+
+    // TODO
+}
+
 #include "moc_manualconfigurationtest.cpp"
