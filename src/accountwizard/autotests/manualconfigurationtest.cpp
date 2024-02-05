@@ -6,6 +6,7 @@
 
 #include "manualconfigurationtest.h"
 #include "manualconfigurationbase.h"
+#include <QSignalSpy>
 #include <QTest>
 QTEST_MAIN(ManualConfigurationTest)
 class ManualConfigurationImplTest : public ManualConfigurationBase
@@ -23,8 +24,12 @@ protected:
     }
     void generateResource(const Resource::ResourceInfo &info) override
     {
-        // TODO
+        mResourceInfo = info;
     }
+
+private:
+    Resource::ResourceInfo mResourceInfo;
+    QString mTransportInfo;
 };
 
 ManualConfigurationTest::ManualConfigurationTest(QObject *parent)
@@ -53,6 +58,40 @@ void ManualConfigurationTest::shouldHaveDefaultValues()
     QCOMPARE(w.incomingPort(), 995);
     QCOMPARE(w.outgoingPort(), 465);
     QVERIFY(!w.disconnectedModeEnabled());
+}
+
+void ManualConfigurationTest::shouldAssignEmail()
+{
+    ManualConfigurationImplTest w;
+    QSignalSpy incomingHostNameChanged(&w, &ManualConfigurationImplTest::incomingHostNameChanged);
+    QSignalSpy outgoingHostNameChanged(&w, &ManualConfigurationImplTest::outgoingHostNameChanged);
+    QSignalSpy incomingUserNameChanged(&w, &ManualConfigurationImplTest::incomingUserNameChanged);
+    QSignalSpy outgoingUserNameChanged(&w, &ManualConfigurationImplTest::outgoingUserNameChanged);
+
+    w.setEmail(QStringLiteral("foo@kde.org"));
+    QCOMPARE(w.incomingHostName(), QStringLiteral("kde.org"));
+    QCOMPARE(w.outgoingHostName(), QStringLiteral("kde.org"));
+    QCOMPARE(w.incomingUserName(), QStringLiteral("foo@kde.org"));
+    QCOMPARE(w.outgoingUserName(), QStringLiteral("foo@kde.org"));
+    QCOMPARE(incomingHostNameChanged.count(), 1);
+    QCOMPARE(outgoingHostNameChanged.count(), 1);
+    QCOMPARE(incomingUserNameChanged.count(), 1);
+    QCOMPARE(outgoingUserNameChanged.count(), 1);
+}
+
+void ManualConfigurationTest::createResource()
+{
+    // TODO
+    ManualConfigurationImplTest w;
+    w.createManualAccount();
+    // TODO
+}
+
+void ManualConfigurationTest::createResource_data()
+{
+    QTest::addColumn<Resource::ResourceInfo>("resourceInfo");
+
+    // TODO
 }
 
 #include "moc_manualconfigurationtest.cpp"

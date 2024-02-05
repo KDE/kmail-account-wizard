@@ -39,4 +39,4 @@ private:
     ResourceInfo mResourceInfo;
 };
 Q_DECLARE_TYPEINFO(Resource::ResourceInfo, Q_RELOCATABLE_TYPE);
-QDebug operator<<(QDebug d, const Resource::ResourceInfo &t);
+LIBACCOUNTWIZARD_EXPORT QDebug operator<<(QDebug d, const Resource::ResourceInfo &t);

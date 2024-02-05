@@ -16,4 +16,7 @@ public:
 
 private Q_SLOTS:
     void shouldHaveDefaultValues();
+    void shouldAssignEmail();
+    void createResource();
+    void createResource_data();
 };
