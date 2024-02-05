@@ -24,11 +24,12 @@ protected:
     }
     void generateResource(const Resource::ResourceInfo &info) override
     {
+        mResourceInfo = info;
         // TODO
     }
 
 private:
-    QString mResourceInfo;
+    Resource::ResourceInfo mResourceInfo;
     QString mTransportInfo;
 };
 
