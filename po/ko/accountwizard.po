@@ -276,8 +276,7 @@ msgid "boss@example.corp"
 msgstr "boss@example.corp"
 
 #: apps/contents/ui/PersonalDataPage.qml:84
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password:"
 msgstr "암호:"
 

@@ -3,19 +3,20 @@
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2011, 2012.
 # Balázs Úr <urbalazs@gmail.com>, 2013, 2014.
+# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-14 03:08+0000\n"
-"PO-Revision-Date: 2014-01-20 22:02+0100\n"
-"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"PO-Revision-Date: 2024-02-05 22:47+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, kde-format
@@ -26,12 +27,12 @@ msgstr "Kiszel Kristóf"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ulysses@kubuntu.org"
+msgstr "ulysses@fsf.hu"
 
 #: accountwizard/identitybase.cpp:25
 #, kde-format
 msgid "Setting up identity..."
-msgstr "Identitás beállítása…"
+msgstr "Azonosító beállítása…"
 
 #: accountwizard/identitybase.cpp:31
 #, kde-format
@@ -52,118 +53,113 @@ msgstr "Az azonosító eltávolítva."
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:26
 #: accountwizard/manualconfigurationbase.cpp:34
-#, fuzzy, kde-format
-#| msgid "POP3, %1"
+#, kde-format
 msgid "POP3"
-msgstr "POP3, %1"
+msgstr "POP3"
 
 #: accountwizard/ispdb/configurationmodel.cpp:36
 #: accountwizard/ispdb/serverconfiguration.cpp:23
 #: accountwizard/manualconfigurationbase.cpp:34
-#, fuzzy, kde-format
-#| msgid "IMAP, %1"
+#, kde-format
 msgid "IMAP"
-msgstr "IMAP, %1"
+msgstr "IMAP"
 
 #: accountwizard/ispdb/configurationmodel.cpp:38
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
-msgstr ""
+msgstr "Mappák és e-mailek szinkronizálása a kiszolgálón"
 
 #: accountwizard/ispdb/configurationmodel.cpp:39
 #, kde-format
 msgid "Keep your folders and emails on your computer"
-msgstr ""
+msgstr "Mappák és e-mailek tárolása a számítógépen"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:29
-#, fuzzy, kde-format
-#| msgid "SMTP, %1"
+#, kde-format
 msgid "SMTP"
-msgstr "SMTP, %1"
+msgstr "SMTP"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:35
 #: accountwizard/manualconfigurationbase.cpp:39
 #, kde-format
 msgid "SSL/TLS"
-msgstr ""
+msgstr "SSL/TLS"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:38
 #, kde-format
 msgid "StartTLS"
-msgstr ""
+msgstr "StartTLS"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:41
 #, kde-format
 msgctxt "No security mechanism"
 msgid "None"
-msgstr ""
+msgstr "Nincs"
 
 #: accountwizard/ispdbservice.cpp:133
-#, fuzzy, kde-format
-#| msgid "Autodetecting settings failed"
+#, kde-format
 msgid "Configuration found auto config file."
-msgstr "A beállítások automatikus felismerése meghiúsult"
+msgstr "Beállítás megtalálva az automatikus konfigurációs fájlban."
 
 #: accountwizard/ispdbservice.cpp:136
 #, kde-format
 msgid "Configuration found in well-known file."
-msgstr ""
+msgstr "Beállítás megtalálva a well-known fájlban."
 
 #: accountwizard/ispdbservice.cpp:139
-#, fuzzy, kde-format
-#| msgid "Lookup configuration: Mozilla database"
+#, kde-format
 msgid "Configuration found in Mozilla FAI Database."
-msgstr "Beállítás keresése: Mozilla adatbázis"
+msgstr "Beállítás megtalálva a Mozilla FAI adatbázisban."
 
 #: accountwizard/manualconfigurationbase.cpp:34
 #, kde-format
 msgid "Kolab"
-msgstr ""
+msgstr "Kolab"
 
 #: accountwizard/manualconfigurationbase.cpp:39
 #, kde-format
 msgid "STARTTLS"
-msgstr ""
+msgstr "STARTTLS"
 
 #: accountwizard/manualconfigurationbase.cpp:39
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Nincs"
 
 #: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "Clear text"
-msgstr ""
+msgstr "Sima szöveg"
 
 #: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "LOGIN"
-msgstr ""
+msgstr "LOGIN"
 
 #: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "PLAIN"
-msgstr ""
+msgstr "PLAIN"
 
 #: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "CRAM-MD5"
-msgstr ""
+msgstr "CRAM-MD5"
 
 #: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "DIGEST-MD5"
-msgstr ""
+msgstr "DIGEST-MD5"
 
 #: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "NTLM"
-msgstr ""
+msgstr "NTLM"
 
 #: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "GSSAPI"
-msgstr ""
+msgstr "GSSAPI"
 
 #: accountwizard/resource.cpp:68
 #, kde-format
@@ -206,10 +202,9 @@ msgid "Could not set setting '%1': %2"
 msgstr "Nem sikerült beállítani a(z) „%1” beállítást: %2"
 
 #: accountwizard/resource.cpp:140
-#, fuzzy, kde-format
-#| msgid "Could not set setting '%1': %2"
+#, kde-format
 msgid "Could not save settings: %1"
-msgstr "Nem sikerült beállítani a(z) „%1” beállítást: %2"
+msgstr "Nem sikerült menteni a beállításokat: %1"
 
 #: accountwizard/resource.cpp:146
 #, kde-format
@@ -224,7 +219,7 @@ msgstr "Levéltovábbító azonosító beállítása…"
 #: accountwizard/transport.cpp:99
 #, kde-format
 msgid "Mail transport uses '%1' encryption and '%2' authentication."
-msgstr ""
+msgstr "A levéltovábbítás „%1” titkosítást és „%2” hitelesítést használ."
 
 #: accountwizard/transport.cpp:102
 #, kde-format
@@ -232,26 +227,24 @@ msgid "Mail transport account set up."
 msgstr "A levéltovábbító azonosító beállítva."
 
 #: apps/contents/ui/ConfigurationDelegate.qml:93
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming"
-msgstr "Bejövő:"
+msgstr "Bejövő"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing"
-msgstr "Kimenő:"
+msgstr "Kimenő"
 
 #: apps/contents/ui/PersonalDataPage.qml:15
 #, kde-format
 msgid "Personal Information"
-msgstr ""
+msgstr "Személyes adatok"
 
 #: apps/contents/ui/PersonalDataPage.qml:43
 #, kde-format
 msgid "Set Up Your Existing Email Address"
-msgstr ""
+msgstr "Meglévő e-mail cím beállítása"
 
 #: apps/contents/ui/PersonalDataPage.qml:48
 #, kde-format
@@ -259,6 +252,9 @@ msgid ""
 "To use your current email address fill in your credentials.<br />This wizard "
 "will automatically search for a working and recommended server configuration."
 msgstr ""
+"A jelenlegi e-mail címe használatához töltse ki a hitelesítési adatokat.<br /"
+">Ez a varázsló automatikusan megkeres egy működő és ajánlott "
+"kiszolgálóbeállítást."
 
 #: apps/contents/ui/PersonalDataPage.qml:60
 #, kde-format
@@ -269,7 +265,7 @@ msgstr "Teljes név:"
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
-msgstr ""
+msgstr "Kovács István"
 
 #: apps/contents/ui/PersonalDataPage.qml:70
 #, kde-format
@@ -280,73 +276,64 @@ msgstr "E-mail cím:"
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
-msgstr ""
+msgstr "fonok@pelda.kft"
 
 #: apps/contents/ui/PersonalDataPage.qml:84
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password:"
 msgstr "Jelszó:"
 
 #: apps/contents/ui/PersonalDataPage.qml:93
 #, kde-format
 msgid "Continue"
-msgstr ""
+msgstr "Folytatás"
 
 #: apps/contents/ui/PersonalDataPage.qml:107
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check online for the settings needed for this email provider. Only the "
-#| "domain name part of the e-mail address will be sent over the Internet at "
-#| "this point. If this option is unchecked, the account can be set up "
-#| "manually."
+#, kde-format
 msgid ""
 "Check online for the settings needed for this email provider. Only the "
 "domain name part of the e-mail address will be sent over the Internet."
 msgstr ""
 "Az e-mail szolgáltató beállításainak keresése. Az e-mail címből csak a "
-"tartománynév kerül elküldésre az interneten keresztül. Ha a beállítás nincs "
-"bejelölve, az azonosító kézzel állítható be."
+"tartománynév kerül elküldésre az interneten keresztül."
 
 #: apps/contents/ui/PersonalDataPage.qml:133
 #, kde-format
 msgid "No config found from ispdb server."
-msgstr ""
+msgstr "Nem található beállítás az ispdb kiszolgálóról."
 
 #: apps/contents/ui/PersonalDataPage.qml:140
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming Server Parameters"
-msgstr "Bejövő:"
+msgstr "Bejövő kiszolgáló paraméterei"
 
 #: apps/contents/ui/PersonalDataPage.qml:148
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming server:"
-msgstr "Bejövő:"
+msgstr "Bejövő kiszolgáló:"
 
 #: apps/contents/ui/PersonalDataPage.qml:158
 #, kde-format
 msgid "Protocol:"
-msgstr ""
+msgstr "Protokoll:"
 
 #: apps/contents/ui/PersonalDataPage.qml:167
 #: apps/contents/ui/PersonalDataPage.qml:229
 #, kde-format
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
 #: apps/contents/ui/PersonalDataPage.qml:174
 #: apps/contents/ui/PersonalDataPage.qml:236
 #, kde-format
 msgid "Security:"
-msgstr ""
+msgstr "Biztonság:"
 
 #: apps/contents/ui/PersonalDataPage.qml:183
 #: apps/contents/ui/PersonalDataPage.qml:245
 #, kde-format
 msgid "Authentication Method:"
-msgstr ""
+msgstr "Felhasználóazonosítási mód:"
 
 #: apps/contents/ui/PersonalDataPage.qml:192
 #: apps/contents/ui/PersonalDataPage.qml:254
@@ -357,24 +344,22 @@ msgstr "Felhasználónév:"
 #: apps/contents/ui/PersonalDataPage.qml:203
 #, kde-format
 msgid "Download all messages for offline use"
-msgstr ""
+msgstr "Összes üzenet letöltése offline használatra"
 
 #: apps/contents/ui/PersonalDataPage.qml:213
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing Server Parameters"
-msgstr "Kimenő:"
+msgstr "Kimenő kiszolgáló paraméterei"
 
 #: apps/contents/ui/PersonalDataPage.qml:220
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing server:"
-msgstr "Kimenő:"
+msgstr "Kimenő kiszolgáló:"
 
 #: apps/contents/ui/PersonalDataPage.qml:269
 #, kde-format
 msgid "Recheck"
-msgstr ""
+msgstr "Újraellenőrzés"
 
 #: apps/contents/ui/PersonalDataPage.qml:282
 #: apps/contents/ui/PersonalDataPage.qml:330
@@ -385,18 +370,17 @@ msgstr "Felhasználói fiók létrehozása"
 #: apps/contents/ui/PersonalDataPage.qml:293
 #, kde-format
 msgid "Available configurations"
-msgstr ""
+msgstr "Elérhető beállítások"
 
 #: apps/contents/ui/PersonalDataPage.qml:321
 #, kde-format
 msgid "Manual Configuration"
-msgstr ""
+msgstr "Kézi beállítás"
 
 #: apps/contents/ui/PersonalDataPage.qml:338
-#, fuzzy, kde-format
-#| msgid "&Details..."
+#, kde-format
 msgid "Details"
-msgstr "&Részletek…"
+msgstr "Részletek"
 
 #: apps/main.cpp:32
 #, kde-format
@@ -409,10 +393,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "Segít a PIM azonosítók beállításában"
 
 #: apps/main.cpp:36
-#, fuzzy, kde-format
-#| msgid "(c) 2009 the Akonadi developers"
+#, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
-msgstr "© Az Akonadi fejlesztői, 2009."
+msgstr "© Az Akonadi fejlesztői, 2009-2024."
 
 #: apps/main.cpp:39
 #, kde-format
@@ -432,12 +415,12 @@ msgstr "Laurent Montel"
 #: apps/main.cpp:40 apps/main.cpp:41
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Karbantartó"
 
 #: apps/main.cpp:41
 #, kde-format
 msgid "Carl Schwan"
-msgstr ""
+msgstr "Carl Schwan"
 
 #~ msgid ""
 #~ "There seems to be a problem in reaching this server or choosing a safe "
