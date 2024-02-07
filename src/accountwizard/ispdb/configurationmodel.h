@@ -37,6 +37,8 @@ public:
     void setEmailProvider(const EmailProvider &emailProvider);
     void clear();
 
+    const Configuration &configuration(int index) const;
+
 private:
     std::vector<Configuration> m_configurations;
 };

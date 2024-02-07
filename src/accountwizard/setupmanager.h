@@ -43,7 +43,7 @@ public:
     ManualConfigurationBase *manualConfiguration() const;
 
     Q_INVOKABLE void searchConfiguration();
-    Q_INVOKABLE void createAutomaticAccount();
+    Q_INVOKABLE void createAutomaticAccount(int index);
     Q_INVOKABLE void createManualAccount();
 
     [[nodiscard]] QString details() const;

@@ -299,6 +299,10 @@ FormCard.FormCardPage {
 
         visible: configurationRepeater.count > 0 && !root.explicitManualConfiguration
 
+        QQC2.ButtonGroup {
+            id: configurationGroup
+        }
+
         Repeater {
             id: configurationRepeater
             model: SetupManager.configurationModel
@@ -308,6 +312,7 @@ FormCard.FormCardPage {
 
                 checked: index === 0
                 Layout.fillWidth: true
+                QQC2.ButtonGroup.group: configurationGroup
             }
         }
     }
@@ -329,7 +334,7 @@ FormCard.FormCardPage {
             id: createAccount
             text: i18n("Create Account")
             checked: true
-            onClicked: SetupManager.createAutomaticAccount()
+            onClicked: SetupManager.createAutomaticAccount(configurationGroup.checkedButton.index)
         }
     }
 

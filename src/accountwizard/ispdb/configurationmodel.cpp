@@ -91,3 +91,8 @@ void ConfigurationModel::setEmailProvider(const EmailProvider &emailProvider)
 
     endResetModel();
 }
+
+const Configuration &ConfigurationModel::configuration(int index) const
+{
+    return m_configurations[index];
+}

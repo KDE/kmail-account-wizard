@@ -115,13 +115,29 @@ void SetupManager::searchConfiguration()
     mIspdbService->start(box.addrSpec());
 }
 
-void SetupManager::createAutomaticAccount()
+void SetupManager::createAutomaticAccount(int index)
 {
-    qCDebug(ACCOUNTWIZARD_LOG) << " Create Automatic Account";
+    qCDebug(ACCOUNTWIZARD_LOG) << " Create Automatic Account" << index;
+    const auto configuration = configurationModel()->configuration(index);
+    qCDebug(ACCOUNTWIZARD_LOG) << configuration.incoming;
+
+    mManualConfiguration->setIncomingHostName(configuration.incoming.hostname);
+    mManualConfiguration->setIncomingPort(configuration.incoming.port);
+    mManualConfiguration->setIncomingUserName(configuration.incoming.username);
+    mManualConfiguration->setCurrentIncomingProtocol(configuration.incoming.type);
+    mManualConfiguration->setPassword(mPassword);
+
+    if (configuration.outgoing) {
+        mManualConfiguration->setOutgoingHostName(configuration.outgoing->hostname);
+        mManualConfiguration->setOutgoingPort(configuration.outgoing->port);
+        mManualConfiguration->setOutgoingUserName(configuration.outgoing->username);
+        mManualConfiguration->setPassword(mPassword);
+    }
+
     mIdentity->create();
     const uint id = mIdentity->uoid();
-    // TODO use password
-    // TODO use selected account
+    mManualConfiguration->setIdentityId(id);
+    mManualConfiguration->createManualAccount();
 
     mAccountCreated = true;
 }
