@@ -23,9 +23,9 @@ SetupManager::SetupManager(QObject *parent)
     connect(mIspdbService, &IspdbService::finished, this, &SetupManager::setEmailProvider);
     connect(mIspdbService, &IspdbService::notConfigFound, this, &SetupManager::noConfigFound);
 
-    connect(mManualConfiguration, &ManualConfigurationBase::error, this, &SetupManager::slotError);
-    connect(mManualConfiguration, &ManualConfigurationBase::finished, this, &SetupManager::slotFinished);
-    connect(mManualConfiguration, &ManualConfigurationBase::info, this, &SetupManager::slotInfo);
+    connect(mManualConfiguration, &AccountConfigurationBase::error, this, &SetupManager::slotError);
+    connect(mManualConfiguration, &AccountConfigurationBase::finished, this, &SetupManager::slotFinished);
+    connect(mManualConfiguration, &AccountConfigurationBase::info, this, &SetupManager::slotInfo);
 }
 
 SetupManager::~SetupManager()
@@ -161,7 +161,7 @@ void SetupManager::noConfigFound()
     Q_EMIT noConfigFoundChanged();
 }
 
-ManualConfigurationBase *SetupManager::manualConfiguration() const
+AccountConfigurationBase *SetupManager::manualConfiguration() const
 {
     return mManualConfiguration;
 }

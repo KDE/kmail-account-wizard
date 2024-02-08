@@ -7,7 +7,7 @@
 #include "manualconfigurationimpl.h"
 
 ManualConfigurationImpl::ManualConfigurationImpl(QObject *parent)
-    : ManualConfigurationBase{parent}
+    : AccountConfigurationBase{parent}
 {
 }
 
@@ -18,9 +18,9 @@ void ManualConfigurationImpl::generateResource(const Resource::ResourceInfo &inf
     auto resource = new Resource(this);
     resource->setResourceInfo(std::move(info));
 
-    connect(resource, &Resource::info, this, &ManualConfigurationBase::info);
-    connect(resource, &Resource::finished, this, &ManualConfigurationBase::finished);
-    connect(resource, &Resource::error, this, &ManualConfigurationBase::error);
+    connect(resource, &Resource::info, this, &AccountConfigurationBase::info);
+    connect(resource, &Resource::finished, this, &AccountConfigurationBase::finished);
+    connect(resource, &Resource::error, this, &AccountConfigurationBase::error);
     resource->createResource();
 }
 
@@ -30,9 +30,9 @@ void ManualConfigurationImpl::createTransport()
     auto transport = new Transport(this);
     transport->setTransportInfo(std::move(createTransportInfo()));
 
-    connect(transport, &Transport::info, this, &ManualConfigurationBase::info);
-    connect(transport, &Transport::finished, this, &ManualConfigurationBase::finished);
-    connect(transport, &Transport::error, this, &ManualConfigurationBase::error);
+    connect(transport, &Transport::info, this, &AccountConfigurationBase::info);
+    connect(transport, &Transport::finished, this, &AccountConfigurationBase::finished);
+    connect(transport, &Transport::error, this, &AccountConfigurationBase::error);
     transport->createTransport();
 }
 

@@ -5,15 +5,15 @@
 */
 
 #include "manualconfigurationtest.h"
-#include "manualconfigurationbase.h"
+#include "accountconfigurationbase.h"
 #include <QSignalSpy>
 #include <QTest>
 QTEST_MAIN(ManualConfigurationTest)
-class ManualConfigurationImplTest : public ManualConfigurationBase
+class ManualConfigurationImplTest : public AccountConfigurationBase
 {
 public:
     explicit ManualConfigurationImplTest(QObject *parent = nullptr)
-        : ManualConfigurationBase(parent)
+        : AccountConfigurationBase(parent)
     {
     }
 
