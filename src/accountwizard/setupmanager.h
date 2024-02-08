@@ -2,10 +2,10 @@
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 #pragma once
+#include "accountconfigurationimpl.h"
 #include "identityimpl.h"
 #include "ispdb/configurationmodel.h"
 #include "libaccountwizard_export.h"
-#include "manualconfigurationimpl.h"
 #include <QObject>
 
 class IdentityImpl;
@@ -69,7 +69,7 @@ private:
     IdentityImpl *const mIdentity;
     IspdbService *const mIspdbService;
     ConfigurationModel *const mConfigurationModel;
-    ManualConfigurationImpl *const mManualConfiguration;
+    AccountConfigurationImpl *const mManualConfiguration;
     bool mNoConfigFound = false;
     bool mAccountCreated = false;
 };

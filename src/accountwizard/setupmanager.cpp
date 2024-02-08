@@ -13,7 +13,7 @@ SetupManager::SetupManager(QObject *parent)
     , mIdentity(new IdentityImpl(this))
     , mIspdbService(new IspdbService(this))
     , mConfigurationModel(new ConfigurationModel(this))
-    , mManualConfiguration(new ManualConfigurationImpl(this))
+    , mManualConfiguration(new AccountConfigurationImpl(this))
 {
     KEMailSettings emailSettings;
     setFullName(emailSettings.getSetting(KEMailSettings::RealName));

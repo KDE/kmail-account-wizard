@@ -28,8 +28,8 @@ target_sources(libaccountwizard PRIVATE
 
     identityimpl.h
     identityimpl.cpp
-    manualconfigurationimpl.h
-    manualconfigurationimpl.cpp
+    accountconfigurationimpl.h
+    accountconfigurationimpl.cpp
 )
 
 generate_export_header(libaccountwizard BASE_NAME libaccountwizard)
