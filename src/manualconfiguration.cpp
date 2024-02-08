@@ -110,7 +110,7 @@ Resource::ResourceInfo ManualConfiguration::createPop3Resource() const
     settings.insert(u"Host"_s, mIncomingHostName);
     settings.insert(u"Login"_s, mIncomingUserName);
     settings.insert(u"Password"_s, mPassword);
-    // TODO pop3Res.setOption( "UseTLS", true );
+    settings.insert(u"UseTLS"_s, true);
 
     info.settings = settings;
     return info;
