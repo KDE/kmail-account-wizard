@@ -58,6 +58,10 @@ void ManualConfigurationTest::shouldHaveDefaultValues()
     QCOMPARE(w.incomingPort(), 995);
     QCOMPARE(w.outgoingPort(), 465);
     QVERIFY(!w.disconnectedModeEnabled());
+
+    QCOMPARE(w.incomingProtocols().count(), 3);
+    QCOMPARE(w.securityProtocols().count(), 3);
+    QCOMPARE(w.authenticationProtocols().count(), 7);
 }
 
 void ManualConfigurationTest::shouldAssignEmail()
