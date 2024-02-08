@@ -15,8 +15,8 @@ target_sources(libaccountwizard PRIVATE
     ispdb/serverconfiguration.cpp
     ispdbservice.h
     ispdbservice.cpp
-    manualconfigurationbase.h
-    manualconfigurationbase.cpp
+    accountconfigurationbase.h
+    accountconfigurationbase.cpp
     resource.h
     resource.cpp
     transport.h

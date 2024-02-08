@@ -6,10 +6,10 @@
 
 #pragma once
 
-#include "manualconfigurationbase.h"
+#include "accountconfigurationbase.h"
 #include "resource.h"
 
-class ManualConfigurationImpl : public ManualConfigurationBase
+class ManualConfigurationImpl : public AccountConfigurationBase
 {
     Q_OBJECT
 public:

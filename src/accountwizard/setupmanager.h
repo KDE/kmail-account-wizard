@@ -22,7 +22,7 @@ class LIBACCOUNTWIZARD_EXPORT SetupManager : public QObject
     Q_PROPERTY(ConfigurationModel *configurationModel READ configurationModel CONSTANT)
     Q_PROPERTY(QString searchIspdbFoundMessage MEMBER mSearchIspdbFoundMessage NOTIFY searchIspdbFoundMessageChanged)
     Q_PROPERTY(bool noConfigFound MEMBER mNoConfigFound NOTIFY noConfigFoundChanged)
-    Q_PROPERTY(ManualConfigurationBase *manualConfiguration READ manualConfiguration CONSTANT)
+    Q_PROPERTY(AccountConfigurationBase *manualConfiguration READ manualConfiguration CONSTANT)
     Q_PROPERTY(QString details READ details NOTIFY detailsChanged)
 
 public:
@@ -40,7 +40,7 @@ public:
 
     IdentityBase *identity() const;
     ConfigurationModel *configurationModel() const;
-    ManualConfigurationBase *manualConfiguration() const;
+    AccountConfigurationBase *manualConfiguration() const;
 
     Q_INVOKABLE void searchConfiguration();
     Q_INVOKABLE void createAutomaticAccount();

@@ -4,21 +4,21 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "manualconfigurationbase.h"
+#include "accountconfigurationbase.h"
 #include "accountwizard_debug.h"
 #include "servertest.h"
 #include <KLocalizedString>
 #include <QRegularExpression>
 #include <QUrl>
 
-ManualConfigurationBase::ManualConfigurationBase(QObject *parent)
+AccountConfigurationBase::AccountConfigurationBase(QObject *parent)
     : QObject{parent}
 {
 }
 
-ManualConfigurationBase::~ManualConfigurationBase() = default;
+AccountConfigurationBase::~AccountConfigurationBase() = default;
 
-void ManualConfigurationBase::setEmail(const QString &email)
+void AccountConfigurationBase::setEmail(const QString &email)
 {
     static QRegularExpression reg(QStringLiteral(".*@"));
     QString hostname = email;
@@ -29,22 +29,22 @@ void ManualConfigurationBase::setEmail(const QString &email)
     setOutgoingUserName(email);
 }
 
-QStringList ManualConfigurationBase::incomingProtocols() const
+QStringList AccountConfigurationBase::incomingProtocols() const
 {
     return {i18n("POP3"), i18n("IMAP"), i18n("Kolab")};
 }
 
-QStringList ManualConfigurationBase::securityProtocols() const
+QStringList AccountConfigurationBase::securityProtocols() const
 {
     return {i18n("STARTTLS"), i18n("SSL/TLS"), i18n("None")};
 }
 
-QStringList ManualConfigurationBase::authenticationProtocols() const
+QStringList AccountConfigurationBase::authenticationProtocols() const
 {
     return {i18n("Clear text"), i18n("LOGIN"), i18n("PLAIN"), i18n("CRAM-MD5"), i18n("DIGEST-MD5"), i18n("NTLM"), i18n("GSSAPI")};
 }
 
-QString ManualConfigurationBase::generateUniqueAccountName() const
+QString AccountConfigurationBase::generateUniqueAccountName() const
 {
     QString name;
     switch (mCurrentIncomingProtocol) {
@@ -64,7 +64,7 @@ QString ManualConfigurationBase::generateUniqueAccountName() const
     return name;
 }
 
-Resource::ResourceInfo ManualConfigurationBase::createPop3Resource() const
+Resource::ResourceInfo AccountConfigurationBase::createPop3Resource() const
 {
     Resource::ResourceInfo info;
     info.typeIdentifier = QStringLiteral("akonadi_pop3_resource");
@@ -74,13 +74,13 @@ Resource::ResourceInfo ManualConfigurationBase::createPop3Resource() const
     settings.insert(QStringLiteral("Host"), mIncomingHostName);
     settings.insert(QStringLiteral("Login"), mIncomingUserName);
     settings.insert(QStringLiteral("Password"), mPassword);
-    // TODO pop3Res.setOption( "UseTLS", true );
+    settings.insert(QStringLiteral("UseTLS"), true);
 
     info.settings = settings;
     return info;
 }
 
-QString ManualConfigurationBase::convertIncomingAuthenticationProtocol(int protocol) const
+QString AccountConfigurationBase::convertIncomingAuthenticationProtocol(int protocol) const
 {
     switch (protocol) {
     case 0: // Clear Text
@@ -102,7 +102,7 @@ QString ManualConfigurationBase::convertIncomingAuthenticationProtocol(int proto
     return {};
 }
 
-QString ManualConfigurationBase::convertIncomingSecurityProtocol(int index) const
+QString AccountConfigurationBase::convertIncomingSecurityProtocol(int index) const
 {
     switch (index) {
     case 0:
@@ -116,7 +116,7 @@ QString ManualConfigurationBase::convertIncomingSecurityProtocol(int index) cons
     return {};
 }
 
-Resource::ResourceInfo ManualConfigurationBase::createImapResource() const
+Resource::ResourceInfo AccountConfigurationBase::createImapResource() const
 {
     Resource::ResourceInfo info;
     info.typeIdentifier = QStringLiteral("akonadi_imap_resource");
@@ -137,7 +137,7 @@ Resource::ResourceInfo ManualConfigurationBase::createImapResource() const
     return info;
 }
 
-Resource::ResourceInfo ManualConfigurationBase::createKolabResource() const
+Resource::ResourceInfo AccountConfigurationBase::createKolabResource() const
 {
     Resource::ResourceInfo info;
     info.name = generateUniqueAccountName();
@@ -157,7 +157,7 @@ Resource::ResourceInfo ManualConfigurationBase::createKolabResource() const
     return info;
 }
 
-void ManualConfigurationBase::createResource()
+void AccountConfigurationBase::createResource()
 {
     // Create incoming account
     qCDebug(ACCOUNTWIZARD_LOG) << " createManualAccount ";
@@ -182,34 +182,34 @@ void ManualConfigurationBase::createResource()
     generateResource(std::move(info));
 }
 
-void ManualConfigurationBase::generateResource(const Resource::ResourceInfo &info)
+void AccountConfigurationBase::generateResource(const Resource::ResourceInfo &info)
 {
     qDebug() << " info " << info;
     // Reimplement
 }
 
-void ManualConfigurationBase::createTransport()
+void AccountConfigurationBase::createTransport()
 {
     // TODO reimplement
 }
 
-void ManualConfigurationBase::setPassword(const QString &newPassword)
+void AccountConfigurationBase::setPassword(const QString &newPassword)
 {
     mPassword = newPassword;
 }
 
-void ManualConfigurationBase::setIdentityId(int id)
+void AccountConfigurationBase::setIdentityId(int id)
 {
     mIdentityId = id;
 }
 
-void ManualConfigurationBase::createManualAccount()
+void AccountConfigurationBase::createManualAccount()
 {
     createResource();
     createTransport();
 }
 
-Transport::TransportInfo ManualConfigurationBase::createTransportInfo() const
+Transport::TransportInfo AccountConfigurationBase::createTransportInfo() const
 {
     Transport::TransportInfo info;
     info.user = mOutgoingUserName;
@@ -220,7 +220,7 @@ Transport::TransportInfo ManualConfigurationBase::createTransportInfo() const
     return info;
 }
 
-QString ManualConfigurationBase::convertOutgoingSecurityProtocol(int protocol) const
+QString AccountConfigurationBase::convertOutgoingSecurityProtocol(int protocol) const
 {
     switch (protocol) {
     case 0:
@@ -234,7 +234,7 @@ QString ManualConfigurationBase::convertOutgoingSecurityProtocol(int protocol) c
     return {};
 }
 
-QString ManualConfigurationBase::convertOutgoingAuthenticationProtocol(int protocol) const
+QString AccountConfigurationBase::convertOutgoingAuthenticationProtocol(int protocol) const
 {
     switch (protocol) {
     case 0: // Clear Text
@@ -256,13 +256,13 @@ QString ManualConfigurationBase::convertOutgoingAuthenticationProtocol(int proto
     return {};
 }
 
-void ManualConfigurationBase::checkServer()
+void AccountConfigurationBase::checkServer()
 {
     qDebug() << " Verify server";
     if (!mServerTest) {
         mServerTest = new ServerTest(this);
-        connect(mServerTest, &ServerTest::testFail, this, &ManualConfigurationBase::slotTestFail);
-        connect(mServerTest, &ServerTest::testResult, this, &ManualConfigurationBase::slotTestResult);
+        connect(mServerTest, &ServerTest::testFail, this, &AccountConfigurationBase::slotTestFail);
+        connect(mServerTest, &ServerTest::testResult, this, &AccountConfigurationBase::slotTestResult);
     }
     QString protocol;
     switch (mCurrentIncomingProtocol) {
@@ -282,7 +282,7 @@ void ManualConfigurationBase::checkServer()
     mServerTest->test(mIncomingHostName, protocol);
 }
 
-void ManualConfigurationBase::slotTestFail()
+void AccountConfigurationBase::slotTestFail()
 {
     qDebug() << "slotTestFail  ";
     // TODO
@@ -290,7 +290,7 @@ void ManualConfigurationBase::slotTestFail()
     Q_EMIT serverTestInProgressModeChanged();
 }
 
-void ManualConfigurationBase::slotTestResult(const QString &result)
+void AccountConfigurationBase::slotTestResult(const QString &result)
 {
     qDebug() << "slotTestResult  " << result;
     switch (mCurrentIncomingProtocol) {
@@ -353,12 +353,12 @@ void ManualConfigurationBase::slotTestResult(const QString &result)
     Q_EMIT serverTestInProgressModeChanged();
 }
 
-int ManualConfigurationBase::identityId() const
+int AccountConfigurationBase::identityId() const
 {
     return mIdentityId;
 }
 
-void ManualConfigurationBase::checkConfiguration()
+void AccountConfigurationBase::checkConfiguration()
 {
     const bool valid = !mIncomingUserName.trimmed().isEmpty() && !mIncomingHostName.trimmed().isEmpty() && !mOutgoingHostName.trimmed().isEmpty()
         && !mOutgoingUserName.trimmed().isEmpty();
@@ -366,12 +366,12 @@ void ManualConfigurationBase::checkConfiguration()
     Q_EMIT configurationIsValidChanged();
 }
 
-int ManualConfigurationBase::currentOutgoingAuthenticationProtocol() const
+int AccountConfigurationBase::currentOutgoingAuthenticationProtocol() const
 {
     return mCurrentOutgoingAuthenticationProtocol;
 }
 
-void ManualConfigurationBase::setCurrentOutgoingAuthenticationProtocol(int newCurrentOutgoingAuthenticationProtocols)
+void AccountConfigurationBase::setCurrentOutgoingAuthenticationProtocol(int newCurrentOutgoingAuthenticationProtocols)
 {
     if (mCurrentOutgoingAuthenticationProtocol == newCurrentOutgoingAuthenticationProtocols)
         return;
@@ -380,12 +380,12 @@ void ManualConfigurationBase::setCurrentOutgoingAuthenticationProtocol(int newCu
     Q_EMIT currentOutgoingAuthenticationProtocolChanged();
 }
 
-bool ManualConfigurationBase::disconnectedModeEnabled() const
+bool AccountConfigurationBase::disconnectedModeEnabled() const
 {
     return mDisconnectedModeEnabled;
 }
 
-void ManualConfigurationBase::setDisconnectedModeEnabled(bool disconnectedMode)
+void AccountConfigurationBase::setDisconnectedModeEnabled(bool disconnectedMode)
 {
     if (mDisconnectedModeEnabled == disconnectedMode)
         return;
@@ -394,12 +394,12 @@ void ManualConfigurationBase::setDisconnectedModeEnabled(bool disconnectedMode)
     Q_EMIT disconnectedModeEnabledChanged();
 }
 
-int ManualConfigurationBase::currentIncomingAuthenticationProtocol() const
+int AccountConfigurationBase::currentIncomingAuthenticationProtocol() const
 {
     return mCurrentIncomingAuthenticationProtocol;
 }
 
-void ManualConfigurationBase::setCurrentIncomingAuthenticationProtocol(int newCurrentIncomingAuthenticationProtocols)
+void AccountConfigurationBase::setCurrentIncomingAuthenticationProtocol(int newCurrentIncomingAuthenticationProtocols)
 {
     if (mCurrentIncomingAuthenticationProtocol == newCurrentIncomingAuthenticationProtocols)
         return;
@@ -408,12 +408,12 @@ void ManualConfigurationBase::setCurrentIncomingAuthenticationProtocol(int newCu
     Q_EMIT currentIncomingAuthenticationProtocolChanged();
 }
 
-int ManualConfigurationBase::currentOutgoingSecurityProtocol() const
+int AccountConfigurationBase::currentOutgoingSecurityProtocol() const
 {
     return mCurrentOutgoingSecurityProtocol;
 }
 
-void ManualConfigurationBase::setCurrentOutgoingSecurityProtocol(int newCurrentOutgoingSecurityProtocol)
+void AccountConfigurationBase::setCurrentOutgoingSecurityProtocol(int newCurrentOutgoingSecurityProtocol)
 {
     if (mCurrentOutgoingSecurityProtocol == newCurrentOutgoingSecurityProtocol)
         return;
@@ -422,12 +422,12 @@ void ManualConfigurationBase::setCurrentOutgoingSecurityProtocol(int newCurrentO
     Q_EMIT currentOutgoingSecurityProtocolChanged();
 }
 
-int ManualConfigurationBase::currentIncomingSecurityProtocol() const
+int AccountConfigurationBase::currentIncomingSecurityProtocol() const
 {
     return mCurrentIncomingSecurityProtocol;
 }
 
-void ManualConfigurationBase::setCurrentIncomingSecurityProtocol(int newCurrentIncomingSecurityProtocol)
+void AccountConfigurationBase::setCurrentIncomingSecurityProtocol(int newCurrentIncomingSecurityProtocol)
 {
     if (mCurrentIncomingSecurityProtocol == newCurrentIncomingSecurityProtocol)
         return;
@@ -456,7 +456,7 @@ void ManualConfigurationBase::setCurrentIncomingSecurityProtocol(int newCurrentI
     Q_EMIT currentIncomingSecurityProtocolChanged();
 }
 
-void ManualConfigurationBase::setCurrentIncomingProtocol(int newCurrentIncomingProtocol)
+void AccountConfigurationBase::setCurrentIncomingProtocol(int newCurrentIncomingProtocol)
 {
     if (mCurrentIncomingProtocol != newCurrentIncomingProtocol) {
         mCurrentIncomingProtocol = newCurrentIncomingProtocol;
@@ -473,17 +473,17 @@ void ManualConfigurationBase::setCurrentIncomingProtocol(int newCurrentIncomingP
     }
 }
 
-int ManualConfigurationBase::currentIncomingProtocol() const
+int AccountConfigurationBase::currentIncomingProtocol() const
 {
     return mCurrentIncomingProtocol;
 }
 
-QString ManualConfigurationBase::incomingHostName() const
+QString AccountConfigurationBase::incomingHostName() const
 {
     return mIncomingHostName;
 }
 
-void ManualConfigurationBase::setIncomingHostName(const QString &newIncomingHostName)
+void AccountConfigurationBase::setIncomingHostName(const QString &newIncomingHostName)
 {
     if (mIncomingHostName != newIncomingHostName) {
         mIncomingHostName = newIncomingHostName;
@@ -492,12 +492,12 @@ void ManualConfigurationBase::setIncomingHostName(const QString &newIncomingHost
     }
 }
 
-uint ManualConfigurationBase::incomingPort() const
+uint AccountConfigurationBase::incomingPort() const
 {
     return mIncomingPort;
 }
 
-void ManualConfigurationBase::setIncomingPort(uint newPort)
+void AccountConfigurationBase::setIncomingPort(uint newPort)
 {
     if (mIncomingPort != newPort) {
         mIncomingPort = newPort;
@@ -506,12 +506,12 @@ void ManualConfigurationBase::setIncomingPort(uint newPort)
     }
 }
 
-QString ManualConfigurationBase::incomingUserName() const
+QString AccountConfigurationBase::incomingUserName() const
 {
     return mIncomingUserName;
 }
 
-void ManualConfigurationBase::setIncomingUserName(const QString &newIncomingUserName)
+void AccountConfigurationBase::setIncomingUserName(const QString &newIncomingUserName)
 {
     if (mIncomingUserName != newIncomingUserName) {
         mIncomingUserName = newIncomingUserName;
@@ -520,12 +520,12 @@ void ManualConfigurationBase::setIncomingUserName(const QString &newIncomingUser
     }
 }
 
-QString ManualConfigurationBase::outgoingHostName() const
+QString AccountConfigurationBase::outgoingHostName() const
 {
     return mOutgoingHostName;
 }
 
-void ManualConfigurationBase::setOutgoingHostName(const QString &newOutgoingHostName)
+void AccountConfigurationBase::setOutgoingHostName(const QString &newOutgoingHostName)
 {
     if (mOutgoingHostName != newOutgoingHostName) {
         mOutgoingHostName = newOutgoingHostName;
@@ -534,12 +534,12 @@ void ManualConfigurationBase::setOutgoingHostName(const QString &newOutgoingHost
     }
 }
 
-int ManualConfigurationBase::outgoingPort() const
+int AccountConfigurationBase::outgoingPort() const
 {
     return mOutgoingPort;
 }
 
-void ManualConfigurationBase::setOutgoingPort(int newPort)
+void AccountConfigurationBase::setOutgoingPort(int newPort)
 {
     if (mOutgoingPort != newPort) {
         mOutgoingPort = newPort;
@@ -548,12 +548,12 @@ void ManualConfigurationBase::setOutgoingPort(int newPort)
     }
 }
 
-QString ManualConfigurationBase::outgoingUserName() const
+QString AccountConfigurationBase::outgoingUserName() const
 {
     return mOutgoingUserName;
 }
 
-void ManualConfigurationBase::setOutgoingUserName(const QString &newOutgoingUserName)
+void AccountConfigurationBase::setOutgoingUserName(const QString &newOutgoingUserName)
 {
     if (mOutgoingUserName != newOutgoingUserName) {
         mOutgoingUserName = newOutgoingUserName;
@@ -562,7 +562,7 @@ void ManualConfigurationBase::setOutgoingUserName(const QString &newOutgoingUser
     }
 }
 
-QDebug operator<<(QDebug d, const ManualConfigurationBase &t)
+QDebug operator<<(QDebug d, const AccountConfigurationBase &t)
 {
     d.space() << "mIncomingUserName" << t.incomingUserName();
     d.space() << "mIncomingHostName" << t.incomingHostName();
@@ -584,4 +584,4 @@ QDebug operator<<(QDebug d, const ManualConfigurationBase &t)
     return d;
 }
 
-#include "moc_manualconfigurationbase.cpp"
+#include "moc_accountconfigurationbase.cpp"
