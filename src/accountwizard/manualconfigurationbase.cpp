@@ -74,7 +74,7 @@ Resource::ResourceInfo ManualConfigurationBase::createPop3Resource() const
     settings.insert(QStringLiteral("Host"), mIncomingHostName);
     settings.insert(QStringLiteral("Login"), mIncomingUserName);
     settings.insert(QStringLiteral("Password"), mPassword);
-    // TODO pop3Res.setOption( "UseTLS", true );
+    settings.insert(QStringLiteral("UseTLS"), true);
 
     info.settings = settings;
     return info;
