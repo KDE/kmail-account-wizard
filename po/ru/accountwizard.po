@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-13 00:38+0000\n"
-"PO-Revision-Date: 2024-01-27 15:08+0300\n"
+"PO-Revision-Date: 2024-02-07 13:51+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -74,12 +74,12 @@ msgstr "IMAP"
 #: accountwizard/ispdb/configurationmodel.cpp:38
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
-msgstr ""
+msgstr "Синхронизирует папки и письма с севером"
 
 #: accountwizard/ispdb/configurationmodel.cpp:39
 #, kde-format
 msgid "Keep your folders and emails on your computer"
-msgstr ""
+msgstr "Хранит папки и письма на компьютере"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:29
 #, kde-format
@@ -104,22 +104,19 @@ msgid "None"
 msgstr "Отсутствует"
 
 #: accountwizard/ispdbservice.cpp:133
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgid "Configuration found auto config file."
-msgstr "Найдена автоматическая конфигурация."
+msgstr "Конфигурация найдена в файле auto config."
 
 #: accountwizard/ispdbservice.cpp:136
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgid "Configuration found in well-known file."
-msgstr "Найдена автоматическая конфигурация."
+msgstr "Конфигурация найдена в файле well-known."
 
 #: accountwizard/ispdbservice.cpp:139
-#, fuzzy, kde-format
-#| msgid "Lookup configuration: Mozilla database"
+#, kde-format
 msgid "Configuration found in Mozilla FAI Database."
-msgstr "Подбор конфигурации: поиск в базе данных Mozilla"
+msgstr "Конфигурация найдена в базе данных Mozilla."
 
 #: accountwizard/manualconfigurationbase.cpp:34
 #, kde-format
@@ -134,7 +131,7 @@ msgstr "STARTTLS"
 #: accountwizard/manualconfigurationbase.cpp:39
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Отсутствует"
 
 #: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
@@ -144,12 +141,12 @@ msgstr "Открытый текст"
 #: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "LOGIN"
-msgstr ""
+msgstr "LOGIN"
 
 #: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
 msgid "PLAIN"
-msgstr ""
+msgstr "PLAIN"
 
 #: accountwizard/manualconfigurationbase.cpp:44
 #, kde-format
@@ -237,16 +234,14 @@ msgid "Mail transport account set up."
 msgstr "Учётная запись для отправки почты создана."
 
 #: apps/contents/ui/ConfigurationDelegate.qml:93
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming"
-msgstr "Сервер входящей почты:"
+msgstr "Сервер входящей почты"
 
 #: apps/contents/ui/ConfigurationDelegate.qml:114
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing"
-msgstr "Сервер исходящей почты:"
+msgstr "Сервер исходящей почты"
 
 #: apps/contents/ui/PersonalDataPage.qml:15
 #, kde-format
@@ -264,6 +259,9 @@ msgid ""
 "To use your current email address fill in your credentials.<br />This wizard "
 "will automatically search for a working and recommended server configuration."
 msgstr ""
+"Чтобы использовать текущий адрес эл. почты, укажите имя пользователя и "
+"пароль .<br /> Мастер настройки произведёт поиск параметров конфигурации "
+"сервера."
 
 #: apps/contents/ui/PersonalDataPage.qml:60
 #, kde-format
@@ -274,7 +272,7 @@ msgstr "Полное имя:"
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
-msgstr ""
+msgstr "Иван Иванов"
 
 #: apps/contents/ui/PersonalDataPage.qml:70
 #, kde-format
