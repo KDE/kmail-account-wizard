@@ -4,11 +4,11 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "manualconfigurationtest.h"
+#include "accountconfigurationtest.h"
 #include "accountconfigurationbase.h"
 #include <QSignalSpy>
 #include <QTest>
-QTEST_MAIN(ManualConfigurationTest)
+QTEST_MAIN(AccountConfigurationTest)
 class ManualConfigurationImplTest : public AccountConfigurationBase
 {
 public:
@@ -32,12 +32,12 @@ private:
     QString mTransportInfo;
 };
 
-ManualConfigurationTest::ManualConfigurationTest(QObject *parent)
+AccountConfigurationTest::AccountConfigurationTest(QObject *parent)
     : QObject{parent}
 {
 }
 
-void ManualConfigurationTest::shouldHaveDefaultValues()
+void AccountConfigurationTest::shouldHaveDefaultValues()
 {
     ManualConfigurationImplTest w;
     QVERIFY(w.incomingHostName().isEmpty());
@@ -64,7 +64,7 @@ void ManualConfigurationTest::shouldHaveDefaultValues()
     QCOMPARE(w.authenticationProtocols().count(), 7);
 }
 
-void ManualConfigurationTest::shouldAssignEmail()
+void AccountConfigurationTest::shouldAssignEmail()
 {
     ManualConfigurationImplTest w;
     QSignalSpy incomingHostNameChanged(&w, &ManualConfigurationImplTest::incomingHostNameChanged);
@@ -83,7 +83,7 @@ void ManualConfigurationTest::shouldAssignEmail()
     QCOMPARE(outgoingUserNameChanged.count(), 1);
 }
 
-void ManualConfigurationTest::createResource()
+void AccountConfigurationTest::createResource()
 {
     // TODO
     ManualConfigurationImplTest w;
@@ -91,11 +91,11 @@ void ManualConfigurationTest::createResource()
     // TODO
 }
 
-void ManualConfigurationTest::createResource_data()
+void AccountConfigurationTest::createResource_data()
 {
     QTest::addColumn<Resource::ResourceInfo>("resourceInfo");
 
     // TODO
 }
 
-#include "moc_manualconfigurationtest.cpp"
+#include "moc_accountconfigurationtest.cpp"

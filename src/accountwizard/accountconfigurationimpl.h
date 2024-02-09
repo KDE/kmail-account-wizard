@@ -9,12 +9,12 @@
 #include "accountconfigurationbase.h"
 #include "resource.h"
 
-class ManualConfigurationImpl : public AccountConfigurationBase
+class AccountConfigurationImpl : public AccountConfigurationBase
 {
     Q_OBJECT
 public:
-    explicit ManualConfigurationImpl(QObject *parent = nullptr);
-    ~ManualConfigurationImpl() override;
+    explicit AccountConfigurationImpl(QObject *parent = nullptr);
+    ~AccountConfigurationImpl() override;
 
 protected:
     LIBACCOUNTWIZARD_NO_EXPORT void createTransport() override;

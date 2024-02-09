@@ -7,12 +7,12 @@
 
 #include <QObject>
 
-class ManualConfigurationTest : public QObject
+class AccountConfigurationTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ManualConfigurationTest(QObject *parent = nullptr);
-    ~ManualConfigurationTest() override = default;
+    explicit AccountConfigurationTest(QObject *parent = nullptr);
+    ~AccountConfigurationTest() override = default;
 
 private Q_SLOTS:
     void shouldHaveDefaultValues();

@@ -14,6 +14,6 @@ macro(accountwizard_test _source)
 
 endmacro()
 
-accountwizard_test(manualconfigurationtest.cpp)
+accountwizard_test(accountconfigurationtest.cpp)
 accountwizard_test(setupmanagertest.cpp)
 accountwizard_test(identitybasetest.cpp)

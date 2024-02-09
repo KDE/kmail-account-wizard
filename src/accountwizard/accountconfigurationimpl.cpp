@@ -4,16 +4,16 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "manualconfigurationimpl.h"
+#include "accountconfigurationimpl.h"
 
-ManualConfigurationImpl::ManualConfigurationImpl(QObject *parent)
+AccountConfigurationImpl::AccountConfigurationImpl(QObject *parent)
     : AccountConfigurationBase{parent}
 {
 }
 
-ManualConfigurationImpl::~ManualConfigurationImpl() = default;
+AccountConfigurationImpl::~AccountConfigurationImpl() = default;
 
-void ManualConfigurationImpl::generateResource(const Resource::ResourceInfo &info)
+void AccountConfigurationImpl::generateResource(const Resource::ResourceInfo &info)
 {
     auto resource = new Resource(this);
     resource->setResourceInfo(std::move(info));
@@ -24,7 +24,7 @@ void ManualConfigurationImpl::generateResource(const Resource::ResourceInfo &inf
     resource->createResource();
 }
 
-void ManualConfigurationImpl::createTransport()
+void AccountConfigurationImpl::createTransport()
 {
     // Create outgoing account
     auto transport = new Transport(this);
@@ -36,4 +36,4 @@ void ManualConfigurationImpl::createTransport()
     transport->createTransport();
 }
 
-#include "moc_manualconfigurationimpl.cpp"
+#include "moc_accountconfigurationimpl.cpp"
