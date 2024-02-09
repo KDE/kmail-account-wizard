@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-13 00:38+0000\n"
+"POT-Creation-Date: 2024-02-09 00:38+0000\n"
 "PO-Revision-Date: 2010-10-22 23:45-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -24,6 +24,76 @@ msgstr "Fumiaki Okushi"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "okushi@kde.gr.jp"
+
+#: accountwizard/accountconfigurationbase.cpp:34
+#: accountwizard/ispdb/configurationmodel.cpp:36
+#: accountwizard/ispdb/serverconfiguration.cpp:26
+#, kde-format
+msgid "POP3"
+msgstr ""
+
+#: accountwizard/accountconfigurationbase.cpp:34
+#: accountwizard/ispdb/configurationmodel.cpp:36
+#: accountwizard/ispdb/serverconfiguration.cpp:23
+#, kde-format
+msgid "IMAP"
+msgstr ""
+
+#: accountwizard/accountconfigurationbase.cpp:34
+#, kde-format
+msgid "Kolab"
+msgstr ""
+
+#: accountwizard/accountconfigurationbase.cpp:39
+#, kde-format
+msgid "STARTTLS"
+msgstr ""
+
+#: accountwizard/accountconfigurationbase.cpp:39
+#: accountwizard/ispdb/serverconfiguration.cpp:35
+#, kde-format
+msgid "SSL/TLS"
+msgstr ""
+
+#: accountwizard/accountconfigurationbase.cpp:39
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: accountwizard/accountconfigurationbase.cpp:44
+#, kde-format
+msgid "Clear text"
+msgstr ""
+
+#: accountwizard/accountconfigurationbase.cpp:44
+#, kde-format
+msgid "LOGIN"
+msgstr ""
+
+#: accountwizard/accountconfigurationbase.cpp:44
+#, kde-format
+msgid "PLAIN"
+msgstr ""
+
+#: accountwizard/accountconfigurationbase.cpp:44
+#, kde-format
+msgid "CRAM-MD5"
+msgstr ""
+
+#: accountwizard/accountconfigurationbase.cpp:44
+#, kde-format
+msgid "DIGEST-MD5"
+msgstr ""
+
+#: accountwizard/accountconfigurationbase.cpp:44
+#, kde-format
+msgid "NTLM"
+msgstr ""
+
+#: accountwizard/accountconfigurationbase.cpp:44
+#, kde-format
+msgid "GSSAPI"
+msgstr ""
 
 #: accountwizard/identitybase.cpp:25
 #, kde-format
@@ -46,20 +116,6 @@ msgstr "無名"
 msgid "Identity removed."
 msgstr "個人情報を削除しました。"
 
-#: accountwizard/ispdb/configurationmodel.cpp:36
-#: accountwizard/ispdb/serverconfiguration.cpp:26
-#: accountwizard/manualconfigurationbase.cpp:34
-#, kde-format
-msgid "POP3"
-msgstr ""
-
-#: accountwizard/ispdb/configurationmodel.cpp:36
-#: accountwizard/ispdb/serverconfiguration.cpp:23
-#: accountwizard/manualconfigurationbase.cpp:34
-#, kde-format
-msgid "IMAP"
-msgstr ""
-
 #: accountwizard/ispdb/configurationmodel.cpp:38
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
@@ -73,12 +129,6 @@ msgstr ""
 #: accountwizard/ispdb/serverconfiguration.cpp:29
 #, kde-format
 msgid "SMTP"
-msgstr ""
-
-#: accountwizard/ispdb/serverconfiguration.cpp:35
-#: accountwizard/manualconfigurationbase.cpp:39
-#, kde-format
-msgid "SSL/TLS"
 msgstr ""
 
 #: accountwizard/ispdb/serverconfiguration.cpp:38
@@ -106,56 +156,6 @@ msgstr ""
 #: accountwizard/ispdbservice.cpp:139
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
-msgstr ""
-
-#: accountwizard/manualconfigurationbase.cpp:34
-#, kde-format
-msgid "Kolab"
-msgstr ""
-
-#: accountwizard/manualconfigurationbase.cpp:39
-#, kde-format
-msgid "STARTTLS"
-msgstr ""
-
-#: accountwizard/manualconfigurationbase.cpp:39
-#, kde-format
-msgid "None"
-msgstr ""
-
-#: accountwizard/manualconfigurationbase.cpp:44
-#, kde-format
-msgid "Clear text"
-msgstr ""
-
-#: accountwizard/manualconfigurationbase.cpp:44
-#, kde-format
-msgid "LOGIN"
-msgstr ""
-
-#: accountwizard/manualconfigurationbase.cpp:44
-#, kde-format
-msgid "PLAIN"
-msgstr ""
-
-#: accountwizard/manualconfigurationbase.cpp:44
-#, kde-format
-msgid "CRAM-MD5"
-msgstr ""
-
-#: accountwizard/manualconfigurationbase.cpp:44
-#, kde-format
-msgid "DIGEST-MD5"
-msgstr ""
-
-#: accountwizard/manualconfigurationbase.cpp:44
-#, kde-format
-msgid "NTLM"
-msgstr ""
-
-#: accountwizard/manualconfigurationbase.cpp:44
-#, kde-format
-msgid "GSSAPI"
 msgstr ""
 
 #: accountwizard/resource.cpp:68
