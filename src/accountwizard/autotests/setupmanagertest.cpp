@@ -22,7 +22,7 @@ void SetupManagerTest::shouldHaveDefaultValues()
 
     QVERIFY(w.identity());
     QVERIFY(w.configurationModel());
-    QVERIFY(w.manualConfiguration());
+    QVERIFY(w.accountConfiguration());
 }
 
 #include "moc_setupmanagertest.cpp"
