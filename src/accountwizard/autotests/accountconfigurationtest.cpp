@@ -87,7 +87,7 @@ void AccountConfigurationTest::createResource()
 {
     // TODO
     ManualConfigurationImplTest w;
-    w.createManualAccount();
+    w.createAccount();
     // TODO
 }
 

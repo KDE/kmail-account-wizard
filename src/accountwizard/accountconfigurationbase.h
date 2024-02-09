@@ -85,7 +85,7 @@ public:
 
     Q_INVOKABLE void checkServer();
 
-    void createManualAccount();
+    void createAccount();
 
     void setEmail(const QString &email);
 
