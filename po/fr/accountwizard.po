@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-14 03:08+0000\n"
+"POT-Creation-Date: 2024-02-09 02:33+0000\n"
 "PO-Revision-Date: 2024-01-03 09:48+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -36,6 +36,76 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "vpinon@kde.org, jcorn@free.fr, renard@kde.org, sdepiets@gmail.com"
 
+#: accountwizard/accountconfigurationbase.cpp:34
+#: accountwizard/ispdb/configurationmodel.cpp:36
+#: accountwizard/ispdb/serverconfiguration.cpp:26
+#, kde-format
+msgid "POP3"
+msgstr "POP3"
+
+#: accountwizard/accountconfigurationbase.cpp:34
+#: accountwizard/ispdb/configurationmodel.cpp:36
+#: accountwizard/ispdb/serverconfiguration.cpp:23
+#, kde-format
+msgid "IMAP"
+msgstr "IMAP"
+
+#: accountwizard/accountconfigurationbase.cpp:34
+#, kde-format
+msgid "Kolab"
+msgstr "Kolab"
+
+#: accountwizard/accountconfigurationbase.cpp:39
+#, kde-format
+msgid "STARTTLS"
+msgstr "STARTTLS"
+
+#: accountwizard/accountconfigurationbase.cpp:39
+#: accountwizard/ispdb/serverconfiguration.cpp:35
+#, kde-format
+msgid "SSL/TLS"
+msgstr "SSL / TLS"
+
+#: accountwizard/accountconfigurationbase.cpp:39
+#, kde-format
+msgid "None"
+msgstr "Aucun"
+
+#: accountwizard/accountconfigurationbase.cpp:44
+#, kde-format
+msgid "Clear text"
+msgstr "Effacer le texte"
+
+#: accountwizard/accountconfigurationbase.cpp:44
+#, kde-format
+msgid "LOGIN"
+msgstr "CONNEXION"
+
+#: accountwizard/accountconfigurationbase.cpp:44
+#, kde-format
+msgid "PLAIN"
+msgstr "PLEIN"
+
+#: accountwizard/accountconfigurationbase.cpp:44
+#, kde-format
+msgid "CRAM-MD5"
+msgstr "CRAM-MD5"
+
+#: accountwizard/accountconfigurationbase.cpp:44
+#, kde-format
+msgid "DIGEST-MD5"
+msgstr "DIGEST-MD5"
+
+#: accountwizard/accountconfigurationbase.cpp:44
+#, kde-format
+msgid "NTLM"
+msgstr "NTLM"
+
+#: accountwizard/accountconfigurationbase.cpp:44
+#, kde-format
+msgid "GSSAPI"
+msgstr "GSSAPI"
+
 #: accountwizard/identitybase.cpp:25
 #, kde-format
 msgid "Setting up identity..."
@@ -57,20 +127,6 @@ msgstr "Sans nom"
 msgid "Identity removed."
 msgstr "Identité supprimée."
 
-#: accountwizard/ispdb/configurationmodel.cpp:36
-#: accountwizard/ispdb/serverconfiguration.cpp:26
-#: accountwizard/manualconfigurationbase.cpp:34
-#, kde-format
-msgid "POP3"
-msgstr "POP3"
-
-#: accountwizard/ispdb/configurationmodel.cpp:36
-#: accountwizard/ispdb/serverconfiguration.cpp:23
-#: accountwizard/manualconfigurationbase.cpp:34
-#, kde-format
-msgid "IMAP"
-msgstr "IMAP"
-
 #: accountwizard/ispdb/configurationmodel.cpp:38
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
@@ -85,12 +141,6 @@ msgstr "Conservez vos dossiers et vos courriels sur votre ordinateur"
 #, kde-format
 msgid "SMTP"
 msgstr "SMTP"
-
-#: accountwizard/ispdb/serverconfiguration.cpp:35
-#: accountwizard/manualconfigurationbase.cpp:39
-#, kde-format
-msgid "SSL/TLS"
-msgstr "SSL / TLS"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:38
 #, kde-format
@@ -119,56 +169,6 @@ msgid "Configuration found in Mozilla FAI Database."
 msgstr ""
 "Configuration trouvée dans la base de données de Mozilla concernant les "
 "fournisseurs d'accès"
-
-#: accountwizard/manualconfigurationbase.cpp:34
-#, kde-format
-msgid "Kolab"
-msgstr "Kolab"
-
-#: accountwizard/manualconfigurationbase.cpp:39
-#, kde-format
-msgid "STARTTLS"
-msgstr "STARTTLS"
-
-#: accountwizard/manualconfigurationbase.cpp:39
-#, kde-format
-msgid "None"
-msgstr "Aucun"
-
-#: accountwizard/manualconfigurationbase.cpp:44
-#, kde-format
-msgid "Clear text"
-msgstr "Effacer le texte"
-
-#: accountwizard/manualconfigurationbase.cpp:44
-#, kde-format
-msgid "LOGIN"
-msgstr "CONNEXION"
-
-#: accountwizard/manualconfigurationbase.cpp:44
-#, kde-format
-msgid "PLAIN"
-msgstr "PLEIN"
-
-#: accountwizard/manualconfigurationbase.cpp:44
-#, kde-format
-msgid "CRAM-MD5"
-msgstr "CRAM-MD5"
-
-#: accountwizard/manualconfigurationbase.cpp:44
-#, kde-format
-msgid "DIGEST-MD5"
-msgstr "DIGEST-MD5"
-
-#: accountwizard/manualconfigurationbase.cpp:44
-#, kde-format
-msgid "NTLM"
-msgstr "NTLM"
-
-#: accountwizard/manualconfigurationbase.cpp:44
-#, kde-format
-msgid "GSSAPI"
-msgstr "GSSAPI"
 
 #: accountwizard/resource.cpp:68
 #, kde-format

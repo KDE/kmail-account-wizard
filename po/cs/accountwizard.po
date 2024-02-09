@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-14 03:08+0000\n"
+"POT-Creation-Date: 2024-02-09 02:33+0000\n"
 "PO-Revision-Date: 2023-11-06 11:32+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -29,6 +29,77 @@ msgstr "Vít Pelčák, Tomáš Chvátal"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "vit@pelcak.org, tomas.chvatal@gmail.com"
+
+#: accountwizard/accountconfigurationbase.cpp:34
+#: accountwizard/ispdb/configurationmodel.cpp:36
+#: accountwizard/ispdb/serverconfiguration.cpp:26
+#, kde-format
+msgid "POP3"
+msgstr "POP3"
+
+#: accountwizard/accountconfigurationbase.cpp:34
+#: accountwizard/ispdb/configurationmodel.cpp:36
+#: accountwizard/ispdb/serverconfiguration.cpp:23
+#, kde-format
+msgid "IMAP"
+msgstr "IMAP"
+
+#: accountwizard/accountconfigurationbase.cpp:34
+#, kde-format
+msgid "Kolab"
+msgstr "Kolab"
+
+#: accountwizard/accountconfigurationbase.cpp:39
+#, kde-format
+msgid "STARTTLS"
+msgstr "STARTTLS"
+
+#: accountwizard/accountconfigurationbase.cpp:39
+#: accountwizard/ispdb/serverconfiguration.cpp:35
+#, kde-format
+msgid "SSL/TLS"
+msgstr "SSL/TLS"
+
+# žádné parametry funkce v inspektoru funkcí
+#: accountwizard/accountconfigurationbase.cpp:39
+#, kde-format
+msgid "None"
+msgstr "Nic"
+
+#: accountwizard/accountconfigurationbase.cpp:44
+#, kde-format
+msgid "Clear text"
+msgstr "Čistý text"
+
+#: accountwizard/accountconfigurationbase.cpp:44
+#, kde-format
+msgid "LOGIN"
+msgstr "LOGIN"
+
+#: accountwizard/accountconfigurationbase.cpp:44
+#, kde-format
+msgid "PLAIN"
+msgstr "PLAIN"
+
+#: accountwizard/accountconfigurationbase.cpp:44
+#, kde-format
+msgid "CRAM-MD5"
+msgstr "CRAM-MD5"
+
+#: accountwizard/accountconfigurationbase.cpp:44
+#, kde-format
+msgid "DIGEST-MD5"
+msgstr "DIGEST-MD5"
+
+#: accountwizard/accountconfigurationbase.cpp:44
+#, kde-format
+msgid "NTLM"
+msgstr "NTLM"
+
+#: accountwizard/accountconfigurationbase.cpp:44
+#, kde-format
+msgid "GSSAPI"
+msgstr "GSSAPI"
 
 #: accountwizard/identitybase.cpp:25
 #, kde-format
@@ -51,20 +122,6 @@ msgstr "Nepojmenované"
 msgid "Identity removed."
 msgstr "Identita odstraněna."
 
-#: accountwizard/ispdb/configurationmodel.cpp:36
-#: accountwizard/ispdb/serverconfiguration.cpp:26
-#: accountwizard/manualconfigurationbase.cpp:34
-#, kde-format
-msgid "POP3"
-msgstr "POP3"
-
-#: accountwizard/ispdb/configurationmodel.cpp:36
-#: accountwizard/ispdb/serverconfiguration.cpp:23
-#: accountwizard/manualconfigurationbase.cpp:34
-#, kde-format
-msgid "IMAP"
-msgstr "IMAP"
-
 #: accountwizard/ispdb/configurationmodel.cpp:38
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
@@ -79,12 +136,6 @@ msgstr ""
 #, kde-format
 msgid "SMTP"
 msgstr "SMTP"
-
-#: accountwizard/ispdb/serverconfiguration.cpp:35
-#: accountwizard/manualconfigurationbase.cpp:39
-#, kde-format
-msgid "SSL/TLS"
-msgstr "SSL/TLS"
 
 #: accountwizard/ispdb/serverconfiguration.cpp:38
 #, kde-format
@@ -112,57 +163,6 @@ msgstr ""
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
 msgstr ""
-
-#: accountwizard/manualconfigurationbase.cpp:34
-#, kde-format
-msgid "Kolab"
-msgstr "Kolab"
-
-#: accountwizard/manualconfigurationbase.cpp:39
-#, kde-format
-msgid "STARTTLS"
-msgstr "STARTTLS"
-
-# žádné parametry funkce v inspektoru funkcí
-#: accountwizard/manualconfigurationbase.cpp:39
-#, kde-format
-msgid "None"
-msgstr "Nic"
-
-#: accountwizard/manualconfigurationbase.cpp:44
-#, kde-format
-msgid "Clear text"
-msgstr "Čistý text"
-
-#: accountwizard/manualconfigurationbase.cpp:44
-#, kde-format
-msgid "LOGIN"
-msgstr "LOGIN"
-
-#: accountwizard/manualconfigurationbase.cpp:44
-#, kde-format
-msgid "PLAIN"
-msgstr "PLAIN"
-
-#: accountwizard/manualconfigurationbase.cpp:44
-#, kde-format
-msgid "CRAM-MD5"
-msgstr "CRAM-MD5"
-
-#: accountwizard/manualconfigurationbase.cpp:44
-#, kde-format
-msgid "DIGEST-MD5"
-msgstr "DIGEST-MD5"
-
-#: accountwizard/manualconfigurationbase.cpp:44
-#, kde-format
-msgid "NTLM"
-msgstr "NTLM"
-
-#: accountwizard/manualconfigurationbase.cpp:44
-#, kde-format
-msgid "GSSAPI"
-msgstr "GSSAPI"
 
 #: accountwizard/resource.cpp:68
 #, kde-format
@@ -279,8 +279,7 @@ msgid "boss@example.corp"
 msgstr "franta@priklad.cz"
 
 #: apps/contents/ui/PersonalDataPage.qml:84
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password:"
 msgstr "Heslo:"
 
@@ -304,16 +303,14 @@ msgid "No config found from ispdb server."
 msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:140
-#, fuzzy, kde-format
-#| msgid "Server Parameters"
+#, kde-format
 msgid "Incoming Server Parameters"
-msgstr "Parametry serveru"
+msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:148
-#, fuzzy, kde-format
-#| msgid "Incoming"
+#, kde-format
 msgid "Incoming server:"
-msgstr "Příchozí"
+msgstr "Server příchozí pošty:"
 
 #: apps/contents/ui/PersonalDataPage.qml:158
 #, kde-format
@@ -350,16 +347,14 @@ msgid "Download all messages for offline use"
 msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:213
-#, fuzzy, kde-format
-#| msgid "Server Parameters"
+#, kde-format
 msgid "Outgoing Server Parameters"
-msgstr "Parametry serveru"
+msgstr ""
 
 #: apps/contents/ui/PersonalDataPage.qml:220
-#, fuzzy, kde-format
-#| msgid "Outgoing"
+#, kde-format
 msgid "Outgoing server:"
-msgstr "Odchozí"
+msgstr "Server odchozí pošty:"
 
 #: apps/contents/ui/PersonalDataPage.qml:269
 #, kde-format
@@ -385,7 +380,7 @@ msgstr "Manuální nastavení"
 #: apps/contents/ui/PersonalDataPage.qml:338
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "Podrobnosti"
 
 #: apps/main.cpp:32
 #, kde-format
@@ -398,10 +393,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "Pomáhá s nastavením účtů pro PIM"
 
 #: apps/main.cpp:36
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2023 the Akonadi developers"
+#, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
-msgstr "(c) 2009-2023 vývojáři Akonadi"
+msgstr ""
 
 #: apps/main.cpp:39
 #, kde-format
@@ -427,87 +421,3 @@ msgstr "Správce"
 #, kde-format
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
-
-#~ msgid ""
-#~ "There seems to be a problem in reaching this server or choosing a safe "
-#~ "way to sent the credentials to server. We advise you to check the "
-#~ "settings of the account and adjust it manually if needed."
-#~ msgstr ""
-#~ "Při pokusu o dosažení serveru nebo při výběru bezpečné cesty pro poslání "
-#~ "přihlašovacích údajů na serveru nastaly problémy. Doporučuji zkontrolovat "
-#~ "nastavení účtu a v případě potřeby je ručně opravit."
-
-#~ msgid "Autodetecting settings failed"
-#~ msgstr "Autodetekce nastavení selhala"
-
-#~ msgid "Writing config file for %1..."
-#~ msgstr "Zapisuji konfigurační soubor pro %1..."
-
-#~ msgid "Config file for %1 is writing."
-#~ msgstr "Zapisuji soubor s nastavením pro %1."
-
-#~ msgid "Config file for %1 was not changed."
-#~ msgstr "Mění se konfigurační soubor pro %1."
-
-#~ msgid "Unknown configuration name '%1'"
-#~ msgstr "Neznámý název nového nastavení '%1'"
-
-#~ msgid "Account Wizard"
-#~ msgstr "Průvodce nastavením účtu"
-
-#~ msgid "Error while generating new key pair for your account %1: %2"
-#~ msgstr "Chyba při generování nového páru klíčů pro váš účet %1: %2"
-
-#~ msgid "Could not detect valid key type"
-#~ msgstr "Nelze zjistit platný typ klíčů"
-
-#~ msgid "Import error"
-#~ msgstr "Chyba importu"
-
-#~ msgid "Failed to import key: %1"
-#~ msgstr "Nepodařilo se importovat klíč: %1"
-
-#~ msgid "Failed to import key."
-#~ msgstr "Nepodařilo se importovat klíč."
-
-#~ msgid "No key"
-#~ msgstr "Žádný klíč"
-
-#~ msgid "Generate a new key pair"
-#~ msgstr "Generovat nový pár klíčů"
-
-#~ msgid "Import a key"
-#~ msgstr "Importovat klíč"
-
-#~ msgid "Certificates"
-#~ msgstr "Certifikáty"
-
-#~ msgid "Any files"
-#~ msgstr "Jakékoliv soubory"
-
-#~ msgid "Select Certificate File"
-#~ msgstr "Vyberte soubor s certifikátem"
-
-#~ msgid "Importing key..."
-#~ msgstr "Probíhá import klíče..."
-
-#~ msgid "Setting up LDAP server..."
-#~ msgstr "Nastavuji server LDAP..."
-
-#~ msgid "LDAP set up."
-#~ msgstr "Nastaven LDAP."
-
-#~ msgid "LDAP not configuring."
-#~ msgstr "Nenastavuji LDAP."
-
-#~ msgid "Removed LDAP entry."
-#~ msgstr "Odstraněný záznam LDAP."
-
-#~ msgid "Removed resource instance for '%1'."
-#~ msgstr "Odstraněna instance zdroje '%1'."
-
-#~ msgid "Autoconfiguration failed."
-#~ msgstr "Automatické nastavení selhalo."
-
-#~ msgid "Hostname:"
-#~ msgstr "Název počítače:"
