@@ -132,7 +132,7 @@ void SetupManager::createManualAccount()
     mIdentity->create();
     const uint id = mIdentity->uoid();
     mAccountConfigurationImpl->setIdentityId(id);
-    mAccountConfigurationImpl->createManualAccount();
+    mAccountConfigurationImpl->createAccount();
     mAccountCreated = true;
 }
 

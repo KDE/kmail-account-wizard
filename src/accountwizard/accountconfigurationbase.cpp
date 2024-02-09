@@ -160,7 +160,7 @@ Resource::ResourceInfo AccountConfigurationBase::createKolabResource() const
 void AccountConfigurationBase::createResource()
 {
     // Create incoming account
-    qCDebug(ACCOUNTWIZARD_LOG) << " createManualAccount ";
+    qCDebug(ACCOUNTWIZARD_LOG) << " createResource ";
     Resource::ResourceInfo info;
     switch (mCurrentIncomingProtocol) {
     case 0: // Pop3
@@ -203,7 +203,7 @@ void AccountConfigurationBase::setIdentityId(int id)
     mIdentityId = id;
 }
 
-void AccountConfigurationBase::createManualAccount()
+void AccountConfigurationBase::createAccount()
 {
     createResource();
     createTransport();
