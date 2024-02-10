@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2010, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2010, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-09 00:38+0000\n"
-"PO-Revision-Date: 2023-10-08 23:27+0200\n"
+"PO-Revision-Date: 2024-02-09 23:47+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -300,16 +300,14 @@ msgid "No config found from ispdb server."
 msgstr "ispdb 서버에서 설정을 찾을 수 없습니다."
 
 #: apps/contents/ui/PersonalDataPage.qml:140
-#, fuzzy, kde-format
-#| msgid "Server Parameters"
+#, kde-format
 msgid "Incoming Server Parameters"
-msgstr "서버 인자"
+msgstr "받는 서버 인자"
 
 #: apps/contents/ui/PersonalDataPage.qml:148
-#, fuzzy, kde-format
-#| msgid "Incoming"
+#, kde-format
 msgid "Incoming server:"
-msgstr "수신"
+msgstr "받는 서버:"
 
 #: apps/contents/ui/PersonalDataPage.qml:158
 #, kde-format
@@ -343,19 +341,17 @@ msgstr "사용자 이름:"
 #: apps/contents/ui/PersonalDataPage.qml:203
 #, kde-format
 msgid "Download all messages for offline use"
-msgstr ""
+msgstr "오프라인에서 사용할 수 있도록 모든 메시지 다운로드"
 
 #: apps/contents/ui/PersonalDataPage.qml:213
-#, fuzzy, kde-format
-#| msgid "Server Parameters"
+#, kde-format
 msgid "Outgoing Server Parameters"
-msgstr "서버 인자"
+msgstr "보내는 서버 인자"
 
 #: apps/contents/ui/PersonalDataPage.qml:220
-#, fuzzy, kde-format
-#| msgid "Outgoing"
+#, kde-format
 msgid "Outgoing server:"
-msgstr "발신"
+msgstr "보내는 서버:"
 
 #: apps/contents/ui/PersonalDataPage.qml:269
 #, kde-format
@@ -379,10 +375,9 @@ msgid "Manual Configuration"
 msgstr "수동 설정"
 
 #: apps/contents/ui/PersonalDataPage.qml:338
-#, fuzzy, kde-format
-#| msgid "&Details..."
+#, kde-format
 msgid "Details"
-msgstr "자세히(&D)..."
+msgstr "자세히"
 
 #: apps/main.cpp:32
 #, kde-format
@@ -395,10 +390,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "PIM 계정 설정을 도와 줍니다"
 
 #: apps/main.cpp:36
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2023 the Akonadi developers"
+#, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
-msgstr "(c) 2009-2023 the Akonadi developers"
+msgstr "(c) 2009-2024 the Akonadi developers"
 
 #: apps/main.cpp:39
 #, kde-format
