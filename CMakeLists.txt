@@ -51,7 +51,7 @@ set(AKONADI_VERSION "6.0.40")
 
 set(KDEPIM_LIB_VERSION "${PIM_VERSION}")
 set(QT_REQUIRED_VERSION "6.6.0")
-find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Test Quick QuickControls2)
+find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Core Widgets DBus Test Quick QuickControls2)
 set(PIMCOMMON_LIB_VERSION "6.0.40")
 set(KPIM_MIME_VERSION "6.0.40")
 
@@ -68,6 +68,8 @@ find_package(KPim6IdentityManagementCore ${IDENTITYMANAGEMENT_LIB_VERSION} CONFI
 find_package(KPim6MailTransport ${KMAILTRANSPORT_LIB_VERSION} CONFIG REQUIRED)
 
 include_directories(${kmail-account-wizard_SOURCE_DIR} ${kmail-account-wizard_BINARY_DIR})
+
+qt_policy(SET QTP0001 NEW)
 
 
 find_package(Qt6Keychain CONFIG)

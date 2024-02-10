@@ -9,6 +9,9 @@ import org.kde.pim.accountwizard as Account
 Kirigami.ApplicationWindow {
     id: root
 
+    width: Kirigami.Units.gridUnit * 45
+    height: Kirigami.Units.gridUnit * 36
+
     pageStack {
         initialPage: PersonalDataPage {}
         defaultColumnWidth: root.width

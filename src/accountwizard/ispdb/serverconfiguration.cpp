@@ -96,6 +96,7 @@ std::optional<Server> Server::fromDomElement(const QDomElement &element, const K
     if (server.port == -1) {
         return std::nullopt;
     }
+
     return server;
 }
 

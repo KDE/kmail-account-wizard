@@ -2,9 +2,20 @@
 # SPDX-FileCopyrightText: 2023-2024 Laurent Montel <montel.org>
 # SPDX-License-Identifier: BSD-3-Clause
 
+
 add_executable(accountwizard
     main.cpp
-    resources.qrc
+)
+
+qt_add_qml_module(accountwizard
+    URI AccountWizard
+    QML_FILES
+        qml/ConfigurationDelegate.qml
+        qml/ConfigurationSelectionPage.qml
+        qml/Main.qml
+        qml/ManualConfigurationPage.qml
+        qml/PersonalDataPage.qml
+        qml/WizardPage.qml
 )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)

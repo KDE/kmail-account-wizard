@@ -63,7 +63,7 @@ int main(int argc, char **argv)
     qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "SetupManager", &setupManager);
     qRegisterMetaType<IdentityBase *>("Identity *");
     qRegisterMetaType<ConfigurationModel *>("ConfigurationModel *");
-    engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
+    engine.loadFromModule("AccountWizard", "Main");
     // Exit on QML load error.
     if (engine.rootObjects().isEmpty()) {
         qWarning() << " Error during loading main.qml";
