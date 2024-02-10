@@ -22,6 +22,8 @@
 #include <QUrl>
 #include <QtQml>
 
+using namespace Qt::Literals::StringLiterals;
+
 int main(int argc, char **argv)
 {
     QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
@@ -63,6 +65,7 @@ int main(int argc, char **argv)
     qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "SetupManager", &setupManager);
     qRegisterMetaType<IdentityBase *>("Identity *");
     qRegisterMetaType<ConfigurationModel *>("ConfigurationModel *");
+    qmlRegisterUncreatableType<KIMAP::LoginJob *>("org.kde.pim.accountwizard", 1, 0, "LoginJob", u"Enum"_s);
     engine.loadFromModule("AccountWizard", "Main");
     // Exit on QML load error.
     if (engine.rootObjects().isEmpty()) {

@@ -44,16 +44,17 @@ target_link_libraries(libaccountwizard
     KPim6::AkonadiWidgets
     KPim6::MailTransport
     KPim6::Mime
-    KF6::KIOCore
+    KPim6::IMAP
     KPim6::IdentityManagementCore
+    KF6::KIOCore
     KF6::WidgetsAddons
     KF6::I18n
     KF6::Crash
+    KF6::DBusAddons
     Qt::Xml
     Qt::Quick
     Qt::QuickControls2
-    KF6::DBusAddons
-    )
+)
 
 set_target_properties(libaccountwizard PROPERTIES OUTPUT_NAME accountwizard VERSION ${PIM_VERSION} SOVERSION ${KDEPIM_LIB_SOVERSION})
 install(TARGETS libaccountwizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)

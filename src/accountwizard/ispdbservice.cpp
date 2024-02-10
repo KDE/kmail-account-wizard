@@ -71,6 +71,7 @@ void IspdbService::requestConfig(const KMime::Types::AddrSpec &addrSpec, const S
 void IspdbService::handleReply(QNetworkReply *const reply, const KMime::Types::AddrSpec &addrSpec, const SearchServerType searchServerType)
 {
     const auto data = reply->readAll();
+    qWarning() << data;
     QDomDocument document;
     const QDomDocument::ParseResult result = document.setContent(data);
     if (!result) {

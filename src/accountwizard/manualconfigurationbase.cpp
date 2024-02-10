@@ -7,6 +7,7 @@
 #include "manualconfigurationbase.h"
 #include "accountwizard_debug.h"
 #include "servertest.h"
+#include <KIMAP/LoginJob>
 #include <KLocalizedString>
 #include <QRegularExpression>
 #include <QUrl>
@@ -37,11 +38,6 @@ QStringList ManualConfigurationBase::incomingProtocols() const
 QStringList ManualConfigurationBase::securityProtocols() const
 {
     return {i18n("STARTTLS"), i18n("SSL/TLS"), i18n("None")};
-}
-
-QStringList ManualConfigurationBase::authenticationProtocols() const
-{
-    return {i18n("Clear text"), i18n("LOGIN"), i18n("PLAIN"), i18n("CRAM-MD5"), i18n("DIGEST-MD5"), i18n("NTLM"), i18n("GSSAPI")};
 }
 
 QString ManualConfigurationBase::generateUniqueAccountName() const
@@ -80,28 +76,6 @@ Resource::ResourceInfo ManualConfigurationBase::createPop3Resource() const
     return info;
 }
 
-QString ManualConfigurationBase::convertIncomingAuthenticationProtocol(int protocol) const
-{
-    switch (protocol) {
-    case 0: // Clear Text
-        return QStringLiteral("clear");
-    case 1: // LOGIN
-        return QStringLiteral("login");
-    case 2: // PLAIN
-        return QStringLiteral("plain");
-    case 3: // CRAM-MD5
-        return QStringLiteral("cram-md5");
-    case 4: // DIGEST-MD5
-        return QStringLiteral("digest-md5");
-    case 5: // NTLM
-        return QStringLiteral("ntlm");
-    case 6: // GSSAPI
-        return QStringLiteral("gssapi");
-    }
-    qCWarning(ACCOUNTWIZARD_LOG) << " Impossible to convert protocol: " << protocol;
-    return {};
-}
-
 QString ManualConfigurationBase::convertIncomingSecurityProtocol(int index) const
 {
     switch (index) {
@@ -131,7 +105,7 @@ Resource::ResourceInfo ManualConfigurationBase::createImapResource() const
     settings.insert(QStringLiteral("SubscriptionEnabled"), true);
     settings.insert(QStringLiteral("UseDefaultIdentity"), false);
     settings.insert(QStringLiteral("AccountIdentity"), mIdentityId);
-    settings.insert(QStringLiteral("Authentication"), convertIncomingAuthenticationProtocol(mCurrentIncomingAuthenticationProtocol));
+    settings.insert(QStringLiteral("Authentication"), mCurrentIncomingAuthenticationProtocol);
     settings.insert(QStringLiteral("Safety"), convertIncomingSecurityProtocol(mCurrentIncomingSecurityProtocol));
     info.settings = settings;
     return info;
@@ -215,7 +189,7 @@ Transport::TransportInfo ManualConfigurationBase::createTransportInfo() const
     info.user = mOutgoingUserName;
     info.host = mOutgoingHostName;
     info.port = mOutgoingPort;
-    info.authStr = convertOutgoingAuthenticationProtocol(mCurrentOutgoingAuthenticationProtocol);
+    // info.authStr = mCurrentOutgoingAuthenticationProtocol;
     info.encrStr = convertOutgoingSecurityProtocol(mCurrentOutgoingSecurityProtocol);
     return info;
 }
@@ -366,12 +340,12 @@ void ManualConfigurationBase::checkConfiguration()
     Q_EMIT configurationIsValidChanged();
 }
 
-int ManualConfigurationBase::currentOutgoingAuthenticationProtocol() const
+KIMAP::LoginJob::AuthenticationMode ManualConfigurationBase::currentOutgoingAuthenticationProtocol() const
 {
     return mCurrentOutgoingAuthenticationProtocol;
 }
 
-void ManualConfigurationBase::setCurrentOutgoingAuthenticationProtocol(int newCurrentOutgoingAuthenticationProtocols)
+void ManualConfigurationBase::setCurrentOutgoingAuthenticationProtocol(KIMAP::LoginJob::AuthenticationMode newCurrentOutgoingAuthenticationProtocols)
 {
     if (mCurrentOutgoingAuthenticationProtocol == newCurrentOutgoingAuthenticationProtocols)
         return;
@@ -394,12 +368,12 @@ void ManualConfigurationBase::setDisconnectedModeEnabled(bool disconnectedMode)
     Q_EMIT disconnectedModeEnabledChanged();
 }
 
-int ManualConfigurationBase::currentIncomingAuthenticationProtocol() const
+KIMAP::LoginJob::AuthenticationMode ManualConfigurationBase::currentIncomingAuthenticationProtocol() const
 {
     return mCurrentIncomingAuthenticationProtocol;
 }
 
-void ManualConfigurationBase::setCurrentIncomingAuthenticationProtocol(int newCurrentIncomingAuthenticationProtocols)
+void ManualConfigurationBase::setCurrentIncomingAuthenticationProtocol(KIMAP::LoginJob::AuthenticationMode newCurrentIncomingAuthenticationProtocols)
 {
     if (mCurrentIncomingAuthenticationProtocol == newCurrentIncomingAuthenticationProtocols)
         return;

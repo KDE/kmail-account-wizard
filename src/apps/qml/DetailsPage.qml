@@ -17,23 +17,21 @@ WizardPage {
 
     nextAction {
         text: i18nc("@action:button", "Quit")
+        icon.name: 'application-exit-symbolic'
         onTriggered: Qt.quit();
     }
 
     FormCard.FormHeader {
-        visible: SetupManager.details.length > 0
         title: i18n("Details")
     }
 
     FormCard.FormCard {
         id: details
 
-        visible: SetupManager.details.length > 0
-
         FormCard.FormTextDelegate {
             id: detailsInfo
-            label: SetupManager.details
-            labelItem.wrapMode: Text.WordWrap
+            text: SetupManager.details.length > 0 ? SetupManager.details : i18nc("Placeholder", "No details available.")
+            textItem.wrapMode: Text.WordWrap
         }
     }
 }

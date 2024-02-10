@@ -8,9 +8,12 @@
 #include "libaccountwizard_export.h"
 #include "resource.h"
 #include "transport.h"
+#include <KIMAP/LoginJob>
 #include <QDebug>
 #include <QObject>
+
 class ServerTest;
+
 class LIBACCOUNTWIZARD_EXPORT ManualConfigurationBase : public QObject
 {
     Q_OBJECT
@@ -23,17 +26,16 @@ class LIBACCOUNTWIZARD_EXPORT ManualConfigurationBase : public QObject
     Q_PROPERTY(QString outgoingUserName READ outgoingUserName WRITE setOutgoingUserName NOTIFY outgoingUserNameChanged FINAL)
     Q_PROPERTY(QStringList incomingProtocols READ incomingProtocols CONSTANT)
     Q_PROPERTY(QStringList securityProtocols READ securityProtocols CONSTANT)
-    Q_PROPERTY(QStringList authenticationProtocols READ authenticationProtocols CONSTANT)
     Q_PROPERTY(bool configurationIsValid MEMBER mConfigurationIsValid NOTIFY configurationIsValidChanged FINAL)
     Q_PROPERTY(int currentIncomingProtocol READ currentIncomingProtocol WRITE setCurrentIncomingProtocol NOTIFY currentIncomingProtocolChanged FINAL)
     Q_PROPERTY(int currentIncomingSecurityProtocol READ currentIncomingSecurityProtocol WRITE setCurrentIncomingSecurityProtocol NOTIFY
                    currentIncomingSecurityProtocolChanged FINAL)
     Q_PROPERTY(int currentOutgoingSecurityProtocol READ currentOutgoingSecurityProtocol WRITE setCurrentOutgoingSecurityProtocol NOTIFY
                    currentOutgoingSecurityProtocolChanged FINAL)
-    Q_PROPERTY(int currentIncomingAuthenticationProtocol READ currentIncomingAuthenticationProtocol WRITE setCurrentIncomingAuthenticationProtocol NOTIFY
-                   currentIncomingAuthenticationProtocolChanged FINAL)
-    Q_PROPERTY(int currentOutgoingAuthenticationProtocol READ currentOutgoingAuthenticationProtocol WRITE setCurrentOutgoingAuthenticationProtocol NOTIFY
-                   currentOutgoingAuthenticationProtocolChanged FINAL)
+    Q_PROPERTY(KIMAP::LoginJob::AuthenticationMode currentIncomingAuthenticationProtocol READ currentIncomingAuthenticationProtocol WRITE
+                   setCurrentIncomingAuthenticationProtocol NOTIFY currentIncomingAuthenticationProtocolChanged FINAL)
+    Q_PROPERTY(KIMAP::LoginJob::AuthenticationMode currentOutgoingAuthenticationProtocol READ currentOutgoingAuthenticationProtocol WRITE
+                   setCurrentOutgoingAuthenticationProtocol NOTIFY currentOutgoingAuthenticationProtocolChanged FINAL)
 
     Q_PROPERTY(bool disconnectedModeEnabled READ disconnectedModeEnabled WRITE setDisconnectedModeEnabled NOTIFY disconnectedModeEnabledChanged FINAL)
 
@@ -63,7 +65,6 @@ public:
 
     [[nodiscard]] QStringList incomingProtocols() const;
     [[nodiscard]] QStringList securityProtocols() const;
-    [[nodiscard]] QStringList authenticationProtocols() const;
 
     [[nodiscard]] int currentIncomingProtocol() const;
     void setCurrentIncomingProtocol(int newCurrentIncomingProtocol);
@@ -74,11 +75,11 @@ public:
     [[nodiscard]] int currentOutgoingSecurityProtocol() const;
     void setCurrentOutgoingSecurityProtocol(int newCurrentOutgoingSecurityProtocol);
 
-    [[nodiscard]] int currentIncomingAuthenticationProtocol() const;
-    void setCurrentIncomingAuthenticationProtocol(int newCurrentIncomingAuthenticationProtocols);
+    [[nodiscard]] KIMAP::LoginJob::AuthenticationMode currentIncomingAuthenticationProtocol() const;
+    void setCurrentIncomingAuthenticationProtocol(KIMAP::LoginJob::AuthenticationMode newCurrentIncomingAuthenticationProtocols);
 
-    [[nodiscard]] int currentOutgoingAuthenticationProtocol() const;
-    void setCurrentOutgoingAuthenticationProtocol(int newCurrentOutgoingAuthenticationProtocols);
+    [[nodiscard]] KIMAP::LoginJob::AuthenticationMode currentOutgoingAuthenticationProtocol() const;
+    void setCurrentOutgoingAuthenticationProtocol(KIMAP::LoginJob::AuthenticationMode newCurrentOutgoingAuthenticationProtocols);
 
     [[nodiscard]] bool disconnectedModeEnabled() const;
     void setDisconnectedModeEnabled(bool disconnectedMode);
@@ -138,7 +139,6 @@ private:
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString convertOutgoingSecurityProtocol(int protocol) const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString convertOutgoingAuthenticationProtocol(int protocol) const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString generateUniqueAccountName() const;
-    [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString convertIncomingAuthenticationProtocol(int protocol) const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString convertIncomingSecurityProtocol(int index) const;
     LIBACCOUNTWIZARD_NO_EXPORT void slotTestFail();
     LIBACCOUNTWIZARD_NO_EXPORT void slotTestResult(const QString &result);
@@ -161,8 +161,8 @@ private:
     int mCurrentIncomingSecurityProtocol = 2; // NONE
     int mCurrentOutgoingSecurityProtocol = 2; // NONE
 
-    int mCurrentIncomingAuthenticationProtocol = 0; // Clear Text
-    int mCurrentOutgoingAuthenticationProtocol = 0; // Clear Text
+    KIMAP::LoginJob::AuthenticationMode mCurrentIncomingAuthenticationProtocol = KIMAP::LoginJob::AuthenticationMode::ClearText;
+    KIMAP::LoginJob::AuthenticationMode mCurrentOutgoingAuthenticationProtocol = KIMAP::LoginJob::AuthenticationMode::ClearText;
 
     int mIdentityId = 0;
 

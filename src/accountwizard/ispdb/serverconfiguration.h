@@ -28,7 +28,6 @@ enum AuthType {
     GSSAPI,
     ClientIP,
     NoAuth,
-    Basic,
     OAuth2,
 };
 

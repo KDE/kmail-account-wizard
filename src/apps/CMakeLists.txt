@@ -12,6 +12,7 @@ qt_add_qml_module(accountwizard
     QML_FILES
         qml/ConfigurationDelegate.qml
         qml/ConfigurationSelectionPage.qml
+        qml/DetailsPage.qml
         qml/Main.qml
         qml/ManualConfigurationPage.qml
         qml/PersonalDataPage.qml

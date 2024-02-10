@@ -80,10 +80,20 @@ WizardPage {
         FormCard.FormComboBoxDelegate {
             id: manualIncomingAuthenticationMethod
             text: i18n("Authentication Method:")
-            model: SetupManager.manualConfiguration.authenticationProtocols
-            currentIndex: SetupManager.manualConfiguration.currentIncomingAuthenticationProtocol
+            textRole: "text"
+            valueRole: "value"
+            model: [
+                { value: LoginJob.ClearText, text: i18n("Clear text") },
+                { value: LoginJob.Login, text: i18n("LOGIN") },
+                { value: LoginJob.CramMD5, text: i18n("CRAM-MD5") },
+                { value: LoginJob.DigestMD5, text: i18n("DIGEST-MD5") },
+                { value: LoginJob.NTLM, text: i18n("NTLM") },
+                { value: LoginJob.GSSAPI, text: i18n("GSSAPI") },
+                { value: LoginJob.XOAuth2, text: i18n("XOAuth (Gmail)") },
+            ]
+            currentIndex: indexOfValue(SetupManager.manualConfiguration.currentIncomingAuthenticationProtocol)
             onCurrentIndexChanged: {
-                SetupManager.manualConfiguration.currentIncomingAuthenticationProtocols = currentIndex
+                SetupManager.manualConfiguration.currentIncomingAuthenticationProtocols = currentValue
             }
         }
         FormCard.FormTextFieldDelegate {
@@ -142,10 +152,21 @@ WizardPage {
         FormCard.FormComboBoxDelegate {
             id: manualOutgoingAuthenticationMethod
             text: i18n("Authentication Method:")
-            model: SetupManager.manualConfiguration.authenticationProtocols
-            currentIndex: SetupManager.manualConfiguration.currentOutgoingAuthenticationProtocol
+            textRole: "text"
+            valueRole: "value"
+            model: [
+                { value: LoginJob.ClearText, text: i18n("Clear text") },
+                { value: LoginJob.Plain, text: i18n("PLAIN") },
+                { value: LoginJob.Login, text: i18n("LOGIN") },
+                { value: LoginJob.CramMD5, text: i18n("CRAM-MD5") },
+                { value: LoginJob.DigestMD5, text: i18n("DIGEST-MD5") },
+                { value: LoginJob.NTLM, text: i18n("NTLM") },
+                { value: LoginJob.GSSAPI, text: i18n("GSSAPI") },
+                { value: LoginJob.XOAuth2, text: i18n("XOAuth (Gmail)") },
+            ]
+            currentIndex: indexOfValue(SetupManager.manualConfiguration.currentOutgoingAuthenticationProtocol)
             onCurrentIndexChanged: {
-                SetupManager.manualConfiguration.currentOutgoingAuthenticationProtocols = currentIndex
+                SetupManager.manualConfiguration.currentOutgoingAuthenticationProtocols = currentValue
             }
         }
         FormCard.FormTextFieldDelegate {

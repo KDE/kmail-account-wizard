@@ -47,7 +47,6 @@ void ManualConfigurationTest::shouldHaveDefaultValues()
 
     QVERIFY(!w.incomingProtocols().isEmpty());
     QVERIFY(!w.securityProtocols().isEmpty());
-    QVERIFY(!w.authenticationProtocols().isEmpty());
 
     QCOMPARE(w.currentIncomingProtocol(), 0);
     QCOMPARE(w.currentIncomingSecurityProtocol(), 2);

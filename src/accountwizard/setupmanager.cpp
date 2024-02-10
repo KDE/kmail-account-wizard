@@ -124,6 +124,39 @@ void SetupManager::createAutomaticAccount(int index)
     mManualConfiguration->setIncomingHostName(configuration.incoming.hostname);
     mManualConfiguration->setIncomingPort(configuration.incoming.port);
     mManualConfiguration->setIncomingUserName(configuration.incoming.username);
+    switch (configuration.incoming.type) {
+    case Server::Type::POP3:
+        mManualConfiguration->setCurrentIncomingProtocol(0);
+        break;
+    case Server::Type::IMAP:
+        mManualConfiguration->setCurrentIncomingProtocol(1);
+        break;
+    case Server::Type::SMTP:
+        Q_UNREACHABLE();
+    }
+    switch (configuration.incoming.authType) {
+        // keep in sync with ordering in ManualConfigurationBase::authenticationProtocols
+        using KIMAPAuth = KIMAP::LoginJob::AuthenticationMode;
+    case AuthType::Plain:
+        mManualConfiguration->setCurrentIncomingAuthenticationProtocol(KIMAPAuth::Plain);
+        break;
+    case AuthType::CramMD5:
+        mManualConfiguration->setCurrentIncomingAuthenticationProtocol(KIMAPAuth::CramMD5);
+        break;
+    case AuthType::NTLM:
+        mManualConfiguration->setCurrentIncomingAuthenticationProtocol(KIMAPAuth::NTLM);
+        break;
+    case AuthType::GSSAPI:
+        mManualConfiguration->setCurrentIncomingAuthenticationProtocol(KIMAPAuth::GSSAPI);
+        break;
+    case AuthType::ClientIP:
+    case AuthType::NoAuth:
+        mManualConfiguration->setCurrentIncomingAuthenticationProtocol(KIMAPAuth::Anonymous);
+        break;
+    case AuthType::OAuth2:
+        mManualConfiguration->setCurrentIncomingAuthenticationProtocol(KIMAPAuth::XOAuth2);
+        break;
+    }
     mManualConfiguration->setCurrentIncomingProtocol(configuration.incoming.type);
     mManualConfiguration->setPassword(mPassword);
 
@@ -133,6 +166,8 @@ void SetupManager::createAutomaticAccount(int index)
         mManualConfiguration->setOutgoingUserName(configuration.outgoing->username);
         mManualConfiguration->setPassword(mPassword);
     }
+
+    return;
 
     mIdentity->create();
     const uint id = mIdentity->uoid();
@@ -144,7 +179,7 @@ void SetupManager::createAutomaticAccount(int index)
 
 void SetupManager::createManualAccount()
 {
-    qCDebug(ACCOUNTWIZARD_LOG) << " Create MAnual Account";
+    qCDebug(ACCOUNTWIZARD_LOG) << " Create Manual Account";
     mIdentity->create();
     const uint id = mIdentity->uoid();
     mManualConfiguration->setIdentityId(id);
