@@ -7,6 +7,7 @@
 #include "accountwizard_debug.h"
 #include "ispdbservice.h"
 #include <KEMailSettings>
+#include <MailTransport/TransportManager>
 
 SetupManager::SetupManager(QObject *parent)
     : QObject(parent)
@@ -160,19 +161,55 @@ void SetupManager::createAutomaticAccount(int index)
     mManualConfiguration->setCurrentIncomingProtocol(configuration.incoming.type);
     mManualConfiguration->setPassword(mPassword);
 
+    mIdentity->create();
+
     if (configuration.outgoing) {
-        mManualConfiguration->setOutgoingHostName(configuration.outgoing->hostname);
-        mManualConfiguration->setOutgoingPort(configuration.outgoing->port);
-        mManualConfiguration->setOutgoingUserName(configuration.outgoing->username);
-        mManualConfiguration->setPassword(mPassword);
+        // Create SMTP configuration from outgoing configuration
+        MailTransport::Transport *mt = MailTransport::TransportManager::self()->createTransport();
+        mt->setName(configuration.outgoing->hostname);
+        mt->setHost(configuration.outgoing->hostname);
+        if (configuration.outgoing->port > 0) {
+            mt->setPort(configuration.outgoing->port);
+        }
+
+        if (!configuration.outgoing->username.isEmpty()) {
+            mt->setUserName(configuration.outgoing->username);
+            mt->setRequiresAuthentication(true);
+        }
+
+        if (!mPassword.isEmpty()) {
+            mt->setStorePassword(true);
+            mt->setPassword(mPassword);
+        }
+
+        QHash<AuthType, MailTransport::Transport::EnumAuthenticationType> mappingAuthentificationType = {
+            {Plain, MailTransport::Transport::EnumAuthenticationType::PLAIN},
+            {CramMD5, MailTransport::Transport::EnumAuthenticationType::CRAM_MD5},
+            {NTLM, MailTransport::Transport::EnumAuthenticationType::NTLM},
+            {GSSAPI, MailTransport::Transport::EnumAuthenticationType::GSSAPI},
+            {ClientIP, MailTransport::Transport::EnumAuthenticationType::ANONYMOUS},
+            {NoAuth, MailTransport::Transport::EnumAuthenticationType::ANONYMOUS},
+            {OAuth2, MailTransport::Transport::EnumAuthenticationType::XOAUTH2},
+        };
+
+        mt->setAuthenticationType(mappingAuthentificationType[configuration.outgoing->authType]);
+
+        QHash<SocketType, MailTransport::Transport::EnumEncryption> mappingEncryption = {
+            {SSL, MailTransport::Transport::EnumEncryption::SSL},
+            {StartTLS, MailTransport::Transport::EnumEncryption::TLS},
+            {None, MailTransport::Transport::EnumEncryption::None},
+        };
+
+        mt->setEncryption(mappingEncryption[configuration.outgoing->socketType]);
+
+        return;
+        MailTransport::TransportManager::self()->addTransport(mt);
+
+        // mIdentity->setDefaultTransport(mt->id());
     }
 
-    return;
-
-    mIdentity->create();
     const uint id = mIdentity->uoid();
     mManualConfiguration->setIdentityId(id);
-    mManualConfiguration->createManualAccount();
 
     mAccountCreated = true;
 }
@@ -183,7 +220,7 @@ void SetupManager::createManualAccount()
     mIdentity->create();
     const uint id = mIdentity->uoid();
     mManualConfiguration->setIdentityId(id);
-    mManualConfiguration->createManualAccount();
+    mManualConfiguration->save();
     mAccountCreated = true;
 }
 

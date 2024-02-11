@@ -19,8 +19,6 @@ target_sources(libaccountwizard PRIVATE
     manualconfigurationbase.cpp
     resource.h
     resource.cpp
-    transport.h
-    transport.cpp
     setupbase.h
     setupbase.cpp
     servertest.h

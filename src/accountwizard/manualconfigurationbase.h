@@ -7,8 +7,8 @@
 
 #include "libaccountwizard_export.h"
 #include "resource.h"
-#include "transport.h"
 #include <KIMAP/LoginJob>
+#include <MailTransport/Transport>
 #include <QDebug>
 #include <QObject>
 
@@ -17,25 +17,22 @@ class ServerTest;
 class LIBACCOUNTWIZARD_EXPORT ManualConfigurationBase : public QObject
 {
     Q_OBJECT
+
+    /// This property holds the mail transport configuration.
+    Q_PROPERTY(MailTransport::Transport *mailTransport READ mailTransport CONSTANT)
+
     Q_PROPERTY(QString incomingHostName READ incomingHostName WRITE setIncomingHostName NOTIFY incomingHostNameChanged FINAL)
     Q_PROPERTY(uint incomingPort READ incomingPort WRITE setIncomingPort NOTIFY incomingPortChanged FINAL)
     Q_PROPERTY(QString incomingUserName READ incomingUserName WRITE setIncomingUserName NOTIFY incomingUserNameChanged FINAL)
 
-    Q_PROPERTY(QString outgoingHostName READ outgoingHostName WRITE setOutgoingHostName NOTIFY outgoingHostNameChanged FINAL)
-    Q_PROPERTY(int outgoingPort READ outgoingPort WRITE setOutgoingPort NOTIFY outgoingPortChanged FINAL)
-    Q_PROPERTY(QString outgoingUserName READ outgoingUserName WRITE setOutgoingUserName NOTIFY outgoingUserNameChanged FINAL)
     Q_PROPERTY(QStringList incomingProtocols READ incomingProtocols CONSTANT)
     Q_PROPERTY(QStringList securityProtocols READ securityProtocols CONSTANT)
     Q_PROPERTY(bool configurationIsValid MEMBER mConfigurationIsValid NOTIFY configurationIsValidChanged FINAL)
     Q_PROPERTY(int currentIncomingProtocol READ currentIncomingProtocol WRITE setCurrentIncomingProtocol NOTIFY currentIncomingProtocolChanged FINAL)
     Q_PROPERTY(int currentIncomingSecurityProtocol READ currentIncomingSecurityProtocol WRITE setCurrentIncomingSecurityProtocol NOTIFY
                    currentIncomingSecurityProtocolChanged FINAL)
-    Q_PROPERTY(int currentOutgoingSecurityProtocol READ currentOutgoingSecurityProtocol WRITE setCurrentOutgoingSecurityProtocol NOTIFY
-                   currentOutgoingSecurityProtocolChanged FINAL)
     Q_PROPERTY(KIMAP::LoginJob::AuthenticationMode currentIncomingAuthenticationProtocol READ currentIncomingAuthenticationProtocol WRITE
                    setCurrentIncomingAuthenticationProtocol NOTIFY currentIncomingAuthenticationProtocolChanged FINAL)
-    Q_PROPERTY(KIMAP::LoginJob::AuthenticationMode currentOutgoingAuthenticationProtocol READ currentOutgoingAuthenticationProtocol WRITE
-                   setCurrentOutgoingAuthenticationProtocol NOTIFY currentOutgoingAuthenticationProtocolChanged FINAL)
 
     Q_PROPERTY(bool disconnectedModeEnabled READ disconnectedModeEnabled WRITE setDisconnectedModeEnabled NOTIFY disconnectedModeEnabledChanged FINAL)
 
@@ -44,6 +41,11 @@ class LIBACCOUNTWIZARD_EXPORT ManualConfigurationBase : public QObject
 public:
     explicit ManualConfigurationBase(QObject *parent = nullptr);
     ~ManualConfigurationBase() override;
+
+    /// Save the mail transport and resource
+    Q_INVOKABLE void save();
+
+    [[nodiscard]] MailTransport::Transport *mailTransport() const;
 
     [[nodiscard]] QString incomingHostName() const;
     void setIncomingHostName(const QString &newIncomingHostName);
@@ -54,15 +56,6 @@ public:
     [[nodiscard]] QString incomingUserName() const;
     void setIncomingUserName(const QString &newIncomingUserName);
 
-    [[nodiscard]] QString outgoingHostName() const;
-    void setOutgoingHostName(const QString &newOutgoingHostName);
-
-    [[nodiscard]] int outgoingPort() const;
-    void setOutgoingPort(int newPort);
-
-    [[nodiscard]] QString outgoingUserName() const;
-    void setOutgoingUserName(const QString &newOutgoingUserName);
-
     [[nodiscard]] QStringList incomingProtocols() const;
     [[nodiscard]] QStringList securityProtocols() const;
 
@@ -72,21 +65,13 @@ public:
     [[nodiscard]] int currentIncomingSecurityProtocol() const;
     void setCurrentIncomingSecurityProtocol(int newCurrentIncomingSecurityProtocol);
 
-    [[nodiscard]] int currentOutgoingSecurityProtocol() const;
-    void setCurrentOutgoingSecurityProtocol(int newCurrentOutgoingSecurityProtocol);
-
     [[nodiscard]] KIMAP::LoginJob::AuthenticationMode currentIncomingAuthenticationProtocol() const;
     void setCurrentIncomingAuthenticationProtocol(KIMAP::LoginJob::AuthenticationMode newCurrentIncomingAuthenticationProtocols);
-
-    [[nodiscard]] KIMAP::LoginJob::AuthenticationMode currentOutgoingAuthenticationProtocol() const;
-    void setCurrentOutgoingAuthenticationProtocol(KIMAP::LoginJob::AuthenticationMode newCurrentOutgoingAuthenticationProtocols);
 
     [[nodiscard]] bool disconnectedModeEnabled() const;
     void setDisconnectedModeEnabled(bool disconnectedMode);
 
     Q_INVOKABLE void checkServer();
-
-    void createManualAccount();
 
     void setEmail(const QString &email);
 
@@ -101,18 +86,12 @@ Q_SIGNALS:
     void incomingPortChanged();
     void incomingUserNameChanged();
 
-    void outgoingHostNameChanged();
-    void outgoingPortChanged();
-    void outgoingUserNameChanged();
-
     void configurationIsValidChanged();
     void currentIncomingProtocolChanged();
 
     void currentIncomingSecurityProtocolChanged();
-    void currentOutgoingSecurityProtocolChanged();
 
     void currentIncomingAuthenticationProtocolChanged();
-    void currentOutgoingAuthenticationProtocolChanged();
 
     void disconnectedModeEnabledChanged();
 
@@ -126,18 +105,13 @@ Q_SIGNALS:
     void serverTestDone();
 
 protected:
-    LIBACCOUNTWIZARD_NO_EXPORT virtual void createTransport();
-    [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Transport::TransportInfo createTransportInfo() const;
     LIBACCOUNTWIZARD_NO_EXPORT virtual void generateResource(const Resource::ResourceInfo &info);
 
 private:
-    LIBACCOUNTWIZARD_NO_EXPORT void createResource();
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Resource::ResourceInfo createPop3Resource() const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Resource::ResourceInfo createImapResource() const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Resource::ResourceInfo createKolabResource() const;
     LIBACCOUNTWIZARD_NO_EXPORT void checkConfiguration();
-    [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString convertOutgoingSecurityProtocol(int protocol) const;
-    [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString convertOutgoingAuthenticationProtocol(int protocol) const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString generateUniqueAccountName() const;
     [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString convertIncomingSecurityProtocol(int index) const;
     LIBACCOUNTWIZARD_NO_EXPORT void slotTestFail();
@@ -148,21 +122,13 @@ private:
     QString mIncomingHostName;
     uint mIncomingPort = 995;
 
-    // Outgoing
-    QString mOutgoingUserName;
-    QString mOutgoingHostName;
-
     QString mPassword;
-
-    int mOutgoingPort = 465;
 
     int mCurrentIncomingProtocol = 0; // POP3
 
     int mCurrentIncomingSecurityProtocol = 2; // NONE
-    int mCurrentOutgoingSecurityProtocol = 2; // NONE
 
     KIMAP::LoginJob::AuthenticationMode mCurrentIncomingAuthenticationProtocol = KIMAP::LoginJob::AuthenticationMode::ClearText;
-    KIMAP::LoginJob::AuthenticationMode mCurrentOutgoingAuthenticationProtocol = KIMAP::LoginJob::AuthenticationMode::ClearText;
 
     int mIdentityId = 0;
 
@@ -177,5 +143,8 @@ private:
     bool mServerTestInProgress = false;
 
     ServerTest *mServerTest = nullptr;
+
+    MailTransport::Transport *const mMailTransport;
 };
+
 QDebug operator<<(QDebug d, const ManualConfigurationBase &t);

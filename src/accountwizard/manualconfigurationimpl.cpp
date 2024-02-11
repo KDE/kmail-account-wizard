@@ -24,16 +24,4 @@ void ManualConfigurationImpl::generateResource(const Resource::ResourceInfo &inf
     resource->createResource();
 }
 
-void ManualConfigurationImpl::createTransport()
-{
-    // Create outgoing account
-    auto transport = new Transport(this);
-    transport->setTransportInfo(std::move(createTransportInfo()));
-
-    connect(transport, &Transport::info, this, &ManualConfigurationBase::info);
-    connect(transport, &Transport::finished, this, &ManualConfigurationBase::finished);
-    connect(transport, &Transport::error, this, &ManualConfigurationBase::error);
-    transport->createTransport();
-}
-
 #include "moc_manualconfigurationimpl.cpp"

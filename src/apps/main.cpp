@@ -66,6 +66,7 @@ int main(int argc, char **argv)
     qRegisterMetaType<IdentityBase *>("Identity *");
     qRegisterMetaType<ConfigurationModel *>("ConfigurationModel *");
     qmlRegisterUncreatableType<KIMAP::LoginJob *>("org.kde.pim.accountwizard", 1, 0, "LoginJob", u"Enum"_s);
+    qmlRegisterType<MailTransport::Transport>("org.kde.pim.accountwizard", 1, 0, "Transport");
     engine.loadFromModule("AccountWizard", "Main");
     // Exit on QML load error.
     if (engine.rootObjects().isEmpty()) {

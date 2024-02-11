@@ -17,6 +17,5 @@ public:
     ~ManualConfigurationImpl() override;
 
 protected:
-    LIBACCOUNTWIZARD_NO_EXPORT void createTransport() override;
     LIBACCOUNTWIZARD_NO_EXPORT void generateResource(const Resource::ResourceInfo &info) override;
 };

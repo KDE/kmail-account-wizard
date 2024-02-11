@@ -9,15 +9,27 @@
 #include "servertest.h"
 #include <KIMAP/LoginJob>
 #include <KLocalizedString>
+#include <MailTransport/TransportManager>
 #include <QRegularExpression>
 #include <QUrl>
 
 ManualConfigurationBase::ManualConfigurationBase(QObject *parent)
     : QObject{parent}
+    , mMailTransport(MailTransport::TransportManager::self()->createTransport())
 {
+    // Set appropriate defaults
+    mMailTransport->setStorePassword(true);
+    mMailTransport->setEncryption(MailTransport::Transport::EnumEncryption::SSL);
+    mMailTransport->setPort(587);
+    mMailTransport->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::PLAIN);
 }
 
 ManualConfigurationBase::~ManualConfigurationBase() = default;
+
+MailTransport::Transport *ManualConfigurationBase::mailTransport() const
+{
+    return mMailTransport;
+}
 
 void ManualConfigurationBase::setEmail(const QString &email)
 {
@@ -25,9 +37,11 @@ void ManualConfigurationBase::setEmail(const QString &email)
     QString hostname = email;
     hostname.remove(reg);
     setIncomingHostName(hostname);
-    setOutgoingHostName(hostname);
     setIncomingUserName(email);
-    setOutgoingUserName(email);
+
+    mMailTransport->setName(hostname);
+    mMailTransport->setHost(hostname);
+    mMailTransport->setUserName(email);
 }
 
 QStringList ManualConfigurationBase::incomingProtocols() const
@@ -131,10 +145,25 @@ Resource::ResourceInfo ManualConfigurationBase::createKolabResource() const
     return info;
 }
 
-void ManualConfigurationBase::createResource()
+void ManualConfigurationBase::generateResource(const Resource::ResourceInfo &info)
 {
-    // Create incoming account
-    qCDebug(ACCOUNTWIZARD_LOG) << " createManualAccount ";
+    qDebug() << " info " << info;
+    // Reimplement
+}
+
+void ManualConfigurationBase::setPassword(const QString &newPassword)
+{
+    mPassword = newPassword;
+}
+
+void ManualConfigurationBase::setIdentityId(int id)
+{
+    mIdentityId = id;
+}
+
+void ManualConfigurationBase::save()
+{
+    // create resource
     Resource::ResourceInfo info;
     switch (mCurrentIncomingProtocol) {
     case 0: // Pop3
@@ -150,84 +179,11 @@ void ManualConfigurationBase::createResource()
         qCWarning(ACCOUNTWIZARD_LOG) << " invalid protocol: " << mCurrentIncomingProtocol;
         return;
     }
-    // Debug it
     qCDebug(ACCOUNTWIZARD_LOG) << " info " << info;
-
     generateResource(std::move(info));
-}
 
-void ManualConfigurationBase::generateResource(const Resource::ResourceInfo &info)
-{
-    qDebug() << " info " << info;
-    // Reimplement
-}
-
-void ManualConfigurationBase::createTransport()
-{
-    // TODO reimplement
-}
-
-void ManualConfigurationBase::setPassword(const QString &newPassword)
-{
-    mPassword = newPassword;
-}
-
-void ManualConfigurationBase::setIdentityId(int id)
-{
-    mIdentityId = id;
-}
-
-void ManualConfigurationBase::createManualAccount()
-{
-    createResource();
-    createTransport();
-}
-
-Transport::TransportInfo ManualConfigurationBase::createTransportInfo() const
-{
-    Transport::TransportInfo info;
-    info.user = mOutgoingUserName;
-    info.host = mOutgoingHostName;
-    info.port = mOutgoingPort;
-    // info.authStr = mCurrentOutgoingAuthenticationProtocol;
-    info.encrStr = convertOutgoingSecurityProtocol(mCurrentOutgoingSecurityProtocol);
-    return info;
-}
-
-QString ManualConfigurationBase::convertOutgoingSecurityProtocol(int protocol) const
-{
-    switch (protocol) {
-    case 0:
-        return QStringLiteral("TLS");
-    case 1:
-        return QStringLiteral("SSL");
-    case 2:
-        return QStringLiteral("None");
-    }
-    Q_UNREACHABLE();
-    return {};
-}
-
-QString ManualConfigurationBase::convertOutgoingAuthenticationProtocol(int protocol) const
-{
-    switch (protocol) {
-    case 0: // Clear Text
-        return QStringLiteral("clear");
-    case 1: // LOGIN
-        return QStringLiteral("login");
-    case 2: // PLAIN
-        return QStringLiteral("plain");
-    case 3: // CRAM-MD5
-        return QStringLiteral("cram-md5");
-    case 4: // DIGEST-MD5
-        return QStringLiteral("digest-md5");
-    case 5: // NTLM
-        return QStringLiteral("ntlm");
-    case 6: // GSSAPI
-        return QStringLiteral("gssapi");
-    }
-    qCWarning(ACCOUNTWIZARD_LOG) << " Impossible to convert protocol: " << protocol;
-    return {};
+    // create transport
+    MailTransport::TransportManager::self()->addTransport(mMailTransport);
 }
 
 void ManualConfigurationBase::checkServer()
@@ -334,24 +290,10 @@ int ManualConfigurationBase::identityId() const
 
 void ManualConfigurationBase::checkConfiguration()
 {
-    const bool valid = !mIncomingUserName.trimmed().isEmpty() && !mIncomingHostName.trimmed().isEmpty() && !mOutgoingHostName.trimmed().isEmpty()
-        && !mOutgoingUserName.trimmed().isEmpty();
+    const bool valid = !mIncomingUserName.trimmed().isEmpty() && !mIncomingHostName.trimmed().isEmpty() && !mMailTransport->host().trimmed().isEmpty()
+        && !mMailTransport->userName().trimmed().isEmpty();
     mConfigurationIsValid = valid;
     Q_EMIT configurationIsValidChanged();
-}
-
-KIMAP::LoginJob::AuthenticationMode ManualConfigurationBase::currentOutgoingAuthenticationProtocol() const
-{
-    return mCurrentOutgoingAuthenticationProtocol;
-}
-
-void ManualConfigurationBase::setCurrentOutgoingAuthenticationProtocol(KIMAP::LoginJob::AuthenticationMode newCurrentOutgoingAuthenticationProtocols)
-{
-    if (mCurrentOutgoingAuthenticationProtocol == newCurrentOutgoingAuthenticationProtocols)
-        return;
-    mCurrentOutgoingAuthenticationProtocol = newCurrentOutgoingAuthenticationProtocols;
-    checkConfiguration();
-    Q_EMIT currentOutgoingAuthenticationProtocolChanged();
 }
 
 bool ManualConfigurationBase::disconnectedModeEnabled() const
@@ -380,20 +322,6 @@ void ManualConfigurationBase::setCurrentIncomingAuthenticationProtocol(KIMAP::Lo
     mCurrentIncomingAuthenticationProtocol = newCurrentIncomingAuthenticationProtocols;
     checkConfiguration();
     Q_EMIT currentIncomingAuthenticationProtocolChanged();
-}
-
-int ManualConfigurationBase::currentOutgoingSecurityProtocol() const
-{
-    return mCurrentOutgoingSecurityProtocol;
-}
-
-void ManualConfigurationBase::setCurrentOutgoingSecurityProtocol(int newCurrentOutgoingSecurityProtocol)
-{
-    if (mCurrentOutgoingSecurityProtocol == newCurrentOutgoingSecurityProtocol)
-        return;
-    mCurrentOutgoingSecurityProtocol = newCurrentOutgoingSecurityProtocol;
-    checkConfiguration();
-    Q_EMIT currentOutgoingSecurityProtocolChanged();
 }
 
 int ManualConfigurationBase::currentIncomingSecurityProtocol() const
@@ -494,64 +422,16 @@ void ManualConfigurationBase::setIncomingUserName(const QString &newIncomingUser
     }
 }
 
-QString ManualConfigurationBase::outgoingHostName() const
-{
-    return mOutgoingHostName;
-}
-
-void ManualConfigurationBase::setOutgoingHostName(const QString &newOutgoingHostName)
-{
-    if (mOutgoingHostName != newOutgoingHostName) {
-        mOutgoingHostName = newOutgoingHostName;
-        checkConfiguration();
-        Q_EMIT outgoingHostNameChanged();
-    }
-}
-
-int ManualConfigurationBase::outgoingPort() const
-{
-    return mOutgoingPort;
-}
-
-void ManualConfigurationBase::setOutgoingPort(int newPort)
-{
-    if (mOutgoingPort != newPort) {
-        mOutgoingPort = newPort;
-        checkConfiguration();
-        Q_EMIT outgoingPortChanged();
-    }
-}
-
-QString ManualConfigurationBase::outgoingUserName() const
-{
-    return mOutgoingUserName;
-}
-
-void ManualConfigurationBase::setOutgoingUserName(const QString &newOutgoingUserName)
-{
-    if (mOutgoingUserName != newOutgoingUserName) {
-        mOutgoingUserName = newOutgoingUserName;
-        checkConfiguration();
-        Q_EMIT outgoingUserNameChanged();
-    }
-}
-
 QDebug operator<<(QDebug d, const ManualConfigurationBase &t)
 {
     d.space() << "mIncomingUserName" << t.incomingUserName();
     d.space() << "mIncomingHostName" << t.incomingHostName();
     d.space() << "mIncomingPort" << t.incomingPort();
 
-    d.space() << "mOutgoingUserName" << t.outgoingUserName();
-    d.space() << "mOutgoingHostName" << t.outgoingHostName();
-    d.space() << "mOutgoingPort" << t.outgoingPort();
-
     d.space() << "mCurrentIncomingProtocol" << t.currentIncomingProtocol();
     d.space() << "mCurrentIncomingSecurityProtocol" << t.currentIncomingSecurityProtocol();
-    d.space() << "mCurrentOutgoingSecurityProtocol" << t.currentOutgoingSecurityProtocol();
 
     d.space() << "mCurrentIncomingAuthenticationProtocol" << t.currentIncomingAuthenticationProtocol();
-    d.space() << "mCurrentOutgoingAuthenticationProtocol" << t.currentOutgoingAuthenticationProtocol();
 
     d.space() << "mDisconnectedModeEnabled" << t.disconnectedModeEnabled();
     d.space() << "identity" << t.identityId();

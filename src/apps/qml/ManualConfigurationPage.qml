@@ -14,22 +14,27 @@ WizardPage {
 
     title: i18n("Manual Configuration")
 
-    readonly property Connections manuConfigurationConnections: Connections {
+    Connections {
         target: SetupManager.manualConfiguration
 
         function onIncomingHostNameChanged(): void {
             manualIncomingHostName.text = SetupManager.manualConfiguration.incomingHostName;
         }
 
-        function onOutgoingHostNameChanged(): void {
-            manualOutgoingHostName.text = SetupManager.manualConfiguration.outgoingHostName;
-        }
-
         function onIncomingUserNameChanged(): void {
             manualIncomingUserName.text = SetupManager.manualConfiguration.incomingUserName;
         }
-        function onOutgoingUserNameChanged(): void {
-            manualOutgoingUserName.text = SetupManager.manualConfiguration.outgoingUserName;
+    }
+
+    Connections {
+        target: SetupManager.manualConfiguration.mailTransport
+
+        function onUserNameChanged(): void {
+            manualOutgoingUserName.text = SetupManager.manualConfiguration.mailTransport.userName;
+        }
+
+        function onHostChanged(): void {
+            manualOutgoingHostName.text = SetupManager.manualConfiguration.mailTransport.host;
         }
     }
 
@@ -41,7 +46,9 @@ WizardPage {
 
     FormCard.FormCard {
         id: manualConfiguration
+
         visible: SetupManager.noConfigFound || root.explicitManualConfiguration
+
         FormCard.FormTextFieldDelegate {
             id: manualIncomingHostName
             label: i18n("Incoming server:")
@@ -52,6 +59,8 @@ WizardPage {
             }
         }
 
+        FormCard.FormDelegateSeparator {}
+
         FormCard.FormComboBoxDelegate {
             id: manualIncomingProtocol
             text: i18n("Protocol:")
@@ -61,6 +70,9 @@ WizardPage {
                 SetupManager.manualConfiguration.currentIncomingProtocol = currentIndex
             }
         }
+
+        FormCard.FormDelegateSeparator {}
+
         FormCard.FormSpinBoxDelegate {
             id: manualIncomingPort
             label: i18n("Port:")
@@ -68,15 +80,21 @@ WizardPage {
             from: 1
             to: 999
         }
+
+        FormCard.FormDelegateSeparator {}
+
         FormCard.FormComboBoxDelegate {
             id: manualIncomingSecurity
             text: i18n("Security:")
             model: SetupManager.manualConfiguration.securityProtocols
-            currentIndex: SetupManager.manualConfiguration.currentIncomingSecurityProtocol
+            Component.onCompleted: currentIndex = SetupManager.manualConfiguration.currentIncomingSecurityProtocol
             onCurrentIndexChanged: {
                 SetupManager.manualConfiguration.currentIncomingSecurityProtocol = currentIndex
             }
         }
+
+        FormCard.FormDelegateSeparator {}
+
         FormCard.FormComboBoxDelegate {
             id: manualIncomingAuthenticationMethod
             text: i18n("Authentication Method:")
@@ -91,11 +109,14 @@ WizardPage {
                 { value: LoginJob.GSSAPI, text: i18n("GSSAPI") },
                 { value: LoginJob.XOAuth2, text: i18n("XOAuth (Gmail)") },
             ]
-            currentIndex: indexOfValue(SetupManager.manualConfiguration.currentIncomingAuthenticationProtocol)
+            Component.onCompleted: currentIndex = indexOfValue(SetupManager.manualConfiguration.currentIncomingAuthenticationProtocol)
             onCurrentIndexChanged: {
                 SetupManager.manualConfiguration.currentIncomingAuthenticationProtocols = currentValue
             }
         }
+
+        FormCard.FormDelegateSeparator {}
+
         FormCard.FormTextFieldDelegate {
             id: manualIncomingUserName
             label: i18n("Username:")
@@ -105,6 +126,8 @@ WizardPage {
                 SetupManager.manualConfiguration.incomingUserName = manualIncomingUserName.text
             }
         }
+
+        FormCard.FormDelegateSeparator {}
 
         FormCard.FormCheckDelegate {
             id: disconnectedModeEnabled
@@ -124,58 +147,79 @@ WizardPage {
 
     FormCard.FormCard {
         visible: SetupManager.noConfigFound || root.explicitManualConfiguration
+
         FormCard.FormTextFieldDelegate {
             id: manualOutgoingHostName
             label: i18n("Outgoing server:")
             inputMethodHints: Qt.ImhUrlCharactersOnly
-            text: SetupManager.manualConfiguration.outgoingHostName
+            text: SetupManager.manualConfiguration.mailTransport.host
             onTextEdited: {
-                SetupManager.manualConfiguration.outgoingHostName = manualOutgoingHostName.text
+                SetupManager.manualConfiguration.mailTransport.host = manualOutgoingHostName.text
             }
         }
+
+        FormCard.FormDelegateSeparator {}
+
         FormCard.FormSpinBoxDelegate {
             id: manualOutgoingPort
             label: i18n("Port:")
-            value: SetupManager.manualConfiguration.outgoingPort
+            value: SetupManager.manualConfiguration.mailTransport.port
             from: 1
             to: 999
         }
+
+        FormCard.FormDelegateSeparator {}
+
         FormCard.FormComboBoxDelegate {
             id: manualOutgoingSecurity
             text: i18n("Security:")
-            model: SetupManager.manualConfiguration.securityProtocols
-            currentIndex: SetupManager.manualConfiguration.currentOutgoingSecurityProtocol
+            textRole: "text"
+            valueRole: "value"
+            model: [
+                { value: Transport.None, text: i18n("None") },
+                { value: Transport.SSL, text: i18n("TLS (recommanded)") },
+                { value: Transport.TLS, text: i18n("STARTTLS") }
+            ]
             onCurrentIndexChanged: {
-                SetupManager.manualConfiguration.currentOutgoingSecurityProtocol = currentIndex
+                SetupManager.manualConfiguration.mailTransport.encryption = currentIndex
             }
+            Component.onCompleted: currentIndex = indexOfValue(SetupManager.manualConfiguration.mailTransport.encryption)
         }
+
+        FormCard.FormDelegateSeparator {}
+
         FormCard.FormComboBoxDelegate {
             id: manualOutgoingAuthenticationMethod
             text: i18n("Authentication Method:")
             textRole: "text"
             valueRole: "value"
             model: [
-                { value: LoginJob.ClearText, text: i18n("Clear text") },
-                { value: LoginJob.Plain, text: i18n("PLAIN") },
-                { value: LoginJob.Login, text: i18n("LOGIN") },
-                { value: LoginJob.CramMD5, text: i18n("CRAM-MD5") },
-                { value: LoginJob.DigestMD5, text: i18n("DIGEST-MD5") },
-                { value: LoginJob.NTLM, text: i18n("NTLM") },
-                { value: LoginJob.GSSAPI, text: i18n("GSSAPI") },
-                { value: LoginJob.XOAuth2, text: i18n("XOAuth (Gmail)") },
+                { value: Transport.CLEAR, text: i18n("Clear text") },
+                { value: Transport.PLAIN, text: i18n("PLAIN") },
+                { value: Transport.LOGIN, text: i18n("LOGIN") },
+                { value: Transport.CRAM_MD5, text: i18n("CRAM-MD5") },
+                { value: Transport.CRAM_MD5, text: i18n("DIGEST-MD5") },
+                { value: Transport.NTLM, text: i18n("NTLM") },
+                { value: Transport.GSSAPI, text: i18n("GSSAPI") },
+                { value: Transport.XOAuth2, text: i18n("XOAuth (Gmail)") },
+                { value: Transport.APOP, text: i18n("APOP") },
             ]
-            currentIndex: indexOfValue(SetupManager.manualConfiguration.currentOutgoingAuthenticationProtocol)
+            Component.onCompleted: currentIndex = indexOfValue(SetupManager.manualConfiguration.mailTransport.authenticationType);
+
             onCurrentIndexChanged: {
-                SetupManager.manualConfiguration.currentOutgoingAuthenticationProtocols = currentValue
+                SetupManager.manualConfiguration.mailTransport.authenticationType = model[currentIndex].value;
             }
         }
+
+        FormCard.FormDelegateSeparator {}
+
         FormCard.FormTextFieldDelegate {
             id: manualOutgoingUserName
             label: i18n("Username:")
             inputMethodHints: Qt.ImhUrlCharactersOnly
-            text: SetupManager.manualConfiguration.outgoingUserName
+            text: SetupManager.manualConfiguration.mailTransport.userName
             onTextEdited: {
-                SetupManager.manualConfiguration.outgoingUserName = manualOutgoingUserName.text
+                SetupManager.manualConfiguration.mailTransport.userName = manualOutgoingUserName.text
             }
         }
     }
