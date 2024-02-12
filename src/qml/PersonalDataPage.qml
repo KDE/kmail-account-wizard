@@ -25,7 +25,7 @@ WizardPage {
             SetupManager.password = passwordField.text;
             SetupManager.searchConfiguration()
 
-            applicationWindow().pageStack.push(Qt.createComponent('AccountWizard', 'ConfigurationSelectionPage'))
+            applicationWindow().pageStack.push(Qt.createComponent('org.kde.pim.accountwizard', 'ConfigurationSelectionPage'))
         }
         enabled: isNotEmptyStr(addressEmailField.text) // Fix trimmed + is real email
     }

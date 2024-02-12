@@ -151,7 +151,7 @@ WizardPage {
                 currentIndex = indexOfValue(manualConfiguration.incomingAuthenticationProtocol);
             }
             onCurrentIndexChanged: {
-                manualConfiguration.incomingAuthenticationProtocols = currentValue;
+                manualConfiguration.incomingAuthenticationProtocol = currentValue;
             }
         }
 

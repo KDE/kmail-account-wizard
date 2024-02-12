@@ -5,6 +5,7 @@
 
 #include "serverconfiguration.h"
 #include <QAbstractListModel>
+#include <QtQmlIntegration/qqmlintegration.h>
 #include <optional>
 
 struct Configuration {
@@ -18,6 +19,9 @@ struct Configuration {
 /// in an user friendly way.
 class ConfigurationModel : public QAbstractListModel
 {
+    Q_OBJECT
+    QML_ELEMENT
+
 public:
     explicit ConfigurationModel(QObject *parent = nullptr);
 

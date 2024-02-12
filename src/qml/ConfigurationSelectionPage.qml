@@ -19,9 +19,9 @@ WizardPage {
         enabled: configurationGroup.checkedButton !== null
         onTriggered: {
             if (configurationGroup.checkedButton === configureManual) {
-                applicationWindow().pageStack.push(Qt.createComponent('AccountWizard', 'ManualConfigurationPage'));
+                applicationWindow().pageStack.push(Qt.createComponent('org.kde.pim.accountwizard', 'ManualConfigurationPage'));
             } else {
-                applicationWindow().pageStack.push(Qt.createComponent('AccountWizard', 'DetailsPage'));
+                applicationWindow().pageStack.push(Qt.createComponent('org.kde.pim.accountwizard', 'DetailsPage'));
                 SetupManager.createAutomaticAccount(configurationGroup.checkedButton.index);
             }
         }

@@ -4,15 +4,17 @@
 #pragma once
 #include "identityimpl.h"
 #include "ispdb/configurationmodel.h"
-#include "libaccountwizard_export.h"
 #include <QObject>
+#include <QtQmlIntegration/qqmlintegration.h>
 
 class IdentityImpl;
 class IspdbService;
 
-class LIBACCOUNTWIZARD_EXPORT SetupManager : public QObject
+class SetupManager : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
 
     Q_PROPERTY(QString email READ email WRITE setEmail NOTIFY emailChanged)
     Q_PROPERTY(QString password READ password WRITE setPassword NOTIFY passwordChanged)
@@ -53,12 +55,12 @@ Q_SIGNALS:
     void detailsChanged();
 
 private:
-    LIBACCOUNTWIZARD_NO_EXPORT void setEmailProvider(const EmailProvider &emailProvider, const QString &messageInfo);
-    LIBACCOUNTWIZARD_NO_EXPORT void clearConfiguration();
-    LIBACCOUNTWIZARD_NO_EXPORT void noConfigFound();
-    LIBACCOUNTWIZARD_NO_EXPORT void slotError(const QString &str);
-    LIBACCOUNTWIZARD_NO_EXPORT void slotFinished(const QString &str);
-    LIBACCOUNTWIZARD_NO_EXPORT void slotInfo(const QString &str);
+    void setEmailProvider(const EmailProvider &emailProvider, const QString &messageInfo);
+    void clearConfiguration();
+    void noConfigFound();
+    void slotError(const QString &str);
+    void slotFinished(const QString &str);
+    void slotInfo(const QString &str);
     QString mPassword;
     QString mSearchIspdbFoundMessage;
     QString mDetails;

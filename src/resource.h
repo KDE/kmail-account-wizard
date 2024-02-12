@@ -6,7 +6,6 @@
 
 #pragma once
 
-#include "libaccountwizard_private_export.h"
 #include "setupbase.h"
 #include <Akonadi/AgentInstance>
 #include <QDebug>
@@ -14,11 +13,11 @@
 #include <QObject>
 
 class KJob;
-class LIBACCOUNTWIZARD_TESTS_EXPORT Resource : public SetupBase
+class Resource : public SetupBase
 {
     Q_OBJECT
 public:
-    struct LIBACCOUNTWIZARD_TESTS_EXPORT ResourceInfo {
+    struct ResourceInfo {
         QString name;
         QString typeIdentifier;
         QMap<QString, QVariant> settings;
@@ -38,5 +37,6 @@ private:
     Akonadi::AgentInstance mInstance;
     ResourceInfo mResourceInfo;
 };
+
 Q_DECLARE_TYPEINFO(Resource::ResourceInfo, Q_RELOCATABLE_TYPE);
-LIBACCOUNTWIZARD_EXPORT QDebug operator<<(QDebug d, const Resource::ResourceInfo &t);
+QDebug operator<<(QDebug d, const Resource::ResourceInfo &t);

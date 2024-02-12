@@ -5,10 +5,10 @@
 */
 
 #pragma once
-#include "libaccountwizard_private_export.h"
+
 #include <QObject>
 
-class LIBACCOUNTWIZARD_TESTS_EXPORT SetupBase : public QObject
+class SetupBase : public QObject
 {
     Q_OBJECT
 public:

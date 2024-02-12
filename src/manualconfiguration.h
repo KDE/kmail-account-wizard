@@ -5,19 +5,20 @@
 */
 #pragma once
 
-#include "libaccountwizard_export.h"
 #include "resource.h"
 #include <KIMAP/LoginJob>
 #include <KIdentityManagementCore/Identity>
 #include <MailTransport/Transport>
 #include <QDebug>
 #include <QObject>
+#include <QtQmlIntegration/qqmlintegration.h>
 
 class ServerTest;
 
-class LIBACCOUNTWIZARD_EXPORT ManualConfiguration : public QObject
+class ManualConfiguration : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
     /// This property holds the mail transport configuration.
     Q_PROPERTY(MailTransport::Transport *mailTransport READ mailTransport CONSTANT FINAL)
@@ -127,12 +128,12 @@ protected:
     void generateResource(const Resource::ResourceInfo &info);
 
 private:
-    [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Resource::ResourceInfo createPop3Resource() const;
-    [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Resource::ResourceInfo createImapResource() const;
-    [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT Resource::ResourceInfo createKolabResource() const;
-    [[nodiscard]] LIBACCOUNTWIZARD_NO_EXPORT QString generateUniqueAccountName() const;
-    LIBACCOUNTWIZARD_NO_EXPORT void slotTestFail();
-    LIBACCOUNTWIZARD_NO_EXPORT void slotTestResult(const QString &result);
+    [[nodiscard]] Resource::ResourceInfo createPop3Resource() const;
+    [[nodiscard]] Resource::ResourceInfo createImapResource() const;
+    [[nodiscard]] Resource::ResourceInfo createKolabResource() const;
+    [[nodiscard]] QString generateUniqueAccountName() const;
+    void slotTestFail();
+    void slotTestResult(const QString &result);
 
     // Incoming
     QString mIncomingUserName;
