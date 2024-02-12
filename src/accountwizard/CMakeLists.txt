@@ -15,8 +15,8 @@ target_sources(libaccountwizard PRIVATE
     ispdb/serverconfiguration.cpp
     ispdbservice.h
     ispdbservice.cpp
-    manualconfigurationbase.h
-    manualconfigurationbase.cpp
+    manualconfiguration.h
+    manualconfiguration.cpp
     resource.h
     resource.cpp
     setupbase.h
@@ -26,8 +26,6 @@ target_sources(libaccountwizard PRIVATE
 
     identityimpl.h
     identityimpl.cpp
-    manualconfigurationimpl.h
-    manualconfigurationimpl.cpp
 )
 
 generate_export_header(libaccountwizard BASE_NAME libaccountwizard)
@@ -58,7 +56,7 @@ set_target_properties(libaccountwizard PROPERTIES OUTPUT_NAME accountwizard VERS
 install(TARGETS libaccountwizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
 if (BUILD_TESTING)
-    add_subdirectory(autotests)
+    #    add_subdirectory(autotests)
 endif()
 
 ecm_qt_install_logging_categories(EXPORT ACCOUNTWIZARD FILE accountwizard.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})

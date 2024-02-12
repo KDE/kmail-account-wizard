@@ -14,27 +14,50 @@ WizardPage {
 
     title: i18n("Manual Configuration")
 
+    actions: Kirigami.Action {
+        text: i18n("Recheck")
+        checked: true
+        onTriggered: manualConfiguration.checkServer()
+        enabled: manualConfiguration.configurationIsValid && !manualConfiguration.serverTestInProgress
+    }
+
+    nextAction {
+        text: i18n("Create Account")
+        onTriggered: {
+            manualConfiguration.save()
+        }
+        enabled: manualConfiguration.configurationIsValid
+    }
+
+    ManualConfiguration {
+        id: manualConfiguration
+
+        password: SetupManager.password
+        email: SetupManager.email
+        identity.fullName: SetupManager.fullName
+    }
+
     Connections {
-        target: SetupManager.manualConfiguration
+        target: manualConfiguration
 
         function onIncomingHostNameChanged(): void {
-            manualIncomingHostName.text = SetupManager.manualConfiguration.incomingHostName;
+            manualIncomingHostName.text = manualConfiguration.incomingHostName;
         }
 
         function onIncomingUserNameChanged(): void {
-            manualIncomingUserName.text = SetupManager.manualConfiguration.incomingUserName;
+            manualIncomingUserName.text = manualConfiguration.incomingUserName;
         }
     }
 
     Connections {
-        target: SetupManager.manualConfiguration.mailTransport
+        target: manualConfiguration.mailTransport
 
         function onUserNameChanged(): void {
-            manualOutgoingUserName.text = SetupManager.manualConfiguration.mailTransport.userName;
+            manualOutgoingUserName.text = manualConfiguration.mailTransport.userName;
         }
 
         function onHostChanged(): void {
-            manualOutgoingHostName.text = SetupManager.manualConfiguration.mailTransport.host;
+            manualOutgoingHostName.text = manualConfiguration.mailTransport.host;
         }
     }
 
@@ -45,17 +68,15 @@ WizardPage {
     }
 
     FormCard.FormCard {
-        id: manualConfiguration
-
         visible: SetupManager.noConfigFound || root.explicitManualConfiguration
 
         FormCard.FormTextFieldDelegate {
             id: manualIncomingHostName
             label: i18n("Incoming server:")
             inputMethodHints: Qt.ImhUrlCharactersOnly
-            text: SetupManager.manualConfiguration.incomingHostName;
-            onTextEdited: {
-                SetupManager.manualConfiguration.incomingHostName = manualIncomingHostName.text
+            text: manualConfiguration.incomingHostName;
+            onTextChanged: {
+                manualConfiguration.incomingHostName = manualIncomingHostName.text
             }
         }
 
@@ -64,10 +85,18 @@ WizardPage {
         FormCard.FormComboBoxDelegate {
             id: manualIncomingProtocol
             text: i18n("Protocol:")
-            model: SetupManager.manualConfiguration.incomingProtocols
-            currentIndex: SetupManager.manualConfiguration.currentIncomingProtocol
+            textRole: "text"
+            valueRole: "value"
+            model: [
+                { value: ManualConfiguration.IMAP, text: i18n("IMAP") },
+                { value: ManualConfiguration.POP3, text: i18n("POP3") },
+                { value: ManualConfiguration.KOLAB, text: i18n("Kolab") },
+            ]
+            Component.onCompleted: {
+                currentIndex = indexOfValue(manualConfiguration.incomingProtocol);
+            }
             onCurrentIndexChanged: {
-                SetupManager.manualConfiguration.currentIncomingProtocol = currentIndex
+                manualConfiguration.incomingProtocol = model[currentIndex].value;
             }
         }
 
@@ -76,9 +105,10 @@ WizardPage {
         FormCard.FormSpinBoxDelegate {
             id: manualIncomingPort
             label: i18n("Port:")
-            value: SetupManager.manualConfiguration.incomingPort
+            value: manualConfiguration.incomingPort
             from: 1
-            to: 999
+            to: 9999
+            onValueChanged: manualConfiguration.incomingPort = value
         }
 
         FormCard.FormDelegateSeparator {}
@@ -86,10 +116,18 @@ WizardPage {
         FormCard.FormComboBoxDelegate {
             id: manualIncomingSecurity
             text: i18n("Security:")
-            model: SetupManager.manualConfiguration.securityProtocols
-            Component.onCompleted: currentIndex = SetupManager.manualConfiguration.currentIncomingSecurityProtocol
+            textRole: "text"
+            valueRole: "value"
+            model: [
+                { value: LoginJob.SSLorTLS, text: i18n("SSL/TLS (recommanded)") },
+                { value: LoginJob.STARTTLS, text: i18n("StartTLS") },
+                { value: LoginJob.None, text: i18n("None") }
+            ]
+            Component.onCompleted: {
+                currentIndex = indexOfValue(manualConfiguration.incomingSecurityProtocol);
+            }
             onCurrentIndexChanged: {
-                SetupManager.manualConfiguration.currentIncomingSecurityProtocol = currentIndex
+                manualConfiguration.incomingSecurityProtocol = model[currentIndex].value;
             }
         }
 
@@ -109,9 +147,11 @@ WizardPage {
                 { value: LoginJob.GSSAPI, text: i18n("GSSAPI") },
                 { value: LoginJob.XOAuth2, text: i18n("XOAuth (Gmail)") },
             ]
-            Component.onCompleted: currentIndex = indexOfValue(SetupManager.manualConfiguration.currentIncomingAuthenticationProtocol)
+            Component.onCompleted: {
+                currentIndex = indexOfValue(manualConfiguration.incomingAuthenticationProtocol);
+            }
             onCurrentIndexChanged: {
-                SetupManager.manualConfiguration.currentIncomingAuthenticationProtocols = currentValue
+                manualConfiguration.incomingAuthenticationProtocols = currentValue;
             }
         }
 
@@ -121,9 +161,9 @@ WizardPage {
             id: manualIncomingUserName
             label: i18n("Username:")
             inputMethodHints: Qt.ImhUrlCharactersOnly
-            text: SetupManager.manualConfiguration.incomingUserName
-            onTextEdited: {
-                SetupManager.manualConfiguration.incomingUserName = manualIncomingUserName.text
+            text: manualConfiguration.incomingUserName
+            onTextChanged: {
+                manualConfiguration.incomingUserName = manualIncomingUserName.text
             }
         }
 
@@ -131,12 +171,12 @@ WizardPage {
 
         FormCard.FormCheckDelegate {
             id: disconnectedModeEnabled
-            visible: SetupManager.manualConfiguration.hasDisconnectedMode
+            visible: manualConfiguration.hasDisconnectedMode
             description: i18n("Download all messages for offline use")
             onCheckedChanged: {
-                SetupManager.manualConfiguration.disconnectedModeEnabled = checked
+                manualConfiguration.disconnectedModeEnabled = checked
             }
-            checked: SetupManager.manualConfiguration.disconnectedModeEnabled
+            checked: manualConfiguration.disconnectedModeEnabled
         }
     }
 
@@ -152,9 +192,10 @@ WizardPage {
             id: manualOutgoingHostName
             label: i18n("Outgoing server:")
             inputMethodHints: Qt.ImhUrlCharactersOnly
-            text: SetupManager.manualConfiguration.mailTransport.host
-            onTextEdited: {
-                SetupManager.manualConfiguration.mailTransport.host = manualOutgoingHostName.text
+            text: manualConfiguration.mailTransport.host
+            onTextChanged: {
+                manualConfiguration.mailTransport.host = text;
+                manualConfiguration.checkConfiguration();
             }
         }
 
@@ -163,9 +204,13 @@ WizardPage {
         FormCard.FormSpinBoxDelegate {
             id: manualOutgoingPort
             label: i18n("Port:")
-            value: SetupManager.manualConfiguration.mailTransport.port
+            value: manualConfiguration.mailTransport.port
             from: 1
-            to: 999
+            to: 9999
+            onValueChanged: {
+                manualConfiguration.mailTransport.port = value;
+                manualConfiguration.checkConfiguration();
+            }
         }
 
         FormCard.FormDelegateSeparator {}
@@ -177,13 +222,13 @@ WizardPage {
             valueRole: "value"
             model: [
                 { value: Transport.None, text: i18n("None") },
-                { value: Transport.SSL, text: i18n("TLS (recommanded)") },
-                { value: Transport.TLS, text: i18n("STARTTLS") }
+                { value: Transport.SSL, text: i18n("SSL/TLS (recommanded)") },
+                { value: Transport.TLS, text: i18n("StartTLS") }
             ]
             onCurrentIndexChanged: {
-                SetupManager.manualConfiguration.mailTransport.encryption = currentIndex
+                manualConfiguration.mailTransport.encryption = currentIndex
             }
-            Component.onCompleted: currentIndex = indexOfValue(SetupManager.manualConfiguration.mailTransport.encryption)
+            Component.onCompleted: currentIndex = indexOfValue(manualConfiguration.mailTransport.encryption)
         }
 
         FormCard.FormDelegateSeparator {}
@@ -204,10 +249,10 @@ WizardPage {
                 { value: Transport.XOAuth2, text: i18n("XOAuth (Gmail)") },
                 { value: Transport.APOP, text: i18n("APOP") },
             ]
-            Component.onCompleted: currentIndex = indexOfValue(SetupManager.manualConfiguration.mailTransport.authenticationType);
+            Component.onCompleted: currentIndex = indexOfValue(manualConfiguration.mailTransport.authenticationType);
 
             onCurrentIndexChanged: {
-                SetupManager.manualConfiguration.mailTransport.authenticationType = model[currentIndex].value;
+                manualConfiguration.mailTransport.authenticationType = model[currentIndex].value;
             }
         }
 
@@ -217,39 +262,11 @@ WizardPage {
             id: manualOutgoingUserName
             label: i18n("Username:")
             inputMethodHints: Qt.ImhUrlCharactersOnly
-            text: SetupManager.manualConfiguration.mailTransport.userName
-            onTextEdited: {
-                SetupManager.manualConfiguration.mailTransport.userName = manualOutgoingUserName.text
+            text: manualConfiguration.mailTransport.userName
+            onTextChanged: {
+                manualConfiguration.mailTransport.userName = manualOutgoingUserName.text;
+                manualConfiguration.checkConfiguration();
             }
-        }
-    }
-
-    FormCard.FormCard {
-        Layout.topMargin: Kirigami.Units.largeSpacing
-        visible: SetupManager.noConfigFound || root.explicitManualConfiguration
-
-        FormCard.FormButtonDelegate {
-            id: recheckAccountManualConfiguration
-            text: i18n("Recheck")
-            checked: true
-            onClicked: {
-                SetupManager.manualConfiguration.checkServer()
-            }
-            visible: manualConfiguration.visible
-            enabled: SetupManager.manualConfiguration.configurationIsValid && !SetupManager.manualConfiguration.serverTestInProgress
-        }
-
-        FormCard.FormDelegateSeparator {}
-
-        FormCard.FormButtonDelegate {
-            id: createAccountManualConfiguration
-            text: i18n("Create Account")
-            checked: true
-            onClicked: {
-                SetupManager.createManualAccount()
-            }
-            visible: manualConfiguration.visible
-            enabled: SetupManager.manualConfiguration.configurationIsValid
         }
     }
 }

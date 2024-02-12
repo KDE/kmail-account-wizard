@@ -14,7 +14,6 @@ SetupManager::SetupManager(QObject *parent)
     , mIdentity(new IdentityImpl(this))
     , mIspdbService(new IspdbService(this))
     , mConfigurationModel(new ConfigurationModel(this))
-    , mManualConfiguration(new ManualConfigurationImpl(this))
 {
     KEMailSettings emailSettings;
     setFullName(emailSettings.getSetting(KEMailSettings::RealName));
@@ -23,10 +22,6 @@ SetupManager::SetupManager(QObject *parent)
     connect(mIdentity, &IdentityBase::emailChanged, this, &SetupManager::emailChanged);
     connect(mIspdbService, &IspdbService::finished, this, &SetupManager::setEmailProvider);
     connect(mIspdbService, &IspdbService::notConfigFound, this, &SetupManager::noConfigFound);
-
-    connect(mManualConfiguration, &ManualConfigurationBase::error, this, &SetupManager::slotError);
-    connect(mManualConfiguration, &ManualConfigurationBase::finished, this, &SetupManager::slotFinished);
-    connect(mManualConfiguration, &ManualConfigurationBase::info, this, &SetupManager::slotInfo);
 }
 
 SetupManager::~SetupManager()
@@ -80,7 +75,6 @@ QString SetupManager::email() const
 void SetupManager::setEmail(const QString &email)
 {
     mIdentity->setEmail(email);
-    mManualConfiguration->setEmail(email);
     clearConfiguration();
 }
 
@@ -122,6 +116,7 @@ void SetupManager::createAutomaticAccount(int index)
     const auto configuration = configurationModel()->configuration(index);
     qCDebug(ACCOUNTWIZARD_LOG) << configuration.incoming;
 
+    /*
     mManualConfiguration->setIncomingHostName(configuration.incoming.hostname);
     mManualConfiguration->setIncomingPort(configuration.incoming.port);
     mManualConfiguration->setIncomingUserName(configuration.incoming.username);
@@ -160,6 +155,7 @@ void SetupManager::createAutomaticAccount(int index)
     }
     mManualConfiguration->setCurrentIncomingProtocol(configuration.incoming.type);
     mManualConfiguration->setPassword(mPassword);
+    */
 
     mIdentity->create();
 
@@ -209,18 +205,8 @@ void SetupManager::createAutomaticAccount(int index)
     }
 
     const uint id = mIdentity->uoid();
-    mManualConfiguration->setIdentityId(id);
+    // mManualConfiguration->setIdentityId(id);
 
-    mAccountCreated = true;
-}
-
-void SetupManager::createManualAccount()
-{
-    qCDebug(ACCOUNTWIZARD_LOG) << " Create Manual Account";
-    mIdentity->create();
-    const uint id = mIdentity->uoid();
-    mManualConfiguration->setIdentityId(id);
-    mManualConfiguration->save();
     mAccountCreated = true;
 }
 
@@ -247,11 +233,6 @@ void SetupManager::noConfigFound()
 {
     mNoConfigFound = true;
     Q_EMIT noConfigFoundChanged();
-}
-
-ManualConfigurationBase *SetupManager::manualConfiguration() const
-{
-    return mManualConfiguration;
 }
 
 #include "moc_setupmanager.cpp"

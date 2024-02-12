@@ -4,18 +4,20 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "manualconfigurationbase.h"
+#include "manualconfiguration.h"
 #include "accountwizard_debug.h"
 #include "servertest.h"
 #include <KIMAP/LoginJob>
+#include <KIdentityManagementCore/IdentityManager>
 #include <KLocalizedString>
 #include <MailTransport/TransportManager>
 #include <QRegularExpression>
 #include <QUrl>
 
-ManualConfigurationBase::ManualConfigurationBase(QObject *parent)
+ManualConfiguration::ManualConfiguration(QObject *parent)
     : QObject{parent}
     , mMailTransport(MailTransport::TransportManager::self()->createTransport())
+    , mIdentity(KIdentityManagementCore::IdentityManager::self()->newFromScratch(QString()))
 {
     // Set appropriate defaults
     mMailTransport->setStorePassword(true);
@@ -24,15 +26,33 @@ ManualConfigurationBase::ManualConfigurationBase(QObject *parent)
     mMailTransport->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::PLAIN);
 }
 
-ManualConfigurationBase::~ManualConfigurationBase() = default;
+ManualConfiguration::~ManualConfiguration() = default;
 
-MailTransport::Transport *ManualConfigurationBase::mailTransport() const
+MailTransport::Transport *ManualConfiguration::mailTransport() const
 {
     return mMailTransport;
 }
 
-void ManualConfigurationBase::setEmail(const QString &email)
+void ManualConfiguration::setIdentity(const KIdentityManagementCore::Identity &identity)
 {
+    mIdentity = identity;
+    Q_EMIT identityChanged();
+}
+
+KIdentityManagementCore::Identity ManualConfiguration::identity() const
+{
+    return mIdentity;
+}
+
+QString ManualConfiguration::email() const
+{
+    return mIdentity.primaryEmailAddress();
+}
+
+void ManualConfiguration::setEmail(const QString &email)
+{
+    mIdentity.setPrimaryEmailAddress(email);
+
     static QRegularExpression reg(QStringLiteral(".*@"));
     QString hostname = email;
     hostname.remove(reg);
@@ -44,37 +64,27 @@ void ManualConfigurationBase::setEmail(const QString &email)
     mMailTransport->setUserName(email);
 }
 
-QStringList ManualConfigurationBase::incomingProtocols() const
-{
-    return {i18n("POP3"), i18n("IMAP"), i18n("Kolab")};
-}
-
-QStringList ManualConfigurationBase::securityProtocols() const
-{
-    return {i18n("STARTTLS"), i18n("SSL/TLS"), i18n("None")};
-}
-
-QString ManualConfigurationBase::generateUniqueAccountName() const
+QString ManualConfiguration::generateUniqueAccountName() const
 {
     QString name;
-    switch (mCurrentIncomingProtocol) {
-    case 0: // Pop3
+    switch (mIncomingProtocol) {
+    case POP3:
         name = QStringLiteral("Pop3 (%1)").arg(mIncomingHostName);
         break;
-    case 1: // Imap
+    case IMAP:
         name = QStringLiteral("Imap (%1)").arg(mIncomingHostName);
         break;
-    case 2: // Kolab
+    case KOLAB:
         name = QStringLiteral("Kolab (%1)").arg(mIncomingHostName);
         break;
     default:
-        qCWarning(ACCOUNTWIZARD_LOG) << " invalid protocol: " << mCurrentIncomingProtocol;
+        qCWarning(ACCOUNTWIZARD_LOG) << " invalid protocol: " << mIncomingProtocol;
         break;
     }
     return name;
 }
 
-Resource::ResourceInfo ManualConfigurationBase::createPop3Resource() const
+Resource::ResourceInfo ManualConfiguration::createPop3Resource() const
 {
     Resource::ResourceInfo info;
     info.typeIdentifier = QStringLiteral("akonadi_pop3_resource");
@@ -90,21 +100,7 @@ Resource::ResourceInfo ManualConfigurationBase::createPop3Resource() const
     return info;
 }
 
-QString ManualConfigurationBase::convertIncomingSecurityProtocol(int index) const
-{
-    switch (index) {
-    case 0:
-        return QStringLiteral("STARTTLS");
-    case 1:
-        return QStringLiteral("SSL");
-    case 2:
-        return QStringLiteral("NONE");
-    }
-    Q_UNREACHABLE();
-    return {};
-}
-
-Resource::ResourceInfo ManualConfigurationBase::createImapResource() const
+Resource::ResourceInfo ManualConfiguration::createImapResource() const
 {
     Resource::ResourceInfo info;
     info.typeIdentifier = QStringLiteral("akonadi_imap_resource");
@@ -118,14 +114,14 @@ Resource::ResourceInfo ManualConfigurationBase::createImapResource() const
     settings.insert(QStringLiteral("IntervalCheckTime"), 60);
     settings.insert(QStringLiteral("SubscriptionEnabled"), true);
     settings.insert(QStringLiteral("UseDefaultIdentity"), false);
-    settings.insert(QStringLiteral("AccountIdentity"), mIdentityId);
-    settings.insert(QStringLiteral("Authentication"), mCurrentIncomingAuthenticationProtocol);
-    settings.insert(QStringLiteral("Safety"), convertIncomingSecurityProtocol(mCurrentIncomingSecurityProtocol));
+    settings.insert(QStringLiteral("AccountIdentity"), mIdentity.uoid());
+    settings.insert(QStringLiteral("Authentication"), mIncomingAuthenticationProtocol);
+    settings.insert(QStringLiteral("Safety"), mIncomingSecurityProtocol);
     info.settings = settings;
     return info;
 }
 
-Resource::ResourceInfo ManualConfigurationBase::createKolabResource() const
+Resource::ResourceInfo ManualConfiguration::createKolabResource() const
 {
     Resource::ResourceInfo info;
     info.name = generateUniqueAccountName();
@@ -133,7 +129,7 @@ Resource::ResourceInfo ManualConfigurationBase::createKolabResource() const
     settings.insert(QStringLiteral("ImapServer"), mIncomingPort);
     settings.insert(QStringLiteral("UserName"), mIncomingUserName);
     settings.insert(QStringLiteral("DisconnectedModeEnabled"), true);
-    settings.insert(QStringLiteral("AccountIdentity"), mIdentityId);
+    settings.insert(QStringLiteral("AccountIdentity"), mIdentity.uoid());
     settings.insert(QStringLiteral("UseDefaultIdentity"), false);
     settings.insert(QStringLiteral("SieveSupport"), true);
     settings.insert(QStringLiteral("IntervalCheckTime"), 60);
@@ -145,27 +141,36 @@ Resource::ResourceInfo ManualConfigurationBase::createKolabResource() const
     return info;
 }
 
-void ManualConfigurationBase::generateResource(const Resource::ResourceInfo &info)
+void ManualConfiguration::generateResource(const Resource::ResourceInfo &info)
 {
-    qDebug() << " info " << info;
-    // Reimplement
+    auto resource = new Resource(this);
+    resource->setResourceInfo(std::move(info));
+
+    connect(resource, &Resource::info, this, &ManualConfiguration::info);
+    connect(resource, &Resource::finished, this, &ManualConfiguration::finished);
+    connect(resource, &Resource::error, this, &ManualConfiguration::error);
+    resource->createResource();
 }
 
-void ManualConfigurationBase::setPassword(const QString &newPassword)
+QString ManualConfiguration::password() const
 {
-    mPassword = newPassword;
+    return mPassword;
 }
 
-void ManualConfigurationBase::setIdentityId(int id)
+void ManualConfiguration::setPassword(const QString &password)
 {
-    mIdentityId = id;
+    if (mPassword == password) {
+        return;
+    }
+    mPassword = password;
+    Q_EMIT passwordChanged();
 }
 
-void ManualConfigurationBase::save()
+void ManualConfiguration::save()
 {
     // create resource
     Resource::ResourceInfo info;
-    switch (mCurrentIncomingProtocol) {
+    switch (mIncomingProtocol) {
     case 0: // Pop3
         info = createPop3Resource();
         break;
@@ -176,33 +181,34 @@ void ManualConfigurationBase::save()
         info = createKolabResource();
         break;
     default:
-        qCWarning(ACCOUNTWIZARD_LOG) << " invalid protocol: " << mCurrentIncomingProtocol;
+        qCWarning(ACCOUNTWIZARD_LOG) << " invalid protocol: " << mIncomingProtocol;
         return;
     }
     qCDebug(ACCOUNTWIZARD_LOG) << " info " << info;
     generateResource(std::move(info));
 
     // create transport
+    mMailTransport->setPassword(mPassword);
     MailTransport::TransportManager::self()->addTransport(mMailTransport);
 }
 
-void ManualConfigurationBase::checkServer()
+void ManualConfiguration::checkServer()
 {
     qDebug() << " Verify server";
     if (!mServerTest) {
         mServerTest = new ServerTest(this);
-        connect(mServerTest, &ServerTest::testFail, this, &ManualConfigurationBase::slotTestFail);
-        connect(mServerTest, &ServerTest::testResult, this, &ManualConfigurationBase::slotTestResult);
+        connect(mServerTest, &ServerTest::testFail, this, &ManualConfiguration::slotTestFail);
+        connect(mServerTest, &ServerTest::testResult, this, &ManualConfiguration::slotTestResult);
     }
     QString protocol;
-    switch (mCurrentIncomingProtocol) {
-    case 0: // Pop3
+    switch (mIncomingProtocol) {
+    case POP3:
         protocol = QStringLiteral("pop");
         break;
-    case 1: // Imap
+    case IMAP:
         protocol = QStringLiteral("imap");
         break;
-    case 2: // Kolab
+    case KOLAB:
         protocol = QStringLiteral("imap");
         break;
     }
@@ -212,7 +218,7 @@ void ManualConfigurationBase::checkServer()
     mServerTest->test(mIncomingHostName, protocol);
 }
 
-void ManualConfigurationBase::slotTestFail()
+void ManualConfiguration::slotTestFail()
 {
     qDebug() << "slotTestFail  ";
     // TODO
@@ -220,11 +226,11 @@ void ManualConfigurationBase::slotTestFail()
     Q_EMIT serverTestInProgressModeChanged();
 }
 
-void ManualConfigurationBase::slotTestResult(const QString &result)
+void ManualConfiguration::slotTestResult(const QString &result)
 {
     qDebug() << "slotTestResult  " << result;
-    switch (mCurrentIncomingProtocol) {
-    case 0: { // Pop3
+    switch (mIncomingProtocol) {
+    case IncomingProtocol::POP3: { // Pop3
         if (result == QStringLiteral("ssl")) {
             setIncomingPort(995);
             // pop3Res.setOption( "UseTLS", true );
@@ -238,7 +244,7 @@ void ManualConfigurationBase::slotTestResult(const QString &result)
         }
         break;
     }
-    case 1: { // Imap
+    case IncomingProtocol::IMAP: { // Imap
         if (result == QStringLiteral("ssl")) {
             setIncomingPort(993);
             // pop3Res.setOption( "UseTLS", true );
@@ -283,25 +289,23 @@ void ManualConfigurationBase::slotTestResult(const QString &result)
     Q_EMIT serverTestInProgressModeChanged();
 }
 
-int ManualConfigurationBase::identityId() const
-{
-    return mIdentityId;
-}
-
-void ManualConfigurationBase::checkConfiguration()
+void ManualConfiguration::checkConfiguration()
 {
     const bool valid = !mIncomingUserName.trimmed().isEmpty() && !mIncomingHostName.trimmed().isEmpty() && !mMailTransport->host().trimmed().isEmpty()
         && !mMailTransport->userName().trimmed().isEmpty();
+    if (mConfigurationIsValid == valid) {
+        return;
+    }
     mConfigurationIsValid = valid;
     Q_EMIT configurationIsValidChanged();
 }
 
-bool ManualConfigurationBase::disconnectedModeEnabled() const
+bool ManualConfiguration::disconnectedModeEnabled() const
 {
     return mDisconnectedModeEnabled;
 }
 
-void ManualConfigurationBase::setDisconnectedModeEnabled(bool disconnectedMode)
+void ManualConfiguration::setDisconnectedModeEnabled(bool disconnectedMode)
 {
     if (mDisconnectedModeEnabled == disconnectedMode)
         return;
@@ -310,42 +314,47 @@ void ManualConfigurationBase::setDisconnectedModeEnabled(bool disconnectedMode)
     Q_EMIT disconnectedModeEnabledChanged();
 }
 
-KIMAP::LoginJob::AuthenticationMode ManualConfigurationBase::currentIncomingAuthenticationProtocol() const
+KIMAP::LoginJob::AuthenticationMode ManualConfiguration::incomingAuthenticationProtocol() const
 {
-    return mCurrentIncomingAuthenticationProtocol;
+    return mIncomingAuthenticationProtocol;
 }
 
-void ManualConfigurationBase::setCurrentIncomingAuthenticationProtocol(KIMAP::LoginJob::AuthenticationMode newCurrentIncomingAuthenticationProtocols)
+void ManualConfiguration::setIncomingAuthenticationProtocol(KIMAP::LoginJob::AuthenticationMode newIncomingAuthenticationProtocols)
 {
-    if (mCurrentIncomingAuthenticationProtocol == newCurrentIncomingAuthenticationProtocols)
+    if (mIncomingAuthenticationProtocol == newIncomingAuthenticationProtocols) {
         return;
-    mCurrentIncomingAuthenticationProtocol = newCurrentIncomingAuthenticationProtocols;
+    }
+
+    mIncomingAuthenticationProtocol = newIncomingAuthenticationProtocols;
     checkConfiguration();
-    Q_EMIT currentIncomingAuthenticationProtocolChanged();
+    Q_EMIT incomingAuthenticationProtocolChanged();
 }
 
-int ManualConfigurationBase::currentIncomingSecurityProtocol() const
+KIMAP::LoginJob::EncryptionMode ManualConfiguration::incomingSecurityProtocol() const
 {
-    return mCurrentIncomingSecurityProtocol;
+    return mIncomingSecurityProtocol;
 }
 
-void ManualConfigurationBase::setCurrentIncomingSecurityProtocol(int newCurrentIncomingSecurityProtocol)
+void ManualConfiguration::setIncomingSecurityProtocol(KIMAP::LoginJob::EncryptionMode securityProtocol)
 {
-    if (mCurrentIncomingSecurityProtocol == newCurrentIncomingSecurityProtocol)
+    if (mIncomingSecurityProtocol == securityProtocol) {
         return;
-    mCurrentIncomingSecurityProtocol = newCurrentIncomingSecurityProtocol;
-    if (mCurrentIncomingProtocol == 0) { // Pop3
-        if (mCurrentIncomingSecurityProtocol == 0) { // StartTLS
+    }
+
+    mIncomingSecurityProtocol = securityProtocol;
+
+    if (mIncomingProtocol == POP3) {
+        if (mIncomingSecurityProtocol == KIMAP::LoginJob::STARTTLS) {
             setIncomingPort(110);
-        } else if (mCurrentIncomingSecurityProtocol == 1) { // SSL
+        } else if (mIncomingSecurityProtocol == KIMAP::LoginJob::SSLorTLS) {
             setIncomingPort(995);
         } else {
             setIncomingPort(110);
         }
-    } else if (mCurrentIncomingProtocol == 1) { // Imap
-        if (mCurrentIncomingSecurityProtocol == 0) { // StartTLS
+    } else if (mIncomingProtocol == IMAP) { // Imap
+        if (mIncomingSecurityProtocol == KIMAP::LoginJob::STARTTLS) {
             setIncomingPort(143);
-        } else if (mCurrentIncomingSecurityProtocol == 1) { // SSL
+        } else if (mIncomingSecurityProtocol == KIMAP::LoginJob::SSLorTLS) {
             setIncomingPort(993);
         } else {
             setIncomingPort(143);
@@ -355,14 +364,14 @@ void ManualConfigurationBase::setCurrentIncomingSecurityProtocol(int newCurrentI
         setIncomingPort(993);
     }
     checkConfiguration();
-    Q_EMIT currentIncomingSecurityProtocolChanged();
+    Q_EMIT incomingSecurityProtocolChanged();
 }
 
-void ManualConfigurationBase::setCurrentIncomingProtocol(int newCurrentIncomingProtocol)
+void ManualConfiguration::setIncomingProtocol(IncomingProtocol newIncomingProtocol)
 {
-    if (mCurrentIncomingProtocol != newCurrentIncomingProtocol) {
-        mCurrentIncomingProtocol = newCurrentIncomingProtocol;
-        if (newCurrentIncomingProtocol == 0) { // Pop3
+    if (mIncomingProtocol != newIncomingProtocol) {
+        mIncomingProtocol = newIncomingProtocol;
+        if (newIncomingProtocol == 0) { // Pop3
             setIncomingPort(995);
             mHasDisconnectedMode = false;
         } else {
@@ -370,22 +379,22 @@ void ManualConfigurationBase::setCurrentIncomingProtocol(int newCurrentIncomingP
             mHasDisconnectedMode = true;
         }
         checkConfiguration();
-        Q_EMIT currentIncomingProtocolChanged();
+        Q_EMIT incomingProtocolChanged();
         Q_EMIT hasDisconnectedModeChanged();
     }
 }
 
-int ManualConfigurationBase::currentIncomingProtocol() const
+ManualConfiguration::IncomingProtocol ManualConfiguration::incomingProtocol() const
 {
-    return mCurrentIncomingProtocol;
+    return mIncomingProtocol;
 }
 
-QString ManualConfigurationBase::incomingHostName() const
+QString ManualConfiguration::incomingHostName() const
 {
     return mIncomingHostName;
 }
 
-void ManualConfigurationBase::setIncomingHostName(const QString &newIncomingHostName)
+void ManualConfiguration::setIncomingHostName(const QString &newIncomingHostName)
 {
     if (mIncomingHostName != newIncomingHostName) {
         mIncomingHostName = newIncomingHostName;
@@ -394,12 +403,12 @@ void ManualConfigurationBase::setIncomingHostName(const QString &newIncomingHost
     }
 }
 
-uint ManualConfigurationBase::incomingPort() const
+uint ManualConfiguration::incomingPort() const
 {
     return mIncomingPort;
 }
 
-void ManualConfigurationBase::setIncomingPort(uint newPort)
+void ManualConfiguration::setIncomingPort(uint newPort)
 {
     if (mIncomingPort != newPort) {
         mIncomingPort = newPort;
@@ -408,12 +417,12 @@ void ManualConfigurationBase::setIncomingPort(uint newPort)
     }
 }
 
-QString ManualConfigurationBase::incomingUserName() const
+QString ManualConfiguration::incomingUserName() const
 {
     return mIncomingUserName;
 }
 
-void ManualConfigurationBase::setIncomingUserName(const QString &newIncomingUserName)
+void ManualConfiguration::setIncomingUserName(const QString &newIncomingUserName)
 {
     if (mIncomingUserName != newIncomingUserName) {
         mIncomingUserName = newIncomingUserName;
@@ -422,20 +431,20 @@ void ManualConfigurationBase::setIncomingUserName(const QString &newIncomingUser
     }
 }
 
-QDebug operator<<(QDebug d, const ManualConfigurationBase &t)
+QDebug operator<<(QDebug d, const ManualConfiguration &t)
 {
     d.space() << "mIncomingUserName" << t.incomingUserName();
     d.space() << "mIncomingHostName" << t.incomingHostName();
     d.space() << "mIncomingPort" << t.incomingPort();
 
-    d.space() << "mCurrentIncomingProtocol" << t.currentIncomingProtocol();
-    d.space() << "mCurrentIncomingSecurityProtocol" << t.currentIncomingSecurityProtocol();
+    d.space() << "mIncomingProtocol" << t.incomingProtocol();
+    d.space() << "mIncomingSecurityProtocol" << t.incomingSecurityProtocol();
 
-    d.space() << "mCurrentIncomingAuthenticationProtocol" << t.currentIncomingAuthenticationProtocol();
+    d.space() << "mIncomingAuthenticationProtocol" << t.incomingAuthenticationProtocol();
 
     d.space() << "mDisconnectedModeEnabled" << t.disconnectedModeEnabled();
-    d.space() << "identity" << t.identityId();
+    d.space() << "identity" << t.identity().uoid();
     return d;
 }
 
-#include "moc_manualconfigurationbase.cpp"
+#include "moc_manualconfiguration.cpp"

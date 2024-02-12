@@ -5,14 +5,17 @@
 
 #include "identitybase.h"
 #include "ispdb/configurationmodel.h"
+#include "manualconfiguration.h"
 #include "setupmanager.h"
 
 #include <Akonadi/Control>
 #include <KAboutData>
 #include <KCrash>
 #include <KDBusService>
+#include <KIMAP/LoginJob>
 #include <KLocalizedContext>
 #include <KLocalizedString>
+#include <MailTransport/Transport>
 
 #include <QApplication>
 #include <QCommandLineParser>
@@ -63,10 +66,10 @@ int main(int argc, char **argv)
 
     SetupManager setupManager;
     qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "SetupManager", &setupManager);
-    qRegisterMetaType<IdentityBase *>("Identity *");
     qRegisterMetaType<ConfigurationModel *>("ConfigurationModel *");
-    qmlRegisterUncreatableType<KIMAP::LoginJob *>("org.kde.pim.accountwizard", 1, 0, "LoginJob", u"Enum"_s);
-    qmlRegisterType<MailTransport::Transport>("org.kde.pim.accountwizard", 1, 0, "Transport");
+    qmlRegisterType<ManualConfiguration>("org.kde.pim.accountwizard", 1, 0, "ManualConfiguration");
+    qmlRegisterUncreatableType<KIMAP::LoginJob>("org.kde.pim.accountwizard", 1, 0, "LoginJob", u"Enum"_s);
+    qmlRegisterUncreatableType<MailTransport::Transport>("org.kde.pim.accountwizard", 1, 0, "Transport", u"Enum"_s);
     engine.loadFromModule("AccountWizard", "Main");
     // Exit on QML load error.
     if (engine.rootObjects().isEmpty()) {
