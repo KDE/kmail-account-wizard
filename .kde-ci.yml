@@ -13,6 +13,7 @@ Dependencies:
     'frameworks/kdoctools': '@latest-kf6'
     'frameworks/kcrash': '@latest-kf6'
     'pim/kmime' : '@same'
+    'pim/kimap' : '@same'
 
 Options:
   require-passing-tests-on: [ 'Linux', 'FreeBSD' ]      
