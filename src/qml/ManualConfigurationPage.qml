@@ -90,7 +90,7 @@ WizardPage {
             model: [
                 { value: ManualConfiguration.IMAP, text: i18n("IMAP") },
                 { value: ManualConfiguration.POP3, text: i18n("POP3") },
-                { value: ManualConfiguration.KOLAB, text: i18n("Kolab") },
+                //{ value: ManualConfiguration.KOLAB, text: i18n("Kolab") },
             ]
             Component.onCompleted: {
                 currentIndex = indexOfValue(manualConfiguration.incomingProtocol);
@@ -153,7 +153,7 @@ WizardPage {
                 currentIndex = indexOfValue(manualConfiguration.incomingAuthenticationProtocol);
             }
             onCurrentIndexChanged: {
-                manualConfiguration.incomingAuthenticationProtocol = currentValue;
+                manualConfiguration.incomingAuthenticationProtocol = model[currentIndex].value;
             }
         }
 
