@@ -5,7 +5,6 @@
 #include "accountwizard_debug.h"
 #include "consolelog.h"
 #include "resource.h"
-#include <KIMAP/LoginJob>
 #include <KIdentityManagementCore/Identity>
 #include <KIdentityManagementCore/IdentityManager>
 #include <KLocalizedString>
@@ -225,16 +224,16 @@ void ConfigurationModel::createAutomaticAccount(int index)
             break;
         }
 
-        using KIMAPEncryption = KIMAP::LoginJob::EncryptionMode;
+        using TransportEncryption = MailTransport::Transport::EnumEncryption;
         switch (configuration.incoming.socketType) {
         case SSL:
-            settings.insert(u"Safety"_s, KIMAPEncryption::SSLorTLS);
+            settings.insert(u"Safety"_s, TransportEncryption::SSL);
             break;
         case StartTLS:
-            settings.insert(u"Safety"_s, KIMAPEncryption::STARTTLS);
+            settings.insert(u"Safety"_s, TransportEncryption::TLS);
             break;
         case None:
-            settings.insert(u"Safety"_s, KIMAPEncryption::Unencrypted);
+            settings.insert(u"Safety"_s, TransportEncryption::None);
             break;
         }
 

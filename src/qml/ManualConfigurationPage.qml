@@ -119,9 +119,9 @@ WizardPage {
             textRole: "text"
             valueRole: "value"
             model: [
-                { value: LoginJob.SSLorTLS, text: i18n("SSL/TLS (recommanded)") },
-                { value: LoginJob.STARTTLS, text: i18n("StartTLS") },
-                { value: LoginJob.None, text: i18n("None") }
+                { value: Transport.SSL, text: i18n("SSL/TLS (recommanded)") },
+                { value: Transport.TLS, text: i18n("StartTLS") },
+                { value: Transport.None, text: i18n("None") }
             ]
             Component.onCompleted: {
                 currentIndex = indexOfValue(manualConfiguration.incomingSecurityProtocol);
@@ -139,13 +139,15 @@ WizardPage {
             textRole: "text"
             valueRole: "value"
             model: [
-                { value: LoginJob.ClearText, text: i18n("Clear text") },
-                { value: LoginJob.Login, text: i18n("LOGIN") },
-                { value: LoginJob.CramMD5, text: i18n("CRAM-MD5") },
-                { value: LoginJob.DigestMD5, text: i18n("DIGEST-MD5") },
-                { value: LoginJob.NTLM, text: i18n("NTLM") },
-                { value: LoginJob.GSSAPI, text: i18n("GSSAPI") },
-                { value: LoginJob.XOAuth2, text: i18n("XOAuth (Gmail)") },
+                { value: Transport.CLEAR, text: i18n("Clear text") },
+                { value: Transport.PLAIN, text: i18n("PLAIN") },
+                { value: Transport.LOGIN, text: i18n("LOGIN") },
+                { value: Transport.CRAM_MD5, text: i18n("CRAM-MD5") },
+                { value: Transport.CRAM_MD5, text: i18n("DIGEST-MD5") },
+                { value: Transport.NTLM, text: i18n("NTLM") },
+                { value: Transport.GSSAPI, text: i18n("GSSAPI") },
+                { value: Transport.XOAuth2, text: i18n("XOAuth (Gmail)") },
+                { value: Transport.APOP, text: i18n("APOP") },
             ]
             Component.onCompleted: {
                 currentIndex = indexOfValue(manualConfiguration.incomingAuthenticationProtocol);

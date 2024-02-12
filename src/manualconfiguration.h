@@ -6,7 +6,6 @@
 #pragma once
 
 #include "resource.h"
-#include <KIMAP/LoginJob>
 #include <KIdentityManagementCore/Identity>
 #include <MailTransport/Transport>
 #include <QDebug>
@@ -40,10 +39,10 @@ class ManualConfiguration : public QObject
 
     Q_PROPERTY(bool configurationIsValid MEMBER mConfigurationIsValid NOTIFY configurationIsValidChanged FINAL)
     Q_PROPERTY(IncomingProtocol incomingProtocol READ incomingProtocol WRITE setIncomingProtocol NOTIFY incomingProtocolChanged FINAL)
-    Q_PROPERTY(KIMAP::LoginJob::EncryptionMode incomingSecurityProtocol READ incomingSecurityProtocol WRITE setIncomingSecurityProtocol NOTIFY
+    Q_PROPERTY(MailTransport::Transport::EnumEncryption incomingSecurityProtocol READ incomingSecurityProtocol WRITE setIncomingSecurityProtocol NOTIFY
                    incomingSecurityProtocolChanged FINAL)
-    Q_PROPERTY(KIMAP::LoginJob::AuthenticationMode incomingAuthenticationProtocol READ incomingAuthenticationProtocol WRITE setIncomingAuthenticationProtocol
-                   NOTIFY incomingAuthenticationProtocolChanged FINAL)
+    Q_PROPERTY(MailTransport::Transport::EnumAuthenticationType incomingAuthenticationProtocol READ incomingAuthenticationProtocol WRITE
+                   setIncomingAuthenticationProtocol NOTIFY incomingAuthenticationProtocolChanged FINAL)
 
     Q_PROPERTY(bool disconnectedModeEnabled READ disconnectedModeEnabled WRITE setDisconnectedModeEnabled NOTIFY disconnectedModeEnabledChanged FINAL)
 
@@ -80,11 +79,11 @@ public:
     [[nodiscard]] IncomingProtocol incomingProtocol() const;
     void setIncomingProtocol(IncomingProtocol incomingProtocol);
 
-    [[nodiscard]] KIMAP::LoginJob::EncryptionMode incomingSecurityProtocol() const;
-    void setIncomingSecurityProtocol(KIMAP::LoginJob::EncryptionMode incomingSecurityProtocol);
+    [[nodiscard]] MailTransport::Transport::EnumEncryption incomingSecurityProtocol() const;
+    void setIncomingSecurityProtocol(MailTransport::Transport::EnumEncryption incomingSecurityProtocol);
 
-    [[nodiscard]] KIMAP::LoginJob::AuthenticationMode incomingAuthenticationProtocol() const;
-    void setIncomingAuthenticationProtocol(KIMAP::LoginJob::AuthenticationMode incomingAuthenticationProtocols);
+    [[nodiscard]] MailTransport::Transport::EnumAuthenticationType incomingAuthenticationProtocol() const;
+    void setIncomingAuthenticationProtocol(MailTransport::Transport::EnumAuthenticationType incomingAuthenticationProtocols);
 
     [[nodiscard]] bool disconnectedModeEnabled() const;
     void setDisconnectedModeEnabled(bool disconnectedMode);
@@ -143,8 +142,8 @@ private:
     QString mPassword;
 
     IncomingProtocol mIncomingProtocol = IMAP;
-    KIMAP::LoginJob::EncryptionMode mIncomingSecurityProtocol = KIMAP::LoginJob::SSLorTLS;
-    KIMAP::LoginJob::AuthenticationMode mIncomingAuthenticationProtocol = KIMAP::LoginJob::AuthenticationMode::Login;
+    MailTransport::Transport::EnumEncryption mIncomingSecurityProtocol = MailTransport::Transport::EnumEncryption::SSL;
+    MailTransport::Transport::EnumAuthenticationType mIncomingAuthenticationProtocol = MailTransport::Transport::EnumAuthenticationType::LOGIN;
 
     // configuration is Valid
     bool mConfigurationIsValid = false;

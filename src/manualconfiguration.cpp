@@ -8,7 +8,6 @@
 #include "accountwizard_debug.h"
 #include "consolelog.h"
 #include "servertest.h"
-#include <KIMAP/LoginJob>
 #include <KIdentityManagementCore/IdentityManager>
 #include <KLocalizedString>
 #include <MailTransport/TransportManager>
@@ -319,12 +318,12 @@ void ManualConfiguration::setDisconnectedModeEnabled(bool disconnectedMode)
     Q_EMIT disconnectedModeEnabledChanged();
 }
 
-KIMAP::LoginJob::AuthenticationMode ManualConfiguration::incomingAuthenticationProtocol() const
+MailTransport::Transport::EnumAuthenticationType ManualConfiguration::incomingAuthenticationProtocol() const
 {
     return mIncomingAuthenticationProtocol;
 }
 
-void ManualConfiguration::setIncomingAuthenticationProtocol(KIMAP::LoginJob::AuthenticationMode newIncomingAuthenticationProtocols)
+void ManualConfiguration::setIncomingAuthenticationProtocol(MailTransport::Transport::EnumAuthenticationType newIncomingAuthenticationProtocols)
 {
     if (mIncomingAuthenticationProtocol == newIncomingAuthenticationProtocols) {
         return;
@@ -335,12 +334,12 @@ void ManualConfiguration::setIncomingAuthenticationProtocol(KIMAP::LoginJob::Aut
     Q_EMIT incomingAuthenticationProtocolChanged();
 }
 
-KIMAP::LoginJob::EncryptionMode ManualConfiguration::incomingSecurityProtocol() const
+MailTransport::Transport::EnumEncryption ManualConfiguration::incomingSecurityProtocol() const
 {
     return mIncomingSecurityProtocol;
 }
 
-void ManualConfiguration::setIncomingSecurityProtocol(KIMAP::LoginJob::EncryptionMode securityProtocol)
+void ManualConfiguration::setIncomingSecurityProtocol(MailTransport::Transport::EnumEncryption securityProtocol)
 {
     if (mIncomingSecurityProtocol == securityProtocol) {
         return;
@@ -349,17 +348,17 @@ void ManualConfiguration::setIncomingSecurityProtocol(KIMAP::LoginJob::Encryptio
     mIncomingSecurityProtocol = securityProtocol;
 
     if (mIncomingProtocol == POP3) {
-        if (mIncomingSecurityProtocol == KIMAP::LoginJob::STARTTLS) {
+        if (mIncomingSecurityProtocol == MailTransport::Transport::EnumEncryption::TLS) {
             setIncomingPort(110);
-        } else if (mIncomingSecurityProtocol == KIMAP::LoginJob::SSLorTLS) {
+        } else if (mIncomingSecurityProtocol == MailTransport::Transport::EnumEncryption::SSL) {
             setIncomingPort(995);
         } else {
             setIncomingPort(110);
         }
-    } else if (mIncomingProtocol == IMAP) { // Imap
-        if (mIncomingSecurityProtocol == KIMAP::LoginJob::STARTTLS) {
+    } else if (mIncomingProtocol == IMAP) {
+        if (mIncomingSecurityProtocol == MailTransport::Transport::EnumEncryption::TLS) {
             setIncomingPort(143);
-        } else if (mIncomingSecurityProtocol == KIMAP::LoginJob::SSLorTLS) {
+        } else if (mIncomingSecurityProtocol == MailTransport::Transport::EnumEncryption::SSL) {
             setIncomingPort(993);
         } else {
             setIncomingPort(143);

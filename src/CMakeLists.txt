@@ -55,7 +55,6 @@ target_link_libraries(accountwizard_static PUBLIC
     KPim6::AkonadiWidgets
     KPim6::MailTransport
     KPim6::Mime
-    KPim6::IMAP
     KPim6::IdentityManagementCore
     KF6::KIOCore
     KF6::WidgetsAddons
