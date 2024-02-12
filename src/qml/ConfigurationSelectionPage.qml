@@ -96,7 +96,9 @@ WizardPage {
             }
         }
 
-        FormCard.FormDelegateSeparator {}
+        FormCard.FormDelegateSeparator {
+            visible: configurationRepeater.count > 0 || SetupManager.noConfigFound
+        }
 
         FormCard.FormRadioDelegate {
             id: configureManual
