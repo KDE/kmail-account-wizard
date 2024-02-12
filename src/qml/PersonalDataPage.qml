@@ -20,7 +20,7 @@ WizardPage {
 
     nextAction {
         onTriggered: {
-            SetupManager.name = nameField.text;
+            SetupManager.fullName = nameField.text;
             SetupManager.email = addressEmailField.text;
             SetupManager.password = passwordField.text;
             SetupManager.searchConfiguration()
@@ -56,8 +56,8 @@ WizardPage {
             id: nameField
             label: i18n("Full name:")
             placeholderText: i18nc("Generic name", "John Smith")
-            text: SetupManager.name
-            onTextEdited: SetupManager.name = text
+            text: SetupManager.fullName
+            onTextEdited: SetupManager.fullName = text
         }
 
         FormCard.FormDelegateSeparator {}
