@@ -6,13 +6,17 @@
 
 #include "manualconfiguration.h"
 #include "accountwizard_debug.h"
+#include "consolelog.h"
 #include "servertest.h"
 #include <KIMAP/LoginJob>
 #include <KIdentityManagementCore/IdentityManager>
 #include <KLocalizedString>
 #include <MailTransport/TransportManager>
+#include <QQmlEngine>
 #include <QRegularExpression>
 #include <QUrl>
+
+using namespace Qt::Literals::StringLiterals;
 
 ManualConfiguration::ManualConfiguration(QObject *parent)
     : QObject{parent}
@@ -143,12 +147,13 @@ Resource::ResourceInfo ManualConfiguration::createKolabResource() const
 
 void ManualConfiguration::generateResource(const Resource::ResourceInfo &info)
 {
-    auto resource = new Resource(this);
-    resource->setResourceInfo(std::move(info));
+    auto engine = qmlEngine(this);
+    Q_ASSERT(engine);
+    auto consoleLog = engine->singletonInstance<ConsoleLog *>(u"org.kde.pim.accountwizard"_s, u"ConsoleLog"_s);
+    Q_ASSERT(consoleLog);
 
-    connect(resource, &Resource::info, this, &ManualConfiguration::info);
-    connect(resource, &Resource::finished, this, &ManualConfiguration::finished);
-    connect(resource, &Resource::error, this, &ManualConfiguration::error);
+    auto resource = new Resource(consoleLog, this);
+    resource->setResourceInfo(std::move(info));
     resource->createResource();
 }
 

@@ -39,10 +39,18 @@ public:
     QHash<int, QByteArray> roleNames() const override;
 
     void setEmailProvider(const EmailProvider &emailProvider);
+    void setPassword(const QString &password);
+    void setFullName(const QString &fullName);
+    void setEmail(const QString &email);
     void clear();
 
     const Configuration &configuration(int index) const;
 
+    Q_INVOKABLE void createAutomaticAccount(int index);
+
 private:
+    QString m_password;
+    QString m_fullName;
+    QString m_email;
     std::vector<Configuration> m_configurations;
 };

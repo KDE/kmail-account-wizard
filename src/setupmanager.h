@@ -2,12 +2,10 @@
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 #pragma once
-#include "identityimpl.h"
 #include "ispdb/configurationmodel.h"
 #include <QObject>
 #include <QtQmlIntegration/qqmlintegration.h>
 
-class IdentityImpl;
 class IspdbService;
 
 class SetupManager : public QObject
@@ -19,7 +17,6 @@ class SetupManager : public QObject
     Q_PROPERTY(QString email READ email WRITE setEmail NOTIFY emailChanged)
     Q_PROPERTY(QString password READ password WRITE setPassword NOTIFY passwordChanged)
     Q_PROPERTY(QString fullName READ fullName WRITE setFullName NOTIFY fullNameChanged)
-    Q_PROPERTY(IdentityBase *identity READ identity CONSTANT)
     Q_PROPERTY(ConfigurationModel *configurationModel READ configurationModel CONSTANT)
     Q_PROPERTY(QString searchIspdbFoundMessage MEMBER mSearchIspdbFoundMessage NOTIFY searchIspdbFoundMessageChanged)
     Q_PROPERTY(bool noConfigFound MEMBER mNoConfigFound NOTIFY noConfigFoundChanged)
@@ -38,11 +35,9 @@ public:
     [[nodiscard]] QString password() const;
     void setPassword(const QString &password);
 
-    IdentityBase *identity() const;
     ConfigurationModel *configurationModel() const;
 
     Q_INVOKABLE void searchConfiguration();
-    Q_INVOKABLE void createAutomaticAccount(int index);
 
     [[nodiscard]] QString details() const;
 
@@ -62,11 +57,11 @@ private:
     void slotFinished(const QString &str);
     void slotInfo(const QString &str);
     QString mPassword;
+    QString mEmail;
+    QString mFullName;
     QString mSearchIspdbFoundMessage;
     QString mDetails;
-    IdentityImpl *const mIdentity;
     IspdbService *const mIspdbService;
     ConfigurationModel *const mConfigurationModel;
     bool mNoConfigFound = false;
-    bool mAccountCreated = false;
 };

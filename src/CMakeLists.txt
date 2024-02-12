@@ -16,11 +16,9 @@ qt_add_qml_module(accountwizard_static
         qml/PersonalDataPage.qml
         qml/WizardPage.qml
     SOURCES
+        consolelog.cpp
+        consolelog.h
         foreigntypes.h
-        identitybase.h
-        identitybase.cpp
-        setupmanager.h
-        setupmanager.cpp
 
         ispdb/configurationmodel.h
         ispdb/configurationmodel.cpp
@@ -32,13 +30,10 @@ qt_add_qml_module(accountwizard_static
         manualconfiguration.cpp
         resource.h
         resource.cpp
-        setupbase.h
-        setupbase.cpp
+        setupmanager.h
+        setupmanager.cpp
         servertest.h
         servertest.cpp
-
-        identityimpl.h
-        identityimpl.cpp
     VERSION
         1.0
 )

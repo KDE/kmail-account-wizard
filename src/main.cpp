@@ -3,19 +3,12 @@
 // SPDX-FileCopyrightText: 2023-2024 Laurent Montel <montel.org>
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
-#include "identitybase.h"
-#include "ispdb/configurationmodel.h"
-#include "manualconfiguration.h"
-#include "setupmanager.h"
-
 #include <Akonadi/Control>
 #include <KAboutData>
 #include <KCrash>
 #include <KDBusService>
-#include <KIMAP/LoginJob>
 #include <KLocalizedContext>
 #include <KLocalizedString>
-#include <MailTransport/Transport>
 
 #include <QApplication>
 #include <QCommandLineParser>
@@ -64,13 +57,8 @@ int main(int argc, char **argv)
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
 
-    // SetupManager setupManager;
-    // qmlRegisterSingletonInstance("org.kde.pim.accountwizard", 1, 0, "SetupManager", &setupManager);
-    // qRegisterMetaType<ConfigurationModel *>("ConfigurationModel *");
-    // qmlRegisterType<ManualConfiguration>("org.kde.pim.accountwizard", 1, 0, "ManualConfiguration");
-    // qmlRegisterUncreatableType<KIMAP::LoginJob>("org.kde.pim.accountwizard", 1, 0, "LoginJob", u"Enum"_s);
-    // qmlRegisterUncreatableType<MailTransport::Transport>("org.kde.pim.accountwizard", 1, 0, "Transport", u"Enum"_s);
     engine.loadFromModule("org.kde.pim.accountwizard", "Main");
+
     // Exit on QML load error.
     if (engine.rootObjects().isEmpty()) {
         qWarning() << " Error during loading main.qml";

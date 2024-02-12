@@ -6,14 +6,15 @@
 
 #pragma once
 
-#include "setupbase.h"
 #include <Akonadi/AgentInstance>
 #include <QDebug>
 #include <QMap>
 #include <QObject>
 
 class KJob;
-class Resource : public SetupBase
+class ConsoleLog;
+
+class Resource : public QObject
 {
     Q_OBJECT
 public:
@@ -24,7 +25,7 @@ public:
         [[nodiscard]] bool isValid() const;
     };
 
-    explicit Resource(QObject *parent = nullptr);
+    explicit Resource(ConsoleLog *consoleLog, QObject *parent = nullptr);
     ~Resource() override;
 
     void createResource();
@@ -36,6 +37,7 @@ private:
     void instanceCreateResult(KJob *job);
     Akonadi::AgentInstance mInstance;
     ResourceInfo mResourceInfo;
+    ConsoleLog *const mConsoleLog;
 };
 
 Q_DECLARE_TYPEINFO(Resource::ResourceInfo, Q_RELOCATABLE_TYPE);

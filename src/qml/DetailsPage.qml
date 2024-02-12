@@ -6,9 +6,8 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
-import org.kde.pim.accountwizard
+import org.kde.pim.accountwizard as Account
 import org.kde.kirigamiaddons.formcard as FormCard
-import org.kde.kirigamiaddons.components as Component
 
 WizardPage {
     id: root
@@ -28,9 +27,38 @@ WizardPage {
     FormCard.FormCard {
         id: details
 
+        Repeater {
+            id: repeater
+
+            model: Account.ConsoleLog
+
+            delegate: ColumnLayout {
+                id: logDelegate
+
+                required property int index
+                required property string output
+                required property int type
+
+                width: parent.width
+
+                FormCard.FormDelegateSeparator {
+                    visible: index !== 0
+                    opacity: 1
+                }
+
+                FormCard.FormTextDelegate {
+                    id: detailsInfo
+                    text: logDelegate.output
+                    textItem.wrapMode: Text.WordWrap
+                }
+            }
+        }
+
         FormCard.FormTextDelegate {
-            id: detailsInfo
-            text: SetupManager.details.length > 0 ? SetupManager.details : i18nc("Placeholder", "No details available.")
+            id: placeholder
+
+            visible: repeater.count === 0
+            text: i18nc("Placeholder", "No details available.")
             textItem.wrapMode: Text.WordWrap
         }
     }
