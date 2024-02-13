@@ -5,28 +5,12 @@
 */
 
 #include "manualconfigurationtest.h"
-#include "manualconfigurationbase.h"
+#include "manualconfiguration.h"
+
 #include <QSignalSpy>
 #include <QTest>
+
 QTEST_MAIN(ManualConfigurationTest)
-class ManualConfigurationImplTest : public ManualConfigurationBase
-{
-public:
-    explicit ManualConfigurationImplTest(QObject *parent = nullptr)
-        : ManualConfigurationBase(parent)
-    {
-    }
-
-protected:
-    void generateResource(const Resource::ResourceInfo &info) override
-    {
-        mResourceInfo = info;
-    }
-
-private:
-    Resource::ResourceInfo mResourceInfo;
-    QString mTransportInfo;
-};
 
 ManualConfigurationTest::ManualConfigurationTest(QObject *parent)
     : QObject{parent}
@@ -35,16 +19,13 @@ ManualConfigurationTest::ManualConfigurationTest(QObject *parent)
 
 void ManualConfigurationTest::shouldHaveDefaultValues()
 {
-    ManualConfigurationImplTest w;
+    ManualConfiguration w;
     QVERIFY(w.incomingHostName().isEmpty());
     QVERIFY(w.incomingUserName().isEmpty());
 
-    QVERIFY(!w.incomingProtocols().isEmpty());
-    QVERIFY(!w.securityProtocols().isEmpty());
-
-    QCOMPARE(w.currentIncomingProtocol(), 0);
-    QCOMPARE(w.currentIncomingSecurityProtocol(), 2);
-    QCOMPARE(w.currentIncomingAuthenticationProtocol(), 0);
+    QCOMPARE(w.incomingProtocol(), 0);
+    QCOMPARE(w.incomingSecurityProtocol(), MailTransport::Transport::EnumEncryption::SSL);
+    QCOMPARE(w.incomingAuthenticationProtocol(), MailTransport::Transport::EnumAuthenticationType::LOGIN);
     QCOMPARE(w.incomingPort(), 995);
     QVERIFY(!w.disconnectedModeEnabled());
 
@@ -58,10 +39,10 @@ void ManualConfigurationTest::shouldHaveDefaultValues()
 
 void ManualConfigurationTest::shouldAssignEmail()
 {
-    ManualConfigurationImplTest w;
-    QSignalSpy incomingHostNameChanged(&w, &ManualConfigurationImplTest::incomingHostNameChanged);
+    ManualConfiguration w;
+    QSignalSpy incomingHostNameChanged(&w, &ManualConfiguration::incomingHostNameChanged);
     QSignalSpy outgoingHostNameChanged(w.mailTransport(), &MailTransport::Transport::hostChanged);
-    QSignalSpy incomingUserNameChanged(&w, &ManualConfigurationImplTest::incomingUserNameChanged);
+    QSignalSpy incomingUserNameChanged(&w, &ManualConfiguration::incomingUserNameChanged);
     QSignalSpy outgoingUserNameChanged(w.mailTransport(), &MailTransport::Transport::userNameChanged);
 
     w.setEmail(QStringLiteral("foo@kde.org"));
@@ -78,7 +59,7 @@ void ManualConfigurationTest::shouldAssignEmail()
 void ManualConfigurationTest::createResource()
 {
     // TODO
-    ManualConfigurationImplTest w;
+    ManualConfiguration w;
     // w.save();
     //  TODO
 }

@@ -20,9 +20,7 @@ void SetupManagerTest::shouldHaveDefaultValues()
     // QVERIFY(w.email().isEmpty());
     // QVERIFY(w.password().isEmpty());
 
-    QVERIFY(w.identity());
     QVERIFY(w.configurationModel());
-    QVERIFY(w.manualConfiguration());
 }
 
 #include "moc_setupmanagertest.cpp"

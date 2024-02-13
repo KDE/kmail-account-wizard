@@ -77,6 +77,10 @@ add_executable(accountwizard
 
 target_link_libraries(accountwizard PRIVATE accountwizard_static accountwizard_staticplugin)
 
+if (BUILD_TESTING)
+    add_subdirectory(autotests)
+endif()
+
 ## Install
 install(TARGETS accountwizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(PROGRAMS org.kde.accountwizard.desktop DESTINATION ${KDE_INSTALL_APPDIR})
