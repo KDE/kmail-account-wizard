@@ -164,6 +164,12 @@ void Resource::instanceCreateResult(KJob *job)
             value = QLatin1String(QMetaEnum::fromType<MailTransport::Transport::EnumAuthenticationType>().key(it.value().toInt()));
         } else if (it.key() == u"Safety"_s) {
             value = QLatin1String(QMetaEnum::fromType<MailTransport::Transport::EnumEncryption>().key(it.value().toInt()));
+        } else if (it.key() == u"Password"_s) {
+            if (value.isEmpty()) {
+                value = i18nc("Empty password", "Empty");
+            } else {
+                value = u"•••••••••••"_s;
+            }
         }
         resourceLogEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("label", "%1:", it.key()), value);
     }

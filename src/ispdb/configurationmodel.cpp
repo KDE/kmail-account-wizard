@@ -165,7 +165,7 @@ void ConfigurationModel::createAutomaticAccount(int index)
     identityManager->saveIdentity(identity);
     identityManager->commit();
 
-    QString identityLogEntryText = u"<h2>"_s + i18nc("log entry content", "Create email identity: %1", identityName) + u"</h2>"_s;
+    QString identityLogEntryText = u"<h3>"_s + i18nc("log entry content", "Create email identity: %1", identityName) + u"</h3>"_s;
 
     identityLogEntryText += u"<ul>"_s;
     identityLogEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Full name:"), fullName);
@@ -295,7 +295,7 @@ void ConfigurationModel::createAutomaticAccount(int index)
 
         logEntryText += u"<ul>"_s;
         logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Host:"), mt->host());
-        logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Port:"), mt->port());
+        logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Port:"), QString::number(mt->port()));
         logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Username:"), mt->userName());
         logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Encryption:"),
                                                        QLatin1String(QMetaEnum::fromType<MailTransport::Transport::EnumEncryption>().key(mt->encryption())));

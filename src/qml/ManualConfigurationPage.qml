@@ -24,7 +24,8 @@ WizardPage {
     nextAction {
         text: i18n("Create Account")
         onTriggered: {
-            manualConfiguration.save()
+            applicationWindow().pageStack.push(Qt.createComponent('org.kde.pim.accountwizard', 'DetailsPage'));
+            manualConfiguration.save();
         }
         enabled: manualConfiguration.configurationIsValid
     }

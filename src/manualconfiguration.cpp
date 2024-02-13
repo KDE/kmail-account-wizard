@@ -56,13 +56,13 @@ void ManualConfiguration::setEmail(const QString &email)
 {
     mIdentity.setPrimaryEmailAddress(email);
 
-    static QRegularExpression reg(QStringLiteral(".*@"));
+    static QRegularExpression reg(u".*@"_s);
     QString hostname = email;
     hostname.remove(reg);
     setIncomingHostName(hostname);
     setIncomingUserName(email);
 
-    mMailTransport->setName(hostname);
+    mMailTransport->setName(u"SMTP (%1)"_s.arg(email));
     mMailTransport->setHost(hostname);
     mMailTransport->setUserName(email);
 }
@@ -72,13 +72,13 @@ QString ManualConfiguration::generateUniqueAccountName() const
     QString name;
     switch (mIncomingProtocol) {
     case POP3:
-        name = QStringLiteral("Pop3 (%1)").arg(mIncomingHostName);
+        name = u"Pop3 (%1)"_s.arg(mIncomingHostName);
         break;
     case IMAP:
-        name = QStringLiteral("Imap (%1)").arg(mIncomingHostName);
+        name = u"Imap (%1)"_s.arg(mIncomingHostName);
         break;
     case KOLAB:
-        name = QStringLiteral("Kolab (%1)").arg(mIncomingHostName);
+        name = u"Kolab (%1)"_s.arg(mIncomingHostName);
         break;
     default:
         qCWarning(ACCOUNTWIZARD_LOG) << " invalid protocol: " << mIncomingProtocol;
@@ -90,13 +90,13 @@ QString ManualConfiguration::generateUniqueAccountName() const
 Resource::ResourceInfo ManualConfiguration::createPop3Resource() const
 {
     Resource::ResourceInfo info;
-    info.typeIdentifier = QStringLiteral("akonadi_pop3_resource");
+    info.typeIdentifier = u"akonadi_pop3_resource"_s;
     info.name = generateUniqueAccountName();
     QMap<QString, QVariant> settings;
-    settings.insert(QStringLiteral("Port"), mIncomingPort);
-    settings.insert(QStringLiteral("Host"), mIncomingHostName);
-    settings.insert(QStringLiteral("Login"), mIncomingUserName);
-    settings.insert(QStringLiteral("Password"), mPassword);
+    settings.insert(u"Port"_s, mIncomingPort);
+    settings.insert(u"Host"_s, mIncomingHostName);
+    settings.insert(u"Login"_s, mIncomingUserName);
+    settings.insert(u"Password"_s, mPassword);
     // TODO pop3Res.setOption( "UseTLS", true );
 
     info.settings = settings;
@@ -106,20 +106,20 @@ Resource::ResourceInfo ManualConfiguration::createPop3Resource() const
 Resource::ResourceInfo ManualConfiguration::createImapResource() const
 {
     Resource::ResourceInfo info;
-    info.typeIdentifier = QStringLiteral("akonadi_imap_resource");
+    info.typeIdentifier = u"akonadi_imap_resource"_s;
     info.name = generateUniqueAccountName();
     QMap<QString, QVariant> settings;
-    settings.insert(QStringLiteral("ImapServer"), mIncomingPort);
-    settings.insert(QStringLiteral("UserName"), mIncomingUserName);
-    settings.insert(QStringLiteral("DisconnectedModeEnabled"), mDisconnectedModeEnabled);
-    settings.insert(QStringLiteral("Password"), mPassword);
-    settings.insert(QStringLiteral("ImapPort"), mIncomingPort);
-    settings.insert(QStringLiteral("IntervalCheckTime"), 60);
-    settings.insert(QStringLiteral("SubscriptionEnabled"), true);
-    settings.insert(QStringLiteral("UseDefaultIdentity"), false);
-    settings.insert(QStringLiteral("AccountIdentity"), mIdentity.uoid());
-    settings.insert(QStringLiteral("Authentication"), mIncomingAuthenticationProtocol);
-    settings.insert(QStringLiteral("Safety"), mIncomingSecurityProtocol);
+    settings.insert(u"ImapServer"_s, mIncomingHostName);
+    settings.insert(u"UserName"_s, mIncomingUserName);
+    settings.insert(u"DisconnectedModeEnabled"_s, mDisconnectedModeEnabled);
+    settings.insert(u"Password"_s, mPassword);
+    settings.insert(u"ImapPort"_s, mIncomingPort);
+    settings.insert(u"IntervalCheckTime"_s, 60);
+    settings.insert(u"SubscriptionEnabled"_s, true);
+    settings.insert(u"UseDefaultIdentity"_s, false);
+    settings.insert(u"AccountIdentity"_s, mIdentity.uoid());
+    settings.insert(u"Authentication"_s, mIncomingAuthenticationProtocol);
+    settings.insert(u"Safety"_s, mIncomingSecurityProtocol);
     info.settings = settings;
     return info;
 }
@@ -129,18 +129,18 @@ Resource::ResourceInfo ManualConfiguration::createKolabResource() const
     Resource::ResourceInfo info;
     info.name = generateUniqueAccountName();
     QMap<QString, QVariant> settings;
-    settings.insert(QStringLiteral("ImapServer"), mIncomingPort);
-    settings.insert(QStringLiteral("UserName"), mIncomingUserName);
-    settings.insert(QStringLiteral("DisconnectedModeEnabled"), true);
-    settings.insert(QStringLiteral("AccountIdentity"), mIdentity.uoid());
-    settings.insert(QStringLiteral("UseDefaultIdentity"), false);
-    settings.insert(QStringLiteral("SieveSupport"), true);
-    settings.insert(QStringLiteral("IntervalCheckTime"), 60);
-    settings.insert(QStringLiteral("SubscriptionEnabled"), true);
-    settings.insert(QStringLiteral("Password"), mPassword);
-    settings.insert(QStringLiteral("ImapPort"), mIncomingPort);
+    settings.insert(u"ImapServer"_s, mIncomingHostName);
+    settings.insert(u"UserName"_s, mIncomingUserName);
+    settings.insert(u"DisconnectedModeEnabled"_s, true);
+    settings.insert(u"AccountIdentity"_s, mIdentity.uoid());
+    settings.insert(u"UseDefaultIdentity"_s, false);
+    settings.insert(u"SieveSupport"_s, true);
+    settings.insert(u"IntervalCheckTime"_s, 60);
+    settings.insert(u"SubscriptionEnabled"_s, true);
+    settings.insert(u"Password"_s, mPassword);
+    settings.insert(u"ImapPort"_s, mIncomingPort);
     info.settings = settings;
-    info.typeIdentifier = QStringLiteral("akonadi_kolab_resource");
+    info.typeIdentifier = u"akonadi_kolab_resource"_s;
     return info;
 }
 
@@ -172,6 +172,39 @@ void ManualConfiguration::setPassword(const QString &password)
 
 void ManualConfiguration::save()
 {
+    auto engine = qmlEngine(this);
+    Q_ASSERT(engine);
+    auto consoleLog = engine->singletonInstance<ConsoleLog *>(u"org.kde.pim.accountwizard"_s, u"ConsoleLog"_s);
+    Q_ASSERT(consoleLog);
+
+    // create identity
+    auto identityManager = KIdentityManagementCore::IdentityManager::self();
+    QString identityName;
+    QString hostName;
+    if (email().split(u'@').count() > 1) {
+        hostName = email().split(u'@')[1];
+    } else {
+        hostName = mIncomingHostName;
+    }
+    auto unnamed = i18nc("Default name for new email accounts/identities.", "Unnamed");
+    if (!mIdentity.fullName().isEmpty()) {
+        identityName = u"%1 (%2)"_s.arg(mIdentity.fullName(), hostName);
+    } else {
+        identityName = u"%1 (%2)"_s.arg(unnamed, hostName);
+    }
+    if (!identityManager->isUnique(identityName)) {
+        identityName = identityManager->makeUnique(identityName);
+    }
+    mIdentity.setIdentityName(identityName);
+
+    QString identityLogEntryText = u"<h3>"_s + i18nc("log entry content", "Create email identity: %1", identityName) + u"</h3>"_s;
+
+    identityLogEntryText += u"<ul>"_s;
+    identityLogEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Full name:"), mIdentity.fullName());
+    identityLogEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Primary email address:"), email());
+    identityLogEntryText += u"</ul>"_s;
+    consoleLog->success(identityLogEntryText);
+
     // create resource
     Resource::ResourceInfo info;
     switch (mIncomingProtocol) {
@@ -192,8 +225,29 @@ void ManualConfiguration::save()
     generateResource(std::move(info));
 
     // create transport
+    using TransportAuth = MailTransport::Transport::EnumAuthenticationType;
     mMailTransport->setPassword(mPassword);
     MailTransport::TransportManager::self()->addTransport(mMailTransport);
+
+    qWarning() << mMailTransport->port();
+
+    QString logEntryText = u"<h3>"_s + i18nc("log entry content", "Mail transport setup completed: %1", mMailTransport->name()) + u"</h3>"_s;
+
+    logEntryText += u"<ul>"_s;
+    logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Host:"), mMailTransport->host());
+    logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Port:"), QString::number(mMailTransport->port()));
+    logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Username:"), mMailTransport->userName());
+    logEntryText +=
+        u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Encryption:"),
+                                       QLatin1String(QMetaEnum::fromType<MailTransport::Transport::EnumEncryption>().key(mMailTransport->encryption())));
+    logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Authentication:"),
+                                                   QLatin1String(QMetaEnum::fromType<TransportAuth>().key(mMailTransport->authenticationType())));
+    logEntryText += u"</ul>"_s;
+    consoleLog->success(logEntryText);
+
+    mIdentity.setTransport(QString::number(mMailTransport->id()));
+    KIdentityManagementCore::IdentityManager::self()->saveIdentity(mIdentity);
+    KIdentityManagementCore::IdentityManager::self()->commit();
 }
 
 void ManualConfiguration::checkServer()
@@ -207,13 +261,13 @@ void ManualConfiguration::checkServer()
     QString protocol;
     switch (mIncomingProtocol) {
     case POP3:
-        protocol = QStringLiteral("pop");
+        protocol = u"pop"_s;
         break;
     case IMAP:
-        protocol = QStringLiteral("imap");
+        protocol = u"imap"_s;
         break;
     case KOLAB:
-        protocol = QStringLiteral("imap");
+        protocol = u"imap"_s;
         break;
     }
     // Test input
@@ -235,13 +289,13 @@ void ManualConfiguration::slotTestResult(const QString &result)
     qDebug() << "slotTestResult  " << result;
     switch (mIncomingProtocol) {
     case IncomingProtocol::POP3: { // Pop3
-        if (result == QStringLiteral("ssl")) {
+        if (result == u"ssl"_s) {
             setIncomingPort(995);
             // pop3Res.setOption( "UseTLS", true );
-        } else if (result == QStringLiteral("tls")) { // tls is really STARTTLS
+        } else if (result == u"tls"_s) { // tls is really STARTTLS
             setIncomingPort(110);
             // pop3Res.setOption( "UseTLS", true );
-        } else if (result == QStringLiteral("none")) {
+        } else if (result == u"none"_s) {
             setIncomingPort(110);
         } else {
             setIncomingPort(110);
@@ -249,13 +303,13 @@ void ManualConfiguration::slotTestResult(const QString &result)
         break;
     }
     case IncomingProtocol::IMAP: { // Imap
-        if (result == QStringLiteral("ssl")) {
+        if (result == u"ssl"_s) {
             setIncomingPort(993);
             // pop3Res.setOption( "UseTLS", true );
-        } else if (result == QStringLiteral("tls")) { // tls is really STARTTLS
+        } else if (result == u"tls"_s) { // tls is really STARTTLS
             setIncomingPort(143);
             // pop3Res.setOption( "UseTLS", true );
-        } else if (result == QStringLiteral("none")) {
+        } else if (result == u"none"_s) {
             setIncomingPort(143);
         } else {
             setIncomingPort(143);
