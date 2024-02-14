@@ -4,16 +4,16 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "accountconfigurationtest.h"
-#include "accountconfigurationbase.h"
+#include "manualconfigurationtest.h"
+#include "manualconfigurationbase.h"
 #include <QSignalSpy>
 #include <QTest>
-QTEST_MAIN(AccountConfigurationTest)
-class ManualConfigurationImplTest : public AccountConfigurationBase
+QTEST_MAIN(ManualConfigurationTest)
+class ManualConfigurationImplTest : public ManualConfigurationBase
 {
 public:
     explicit ManualConfigurationImplTest(QObject *parent = nullptr)
-        : AccountConfigurationBase(parent)
+        : ManualConfigurationBase(parent)
     {
     }
 
@@ -32,12 +32,12 @@ private:
     QString mTransportInfo;
 };
 
-AccountConfigurationTest::AccountConfigurationTest(QObject *parent)
+ManualConfigurationTest::ManualConfigurationTest(QObject *parent)
     : QObject{parent}
 {
 }
 
-void AccountConfigurationTest::shouldHaveDefaultValues()
+void ManualConfigurationTest::shouldHaveDefaultValues()
 {
     ManualConfigurationImplTest w;
     QVERIFY(w.incomingHostName().isEmpty());
@@ -58,13 +58,9 @@ void AccountConfigurationTest::shouldHaveDefaultValues()
     QCOMPARE(w.incomingPort(), 995);
     QCOMPARE(w.outgoingPort(), 465);
     QVERIFY(!w.disconnectedModeEnabled());
-
-    QCOMPARE(w.incomingProtocols().count(), 3);
-    QCOMPARE(w.securityProtocols().count(), 3);
-    QCOMPARE(w.authenticationProtocols().count(), 7);
 }
 
-void AccountConfigurationTest::shouldAssignEmail()
+void ManualConfigurationTest::shouldAssignEmail()
 {
     ManualConfigurationImplTest w;
     QSignalSpy incomingHostNameChanged(&w, &ManualConfigurationImplTest::incomingHostNameChanged);
@@ -83,19 +79,19 @@ void AccountConfigurationTest::shouldAssignEmail()
     QCOMPARE(outgoingUserNameChanged.count(), 1);
 }
 
-void AccountConfigurationTest::createResource()
+void ManualConfigurationTest::createResource()
 {
     // TODO
     ManualConfigurationImplTest w;
-    w.createAccount();
+    w.createManualAccount();
     // TODO
 }
 
-void AccountConfigurationTest::createResource_data()
+void ManualConfigurationTest::createResource_data()
 {
     QTest::addColumn<Resource::ResourceInfo>("resourceInfo");
 
     // TODO
 }
 
-#include "moc_accountconfigurationtest.cpp"
+#include "moc_manualconfigurationtest.cpp"

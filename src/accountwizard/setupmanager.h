@@ -2,10 +2,10 @@
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 #pragma once
-#include "accountconfigurationimpl.h"
 #include "identityimpl.h"
 #include "ispdb/configurationmodel.h"
 #include "libaccountwizard_export.h"
+#include "manualconfigurationimpl.h"
 #include <QObject>
 
 class IdentityImpl;
@@ -22,7 +22,7 @@ class LIBACCOUNTWIZARD_EXPORT SetupManager : public QObject
     Q_PROPERTY(ConfigurationModel *configurationModel READ configurationModel CONSTANT)
     Q_PROPERTY(QString searchIspdbFoundMessage MEMBER mSearchIspdbFoundMessage NOTIFY searchIspdbFoundMessageChanged)
     Q_PROPERTY(bool noConfigFound MEMBER mNoConfigFound NOTIFY noConfigFoundChanged)
-    Q_PROPERTY(AccountConfigurationBase *accountConfiguration READ accountConfiguration CONSTANT)
+    Q_PROPERTY(ManualConfigurationBase *manualConfiguration READ manualConfiguration CONSTANT)
     Q_PROPERTY(QString details READ details NOTIFY detailsChanged)
 
 public:
@@ -40,7 +40,7 @@ public:
 
     IdentityBase *identity() const;
     ConfigurationModel *configurationModel() const;
-    AccountConfigurationBase *accountConfiguration() const;
+    ManualConfigurationBase *manualConfiguration() const;
 
     Q_INVOKABLE void searchConfiguration();
     Q_INVOKABLE void createAutomaticAccount();
@@ -69,7 +69,7 @@ private:
     IdentityImpl *const mIdentity;
     IspdbService *const mIspdbService;
     ConfigurationModel *const mConfigurationModel;
-    AccountConfigurationImpl *const mAccountConfigurationImpl;
+    ManualConfigurationImpl *const mManualConfiguration;
     bool mNoConfigFound = false;
     bool mAccountCreated = false;
 };

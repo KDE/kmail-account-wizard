@@ -21,21 +21,21 @@ FormCard.FormCardPage {
     }
 
     readonly property Connections manuConfigurationConnections: Connections {
-        target: SetupManager.accountConfiguration
+        target: SetupManager.manualConfiguration
 
         function onIncomingHostNameChanged(): void {
-            manualIncomingHostName.text = SetupManager.accountConfiguration.incomingHostName;
+            manualIncomingHostName.text = SetupManager.manualConfiguration.incomingHostName;
         }
 
         function onOutgoingHostNameChanged(): void {
-            manualOutgoingHostName.text = SetupManager.accountConfiguration.outgoingHostName;
+            manualOutgoingHostName.text = SetupManager.manualConfiguration.outgoingHostName;
         }
 
         function onIncomingUserNameChanged(): void {
-            manualIncomingUserName.text = SetupManager.accountConfiguration.incomingUserName;
+            manualIncomingUserName.text = SetupManager.manualConfiguration.incomingUserName;
         }
         function onOutgoingUserNameChanged(): void {
-            manualOutgoingUserName.text = SetupManager.accountConfiguration.outgoingUserName;
+            manualOutgoingUserName.text = SetupManager.manualConfiguration.outgoingUserName;
         }
     }
 
@@ -141,70 +141,70 @@ FormCard.FormCardPage {
     }
 
     FormCard.FormCard {
-        id: accountConfiguration
+        id: manualConfiguration
         visible: SetupManager.noConfigFound || root.explicitManualConfiguration
         FormCard.FormTextFieldDelegate {
             id: manualIncomingHostName
             label: i18n("Incoming server:")
             inputMethodHints: Qt.ImhUrlCharactersOnly
-            text: SetupManager.accountConfiguration.incomingHostName;
+            text: SetupManager.manualConfiguration.incomingHostName;
             onTextEdited: {
-                SetupManager.accountConfiguration.incomingHostName = manualIncomingHostName.text
+                SetupManager.manualConfiguration.incomingHostName = manualIncomingHostName.text
             }
         }
 
         FormCard.FormComboBoxDelegate {
             id: manualIncomingProtocol
             text: i18n("Protocol:")
-            model: SetupManager.accountConfiguration.incomingProtocols
-            currentIndex: SetupManager.accountConfiguration.currentIncomingProtocol
+            model: SetupManager.manualConfiguration.incomingProtocols
+            currentIndex: SetupManager.manualConfiguration.currentIncomingProtocol
             onCurrentIndexChanged: {
-                SetupManager.accountConfiguration.currentIncomingProtocol = currentIndex
+                SetupManager.manualConfiguration.currentIncomingProtocol = currentIndex
             }
         }
         FormCard.FormSpinBoxDelegate {
             id: manualIncomingPort
             label: i18n("Port:")
-            value: SetupManager.accountConfiguration.incomingPort
+            value: SetupManager.manualConfiguration.incomingPort
             from: 1
             to: 999
         }
         FormCard.FormComboBoxDelegate {
             id: manualIncomingSecurity
             text: i18n("Security:")
-            model: SetupManager.accountConfiguration.securityProtocols
-            currentIndex: SetupManager.accountConfiguration.currentIncomingSecurityProtocol
+            model: SetupManager.manualConfiguration.securityProtocols
+            currentIndex: SetupManager.manualConfiguration.currentIncomingSecurityProtocol
             onCurrentIndexChanged: {
-                SetupManager.accountConfiguration.currentIncomingSecurityProtocol = currentIndex
+                SetupManager.manualConfiguration.currentIncomingSecurityProtocol = currentIndex
             }
         }
         FormCard.FormComboBoxDelegate {
             id: manualIncomingAuthenticationMethod
             text: i18n("Authentication Method:")
-            model: SetupManager.accountConfiguration.authenticationProtocols
-            currentIndex: SetupManager.accountConfiguration.currentIncomingAuthenticationProtocol
+            model: SetupManager.manualConfiguration.authenticationProtocols
+            currentIndex: SetupManager.manualConfiguration.currentIncomingAuthenticationProtocol
             onCurrentIndexChanged: {
-                SetupManager.accountConfiguration.currentIncomingAuthenticationProtocols = currentIndex
+                SetupManager.manualConfiguration.currentIncomingAuthenticationProtocols = currentIndex
             }
         }
         FormCard.FormTextFieldDelegate {
             id: manualIncomingUserName
             label: i18n("Username:")
             inputMethodHints: Qt.ImhUrlCharactersOnly
-            text: SetupManager.accountConfiguration.incomingUserName
+            text: SetupManager.manualConfiguration.incomingUserName
             onTextEdited: {
-                SetupManager.accountConfiguration.incomingUserName = manualIncomingUserName.text
+                SetupManager.manualConfiguration.incomingUserName = manualIncomingUserName.text
             }
         }
 
         FormCard.FormCheckDelegate {
             id: disconnectedModeEnabled
-            visible: SetupManager.accountConfiguration.hasDisconnectedMode
+            visible: SetupManager.manualConfiguration.hasDisconnectedMode
             description: i18n("Download all messages for offline use")
             onCheckedChanged: {
-                SetupManager.accountConfiguration.disconnectedModeEnabled = checked
+                SetupManager.manualConfiguration.disconnectedModeEnabled = checked
             }
-            checked: SetupManager.accountConfiguration.disconnectedModeEnabled
+            checked: SetupManager.manualConfiguration.disconnectedModeEnabled
         }
     }
 
@@ -219,43 +219,43 @@ FormCard.FormCardPage {
             id: manualOutgoingHostName
             label: i18n("Outgoing server:")
             inputMethodHints: Qt.ImhUrlCharactersOnly
-            text: SetupManager.accountConfiguration.outgoingHostName
+            text: SetupManager.manualConfiguration.outgoingHostName
             onTextEdited: {
-                SetupManager.accountConfiguration.outgoingHostName = manualOutgoingHostName.text
+                SetupManager.manualConfiguration.outgoingHostName = manualOutgoingHostName.text
             }
         }
         FormCard.FormSpinBoxDelegate {
             id: manualOutgoingPort
             label: i18n("Port:")
-            value: SetupManager.accountConfiguration.outgoingPort
+            value: SetupManager.manualConfiguration.outgoingPort
             from: 1
             to: 999
         }
         FormCard.FormComboBoxDelegate {
             id: manualOutgoingSecurity
             text: i18n("Security:")
-            model: SetupManager.accountConfiguration.securityProtocols
-            currentIndex: SetupManager.accountConfiguration.currentOutgoingSecurityProtocol
+            model: SetupManager.manualConfiguration.securityProtocols
+            currentIndex: SetupManager.manualConfiguration.currentOutgoingSecurityProtocol
             onCurrentIndexChanged: {
-                SetupManager.accountConfiguration.currentOutgoingSecurityProtocol = currentIndex
+                SetupManager.manualConfiguration.currentOutgoingSecurityProtocol = currentIndex
             }
         }
         FormCard.FormComboBoxDelegate {
             id: manualOutgoingAuthenticationMethod
             text: i18n("Authentication Method:")
-            model: SetupManager.accountConfiguration.authenticationProtocols
-            currentIndex: SetupManager.accountConfiguration.currentOutgoingAuthenticationProtocol
+            model: SetupManager.manualConfiguration.authenticationProtocols
+            currentIndex: SetupManager.manualConfiguration.currentOutgoingAuthenticationProtocol
             onCurrentIndexChanged: {
-                SetupManager.accountConfiguration.currentOutgoingAuthenticationProtocols = currentIndex
+                SetupManager.manualConfiguration.currentOutgoingAuthenticationProtocols = currentIndex
             }
         }
         FormCard.FormTextFieldDelegate {
             id: manualOutgoingUserName
             label: i18n("Username:")
             inputMethodHints: Qt.ImhUrlCharactersOnly
-            text: SetupManager.accountConfiguration.outgoingUserName
+            text: SetupManager.manualConfiguration.outgoingUserName
             onTextEdited: {
-                SetupManager.accountConfiguration.outgoingUserName = manualOutgoingUserName.text
+                SetupManager.manualConfiguration.outgoingUserName = manualOutgoingUserName.text
             }
         }
     }
@@ -269,10 +269,10 @@ FormCard.FormCardPage {
             text: i18n("Recheck")
             checked: true
             onClicked: {
-                SetupManager.accountConfiguration.checkServer()
+                SetupManager.manualConfiguration.checkServer()
             }
-            visible: accountConfiguration.visible
-            enabled: SetupManager.accountConfiguration.configurationIsValid && !SetupManager.accountConfiguration.serverTestInProgress
+            visible: manualConfiguration.visible
+            enabled: SetupManager.manualConfiguration.configurationIsValid && !SetupManager.manualConfiguration.serverTestInProgress
         }
 
         FormCard.FormDelegateSeparator {}
@@ -284,8 +284,8 @@ FormCard.FormCardPage {
             onClicked: {
                 SetupManager.createManualAccount()
             }
-            visible: accountConfiguration.visible
-            enabled: SetupManager.accountConfiguration.configurationIsValid
+            visible: manualConfiguration.visible
+            enabled: SetupManager.manualConfiguration.configurationIsValid
         }
     }
 

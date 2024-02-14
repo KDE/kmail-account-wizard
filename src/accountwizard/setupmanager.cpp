@@ -13,7 +13,7 @@ SetupManager::SetupManager(QObject *parent)
     , mIdentity(new IdentityImpl(this))
     , mIspdbService(new IspdbService(this))
     , mConfigurationModel(new ConfigurationModel(this))
-    , mAccountConfigurationImpl(new AccountConfigurationImpl(this))
+    , mManualConfiguration(new ManualConfigurationImpl(this))
 {
     KEMailSettings emailSettings;
     setFullName(emailSettings.getSetting(KEMailSettings::RealName));
@@ -23,9 +23,9 @@ SetupManager::SetupManager(QObject *parent)
     connect(mIspdbService, &IspdbService::finished, this, &SetupManager::setEmailProvider);
     connect(mIspdbService, &IspdbService::notConfigFound, this, &SetupManager::noConfigFound);
 
-    connect(mAccountConfigurationImpl, &AccountConfigurationBase::error, this, &SetupManager::slotError);
-    connect(mAccountConfigurationImpl, &AccountConfigurationBase::finished, this, &SetupManager::slotFinished);
-    connect(mAccountConfigurationImpl, &AccountConfigurationBase::info, this, &SetupManager::slotInfo);
+    connect(mManualConfiguration, &ManualConfigurationBase::error, this, &SetupManager::slotError);
+    connect(mManualConfiguration, &ManualConfigurationBase::finished, this, &SetupManager::slotFinished);
+    connect(mManualConfiguration, &ManualConfigurationBase::info, this, &SetupManager::slotInfo);
 }
 
 SetupManager::~SetupManager()
@@ -79,7 +79,7 @@ QString SetupManager::email() const
 void SetupManager::setEmail(const QString &email)
 {
     mIdentity->setEmail(email);
-    mAccountConfigurationImpl->setEmail(email);
+    mManualConfiguration->setEmail(email);
     clearConfiguration();
 }
 
@@ -131,8 +131,8 @@ void SetupManager::createManualAccount()
     qCDebug(ACCOUNTWIZARD_LOG) << " Create MAnual Account";
     mIdentity->create();
     const uint id = mIdentity->uoid();
-    mAccountConfigurationImpl->setIdentityId(id);
-    mAccountConfigurationImpl->createAccount();
+    mManualConfiguration->setIdentityId(id);
+    mManualConfiguration->createManualAccount();
     mAccountCreated = true;
 }
 
@@ -161,9 +161,9 @@ void SetupManager::noConfigFound()
     Q_EMIT noConfigFoundChanged();
 }
 
-AccountConfigurationBase *SetupManager::accountConfiguration() const
+ManualConfigurationBase *SetupManager::manualConfiguration() const
 {
-    return mAccountConfigurationImpl;
+    return mManualConfiguration;
 }
 
 #include "moc_setupmanager.cpp"

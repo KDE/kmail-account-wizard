@@ -6,7 +6,6 @@
 
 #include "identitybasetest.h"
 #include "identitybase.h"
-#include <QStandardPaths>
 #include <QTest>
 QTEST_MAIN(IdentityBaseTest)
 
@@ -28,7 +27,6 @@ protected:
 IdentityBaseTest::IdentityBaseTest(QObject *parent)
     : QObject{parent}
 {
-    QStandardPaths::setTestModeEnabled(true);
 }
 
 IdentityBaseTest::~IdentityBaseTest() = default;

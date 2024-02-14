@@ -6,15 +6,15 @@
 
 #pragma once
 
-#include "accountconfigurationbase.h"
+#include "manualconfigurationbase.h"
 #include "resource.h"
 
-class AccountConfigurationImpl : public AccountConfigurationBase
+class ManualConfigurationImpl : public ManualConfigurationBase
 {
     Q_OBJECT
 public:
-    explicit AccountConfigurationImpl(QObject *parent = nullptr);
-    ~AccountConfigurationImpl() override;
+    explicit ManualConfigurationImpl(QObject *parent = nullptr);
+    ~ManualConfigurationImpl() override;
 
 protected:
     LIBACCOUNTWIZARD_NO_EXPORT void createTransport() override;

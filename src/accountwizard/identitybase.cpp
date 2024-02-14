@@ -103,7 +103,7 @@ QString IdentityBase::organization() const
 
 void IdentityBase::setOrganization(const QString &org)
 {
-    if (org == organization()) {
+    if (org == this->organization()) {
         return;
     }
     mIdentity->setOrganization(org);
@@ -115,12 +115,12 @@ QString IdentityBase::email() const
     return mIdentity->primaryEmailAddress();
 }
 
-void IdentityBase::setEmail(const QString &emailStr)
+void IdentityBase::setEmail(const QString &email)
 {
-    if (emailStr == email()) {
+    if (email == this->email()) {
         return;
     }
-    mIdentity->setPrimaryEmailAddress(emailStr);
+    mIdentity->setPrimaryEmailAddress(email);
     Q_EMIT emailChanged();
 }
 
