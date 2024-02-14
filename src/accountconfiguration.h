@@ -90,6 +90,8 @@ public:
     [[nodiscard]] bool disconnectedModeEnabled() const;
     void setDisconnectedModeEnabled(bool disconnectedMode);
 
+    void setHasTransport(bool hasTransport);
+
     Q_INVOKABLE void checkServer();
     Q_INVOKABLE void checkConfiguration();
 
@@ -162,6 +164,7 @@ private:
     MailTransport::Transport *const mMailTransport;
     KIdentityManagementCore::IdentityManager *mIdentityManager;
     mutable KIdentityManagementCore::Identity mIdentity;
+    bool mHasTransport = true;
 };
 
 QDebug operator<<(QDebug d, const AccountConfiguration &t);

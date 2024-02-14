@@ -6,30 +6,11 @@
 #pragma once
 
 #include <KMime/HeaderParsing>
+#include <MailTransport/Transport>
 #include <QDomElement>
 #include <QList>
 #include <QString>
 #include <optional>
-
-enum SocketType {
-    SSL = 0, ///< SSL socket, the most secure and the default
-    StartTLS,
-    None,
-};
-
-/// Ispdb uses custom authtyps, hence the enum here.
-/// @see https://wiki.mozilla.org/Thunderbird:Autoconfiguration:ConfigFileFormat
-/// In particular, note that Ispdb's Plain represents both Cleartext and AUTH Plain
-/// We will always treat it as Cleartext
-enum AuthType {
-    Plain = 0,
-    CramMD5,
-    NTLM,
-    GSSAPI,
-    ClientIP,
-    NoAuth,
-    OAuth2,
-};
 
 struct Server {
     enum Type {
@@ -41,8 +22,8 @@ struct Server {
     QString hostname;
     int port = -1;
     QString username;
-    SocketType socketType = SSL;
-    AuthType authType = Plain;
+    MailTransport::Transport::EnumEncryption socketType = MailTransport::Transport::SSL;
+    MailTransport::Transport::EnumAuthenticationType authType = MailTransport::Transport::PLAIN;
 
     [[nodiscard]] QStringList tags() const;
 

@@ -8,6 +8,8 @@
 #include <QtQmlIntegration/qqmlintegration.h>
 #include <optional>
 
+class ConsoleLog;
+
 struct Configuration {
     explicit Configuration(const Server &incomming, std::optional<Server> outgoing, const QString &shortDisplayName);
     QString shortDisplayName;
@@ -46,7 +48,7 @@ public:
 
     const Configuration &configuration(int index) const;
 
-    Q_INVOKABLE void createAutomaticAccount(int index);
+    Q_INVOKABLE void createAutomaticAccount(int index, ConsoleLog *consoleLog);
 
 private:
     QString m_password;

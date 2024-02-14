@@ -175,6 +175,7 @@ void AccountConfiguration::setPassword(const QString &password)
         return;
     }
     mPassword = password;
+    mMailTransport->setPassword(mPassword);
     Q_EMIT passwordChanged();
 }
 
@@ -226,28 +227,28 @@ void AccountConfiguration::save(ConsoleLog *consoleLog)
     qCDebug(ACCOUNTWIZARD_LOG) << " info " << info;
     generateResource(std::move(info), consoleLog);
 
-    // create transport
-    using TransportAuth = MailTransport::Transport::EnumAuthenticationType;
-    mMailTransport->setPassword(mPassword);
-    MailTransport::TransportManager::self()->addTransport(mMailTransport);
+    if (mHasTransport) {
+        // create transport
+        using TransportAuth = MailTransport::Transport::EnumAuthenticationType;
+        MailTransport::TransportManager::self()->addTransport(mMailTransport);
 
-    qWarning() << mMailTransport->port();
+        QString logEntryText = u"<h3>"_s + i18nc("log entry content", "Mail transport setup completed: %1", mMailTransport->name()) + u"</h3>"_s;
 
-    QString logEntryText = u"<h3>"_s + i18nc("log entry content", "Mail transport setup completed: %1", mMailTransport->name()) + u"</h3>"_s;
+        logEntryText += u"<ul>"_s;
+        logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Host:"), mMailTransport->host());
+        logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Port:"), QString::number(mMailTransport->port()));
+        logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Username:"), mMailTransport->userName());
+        logEntryText +=
+            u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Encryption:"),
+                                           QLatin1String(QMetaEnum::fromType<MailTransport::Transport::EnumEncryption>().key(mMailTransport->encryption())));
+        logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Authentication:"),
+                                                       QLatin1String(QMetaEnum::fromType<TransportAuth>().key(mMailTransport->authenticationType())));
+        logEntryText += u"</ul>"_s;
+        consoleLog->success(logEntryText);
 
-    logEntryText += u"<ul>"_s;
-    logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Host:"), mMailTransport->host());
-    logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Port:"), QString::number(mMailTransport->port()));
-    logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Username:"), mMailTransport->userName());
-    logEntryText +=
-        u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Encryption:"),
-                                       QLatin1String(QMetaEnum::fromType<MailTransport::Transport::EnumEncryption>().key(mMailTransport->encryption())));
-    logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Authentication:"),
-                                                   QLatin1String(QMetaEnum::fromType<TransportAuth>().key(mMailTransport->authenticationType())));
-    logEntryText += u"</ul>"_s;
-    consoleLog->success(logEntryText);
+        mIdentity.setTransport(QString::number(mMailTransport->id()));
+    }
 
-    mIdentity.setTransport(QString::number(mMailTransport->id()));
     mIdentityManager->saveIdentity(mIdentity);
 }
 
@@ -488,6 +489,11 @@ void AccountConfiguration::setIncomingUserName(const QString &newIncomingUserNam
         checkConfiguration();
         Q_EMIT incomingUserNameChanged();
     }
+}
+
+void AccountConfiguration::setHasTransport(bool hasTransport)
+{
+    mHasTransport = hasTransport;
 }
 
 QDebug operator<<(QDebug d, const AccountConfiguration &t)

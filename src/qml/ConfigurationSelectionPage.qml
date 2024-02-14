@@ -22,7 +22,7 @@ WizardPage {
                 applicationWindow().pageStack.push(Qt.createComponent('org.kde.pim.accountwizard', 'ManualConfigurationPage'));
             } else {
                 applicationWindow().pageStack.push(Qt.createComponent('org.kde.pim.accountwizard', 'DetailsPage'));
-                SetupManager.configurationModel.createAutomaticAccount(configurationGroup.checkedButton.index);
+                SetupManager.configurationModel.createAutomaticAccount(configurationGroup.checkedButton.index, ConsoleLog);
             }
         }
     }

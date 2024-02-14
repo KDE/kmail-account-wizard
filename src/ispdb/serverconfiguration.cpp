@@ -31,13 +31,13 @@ QStringList Server::tags() const
     }
 
     switch (socketType) {
-    case SSL:
+    case MailTransport::TransportBase::SSL:
         tags << i18n("SSL/TLS");
         break;
-    case StartTLS:
+    case MailTransport::TransportBase::TLS:
         tags << i18n("StartTLS");
         break;
-    case None:
+    case MailTransport::TransportBase::None:
         tags << i18nc("No security mechanism", "None");
         break;
     }
@@ -64,31 +64,31 @@ std::optional<Server> Server::fromDomElement(const QDomElement &element, const K
         } else if (tagName == QLatin1StringView("socketType")) {
             const QString type(f.text());
             if (type == QLatin1StringView("plain")) {
-                server.socketType = None;
+                server.socketType = MailTransport::TransportBase::None;
             } else if (type == QLatin1StringView("SSL")) {
-                server.socketType = SSL;
+                server.socketType = MailTransport::TransportBase::SSL;
             }
             if (type == QLatin1StringView("STARTTLS")) {
-                server.socketType = StartTLS;
+                server.socketType = MailTransport::TransportBase::TLS;
             }
         } else if (tagName == QLatin1StringView("username")) {
             server.username = replacePlaceholders(f.text(), addrSpec);
         } else if (tagName == QLatin1StringView("authentication") && server.authType == 0) {
             const QString type(f.text());
             if (type == QLatin1StringView("password-cleartext") || type == QLatin1StringView("plain")) {
-                server.authType = Plain;
+                server.authType = MailTransport::TransportBase::PLAIN;
             } else if (type == QLatin1StringView("password-encrypted") || type == QLatin1StringView("secure")) {
-                server.authType = CramMD5;
+                server.authType = MailTransport::TransportBase::CRAM_MD5;
             } else if (type == QLatin1StringView("NTLM")) {
-                server.authType = NTLM;
+                server.authType = MailTransport::TransportBase::NTLM;
             } else if (type == QLatin1StringView("GSSAPI")) {
-                server.authType = GSSAPI;
+                server.authType = MailTransport::TransportBase::GSSAPI;
             } else if (type == QLatin1StringView("client-ip-based")) {
-                server.authType = ClientIP;
+                server.authType = MailTransport::TransportBase::ANONYMOUS;
             } else if (type == QLatin1StringView("none")) {
-                server.authType = NoAuth;
+                server.authType = MailTransport::TransportBase::ANONYMOUS;
             } else if (type == QLatin1StringView("OAuth2")) {
-                server.authType = OAuth2;
+                server.authType = MailTransport::TransportBase::XOAUTH2;
             }
         }
         o = o.nextSibling();
