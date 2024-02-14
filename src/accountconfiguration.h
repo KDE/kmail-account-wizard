@@ -15,7 +15,7 @@
 
 class ServerTest;
 
-class ManualConfiguration : public QObject
+class AccountConfiguration : public QObject
 {
     Q_OBJECT
     QML_ELEMENT
@@ -57,9 +57,9 @@ public:
     };
     Q_ENUM(IncomingProtocol)
 
-    explicit ManualConfiguration(QObject *parent = nullptr);
-    ManualConfiguration(KIdentityManagementCore::IdentityManager *identiyMmanager, QObject *parent = nullptr);
-    ~ManualConfiguration() override;
+    explicit AccountConfiguration(QObject *parent = nullptr);
+    AccountConfiguration(KIdentityManagementCore::IdentityManager *identiyMmanager, QObject *parent = nullptr);
+    ~AccountConfiguration() override;
 
     /// Save the mail transport and resource
     Q_INVOKABLE void save(ConsoleLog *consoleLog);
@@ -164,4 +164,4 @@ private:
     mutable KIdentityManagementCore::Identity mIdentity;
 };
 
-QDebug operator<<(QDebug d, const ManualConfiguration &t);
+QDebug operator<<(QDebug d, const AccountConfiguration &t);

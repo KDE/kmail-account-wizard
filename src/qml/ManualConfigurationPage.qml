@@ -30,7 +30,7 @@ WizardPage {
         enabled: manualConfiguration.configurationIsValid
     }
 
-    ManualConfiguration {
+    AccountConfiguration {
         id: manualConfiguration
 
         password: SetupManager.password

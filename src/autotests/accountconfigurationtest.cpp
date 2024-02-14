@@ -5,9 +5,9 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "manualconfigurationtest.h"
+#include "accountconfigurationtest.h"
+#include "accountconfiguration.h"
 #include "consolelog.h"
-#include "manualconfiguration.h"
 
 #include <QSignalSpy>
 #include <QStandardPaths>
@@ -16,7 +16,7 @@
 #include <Akonadi/AgentManager>
 #include <MailTransport/TransportManager>
 
-QTEST_MAIN(ManualConfigurationTest)
+QTEST_MAIN(AccountConfigurationTest)
 
 using namespace Qt::Literals::StringLiterals;
 using namespace KIdentityManagementCore;
@@ -40,12 +40,12 @@ void cleanupIdentities(std::unique_ptr<IdentityManager> &manager)
 }
 }
 
-ManualConfigurationTest::ManualConfigurationTest(QObject *parent)
+AccountConfigurationTest::AccountConfigurationTest(QObject *parent)
     : QObject{parent}
 {
 }
 
-void ManualConfigurationTest::init()
+void AccountConfigurationTest::init()
 {
     QStandardPaths::setTestModeEnabled(true);
     mManager = std::make_unique<IdentityManager>();
@@ -65,13 +65,13 @@ void ManualConfigurationTest::init()
     QCOMPARE(mManager->identities().count(), 1);
 }
 
-void ManualConfigurationTest::shouldHaveDefaultValues()
+void AccountConfigurationTest::shouldHaveDefaultValues()
 {
-    ManualConfiguration w(mManager.get());
+    AccountConfiguration w(mManager.get());
     QVERIFY(w.incomingHostName().isEmpty());
     QVERIFY(w.incomingUserName().isEmpty());
 
-    QCOMPARE(w.incomingProtocol(), ManualConfiguration::IncomingProtocol::IMAP);
+    QCOMPARE(w.incomingProtocol(), AccountConfiguration::IncomingProtocol::IMAP);
     QCOMPARE(w.incomingSecurityProtocol(), MailTransport::Transport::EnumEncryption::SSL);
     QCOMPARE(w.incomingAuthenticationProtocol(), MailTransport::Transport::EnumAuthenticationType::LOGIN);
     QCOMPARE(w.incomingPort(), 995);
@@ -85,12 +85,12 @@ void ManualConfigurationTest::shouldHaveDefaultValues()
     QCOMPARE(w.mailTransport()->storePassword(), true);
 }
 
-void ManualConfigurationTest::shouldAssignEmail()
+void AccountConfigurationTest::shouldAssignEmail()
 {
-    ManualConfiguration w(mManager.get());
-    QSignalSpy incomingHostNameChanged(&w, &ManualConfiguration::incomingHostNameChanged);
+    AccountConfiguration w(mManager.get());
+    QSignalSpy incomingHostNameChanged(&w, &AccountConfiguration::incomingHostNameChanged);
     QSignalSpy outgoingHostNameChanged(w.mailTransport(), &MailTransport::Transport::hostChanged);
-    QSignalSpy incomingUserNameChanged(&w, &ManualConfiguration::incomingUserNameChanged);
+    QSignalSpy incomingUserNameChanged(&w, &AccountConfiguration::incomingUserNameChanged);
     QSignalSpy outgoingUserNameChanged(w.mailTransport(), &MailTransport::Transport::userNameChanged);
 
     w.setEmail(u"foo@kde.org"_s);
@@ -105,7 +105,7 @@ void ManualConfigurationTest::shouldAssignEmail()
     QCOMPARE(outgoingUserNameChanged.count(), 1);
 }
 
-void ManualConfigurationTest::createResource()
+void AccountConfigurationTest::createResource()
 {
     // Ensure nothing is there before adding the email configurations
     QCOMPARE(KIdentityManagementCore::IdentityManager::self()->identities().count(), 1);
@@ -114,7 +114,7 @@ void ManualConfigurationTest::createResource()
     QFETCH(QString, email);
     QFETCH(QString, fullName);
     QFETCH(QString, password);
-    QFETCH(ManualConfiguration::IncomingProtocol, protocol);
+    QFETCH(AccountConfiguration::IncomingProtocol, protocol);
     QFETCH(QString, incomingHostName);
     QFETCH(MailTransport::Transport::EnumEncryption, incomingEncryption);
     QFETCH(MailTransport::Transport::EnumAuthenticationType, incomingAuth);
@@ -122,7 +122,7 @@ void ManualConfigurationTest::createResource()
     QFETCH(MailTransport::Transport::EnumEncryption, outgoingEncryption);
     QFETCH(MailTransport::Transport::EnumAuthenticationType, outgoingAuth);
 
-    ManualConfiguration w(mManager.get());
+    AccountConfiguration w(mManager.get());
     w.setEmail(email);
     w.setIncomingProtocol(protocol);
     w.identity().setFullName(fullName);
@@ -168,12 +168,12 @@ void ManualConfigurationTest::createResource()
     QVERIFY(agent.isValid());
 }
 
-void ManualConfigurationTest::createResource_data()
+void AccountConfigurationTest::createResource_data()
 {
     QTest::addColumn<QString>("email");
     QTest::addColumn<QString>("fullName");
     QTest::addColumn<QString>("password");
-    QTest::addColumn<ManualConfiguration::IncomingProtocol>("protocol");
+    QTest::addColumn<AccountConfiguration::IncomingProtocol>("protocol");
     QTest::addColumn<QString>("incomingHostName");
     QTest::addColumn<MailTransport::Transport::EnumEncryption>("incomingEncryption");
     QTest::addColumn<MailTransport::Transport::EnumAuthenticationType>("incomingAuth");
@@ -182,10 +182,10 @@ void ManualConfigurationTest::createResource_data()
     QTest::addColumn<MailTransport::Transport::EnumAuthenticationType>("outgoingAuth");
     QTest::addColumn<QString>("resourceIdentifier");
 
-    QTest::addRow("imap") << u"foo@kde.org"_s << u"Foo Bar"_s << u"password"_s << ManualConfiguration::IncomingProtocol::IMAP << u"imap.kde.org"_s
+    QTest::addRow("imap") << u"foo@kde.org"_s << u"Foo Bar"_s << u"password"_s << AccountConfiguration::IncomingProtocol::IMAP << u"imap.kde.org"_s
                           << MailTransport::Transport::EnumEncryption::TLS << MailTransport::Transport::EnumAuthenticationType::CRAM_MD5 << u"smtp.kde.org"_s
                           << MailTransport::Transport::EnumEncryption::TLS << MailTransport::Transport::EnumAuthenticationType::CRAM_MD5
                           << "akonadi_imap_resource";
 }
 
-#include "moc_manualconfigurationtest.cpp"
+#include "moc_accountconfigurationtest.cpp"

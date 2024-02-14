@@ -16,5 +16,5 @@ macro(accountwizard_test _source)
 
 endmacro()
 
-add_akonadi_isolated_test(manualconfigurationtest.cpp LINK_LIBRARIES accountwizard_static)
+add_akonadi_isolated_test(accountconfigurationtest.cpp LINK_LIBRARIES accountwizard_static)
 accountwizard_test(setupmanagertest.cpp)

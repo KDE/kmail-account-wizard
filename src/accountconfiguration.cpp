@@ -4,7 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "manualconfiguration.h"
+#include "accountconfiguration.h"
 #include "accountwizard_debug.h"
 #include "consolelog.h"
 #include "servertest.h"
@@ -16,7 +16,7 @@
 
 using namespace Qt::Literals::StringLiterals;
 
-ManualConfiguration::ManualConfiguration(KIdentityManagementCore::IdentityManager *manager, QObject *parent)
+AccountConfiguration::AccountConfiguration(KIdentityManagementCore::IdentityManager *manager, QObject *parent)
     : QObject{parent}
     , mMailTransport(MailTransport::TransportManager::self()->createTransport())
     , mIdentityManager(manager)
@@ -29,7 +29,7 @@ ManualConfiguration::ManualConfiguration(KIdentityManagementCore::IdentityManage
     mMailTransport->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::PLAIN);
 }
 
-ManualConfiguration::ManualConfiguration(QObject *parent)
+AccountConfiguration::AccountConfiguration(QObject *parent)
     : QObject{parent}
     , mMailTransport(MailTransport::TransportManager::self()->createTransport())
     , mIdentityManager(KIdentityManagementCore::IdentityManager::self())
@@ -42,30 +42,30 @@ ManualConfiguration::ManualConfiguration(QObject *parent)
     mMailTransport->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::PLAIN);
 }
 
-ManualConfiguration::~ManualConfiguration() = default;
+AccountConfiguration::~AccountConfiguration() = default;
 
-MailTransport::Transport *ManualConfiguration::mailTransport() const
+MailTransport::Transport *AccountConfiguration::mailTransport() const
 {
     return mMailTransport;
 }
 
-void ManualConfiguration::setIdentity(const KIdentityManagementCore::Identity &identity)
+void AccountConfiguration::setIdentity(const KIdentityManagementCore::Identity &identity)
 {
     mIdentity = identity;
     Q_EMIT identityChanged();
 }
 
-KIdentityManagementCore::Identity &ManualConfiguration::identity() const
+KIdentityManagementCore::Identity &AccountConfiguration::identity() const
 {
     return mIdentity;
 }
 
-QString ManualConfiguration::email() const
+QString AccountConfiguration::email() const
 {
     return mIdentity.primaryEmailAddress();
 }
 
-void ManualConfiguration::setEmail(const QString &email)
+void AccountConfiguration::setEmail(const QString &email)
 {
     mIdentity.setPrimaryEmailAddress(email);
 
@@ -80,7 +80,7 @@ void ManualConfiguration::setEmail(const QString &email)
     mMailTransport->setUserName(email);
 }
 
-QString ManualConfiguration::generateUniqueAccountName() const
+QString AccountConfiguration::generateUniqueAccountName() const
 {
     QString name;
     switch (mIncomingProtocol) {
@@ -100,7 +100,7 @@ QString ManualConfiguration::generateUniqueAccountName() const
     return name;
 }
 
-Resource::ResourceInfo ManualConfiguration::createPop3Resource() const
+Resource::ResourceInfo AccountConfiguration::createPop3Resource() const
 {
     Resource::ResourceInfo info;
     info.typeIdentifier = u"akonadi_pop3_resource"_s;
@@ -116,7 +116,7 @@ Resource::ResourceInfo ManualConfiguration::createPop3Resource() const
     return info;
 }
 
-Resource::ResourceInfo ManualConfiguration::createImapResource() const
+Resource::ResourceInfo AccountConfiguration::createImapResource() const
 {
     Resource::ResourceInfo info;
     info.typeIdentifier = u"akonadi_imap_resource"_s;
@@ -137,7 +137,7 @@ Resource::ResourceInfo ManualConfiguration::createImapResource() const
     return info;
 }
 
-Resource::ResourceInfo ManualConfiguration::createKolabResource() const
+Resource::ResourceInfo AccountConfiguration::createKolabResource() const
 {
     Resource::ResourceInfo info;
     info.name = generateUniqueAccountName();
@@ -157,19 +157,19 @@ Resource::ResourceInfo ManualConfiguration::createKolabResource() const
     return info;
 }
 
-void ManualConfiguration::generateResource(const Resource::ResourceInfo &info, ConsoleLog *consoleLog)
+void AccountConfiguration::generateResource(const Resource::ResourceInfo &info, ConsoleLog *consoleLog)
 {
     auto resource = new Resource(consoleLog, this);
     resource->setResourceInfo(std::move(info));
     resource->createResource();
 }
 
-QString ManualConfiguration::password() const
+QString AccountConfiguration::password() const
 {
     return mPassword;
 }
 
-void ManualConfiguration::setPassword(const QString &password)
+void AccountConfiguration::setPassword(const QString &password)
 {
     if (mPassword == password) {
         return;
@@ -178,7 +178,7 @@ void ManualConfiguration::setPassword(const QString &password)
     Q_EMIT passwordChanged();
 }
 
-void ManualConfiguration::save(ConsoleLog *consoleLog)
+void AccountConfiguration::save(ConsoleLog *consoleLog)
 {
     // create identity
     QString identityName;
@@ -251,13 +251,13 @@ void ManualConfiguration::save(ConsoleLog *consoleLog)
     mIdentityManager->saveIdentity(mIdentity);
 }
 
-void ManualConfiguration::checkServer()
+void AccountConfiguration::checkServer()
 {
     qDebug() << " Verify server";
     if (!mServerTest) {
         mServerTest = new ServerTest(this);
-        connect(mServerTest, &ServerTest::testFail, this, &ManualConfiguration::slotTestFail);
-        connect(mServerTest, &ServerTest::testResult, this, &ManualConfiguration::slotTestResult);
+        connect(mServerTest, &ServerTest::testFail, this, &AccountConfiguration::slotTestFail);
+        connect(mServerTest, &ServerTest::testResult, this, &AccountConfiguration::slotTestResult);
     }
     QString protocol;
     switch (mIncomingProtocol) {
@@ -277,7 +277,7 @@ void ManualConfiguration::checkServer()
     mServerTest->test(mIncomingHostName, protocol);
 }
 
-void ManualConfiguration::slotTestFail()
+void AccountConfiguration::slotTestFail()
 {
     qDebug() << "slotTestFail  ";
     // TODO
@@ -285,7 +285,7 @@ void ManualConfiguration::slotTestFail()
     Q_EMIT serverTestInProgressModeChanged();
 }
 
-void ManualConfiguration::slotTestResult(const QString &result)
+void AccountConfiguration::slotTestResult(const QString &result)
 {
     qDebug() << "slotTestResult  " << result;
     switch (mIncomingProtocol) {
@@ -348,7 +348,7 @@ void ManualConfiguration::slotTestResult(const QString &result)
     Q_EMIT serverTestInProgressModeChanged();
 }
 
-void ManualConfiguration::checkConfiguration()
+void AccountConfiguration::checkConfiguration()
 {
     const bool valid = !mIncomingUserName.trimmed().isEmpty() && !mIncomingHostName.trimmed().isEmpty() && !mMailTransport->host().trimmed().isEmpty()
         && !mMailTransport->userName().trimmed().isEmpty();
@@ -359,12 +359,12 @@ void ManualConfiguration::checkConfiguration()
     Q_EMIT configurationIsValidChanged();
 }
 
-bool ManualConfiguration::disconnectedModeEnabled() const
+bool AccountConfiguration::disconnectedModeEnabled() const
 {
     return mDisconnectedModeEnabled;
 }
 
-void ManualConfiguration::setDisconnectedModeEnabled(bool disconnectedMode)
+void AccountConfiguration::setDisconnectedModeEnabled(bool disconnectedMode)
 {
     if (mDisconnectedModeEnabled == disconnectedMode)
         return;
@@ -373,12 +373,12 @@ void ManualConfiguration::setDisconnectedModeEnabled(bool disconnectedMode)
     Q_EMIT disconnectedModeEnabledChanged();
 }
 
-MailTransport::Transport::EnumAuthenticationType ManualConfiguration::incomingAuthenticationProtocol() const
+MailTransport::Transport::EnumAuthenticationType AccountConfiguration::incomingAuthenticationProtocol() const
 {
     return mIncomingAuthenticationProtocol;
 }
 
-void ManualConfiguration::setIncomingAuthenticationProtocol(MailTransport::Transport::EnumAuthenticationType newIncomingAuthenticationProtocols)
+void AccountConfiguration::setIncomingAuthenticationProtocol(MailTransport::Transport::EnumAuthenticationType newIncomingAuthenticationProtocols)
 {
     if (mIncomingAuthenticationProtocol == newIncomingAuthenticationProtocols) {
         return;
@@ -389,12 +389,12 @@ void ManualConfiguration::setIncomingAuthenticationProtocol(MailTransport::Trans
     Q_EMIT incomingAuthenticationProtocolChanged();
 }
 
-MailTransport::Transport::EnumEncryption ManualConfiguration::incomingSecurityProtocol() const
+MailTransport::Transport::EnumEncryption AccountConfiguration::incomingSecurityProtocol() const
 {
     return mIncomingSecurityProtocol;
 }
 
-void ManualConfiguration::setIncomingSecurityProtocol(MailTransport::Transport::EnumEncryption securityProtocol)
+void AccountConfiguration::setIncomingSecurityProtocol(MailTransport::Transport::EnumEncryption securityProtocol)
 {
     if (mIncomingSecurityProtocol == securityProtocol) {
         return;
@@ -426,7 +426,7 @@ void ManualConfiguration::setIncomingSecurityProtocol(MailTransport::Transport::
     Q_EMIT incomingSecurityProtocolChanged();
 }
 
-void ManualConfiguration::setIncomingProtocol(IncomingProtocol newIncomingProtocol)
+void AccountConfiguration::setIncomingProtocol(IncomingProtocol newIncomingProtocol)
 {
     if (mIncomingProtocol != newIncomingProtocol) {
         mIncomingProtocol = newIncomingProtocol;
@@ -443,17 +443,17 @@ void ManualConfiguration::setIncomingProtocol(IncomingProtocol newIncomingProtoc
     }
 }
 
-ManualConfiguration::IncomingProtocol ManualConfiguration::incomingProtocol() const
+AccountConfiguration::IncomingProtocol AccountConfiguration::incomingProtocol() const
 {
     return mIncomingProtocol;
 }
 
-QString ManualConfiguration::incomingHostName() const
+QString AccountConfiguration::incomingHostName() const
 {
     return mIncomingHostName;
 }
 
-void ManualConfiguration::setIncomingHostName(const QString &newIncomingHostName)
+void AccountConfiguration::setIncomingHostName(const QString &newIncomingHostName)
 {
     if (mIncomingHostName != newIncomingHostName) {
         mIncomingHostName = newIncomingHostName;
@@ -462,12 +462,12 @@ void ManualConfiguration::setIncomingHostName(const QString &newIncomingHostName
     }
 }
 
-uint ManualConfiguration::incomingPort() const
+uint AccountConfiguration::incomingPort() const
 {
     return mIncomingPort;
 }
 
-void ManualConfiguration::setIncomingPort(uint newPort)
+void AccountConfiguration::setIncomingPort(uint newPort)
 {
     if (mIncomingPort != newPort) {
         mIncomingPort = newPort;
@@ -476,12 +476,12 @@ void ManualConfiguration::setIncomingPort(uint newPort)
     }
 }
 
-QString ManualConfiguration::incomingUserName() const
+QString AccountConfiguration::incomingUserName() const
 {
     return mIncomingUserName;
 }
 
-void ManualConfiguration::setIncomingUserName(const QString &newIncomingUserName)
+void AccountConfiguration::setIncomingUserName(const QString &newIncomingUserName)
 {
     if (mIncomingUserName != newIncomingUserName) {
         mIncomingUserName = newIncomingUserName;
@@ -490,7 +490,7 @@ void ManualConfiguration::setIncomingUserName(const QString &newIncomingUserName
     }
 }
 
-QDebug operator<<(QDebug d, const ManualConfiguration &t)
+QDebug operator<<(QDebug d, const AccountConfiguration &t)
 {
     d.space() << "mIncomingUserName" << t.incomingUserName();
     d.space() << "mIncomingHostName" << t.incomingHostName();
@@ -506,4 +506,4 @@ QDebug operator<<(QDebug d, const ManualConfiguration &t)
     return d;
 }
 
-#include "moc_manualconfiguration.cpp"
+#include "moc_accountconfiguration.cpp"
