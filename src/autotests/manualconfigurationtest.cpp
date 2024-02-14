@@ -1,29 +1,77 @@
 /*
     SPDX-FileCopyrightText: 2023-2024 Laurent Montel <montel.org>
+    SPDX-FileCopyrightText: 2024 Carl Schwan <carl@carlschwan.eu>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 #include "manualconfigurationtest.h"
+#include "consolelog.h"
 #include "manualconfiguration.h"
 
 #include <QSignalSpy>
+#include <QStandardPaths>
 #include <QTest>
 
+#include <Akonadi/AgentManager>
+#include <MailTransport/TransportManager>
+
 QTEST_MAIN(ManualConfigurationTest)
+
+using namespace Qt::Literals::StringLiterals;
+using namespace KIdentityManagementCore;
+using namespace Akonadi;
+
+namespace
+{
+
+const auto i1Name = QStringLiteral("Test1");
+const auto i1Email = QStringLiteral("firstname.lastname@example.com");
+
+void cleanupIdentities(std::unique_ptr<IdentityManager> &manager)
+{
+    QVERIFY(manager);
+    // It is picking up identities from older tests sometimes, so cleanup
+    // Note this will always leave at least one identity -- remove later
+    while (manager->identities().count() > 1) {
+        QVERIFY(manager->removeIdentity(manager->identities().at(0)));
+        manager->commit();
+    }
+}
+}
 
 ManualConfigurationTest::ManualConfigurationTest(QObject *parent)
     : QObject{parent}
 {
 }
 
+void ManualConfigurationTest::init()
+{
+    QStandardPaths::setTestModeEnabled(true);
+    mManager = std::make_unique<IdentityManager>();
+
+    cleanupIdentities(mManager);
+    QCOMPARE(mManager->identities().count(), 1); // Can't remove all identities
+
+    {
+        auto &i = mManager->newFromScratch(QStringLiteral("Test2"));
+        i.setPrimaryEmailAddress(QStringLiteral("test@test.de"));
+    }
+
+    // Remove the first identity, which we couldn't remove above
+    QVERIFY(mManager->removeIdentity(mManager->identities().at(0)));
+
+    mManager->commit();
+    QCOMPARE(mManager->identities().count(), 1);
+}
+
 void ManualConfigurationTest::shouldHaveDefaultValues()
 {
-    ManualConfiguration w;
+    ManualConfiguration w(mManager.get());
     QVERIFY(w.incomingHostName().isEmpty());
     QVERIFY(w.incomingUserName().isEmpty());
 
-    QCOMPARE(w.incomingProtocol(), 0);
+    QCOMPARE(w.incomingProtocol(), ManualConfiguration::IncomingProtocol::IMAP);
     QCOMPARE(w.incomingSecurityProtocol(), MailTransport::Transport::EnumEncryption::SSL);
     QCOMPARE(w.incomingAuthenticationProtocol(), MailTransport::Transport::EnumAuthenticationType::LOGIN);
     QCOMPARE(w.incomingPort(), 995);
@@ -39,17 +87,18 @@ void ManualConfigurationTest::shouldHaveDefaultValues()
 
 void ManualConfigurationTest::shouldAssignEmail()
 {
-    ManualConfiguration w;
+    ManualConfiguration w(mManager.get());
     QSignalSpy incomingHostNameChanged(&w, &ManualConfiguration::incomingHostNameChanged);
     QSignalSpy outgoingHostNameChanged(w.mailTransport(), &MailTransport::Transport::hostChanged);
     QSignalSpy incomingUserNameChanged(&w, &ManualConfiguration::incomingUserNameChanged);
     QSignalSpy outgoingUserNameChanged(w.mailTransport(), &MailTransport::Transport::userNameChanged);
 
-    w.setEmail(QStringLiteral("foo@kde.org"));
-    QCOMPARE(w.incomingHostName(), QStringLiteral("kde.org"));
-    QCOMPARE(w.mailTransport()->host(), QStringLiteral("kde.org"));
-    QCOMPARE(w.incomingUserName(), QStringLiteral("foo@kde.org"));
-    QCOMPARE(w.mailTransport()->userName(), QStringLiteral("foo@kde.org"));
+    w.setEmail(u"foo@kde.org"_s);
+
+    QCOMPARE(w.incomingHostName(), u"kde.org"_s);
+    QCOMPARE(w.mailTransport()->host(), u"kde.org"_s);
+    QCOMPARE(w.incomingUserName(), u"foo@kde.org"_s);
+    QCOMPARE(w.mailTransport()->userName(), u"foo@kde.org"_s);
     QCOMPARE(incomingHostNameChanged.count(), 1);
     QCOMPARE(outgoingHostNameChanged.count(), 1);
     QCOMPARE(incomingUserNameChanged.count(), 1);
@@ -58,17 +107,85 @@ void ManualConfigurationTest::shouldAssignEmail()
 
 void ManualConfigurationTest::createResource()
 {
-    // TODO
-    ManualConfiguration w;
-    // w.save();
-    //  TODO
+    // Ensure nothing is there before adding the email configurations
+    QCOMPARE(KIdentityManagementCore::IdentityManager::self()->identities().count(), 1);
+    QVERIFY(MailTransport::TransportManager::self()->transports().isEmpty());
+
+    QFETCH(QString, email);
+    QFETCH(QString, fullName);
+    QFETCH(QString, password);
+    QFETCH(ManualConfiguration::IncomingProtocol, protocol);
+    QFETCH(QString, incomingHostName);
+    QFETCH(MailTransport::Transport::EnumEncryption, incomingEncryption);
+    QFETCH(MailTransport::Transport::EnumAuthenticationType, incomingAuth);
+    QFETCH(QString, outgoingHostName);
+    QFETCH(MailTransport::Transport::EnumEncryption, outgoingEncryption);
+    QFETCH(MailTransport::Transport::EnumAuthenticationType, outgoingAuth);
+
+    ManualConfiguration w(mManager.get());
+    w.setEmail(email);
+    w.setIncomingProtocol(protocol);
+    w.identity().setFullName(fullName);
+    w.setIncomingHostName(incomingHostName);
+    w.setIncomingSecurityProtocol(incomingEncryption);
+    w.setIncomingAuthenticationProtocol(incomingAuth);
+    w.mailTransport()->setHost(outgoingHostName);
+    w.mailTransport()->setEncryption(outgoingEncryption);
+    w.mailTransport()->setAuthenticationType(outgoingAuth);
+
+    QCOMPARE(w.email(), u"foo@kde.org"_s);
+    QCOMPARE(w.identity().fullName(), fullName);
+
+    QCOMPARE(w.incomingProtocol(), protocol);
+    QCOMPARE(w.incomingHostName(), u"imap.kde.org"_s);
+    QCOMPARE(w.incomingUserName(), u"foo@kde.org"_s);
+    QCOMPARE(w.incomingSecurityProtocol(), MailTransport::Transport::EnumEncryption::TLS);
+    QCOMPARE(w.incomingAuthenticationProtocol(), MailTransport::Transport::EnumAuthenticationType::CRAM_MD5);
+
+    QCOMPARE(w.mailTransport()->host(), u"smtp.kde.org"_s);
+    QCOMPARE(w.mailTransport()->userName(), u"foo@kde.org"_s);
+    QCOMPARE(w.mailTransport()->port(), 587);
+    QCOMPARE(w.mailTransport()->storePassword(), true);
+    QCOMPARE(w.mailTransport()->encryption(), MailTransport::Transport::EnumEncryption::TLS);
+    QCOMPARE(w.mailTransport()->authenticationType(), MailTransport::Transport::EnumAuthenticationType::CRAM_MD5);
+
+    auto consoleLog = new ConsoleLog();
+
+    QSignalSpy agentAdded(AgentManager::self(), &AgentManager::instanceAdded);
+    w.save(consoleLog);
+
+    QCOMPARE(mManager->identities().count(), 2);
+    QCOMPARE(mManager->identityForUoid(w.identity().uoid()).fullName(), fullName);
+    QCOMPARE(mManager->identityForAddress(email).fullName(), fullName);
+
+    QCOMPARE(MailTransport::TransportManager::self()->transports().count(), 1);
+
+    agentAdded.wait();
+    QCOMPARE(agentAdded.count(), 1);
+
+    AgentInstance agent = agentAdded.takeFirst().at(0).value<Akonadi::AgentInstance>();
+    QCOMPARE(agent.type().identifier(), u"akonadi_imap_resource"_s);
+    QVERIFY(agent.isValid());
 }
 
 void ManualConfigurationTest::createResource_data()
 {
-    QTest::addColumn<Resource::ResourceInfo>("resourceInfo");
+    QTest::addColumn<QString>("email");
+    QTest::addColumn<QString>("fullName");
+    QTest::addColumn<QString>("password");
+    QTest::addColumn<ManualConfiguration::IncomingProtocol>("protocol");
+    QTest::addColumn<QString>("incomingHostName");
+    QTest::addColumn<MailTransport::Transport::EnumEncryption>("incomingEncryption");
+    QTest::addColumn<MailTransport::Transport::EnumAuthenticationType>("incomingAuth");
+    QTest::addColumn<QString>("outgoingHostName");
+    QTest::addColumn<MailTransport::Transport::EnumEncryption>("outgoingEncryption");
+    QTest::addColumn<MailTransport::Transport::EnumAuthenticationType>("outgoingAuth");
+    QTest::addColumn<QString>("resourceIdentifier");
 
-    // TODO
+    QTest::addRow("imap") << u"foo@kde.org"_s << u"Foo Bar"_s << u"password"_s << ManualConfiguration::IncomingProtocol::IMAP << u"imap.kde.org"_s
+                          << MailTransport::Transport::EnumEncryption::TLS << MailTransport::Transport::EnumAuthenticationType::CRAM_MD5 << u"smtp.kde.org"_s
+                          << MailTransport::Transport::EnumEncryption::TLS << MailTransport::Transport::EnumAuthenticationType::CRAM_MD5
+                          << "akonadi_imap_resource";
 }
 
 #include "moc_manualconfigurationtest.cpp"

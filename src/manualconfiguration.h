@@ -7,6 +7,7 @@
 
 #include "resource.h"
 #include <KIdentityManagementCore/Identity>
+#include <KIdentityManagementCore/IdentityManager>
 #include <MailTransport/Transport>
 #include <QDebug>
 #include <QObject>
@@ -57,14 +58,15 @@ public:
     Q_ENUM(IncomingProtocol)
 
     explicit ManualConfiguration(QObject *parent = nullptr);
+    ManualConfiguration(KIdentityManagementCore::IdentityManager *identiyMmanager, QObject *parent = nullptr);
     ~ManualConfiguration() override;
 
     /// Save the mail transport and resource
-    Q_INVOKABLE void save();
+    Q_INVOKABLE void save(ConsoleLog *consoleLog);
 
     [[nodiscard]] MailTransport::Transport *mailTransport() const;
 
-    [[nodiscard]] KIdentityManagementCore::Identity identity() const;
+    [[nodiscard]] KIdentityManagementCore::Identity &identity() const;
     void setIdentity(const KIdentityManagementCore::Identity &identity);
 
     [[nodiscard]] QString incomingHostName() const;
@@ -124,7 +126,7 @@ Q_SIGNALS:
     void serverTestDone();
 
 protected:
-    void generateResource(const Resource::ResourceInfo &info);
+    void generateResource(const Resource::ResourceInfo &info, ConsoleLog *consoleLog);
 
 private:
     [[nodiscard]] Resource::ResourceInfo createPop3Resource() const;
@@ -158,6 +160,7 @@ private:
     ServerTest *mServerTest = nullptr;
 
     MailTransport::Transport *const mMailTransport;
+    KIdentityManagementCore::IdentityManager *mIdentityManager;
     mutable KIdentityManagementCore::Identity mIdentity;
 };
 

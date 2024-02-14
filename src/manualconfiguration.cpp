@@ -8,7 +8,6 @@
 #include "accountwizard_debug.h"
 #include "consolelog.h"
 #include "servertest.h"
-#include <KIdentityManagementCore/IdentityManager>
 #include <KLocalizedString>
 #include <MailTransport/TransportManager>
 #include <QQmlEngine>
@@ -17,10 +16,24 @@
 
 using namespace Qt::Literals::StringLiterals;
 
+ManualConfiguration::ManualConfiguration(KIdentityManagementCore::IdentityManager *manager, QObject *parent)
+    : QObject{parent}
+    , mMailTransport(MailTransport::TransportManager::self()->createTransport())
+    , mIdentityManager(manager)
+    , mIdentity(mIdentityManager->newFromScratch(QStringLiteral("tmp")))
+{
+    // Set appropriate defaults
+    mMailTransport->setStorePassword(true);
+    mMailTransport->setEncryption(MailTransport::Transport::EnumEncryption::SSL);
+    mMailTransport->setPort(587);
+    mMailTransport->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::PLAIN);
+}
+
 ManualConfiguration::ManualConfiguration(QObject *parent)
     : QObject{parent}
     , mMailTransport(MailTransport::TransportManager::self()->createTransport())
-    , mIdentity(KIdentityManagementCore::IdentityManager::self()->newFromScratch(QString()))
+    , mIdentityManager(KIdentityManagementCore::IdentityManager::self())
+    , mIdentity(mIdentityManager->newFromScratch(QStringLiteral("tmp2")))
 {
     // Set appropriate defaults
     mMailTransport->setStorePassword(true);
@@ -42,7 +55,7 @@ void ManualConfiguration::setIdentity(const KIdentityManagementCore::Identity &i
     Q_EMIT identityChanged();
 }
 
-KIdentityManagementCore::Identity ManualConfiguration::identity() const
+KIdentityManagementCore::Identity &ManualConfiguration::identity() const
 {
     return mIdentity;
 }
@@ -144,13 +157,8 @@ Resource::ResourceInfo ManualConfiguration::createKolabResource() const
     return info;
 }
 
-void ManualConfiguration::generateResource(const Resource::ResourceInfo &info)
+void ManualConfiguration::generateResource(const Resource::ResourceInfo &info, ConsoleLog *consoleLog)
 {
-    auto engine = qmlEngine(this);
-    Q_ASSERT(engine);
-    auto consoleLog = engine->singletonInstance<ConsoleLog *>(u"org.kde.pim.accountwizard"_s, u"ConsoleLog"_s);
-    Q_ASSERT(consoleLog);
-
     auto resource = new Resource(consoleLog, this);
     resource->setResourceInfo(std::move(info));
     resource->createResource();
@@ -170,15 +178,9 @@ void ManualConfiguration::setPassword(const QString &password)
     Q_EMIT passwordChanged();
 }
 
-void ManualConfiguration::save()
+void ManualConfiguration::save(ConsoleLog *consoleLog)
 {
-    auto engine = qmlEngine(this);
-    Q_ASSERT(engine);
-    auto consoleLog = engine->singletonInstance<ConsoleLog *>(u"org.kde.pim.accountwizard"_s, u"ConsoleLog"_s);
-    Q_ASSERT(consoleLog);
-
     // create identity
-    auto identityManager = KIdentityManagementCore::IdentityManager::self();
     QString identityName;
     QString hostName;
     if (email().split(u'@').count() > 1) {
@@ -192,8 +194,8 @@ void ManualConfiguration::save()
     } else {
         identityName = u"%1 (%2)"_s.arg(unnamed, hostName);
     }
-    if (!identityManager->isUnique(identityName)) {
-        identityName = identityManager->makeUnique(identityName);
+    if (!mIdentityManager->isUnique(identityName)) {
+        identityName = mIdentityManager->makeUnique(identityName);
     }
     mIdentity.setIdentityName(identityName);
 
@@ -208,13 +210,13 @@ void ManualConfiguration::save()
     // create resource
     Resource::ResourceInfo info;
     switch (mIncomingProtocol) {
-    case 0: // Pop3
+    case IncomingProtocol::POP3:
         info = createPop3Resource();
         break;
-    case 1: // Imap
+    case IncomingProtocol::IMAP:
         info = createImapResource();
         break;
-    case 2: // Kolab
+    case IncomingProtocol::KOLAB:
         info = createKolabResource();
         break;
     default:
@@ -222,7 +224,7 @@ void ManualConfiguration::save()
         return;
     }
     qCDebug(ACCOUNTWIZARD_LOG) << " info " << info;
-    generateResource(std::move(info));
+    generateResource(std::move(info), consoleLog);
 
     // create transport
     using TransportAuth = MailTransport::Transport::EnumAuthenticationType;
@@ -246,8 +248,7 @@ void ManualConfiguration::save()
     consoleLog->success(logEntryText);
 
     mIdentity.setTransport(QString::number(mMailTransport->id()));
-    KIdentityManagementCore::IdentityManager::self()->saveIdentity(mIdentity);
-    KIdentityManagementCore::IdentityManager::self()->commit();
+    mIdentityManager->saveIdentity(mIdentity);
 }
 
 void ManualConfiguration::checkServer()

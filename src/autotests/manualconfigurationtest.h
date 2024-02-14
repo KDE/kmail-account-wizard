@@ -5,6 +5,7 @@
 */
 #pragma once
 
+#include <KIdentityManagementCore/IdentityManager>
 #include <QObject>
 
 class ManualConfigurationTest : public QObject
@@ -15,8 +16,12 @@ public:
     ~ManualConfigurationTest() override = default;
 
 private Q_SLOTS:
+    void init();
     void shouldHaveDefaultValues();
     void shouldAssignEmail();
     void createResource();
     void createResource_data();
+
+private:
+    std::unique_ptr<KIdentityManagementCore::IdentityManager> mManager;
 };
