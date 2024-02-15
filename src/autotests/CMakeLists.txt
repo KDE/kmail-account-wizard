@@ -16,5 +16,7 @@ macro(accountwizard_test _source)
 
 endmacro()
 
-add_akonadi_isolated_test(accountconfigurationtest.cpp LINK_LIBRARIES accountwizard_static)
+if (NOT DEFINED ENV{KDECI_BUILD})
+    add_akonadi_isolated_test(accountconfigurationtest.cpp LINK_LIBRARIES accountwizard_static)
+endif()
 accountwizard_test(setupmanagertest.cpp)
