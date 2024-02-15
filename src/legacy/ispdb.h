@@ -55,7 +55,6 @@ public:
         GSSAPI,
         ClientIP,
         NoAuth,
-        Basic,
         OAuth2,
     };
     Q_ENUM(AuthType)

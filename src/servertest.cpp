@@ -9,8 +9,6 @@
 #include <MailTransport/Transport>
 
 #include "accountwizard_debug.h"
-#include <KLocalizedString>
-#include <KMessageBox>
 
 ServerTest::ServerTest(QObject *parent)
     : QObject(parent)
@@ -38,7 +36,7 @@ void ServerTest::test(const QString &server, const QString &protocol)
     m_serverTest->start();
 }
 
-void ServerTest::testFinished(const QList<int> &list)
+void ServerTest::testFinished(const QVector<int> &list)
 {
     qCDebug(ACCOUNTWIZARD_LOG) << "types: " << list;
     if (list.contains(MailTransport::Transport::EnumEncryption::TLS)) {
@@ -46,11 +44,6 @@ void ServerTest::testFinished(const QList<int> &list)
     } else if (list.contains(MailTransport::Transport::EnumEncryption::SSL)) {
         Q_EMIT testResult(QStringLiteral("ssl"));
     } else {
-        KMessageBox::information(nullptr,
-                                 i18n("There seems to be a problem in reaching this server "
-                                      "or choosing a safe way to sent the credentials to server. We advise you to "
-                                      "check the settings of the account and adjust it manually if needed."),
-                                 i18n("Autodetecting settings failed"));
         Q_EMIT testFail();
     }
 }

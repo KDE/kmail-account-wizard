@@ -292,7 +292,7 @@ public:
         }
 
         auto combo = qobject_cast<Kleo::KeySelectionCombo *>(parent());
-        combo->setDefaultKey(QLatin1String(result.import(0).fingerprint()));
+        combo->setDefaultKey(QLatin1StringView(result.import(0).fingerprint()));
         connect(combo, &Kleo::KeySelectionCombo::keyListingFinished, this, &KeyImportJob::done);
         combo->refreshKeys();
     }
@@ -422,11 +422,11 @@ void CryptoPage::setPublishingEnabled(bool enabled)
 
 void CryptoPage::importKey()
 {
-    const QString certificateFilter = i18n("Certificates") + QLatin1String(" (*.asc *.cer *.cert *.crt *.der *.pem *.gpg *.p7c *.p12 *.pfx *.pgp)");
-    const QString anyFilesFilter = i18n("Any files") + QLatin1String(" (*)");
+    const QString certificateFilter = i18n("Certificates") + QLatin1StringView(" (*.asc *.cer *.cert *.crt *.der *.pem *.gpg *.p7c *.p12 *.pfx *.pgp)");
+    const QString anyFilesFilter = i18n("Any files") + QLatin1StringView(" (*)");
 
     const QString file =
-        QFileDialog::getOpenFileName(this, i18n("Select Certificate File"), QString(), certificateFilter + QLatin1String(";;") + anyFilesFilter);
+        QFileDialog::getOpenFileName(this, i18n("Select Certificate File"), QString(), certificateFilter + QLatin1StringView(";;") + anyFilesFilter);
     if (file.isEmpty()) {
         return;
     }

@@ -65,8 +65,8 @@ void Ldap::create()
 
     basedn.replace(QLatin1Char('.'), QStringLiteral(",dc="));
 
-    if (!basedn.startsWith(QLatin1String("dc="))) {
-        basedn.prepend(QLatin1String("dc="));
+    if (!basedn.startsWith(QLatin1StringView("dc="))) {
+        basedn.prepend(QLatin1StringView("dc="));
     }
 
     // Set the changes
