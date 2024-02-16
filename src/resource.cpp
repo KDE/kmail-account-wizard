@@ -166,7 +166,7 @@ void Resource::instanceCreateResult(KJob *job)
             value = QLatin1String(QMetaEnum::fromType<MailTransport::Transport::EnumEncryption>().key(it.value().toInt()));
         } else if (it.key() == u"Password"_s) {
             if (value.isEmpty()) {
-                value = i18nc("Empty password", "Empty");
+                value = i18nc("Indication that the password set for the resource is empty", "Empty");
             } else {
                 value = u"•••••••••••"_s;
             }
