@@ -45,3 +45,5 @@ void ConsoleLog::addEntry(const QString &output, EntryType type)
     m_logEntries.push_back({output, type});
     endInsertRows();
 }
+
+#include "moc_consolelog.cpp"
