@@ -120,7 +120,7 @@ WizardPage {
             textRole: "text"
             valueRole: "value"
             model: [
-                { value: Transport.SSL, text: i18n("SSL/TLS (recommanded)") },
+                { value: Transport.SSL, text: i18n("SSL/TLS (recommended)") },
                 { value: Transport.TLS, text: i18n("StartTLS") },
                 { value: Transport.None, text: i18n("None") }
             ]
@@ -225,7 +225,7 @@ WizardPage {
             valueRole: "value"
             model: [
                 { value: Transport.None, text: i18n("None") },
-                { value: Transport.SSL, text: i18n("SSL/TLS (recommanded)") },
+                { value: Transport.SSL, text: i18n("SSL/TLS (recommended)") },
                 { value: Transport.TLS, text: i18n("StartTLS") }
             ]
             onCurrentIndexChanged: {

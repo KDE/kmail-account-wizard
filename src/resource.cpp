@@ -156,7 +156,7 @@ void Resource::instanceCreateResult(KJob *job)
     QString resourceLogEntryText = u"<h3>"_s + i18nc("log entry content", "Resource setup completed: %1", mResourceInfo.name) + u"</h3>"_s;
 
     resourceLogEntryText += u"<ul>"_s;
-    resourceLogEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Resouce type:"), mResourceInfo.typeIdentifier);
+    resourceLogEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Resource type:"), mResourceInfo.typeIdentifier);
     QMap<QString, QVariant>::const_iterator end(mResourceInfo.settings.constEnd());
     for (QMap<QString, QVariant>::const_iterator it = mResourceInfo.settings.constBegin(); it != end; ++it) {
         QString value = it.value().toString();
