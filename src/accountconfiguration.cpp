@@ -12,7 +12,6 @@
 #include <MailTransport/TransportManager>
 #include <QQmlEngine>
 #include <QRegularExpression>
-#include <QUrl>
 
 using namespace Qt::Literals::StringLiterals;
 

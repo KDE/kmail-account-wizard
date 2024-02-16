@@ -26,7 +26,6 @@
 #include <gpgme++/keylistresult.h>
 
 #include <KMessageBox>
-#include <KNewPasswordDialog>
 #include <KNotifications/KNotification>
 
 #include <KIdentityManagementCore/Identity>

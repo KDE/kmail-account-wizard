@@ -3,8 +3,6 @@
 
 #include "consolelog.h"
 
-#include <QFileInfo>
-
 ConsoleLog::ConsoleLog(QObject *parent)
     : QAbstractListModel(parent)
 {

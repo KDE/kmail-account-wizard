@@ -15,8 +15,7 @@
 #include <QDebug>
 #include <QIcon>
 #include <QQmlApplicationEngine>
-#include <QUrl>
-#include <QtQml>
+#include <QQmlContext>
 
 using namespace Qt::Literals::StringLiterals;
 

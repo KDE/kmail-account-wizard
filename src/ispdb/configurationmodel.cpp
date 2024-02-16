@@ -10,8 +10,6 @@
 #include <KIdentityManagementCore/IdentityManager>
 #include <KLocalizedString>
 #include <MailTransport/TransportManager>
-#include <QMetaEnum>
-#include <QQmlEngine>
 
 using namespace Qt::Literals::StringLiterals;
 

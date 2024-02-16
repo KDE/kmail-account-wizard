@@ -7,7 +7,6 @@
 
 #pragma once
 #include <KIO/Job>
-#include <KMime/HeaderParsing>
 #include <QObject>
 #include <QUrl>
 

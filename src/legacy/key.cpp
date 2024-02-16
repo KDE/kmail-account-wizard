@@ -10,8 +10,6 @@
 
 #include <QTimer>
 
-#include <QGpgME/CryptoConfig>
-#include <QGpgME/Protocol>
 #include <QGpgME/WKSPublishJob>
 
 #include <gpgme++/engineinfo.h>
@@ -25,7 +23,6 @@
 
 #include <KMime/Headers>
 #include <KMime/Message>
-#include <KMime/Util>
 
 #include <KEmailAddress>
 

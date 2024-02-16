@@ -5,7 +5,6 @@
 
 #include "ispdb/serverconfiguration.h"
 
-#include <KMime/HeaderParsing>
 #include <QObject>
 
 class QNetworkAccessManager;
