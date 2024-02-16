@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-09 00:38+0000\n"
+"POT-Creation-Date: 2024-02-16 00:38+0000\n"
 "PO-Revision-Date: 2024-02-02 12:51+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -32,399 +32,519 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "translator@legisign.org"
 
-#: accountwizard/accountconfigurationbase.cpp:34
-#: accountwizard/ispdb/configurationmodel.cpp:36
-#: accountwizard/ispdb/serverconfiguration.cpp:26
-#, kde-format
-msgid "POP3"
-msgstr "POP3"
-
-#: accountwizard/accountconfigurationbase.cpp:34
-#: accountwizard/ispdb/configurationmodel.cpp:36
-#: accountwizard/ispdb/serverconfiguration.cpp:23
-#, kde-format
-msgid "IMAP"
-msgstr "IMAP"
-
-#: accountwizard/accountconfigurationbase.cpp:34
-#, kde-format
-msgid "Kolab"
-msgstr "Kolab"
-
-#: accountwizard/accountconfigurationbase.cpp:39
-#, kde-format
-msgid "STARTTLS"
-msgstr "STARTTLS"
-
-#: accountwizard/accountconfigurationbase.cpp:39
-#: accountwizard/ispdb/serverconfiguration.cpp:35
-#, kde-format
-msgid "SSL/TLS"
-msgstr "SSL/TLS"
-
-#: accountwizard/accountconfigurationbase.cpp:39
-#, kde-format
-msgid "None"
-msgstr "Ei mitään"
-
-#: accountwizard/accountconfigurationbase.cpp:44
-#, kde-format
-msgid "Clear text"
-msgstr "Tyhjennä teksti"
-
-#: accountwizard/accountconfigurationbase.cpp:44
-#, kde-format
-msgid "LOGIN"
-msgstr "LOGIN"
-
-#: accountwizard/accountconfigurationbase.cpp:44
-#, kde-format
-msgid "PLAIN"
-msgstr "PLAIN"
-
-#: accountwizard/accountconfigurationbase.cpp:44
-#, kde-format
-msgid "CRAM-MD5"
-msgstr "CRAM-MD5"
-
-#: accountwizard/accountconfigurationbase.cpp:44
-#, kde-format
-msgid "DIGEST-MD5"
-msgstr "DIGEST-MD5"
-
-#: accountwizard/accountconfigurationbase.cpp:44
-#, kde-format
-msgid "NTLM"
-msgstr "NTLM"
-
-#: accountwizard/accountconfigurationbase.cpp:44
-#, kde-format
-msgid "GSSAPI"
-msgstr "GSSAPI"
-
-#: accountwizard/identitybase.cpp:25
-#, kde-format
-msgid "Setting up identity..."
-msgstr "Asetetaan henkilöyttä…"
-
-#: accountwizard/identitybase.cpp:31
-#, kde-format
-msgid "Identity set up."
-msgstr "Henkilöys asetettu."
-
-#: accountwizard/identitybase.cpp:45
+#: accountconfiguration.cpp:192 ispdb/configurationmodel.cpp:137
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Nimetön"
 
-#: accountwizard/identitybase.cpp:77
+#: accountconfiguration.cpp:203
 #, kde-format
-msgid "Identity removed."
-msgstr "Henkilöys poistettu."
+msgctxt "log entry content"
+msgid "Create email identity: %1"
+msgstr ""
 
-#: accountwizard/ispdb/configurationmodel.cpp:38
+#: accountconfiguration.cpp:206
+#, fuzzy, kde-format
+#| msgid "Full name:"
+msgctxt "log entry content"
+msgid "Full name:"
+msgstr "Koko nimi:"
+
+#: accountconfiguration.cpp:207
+#, fuzzy, kde-format
+#| msgid "E-mail address:"
+msgctxt "log entry content"
+msgid "Primary email address:"
+msgstr "Sähköpostiosoite:"
+
+#: accountconfiguration.cpp:235
+#, fuzzy, kde-format
+#| msgid "Mail transport account deleted."
+msgctxt "log entry content"
+msgid "Mail transport setup completed: %1"
+msgstr "Postinvälitystili poistettu."
+
+#: accountconfiguration.cpp:238
+#, fuzzy, kde-format
+#| msgid "Hostname:"
+msgctxt "log entry content"
+msgid "Host:"
+msgstr "Konenimi:"
+
+#: accountconfiguration.cpp:239
+#, fuzzy, kde-format
+#| msgid "Port:"
+msgctxt "log entry content"
+msgid "Port:"
+msgstr "Portti:"
+
+#: accountconfiguration.cpp:240
+#, fuzzy, kde-format
+#| msgid "Username:"
+msgctxt "log entry content"
+msgid "Username:"
+msgstr "Käyttäjätunnus:"
+
+#: accountconfiguration.cpp:242
+#, kde-format
+msgctxt "log entry content"
+msgid "Encryption:"
+msgstr ""
+
+#: accountconfiguration.cpp:244
+#, fuzzy, kde-format
+#| msgid "Authentication Method:"
+msgctxt "log entry content"
+msgid "Authentication:"
+msgstr "Todennustapa:"
+
+#: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:23
+#: qml/ManualConfigurationPage.qml:92
+#, kde-format
+msgid "IMAP"
+msgstr "IMAP"
+
+#: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:26
+#: qml/ManualConfigurationPage.qml:93
+#, kde-format
+msgid "POP3"
+msgstr "POP3"
+
+#: ispdb/configurationmodel.cpp:49
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
 msgstr "Pidä kansiot ja viestit tahdistettuna palvelimessa"
 
-#: accountwizard/ispdb/configurationmodel.cpp:39
+#: ispdb/configurationmodel.cpp:50
 #, kde-format
 msgid "Keep your folders and emails on your computer"
 msgstr "Pidä kansiot ja viestit paikallisella koneella"
 
-#: accountwizard/ispdb/serverconfiguration.cpp:29
+#: ispdb/serverconfiguration.cpp:29
 #, kde-format
 msgid "SMTP"
 msgstr "SMTP"
 
-#: accountwizard/ispdb/serverconfiguration.cpp:38
+#: ispdb/serverconfiguration.cpp:35
+#, kde-format
+msgid "SSL/TLS"
+msgstr "SSL/TLS"
+
+#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:124
+#: qml/ManualConfigurationPage.qml:229
 #, kde-format
 msgid "StartTLS"
 msgstr "StartTLS"
 
-#: accountwizard/ispdb/serverconfiguration.cpp:41
+#: ispdb/serverconfiguration.cpp:41
 #, kde-format
 msgctxt "No security mechanism"
 msgid "None"
 msgstr "Ei mitään"
 
-#: accountwizard/ispdbservice.cpp:133
+#: ispdbservice.cpp:134
 #, kde-format
 msgid "Configuration found auto config file."
 msgstr "Määritys löytyi automaattimääritystiedostosta."
 
-#: accountwizard/ispdbservice.cpp:136
+#: ispdbservice.cpp:137
 #, kde-format
 msgid "Configuration found in well-known file."
 msgstr "Määritys löytyi tunnetusta tiedostosta."
 
-#: accountwizard/ispdbservice.cpp:139
+#: ispdbservice.cpp:140
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Määritys löytyi Mozillan FAI-tietokannasta."
 
-#: accountwizard/resource.cpp:68
-#, kde-format
-msgid "Resource type '%1' is not available."
-msgstr "Tyypin ”%1” resurssi ei ole käytettävissä."
-
-#: accountwizard/resource.cpp:81
-#, kde-format
-msgid "Resource '%1' is already set up."
-msgstr "Resurssi ”%1” on jo asetettu."
-
-#: accountwizard/resource.cpp:88
-#, kde-format
-msgid "Creating resource instance for '%1'..."
-msgstr "Luodaan resurssi-ilmentymää kohteelle ”%1”…"
-
-#: accountwizard/resource.cpp:97
-#, kde-format
-msgid "Failed to create resource instance: %1"
-msgstr "Resurssi-ilmentymän luominen epäonnistui: %1"
-
-#: accountwizard/resource.cpp:104
-#, kde-format
-msgid "Configuring resource instance..."
-msgstr "Asetetaan resurssi-ilmentymää…"
-
-#: accountwizard/resource.cpp:108
-#, kde-format
-msgid "Unable to configure resource instance."
-msgstr "Resurssi-ilmentymää ei voida määrittää."
-
-#: accountwizard/resource.cpp:124
-#, kde-format
-msgid "Could not convert value of setting '%1' to required type %2."
-msgstr "Asetuksen ”%1” arvoa ei voi muuntaa vaadittuun tyyppiin %2."
-
-#: accountwizard/resource.cpp:134
-#, kde-format
-msgid "Could not set setting '%1': %2"
-msgstr "Asetusta ”%1” ei voida asettaa: %2"
-
-#: accountwizard/resource.cpp:140
-#, kde-format
-msgid "Could not save settings: %1"
-msgstr "Asetuksia ei voitu tallentaa: %1"
-
-#: accountwizard/resource.cpp:146
-#, kde-format
-msgid "Resource setup completed."
-msgstr "Resurssin asetus valmis."
-
-#: accountwizard/transport.cpp:64
-#, kde-format
-msgid "Setting up mail transport account..."
-msgstr "Asetetaan postinvälitystiliä…"
-
-#: accountwizard/transport.cpp:99
-#, kde-format
-msgid "Mail transport uses '%1' encryption and '%2' authentication."
-msgstr "Postinvälitys käyttää salausta ”%1” ja todennusta ”%2”."
-
-#: accountwizard/transport.cpp:102
-#, kde-format
-msgid "Mail transport account set up."
-msgstr "Postinvälitystili asetettu."
-
-#: apps/contents/ui/ConfigurationDelegate.qml:93
-#, kde-format
-msgid "Incoming"
-msgstr "Saapuva:"
-
-#: apps/contents/ui/ConfigurationDelegate.qml:114
-#, kde-format
-msgid "Outgoing"
-msgstr "Lähtevä"
-
-#: apps/contents/ui/PersonalDataPage.qml:15
-#, kde-format
-msgid "Personal Information"
-msgstr "Henkilötiedot"
-
-#: apps/contents/ui/PersonalDataPage.qml:43
-#, kde-format
-msgid "Set Up Your Existing Email Address"
-msgstr "Aseta olemassa oleva sähköpostiosoite"
-
-#: apps/contents/ui/PersonalDataPage.qml:48
-#, kde-format
-msgid ""
-"To use your current email address fill in your credentials.<br />This wizard "
-"will automatically search for a working and recommended server configuration."
-msgstr ""
-"Täytä tunnistautumistiedot käyttääksesi nykyistä sähköpostiosoitettasi.<br /"
-">Opastettu toiminto etsii toimivat ja suositellut palvelinasetukset "
-"automaattisesti."
-
-#: apps/contents/ui/PersonalDataPage.qml:60
-#, kde-format
-msgid "Full name:"
-msgstr "Koko nimi:"
-
-#: apps/contents/ui/PersonalDataPage.qml:61
-#, kde-format
-msgctxt "Generic name"
-msgid "John Smith"
-msgstr "Matti Meikäläinen"
-
-#: apps/contents/ui/PersonalDataPage.qml:70
-#, kde-format
-msgid "E-mail address:"
-msgstr "Sähköpostiosoite:"
-
-#: apps/contents/ui/PersonalDataPage.qml:71
-#, kde-format
-msgctxt "Generic email address"
-msgid "boss@example.corp"
-msgstr "pomo@yritys.fi"
-
-#: apps/contents/ui/PersonalDataPage.qml:84
-#, kde-format
-msgid "Password:"
-msgstr "Salasana:"
-
-#: apps/contents/ui/PersonalDataPage.qml:93
-#, kde-format
-msgid "Continue"
-msgstr "Jatka"
-
-#: apps/contents/ui/PersonalDataPage.qml:107
-#, kde-format
-msgid ""
-"Check online for the settings needed for this email provider. Only the "
-"domain name part of the e-mail address will be sent over the Internet."
-msgstr ""
-"Tarkista verkosta tämän sähköpostintarjoajan vaatimat asetukset. Vain "
-"sähköpostiosoitteen toimialueosuus lähetetään internetiin."
-
-#: apps/contents/ui/PersonalDataPage.qml:133
-#, kde-format
-msgid "No config found from ispdb server."
-msgstr "ispdb-palvelimesta ei löytynyt määritystä."
-
-#: apps/contents/ui/PersonalDataPage.qml:140
-#, kde-format
-msgid "Incoming Server Parameters"
-msgstr "Saapuvan postin palvelinparametrit"
-
-#: apps/contents/ui/PersonalDataPage.qml:148
-#, kde-format
-msgid "Incoming server:"
-msgstr "Saapuvan postin palvelin:"
-
-#: apps/contents/ui/PersonalDataPage.qml:158
-#, kde-format
-msgid "Protocol:"
-msgstr "Yhteyskäytäntö:"
-
-#: apps/contents/ui/PersonalDataPage.qml:167
-#: apps/contents/ui/PersonalDataPage.qml:229
-#, kde-format
-msgid "Port:"
-msgstr "Portti:"
-
-#: apps/contents/ui/PersonalDataPage.qml:174
-#: apps/contents/ui/PersonalDataPage.qml:236
-#, kde-format
-msgid "Security:"
-msgstr "Tietoturva:"
-
-#: apps/contents/ui/PersonalDataPage.qml:183
-#: apps/contents/ui/PersonalDataPage.qml:245
-#, kde-format
-msgid "Authentication Method:"
-msgstr "Todennustapa:"
-
-#: apps/contents/ui/PersonalDataPage.qml:192
-#: apps/contents/ui/PersonalDataPage.qml:254
-#, kde-format
-msgid "Username:"
-msgstr "Käyttäjätunnus:"
-
-#: apps/contents/ui/PersonalDataPage.qml:203
-#, kde-format
-msgid "Download all messages for offline use"
-msgstr "Lataa kaikki viestit verkottomaan käyttöön"
-
-#: apps/contents/ui/PersonalDataPage.qml:213
-#, kde-format
-msgid "Outgoing Server Parameters"
-msgstr "Lähtevän postin palvelinparametrit"
-
-#: apps/contents/ui/PersonalDataPage.qml:220
-#, kde-format
-msgid "Outgoing server:"
-msgstr "Lähtevän postin palvelin:"
-
-#: apps/contents/ui/PersonalDataPage.qml:269
-#, kde-format
-msgid "Recheck"
-msgstr "Tarkista uudelleen"
-
-#: apps/contents/ui/PersonalDataPage.qml:282
-#: apps/contents/ui/PersonalDataPage.qml:330
-#, kde-format
-msgid "Create Account"
-msgstr "Luo tili"
-
-#: apps/contents/ui/PersonalDataPage.qml:293
-#, kde-format
-msgid "Available configurations"
-msgstr "Saatavilla olevat määritykset"
-
-#: apps/contents/ui/PersonalDataPage.qml:321
-#, kde-format
-msgid "Manual Configuration"
-msgstr "Manuaalinen asetus"
-
-#: apps/contents/ui/PersonalDataPage.qml:338
-#, kde-format
-msgid "Details"
-msgstr "Tiedot"
-
-#: apps/main.cpp:32
+#: main.cpp:30
 #, kde-format
 msgid "Account Assistant"
 msgstr "Tiliavustaja"
 
-#: apps/main.cpp:34
+#: main.cpp:32
 #, kde-format
 msgid "Helps setting up PIM accounts"
 msgstr "Auttaa asettamaan PIM-tilejä"
 
-#: apps/main.cpp:36
+#: main.cpp:34
 #, fuzzy, kde-format
 #| msgid "(c) 2009-2023 the Akonadi developers"
 msgid "(c) 2009-2024 the Akonadi developers"
 msgstr "© 2009–2023 Akonadin kehittäjät"
 
-#: apps/main.cpp:39
+#: main.cpp:37
 #, kde-format
 msgid "Volker Krause"
 msgstr "Volker Krause"
 
-#: apps/main.cpp:39
+#: main.cpp:37
 #, kde-format
 msgid "Author"
 msgstr "Tekijä"
 
-#: apps/main.cpp:40
+#: main.cpp:38
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: apps/main.cpp:40 apps/main.cpp:41
+#: main.cpp:38 main.cpp:39
 #, kde-format
 msgid "Maintainer"
 msgstr "Ylläpitäjä"
 
-#: apps/main.cpp:41
+#: main.cpp:39
 #, kde-format
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
+
+#: qml/ConfigurationDelegate.qml:93
+#, kde-format
+msgid "Incoming"
+msgstr "Saapuva:"
+
+#: qml/ConfigurationDelegate.qml:114
+#, kde-format
+msgid "Outgoing"
+msgstr "Lähtevä"
+
+#: qml/ConfigurationSelectionPage.qml:16
+#, fuzzy, kde-format
+#| msgid "Autoconfiguration found."
+msgctxt "@title:group"
+msgid "Configuration Selection"
+msgstr "Löydettiin automaattimääritys."
+
+#: qml/ConfigurationSelectionPage.qml:39
+#, kde-format
+msgid "Available configurations"
+msgstr "Saatavilla olevat määritykset"
+
+#: qml/ConfigurationSelectionPage.qml:56
+#, fuzzy, kde-format
+#| msgid "No config found from ispdb server."
+msgid "No configuration found from the internet for this server."
+msgstr "ispdb-palvelimesta ei löytynyt määritystä."
+
+#: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
+#, kde-format
+msgid "Manual Configuration"
+msgstr "Manuaalinen asetus"
+
+#: qml/DetailsPage.qml:15
+#, fuzzy, kde-format
+#| msgid "Details"
+msgctxt "@title:group"
+msgid "Details"
+msgstr "Tiedot"
+
+#: qml/DetailsPage.qml:18
+#, kde-format
+msgctxt "@action:button"
+msgid "Quit"
+msgstr ""
+
+#: qml/DetailsPage.qml:24
+#, kde-format
+msgid "Details"
+msgstr "Tiedot"
+
+#: qml/DetailsPage.qml:61
+#, kde-format
+msgctxt "Placeholder"
+msgid "No details available."
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:18
+#, kde-format
+msgid "Recheck"
+msgstr "Tarkista uudelleen"
+
+#: qml/ManualConfigurationPage.qml:25
+#, kde-format
+msgid "Create Account"
+msgstr "Luo tili"
+
+#: qml/ManualConfigurationPage.qml:68
+#, kde-format
+msgid "Incoming Server Parameters"
+msgstr "Saapuvan postin palvelinparametrit"
+
+#: qml/ManualConfigurationPage.qml:76
+#, kde-format
+msgid "Incoming server:"
+msgstr "Saapuvan postin palvelin:"
+
+#: qml/ManualConfigurationPage.qml:88
+#, kde-format
+msgid "Protocol:"
+msgstr "Yhteyskäytäntö:"
+
+#: qml/ManualConfigurationPage.qml:108 qml/ManualConfigurationPage.qml:209
+#, kde-format
+msgid "Port:"
+msgstr "Portti:"
+
+#: qml/ManualConfigurationPage.qml:119 qml/ManualConfigurationPage.qml:223
+#, kde-format
+msgid "Security:"
+msgstr "Tietoturva:"
+
+#: qml/ManualConfigurationPage.qml:123 qml/ManualConfigurationPage.qml:228
+#, kde-format
+msgid "SSL/TLS (recommanded)"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:125 qml/ManualConfigurationPage.qml:227
+#, kde-format
+msgid "None"
+msgstr "Ei mitään"
+
+#: qml/ManualConfigurationPage.qml:139 qml/ManualConfigurationPage.qml:241
+#, kde-format
+msgid "Authentication Method:"
+msgstr "Todennustapa:"
+
+#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:245
+#, kde-format
+msgid "Clear text"
+msgstr "Tyhjennä teksti"
+
+#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:246
+#, kde-format
+msgid "PLAIN"
+msgstr "PLAIN"
+
+#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:247
+#, kde-format
+msgid "LOGIN"
+msgstr "LOGIN"
+
+#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:248
+#, kde-format
+msgid "CRAM-MD5"
+msgstr "CRAM-MD5"
+
+#: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:249
+#, kde-format
+msgid "DIGEST-MD5"
+msgstr "DIGEST-MD5"
+
+#: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:250
+#, kde-format
+msgid "NTLM"
+msgstr "NTLM"
+
+#: qml/ManualConfigurationPage.qml:149 qml/ManualConfigurationPage.qml:251
+#, kde-format
+msgid "GSSAPI"
+msgstr "GSSAPI"
+
+#: qml/ManualConfigurationPage.qml:150 qml/ManualConfigurationPage.qml:252
+#, kde-format
+msgid "XOAuth (Gmail)"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:151 qml/ManualConfigurationPage.qml:253
+#, kde-format
+msgid "APOP"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:165 qml/ManualConfigurationPage.qml:266
+#, kde-format
+msgid "Username:"
+msgstr "Käyttäjätunnus:"
+
+#: qml/ManualConfigurationPage.qml:178
+#, kde-format
+msgid "Download all messages for offline use"
+msgstr "Lataa kaikki viestit verkottomaan käyttöön"
+
+#: qml/ManualConfigurationPage.qml:188
+#, kde-format
+msgid "Outgoing Server Parameters"
+msgstr "Lähtevän postin palvelinparametrit"
+
+#: qml/ManualConfigurationPage.qml:196
+#, kde-format
+msgid "Outgoing server:"
+msgstr "Lähtevän postin palvelin:"
+
+#: qml/PersonalDataPage.qml:15
+#, kde-format
+msgid "Personal Information"
+msgstr "Henkilötiedot"
+
+#: qml/PersonalDataPage.qml:43
+#, kde-format
+msgid "Connect your Email Account"
+msgstr ""
+
+#: qml/PersonalDataPage.qml:51
+#, fuzzy, kde-format
+#| msgid ""
+#| "To use your current email address fill in your credentials.<br />This "
+#| "wizard will automatically search for a working and recommended server "
+#| "configuration."
+msgid ""
+"To use your current email address fill in your credentials. This wizard will "
+"automatically search for a working and recommended server configuration. "
+"Only the domain name part of the e-mail address will be sent over the "
+"Internet."
+msgstr ""
+"Täytä tunnistautumistiedot käyttääksesi nykyistä sähköpostiosoitettasi.<br /"
+">Opastettu toiminto etsii toimivat ja suositellut palvelinasetukset "
+"automaattisesti."
+
+#: qml/PersonalDataPage.qml:57
+#, kde-format
+msgid "Full name:"
+msgstr "Koko nimi:"
+
+#: qml/PersonalDataPage.qml:58
+#, kde-format
+msgctxt "Generic name"
+msgid "John Smith"
+msgstr "Matti Meikäläinen"
+
+#: qml/PersonalDataPage.qml:67
+#, kde-format
+msgid "E-mail address:"
+msgstr "Sähköpostiosoite:"
+
+#: qml/PersonalDataPage.qml:68
+#, kde-format
+msgctxt "Generic email address"
+msgid "boss@example.corp"
+msgstr "pomo@yritys.fi"
+
+#: qml/PersonalDataPage.qml:78
+#, fuzzy, kde-format
+#| msgid "Password:"
+msgid "Password (optional):"
+msgstr "Salasana:"
+
+#: qml/WizardPage.qml:15
+#, kde-format
+msgctxt "@action:button"
+msgid "Previous"
+msgstr ""
+
+#: qml/WizardPage.qml:22
+#, kde-format
+msgctxt "@action:button"
+msgid "Next"
+msgstr ""
+
+#: resource.cpp:72
+#, kde-format
+msgid "Resource type '%1' is not available."
+msgstr "Tyypin ”%1” resurssi ei ole käytettävissä."
+
+#: resource.cpp:85
+#, kde-format
+msgid "Resource '%1' is already set up."
+msgstr "Resurssi ”%1” on jo asetettu."
+
+#: resource.cpp:92
+#, kde-format
+msgid "Creating resource instance for '%1'..."
+msgstr "Luodaan resurssi-ilmentymää kohteelle ”%1”…"
+
+#: resource.cpp:101
+#, kde-format
+msgid "Failed to create resource instance: %1"
+msgstr "Resurssi-ilmentymän luominen epäonnistui: %1"
+
+#: resource.cpp:108
+#, kde-format
+msgid "Configuring resource instance..."
+msgstr "Asetetaan resurssi-ilmentymää…"
+
+#: resource.cpp:112
+#, kde-format
+msgid "Unable to configure resource instance."
+msgstr "Resurssi-ilmentymää ei voida määrittää."
+
+#: resource.cpp:131
+#, fuzzy, kde-format
+#| msgid "Could not convert value of setting '%1' to required type %2."
+msgid ""
+"Could not convert value of setting '%1' with type %2 to required type %3."
+msgstr "Asetuksen ”%1” arvoa ei voi muuntaa vaadittuun tyyppiin %2."
+
+#: resource.cpp:144
+#, kde-format
+msgid "Could not set setting '%1': %2"
+msgstr "Asetusta ”%1” ei voida asettaa: %2"
+
+#: resource.cpp:150
+#, kde-format
+msgid "Could not save settings: %1"
+msgstr "Asetuksia ei voitu tallentaa: %1"
+
+#: resource.cpp:156
+#, fuzzy, kde-format
+#| msgid "Resource setup completed."
+msgctxt "log entry content"
+msgid "Resource setup completed: %1"
+msgstr "Resurssin asetus valmis."
+
+#: resource.cpp:159
+#, kde-format
+msgctxt "log entry content"
+msgid "Resouce type:"
+msgstr ""
+
+#: resource.cpp:169
+#, kde-format
+msgctxt "Empty password"
+msgid "Empty"
+msgstr ""
+
+#: resource.cpp:174
+#, kde-format
+msgctxt "label"
+msgid "%1:"
+msgstr ""
+
+#~ msgid "Kolab"
+#~ msgstr "Kolab"
+
+#~ msgid "STARTTLS"
+#~ msgstr "STARTTLS"
+
+#~ msgid "Setting up identity..."
+#~ msgstr "Asetetaan henkilöyttä…"
+
+#~ msgid "Identity set up."
+#~ msgstr "Henkilöys asetettu."
+
+#~ msgid "Identity removed."
+#~ msgstr "Henkilöys poistettu."
+
+#~ msgid "Setting up mail transport account..."
+#~ msgstr "Asetetaan postinvälitystiliä…"
+
+#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
+#~ msgstr "Postinvälitys käyttää salausta ”%1” ja todennusta ”%2”."
+
+#~ msgid "Mail transport account set up."
+#~ msgstr "Postinvälitystili asetettu."
+
+#~ msgid "Set Up Your Existing Email Address"
+#~ msgstr "Aseta olemassa oleva sähköpostiosoite"
+
+#~ msgid "Continue"
+#~ msgstr "Jatka"
+
+#~ msgid ""
+#~ "Check online for the settings needed for this email provider. Only the "
+#~ "domain name part of the e-mail address will be sent over the Internet."
+#~ msgstr ""
+#~ "Tarkista verkosta tämän sähköpostintarjoajan vaatimat asetukset. Vain "
+#~ "sähköpostiosoitteen toimialueosuus lähetetään internetiin."
 
 #~ msgid ""
 #~ "There seems to be a problem in reaching this server or choosing a safe "
@@ -566,14 +686,8 @@ msgstr "Carl Schwan"
 #~ msgid "Searching for autoconfiguration..."
 #~ msgstr "Etsitään automaattimääritystä…"
 
-#~ msgid "Autoconfiguration found."
-#~ msgstr "Löydettiin automaattimääritys."
-
 #~ msgid "Autoconfiguration failed."
 #~ msgstr "Automaattimääritys epäonnistui."
-
-#~ msgid "Hostname:"
-#~ msgstr "Konenimi:"
 
 #~ msgid "Provide personal data"
 #~ msgstr "Anna henkilökohtaiset tiedot"
@@ -647,9 +761,6 @@ msgstr "Carl Schwan"
 
 #~ msgid "Failed to set up account."
 #~ msgstr "Tilin asetus epäonnistui."
-
-#~ msgid "Mail transport account deleted."
-#~ msgstr "Postinvälitystili poistettu."
 
 #~ msgid "Could not load config dialog for UID '%1'"
 #~ msgstr "Ei voitu ladata asetusikkunaa UID:lle ”%1”"
