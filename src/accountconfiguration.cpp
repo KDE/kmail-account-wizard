@@ -280,7 +280,7 @@ void AccountConfiguration::checkServer()
 
 void AccountConfiguration::slotTestFail()
 {
-    qDebug() << "slotTestFail  ";
+    // qDebug() << "slotTestFail  ";
     // TODO
     mServerTestInProgress = false;
     Q_EMIT serverTestInProgressModeChanged();
@@ -288,7 +288,7 @@ void AccountConfiguration::slotTestFail()
 
 void AccountConfiguration::slotTestResult(const QString &result)
 {
-    qDebug() << "slotTestResult  " << result;
+    qCDebug(ACCOUNTWIZARD_LOG) << "slotTestResult  " << result;
     switch (mIncomingProtocol) {
     case IncomingProtocol::POP3: { // Pop3
         if (result == u"ssl"_s) {
