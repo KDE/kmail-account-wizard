@@ -254,7 +254,6 @@ void AccountConfiguration::save(ConsoleLog *consoleLog)
 
 void AccountConfiguration::checkServer()
 {
-    qDebug() << " Verify server";
     if (!mServerTest) {
         mServerTest = new ServerTest(this);
         connect(mServerTest, &ServerTest::testFail, this, &AccountConfiguration::slotTestFail);
