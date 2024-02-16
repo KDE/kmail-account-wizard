@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-09 02:33+0000\n"
+"POT-Creation-Date: 2024-02-16 02:32+0000\n"
 "PO-Revision-Date: 2010-02-28 10:05+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -28,399 +28,480 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "donga.nb@gmail.com"
 
-#: accountwizard/accountconfigurationbase.cpp:34
-#: accountwizard/ispdb/configurationmodel.cpp:36
-#: accountwizard/ispdb/serverconfiguration.cpp:26
-#, kde-format
-msgid "POP3"
-msgstr ""
-
-#: accountwizard/accountconfigurationbase.cpp:34
-#: accountwizard/ispdb/configurationmodel.cpp:36
-#: accountwizard/ispdb/serverconfiguration.cpp:23
-#, kde-format
-msgid "IMAP"
-msgstr ""
-
-#: accountwizard/accountconfigurationbase.cpp:34
-#, kde-format
-msgid "Kolab"
-msgstr ""
-
-#: accountwizard/accountconfigurationbase.cpp:39
-#, kde-format
-msgid "STARTTLS"
-msgstr ""
-
-#: accountwizard/accountconfigurationbase.cpp:39
-#: accountwizard/ispdb/serverconfiguration.cpp:35
-#, kde-format
-msgid "SSL/TLS"
-msgstr ""
-
-#: accountwizard/accountconfigurationbase.cpp:39
-#, kde-format
-msgid "None"
-msgstr ""
-
-#: accountwizard/accountconfigurationbase.cpp:44
-#, kde-format
-msgid "Clear text"
-msgstr ""
-
-#: accountwizard/accountconfigurationbase.cpp:44
-#, kde-format
-msgid "LOGIN"
-msgstr ""
-
-#: accountwizard/accountconfigurationbase.cpp:44
-#, kde-format
-msgid "PLAIN"
-msgstr ""
-
-#: accountwizard/accountconfigurationbase.cpp:44
-#, kde-format
-msgid "CRAM-MD5"
-msgstr ""
-
-#: accountwizard/accountconfigurationbase.cpp:44
-#, kde-format
-msgid "DIGEST-MD5"
-msgstr ""
-
-#: accountwizard/accountconfigurationbase.cpp:44
-#, kde-format
-msgid "NTLM"
-msgstr ""
-
-#: accountwizard/accountconfigurationbase.cpp:44
-#, kde-format
-msgid "GSSAPI"
-msgstr ""
-
-#: accountwizard/identitybase.cpp:25
-#, fuzzy, kde-format
-#| msgid "Setting up account..."
-msgid "Setting up identity..."
-msgstr "กำลังตั้งค่าบัญชีผู้ใช้..."
-
-#: accountwizard/identitybase.cpp:31
-#, kde-format
-msgid "Identity set up."
-msgstr ""
-
-#: accountwizard/identitybase.cpp:45
+#: accountconfiguration.cpp:192 ispdb/configurationmodel.cpp:137
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr ""
 
-#: accountwizard/identitybase.cpp:77
+#: accountconfiguration.cpp:203
 #, kde-format
-msgid "Identity removed."
+msgctxt "log entry content"
+msgid "Create email identity: %1"
 msgstr ""
 
-#: accountwizard/ispdb/configurationmodel.cpp:38
+#: accountconfiguration.cpp:206
+#, kde-format
+msgctxt "log entry content"
+msgid "Full name:"
+msgstr ""
+
+#: accountconfiguration.cpp:207
+#, kde-format
+msgctxt "log entry content"
+msgid "Primary email address:"
+msgstr ""
+
+#: accountconfiguration.cpp:235
+#, fuzzy, kde-format
+#| msgid "Mail transport account deleted."
+msgctxt "log entry content"
+msgid "Mail transport setup completed: %1"
+msgstr "ลบตั้งค่าบัญชีผู้ใช้ของการส่งถ่ายอีเมลแล้ว"
+
+#: accountconfiguration.cpp:238
+#, kde-format
+msgctxt "log entry content"
+msgid "Host:"
+msgstr ""
+
+#: accountconfiguration.cpp:239
+#, kde-format
+msgctxt "log entry content"
+msgid "Port:"
+msgstr ""
+
+#: accountconfiguration.cpp:240
+#, kde-format
+msgctxt "log entry content"
+msgid "Username:"
+msgstr ""
+
+#: accountconfiguration.cpp:242
+#, kde-format
+msgctxt "log entry content"
+msgid "Encryption:"
+msgstr ""
+
+#: accountconfiguration.cpp:244
+#, kde-format
+msgctxt "log entry content"
+msgid "Authentication:"
+msgstr ""
+
+#: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:23
+#: qml/ManualConfigurationPage.qml:92
+#, kde-format
+msgid "IMAP"
+msgstr ""
+
+#: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:26
+#: qml/ManualConfigurationPage.qml:93
+#, kde-format
+msgid "POP3"
+msgstr ""
+
+#: ispdb/configurationmodel.cpp:49
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
 msgstr ""
 
-#: accountwizard/ispdb/configurationmodel.cpp:39
+#: ispdb/configurationmodel.cpp:50
 #, kde-format
 msgid "Keep your folders and emails on your computer"
 msgstr ""
 
-#: accountwizard/ispdb/serverconfiguration.cpp:29
+#: ispdb/serverconfiguration.cpp:29
 #, kde-format
 msgid "SMTP"
 msgstr ""
 
-#: accountwizard/ispdb/serverconfiguration.cpp:38
+#: ispdb/serverconfiguration.cpp:35
+#, kde-format
+msgid "SSL/TLS"
+msgstr ""
+
+#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:124
+#: qml/ManualConfigurationPage.qml:229
 #, kde-format
 msgid "StartTLS"
 msgstr ""
 
-#: accountwizard/ispdb/serverconfiguration.cpp:41
+#: ispdb/serverconfiguration.cpp:41
 #, kde-format
 msgctxt "No security mechanism"
 msgid "None"
 msgstr ""
 
-#: accountwizard/ispdbservice.cpp:133
+#: ispdbservice.cpp:134
 #, kde-format
 msgid "Configuration found auto config file."
 msgstr ""
 
-#: accountwizard/ispdbservice.cpp:136
+#: ispdbservice.cpp:137
 #, kde-format
 msgid "Configuration found in well-known file."
 msgstr ""
 
-#: accountwizard/ispdbservice.cpp:139
+#: ispdbservice.cpp:140
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
 msgstr ""
 
-#: accountwizard/resource.cpp:68
-#, kde-format
-msgid "Resource type '%1' is not available."
-msgstr "ยังไม่มีประเภททรัพยากร '%1' ให้เลือกใช้"
-
-#: accountwizard/resource.cpp:81
-#, kde-format
-msgid "Resource '%1' is already set up."
-msgstr "ทรัพยากร '%1' ถูกตั้งค่าเรียบร้อยแล้ว"
-
-#: accountwizard/resource.cpp:88
-#, kde-format
-msgid "Creating resource instance for '%1'..."
-msgstr "กำลังสร้างอินสแตนซ์ของทรัพยากรสำหรับ '%1'..."
-
-#: accountwizard/resource.cpp:97
-#, kde-format
-msgid "Failed to create resource instance: %1"
-msgstr "ล้มเหลวในการสร้างอินสแตนซ์ของทรัพยากร: %1"
-
-#: accountwizard/resource.cpp:104
-#, kde-format
-msgid "Configuring resource instance..."
-msgstr "กำลังปรับแต่งค่าอินสแตนซ์ของทรัพยากร..."
-
-#: accountwizard/resource.cpp:108
-#, kde-format
-msgid "Unable to configure resource instance."
-msgstr "ไม่สามารถปรับแต่งค่าอินสแตนซ์ของทรัพยากรได้"
-
-#: accountwizard/resource.cpp:124
-#, fuzzy, kde-format
-#| msgid "Could not set setting '%1': %2"
-msgid "Could not convert value of setting '%1' to required type %2."
-msgstr "ไม่สามารถทำการตั้งการตั้งค่า '%1' ได้: %2"
-
-#: accountwizard/resource.cpp:134
-#, kde-format
-msgid "Could not set setting '%1': %2"
-msgstr "ไม่สามารถทำการตั้งการตั้งค่า '%1' ได้: %2"
-
-#: accountwizard/resource.cpp:140
-#, fuzzy, kde-format
-#| msgid "Could not set setting '%1': %2"
-msgid "Could not save settings: %1"
-msgstr "ไม่สามารถทำการตั้งการตั้งค่า '%1' ได้: %2"
-
-#: accountwizard/resource.cpp:146
-#, kde-format
-msgid "Resource setup completed."
-msgstr "ตั้งค่าทรัพยากรเสร็จสมบูรณ์แล้ว"
-
-#: accountwizard/transport.cpp:64
-#, kde-format
-msgid "Setting up mail transport account..."
-msgstr "กำลังตั้งค่าบัญชีผู้ใช้ของการส่งถ่ายอีเมล..."
-
-#: accountwizard/transport.cpp:99
-#, kde-format
-msgid "Mail transport uses '%1' encryption and '%2' authentication."
-msgstr ""
-
-#: accountwizard/transport.cpp:102
-#, kde-format
-msgid "Mail transport account set up."
-msgstr "ตั้งค่าบัญชีผู้ใช้ของการส่งถ่ายอีเมล"
-
-#: apps/contents/ui/ConfigurationDelegate.qml:93
-#, kde-format
-msgid "Incoming"
-msgstr ""
-
-#: apps/contents/ui/ConfigurationDelegate.qml:114
-#, kde-format
-msgid "Outgoing"
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:15
-#, kde-format
-msgid "Personal Information"
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:43
-#, kde-format
-msgid "Set Up Your Existing Email Address"
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:48
-#, kde-format
-msgid ""
-"To use your current email address fill in your credentials.<br />This wizard "
-"will automatically search for a working and recommended server configuration."
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:60
-#, kde-format
-msgid "Full name:"
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:61
-#, kde-format
-msgctxt "Generic name"
-msgid "John Smith"
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:70
-#, kde-format
-msgid "E-mail address:"
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:71
-#, kde-format
-msgctxt "Generic email address"
-msgid "boss@example.corp"
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:84
-#, kde-format
-msgid "Password:"
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:93
-#, kde-format
-msgid "Continue"
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:107
-#, kde-format
-msgid ""
-"Check online for the settings needed for this email provider. Only the "
-"domain name part of the e-mail address will be sent over the Internet."
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:133
-#, kde-format
-msgid "No config found from ispdb server."
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:140
-#, kde-format
-msgid "Incoming Server Parameters"
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:148
-#, kde-format
-msgid "Incoming server:"
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:158
-#, kde-format
-msgid "Protocol:"
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:167
-#: apps/contents/ui/PersonalDataPage.qml:229
-#, kde-format
-msgid "Port:"
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:174
-#: apps/contents/ui/PersonalDataPage.qml:236
-#, kde-format
-msgid "Security:"
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:183
-#: apps/contents/ui/PersonalDataPage.qml:245
-#, kde-format
-msgid "Authentication Method:"
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:192
-#: apps/contents/ui/PersonalDataPage.qml:254
-#, kde-format
-msgid "Username:"
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:203
-#, kde-format
-msgid "Download all messages for offline use"
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:213
-#, kde-format
-msgid "Outgoing Server Parameters"
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:220
-#, kde-format
-msgid "Outgoing server:"
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:269
-#, kde-format
-msgid "Recheck"
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:282
-#: apps/contents/ui/PersonalDataPage.qml:330
-#, fuzzy, kde-format
-#| msgid "Setting up Account"
-msgid "Create Account"
-msgstr "กำลังตั้งค่าบัญชีผู้ใช้"
-
-#: apps/contents/ui/PersonalDataPage.qml:293
-#, kde-format
-msgid "Available configurations"
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:321
-#, kde-format
-msgid "Manual Configuration"
-msgstr ""
-
-#: apps/contents/ui/PersonalDataPage.qml:338
-#, fuzzy, kde-format
-#| msgid "&Details..."
-msgid "Details"
-msgstr "&รายละเอียด..."
-
-#: apps/main.cpp:32
+#: main.cpp:30
 #, kde-format
 msgid "Account Assistant"
 msgstr "ผู้ช่วยสร้างบัญชีผู้ใช้"
 
-#: apps/main.cpp:34
+#: main.cpp:32
 #, kde-format
 msgid "Helps setting up PIM accounts"
 msgstr "ช่วยเหลือในการตั้งค่าบัญชีผู้ใช้ต่าง ๆ ของ PIM"
 
-#: apps/main.cpp:36
+#: main.cpp:34
 #, fuzzy, kde-format
 #| msgid "(c) 2009 the Akonadi developers"
 msgid "(c) 2009-2024 the Akonadi developers"
 msgstr "สงวนลิขสิทธิ์ (c) 2009 กลุ่มผู้พัฒนา Akonadi"
 
-#: apps/main.cpp:39
+#: main.cpp:37
 #, kde-format
 msgid "Volker Krause"
 msgstr "Volker Krause"
 
-#: apps/main.cpp:39
+#: main.cpp:37
 #, kde-format
 msgid "Author"
 msgstr "ผู้เขียน"
 
-#: apps/main.cpp:40
+#: main.cpp:38
 #, kde-format
 msgid "Laurent Montel"
 msgstr ""
 
-#: apps/main.cpp:40 apps/main.cpp:41
+#: main.cpp:38 main.cpp:39
 #, kde-format
 msgid "Maintainer"
 msgstr ""
 
-#: apps/main.cpp:41
+#: main.cpp:39
 #, kde-format
 msgid "Carl Schwan"
 msgstr ""
+
+#: qml/ConfigurationDelegate.qml:93
+#, kde-format
+msgid "Incoming"
+msgstr ""
+
+#: qml/ConfigurationDelegate.qml:114
+#, kde-format
+msgid "Outgoing"
+msgstr ""
+
+#: qml/ConfigurationSelectionPage.qml:16
+#, kde-format
+msgctxt "@title:group"
+msgid "Configuration Selection"
+msgstr ""
+
+#: qml/ConfigurationSelectionPage.qml:39
+#, kde-format
+msgid "Available configurations"
+msgstr ""
+
+#: qml/ConfigurationSelectionPage.qml:56
+#, kde-format
+msgid "No configuration found from the internet for this server."
+msgstr ""
+
+#: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
+#, kde-format
+msgid "Manual Configuration"
+msgstr ""
+
+#: qml/DetailsPage.qml:15
+#, fuzzy, kde-format
+#| msgid "&Details..."
+msgctxt "@title:group"
+msgid "Details"
+msgstr "&รายละเอียด..."
+
+#: qml/DetailsPage.qml:18
+#, kde-format
+msgctxt "@action:button"
+msgid "Quit"
+msgstr ""
+
+#: qml/DetailsPage.qml:24
+#, fuzzy, kde-format
+#| msgid "&Details..."
+msgid "Details"
+msgstr "&รายละเอียด..."
+
+#: qml/DetailsPage.qml:61
+#, kde-format
+msgctxt "Placeholder"
+msgid "No details available."
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:18
+#, kde-format
+msgid "Recheck"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:25
+#, fuzzy, kde-format
+#| msgid "Setting up Account"
+msgid "Create Account"
+msgstr "กำลังตั้งค่าบัญชีผู้ใช้"
+
+#: qml/ManualConfigurationPage.qml:68
+#, kde-format
+msgid "Incoming Server Parameters"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:76
+#, kde-format
+msgid "Incoming server:"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:88
+#, kde-format
+msgid "Protocol:"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:108 qml/ManualConfigurationPage.qml:209
+#, kde-format
+msgid "Port:"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:119 qml/ManualConfigurationPage.qml:223
+#, kde-format
+msgid "Security:"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:123 qml/ManualConfigurationPage.qml:228
+#, kde-format
+msgid "SSL/TLS (recommanded)"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:125 qml/ManualConfigurationPage.qml:227
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:139 qml/ManualConfigurationPage.qml:241
+#, kde-format
+msgid "Authentication Method:"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:245
+#, kde-format
+msgid "Clear text"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:246
+#, kde-format
+msgid "PLAIN"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:247
+#, kde-format
+msgid "LOGIN"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:248
+#, kde-format
+msgid "CRAM-MD5"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:249
+#, kde-format
+msgid "DIGEST-MD5"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:250
+#, kde-format
+msgid "NTLM"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:149 qml/ManualConfigurationPage.qml:251
+#, kde-format
+msgid "GSSAPI"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:150 qml/ManualConfigurationPage.qml:252
+#, kde-format
+msgid "XOAuth (Gmail)"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:151 qml/ManualConfigurationPage.qml:253
+#, kde-format
+msgid "APOP"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:165 qml/ManualConfigurationPage.qml:266
+#, kde-format
+msgid "Username:"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:178
+#, kde-format
+msgid "Download all messages for offline use"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:188
+#, kde-format
+msgid "Outgoing Server Parameters"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:196
+#, kde-format
+msgid "Outgoing server:"
+msgstr ""
+
+#: qml/PersonalDataPage.qml:15
+#, kde-format
+msgid "Personal Information"
+msgstr ""
+
+#: qml/PersonalDataPage.qml:43
+#, kde-format
+msgid "Connect your Email Account"
+msgstr ""
+
+#: qml/PersonalDataPage.qml:51
+#, kde-format
+msgid ""
+"To use your current email address fill in your credentials. This wizard will "
+"automatically search for a working and recommended server configuration. "
+"Only the domain name part of the e-mail address will be sent over the "
+"Internet."
+msgstr ""
+
+#: qml/PersonalDataPage.qml:57
+#, kde-format
+msgid "Full name:"
+msgstr ""
+
+#: qml/PersonalDataPage.qml:58
+#, kde-format
+msgctxt "Generic name"
+msgid "John Smith"
+msgstr ""
+
+#: qml/PersonalDataPage.qml:67
+#, kde-format
+msgid "E-mail address:"
+msgstr ""
+
+#: qml/PersonalDataPage.qml:68
+#, kde-format
+msgctxt "Generic email address"
+msgid "boss@example.corp"
+msgstr ""
+
+#: qml/PersonalDataPage.qml:78
+#, kde-format
+msgid "Password (optional):"
+msgstr ""
+
+#: qml/WizardPage.qml:15
+#, kde-format
+msgctxt "@action:button"
+msgid "Previous"
+msgstr ""
+
+#: qml/WizardPage.qml:22
+#, kde-format
+msgctxt "@action:button"
+msgid "Next"
+msgstr ""
+
+#: resource.cpp:72
+#, kde-format
+msgid "Resource type '%1' is not available."
+msgstr "ยังไม่มีประเภททรัพยากร '%1' ให้เลือกใช้"
+
+#: resource.cpp:85
+#, kde-format
+msgid "Resource '%1' is already set up."
+msgstr "ทรัพยากร '%1' ถูกตั้งค่าเรียบร้อยแล้ว"
+
+#: resource.cpp:92
+#, kde-format
+msgid "Creating resource instance for '%1'..."
+msgstr "กำลังสร้างอินสแตนซ์ของทรัพยากรสำหรับ '%1'..."
+
+#: resource.cpp:101
+#, kde-format
+msgid "Failed to create resource instance: %1"
+msgstr "ล้มเหลวในการสร้างอินสแตนซ์ของทรัพยากร: %1"
+
+#: resource.cpp:108
+#, kde-format
+msgid "Configuring resource instance..."
+msgstr "กำลังปรับแต่งค่าอินสแตนซ์ของทรัพยากร..."
+
+#: resource.cpp:112
+#, kde-format
+msgid "Unable to configure resource instance."
+msgstr "ไม่สามารถปรับแต่งค่าอินสแตนซ์ของทรัพยากรได้"
+
+#: resource.cpp:131
+#, fuzzy, kde-format
+#| msgid "Could not set setting '%1': %2"
+msgid ""
+"Could not convert value of setting '%1' with type %2 to required type %3."
+msgstr "ไม่สามารถทำการตั้งการตั้งค่า '%1' ได้: %2"
+
+#: resource.cpp:144
+#, kde-format
+msgid "Could not set setting '%1': %2"
+msgstr "ไม่สามารถทำการตั้งการตั้งค่า '%1' ได้: %2"
+
+#: resource.cpp:150
+#, fuzzy, kde-format
+#| msgid "Could not set setting '%1': %2"
+msgid "Could not save settings: %1"
+msgstr "ไม่สามารถทำการตั้งการตั้งค่า '%1' ได้: %2"
+
+#: resource.cpp:156
+#, fuzzy, kde-format
+#| msgid "Resource setup completed."
+msgctxt "log entry content"
+msgid "Resource setup completed: %1"
+msgstr "ตั้งค่าทรัพยากรเสร็จสมบูรณ์แล้ว"
+
+#: resource.cpp:159
+#, kde-format
+msgctxt "log entry content"
+msgid "Resouce type:"
+msgstr ""
+
+#: resource.cpp:169
+#, kde-format
+msgctxt "Empty password"
+msgid "Empty"
+msgstr ""
+
+#: resource.cpp:174
+#, kde-format
+msgctxt "label"
+msgid "%1:"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Setting up account..."
+#~ msgid "Setting up identity..."
+#~ msgstr "กำลังตั้งค่าบัญชีผู้ใช้..."
+
+#~ msgid "Setting up mail transport account..."
+#~ msgstr "กำลังตั้งค่าบัญชีผู้ใช้ของการส่งถ่ายอีเมล..."
+
+#~ msgid "Mail transport account set up."
+#~ msgstr "ตั้งค่าบัญชีผู้ใช้ของการส่งถ่ายอีเมล"
 
 #, fuzzy
 #~| msgid "Account Assistant"
@@ -503,9 +584,6 @@ msgstr ""
 
 #~ msgid "Failed to set up account."
 #~ msgstr "ล้มเหลวในการตั้งค่าบัญชีผู้ใช้"
-
-#~ msgid "Mail transport account deleted."
-#~ msgstr "ลบตั้งค่าบัญชีผู้ใช้ของการส่งถ่ายอีเมลแล้ว"
 
 #~ msgid "Loading assistant..."
 #~ msgstr "กำลังโหลดผู้ช่วยสร้าง..."
