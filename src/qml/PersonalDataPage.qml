@@ -68,7 +68,7 @@ WizardPage {
             placeholderText: i18nc("Generic email address", "boss@example.corp")
             text: SetupManager.email
             onTextEdited: SetupManager.email = text
-            onAccepted: continueButton.clicked()
+            onAccepted: nextAction.triggered()
         }
 
         FormCard.FormDelegateSeparator {}
@@ -77,7 +77,7 @@ WizardPage {
             id: passwordField
             label: i18n("Password (optional):")
             onTextEdited: SetupManager.password = text
-            onAccepted: continueButton.clicked()
+            onAccepted: nextAction.triggered()
         }
     }
 }
