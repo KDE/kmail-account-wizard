@@ -64,13 +64,10 @@ WizardPage {
 
 
     FormCard.FormHeader {
-        visible: SetupManager.noConfigFound || root.explicitManualConfiguration
         title: i18n("Incoming Server Parameters")
     }
 
     FormCard.FormCard {
-        visible: SetupManager.noConfigFound || root.explicitManualConfiguration
-
         FormCard.FormTextFieldDelegate {
             id: manualIncomingHostName
             label: i18n("Incoming server:")
@@ -184,12 +181,10 @@ WizardPage {
     }
 
     FormCard.FormHeader {
-        visible: SetupManager.noConfigFound || root.explicitManualConfiguration
         title: i18n("Outgoing Server Parameters")
     }
 
     FormCard.FormCard {
-        visible: SetupManager.noConfigFound || root.explicitManualConfiguration
 
         FormCard.FormTextFieldDelegate {
             id: manualOutgoingHostName
