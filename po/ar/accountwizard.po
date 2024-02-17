@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-16 02:32+0000\n"
+"POT-Creation-Date: 2024-02-17 02:27+0000\n"
 "PO-Revision-Date: 2022-01-19 22:39+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -95,14 +95,14 @@ msgid "Authentication:"
 msgstr ""
 
 #: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:23
-#: qml/ManualConfigurationPage.qml:92
+#: qml/ManualConfigurationPage.qml:89
 #, fuzzy, kde-format
 #| msgid "IMAP, %1"
 msgid "IMAP"
 msgstr "‏IMAP، ‏%1"
 
 #: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:26
-#: qml/ManualConfigurationPage.qml:93
+#: qml/ManualConfigurationPage.qml:90
 #, fuzzy, kde-format
 #| msgid "POP3, %1"
 msgid "POP3"
@@ -129,8 +129,8 @@ msgstr "‏SMTP، ‏%1"
 msgid "SSL/TLS"
 msgstr ""
 
-#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:124
-#: qml/ManualConfigurationPage.qml:229
+#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:121
+#: qml/ManualConfigurationPage.qml:224
 #, kde-format
 msgid "StartTLS"
 msgstr ""
@@ -271,110 +271,110 @@ msgstr ""
 msgid "Create Account"
 msgstr "أضف حسابًا"
 
-#: qml/ManualConfigurationPage.qml:68
+#: qml/ManualConfigurationPage.qml:67
 #, fuzzy, kde-format
 #| msgid "Incoming:"
 msgid "Incoming Server Parameters"
 msgstr "الوارد:"
 
-#: qml/ManualConfigurationPage.qml:76
+#: qml/ManualConfigurationPage.qml:73
 #, fuzzy, kde-format
 #| msgid "Incoming:"
 msgid "Incoming server:"
 msgstr "الوارد:"
 
-#: qml/ManualConfigurationPage.qml:88
+#: qml/ManualConfigurationPage.qml:85
 #, kde-format
 msgid "Protocol:"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:108 qml/ManualConfigurationPage.qml:209
+#: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:204
 #, kde-format
 msgid "Port:"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:119 qml/ManualConfigurationPage.qml:223
+#: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:218
 #, kde-format
 msgid "Security:"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:123 qml/ManualConfigurationPage.qml:228
+#: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:223
 #, kde-format
 msgid "SSL/TLS (recommanded)"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:125 qml/ManualConfigurationPage.qml:227
+#: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:222
 #, kde-format
 msgid "None"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:139 qml/ManualConfigurationPage.qml:241
+#: qml/ManualConfigurationPage.qml:136 qml/ManualConfigurationPage.qml:236
 #, kde-format
 msgid "Authentication Method:"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:245
+#: qml/ManualConfigurationPage.qml:140 qml/ManualConfigurationPage.qml:240
 #, kde-format
 msgid "Clear text"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:246
+#: qml/ManualConfigurationPage.qml:141 qml/ManualConfigurationPage.qml:241
 #, kde-format
 msgid "PLAIN"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:247
+#: qml/ManualConfigurationPage.qml:142 qml/ManualConfigurationPage.qml:242
 #, kde-format
 msgid "LOGIN"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:248
+#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:243
 #, kde-format
 msgid "CRAM-MD5"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:249
+#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:244
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:250
+#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:245
 #, kde-format
 msgid "NTLM"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:149 qml/ManualConfigurationPage.qml:251
+#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:246
 #, kde-format
 msgid "GSSAPI"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:150 qml/ManualConfigurationPage.qml:252
+#: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:247
 #, kde-format
 msgid "XOAuth (Gmail)"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:151 qml/ManualConfigurationPage.qml:253
+#: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:248
 #, kde-format
 msgid "APOP"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:165 qml/ManualConfigurationPage.qml:266
+#: qml/ManualConfigurationPage.qml:162 qml/ManualConfigurationPage.qml:261
 #, kde-format
 msgid "Username:"
 msgstr "اسم المستخدم:"
 
-#: qml/ManualConfigurationPage.qml:178
+#: qml/ManualConfigurationPage.qml:175
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:188
+#: qml/ManualConfigurationPage.qml:184
 #, fuzzy, kde-format
 #| msgid "Outgoing:"
 msgid "Outgoing Server Parameters"
 msgstr "الصّادر:"
 
-#: qml/ManualConfigurationPage.qml:196
+#: qml/ManualConfigurationPage.qml:191
 #, fuzzy, kde-format
 #| msgid "Outgoing:"
 msgid "Outgoing server:"
@@ -509,7 +509,7 @@ msgstr ""
 
 #: resource.cpp:169
 #, kde-format
-msgctxt "Empty password"
+msgctxt "Indication that the password set for the resource is empty"
 msgid "Empty"
 msgstr ""
 
