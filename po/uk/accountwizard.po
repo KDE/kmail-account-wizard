@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-16 00:38+0000\n"
-"PO-Revision-Date: 2024-01-02 09:25+0200\n"
+"POT-Creation-Date: 2024-02-17 00:38+0000\n"
+"PO-Revision-Date: 2024-02-16 09:54+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -30,92 +30,84 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yurchor@ukr.net"
 
-#: accountconfiguration.cpp:192 ispdb/configurationmodel.cpp:137
+#: accountconfiguration.cpp:191 ispdb/configurationmodel.cpp:135
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Без назви"
 
-#: accountconfiguration.cpp:203
-#, fuzzy, kde-format
-#| msgid "Create new identity"
+#: accountconfiguration.cpp:202
+#, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
-msgstr "Створити профіль"
+msgstr "Створити профіль електронної пошти: %1"
 
-#: accountconfiguration.cpp:206
-#, fuzzy, kde-format
-#| msgid "Full name:"
+#: accountconfiguration.cpp:205
+#, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Ім’я повністю:"
 
-#: accountconfiguration.cpp:207
-#, fuzzy, kde-format
-#| msgid "E-mail address:"
+#: accountconfiguration.cpp:206
+#, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
-msgstr "Адреса ел. пошти:"
+msgstr "Основна адреса ел. пошти:"
 
-#: accountconfiguration.cpp:235
-#, fuzzy, kde-format
-#| msgid "Mail transport account deleted."
+#: accountconfiguration.cpp:234
+#, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
-msgstr "Обліковий запис пересилання пошти вилучено."
+msgstr "Налаштовування передавання пошти завершено: %1"
 
-#: accountconfiguration.cpp:238
-#, fuzzy, kde-format
-#| msgid "Hostname:"
+#: accountconfiguration.cpp:237
+#, kde-format
 msgctxt "log entry content"
 msgid "Host:"
-msgstr "Назва вузла:"
+msgstr "Вузол:"
 
-#: accountconfiguration.cpp:239
-#, fuzzy, kde-format
-#| msgid "Port:"
+#: accountconfiguration.cpp:238
+#, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Порт:"
 
-#: accountconfiguration.cpp:240
-#, fuzzy, kde-format
-#| msgid "Username:"
+#: accountconfiguration.cpp:239
+#, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Користувач:"
 
-#: accountconfiguration.cpp:242
+#: accountconfiguration.cpp:241
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
-msgstr ""
+msgstr "Шифрування:"
 
-#: accountconfiguration.cpp:244
-#, fuzzy, kde-format
-#| msgid "Authentication Method:"
+#: accountconfiguration.cpp:243
+#, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
-msgstr "Спосіб розпізнавання:"
+msgstr "Розпізнавання:"
 
-#: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:23
-#: qml/ManualConfigurationPage.qml:92
+#: ispdb/configurationmodel.cpp:45 ispdb/serverconfiguration.cpp:23
+#: qml/ManualConfigurationPage.qml:89
 #, kde-format
 msgid "IMAP"
 msgstr "IMAP"
 
-#: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:26
-#: qml/ManualConfigurationPage.qml:93
+#: ispdb/configurationmodel.cpp:45 ispdb/serverconfiguration.cpp:26
+#: qml/ManualConfigurationPage.qml:90
 #, kde-format
 msgid "POP3"
 msgstr "POP3"
 
-#: ispdb/configurationmodel.cpp:49
+#: ispdb/configurationmodel.cpp:47
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
 msgstr "Зберігати теки і повідомлення синхронізованими на сервері"
 
-#: ispdb/configurationmodel.cpp:50
+#: ispdb/configurationmodel.cpp:48
 #, kde-format
 msgid "Keep your folders and emails on your computer"
 msgstr "Зберігати ваші теки і повідомлення на вашому комп'ютері"
@@ -130,8 +122,8 @@ msgstr "SMTP"
 msgid "SSL/TLS"
 msgstr "SSL/TLS"
 
-#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:124
-#: qml/ManualConfigurationPage.qml:229
+#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:121
+#: qml/ManualConfigurationPage.qml:224
 #, kde-format
 msgid "StartTLS"
 msgstr "StartTLS"
@@ -157,42 +149,42 @@ msgstr "Виявлено налаштування у відомому файлі
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Виявлено налаштування у базі даних Mozilla FAI."
 
-#: main.cpp:30
+#: main.cpp:29
 #, kde-format
 msgid "Account Assistant"
 msgstr "Помічник облікових записів"
 
-#: main.cpp:32
+#: main.cpp:31
 #, kde-format
 msgid "Helps setting up PIM accounts"
 msgstr "Допомагає налаштовувати облікові записи"
 
-#: main.cpp:34
+#: main.cpp:33
 #, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
 msgstr "© Розробники Akonadi, 2009–2024"
 
-#: main.cpp:37
+#: main.cpp:36
 #, kde-format
 msgid "Volker Krause"
 msgstr "Volker Krause"
 
-#: main.cpp:37
+#: main.cpp:36
 #, kde-format
 msgid "Author"
 msgstr "Автор"
 
-#: main.cpp:38
+#: main.cpp:37
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:38 main.cpp:39
+#: main.cpp:37 main.cpp:38
 #, kde-format
 msgid "Maintainer"
 msgstr "Супровідник"
 
-#: main.cpp:39
+#: main.cpp:38
 #, kde-format
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
@@ -208,11 +200,10 @@ msgid "Outgoing"
 msgstr "Вихідні"
 
 #: qml/ConfigurationSelectionPage.qml:16
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgctxt "@title:group"
 msgid "Configuration Selection"
-msgstr "Виявлено автоматичні налаштування."
+msgstr "Вибір налаштувань"
 
 #: qml/ConfigurationSelectionPage.qml:39
 #, kde-format
@@ -220,10 +211,9 @@ msgid "Available configurations"
 msgstr "Доступні налаштування"
 
 #: qml/ConfigurationSelectionPage.qml:56
-#, fuzzy, kde-format
-#| msgid "No config found from ispdb server."
+#, kde-format
 msgid "No configuration found from the internet for this server."
-msgstr "Не знайдено налаштувань від сервера ispdb."
+msgstr "В інтернеті не знайдено налаштувань для цього сервера."
 
 #: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
 #, kde-format
@@ -231,8 +221,7 @@ msgid "Manual Configuration"
 msgstr "Налаштування вручну"
 
 #: qml/DetailsPage.qml:15
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@title:group"
 msgid "Details"
 msgstr "Подробиці"
@@ -241,7 +230,7 @@ msgstr "Подробиці"
 #, kde-format
 msgctxt "@action:button"
 msgid "Quit"
-msgstr ""
+msgstr "Вийти"
 
 #: qml/DetailsPage.qml:24
 #, kde-format
@@ -252,7 +241,7 @@ msgstr "Подробиці"
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
-msgstr ""
+msgstr "Подробиці недоступні."
 
 #: qml/ManualConfigurationPage.qml:18
 #, kde-format
@@ -264,107 +253,108 @@ msgstr "Повторна перевірка"
 msgid "Create Account"
 msgstr "Створити обліковий запис"
 
-#: qml/ManualConfigurationPage.qml:68
+#: qml/ManualConfigurationPage.qml:67
 #, kde-format
 msgid "Incoming Server Parameters"
 msgstr "Параметри сервера вхідної пошти"
 
-#: qml/ManualConfigurationPage.qml:76
+#: qml/ManualConfigurationPage.qml:73
 #, kde-format
 msgid "Incoming server:"
 msgstr "Вхідний сервер:"
 
-#: qml/ManualConfigurationPage.qml:88
+#: qml/ManualConfigurationPage.qml:85
 #, kde-format
 msgid "Protocol:"
 msgstr "Протокол:"
 
-#: qml/ManualConfigurationPage.qml:108 qml/ManualConfigurationPage.qml:209
+#: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:204
 #, kde-format
 msgid "Port:"
 msgstr "Порт:"
 
-#: qml/ManualConfigurationPage.qml:119 qml/ManualConfigurationPage.qml:223
+#: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:218
 #, kde-format
 msgid "Security:"
 msgstr "Захист:"
 
-#: qml/ManualConfigurationPage.qml:123 qml/ManualConfigurationPage.qml:228
-#, kde-format
-msgid "SSL/TLS (recommanded)"
-msgstr ""
+#: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:223
+#, fuzzy, kde-format
+#| msgid "SSL/TLS (recommanded)"
+msgid "SSL/TLS (recommended)"
+msgstr "SSL/TLS (рекомендовано)"
 
-#: qml/ManualConfigurationPage.qml:125 qml/ManualConfigurationPage.qml:227
+#: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:222
 #, kde-format
 msgid "None"
 msgstr "Немає"
 
-#: qml/ManualConfigurationPage.qml:139 qml/ManualConfigurationPage.qml:241
+#: qml/ManualConfigurationPage.qml:136 qml/ManualConfigurationPage.qml:236
 #, kde-format
 msgid "Authentication Method:"
 msgstr "Спосіб розпізнавання:"
 
-#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:245
+#: qml/ManualConfigurationPage.qml:140 qml/ManualConfigurationPage.qml:240
 #, kde-format
 msgid "Clear text"
 msgstr "Звичайний текстовий"
 
-#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:246
+#: qml/ManualConfigurationPage.qml:141 qml/ManualConfigurationPage.qml:241
 #, kde-format
 msgid "PLAIN"
 msgstr "PLAIN"
 
-#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:247
+#: qml/ManualConfigurationPage.qml:142 qml/ManualConfigurationPage.qml:242
 #, kde-format
 msgid "LOGIN"
 msgstr "LOGIN"
 
-#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:248
+#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:243
 #, kde-format
 msgid "CRAM-MD5"
 msgstr "CRAM-MD5"
 
-#: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:249
+#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:244
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr "DIGEST-MD5"
 
-#: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:250
+#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:245
 #, kde-format
 msgid "NTLM"
 msgstr "NTLM"
 
-#: qml/ManualConfigurationPage.qml:149 qml/ManualConfigurationPage.qml:251
+#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:246
 #, kde-format
 msgid "GSSAPI"
 msgstr "GSSAPI"
 
-#: qml/ManualConfigurationPage.qml:150 qml/ManualConfigurationPage.qml:252
+#: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:247
 #, kde-format
 msgid "XOAuth (Gmail)"
-msgstr ""
+msgstr "XOAuth (Gmail)"
 
-#: qml/ManualConfigurationPage.qml:151 qml/ManualConfigurationPage.qml:253
+#: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:248
 #, kde-format
 msgid "APOP"
-msgstr ""
+msgstr "APOP"
 
-#: qml/ManualConfigurationPage.qml:165 qml/ManualConfigurationPage.qml:266
+#: qml/ManualConfigurationPage.qml:162 qml/ManualConfigurationPage.qml:261
 #, kde-format
 msgid "Username:"
 msgstr "Користувач:"
 
-#: qml/ManualConfigurationPage.qml:178
+#: qml/ManualConfigurationPage.qml:175
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr "Отримати усі повідомлення для автономного використання"
 
-#: qml/ManualConfigurationPage.qml:188
+#: qml/ManualConfigurationPage.qml:184
 #, kde-format
 msgid "Outgoing Server Parameters"
 msgstr "Параметри сервера вихідної пошти"
 
-#: qml/ManualConfigurationPage.qml:196
+#: qml/ManualConfigurationPage.qml:191
 #, kde-format
 msgid "Outgoing server:"
 msgstr "Вихідний сервер:"
@@ -377,14 +367,10 @@ msgstr "Особисті відомості"
 #: qml/PersonalDataPage.qml:43
 #, kde-format
 msgid "Connect your Email Account"
-msgstr ""
+msgstr "З'єднання з вашим обліковим записом ел. пошти"
 
 #: qml/PersonalDataPage.qml:51
-#, fuzzy, kde-format
-#| msgid ""
-#| "To use your current email address fill in your credentials.<br />This "
-#| "wizard will automatically search for a working and recommended server "
-#| "configuration."
+#, kde-format
 msgid ""
 "To use your current email address fill in your credentials. This wizard will "
 "automatically search for a working and recommended server configuration. "
@@ -392,8 +378,9 @@ msgid ""
 "Internet."
 msgstr ""
 "Щоб скористатися поточною адресою електронної пошти, вкажіть реєстраційні "
-"дані.<br />Цей майстер виконає автоматичний пошук працездатних і "
-"рекомендованих налаштувань сервера."
+"дані. Цей майстер виконає автоматичний пошук працездатних і рекомендованих "
+"налаштувань сервера. До інтернету буде надіслано лише частину адреси "
+"електронної пошти, яку пов'язано із доменом."
 
 #: qml/PersonalDataPage.qml:57
 #, kde-format
@@ -418,22 +405,21 @@ msgid "boss@example.corp"
 msgstr "boss@example.corp"
 
 #: qml/PersonalDataPage.qml:78
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password (optional):"
-msgstr "Пароль:"
+msgstr "Пароль (необов'язковий):"
 
 #: qml/WizardPage.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr ""
+msgstr "Назад"
 
 #: qml/WizardPage.qml:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "Далі"
 
 #: resource.cpp:72
 #, kde-format
@@ -466,13 +452,12 @@ msgid "Unable to configure resource instance."
 msgstr "Не вдалося налаштувати екземпляр ресурсу."
 
 #: resource.cpp:131
-#, fuzzy, kde-format
-#| msgid "Could not convert value of setting '%1' to required type %2."
+#, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
 msgstr ""
-"Не вдалося перетворити значення параметра «%1» на значення потрібного типу "
-"%2."
+"Не вдалося перетворити значення параметра «%1» з типом %2на значення "
+"потрібного типу %3."
 
 #: resource.cpp:144
 #, kde-format
@@ -485,29 +470,30 @@ msgid "Could not save settings: %1"
 msgstr "Не вдалося зберегти параметри: %1"
 
 #: resource.cpp:156
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
-msgctxt "log entry content"
-msgid "Resource setup completed: %1"
-msgstr "Налаштування ресурсу завершено."
-
-#: resource.cpp:159
 #, kde-format
 msgctxt "log entry content"
-msgid "Resouce type:"
-msgstr ""
+msgid "Resource setup completed: %1"
+msgstr "Налаштовування ресурсу завершено: %1"
+
+#: resource.cpp:159
+#, fuzzy, kde-format
+#| msgctxt "log entry content"
+#| msgid "Resouce type:"
+msgctxt "log entry content"
+msgid "Resource type:"
+msgstr "Тип ресурсу:"
 
 #: resource.cpp:169
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
-msgstr ""
+msgstr "Порожній"
 
 #: resource.cpp:174
 #, kde-format
 msgctxt "label"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #~ msgid "Kolab"
 #~ msgstr "Kolab"

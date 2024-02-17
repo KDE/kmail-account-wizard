@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-16 00:38+0000\n"
-"PO-Revision-Date: 2024-01-02 21:37+0100\n"
+"POT-Creation-Date: 2024-02-17 00:38+0000\n"
+"PO-Revision-Date: 2024-02-16 09:03+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -30,91 +30,84 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xalba@ni.eus"
 
-#: accountconfiguration.cpp:192 ispdb/configurationmodel.cpp:137
+#: accountconfiguration.cpp:191 ispdb/configurationmodel.cpp:135
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Izengabea"
 
-#: accountconfiguration.cpp:203
+#: accountconfiguration.cpp:202
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
-msgstr ""
+msgstr "Sortu e-posta nortasuna: %1"
 
-#: accountconfiguration.cpp:206
-#, fuzzy, kde-format
-#| msgid "Full name:"
+#: accountconfiguration.cpp:205
+#, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Izen-abizenak:"
 
-#: accountconfiguration.cpp:207
-#, fuzzy, kde-format
-#| msgid "E-mail address:"
+#: accountconfiguration.cpp:206
+#, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
-msgstr "E-posta helbidea:"
+msgstr "E-posta helbide nagusia:"
 
-#: accountconfiguration.cpp:235
-#, fuzzy, kde-format
-#| msgid "Mail transport account deleted."
+#: accountconfiguration.cpp:234
+#, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
-msgstr "Posta-garraio kontua ezabatu da."
+msgstr "Posta-garraioaren ezarpena osatu da: %1"
 
-#: accountconfiguration.cpp:238
-#, fuzzy, kde-format
-#| msgid "Hostname:"
+#: accountconfiguration.cpp:237
+#, kde-format
 msgctxt "log entry content"
 msgid "Host:"
-msgstr "Ostalari-izena:"
+msgstr "Ostalaria:"
 
-#: accountconfiguration.cpp:239
-#, fuzzy, kde-format
-#| msgid "Port:"
+#: accountconfiguration.cpp:238
+#, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Ataka:"
 
-#: accountconfiguration.cpp:240
-#, fuzzy, kde-format
-#| msgid "Username:"
+#: accountconfiguration.cpp:239
+#, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Erabiltzaile-izena:"
 
-#: accountconfiguration.cpp:242
+#: accountconfiguration.cpp:241
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
-msgstr ""
+msgstr "Zifratzea:"
 
-#: accountconfiguration.cpp:244
-#, fuzzy, kde-format
-#| msgid "Authentication Method:"
+#: accountconfiguration.cpp:243
+#, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
-msgstr "Autentifikazio metodoa:"
+msgstr "Autentifikazioa:"
 
-#: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:23
-#: qml/ManualConfigurationPage.qml:92
+#: ispdb/configurationmodel.cpp:45 ispdb/serverconfiguration.cpp:23
+#: qml/ManualConfigurationPage.qml:89
 #, kde-format
 msgid "IMAP"
 msgstr "IMAP"
 
-#: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:26
-#: qml/ManualConfigurationPage.qml:93
+#: ispdb/configurationmodel.cpp:45 ispdb/serverconfiguration.cpp:26
+#: qml/ManualConfigurationPage.qml:90
 #, kde-format
 msgid "POP3"
 msgstr "POP3"
 
-#: ispdb/configurationmodel.cpp:49
+#: ispdb/configurationmodel.cpp:47
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
 msgstr "Mantendu zure karpetak eta e-postak zerbitzarian sinkronizatuta"
 
-#: ispdb/configurationmodel.cpp:50
+#: ispdb/configurationmodel.cpp:48
 #, kde-format
 msgid "Keep your folders and emails on your computer"
 msgstr "Mantendu zure karpetak eta e-postak zure ordenagailuan"
@@ -129,8 +122,8 @@ msgstr "SMTP"
 msgid "SSL/TLS"
 msgstr "SSL/TLS"
 
-#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:124
-#: qml/ManualConfigurationPage.qml:229
+#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:121
+#: qml/ManualConfigurationPage.qml:224
 #, kde-format
 msgid "StartTLS"
 msgstr "StartTLS"
@@ -156,42 +149,42 @@ msgstr "Konfigurazioa ondo ezagutzen den fitxategian aurkitu da."
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Konfigurazioa Mozilla FAI datu-basean aurkitu da."
 
-#: main.cpp:30
+#: main.cpp:29
 #, kde-format
 msgid "Account Assistant"
 msgstr "Kontu-laguntzailea"
 
-#: main.cpp:32
+#: main.cpp:31
 #, kde-format
 msgid "Helps setting up PIM accounts"
 msgstr "PIM kontuak ezartzen laguntzen du"
 
-#: main.cpp:34
+#: main.cpp:33
 #, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
 msgstr "(c) 2009-2024 Akonadi garatzaileak"
 
-#: main.cpp:37
+#: main.cpp:36
 #, kde-format
 msgid "Volker Krause"
 msgstr "Volker Krause"
 
-#: main.cpp:37
+#: main.cpp:36
 #, kde-format
 msgid "Author"
 msgstr "Egilea"
 
-#: main.cpp:38
+#: main.cpp:37
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:38 main.cpp:39
+#: main.cpp:37 main.cpp:38
 #, kde-format
 msgid "Maintainer"
 msgstr "Mantentzailea"
 
-#: main.cpp:39
+#: main.cpp:38
 #, kde-format
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
@@ -207,11 +200,10 @@ msgid "Outgoing"
 msgstr "Irteerakoa"
 
 #: qml/ConfigurationSelectionPage.qml:16
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgctxt "@title:group"
 msgid "Configuration Selection"
-msgstr "Konfiguratze automatikoa aurkitu da."
+msgstr "Konfiguratze hautua"
 
 #: qml/ConfigurationSelectionPage.qml:39
 #, kde-format
@@ -219,10 +211,9 @@ msgid "Available configurations"
 msgstr "Konfigurazio erabilgarriak"
 
 #: qml/ConfigurationSelectionPage.qml:56
-#, fuzzy, kde-format
-#| msgid "No config found from ispdb server."
+#, kde-format
 msgid "No configuration found from the internet for this server."
-msgstr "«ispdb» zerbitzaritik ez da konfiguraziorik aurkitu."
+msgstr "Interneten ez du aurkitu zerbitzari horretarako konfiguraziorik."
 
 #: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
 #, kde-format
@@ -230,8 +221,7 @@ msgid "Manual Configuration"
 msgstr "Eskuzko konfigurazioa"
 
 #: qml/DetailsPage.qml:15
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@title:group"
 msgid "Details"
 msgstr "Xehetasunak"
@@ -240,7 +230,7 @@ msgstr "Xehetasunak"
 #, kde-format
 msgctxt "@action:button"
 msgid "Quit"
-msgstr ""
+msgstr "Irten"
 
 #: qml/DetailsPage.qml:24
 #, kde-format
@@ -251,7 +241,7 @@ msgstr "Xehetasunak"
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
-msgstr ""
+msgstr "Ez dago xehetasunik erabilgarri."
 
 #: qml/ManualConfigurationPage.qml:18
 #, kde-format
@@ -263,107 +253,108 @@ msgstr "Berregiaztatu"
 msgid "Create Account"
 msgstr "Sortu kontua"
 
-#: qml/ManualConfigurationPage.qml:68
+#: qml/ManualConfigurationPage.qml:67
 #, kde-format
 msgid "Incoming Server Parameters"
 msgstr "Sarrerako zerbitzariaren parametroak"
 
-#: qml/ManualConfigurationPage.qml:76
+#: qml/ManualConfigurationPage.qml:73
 #, kde-format
 msgid "Incoming server:"
 msgstr "Sarrerako zerbitzaria:"
 
-#: qml/ManualConfigurationPage.qml:88
+#: qml/ManualConfigurationPage.qml:85
 #, kde-format
 msgid "Protocol:"
 msgstr "Protokoloa:"
 
-#: qml/ManualConfigurationPage.qml:108 qml/ManualConfigurationPage.qml:209
+#: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:204
 #, kde-format
 msgid "Port:"
 msgstr "Ataka:"
 
-#: qml/ManualConfigurationPage.qml:119 qml/ManualConfigurationPage.qml:223
+#: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:218
 #, kde-format
 msgid "Security:"
 msgstr "Segurtasuna:"
 
-#: qml/ManualConfigurationPage.qml:123 qml/ManualConfigurationPage.qml:228
-#, kde-format
-msgid "SSL/TLS (recommanded)"
-msgstr ""
+#: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:223
+#, fuzzy, kde-format
+#| msgid "SSL/TLS (recommanded)"
+msgid "SSL/TLS (recommended)"
+msgstr "SSL/TLS (gomendatua)"
 
-#: qml/ManualConfigurationPage.qml:125 qml/ManualConfigurationPage.qml:227
+#: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:222
 #, kde-format
 msgid "None"
 msgstr "Bat ere ez"
 
-#: qml/ManualConfigurationPage.qml:139 qml/ManualConfigurationPage.qml:241
+#: qml/ManualConfigurationPage.qml:136 qml/ManualConfigurationPage.qml:236
 #, kde-format
 msgid "Authentication Method:"
 msgstr "Autentifikazio metodoa:"
 
-#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:245
+#: qml/ManualConfigurationPage.qml:140 qml/ManualConfigurationPage.qml:240
 #, kde-format
 msgid "Clear text"
 msgstr "Testu argia"
 
-#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:246
+#: qml/ManualConfigurationPage.qml:141 qml/ManualConfigurationPage.qml:241
 #, kde-format
 msgid "PLAIN"
 msgstr "PLAIN"
 
-#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:247
+#: qml/ManualConfigurationPage.qml:142 qml/ManualConfigurationPage.qml:242
 #, kde-format
 msgid "LOGIN"
 msgstr "LOGIN"
 
-#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:248
+#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:243
 #, kde-format
 msgid "CRAM-MD5"
 msgstr "CRAM-MD5"
 
-#: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:249
+#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:244
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr "DIGEST-MD5"
 
-#: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:250
+#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:245
 #, kde-format
 msgid "NTLM"
 msgstr "NTLM"
 
-#: qml/ManualConfigurationPage.qml:149 qml/ManualConfigurationPage.qml:251
+#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:246
 #, kde-format
 msgid "GSSAPI"
 msgstr "GSSAPI"
 
-#: qml/ManualConfigurationPage.qml:150 qml/ManualConfigurationPage.qml:252
+#: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:247
 #, kde-format
 msgid "XOAuth (Gmail)"
-msgstr ""
+msgstr "XOAuth (Gmail)"
 
-#: qml/ManualConfigurationPage.qml:151 qml/ManualConfigurationPage.qml:253
+#: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:248
 #, kde-format
 msgid "APOP"
-msgstr ""
+msgstr "APOP"
 
-#: qml/ManualConfigurationPage.qml:165 qml/ManualConfigurationPage.qml:266
+#: qml/ManualConfigurationPage.qml:162 qml/ManualConfigurationPage.qml:261
 #, kde-format
 msgid "Username:"
 msgstr "Erabiltzaile-izena:"
 
-#: qml/ManualConfigurationPage.qml:178
+#: qml/ManualConfigurationPage.qml:175
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr "Zama-jaitsi mezu guztiak lerroz-kanpo erabiltzeko"
 
-#: qml/ManualConfigurationPage.qml:188
+#: qml/ManualConfigurationPage.qml:184
 #, kde-format
 msgid "Outgoing Server Parameters"
 msgstr "Irteerako zerbitzariaren parametroak"
 
-#: qml/ManualConfigurationPage.qml:196
+#: qml/ManualConfigurationPage.qml:191
 #, kde-format
 msgid "Outgoing server:"
 msgstr "Irteerako zerbitzaria:"
@@ -376,23 +367,20 @@ msgstr "Informazio pertsonala"
 #: qml/PersonalDataPage.qml:43
 #, kde-format
 msgid "Connect your Email Account"
-msgstr ""
+msgstr "Konektatu zure e-posta kontua"
 
 #: qml/PersonalDataPage.qml:51
-#, fuzzy, kde-format
-#| msgid ""
-#| "To use your current email address fill in your credentials.<br />This "
-#| "wizard will automatically search for a working and recommended server "
-#| "configuration."
+#, kde-format
 msgid ""
 "To use your current email address fill in your credentials. This wizard will "
 "automatically search for a working and recommended server configuration. "
 "Only the domain name part of the e-mail address will be sent over the "
 "Internet."
 msgstr ""
-"Zure uneko e-posta helbidea erabiltzeko, bete zure egiaztagiriak.<br /"
-">Morroi honek automatikoki bilatuko du dabilen zerbitzariaren konfigurazio "
-"gomendatu bat."
+"Zure uneko e-posta helbidea erabiltzeko, bete zure egiaztagiria. Morroi "
+"honek automatikoki bilatuko du dabilen zerbitzari-konfigurazio gomendatu "
+"bat. E-posta helbidearen domeinu-izenaren zatia bakarrik bidaliko Internet "
+"bidez."
 
 #: qml/PersonalDataPage.qml:57
 #, kde-format
@@ -417,22 +405,21 @@ msgid "boss@example.corp"
 msgstr "zuzendaria@adibide.corp"
 
 #: qml/PersonalDataPage.qml:78
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password (optional):"
-msgstr "Pasahitza:"
+msgstr "Pasahitza (hautazkoa):"
 
 #: qml/WizardPage.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr ""
+msgstr "Aurrekoa"
 
 #: qml/WizardPage.qml:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "Hurrengoa"
 
 #: resource.cpp:72
 #, kde-format
@@ -465,12 +452,12 @@ msgid "Unable to configure resource instance."
 msgstr "Ez da baliabide instantzia konfiguratzeko gai."
 
 #: resource.cpp:131
-#, fuzzy, kde-format
-#| msgid "Could not convert value of setting '%1' to required type %2."
+#, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
 msgstr ""
-"Ezin izan du '%1' ezarpenaren balioa beharrezkoa den %2 motara bihurtu."
+"Ezin izan du '%1' ezarpenaren balioa, %2 motakoa, eskatutako %3 motara "
+"bihurtu."
 
 #: resource.cpp:144
 #, kde-format
@@ -483,29 +470,30 @@ msgid "Could not save settings: %1"
 msgstr "Ezin izan ditu ezarpenak gorde: %1"
 
 #: resource.cpp:156
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
-msgctxt "log entry content"
-msgid "Resource setup completed: %1"
-msgstr "Baliabidea ezartzea osatu da."
-
-#: resource.cpp:159
 #, kde-format
 msgctxt "log entry content"
-msgid "Resouce type:"
-msgstr ""
+msgid "Resource setup completed: %1"
+msgstr "Baliabidea ezartzea osatu da: %1"
+
+#: resource.cpp:159
+#, fuzzy, kde-format
+#| msgctxt "log entry content"
+#| msgid "Resouce type:"
+msgctxt "log entry content"
+msgid "Resource type:"
+msgstr "Baliabide mota:"
 
 #: resource.cpp:169
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
-msgstr ""
+msgstr "Hutsik"
 
 #: resource.cpp:174
 #, kde-format
 msgctxt "label"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #~ msgid "Kolab"
 #~ msgstr "Kolab"
