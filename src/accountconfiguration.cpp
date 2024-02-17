@@ -317,6 +317,18 @@ void AccountConfiguration::slotTestResult(const QString &result)
             setIncomingPort(143);
         }
         break;
+    case IncomingProtocol::KOLAB: { // Kolab
+        if (result == u"ssl"_s) {
+            setIncomingPort(993);
+        } else if (result == u"tls"_s) { // tls is really STARTTLS
+            setIncomingPort(143);
+        } else if (result == u"none"_s) {
+            setIncomingPort(143);
+        } else {
+            setIncomingPort(143);
+        }
+        break;
+    }
 #if 0
         // if ( server == "imap.gmail.com" ) {
         //     imapRes.setOption( "Authentication", 9 ); // XOAuth2
@@ -340,7 +352,6 @@ void AccountConfiguration::slotTestResult(const QString &result)
         //   imapRes.setOption( "ImapPort", 143 );
         // }
 #endif
-        break;
     }
     }
 

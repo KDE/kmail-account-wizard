@@ -88,7 +88,7 @@ WizardPage {
             model: [
                 { value: AccountConfiguration.IMAP, text: i18n("IMAP") },
                 { value: AccountConfiguration.POP3, text: i18n("POP3") },
-                //{ value: AccountConfiguration.KOLAB, text: i18n("Kolab") },
+                { value: AccountConfiguration.KOLAB, text: i18n("Kolab") },
             ]
             Component.onCompleted: {
                 currentIndex = indexOfValue(manualConfiguration.incomingProtocol);
