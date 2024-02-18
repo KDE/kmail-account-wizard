@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-17 00:38+0000\n"
-"PO-Revision-Date: 2024-01-03 07:58+0100\n"
+"POT-Creation-Date: 2024-02-18 00:38+0000\n"
+"PO-Revision-Date: 2024-02-17 07:03+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -40,46 +40,40 @@ msgstr "Sen nome"
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
-msgstr ""
+msgstr "Crear unha identidade de correo electrónico: %1"
 
 #: accountconfiguration.cpp:205
-#, fuzzy, kde-format
-#| msgid "Full name:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Nome completo:"
 
 #: accountconfiguration.cpp:206
-#, fuzzy, kde-format
-#| msgid "E-mail address:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
-msgstr "Enderezo de correo electrónico:"
+msgstr "Enderezo de correo electrónico principal:"
 
 #: accountconfiguration.cpp:234
-#, fuzzy, kde-format
-#| msgid "Mail transport account deleted."
+#, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
-msgstr "Eliminouse a conta de transporte de correo."
+msgstr "Completouse a configuración do transporte de correo electrónico: %1"
 
 #: accountconfiguration.cpp:237
-#, fuzzy, kde-format
-#| msgid "Hostname:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Servidor:"
 
 #: accountconfiguration.cpp:238
-#, fuzzy, kde-format
-#| msgid "Port:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Porto:"
 
 #: accountconfiguration.cpp:239
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Nome de usuaria:"
@@ -88,14 +82,13 @@ msgstr "Nome de usuaria:"
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
-msgstr ""
+msgstr "Cifrado:"
 
 #: accountconfiguration.cpp:243
-#, fuzzy, kde-format
-#| msgid "Authentication Method:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
-msgstr "Método de autenticación:"
+msgstr "Autenticación:"
 
 #: ispdb/configurationmodel.cpp:45 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
@@ -207,11 +200,10 @@ msgid "Outgoing"
 msgstr "Saínte"
 
 #: qml/ConfigurationSelectionPage.qml:16
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgctxt "@title:group"
 msgid "Configuration Selection"
-msgstr "Atopouse unha configuración automática."
+msgstr "Selección de configuración"
 
 #: qml/ConfigurationSelectionPage.qml:39
 #, kde-format
@@ -219,10 +211,9 @@ msgid "Available configurations"
 msgstr "Configuracións dispoñíbeis"
 
 #: qml/ConfigurationSelectionPage.qml:56
-#, fuzzy, kde-format
-#| msgid "No config found from ispdb server."
+#, kde-format
 msgid "No configuration found from the internet for this server."
-msgstr "Non se atopou unha configuración do servidor de ispdb."
+msgstr "Non se atopou en internet unha configuración para o servidor."
 
 #: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
 #, kde-format
@@ -230,8 +221,7 @@ msgid "Manual Configuration"
 msgstr "Configuración manual"
 
 #: qml/DetailsPage.qml:15
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@title:group"
 msgid "Details"
 msgstr "Detalles"
@@ -240,7 +230,7 @@ msgstr "Detalles"
 #, kde-format
 msgctxt "@action:button"
 msgid "Quit"
-msgstr ""
+msgstr "Saír"
 
 #: qml/DetailsPage.qml:24
 #, kde-format
@@ -251,7 +241,7 @@ msgstr "Detalles"
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
-msgstr ""
+msgstr "Non hai detalles dispoñíbeis."
 
 #: qml/ManualConfigurationPage.qml:18
 #, kde-format
@@ -277,6 +267,11 @@ msgstr "Servidor entrante:"
 #, kde-format
 msgid "Protocol:"
 msgstr "Protocolo:"
+
+#: qml/ManualConfigurationPage.qml:91
+#, kde-format
+msgid "Kolab"
+msgstr "Kolab"
 
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:204
 #, kde-format
@@ -341,12 +336,12 @@ msgstr "GSSAPI"
 #: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:247
 #, kde-format
 msgid "XOAuth (Gmail)"
-msgstr ""
+msgstr "XOAuth (Gmail)"
 
 #: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:248
 #, kde-format
 msgid "APOP"
-msgstr ""
+msgstr "APOP"
 
 #: qml/ManualConfigurationPage.qml:162 qml/ManualConfigurationPage.qml:261
 #, kde-format
@@ -376,14 +371,10 @@ msgstr "Información persoal"
 #: qml/PersonalDataPage.qml:43
 #, kde-format
 msgid "Connect your Email Account"
-msgstr ""
+msgstr "Conectar a conta de correo electrónico"
 
 #: qml/PersonalDataPage.qml:51
-#, fuzzy, kde-format
-#| msgid ""
-#| "To use your current email address fill in your credentials.<br />This "
-#| "wizard will automatically search for a working and recommended server "
-#| "configuration."
+#, kde-format
 msgid ""
 "To use your current email address fill in your credentials. This wizard will "
 "automatically search for a working and recommended server configuration. "
@@ -391,8 +382,9 @@ msgid ""
 "Internet."
 msgstr ""
 "Para usar o seu enderezo de correo electrónico actual escriba as súas "
-"credenciais.<br /> Este asistente buscará automaticamente unha configuración "
-"de servidor funcional e recomendada."
+"credenciais. Este asistente buscará automaticamente unha configuración de "
+"servidor funcional e recomendada. Só se enviará por Internet a parte do nome "
+"de dominio do enderezo de correo electrónico."
 
 #: qml/PersonalDataPage.qml:57
 #, kde-format
@@ -417,22 +409,21 @@ msgid "boss@example.corp"
 msgstr "persoa@empresa.example"
 
 #: qml/PersonalDataPage.qml:78
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password (optional):"
-msgstr "Contrasinal:"
+msgstr "Contrasinal (opcional):"
 
 #: qml/WizardPage.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr ""
+msgstr "Anterior"
 
 #: qml/WizardPage.qml:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "Seguinte"
 
 #: resource.cpp:72
 #, kde-format
@@ -465,11 +456,12 @@ msgid "Unable to configure resource instance."
 msgstr "Non é posíbel configurar a instancia do recurso."
 
 #: resource.cpp:131
-#, fuzzy, kde-format
-#| msgid "Could not convert value of setting '%1' to required type %2."
+#, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
-msgstr "Non foi posíbel converter o valor da opción «%1» no tipo requirido %2."
+msgstr ""
+"Non foi posíbel converter o valor da opción «%1» do tipo %2 ao tipo "
+"requirido %3."
 
 #: resource.cpp:144
 #, kde-format
@@ -482,11 +474,10 @@ msgid "Could not save settings: %1"
 msgstr "Non foi posíbel gardar a configuración: %1"
 
 #: resource.cpp:156
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
-msgstr "Rematou a configuración do recurso."
+msgstr "Rematou a configuración do recurso: %1"
 
 #: resource.cpp:159
 #, fuzzy, kde-format
@@ -499,16 +490,13 @@ msgstr "Rematou a configuración do recurso."
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
-msgstr ""
+msgstr "Baleiro"
 
 #: resource.cpp:174
 #, kde-format
 msgctxt "label"
 msgid "%1:"
-msgstr ""
-
-#~ msgid "Kolab"
-#~ msgstr "Kolab"
+msgstr "%1:"
 
 #~ msgid "STARTTLS"
 #~ msgstr "STARTTLS"

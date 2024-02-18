@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-17 00:38+0000\n"
-"PO-Revision-Date: 2024-02-16 18:23+0100\n"
+"POT-Creation-Date: 2024-02-18 00:38+0000\n"
+"PO-Revision-Date: 2024-02-17 06:52+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -272,6 +272,11 @@ msgstr "Strežnik za prejemanje:"
 msgid "Protocol:"
 msgstr "Protokol:"
 
+#: qml/ManualConfigurationPage.qml:91
+#, kde-format
+msgid "Kolab"
+msgstr "Kolab"
+
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:204
 #, kde-format
 msgid "Port:"
@@ -283,8 +288,7 @@ msgid "Security:"
 msgstr "Varnost:"
 
 #: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:223
-#, fuzzy, kde-format
-#| msgid "SSL/TLS (recommanded)"
+#, kde-format
 msgid "SSL/TLS (recommended)"
 msgstr "SSL/TLS (priporočeno)"
 
@@ -480,9 +484,7 @@ msgid "Resource setup completed: %1"
 msgstr "Nastavitev vira zaključena: %1"
 
 #: resource.cpp:159
-#, fuzzy, kde-format
-#| msgctxt "log entry content"
-#| msgid "Resouce type:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
 msgstr "Vrsta vira:"
@@ -498,9 +500,6 @@ msgstr "Prazno"
 msgctxt "label"
 msgid "%1:"
 msgstr "%1:"
-
-#~ msgid "Kolab"
-#~ msgstr "Kolab"
 
 #~ msgid "STARTTLS"
 #~ msgstr "STARTTLS"

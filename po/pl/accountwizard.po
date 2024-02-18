@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-17 00:38+0000\n"
+"POT-Creation-Date: 2024-02-18 00:38+0000\n"
 "PO-Revision-Date: 2024-01-07 11:58+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -278,6 +278,11 @@ msgstr "Serwer przychodzących:"
 msgid "Protocol:"
 msgstr "Protokół:"
 
+#: qml/ManualConfigurationPage.qml:91
+#, kde-format
+msgid "Kolab"
+msgstr "Kolab"
+
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:204
 #, kde-format
 msgid "Port:"
@@ -505,9 +510,6 @@ msgstr ""
 msgctxt "label"
 msgid "%1:"
 msgstr ""
-
-#~ msgid "Kolab"
-#~ msgstr "Kolab"
 
 #~ msgid "STARTTLS"
 #~ msgstr "STARTTLS"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-17 00:38+0000\n"
+"POT-Creation-Date: 2024-02-18 00:38+0000\n"
 "PO-Revision-Date: 2013-02-04 18:08+0200\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -280,6 +280,11 @@ msgstr "Intrare:"
 #: qml/ManualConfigurationPage.qml:85
 #, kde-format
 msgid "Protocol:"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:91
+#, kde-format
+msgid "Kolab"
 msgstr ""
 
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:204

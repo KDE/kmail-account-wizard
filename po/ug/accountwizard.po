@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-17 00:38+0000\n"
+"POT-Creation-Date: 2024-02-18 00:38+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -280,6 +280,11 @@ msgstr "كېلىۋاتىدۇ:"
 #: qml/ManualConfigurationPage.qml:85
 #, kde-format
 msgid "Protocol:"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:91
+#, kde-format
+msgid "Kolab"
 msgstr ""
 
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:204

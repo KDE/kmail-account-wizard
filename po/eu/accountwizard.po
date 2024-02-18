@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-17 00:38+0000\n"
-"PO-Revision-Date: 2024-02-16 09:03+0100\n"
+"POT-Creation-Date: 2024-02-18 00:38+0000\n"
+"PO-Revision-Date: 2024-02-17 09:56+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -268,6 +268,11 @@ msgstr "Sarrerako zerbitzaria:"
 msgid "Protocol:"
 msgstr "Protokoloa:"
 
+#: qml/ManualConfigurationPage.qml:91
+#, kde-format
+msgid "Kolab"
+msgstr "Kolab"
+
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:204
 #, kde-format
 msgid "Port:"
@@ -279,8 +284,7 @@ msgid "Security:"
 msgstr "Segurtasuna:"
 
 #: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:223
-#, fuzzy, kde-format
-#| msgid "SSL/TLS (recommanded)"
+#, kde-format
 msgid "SSL/TLS (recommended)"
 msgstr "SSL/TLS (gomendatua)"
 
@@ -476,9 +480,7 @@ msgid "Resource setup completed: %1"
 msgstr "Baliabidea ezartzea osatu da: %1"
 
 #: resource.cpp:159
-#, fuzzy, kde-format
-#| msgctxt "log entry content"
-#| msgid "Resouce type:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
 msgstr "Baliabide mota:"
@@ -494,9 +496,6 @@ msgstr "Hutsik"
 msgctxt "label"
 msgid "%1:"
 msgstr "%1:"
-
-#~ msgid "Kolab"
-#~ msgstr "Kolab"
 
 #~ msgid "STARTTLS"
 #~ msgstr "STARTTLS"

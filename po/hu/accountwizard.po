@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-17 00:38+0000\n"
-"PO-Revision-Date: 2024-02-05 22:47+0100\n"
+"POT-Creation-Date: 2024-02-18 00:38+0000\n"
+"PO-Revision-Date: 2024-02-17 21:20+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -39,46 +39,40 @@ msgstr "Névtelen"
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
-msgstr ""
+msgstr "E-mail azonosítü létrehozása: %1"
 
 #: accountconfiguration.cpp:205
-#, fuzzy, kde-format
-#| msgid "Full name:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Teljes név:"
 
 #: accountconfiguration.cpp:206
-#, fuzzy, kde-format
-#| msgid "E-mail address:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
-msgstr "E-mail cím:"
+msgstr "Elsődleges e-mail cím:"
 
 #: accountconfiguration.cpp:234
-#, fuzzy, kde-format
-#| msgid "Mail transport account deleted."
+#, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
-msgstr "A levéltovábbító azonosító törölve."
+msgstr "Levéltovábbítás beállítása befejezve: %1"
 
 #: accountconfiguration.cpp:237
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Host:"
-msgstr "Felhasználónév:"
+msgstr "Gépnév:"
 
 #: accountconfiguration.cpp:238
-#, fuzzy, kde-format
-#| msgid "Port:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Port:"
 
 #: accountconfiguration.cpp:239
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Felhasználónév:"
@@ -87,14 +81,13 @@ msgstr "Felhasználónév:"
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
-msgstr ""
+msgstr "Titkosítás:"
 
 #: accountconfiguration.cpp:243
-#, fuzzy, kde-format
-#| msgid "Authentication Method:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
-msgstr "Felhasználóazonosítási mód:"
+msgstr "Hitelesítés:"
 
 #: ispdb/configurationmodel.cpp:45 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
@@ -206,11 +199,10 @@ msgid "Outgoing"
 msgstr "Kimenő"
 
 #: qml/ConfigurationSelectionPage.qml:16
-#, fuzzy, kde-format
-#| msgid "Autodetecting settings failed"
+#, kde-format
 msgctxt "@title:group"
 msgid "Configuration Selection"
-msgstr "A beállítások automatikus felismerése meghiúsult"
+msgstr "Konfigurációválasztás"
 
 #: qml/ConfigurationSelectionPage.qml:39
 #, kde-format
@@ -218,10 +210,9 @@ msgid "Available configurations"
 msgstr "Elérhető beállítások"
 
 #: qml/ConfigurationSelectionPage.qml:56
-#, fuzzy, kde-format
-#| msgid "No config found from ispdb server."
+#, kde-format
 msgid "No configuration found from the internet for this server."
-msgstr "Nem található beállítás az ispdb kiszolgálóról."
+msgstr "Nem található konfiguráció ehhez a kiszolgálóhoz az interneten."
 
 #: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
 #, kde-format
@@ -229,8 +220,7 @@ msgid "Manual Configuration"
 msgstr "Kézi beállítás"
 
 #: qml/DetailsPage.qml:15
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@title:group"
 msgid "Details"
 msgstr "Részletek"
@@ -239,7 +229,7 @@ msgstr "Részletek"
 #, kde-format
 msgctxt "@action:button"
 msgid "Quit"
-msgstr ""
+msgstr "Kilépés"
 
 #: qml/DetailsPage.qml:24
 #, kde-format
@@ -250,7 +240,7 @@ msgstr "Részletek"
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
-msgstr ""
+msgstr "Nem érhetők el részletek."
 
 #: qml/ManualConfigurationPage.qml:18
 #, kde-format
@@ -276,6 +266,11 @@ msgstr "Bejövő kiszolgáló:"
 #, kde-format
 msgid "Protocol:"
 msgstr "Protokoll:"
+
+#: qml/ManualConfigurationPage.qml:91
+#, kde-format
+msgid "Kolab"
+msgstr "Kolab"
 
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:204
 #, kde-format
@@ -340,12 +335,12 @@ msgstr "GSSAPI"
 #: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:247
 #, kde-format
 msgid "XOAuth (Gmail)"
-msgstr ""
+msgstr "XOAuth (Gmail)"
 
 #: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:248
 #, kde-format
 msgid "APOP"
-msgstr ""
+msgstr "APOP"
 
 #: qml/ManualConfigurationPage.qml:162 qml/ManualConfigurationPage.qml:261
 #, kde-format
@@ -375,23 +370,20 @@ msgstr "Személyes adatok"
 #: qml/PersonalDataPage.qml:43
 #, kde-format
 msgid "Connect your Email Account"
-msgstr ""
+msgstr "E-mail fiók csatlakoztatása"
 
 #: qml/PersonalDataPage.qml:51
-#, fuzzy, kde-format
-#| msgid ""
-#| "To use your current email address fill in your credentials.<br />This "
-#| "wizard will automatically search for a working and recommended server "
-#| "configuration."
+#, kde-format
 msgid ""
 "To use your current email address fill in your credentials. This wizard will "
 "automatically search for a working and recommended server configuration. "
 "Only the domain name part of the e-mail address will be sent over the "
 "Internet."
 msgstr ""
-"A jelenlegi e-mail címe használatához töltse ki a hitelesítési adatokat.<br /"
-">Ez a varázsló automatikusan megkeres egy működő és ajánlott "
-"kiszolgálóbeállítást."
+"A jelenlegi e-mail címe használatához töltse ki a hitelesítési adatokat. Ez "
+"a varázsló automatikusan megkeres egy működő és ajánlott "
+"kiszolgálóbeállítást. Az e-mail címből csak a domainnév kerül átküldésre az "
+"interneten keresztül."
 
 #: qml/PersonalDataPage.qml:57
 #, kde-format
@@ -416,22 +408,21 @@ msgid "boss@example.corp"
 msgstr "fonok@pelda.kft"
 
 #: qml/PersonalDataPage.qml:78
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password (optional):"
-msgstr "Jelszó:"
+msgstr "Jelszó (opcionális):"
 
 #: qml/WizardPage.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr ""
+msgstr "Előző"
 
 #: qml/WizardPage.qml:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "Következő"
 
 #: resource.cpp:72
 #, kde-format
@@ -464,11 +455,11 @@ msgid "Unable to configure resource instance."
 msgstr "Nem sikerült beállítani az erőforráspéldányt."
 
 #: resource.cpp:131
-#, fuzzy, kde-format
-#| msgid "Could not convert value of setting '%1' to required type %2."
+#, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
-msgstr "A(z) „%1” beállítás értéke nem konvertálható a szükséges %2 típusra."
+msgstr ""
+"A(z) %2típusú „%1” beállítás értéke nem konvertálható a szükséges %3 típusra."
 
 #: resource.cpp:144
 #, kde-format
@@ -481,11 +472,10 @@ msgid "Could not save settings: %1"
 msgstr "Nem sikerült menteni a beállításokat: %1"
 
 #: resource.cpp:156
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
-msgstr "Az erőforrás beállítása befejeződött."
+msgstr "Erőforrás beállítása befejezve: %1"
 
 #: resource.cpp:159
 #, fuzzy, kde-format
@@ -498,16 +488,13 @@ msgstr "Az erőforrás beállítása befejeződött."
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
-msgstr ""
+msgstr "Üres"
 
 #: resource.cpp:174
 #, kde-format
 msgctxt "label"
 msgid "%1:"
-msgstr ""
-
-#~ msgid "Kolab"
-#~ msgstr "Kolab"
+msgstr "%1:"
 
 #~ msgid "STARTTLS"
 #~ msgstr "STARTTLS"
