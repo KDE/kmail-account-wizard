@@ -54,6 +54,7 @@ set(QT_REQUIRED_VERSION "6.6.0")
 find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Core Widgets DBus Test Quick QuickControls2)
 set(PIMCOMMON_LIB_VERSION "6.0.40")
 set(KPIM_MIME_VERSION "6.0.40")
+set(QT6KEYCHAIN_LIB_VERSION "0.14.1")
 
 # Find KF6 package
 find_package(KF6I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
@@ -72,7 +73,7 @@ include_directories(${kmail-account-wizard_SOURCE_DIR} ${kmail-account-wizard_BI
 qt_policy(SET QTP0001 NEW)
 
 
-find_package(Qt6Keychain CONFIG)
+find_package(Qt6Keychain ${QT6KEYCHAIN_LIB_VERSION} CONFIG)
 set_package_properties(Qt6Keychain PROPERTIES
                                    DESCRIPTION "Provides support for secure credentials storage"
                                    URL "https://github.com/frankosterfeld/qtkeychain"
