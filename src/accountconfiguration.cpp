@@ -25,6 +25,12 @@ AccountConfiguration::AccountConfiguration(KIdentityManagementCore::IdentityMana
     mMailTransport->setStorePassword(true);
     mMailTransport->setEncryption(MailTransport::Transport::EnumEncryption::SSL);
     mMailTransport->setPort(587);
+    /*
+    const QString identifier = QStringLiteral("SMTP");
+    mMailTransport->setIdentifier(identifier);
+    mMailTransport->forceUniqueName();
+    MailTransport::TransportManager::self()->initializeTransport(identifier, mMailTransport);
+    */
     mMailTransport->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::PLAIN);
 }
 
@@ -38,6 +44,13 @@ AccountConfiguration::AccountConfiguration(QObject *parent)
     mMailTransport->setStorePassword(true);
     mMailTransport->setEncryption(MailTransport::Transport::EnumEncryption::SSL);
     mMailTransport->setPort(587);
+    /*
+    const QString identifier = QStringLiteral("SMTP");
+    mMailTransport->setIdentifier(identifier);
+    mMailTransport->forceUniqueName();
+    MailTransport::TransportManager::self()->initializeTransport(identifier, mMailTransport);
+    */
+
     mMailTransport->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::PLAIN);
 }
 
@@ -229,7 +242,14 @@ void AccountConfiguration::save(ConsoleLog *consoleLog)
     if (mHasTransport) {
         // create transport
         using TransportAuth = MailTransport::Transport::EnumAuthenticationType;
+        /*
+        mMailTransport->setIdentifier(QStringLiteral("SMTP"));
+        mMailTransport->forceUniqueName();
+        MailTransport::TransportManager::self()->initializeTransport(QStringLiteral("SMTP"), mMailTransport);
+        */
         MailTransport::TransportManager::self()->addTransport(mMailTransport);
+        qDebug() << " XXXXXXXXXXXXXXXXX " << mMailTransport->identifier();
+        mMailTransport->();
 
         QString logEntryText = u"<h3>"_s + i18nc("log entry content", "Mail transport setup completed: %1", mMailTransport->name()) + u"</h3>"_s;
 
@@ -245,6 +265,7 @@ void AccountConfiguration::save(ConsoleLog *consoleLog)
         logEntryText += u"</ul>"_s;
         consoleLog->success(logEntryText);
 
+        qDebug() << " mMailTransport->id() " << mMailTransport->id();
         mIdentity.setTransport(QString::number(mMailTransport->id()));
     }
 
