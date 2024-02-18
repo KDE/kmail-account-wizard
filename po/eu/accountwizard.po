@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-17 02:27+0000\n"
-"PO-Revision-Date: 2024-02-16 09:03+0100\n"
+"POT-Creation-Date: 2024-02-18 02:27+0000\n"
+"PO-Revision-Date: 2024-02-17 09:57+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -268,6 +268,11 @@ msgstr "Sarrerako zerbitzaria:"
 msgid "Protocol:"
 msgstr "Protokoloa:"
 
+#: qml/ManualConfigurationPage.qml:91
+#, kde-format
+msgid "Kolab"
+msgstr "Kolab"
+
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:204
 #, kde-format
 msgid "Port:"
@@ -481,9 +486,7 @@ msgid "Resouce type:"
 msgstr "Baliabide mota:"
 
 #: resource.cpp:169
-#, fuzzy, kde-format
-#| msgctxt "Empty password"
-#| msgid "Empty"
+#, kde-format
 msgctxt "Indication that the password set for the resource is empty"
 msgid "Empty"
 msgstr "Hutsik"
@@ -493,9 +496,6 @@ msgstr "Hutsik"
 msgctxt "label"
 msgid "%1:"
 msgstr "%1:"
-
-#~ msgid "Kolab"
-#~ msgstr "Kolab"
 
 #~ msgid "STARTTLS"
 #~ msgstr "STARTTLS"

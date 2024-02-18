@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-17 02:27+0000\n"
+"POT-Creation-Date: 2024-02-18 02:27+0000\n"
 "PO-Revision-Date: 2021-09-03 10:38+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -285,6 +285,11 @@ msgstr "Εισερχόμενα:"
 #: qml/ManualConfigurationPage.qml:85
 #, kde-format
 msgid "Protocol:"
+msgstr ""
+
+#: qml/ManualConfigurationPage.qml:91
+#, kde-format
+msgid "Kolab"
 msgstr ""
 
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:204

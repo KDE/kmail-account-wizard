@@ -4,13 +4,13 @@
 # Andrej Vernekar <andrej.vernekar@moj.net>, 2010.
 # Jure Repinc <jlp@holodeck1.com>, 2012.
 # Andrej Mernik <andrejm@ubuntu.si>, 2014, 2015, 2016, 2017, 2018.
-# Matjaž Jeran <matjaz.jeran@amis.net>, 2019, 2020, 2021.
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2024 Matjaž Jeran <matjaz.jeran@amis.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-17 02:27+0000\n"
-"PO-Revision-Date: 2024-01-02 14:47+0100\n"
+"POT-Creation-Date: 2024-02-18 02:27+0000\n"
+"PO-Revision-Date: 2024-02-17 07:15+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -44,46 +44,40 @@ msgstr "Neimenovano"
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
-msgstr ""
+msgstr "Ustvari identiteto e-pošte: %1"
 
 #: accountconfiguration.cpp:206
-#, fuzzy, kde-format
-#| msgid "Full name:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Polno ime:"
 
 #: accountconfiguration.cpp:207
-#, fuzzy, kde-format
-#| msgid "E-mail address:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
-msgstr "E-poštni naslov:"
+msgstr "Primerni naslov e-pošte:"
 
 #: accountconfiguration.cpp:235
-#, fuzzy, kde-format
-#| msgid "Mail transport account deleted."
+#, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
-msgstr "Račun za prenos pošte je izbrisan."
+msgstr "Nastavitev prenosa pošte je končana: %1"
 
 #: accountconfiguration.cpp:238
-#, fuzzy, kde-format
-#| msgid "Hostname:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Ime gostitelja:"
 
 #: accountconfiguration.cpp:239
-#, fuzzy, kde-format
-#| msgid "Port:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Vrata:"
 
 #: accountconfiguration.cpp:240
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Uporabniško ime:"
@@ -92,14 +86,13 @@ msgstr "Uporabniško ime:"
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
-msgstr ""
+msgstr "Šifriranje:"
 
 #: accountconfiguration.cpp:244
-#, fuzzy, kde-format
-#| msgid "Authentication Method:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
-msgstr "Metoda avtentikacije:"
+msgstr "Avtentikacija:"
 
 #: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
@@ -211,11 +204,10 @@ msgid "Outgoing"
 msgstr "Pošiljanje"
 
 #: qml/ConfigurationSelectionPage.qml:16
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgctxt "@title:group"
 msgid "Configuration Selection"
-msgstr "Samodejne nastavitve najdene."
+msgstr "Izbira konfiguracije"
 
 #: qml/ConfigurationSelectionPage.qml:39
 #, kde-format
@@ -223,10 +215,9 @@ msgid "Available configurations"
 msgstr "Razpoložljive konfiguracije"
 
 #: qml/ConfigurationSelectionPage.qml:56
-#, fuzzy, kde-format
-#| msgid "No config found from ispdb server."
+#, kde-format
 msgid "No configuration found from the internet for this server."
-msgstr "Na strežniku ispdb ni bilo mogoče najti nobene konfiguracije."
+msgstr "Na internetu ni bilo mogoče najti konfiguracije za ta strežnik."
 
 #: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
 #, kde-format
@@ -234,8 +225,7 @@ msgid "Manual Configuration"
 msgstr "Ročna konfiguracija"
 
 #: qml/DetailsPage.qml:15
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@title:group"
 msgid "Details"
 msgstr "Podrobnosti"
@@ -244,7 +234,7 @@ msgstr "Podrobnosti"
 #, kde-format
 msgctxt "@action:button"
 msgid "Quit"
-msgstr ""
+msgstr "Zapusti"
 
 #: qml/DetailsPage.qml:24
 #, kde-format
@@ -255,7 +245,7 @@ msgstr "Podrobnosti"
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
-msgstr ""
+msgstr "Podrobnosti ni na voljo."
 
 #: qml/ManualConfigurationPage.qml:18
 #, kde-format
@@ -282,6 +272,11 @@ msgstr "Strežnik za prejemanje:"
 msgid "Protocol:"
 msgstr "Protokol:"
 
+#: qml/ManualConfigurationPage.qml:91
+#, kde-format
+msgid "Kolab"
+msgstr "Kolab"
+
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:204
 #, kde-format
 msgid "Port:"
@@ -295,7 +290,7 @@ msgstr "Varnost:"
 #: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:223
 #, kde-format
 msgid "SSL/TLS (recommanded)"
-msgstr ""
+msgstr "SSL/TLS (priporočeno)"
 
 #: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:222
 #, kde-format
@@ -345,12 +340,12 @@ msgstr "GSSAPI"
 #: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:247
 #, kde-format
 msgid "XOAuth (Gmail)"
-msgstr ""
+msgstr "XOAuth (Gmail)"
 
 #: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:248
 #, kde-format
 msgid "APOP"
-msgstr ""
+msgstr "APOP"
 
 #: qml/ManualConfigurationPage.qml:162 qml/ManualConfigurationPage.qml:261
 #, kde-format
@@ -380,23 +375,20 @@ msgstr "Osebni podatki"
 #: qml/PersonalDataPage.qml:43
 #, kde-format
 msgid "Connect your Email Account"
-msgstr ""
+msgstr "Povežite svoj e-poštni račun"
 
 #: qml/PersonalDataPage.qml:51
-#, fuzzy, kde-format
-#| msgid ""
-#| "To use your current email address fill in your credentials.<br />This "
-#| "wizard will automatically search for a working and recommended server "
-#| "configuration."
+#, kde-format
 msgid ""
 "To use your current email address fill in your credentials. This wizard will "
 "automatically search for a working and recommended server configuration. "
 "Only the domain name part of the e-mail address will be sent over the "
 "Internet."
 msgstr ""
-"Če želite uporabiti svoj trenutni e-poštni naslov, vnesite svoje poverilnice."
-"<br />Ta čarovnik bo samodejno poiskal delujočo in priporočeno konfiguracijo "
-"strežnika."
+"Če želite uporabiti svoj trenutni e-poštni naslov, izpolnite svoje "
+"poverilnice. Ta čarovnik bo samodejno poiskal delujočo in priporočeno "
+"konfiguracijo strežnika. Prek interneta bo poslan le del e-poštnega naslova "
+"z imenom domene."
 
 #: qml/PersonalDataPage.qml:57
 #, kde-format
@@ -421,22 +413,21 @@ msgid "boss@example.corp"
 msgstr "boss@example.corp"
 
 #: qml/PersonalDataPage.qml:78
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password (optional):"
-msgstr "Geslo:"
+msgstr "Geslo (neobvezno):"
 
 #: qml/WizardPage.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr ""
+msgstr "Prejšnji"
 
 #: qml/WizardPage.qml:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "Naslednji"
 
 #: resource.cpp:72
 #, kde-format
@@ -469,12 +460,12 @@ msgid "Unable to configure resource instance."
 msgstr "Primerka vira ni mogoče nastaviti."
 
 #: resource.cpp:131
-#, fuzzy, kde-format
-#| msgid "Could not convert value of setting '%1' to required type %2."
+#, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
 msgstr ""
-"Vrednosti nastavitve '%1' ni bilo mogoče pretvoriti v zahtevano vrsto %2."
+"Ni bilo mogoče pretvoriti vrednosti nastavitve '%1' z vrsto %2 v zahtevano "
+"vrsto %3."
 
 #: resource.cpp:144
 #, kde-format
@@ -487,32 +478,28 @@ msgid "Could not save settings: %1"
 msgstr "Ni bilo mogoče shraniti nastavitev: %1"
 
 #: resource.cpp:156
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
-msgstr "Nastavitev vira je zaključena."
+msgstr "Nastavitev vira zaključena: %1"
 
 #: resource.cpp:159
 #, kde-format
 msgctxt "log entry content"
 msgid "Resouce type:"
-msgstr ""
+msgstr "Vrsta vira:"
 
 #: resource.cpp:169
 #, kde-format
 msgctxt "Indication that the password set for the resource is empty"
 msgid "Empty"
-msgstr ""
+msgstr "Prazno"
 
 #: resource.cpp:174
 #, kde-format
 msgctxt "label"
 msgid "%1:"
-msgstr ""
-
-#~ msgid "Kolab"
-#~ msgstr "Kolab"
+msgstr "%1:"
 
 #~ msgid "STARTTLS"
 #~ msgstr "STARTTLS"

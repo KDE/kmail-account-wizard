@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-17 02:27+0000\n"
-"PO-Revision-Date: 2024-02-16 10:36+0100\n"
+"POT-Creation-Date: 2024-02-18 02:27+0000\n"
+"PO-Revision-Date: 2024-02-17 13:49+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -266,6 +266,11 @@ msgstr "Входящ сървър:"
 msgid "Protocol:"
 msgstr "Протокол:"
 
+#: qml/ManualConfigurationPage.qml:91
+#, kde-format
+msgid "Kolab"
+msgstr "Kolab"
+
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:204
 #, kde-format
 msgid "Port:"
@@ -479,21 +484,16 @@ msgid "Resouce type:"
 msgstr "Вид на ресурса:"
 
 #: resource.cpp:169
-#, fuzzy, kde-format
-#| msgctxt "Empty password"
-#| msgid "Empty"
+#, kde-format
 msgctxt "Indication that the password set for the resource is empty"
 msgid "Empty"
-msgstr "Празно"
+msgstr "Без парола"
 
 #: resource.cpp:174
 #, kde-format
 msgctxt "label"
 msgid "%1:"
 msgstr "%1:"
-
-#~ msgid "Kolab"
-#~ msgstr "Kolab"
 
 #~ msgid "STARTTLS"
 #~ msgstr "STARTTLS"

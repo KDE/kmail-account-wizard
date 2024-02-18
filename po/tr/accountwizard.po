@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-runtime-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-17 02:27+0000\n"
-"PO-Revision-Date: 2024-01-02 16:04+0300\n"
+"POT-Creation-Date: 2024-02-18 02:27+0000\n"
+"PO-Revision-Date: 2024-02-17 14:04+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.85\n"
+"X-Generator: Lokalize 24.01.95\n"
 "X-POOTLE-MTIME: 1413102276.000000\n"
 
 #, kde-format
@@ -46,45 +46,40 @@ msgstr "Adsız"
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
-msgstr ""
+msgstr "E-posta kimliği oluştur: %1"
 
 #: accountconfiguration.cpp:206
-#, fuzzy, kde-format
-#| msgid "Full name:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Tam ad:"
 
 #: accountconfiguration.cpp:207
-#, fuzzy, kde-format
-#| msgid "E-mail address:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
-msgstr "E-posta adresi:"
+msgstr "Birincil e-posta adresi:"
 
 #: accountconfiguration.cpp:235
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
-msgstr "Özkaynak kurulumu tamamlandı."
+msgstr "Posta taşıma ayarları tamamlandı: %1"
 
 #: accountconfiguration.cpp:238
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
-msgstr ""
+msgstr "Makine:"
 
 #: accountconfiguration.cpp:239
-#, fuzzy, kde-format
-#| msgid "Port:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Kapı:"
 
 #: accountconfiguration.cpp:240
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Kullanıcı adı:"
@@ -93,11 +88,10 @@ msgstr "Kullanıcı adı:"
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
-msgstr ""
+msgstr "Şifreleme:"
 
 #: accountconfiguration.cpp:244
-#, fuzzy, kde-format
-#| msgid "Authentication Method:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
 msgstr "Kimlik doğrulama yöntemi:"
@@ -212,11 +206,10 @@ msgid "Outgoing"
 msgstr "Giden"
 
 #: qml/ConfigurationSelectionPage.qml:16
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgctxt "@title:group"
 msgid "Configuration Selection"
-msgstr "Otomatik yapılandırma bulundu."
+msgstr "Yapılandırma Seçimi"
 
 #: qml/ConfigurationSelectionPage.qml:39
 #, kde-format
@@ -224,10 +217,9 @@ msgid "Available configurations"
 msgstr "Kullanılabilir yapılandırmalar"
 
 #: qml/ConfigurationSelectionPage.qml:56
-#, fuzzy, kde-format
-#| msgid "No config found from ispdb server."
+#, kde-format
 msgid "No configuration found from the internet for this server."
-msgstr "ispdb sunucusunda yapılandırma bulunamadı."
+msgstr "Bu sunucu için internette bir yapılandırma bulunamadı."
 
 #: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
 #, kde-format
@@ -235,8 +227,7 @@ msgid "Manual Configuration"
 msgstr "Elle Yapılandırma"
 
 #: qml/DetailsPage.qml:15
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@title:group"
 msgid "Details"
 msgstr "Ayrıntılar"
@@ -245,7 +236,7 @@ msgstr "Ayrıntılar"
 #, kde-format
 msgctxt "@action:button"
 msgid "Quit"
-msgstr ""
+msgstr "Çık"
 
 #: qml/DetailsPage.qml:24
 #, kde-format
@@ -256,7 +247,7 @@ msgstr "Ayrıntılar"
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
-msgstr ""
+msgstr "Kullanılabilir ayrıntı yok."
 
 #: qml/ManualConfigurationPage.qml:18
 #, kde-format
@@ -283,6 +274,11 @@ msgstr "Gelen sunucusu:"
 msgid "Protocol:"
 msgstr "Protokol:"
 
+#: qml/ManualConfigurationPage.qml:91
+#, kde-format
+msgid "Kolab"
+msgstr ""
+
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:204
 #, kde-format
 msgid "Port:"
@@ -294,9 +290,10 @@ msgid "Security:"
 msgstr "Güvenlik:"
 
 #: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:223
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "SSL/TLS (recommended)"
 msgid "SSL/TLS (recommanded)"
-msgstr ""
+msgstr "SSL/TLS (önerilir)"
 
 #: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:222
 #, kde-format
@@ -346,12 +343,12 @@ msgstr "GSSAPI"
 #: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:247
 #, kde-format
 msgid "XOAuth (Gmail)"
-msgstr ""
+msgstr "XOAuth (Gmail)"
 
 #: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:248
 #, kde-format
 msgid "APOP"
-msgstr ""
+msgstr "APOP"
 
 #: qml/ManualConfigurationPage.qml:162 qml/ManualConfigurationPage.qml:261
 #, kde-format
@@ -381,22 +378,19 @@ msgstr "Kişisel Bilgiler"
 #: qml/PersonalDataPage.qml:43
 #, kde-format
 msgid "Connect your Email Account"
-msgstr ""
+msgstr "E-posta Hesabınızı Bağlayın"
 
 #: qml/PersonalDataPage.qml:51
-#, fuzzy, kde-format
-#| msgid ""
-#| "To use your current email address fill in your credentials.<br />This "
-#| "wizard will automatically search for a working and recommended server "
-#| "configuration."
+#, kde-format
 msgid ""
 "To use your current email address fill in your credentials. This wizard will "
 "automatically search for a working and recommended server configuration. "
 "Only the domain name part of the e-mail address will be sent over the "
 "Internet."
 msgstr ""
-"Geçerli e-posta adresinizi kullanmak için kimlik bilgilerinizi doldurun.<br /"
-">Bu sihirbaz, kendiliğinden önerilen sunucu yapılandırmasını arayacaktır."
+"Geçerli e-posta adresinizi kullanmak için kimlik bilgilerinizi doldurun. Bu "
+"sihirbaz, kendiliğinden önerilen bir sunucu yapılandırması arayacaktır. "
+"İnternet üzerinden e-posta adresinin yalnızca alan adı kısmı gönderilecektir."
 
 #: qml/PersonalDataPage.qml:57
 #, kde-format
@@ -421,37 +415,36 @@ msgid "boss@example.corp"
 msgstr "goekhan@ilteris.com"
 
 #: qml/PersonalDataPage.qml:78
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password (optional):"
-msgstr "Parola:"
+msgstr "Parola (isteğe bağlı):"
 
 #: qml/WizardPage.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr ""
+msgstr "Önceki"
 
 #: qml/WizardPage.qml:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "Sonraki"
 
 #: resource.cpp:72
 #, kde-format
 msgid "Resource type '%1' is not available."
-msgstr "Özkaynak türü '%1' kullanılabilir değil."
+msgstr "Özkaynak türü ‘%1’ kullanılabilir değil."
 
 #: resource.cpp:85
 #, kde-format
 msgid "Resource '%1' is already set up."
-msgstr "Özkaynak türü '%1' halihazırda ayarlandı."
+msgstr "Özkaynak türü ‘%1’ halihazırda ayarlı."
 
 #: resource.cpp:92
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr "'%1' için özkaynak örneği oluşturuluyor..."
+msgstr "‘%1’ için özkaynak örneği oluşturuluyor…"
 
 #: resource.cpp:101
 #, kde-format
@@ -469,16 +462,15 @@ msgid "Unable to configure resource instance."
 msgstr "Özkaynak örneği yapılandırılamadı."
 
 #: resource.cpp:131
-#, fuzzy, kde-format
-#| msgid "Could not convert value of setting '%1' to required type %2."
+#, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
-msgstr "'%1' ayar değeri gerekli olan %2 değerine dönüştürülemedi."
+msgstr "%2 türündeki ‘%1’ ayarının değeri gerekli %3 türüne dönüştürülemedi."
 
 #: resource.cpp:144
 #, kde-format
 msgid "Could not set setting '%1': %2"
-msgstr "'%1' ayarı ayarlanamadı: %2"
+msgstr "‘%1’ ayarı yapılamadı: %2"
 
 #: resource.cpp:150
 #, kde-format
@@ -486,205 +478,29 @@ msgid "Could not save settings: %1"
 msgstr "Ayarlar kaydedilemedi: %1"
 
 #: resource.cpp:156
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
-msgstr "Özkaynak kurulumu tamamlandı."
+msgstr "Özkaynak ayarları tamamlandı: %1"
 
 #: resource.cpp:159
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "log entry content"
+#| msgid "Resource type:"
 msgctxt "log entry content"
 msgid "Resouce type:"
-msgstr ""
+msgstr "Özkaynak türü:"
 
 #: resource.cpp:169
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "Empty password"
+#| msgid "Empty"
 msgctxt "Indication that the password set for the resource is empty"
 msgid "Empty"
-msgstr ""
+msgstr "Boş"
 
 #: resource.cpp:174
 #, kde-format
 msgctxt "label"
 msgid "%1:"
-msgstr ""
-
-#~ msgid "Kolab"
-#~ msgstr "Kolab"
-
-#~ msgid "STARTTLS"
-#~ msgstr "STARTTLS"
-
-#~ msgid "Setting up identity..."
-#~ msgstr "Kimlik ayarlanıyor..."
-
-#~ msgid "Identity set up."
-#~ msgstr "Kimlik ayarlandı."
-
-#~ msgid "Identity removed."
-#~ msgstr "Kimlik kaldırıldı."
-
-#~ msgid "Setting up mail transport account..."
-#~ msgstr "Posta taşıma hesabı ayarlanıyor..."
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr ""
-#~ "Posta taşıması, '%1' şifrelemesi ve '%2' kimlik doğrulaması kullanıyor."
-
-#~ msgid "Mail transport account set up."
-#~ msgstr "Posta taşıma hesabı ayarlandı."
-
-#~ msgid "Set Up Your Existing Email Address"
-#~ msgstr "Var Olan E-posta Adresinizi Ayarlayın"
-
-#~ msgid "Continue"
-#~ msgstr "Sürdür"
-
-#~ msgid ""
-#~ "Check online for the settings needed for this email provider. Only the "
-#~ "domain name part of the e-mail address will be sent over the Internet."
-#~ msgstr ""
-#~ "Bu e-posta sağlayıcısı için gerekli olan ayarları çevrimiçi arayın. E-"
-#~ "posta adresinin yalnızca alan adı kısmı İnternet üzerinden gönderilir."
-
-#~ msgid ""
-#~ "There seems to be a problem in reaching this server or choosing a safe "
-#~ "way to sent the credentials to server. We advise you to check the "
-#~ "settings of the account and adjust it manually if needed."
-#~ msgstr ""
-#~ "Bu sunucuya ulaşmada veya sunucuya kimlik gönderirken güvenli bir yol "
-#~ "seçmede sorun var gibi görünüyor. Hesap ayarlarınızı denetlemenizi ve "
-#~ "gerekirse elle ayarlamanızı öneririz."
-
-#~ msgid "Autodetecting settings failed"
-#~ msgstr "Ayarları kendiliğinden algılama başarısız"
-
-#~ msgid "Writing config file for %1..."
-#~ msgstr "%1 için yapılandırma dosyası yazılıyor..."
-
-#~ msgid "Config file for %1 is writing."
-#~ msgstr "%1 için yapılandırma dosyası yazılıyor."
-
-#~ msgid "Config file for %1 was not changed."
-#~ msgstr "%1 yapılandırma dosyası değiştirilmedi."
-
-#~ msgid "No given name for the configuration."
-#~ msgstr "Yapılandırma için ad girilmedi."
-
-#~ msgid "Unknown configuration name '%1'"
-#~ msgstr "Bilinmeyen yapılandırma adı '%1'"
-
-#~ msgid "Account Wizard"
-#~ msgstr "Hesap Sihirbazı"
-
-#~ msgid "Error while generating new key pair for your account %1: %2"
-#~ msgstr "%1 hesabınız için yeni anahtar çifti oluşturulurken hata: %2"
-
-#~ msgid "Could not detect valid key type"
-#~ msgstr "Geçerli anahtar türü algılanamadı"
-
-#~ msgid "Import error"
-#~ msgstr "İçe aktarma hatası"
-
-#~ msgid "Cannot read data from the certificate file: %1"
-#~ msgstr "Sertifika dosyasından veri okunamadı: %1"
-
-#~ msgid "Failed to import key: %1"
-#~ msgstr "Anahtar içe aktarılamadı: %1"
-
-#~ msgid "Failed to import key."
-#~ msgstr "Anahtar içe aktarılamadı."
-
-#~ msgid "No key"
-#~ msgstr "Anahtar yok"
-
-#~ msgid "Generate a new key pair"
-#~ msgstr "Yeni bir anahtar çifti üret"
-
-#~ msgid "Import a key"
-#~ msgstr "Bir anahtar içe aktar"
-
-#~ msgid "Certificates"
-#~ msgstr "Sertifikalar"
-
-#~ msgid "Any files"
-#~ msgstr "Herhangi bir dosya"
-
-#~ msgid "Select Certificate File"
-#~ msgstr "Sertifika Dosyası Seç"
-
-#~ msgid "Importing key..."
-#~ msgstr "Anahtar içe aktarılıyor..."
-
-#~ msgid "Lookup configuration: Email provider"
-#~ msgstr "Arama yapılandırması: E-posta sağlayıcısı"
-
-#~ msgid "Lookup configuration: Trying common server name"
-#~ msgstr "Arama yapılandırması: Ortak sunucu adı deneniyor"
-
-#~ msgid "Lookup configuration: Mozilla database"
-#~ msgstr "Arama yapılandırması: Mozilla veritabanı"
-
-#~ msgid "Skipping key publishing"
-#~ msgstr "Anahtar yayımlama atlanıyor"
-
-#~ msgid "Publishing OpenPGP key..."
-#~ msgstr "OpenPGP anahtarı yayımlanıyor..."
-
-#~ msgid "Key publishing was canceled."
-#~ msgstr "Anahtar yayımlama iptal edildi."
-
-#~ msgid "Key publishing failed: not online, or GnuPG too old."
-#~ msgstr "Anahtar yayımlama başarısız: Çevrimiçi değil veya GnuPG çok eski."
-
-#~ msgid "Your email provider does not support key publishing."
-#~ msgstr "E-posta sağlayıcınız anahtar yayımlamayı desteklemiyor."
-
-#~ msgid "An error occurred while creating key publishing request."
-#~ msgstr "Anahtar yayımlama talebi oluşturulurken bir hata oluştu."
-
-#~ msgid "Key publishing error: mail transport is not configured"
-#~ msgstr "Anahtar yayınlama hatası: Posta taşıması yapılandırılmamış"
-
-#~ msgid "Key publishing error: failed to create request email"
-#~ msgstr "Anahtar yayımlama hatası: Talep e-postası oluşturulamadı"
-
-#~ msgid "Failed to send key publishing request: %1"
-#~ msgstr "Anahtar yayımlama talebini gönderme başarısız: %1"
-
-#~ msgid "Key publishing request sent."
-#~ msgstr "Anahtar yayımlama talebi gönderildi."
-
-#~ msgid "Failed to publish the key."
-#~ msgstr "Anahtar yayımlanamadı."
-
-#~ msgid "Key has been published on %1"
-#~ msgstr "Anahtar, %1 üzerinde yayımlandı"
-
-#~ msgid "Setting up LDAP server..."
-#~ msgstr "LDAP sunucusu ayarlanıyor..."
-
-#~ msgid "Needed parameters are missing for LDAP config: server '%1'"
-#~ msgstr "LDAP yapılandırması için gerekli parametreler eksik: '%1'"
-
-#~ msgid "LDAP set up."
-#~ msgstr "LDAP ayarlandı."
-
-#~ msgid "LDAP not configuring."
-#~ msgstr "LDAP yapılandırılmıyor."
-
-#~ msgid "Removed LDAP entry."
-#~ msgstr "LDAP girdisi kaldırıldı."
-
-#~ msgid "No config found to edit"
-#~ msgstr "Düzenlenecek yapılandırma bulunamadı"
-
-#~ msgid "Removed resource instance for '%1'."
-#~ msgstr "'%1' için özkaynak örneği kaldırıldı."
-
-#~ msgid "Searching for autoconfiguration..."
-#~ msgstr "Kendiliğinden yapılandırma aranıyor..."
-
-#~ msgid "Autoconfiguration failed."
-#~ msgstr "Otomatik yapılandırma başarısız oldu."
+msgstr "%1:"
