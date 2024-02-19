@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-18 00:38+0000\n"
-"PO-Revision-Date: 2024-02-16 11:20+0100\n"
+"PO-Revision-Date: 2024-02-17 10:40+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -283,8 +283,7 @@ msgid "Security:"
 msgstr "Beveiliging:"
 
 #: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:223
-#, fuzzy, kde-format
-#| msgid "SSL/TLS (recommanded)"
+#, kde-format
 msgid "SSL/TLS (recommended)"
 msgstr "SSL/TLS (aanbevolen)"
 
@@ -480,9 +479,7 @@ msgid "Resource setup completed: %1"
 msgstr "Instellen van hulpbron voltooid: %1"
 
 #: resource.cpp:159
-#, fuzzy, kde-format
-#| msgctxt "log entry content"
-#| msgid "Resouce type:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
 msgstr "Type hulpbron:"

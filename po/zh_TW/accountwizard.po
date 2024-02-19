@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-18 00:38+0000\n"
-"PO-Revision-Date: 2024-01-02 19:54+0900\n"
+"PO-Revision-Date: 2024-02-19 08:00+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
@@ -41,46 +41,40 @@ msgstr "未命名"
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
-msgstr ""
+msgstr "建立電子郵件身份：%1"
 
 #: accountconfiguration.cpp:205
-#, fuzzy, kde-format
-#| msgid "Full name:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "全名："
 
 #: accountconfiguration.cpp:206
-#, fuzzy, kde-format
-#| msgid "E-mail address:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
-msgstr "電子郵件地址："
+msgstr "主要電子郵件地址："
 
 #: accountconfiguration.cpp:234
-#, fuzzy, kde-format
-#| msgid "Mail transport account deleted."
+#, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
-msgstr "郵件傳遞帳號已刪除。"
+msgstr "郵件傳遞設定已完成：%1"
 
 #: accountconfiguration.cpp:237
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Host:"
-msgstr "使用者名稱："
+msgstr "主機："
 
 #: accountconfiguration.cpp:238
-#, fuzzy, kde-format
-#| msgid "Port:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "連接埠："
 
 #: accountconfiguration.cpp:239
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "使用者名稱："
@@ -89,14 +83,13 @@ msgstr "使用者名稱："
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
-msgstr ""
+msgstr "加密："
 
 #: accountconfiguration.cpp:243
-#, fuzzy, kde-format
-#| msgid "Authentication Method:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
-msgstr "認證方法："
+msgstr "認證："
 
 #: ispdb/configurationmodel.cpp:45 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
@@ -208,22 +201,20 @@ msgid "Outgoing"
 msgstr "外傳"
 
 #: qml/ConfigurationSelectionPage.qml:16
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgctxt "@title:group"
 msgid "Configuration Selection"
-msgstr "找到自動設定檔"
+msgstr "組態設定選擇"
 
 #: qml/ConfigurationSelectionPage.qml:39
 #, kde-format
 msgid "Available configurations"
-msgstr "可用的組態"
+msgstr "可用的組態設定"
 
 #: qml/ConfigurationSelectionPage.qml:56
-#, fuzzy, kde-format
-#| msgid "No config found from ispdb server."
+#, kde-format
 msgid "No configuration found from the internet for this server."
-msgstr "找不到從 ispdb 伺服器來的設定。"
+msgstr "無法從網際網路找到這個伺服器用的組態設定。"
 
 #: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
 #, kde-format
@@ -231,8 +222,7 @@ msgid "Manual Configuration"
 msgstr "手動設定"
 
 #: qml/DetailsPage.qml:15
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@title:group"
 msgid "Details"
 msgstr "詳細資料"
@@ -241,7 +231,7 @@ msgstr "詳細資料"
 #, kde-format
 msgctxt "@action:button"
 msgid "Quit"
-msgstr ""
+msgstr "離開"
 
 #: qml/DetailsPage.qml:24
 #, kde-format
@@ -252,7 +242,7 @@ msgstr "詳細資料"
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
-msgstr ""
+msgstr "沒有可用的詳細資料。"
 
 #: qml/ManualConfigurationPage.qml:18
 #, kde-format
@@ -297,7 +287,7 @@ msgstr "安全性："
 #: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:223
 #, kde-format
 msgid "SSL/TLS (recommended)"
-msgstr ""
+msgstr "SSL/TLS（建議）"
 
 #: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:222
 #, kde-format
@@ -347,12 +337,12 @@ msgstr "GSSAPI"
 #: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:247
 #, kde-format
 msgid "XOAuth (Gmail)"
-msgstr ""
+msgstr "XOAuth (Gmail)"
 
 #: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:248
 #, kde-format
 msgid "APOP"
-msgstr ""
+msgstr "APOP"
 
 #: qml/ManualConfigurationPage.qml:162 qml/ManualConfigurationPage.qml:261
 #, kde-format
@@ -382,22 +372,19 @@ msgstr "個人資訊"
 #: qml/PersonalDataPage.qml:43
 #, kde-format
 msgid "Connect your Email Account"
-msgstr ""
+msgstr "連接您的電子郵件帳號"
 
 #: qml/PersonalDataPage.qml:51
-#, fuzzy, kde-format
-#| msgid ""
-#| "To use your current email address fill in your credentials.<br />This "
-#| "wizard will automatically search for a working and recommended server "
-#| "configuration."
+#, kde-format
 msgid ""
 "To use your current email address fill in your credentials. This wizard will "
 "automatically search for a working and recommended server configuration. "
 "Only the domain name part of the e-mail address will be sent over the "
 "Internet."
 msgstr ""
-"要使用您目前的電子郵件地址，請填入您的登入資訊。<br />這個精靈會自動依您填入"
-"的資訊搜尋可正常運作且推薦使用的伺服器設定。"
+"要使用您目前的電子郵件地址，請填入您的登入資訊。這個精靈會自動依您填入的資訊"
+"搜尋可正常運作且推薦使用的伺服器設定。只有電子郵件地址的網域部分會被傳送到網"
+"際網路上。"
 
 #: qml/PersonalDataPage.qml:57
 #, kde-format
@@ -422,27 +409,26 @@ msgid "boss@example.corp"
 msgstr "boss@example.corp"
 
 #: qml/PersonalDataPage.qml:78
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password (optional):"
-msgstr "密碼："
+msgstr "密碼（選擇性）："
 
 #: qml/WizardPage.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr ""
+msgstr "上一步"
 
 #: qml/WizardPage.qml:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "下一步"
 
 #: resource.cpp:72
 #, kde-format
 msgid "Resource type '%1' is not available."
-msgstr "無法取得資源型態 %1"
+msgstr "資源型態 %1 不可用。"
 
 #: resource.cpp:85
 #, kde-format
@@ -470,11 +456,10 @@ msgid "Unable to configure resource instance."
 msgstr "無法設定資源實體。"
 
 #: resource.cpp:131
-#, fuzzy, kde-format
-#| msgid "Could not convert value of setting '%1' to required type %2."
+#, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
-msgstr "無法轉換設定 %1 的值為需要的型態 %2。"
+msgstr "無法將設定 '%1' 的值（型態為 %2）轉換為需要的型態 %3。"
 
 #: resource.cpp:144
 #, kde-format
@@ -487,30 +472,28 @@ msgid "Could not save settings: %1"
 msgstr "無法儲存設定：%1"
 
 #: resource.cpp:156
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
-msgstr "資源設定完成。"
+msgstr "資源設定已完成：%1"
 
 #: resource.cpp:159
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
-msgstr "資源設定完成。"
+msgstr "資源型態："
 
 #: resource.cpp:169
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
-msgstr ""
+msgstr "空白"
 
 #: resource.cpp:174
 #, kde-format
 msgctxt "label"
 msgid "%1:"
-msgstr ""
+msgstr "%1："
 
 #~ msgid "STARTTLS"
 #~ msgstr "STARTTLS"

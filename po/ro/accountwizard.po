@@ -261,7 +261,8 @@ msgid "Recheck"
 msgstr ""
 
 #: qml/ManualConfigurationPage.qml:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Account"
 msgid "Create Account"
 msgstr "Creează un cont"
 

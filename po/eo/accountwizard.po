@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-18 00:38+0000\n"
-"PO-Revision-Date: 2024-02-16 21:15+0100\n"
+"PO-Revision-Date: 2024-02-18 08:21+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -270,7 +270,7 @@ msgstr "Protokolo:"
 #: qml/ManualConfigurationPage.qml:91
 #, kde-format
 msgid "Kolab"
-msgstr ""
+msgstr "Kolab"
 
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:204
 #, kde-format
@@ -285,7 +285,7 @@ msgstr "Sekureco:"
 #: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:223
 #, kde-format
 msgid "SSL/TLS (recommended)"
-msgstr ""
+msgstr "SSL/TLS (rekomendita)"
 
 #: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:222
 #, kde-format
@@ -477,12 +477,10 @@ msgid "Resource setup completed: %1"
 msgstr "Rimeda agordo finiĝis: %1"
 
 #: resource.cpp:159
-#, fuzzy, kde-format
-#| msgctxt "log entry content"
-#| msgid "Resource setup completed: %1"
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
-msgstr "Rimeda agordo finiĝis: %1"
+msgstr "Rimedotipo:"
 
 #: resource.cpp:169
 #, kde-format
