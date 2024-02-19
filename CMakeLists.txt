@@ -84,7 +84,7 @@ if (Qt6Keychain_VERSION VERSION_LESS 0.14.2)
 endif()
 
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
-ecm_set_disabled_deprecation_versions(QT 6.6.0 KF 6.0.0)
+ecm_set_disabled_deprecation_versions(QT 6.6.1 KF 6.0.0)
 
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
