@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-runtime-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-18 02:27+0000\n"
-"PO-Revision-Date: 2024-02-17 14:04+0300\n"
+"PO-Revision-Date: 2024-02-18 15:59+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -277,7 +277,7 @@ msgstr "Protokol:"
 #: qml/ManualConfigurationPage.qml:91
 #, kde-format
 msgid "Kolab"
-msgstr ""
+msgstr "Kolab"
 
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:204
 #, kde-format
@@ -290,8 +290,7 @@ msgid "Security:"
 msgstr "Güvenlik:"
 
 #: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:223
-#, fuzzy, kde-format
-#| msgid "SSL/TLS (recommended)"
+#, kde-format
 msgid "SSL/TLS (recommanded)"
 msgstr "SSL/TLS (önerilir)"
 
@@ -484,17 +483,13 @@ msgid "Resource setup completed: %1"
 msgstr "Özkaynak ayarları tamamlandı: %1"
 
 #: resource.cpp:159
-#, fuzzy, kde-format
-#| msgctxt "log entry content"
-#| msgid "Resource type:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Resouce type:"
 msgstr "Özkaynak türü:"
 
 #: resource.cpp:169
-#, fuzzy, kde-format
-#| msgctxt "Empty password"
-#| msgid "Empty"
+#, kde-format
 msgctxt "Indication that the password set for the resource is empty"
 msgid "Empty"
 msgstr "Boş"

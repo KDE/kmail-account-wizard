@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-18 02:27+0000\n"
-"PO-Revision-Date: 2024-02-17 11:36+0100\n"
+"PO-Revision-Date: 2024-02-18 10:34+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -274,7 +274,7 @@ msgstr "Protocol:"
 #: qml/ManualConfigurationPage.qml:91
 #, kde-format
 msgid "Kolab"
-msgstr ""
+msgstr "Kolab"
 
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:204
 #, kde-format

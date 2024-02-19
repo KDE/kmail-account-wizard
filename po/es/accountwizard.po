@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-18 02:27+0000\n"
-"PO-Revision-Date: 2024-02-17 01:24+0100\n"
+"PO-Revision-Date: 2024-02-17 11:50+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -487,12 +487,10 @@ msgid "Resouce type:"
 msgstr "Tipo de recurso:"
 
 #: resource.cpp:169
-#, fuzzy, kde-format
-#| msgctxt "Empty password"
-#| msgid "Empty"
+#, kde-format
 msgctxt "Indication that the password set for the resource is empty"
 msgid "Empty"
-msgstr "Vacío"
+msgstr "En blanco"
 
 #: resource.cpp:174
 #, kde-format
