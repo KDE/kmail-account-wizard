@@ -172,7 +172,7 @@ WizardPage {
         FormCard.FormCheckDelegate {
             id: disconnectedModeEnabled
             visible: manualConfiguration.hasDisconnectedMode
-            description: i18n("Download all messages for offline use")
+            text: i18n("Download all messages for offline use")
             onCheckedChanged: {
                 manualConfiguration.disconnectedModeEnabled = checked
             }
