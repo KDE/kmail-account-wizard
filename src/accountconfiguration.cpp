@@ -442,7 +442,7 @@ void AccountConfiguration::setIncomingProtocol(IncomingProtocol newIncomingProto
 {
     if (mIncomingProtocol != newIncomingProtocol) {
         mIncomingProtocol = newIncomingProtocol;
-        if (newIncomingProtocol == 0) { // Pop3
+        if (newIncomingProtocol == POP3) {
             setIncomingPort(995);
             mHasDisconnectedMode = false;
         } else {

@@ -153,9 +153,9 @@ private:
     bool mConfigurationIsValid = false;
 
     // Has DisconnectedMode
-    bool mHasDisconnectedMode = false;
+    bool mHasDisconnectedMode = true;
 
-    bool mDisconnectedModeEnabled = false;
+    bool mDisconnectedModeEnabled = true;
 
     bool mServerTestInProgress = false;
 
