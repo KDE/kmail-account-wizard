@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-18 02:27+0000\n"
-"PO-Revision-Date: 2024-02-17 14:41+0100\n"
+"PO-Revision-Date: 2024-02-19 21:31+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -483,7 +483,7 @@ msgstr "리소스 형식:"
 #, kde-format
 msgctxt "Indication that the password set for the resource is empty"
 msgid "Empty"
-msgstr ""
+msgstr "비어 있음"
 
 #: resource.cpp:174
 #, kde-format
