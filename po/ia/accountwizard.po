@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-18 00:38+0000\n"
-"PO-Revision-Date: 2024-02-16 11:03+0100\n"
+"PO-Revision-Date: 2024-02-19 10:02+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -282,8 +282,7 @@ msgid "Security:"
 msgstr "Securitate:"
 
 #: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:223
-#, fuzzy, kde-format
-#| msgid "SSL/TLS (recommanded)"
+#, kde-format
 msgid "SSL/TLS (recommended)"
 msgstr "SSL/TLS (recommendate)"
 
@@ -479,9 +478,7 @@ msgid "Resource setup completed: %1"
 msgstr "Configuration de ressource completate:%1"
 
 #: resource.cpp:159
-#, fuzzy, kde-format
-#| msgctxt "log entry content"
-#| msgid "Resouce type:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
 msgstr "Typo de ressource:"

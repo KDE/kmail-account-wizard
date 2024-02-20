@@ -43,25 +43,22 @@ msgid "Create email identity: %1"
 msgstr ""
 
 #: accountconfiguration.cpp:205
-#, fuzzy, kde-format
-#| msgid "Full name:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
-msgstr "Celé jméno:"
+msgstr ""
 
 #: accountconfiguration.cpp:206
-#, fuzzy, kde-format
-#| msgid "E-mail address:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
-msgstr "E-mailová adresa:"
+msgstr ""
 
 #: accountconfiguration.cpp:234
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
-msgstr "Nastavení zdroje bylo dokončeno."
+msgstr ""
 
 #: accountconfiguration.cpp:237
 #, kde-format
@@ -70,18 +67,16 @@ msgid "Host:"
 msgstr ""
 
 #: accountconfiguration.cpp:238
-#, fuzzy, kde-format
-#| msgid "Port:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Port:"
-msgstr "Port:"
+msgstr ""
 
 #: accountconfiguration.cpp:239
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Username:"
-msgstr "Uživatelské jméno:"
+msgstr ""
 
 #: accountconfiguration.cpp:241
 #, kde-format
@@ -90,11 +85,10 @@ msgid "Encryption:"
 msgstr ""
 
 #: accountconfiguration.cpp:243
-#, fuzzy, kde-format
-#| msgid "Authentication Method:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
-msgstr "Metoda ověření:"
+msgstr ""
 
 #: ispdb/configurationmodel.cpp:45 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
@@ -207,11 +201,10 @@ msgid "Outgoing"
 msgstr "Odchozí"
 
 #: qml/ConfigurationSelectionPage.qml:16
-#, fuzzy, kde-format
-#| msgid "Manual Configuration"
+#, kde-format
 msgctxt "@title:group"
 msgid "Configuration Selection"
-msgstr "Manuální nastavení"
+msgstr ""
 
 #: qml/ConfigurationSelectionPage.qml:39
 #, kde-format
@@ -229,8 +222,7 @@ msgid "Manual Configuration"
 msgstr "Manuální nastavení"
 
 #: qml/DetailsPage.qml:15
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@title:group"
 msgid "Details"
 msgstr "Podrobnosti"
@@ -239,7 +231,7 @@ msgstr "Podrobnosti"
 #, kde-format
 msgctxt "@action:button"
 msgid "Quit"
-msgstr ""
+msgstr "Ukončit"
 
 #: qml/DetailsPage.qml:24
 #, kde-format
@@ -384,18 +376,13 @@ msgid "Connect your Email Account"
 msgstr ""
 
 #: qml/PersonalDataPage.qml:51
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check online for the settings needed for this email provider. Only the "
-#| "domain name part of the e-mail address will be sent over the Internet."
+#, kde-format
 msgid ""
 "To use your current email address fill in your credentials. This wizard will "
 "automatically search for a working and recommended server configuration. "
 "Only the domain name part of the e-mail address will be sent over the "
 "Internet."
 msgstr ""
-"Zjistí online nastavení potřebná pro tohoto poskytovatele e-mailu. Přes "
-"internet odesláno pouze název domény e-mailové adresy."
 
 #: qml/PersonalDataPage.qml:57
 #, kde-format
@@ -420,22 +407,21 @@ msgid "boss@example.corp"
 msgstr "franta@priklad.cz"
 
 #: qml/PersonalDataPage.qml:78
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password (optional):"
-msgstr "Heslo:"
+msgstr "Heslo (volitelné):"
 
 #: qml/WizardPage.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr ""
+msgstr "Předchozí"
 
 #: qml/WizardPage.qml:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "Další"
 
 #: resource.cpp:72
 #, kde-format
@@ -468,11 +454,10 @@ msgid "Unable to configure resource instance."
 msgstr "Nelze nastavit instanci zdroje."
 
 #: resource.cpp:131
-#, fuzzy, kde-format
-#| msgid "Could not convert value of setting '%1' to required type %2."
+#, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
-msgstr "Nelze převést hodnotu nastavení '%1' na požadovaný typ %2."
+msgstr ""
 
 #: resource.cpp:144
 #, kde-format
@@ -485,18 +470,16 @@ msgid "Could not save settings: %1"
 msgstr "Nastavení nelze uložit: %1"
 
 #: resource.cpp:156
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
-msgstr "Nastavení zdroje bylo dokončeno."
+msgstr ""
 
 #: resource.cpp:159
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
-msgstr "Nastavení zdroje bylo dokončeno."
+msgstr ""
 
 #: resource.cpp:169
 #, kde-format
@@ -509,24 +492,3 @@ msgstr ""
 msgctxt "label"
 msgid "%1:"
 msgstr ""
-
-#~ msgid "STARTTLS"
-#~ msgstr "STARTTLS"
-
-#~ msgid "Setting up identity..."
-#~ msgstr "Nastavuji identitu..."
-
-#~ msgid "Identity set up."
-#~ msgstr "Nastavení identity."
-
-#~ msgid "Identity removed."
-#~ msgstr "Identita odstraněna."
-
-#~ msgid "Setting up mail transport account..."
-#~ msgstr "Nastavuje se účet pro přenos pošty..."
-
-#~ msgid "Mail transport account set up."
-#~ msgstr "Účet pro přenos pošty nastaven."
-
-#~ msgid "Continue"
-#~ msgstr "Pokračovat"

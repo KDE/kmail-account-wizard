@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-18 00:38+0000\n"
-"PO-Revision-Date: 2024-02-17 18:58+0100\n"
+"PO-Revision-Date: 2024-02-18 12:48+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -277,8 +277,7 @@ msgid "Protocol:"
 msgstr "Protocole :"
 
 #: qml/ManualConfigurationPage.qml:91
-#, fuzzy, kde-format
-#| msgid "Kolab"
+#, kde-format
 msgid "Kolab"
 msgstr "Kolab"
 
@@ -295,7 +294,7 @@ msgstr "Sécurité :"
 #: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:223
 #, kde-format
 msgid "SSL/TLS (recommended)"
-msgstr ""
+msgstr "SSL / TLS (Recommandé)"
 
 #: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:222
 #, kde-format
@@ -489,11 +488,10 @@ msgid "Resource setup completed: %1"
 msgstr "Configuration de la ressource terminée : %1"
 
 #: resource.cpp:159
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
-msgstr "Configuration de la ressource terminée."
+msgstr "Type de ressource :"
 
 #: resource.cpp:169
 #, kde-format
