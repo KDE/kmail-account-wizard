@@ -167,7 +167,9 @@ WizardPage {
             }
         }
 
-        FormCard.FormDelegateSeparator {}
+        FormCard.FormDelegateSeparator {
+            visible: manualConfiguration.hasDisconnectedMode
+        }
 
         FormCard.FormCheckDelegate {
             id: disconnectedModeEnabled
