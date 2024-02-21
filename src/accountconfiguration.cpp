@@ -104,14 +104,13 @@ Resource::ResourceInfo AccountConfiguration::createPop3Resource() const
     Resource::ResourceInfo info;
     info.typeIdentifier = u"akonadi_pop3_resource"_s;
     info.name = generateUniqueAccountName();
-    QMap<QString, QVariant> settings;
-    settings.insert(u"Port"_s, mIncomingPort);
-    settings.insert(u"Host"_s, mIncomingHostName);
-    settings.insert(u"Login"_s, mIncomingUserName);
-    settings.insert(u"Password"_s, mPassword);
-    settings.insert(u"UseTLS"_s, true);
-
-    info.settings = settings;
+    info.settings = {
+        {u"Port"_s, mIncomingPort},
+        {u"Host"_s, mIncomingHostName},
+        {u"Login"_s, mIncomingUserName},
+        {u"Password"_s, mPassword},
+        {u"UseTLS"_s, true},
+    };
     return info;
 }
 
@@ -120,19 +119,19 @@ Resource::ResourceInfo AccountConfiguration::createImapResource() const
     Resource::ResourceInfo info;
     info.typeIdentifier = u"akonadi_imap_resource"_s;
     info.name = generateUniqueAccountName();
-    QMap<QString, QVariant> settings;
-    settings.insert(u"ImapServer"_s, mIncomingHostName);
-    settings.insert(u"UserName"_s, mIncomingUserName);
-    settings.insert(u"DisconnectedModeEnabled"_s, mDisconnectedModeEnabled);
-    settings.insert(u"Password"_s, mPassword);
-    settings.insert(u"ImapPort"_s, mIncomingPort);
-    settings.insert(u"IntervalCheckTime"_s, 60);
-    settings.insert(u"SubscriptionEnabled"_s, true);
-    settings.insert(u"UseDefaultIdentity"_s, false);
-    settings.insert(u"AccountIdentity"_s, mIdentity.uoid());
-    settings.insert(u"Authentication"_s, mIncomingAuthenticationProtocol);
-    settings.insert(u"Safety"_s, mIncomingSecurityProtocol);
-    info.settings = settings;
+    info.settings = {
+        {u"ImapServer"_s, mIncomingHostName},
+        {u"UserName"_s, mIncomingUserName},
+        {u"DisconnectedModeEnabled"_s, mDisconnectedModeEnabled},
+        {u"Password"_s, mPassword},
+        {u"ImapPort"_s, mIncomingPort},
+        {u"IntervalCheckTime"_s, 60},
+        {u"SubscriptionEnabled"_s, true},
+        {u"UseDefaultIdentity"_s, false},
+        {u"AccountIdentity"_s, mIdentity.uoid()},
+        {u"Authentication"_s, mIncomingAuthenticationProtocol},
+        {u"Safety"_s, mIncomingSecurityProtocol},
+    };
     return info;
 }
 
@@ -140,19 +139,20 @@ Resource::ResourceInfo AccountConfiguration::createKolabResource() const
 {
     Resource::ResourceInfo info;
     info.name = generateUniqueAccountName();
-    QMap<QString, QVariant> settings;
-    settings.insert(u"ImapServer"_s, mIncomingHostName);
-    settings.insert(u"UserName"_s, mIncomingUserName);
-    settings.insert(u"DisconnectedModeEnabled"_s, true);
-    settings.insert(u"AccountIdentity"_s, mIdentity.uoid());
-    settings.insert(u"UseDefaultIdentity"_s, false);
-    settings.insert(u"SieveSupport"_s, true);
-    settings.insert(u"IntervalCheckTime"_s, 60);
-    settings.insert(u"SubscriptionEnabled"_s, true);
-    settings.insert(u"Password"_s, mPassword);
-    settings.insert(u"ImapPort"_s, mIncomingPort);
-    info.settings = settings;
     info.typeIdentifier = u"akonadi_kolab_resource"_s;
+    info.settings = {
+        {u"ImapServer"_s, mIncomingHostName},
+        {u"UserName"_s, mIncomingUserName},
+        {u"DisconnectedModeEnabled"_s, mDisconnectedModeEnabled},
+        {u"Password"_s, mPassword},
+        {u"ImapPort"_s, mIncomingPort},
+        {u"IntervalCheckTime"_s, 60},
+        {u"SubscriptionEnabled"_s, true},
+        {u"UseDefaultIdentity"_s, false},
+        {u"AccountIdentity"_s, mIdentity.uoid()},
+        {u"Authentication"_s, mIncomingAuthenticationProtocol},
+        {u"Safety"_s, mIncomingSecurityProtocol},
+    };
     return info;
 }
 
