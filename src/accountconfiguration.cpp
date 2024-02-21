@@ -139,7 +139,7 @@ Resource::ResourceInfo AccountConfiguration::createImapResource() const
 
 Resource::ResourceInfo AccountConfiguration::createKolabResource() const
 {
-    Resource::ResourceInfo info;
+    auto info = createImapResource();
     info.name = generateUniqueAccountName();
     QMap<QString, QVariant> settings;
     settings.insert(u"ImapServer"_s, mIncomingHostName);
