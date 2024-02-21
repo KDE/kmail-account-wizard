@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-18 00:38+0000\n"
+"POT-Creation-Date: 2024-02-21 00:38+0000\n"
 "PO-Revision-Date: 2023-11-14 13:56-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -29,67 +29,67 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "alvarenga@kde.org"
 
-#: accountconfiguration.cpp:191 ispdb/configurationmodel.cpp:135
+#: accountconfiguration.cpp:178 ispdb/configurationmodel.cpp:135
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Sem nome"
 
-#: accountconfiguration.cpp:202
+#: accountconfiguration.cpp:189
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr ""
 
-#: accountconfiguration.cpp:205
+#: accountconfiguration.cpp:192
 #, fuzzy, kde-format
 #| msgid "Full name:"
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Nome completo:"
 
-#: accountconfiguration.cpp:206
+#: accountconfiguration.cpp:193
 #, fuzzy, kde-format
 #| msgid "E-mail address:"
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Endereço de e-mail:"
 
-#: accountconfiguration.cpp:234
+#: accountconfiguration.cpp:221
 #, fuzzy, kde-format
 #| msgid "Mail transport account deleted."
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "A conta de transporte de e-mail foi excluída."
 
-#: accountconfiguration.cpp:237
+#: accountconfiguration.cpp:224
 #, fuzzy, kde-format
 #| msgid "Username:"
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Nome de usuário:"
 
-#: accountconfiguration.cpp:238
+#: accountconfiguration.cpp:225
 #, fuzzy, kde-format
 #| msgid "Port:"
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Porta:"
 
-#: accountconfiguration.cpp:239
+#: accountconfiguration.cpp:226
 #, fuzzy, kde-format
 #| msgid "Username:"
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Nome de usuário:"
 
-#: accountconfiguration.cpp:241
+#: accountconfiguration.cpp:228
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr ""
 
-#: accountconfiguration.cpp:243
+#: accountconfiguration.cpp:230
 #, fuzzy, kde-format
 #| msgid "Authentication Method:"
 msgctxt "log entry content"
@@ -129,7 +129,7 @@ msgid "SSL/TLS"
 msgstr "SSL/TLS"
 
 #: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:121
-#: qml/ManualConfigurationPage.qml:224
+#: qml/ManualConfigurationPage.qml:226
 #, kde-format
 msgid "StartTLS"
 msgstr "StartTLS"
@@ -291,93 +291,93 @@ msgstr "Protocolo:"
 msgid "Kolab"
 msgstr "Kolab"
 
-#: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:204
+#: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:206
 #, kde-format
 msgid "Port:"
 msgstr "Porta:"
 
-#: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:218
+#: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:220
 #, kde-format
 msgid "Security:"
 msgstr "Segurança:"
 
-#: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:223
+#: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:225
 #, kde-format
 msgid "SSL/TLS (recommended)"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:222
+#: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:224
 #, kde-format
 msgid "None"
 msgstr "Nenhum"
 
-#: qml/ManualConfigurationPage.qml:136 qml/ManualConfigurationPage.qml:236
+#: qml/ManualConfigurationPage.qml:136 qml/ManualConfigurationPage.qml:238
 #, kde-format
 msgid "Authentication Method:"
 msgstr "Método de autenticação:"
 
-#: qml/ManualConfigurationPage.qml:140 qml/ManualConfigurationPage.qml:240
+#: qml/ManualConfigurationPage.qml:140 qml/ManualConfigurationPage.qml:242
 #, kde-format
 msgid "Clear text"
 msgstr "Texto simples"
 
-#: qml/ManualConfigurationPage.qml:141 qml/ManualConfigurationPage.qml:241
+#: qml/ManualConfigurationPage.qml:141 qml/ManualConfigurationPage.qml:243
 #, kde-format
 msgid "PLAIN"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:142 qml/ManualConfigurationPage.qml:242
+#: qml/ManualConfigurationPage.qml:142 qml/ManualConfigurationPage.qml:244
 #, kde-format
 msgid "LOGIN"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:243
+#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:245
 #, kde-format
 msgid "CRAM-MD5"
 msgstr "CRAM-MD5"
 
-#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:244
+#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:246
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr "DIGEST-MD5"
 
-#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:245
+#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:247
 #, kde-format
 msgid "NTLM"
 msgstr "NTLM"
 
-#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:246
+#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:248
 #, kde-format
 msgid "GSSAPI"
 msgstr "GSSAPI"
 
-#: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:247
+#: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:249
 #, kde-format
 msgid "XOAuth (Gmail)"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:248
+#: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:250
 #, kde-format
 msgid "APOP"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:162 qml/ManualConfigurationPage.qml:261
+#: qml/ManualConfigurationPage.qml:162 qml/ManualConfigurationPage.qml:263
 #, kde-format
 msgid "Username:"
 msgstr "Nome de usuário:"
 
-#: qml/ManualConfigurationPage.qml:175
+#: qml/ManualConfigurationPage.qml:177
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:184
+#: qml/ManualConfigurationPage.qml:186
 #, fuzzy, kde-format
 #| msgid "Server Parameters"
 msgid "Outgoing Server Parameters"
 msgstr "Parâmetros do servidor"
 
-#: qml/ManualConfigurationPage.qml:191
+#: qml/ManualConfigurationPage.qml:193
 #, fuzzy, kde-format
 #| msgid "Outgoing:"
 msgid "Outgoing server:"
@@ -430,7 +430,7 @@ msgctxt "Generic email address"
 msgid "boss@example.corp"
 msgstr ""
 
-#: qml/PersonalDataPage.qml:78
+#: qml/PersonalDataPage.qml:86
 #, fuzzy, kde-format
 #| msgid "Password:"
 msgid "Password (optional):"
