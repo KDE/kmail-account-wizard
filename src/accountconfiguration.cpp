@@ -137,22 +137,9 @@ Resource::ResourceInfo AccountConfiguration::createImapResource() const
 
 Resource::ResourceInfo AccountConfiguration::createKolabResource() const
 {
-    Resource::ResourceInfo info;
+    auto info = createImapResource();
     info.name = generateUniqueAccountName();
     info.typeIdentifier = u"akonadi_kolab_resource"_s;
-    info.settings = {
-        {u"ImapServer"_s, mIncomingHostName},
-        {u"UserName"_s, mIncomingUserName},
-        {u"DisconnectedModeEnabled"_s, mDisconnectedModeEnabled},
-        {u"Password"_s, mPassword},
-        {u"ImapPort"_s, mIncomingPort},
-        {u"IntervalCheckTime"_s, 60},
-        {u"SubscriptionEnabled"_s, true},
-        {u"UseDefaultIdentity"_s, false},
-        {u"AccountIdentity"_s, mIdentity.uoid()},
-        {u"Authentication"_s, mIncomingAuthenticationProtocol},
-        {u"Safety"_s, mIncomingSecurityProtocol},
-    };
     return info;
 }
 
