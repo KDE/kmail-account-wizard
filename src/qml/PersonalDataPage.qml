@@ -67,7 +67,15 @@ WizardPage {
             label: i18n("E-mail address:")
             placeholderText: i18nc("Generic email address", "boss@example.corp")
             text: SetupManager.email
-            onTextEdited: SetupManager.email = text
+            onTextChanged: {
+                SetupManager.email = text;
+                if (SetupManager.email.endsWith('@gmail.com')) {
+                    passwordField.enabled = false;
+                    passwordField.text = '';
+                } else {
+                    passwordField.enabled = true;
+                }
+            }
             onAccepted: nextAction.triggered()
         }
 
@@ -76,7 +84,7 @@ WizardPage {
         FormCard.FormPasswordFieldDelegate {
             id: passwordField
             label: i18n("Password (optional):")
-            onTextEdited: SetupManager.password = text
+            onTextChanged: SetupManager.password = text
             onAccepted: nextAction.triggered()
         }
     }
