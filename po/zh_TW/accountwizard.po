@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-18 02:27+0000\n"
+"POT-Creation-Date: 2024-02-21 02:24+0000\n"
 "PO-Revision-Date: 2024-02-19 08:00+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -124,7 +124,7 @@ msgid "SSL/TLS"
 msgstr "SSL/TLS"
 
 #: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:121
-#: qml/ManualConfigurationPage.qml:224
+#: qml/ManualConfigurationPage.qml:226
 #, kde-format
 msgid "StartTLS"
 msgstr "StartTLS"
@@ -274,92 +274,92 @@ msgstr "協定："
 msgid "Kolab"
 msgstr "Kolab"
 
-#: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:204
+#: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:206
 #, kde-format
 msgid "Port:"
 msgstr "連接埠："
 
-#: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:218
+#: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:220
 #, kde-format
 msgid "Security:"
 msgstr "安全性："
 
-#: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:223
+#: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:225
 #, kde-format
 msgid "SSL/TLS (recommanded)"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:222
+#: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:224
 #, kde-format
 msgid "None"
 msgstr "無"
 
-#: qml/ManualConfigurationPage.qml:136 qml/ManualConfigurationPage.qml:236
+#: qml/ManualConfigurationPage.qml:136 qml/ManualConfigurationPage.qml:238
 #, kde-format
 msgid "Authentication Method:"
 msgstr "認證方法："
 
-#: qml/ManualConfigurationPage.qml:140 qml/ManualConfigurationPage.qml:240
+#: qml/ManualConfigurationPage.qml:140 qml/ManualConfigurationPage.qml:242
 #, kde-format
 msgid "Clear text"
 msgstr "明碼"
 
-#: qml/ManualConfigurationPage.qml:141 qml/ManualConfigurationPage.qml:241
+#: qml/ManualConfigurationPage.qml:141 qml/ManualConfigurationPage.qml:243
 #, kde-format
 msgid "PLAIN"
 msgstr "PLAIN"
 
-#: qml/ManualConfigurationPage.qml:142 qml/ManualConfigurationPage.qml:242
+#: qml/ManualConfigurationPage.qml:142 qml/ManualConfigurationPage.qml:244
 #, kde-format
 msgid "LOGIN"
 msgstr "LOGIN"
 
-#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:243
+#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:245
 #, kde-format
 msgid "CRAM-MD5"
 msgstr "CRAM-MD5"
 
-#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:244
+#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:246
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr "DIGEST-MD5"
 
-#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:245
+#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:247
 #, kde-format
 msgid "NTLM"
 msgstr "NTLM"
 
-#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:246
+#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:248
 #, kde-format
 msgid "GSSAPI"
 msgstr "GSSAPI"
 
-#: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:247
+#: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:249
 #, kde-format
 msgid "XOAuth (Gmail)"
 msgstr "XOAuth (Gmail)"
 
-#: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:248
+#: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:250
 #, kde-format
 msgid "APOP"
 msgstr "APOP"
 
-#: qml/ManualConfigurationPage.qml:162 qml/ManualConfigurationPage.qml:261
+#: qml/ManualConfigurationPage.qml:162 qml/ManualConfigurationPage.qml:263
 #, kde-format
 msgid "Username:"
 msgstr "使用者名稱："
 
-#: qml/ManualConfigurationPage.qml:175
+#: qml/ManualConfigurationPage.qml:177
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr "下載所有信件以便離線檢視"
 
-#: qml/ManualConfigurationPage.qml:184
+#: qml/ManualConfigurationPage.qml:186
 #, kde-format
 msgid "Outgoing Server Parameters"
 msgstr "外傳伺服器參數"
 
-#: qml/ManualConfigurationPage.qml:191
+#: qml/ManualConfigurationPage.qml:193
 #, kde-format
 msgid "Outgoing server:"
 msgstr "外寄信件伺服器："
