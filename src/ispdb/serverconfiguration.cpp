@@ -73,7 +73,7 @@ std::optional<Server> Server::fromDomElement(const QDomElement &element, const K
             }
         } else if (tagName == QLatin1StringView("username")) {
             server.username = replacePlaceholders(f.text(), addrSpec);
-        } else if (tagName == QLatin1StringView("authentication") && server.authType == 0) {
+        } else if (tagName == QLatin1StringView("authentication") && server.authType == MailTransport::Transport::PLAIN) {
             const QString type(f.text());
             if (type == QLatin1StringView("password-cleartext") || type == QLatin1StringView("plain")) {
                 server.authType = MailTransport::TransportBase::PLAIN;

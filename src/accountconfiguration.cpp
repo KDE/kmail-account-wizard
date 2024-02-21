@@ -84,13 +84,13 @@ QString AccountConfiguration::generateUniqueAccountName() const
     QString name;
     switch (mIncomingProtocol) {
     case POP3:
-        name = u"Pop3 (%1)"_s.arg(mIncomingHostName);
+        name = u"POP3 (%1)"_s.arg(mIdentity.primaryEmailAddress());
         break;
     case IMAP:
-        name = u"Imap (%1)"_s.arg(mIncomingHostName);
+        name = u"IMAP (%1)"_s.arg(mIdentity.primaryEmailAddress());
         break;
     case KOLAB:
-        name = u"Kolab (%1)"_s.arg(mIncomingHostName);
+        name = u"Kolab (%1)"_s.arg(mIdentity.primaryEmailAddress());
         break;
     default:
         qCWarning(ACCOUNTWIZARD_LOG) << " invalid protocol: " << mIncomingProtocol;
