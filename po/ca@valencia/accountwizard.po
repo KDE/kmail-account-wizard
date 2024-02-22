@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-21 00:38+0000\n"
-"PO-Revision-Date: 2024-01-02 08:18+0200\n"
+"PO-Revision-Date: 2024-02-17 11:40+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -42,45 +42,40 @@ msgstr "Sense nom"
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
-msgstr ""
+msgstr "Crea una identitat de correu: %1"
 
 #: accountconfiguration.cpp:192
-#, fuzzy, kde-format
-#| msgid "Full name:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Nom complet:"
 
 #: accountconfiguration.cpp:193
-#, fuzzy, kde-format
-#| msgid "E-mail address:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
-msgstr "Adreça de correu:"
+msgstr "Adreça primària de correu:"
 
 #: accountconfiguration.cpp:221
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
-msgstr "S'ha completat la configuració del recurs."
+msgstr "S'ha completat la configuració del transport de correu: %1"
 
 #: accountconfiguration.cpp:224
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
-msgstr ""
+msgstr "Servidor:"
 
 #: accountconfiguration.cpp:225
-#, fuzzy, kde-format
-#| msgid "Port:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Port:"
 
 #: accountconfiguration.cpp:226
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Nom d'usuari:"
@@ -89,14 +84,13 @@ msgstr "Nom d'usuari:"
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
-msgstr ""
+msgstr "Encriptació:"
 
 #: accountconfiguration.cpp:230
-#, fuzzy, kde-format
-#| msgid "Authentication Method:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
-msgstr "Mètode d'autenticació:"
+msgstr "Autenticació:"
 
 #: ispdb/configurationmodel.cpp:45 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
@@ -209,11 +203,10 @@ msgid "Outgoing"
 msgstr "Eixint"
 
 #: qml/ConfigurationSelectionPage.qml:16
-#, fuzzy, kde-format
-#| msgid "Manual Configuration"
+#, kde-format
 msgctxt "@title:group"
 msgid "Configuration Selection"
-msgstr "Configuració manual"
+msgstr "Seleccioneu la configuració"
 
 #: qml/ConfigurationSelectionPage.qml:39
 #, kde-format
@@ -221,10 +214,9 @@ msgid "Available configurations"
 msgstr "Configuracions disponibles"
 
 #: qml/ConfigurationSelectionPage.qml:56
-#, fuzzy, kde-format
-#| msgid "No config found from ispdb server."
+#, kde-format
 msgid "No configuration found from the internet for this server."
-msgstr "No s'ha trobat la configuració des del servidor «ispdb»."
+msgstr "No s'ha trobat cap configuració per a este servidor des d'Internet."
 
 #: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
 #, kde-format
@@ -232,8 +224,7 @@ msgid "Manual Configuration"
 msgstr "Configuració manual"
 
 #: qml/DetailsPage.qml:15
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@title:group"
 msgid "Details"
 msgstr "Detalls"
@@ -242,7 +233,7 @@ msgstr "Detalls"
 #, kde-format
 msgctxt "@action:button"
 msgid "Quit"
-msgstr ""
+msgstr "Ix"
 
 #: qml/DetailsPage.qml:24
 #, kde-format
@@ -253,7 +244,7 @@ msgstr "Detalls"
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
-msgstr ""
+msgstr "No hi ha detalls disponibles."
 
 #: qml/ManualConfigurationPage.qml:18
 #, kde-format
@@ -298,7 +289,7 @@ msgstr "Seguretat:"
 #: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:225
 #, kde-format
 msgid "SSL/TLS (recommended)"
-msgstr ""
+msgstr "SSL/TLS (recomanat)"
 
 #: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:224
 #, kde-format
@@ -348,12 +339,12 @@ msgstr "GSSAPI"
 #: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:249
 #, kde-format
 msgid "XOAuth (Gmail)"
-msgstr ""
+msgstr "XOAuth (Gmail)"
 
 #: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:250
 #, kde-format
 msgid "APOP"
-msgstr ""
+msgstr "APOP"
 
 #: qml/ManualConfigurationPage.qml:162 qml/ManualConfigurationPage.qml:263
 #, kde-format
@@ -383,14 +374,10 @@ msgstr "Informació personal"
 #: qml/PersonalDataPage.qml:43
 #, kde-format
 msgid "Connect your Email Account"
-msgstr ""
+msgstr "Connecta amb el vostre compte de correu"
 
 #: qml/PersonalDataPage.qml:51
-#, fuzzy, kde-format
-#| msgid ""
-#| "To use your current email address fill in your credentials.<br />This "
-#| "wizard will automatically search for a working and recommended server "
-#| "configuration."
+#, kde-format
 msgid ""
 "To use your current email address fill in your credentials. This wizard will "
 "automatically search for a working and recommended server configuration. "
@@ -398,8 +385,9 @@ msgid ""
 "Internet."
 msgstr ""
 "Empleneu els credencials per a utilitzar la vostra adreça de correu "
-"electrònic actual.<br />Este assistent buscarà automàticament una "
-"configuració de servidor que funcione i que es recomane."
+"electrònic actual. Este assistent buscarà automàticament una configuració de "
+"servidor que funcione i que es recomane. Només s'enviarà per Internet la "
+"part del nom de domini de l'adreça de correu electrònic."
 
 #: qml/PersonalDataPage.qml:57
 #, kde-format
@@ -424,22 +412,21 @@ msgid "boss@example.corp"
 msgstr "director@exemple.corp"
 
 #: qml/PersonalDataPage.qml:86
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password (optional):"
-msgstr "Contrasenya:"
+msgstr "Contrasenya (opcional):"
 
 #: qml/WizardPage.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr ""
+msgstr "Anterior"
 
 #: qml/WizardPage.qml:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "Següent"
 
 #: resource.cpp:72
 #, kde-format
@@ -472,11 +459,12 @@ msgid "Unable to configure resource instance."
 msgstr "No s'ha pogut configurar la instància del recurs."
 
 #: resource.cpp:131
-#, fuzzy, kde-format
-#| msgid "Could not convert value of setting '%1' to required type %2."
+#, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
-msgstr "No s'ha pogut convertir el valor de l'opció «%1» al tipus requerit %2."
+msgstr ""
+"No s'ha pogut convertir el valor de l'opció «%1» amb el tipus %2 al tipus "
+"requerit %3."
 
 #: resource.cpp:144
 #, kde-format
@@ -489,63 +477,25 @@ msgid "Could not save settings: %1"
 msgstr "No s'ha pogut guardar la configuració: %1"
 
 #: resource.cpp:156
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
-msgstr "S'ha completat la configuració del recurs."
+msgstr "S'ha completat la configuració del recurs: %1"
 
 #: resource.cpp:159
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
-msgstr "S'ha completat la configuració del recurs."
+msgstr "Tipus de recurs:"
 
 #: resource.cpp:169
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
-msgstr ""
+msgstr "Buit"
 
 #: resource.cpp:174
 #, kde-format
 msgctxt "label"
 msgid "%1:"
-msgstr ""
-
-#~ msgid "STARTTLS"
-#~ msgstr "STARTTLS"
-
-#~ msgid "Setting up identity..."
-#~ msgstr "S'està configurant la identitat..."
-
-#~ msgid "Identity set up."
-#~ msgstr "S'ha configurat la identitat."
-
-#~ msgid "Identity removed."
-#~ msgstr "S'ha eliminat la identitat."
-
-#~ msgid "Setting up mail transport account..."
-#~ msgstr "S'està configurant el transport de correu del compte..."
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr ""
-#~ "El transport de correu utilitza l'encriptació «%1» i l'autenticació «%2»."
-
-#~ msgid "Mail transport account set up."
-#~ msgstr "S'ha configurat el transport de correu del compte."
-
-#~ msgid "Set Up Your Existing Email Address"
-#~ msgstr "Configureu la vostra adreça de correu existent"
-
-#~ msgid "Continue"
-#~ msgstr "Continua"
-
-#~ msgid ""
-#~ "Check online for the settings needed for this email provider. Only the "
-#~ "domain name part of the e-mail address will be sent over the Internet."
-#~ msgstr ""
-#~ "Comprova en línia la configuració necessària per a este proveïdor de "
-#~ "correu. Només s'enviarà a Internet la part del nom del domini de l'adreça "
-#~ "de correu."
+msgstr "%1:"
