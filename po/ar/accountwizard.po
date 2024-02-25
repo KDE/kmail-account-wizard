@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2015, 2018.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-21 02:24+0000\n"
-"PO-Revision-Date: 2022-01-19 22:39+0400\n"
+"PO-Revision-Date: 2024-02-24 12:50+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -39,45 +39,40 @@ msgstr "غير مسمًّى"
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
-msgstr ""
+msgstr "أنشئ هوية البريد الإلكتروني: %1"
 
 #: accountconfiguration.cpp:206
-#, fuzzy, kde-format
-#| msgid "Full name:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "الاسم كاملًا:"
 
 #: accountconfiguration.cpp:207
-#, fuzzy, kde-format
-#| msgid "E-mail address:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
-msgstr "عنوان البريد الإلكترونيّ:"
+msgstr "عنوان البريد الإلكترونيّ الأساسي:"
 
 #: accountconfiguration.cpp:235
-#, fuzzy, kde-format
-#| msgid "Mail transport account deleted."
+#, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
-msgstr "حُذف حساب نقل البريد."
+msgstr "اكتمل إعداد نقل البريد: %1"
 
 #: accountconfiguration.cpp:238
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Host:"
-msgstr "اسم المستخدم:"
+msgstr "المضيف:"
 
 #: accountconfiguration.cpp:239
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
-msgstr ""
+msgstr "المنفذ:"
 
 #: accountconfiguration.cpp:240
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "اسم المستخدم:"
@@ -86,78 +81,76 @@ msgstr "اسم المستخدم:"
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
-msgstr ""
+msgstr "التّعمية:"
 
 #: accountconfiguration.cpp:244
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
-msgstr ""
+msgstr "الاستيثاق:"
 
 #: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
-#, fuzzy, kde-format
-#| msgid "IMAP, %1"
+#, kde-format
 msgid "IMAP"
-msgstr "‏IMAP، ‏%1"
+msgstr "IMAP"
 
 #: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:26
 #: qml/ManualConfigurationPage.qml:90
-#, fuzzy, kde-format
-#| msgid "POP3, %1"
+#, kde-format
 msgid "POP3"
-msgstr "‏POP3، ‏%1"
+msgstr "POP3"
 
 #: ispdb/configurationmodel.cpp:49
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
 msgstr ""
+"حافظ على مزامنة المجلدات ورسائل البريد الإلكتروني الخاصة بك على الخادم الخاص "
+"بك"
 
 #: ispdb/configurationmodel.cpp:50
 #, kde-format
 msgid "Keep your folders and emails on your computer"
 msgstr ""
+"احتفظ بالمجلدات ورسائل البريد الإلكتروني الخاصة بك على جهاز الكمبيوتر الخاص "
+"بك"
 
 #: ispdb/serverconfiguration.cpp:29
-#, fuzzy, kde-format
-#| msgid "SMTP, %1"
+#, kde-format
 msgid "SMTP"
-msgstr "‏SMTP، ‏%1"
+msgstr "SMTP"
 
 #: ispdb/serverconfiguration.cpp:35
 #, kde-format
 msgid "SSL/TLS"
-msgstr ""
+msgstr "SSL/TLS"
 
 #: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:121
 #: qml/ManualConfigurationPage.qml:226
 #, kde-format
 msgid "StartTLS"
-msgstr ""
+msgstr "StartTLS"
 
 #: ispdb/serverconfiguration.cpp:41
 #, kde-format
 msgctxt "No security mechanism"
 msgid "None"
-msgstr ""
+msgstr "لا شيء"
 
 #: ispdbservice.cpp:134
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgid "Configuration found auto config file."
-msgstr "عُثر على ضبط آليّ."
+msgstr "عثر على ملف الضبط آليّ."
 
 #: ispdbservice.cpp:137
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgid "Configuration found in well-known file."
-msgstr "عُثر على ضبط آليّ."
+msgstr "عُثر  الضبط في ملف well-known"
 
 #: ispdbservice.cpp:140
-#, fuzzy, kde-format
-#| msgid "Lookup configuration: Mozilla database"
+#, kde-format
 msgid "Configuration found in Mozilla FAI Database."
-msgstr "يبحث عن الضّبط: قاعدة بيانات «موزيلا»"
+msgstr "عثر على الضبط في قاعدة بيانات Mozilla FAI."
 
 #: main.cpp:30
 #, kde-format
@@ -170,10 +163,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "يساعد في ضبط حسابات إدارة المعلومات الشّخصيّة"
 
 #: main.cpp:34
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2020 the Akonadi developers"
+#, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
-msgstr "© 2009-2020 لمطوّري «أكونادي»"
+msgstr "© 2009-2024 لمطوّري «أكونادي»"
 
 #: main.cpp:37
 #, kde-format
@@ -193,115 +185,106 @@ msgstr "Laurent Montel"
 #: main.cpp:38 main.cpp:39
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "المصين"
 
 #: main.cpp:39
 #, kde-format
 msgid "Carl Schwan"
-msgstr ""
+msgstr "كارل شوان"
 
 #: qml/ConfigurationDelegate.qml:93
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming"
-msgstr "الوارد:"
+msgstr "الواردة"
 
 #: qml/ConfigurationDelegate.qml:114
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing"
-msgstr "الصّادر:"
+msgstr "الصادرة"
 
 #: qml/ConfigurationSelectionPage.qml:16
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgctxt "@title:group"
 msgid "Configuration Selection"
-msgstr "عُثر على ضبط آليّ."
+msgstr "تحديد الضبط"
 
 #: qml/ConfigurationSelectionPage.qml:39
 #, kde-format
 msgid "Available configurations"
-msgstr ""
+msgstr "الضبط متوفر"
 
 #: qml/ConfigurationSelectionPage.qml:56
-#, fuzzy, kde-format
-#| msgid "No config found to edit"
+#, kde-format
 msgid "No configuration found from the internet for this server."
-msgstr "لم يُعثر على ضبط لتحريره"
+msgstr "لم يُعثر على على ضبط من الإنترنت لهذا الخادم."
 
 #: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
 #, kde-format
 msgid "Manual Configuration"
-msgstr ""
+msgstr "ضبط يدوي"
 
 #: qml/DetailsPage.qml:15
-#, fuzzy, kde-format
-#| msgid "&Details..."
+#, kde-format
 msgctxt "@title:group"
 msgid "Details"
-msgstr "التّ&فاصيل..."
+msgstr "التفاصيل"
 
 #: qml/DetailsPage.qml:18
 #, kde-format
 msgctxt "@action:button"
 msgid "Quit"
-msgstr ""
+msgstr "أنهِ"
 
 #: qml/DetailsPage.qml:24
-#, fuzzy, kde-format
-#| msgid "&Details..."
+#, kde-format
 msgid "Details"
-msgstr "التّ&فاصيل..."
+msgstr "التفاصيل"
 
 #: qml/DetailsPage.qml:61
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
-msgstr ""
+msgstr "لا تتوفر تفاصيل"
 
 #: qml/ManualConfigurationPage.qml:18
 #, kde-format
 msgid "Recheck"
-msgstr ""
+msgstr "أعد التدقيق"
 
 #: qml/ManualConfigurationPage.qml:25
-#, fuzzy, kde-format
-#| msgid "Add Account"
+#, kde-format
 msgid "Create Account"
-msgstr "أضف حسابًا"
+msgstr "أنشئ حسابًا"
 
 #: qml/ManualConfigurationPage.qml:67
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming Server Parameters"
-msgstr "الوارد:"
+msgstr "معاملات خادوم الوارد:"
 
 #: qml/ManualConfigurationPage.qml:73
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming server:"
-msgstr "الوارد:"
+msgstr "خادوم الوارد:"
 
 #: qml/ManualConfigurationPage.qml:85
 #, kde-format
 msgid "Protocol:"
-msgstr ""
+msgstr "الميفاق:"
 
 #: qml/ManualConfigurationPage.qml:91
 #, kde-format
 msgid "Kolab"
-msgstr ""
+msgstr "كلوب"
 
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:206
 #, kde-format
 msgid "Port:"
-msgstr ""
+msgstr "المنفذ:"
 
 #: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:220
 #, kde-format
 msgid "Security:"
-msgstr ""
+msgstr "الأمن:"
 
 #: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:225
 #, kde-format
@@ -311,57 +294,57 @@ msgstr ""
 #: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:224
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "لا شيء"
 
 #: qml/ManualConfigurationPage.qml:136 qml/ManualConfigurationPage.qml:238
 #, kde-format
 msgid "Authentication Method:"
-msgstr ""
+msgstr "طريقة الاستيثاق:"
 
 #: qml/ManualConfigurationPage.qml:140 qml/ManualConfigurationPage.qml:242
 #, kde-format
 msgid "Clear text"
-msgstr ""
+msgstr "نصّ واضح"
 
 #: qml/ManualConfigurationPage.qml:141 qml/ManualConfigurationPage.qml:243
 #, kde-format
 msgid "PLAIN"
-msgstr ""
+msgstr "عادي"
 
 #: qml/ManualConfigurationPage.qml:142 qml/ManualConfigurationPage.qml:244
 #, kde-format
 msgid "LOGIN"
-msgstr ""
+msgstr "LOGIN"
 
 #: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:245
 #, kde-format
 msgid "CRAM-MD5"
-msgstr ""
+msgstr "CRAM-MD5"
 
 #: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:246
 #, kde-format
 msgid "DIGEST-MD5"
-msgstr ""
+msgstr "DIGEST-MD5"
 
 #: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:247
 #, kde-format
 msgid "NTLM"
-msgstr ""
+msgstr "NTLM"
 
 #: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:248
 #, kde-format
 msgid "GSSAPI"
-msgstr ""
+msgstr "GSSAPI"
 
 #: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:249
 #, kde-format
 msgid "XOAuth (Gmail)"
-msgstr ""
+msgstr "XOAuth (Gmail)"
 
 #: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:250
 #, kde-format
 msgid "APOP"
-msgstr ""
+msgstr "APOP"
 
 #: qml/ManualConfigurationPage.qml:162 qml/ManualConfigurationPage.qml:263
 #, kde-format
@@ -371,46 +354,39 @@ msgstr "اسم المستخدم:"
 #: qml/ManualConfigurationPage.qml:177
 #, kde-format
 msgid "Download all messages for offline use"
-msgstr ""
+msgstr "نزّل كلّ الرّسائل للاستخدام بلا اتّصال"
 
 #: qml/ManualConfigurationPage.qml:186
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing Server Parameters"
-msgstr "الصّادر:"
+msgstr "معاملات الخادوم الصادر"
 
 #: qml/ManualConfigurationPage.qml:193
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing server:"
-msgstr "الصّادر:"
+msgstr "خادوم الصّادر:"
 
 #: qml/PersonalDataPage.qml:15
 #, kde-format
 msgid "Personal Information"
-msgstr ""
+msgstr "المعلومات الشخصية"
 
 #: qml/PersonalDataPage.qml:43
 #, kde-format
 msgid "Connect your Email Account"
-msgstr ""
+msgstr "اتصل بحساب البريد إلكترونيّ"
 
 #: qml/PersonalDataPage.qml:51
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check online for the settings needed for this email provider. Only the "
-#| "domain name part of the e-mail address will be sent over the Internet at "
-#| "this point. If this option is unchecked, the account can be set up "
-#| "manually."
+#, kde-format
 msgid ""
 "To use your current email address fill in your credentials. This wizard will "
 "automatically search for a working and recommended server configuration. "
 "Only the domain name part of the e-mail address will be sent over the "
 "Internet."
 msgstr ""
-"ابحث في الشّابكة عن الإعدادات الضّروريّة لمزوّد البريد هذا. سيُرسل الآن جزء اسم "
-"النّطاق لعنوان البريد عبر الشّابكة فقط. إن تركت الخيار دون تأشير، فسيمكنك ضبط "
-"الحساب يدويًّا."
+"لاستخدام عنوان بريدك الإلكتروني الحالي، املأ بيانات الاعتماد الخاصة بك. "
+"سيبحث هذا المعالج تلقائيًا عن خادم فعال وموصى به عند التكوين. سيرسل جزء اسم "
+"المجال فقط من عنوان البريد الإلكتروني عبر الإنترنت."
 
 #: qml/PersonalDataPage.qml:57
 #, kde-format
@@ -421,7 +397,7 @@ msgstr "الاسم كاملًا:"
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
-msgstr ""
+msgstr "جون سميث"
 
 #: qml/PersonalDataPage.qml:67
 #, kde-format
@@ -432,25 +408,24 @@ msgstr "عنوان البريد الإلكترونيّ:"
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
-msgstr ""
+msgstr "boss@example.corp"
 
 #: qml/PersonalDataPage.qml:78
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password (optional):"
-msgstr "كلمة السّرّ:"
+msgstr "كلمة السّر (اختياري):"
 
 #: qml/WizardPage.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr ""
+msgstr "السابق"
 
 #: qml/WizardPage.qml:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "التالي"
 
 #: resource.cpp:72
 #, kde-format
@@ -483,11 +458,10 @@ msgid "Unable to configure resource instance."
 msgstr "تعذّر ضبط سيرورة المورد."
 
 #: resource.cpp:131
-#, fuzzy, kde-format
-#| msgid "Could not convert value of setting '%1' to required type %2."
+#, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
-msgstr "تعذّر تحويل قيمة الإعداد ’%1‘ إلى النّوع %2 المطلوب."
+msgstr "تعذر تحويل قيمة الإعداد '%1' من النوع %2 إلى النوع المطلوب %3."
 
 #: resource.cpp:144
 #, kde-format
@@ -500,11 +474,10 @@ msgid "Could not save settings: %1"
 msgstr "تعذّر حفظ إعدادات: %1"
 
 #: resource.cpp:156
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
-msgstr "اكتمل إعداد المورد."
+msgstr "اكتمل ضبط المورد: %1"
 
 #: resource.cpp:159
 #, kde-format
@@ -516,13 +489,13 @@ msgstr ""
 #, kde-format
 msgctxt "Indication that the password set for the resource is empty"
 msgid "Empty"
-msgstr ""
+msgstr "فارغ"
 
 #: resource.cpp:174
 #, kde-format
 msgctxt "label"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #~ msgid "Setting up identity..."
 #~ msgstr "يضبط الهويّة..."

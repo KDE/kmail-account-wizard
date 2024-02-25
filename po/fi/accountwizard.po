@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-21 02:24+0000\n"
-"PO-Revision-Date: 2024-02-02 12:51+0200\n"
+"PO-Revision-Date: 2024-02-19 12:11+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -169,10 +169,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "Auttaa asettamaan PIM-tilejä"
 
 #: main.cpp:34
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2023 the Akonadi developers"
+#, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
-msgstr "© 2009–2023 Akonadin kehittäjät"
+msgstr "© 2009–2024 Akonadin kehittäjät"
 
 #: main.cpp:37
 #, kde-format
