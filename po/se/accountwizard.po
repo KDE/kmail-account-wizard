@@ -497,15 +497,3 @@ msgstr ""
 msgctxt "label"
 msgid "%1:"
 msgstr ""
-
-#~ msgid "Setting up identity..."
-#~ msgstr "Heiveheamen identitehta …"
-
-#~ msgid "Identity set up."
-#~ msgstr "Identitehta lea heivehuvvon."
-
-#~ msgid "Setting up mail transport account..."
-#~ msgstr "Heiveheamen e-boastafievrridankonttu …"
-
-#~ msgid "Mail transport account set up."
-#~ msgstr "E-boastafievrridankontu lea heivehuvvon."
