@@ -516,18 +516,3 @@ msgstr ""
 msgctxt "label"
 msgid "%1:"
 msgstr ""
-
-#~ msgid "Setting up identity..."
-#~ msgstr "Setter opp identiteten …"
-
-#~ msgid "Identity set up."
-#~ msgstr "Identitetsoppsett"
-
-#~ msgid "Identity removed."
-#~ msgstr "Identitet fjernet."
-
-#~ msgid "Setting up mail transport account..."
-#~ msgstr "Setter opp konto for e-postoverføring …"
-
-#~ msgid "Mail transport account set up."
-#~ msgstr "Konto for e-postoverføring er satt opp."

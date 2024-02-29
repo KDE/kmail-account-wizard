@@ -523,21 +523,3 @@ msgstr ""
 msgctxt "label"
 msgid "%1:"
 msgstr ""
-
-#~ msgid "Setting up identity..."
-#~ msgstr "Set opp identitet …"
-
-#~ msgid "Identity set up."
-#~ msgstr "Identiteten er sett opp."
-
-#~ msgid "Identity removed."
-#~ msgstr "Identiteten er fjerna."
-
-#~ msgid "Setting up mail transport account..."
-#~ msgstr "Set opp konto for e-postoverføring …"
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr "E-postoverføring brukar «%1»-kryptering og «%2»-autentisering."
-
-#~ msgid "Mail transport account set up."
-#~ msgstr "Kontoen for e-postoverføring er no sett opp."
