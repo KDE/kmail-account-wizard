@@ -27,7 +27,7 @@ struct Server {
 
     [[nodiscard]] QStringList tags() const;
 
-    static std::optional<Server> fromDomElement(const QDomElement &element, const KMime::Types::AddrSpec &addrSpec);
+    [[nodiscard]] static std::optional<Server> fromDomElement(const QDomElement &element, const KMime::Types::AddrSpec &addrSpec);
 };
 QDebug operator<<(QDebug d, const Server &t);
 Q_DECLARE_TYPEINFO(Server, Q_MOVABLE_TYPE);

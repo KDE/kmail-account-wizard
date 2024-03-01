@@ -95,10 +95,10 @@ public:
     Q_INVOKABLE void checkServer();
     Q_INVOKABLE void checkConfiguration();
 
-    QString email() const;
+    [[nodiscard]] QString email() const;
     void setEmail(const QString &email);
 
-    QString password() const;
+    [[nodiscard]] QString password() const;
     void setPassword(const QString &newPassword);
 
 Q_SIGNALS:
