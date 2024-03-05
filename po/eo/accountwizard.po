@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-21 02:24+0000\n"
+"POT-Creation-Date: 2024-03-05 02:20+0000\n"
 "PO-Revision-Date: 2024-01-02 12:24+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -55,40 +55,40 @@ msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Retpoŝta adreso:"
 
-#: accountconfiguration.cpp:235
+#: accountconfiguration.cpp:236
 #, fuzzy, kde-format
 #| msgid "Resource setup completed."
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Rimeda agordo finiĝis."
 
-#: accountconfiguration.cpp:238
+#: accountconfiguration.cpp:239
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr ""
 
-#: accountconfiguration.cpp:239
+#: accountconfiguration.cpp:240
 #, fuzzy, kde-format
 #| msgid "Port:"
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Pordo:"
 
-#: accountconfiguration.cpp:240
+#: accountconfiguration.cpp:241
 #, fuzzy, kde-format
 #| msgid "Username:"
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Uzantnomo:"
 
-#: accountconfiguration.cpp:242
+#: accountconfiguration.cpp:243
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr ""
 
-#: accountconfiguration.cpp:244
+#: accountconfiguration.cpp:245
 #, fuzzy, kde-format
 #| msgid "Authentication Method:"
 msgctxt "log entry content"

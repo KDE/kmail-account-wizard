@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-21 02:24+0000\n"
+"POT-Creation-Date: 2024-03-05 02:20+0000\n"
 "PO-Revision-Date: 2024-02-18 10:34+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -56,37 +56,37 @@ msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Adreça primària de correu:"
 
-#: accountconfiguration.cpp:235
+#: accountconfiguration.cpp:236
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "S'ha completat la configuració del transport de correu: %1"
 
-#: accountconfiguration.cpp:238
+#: accountconfiguration.cpp:239
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Servidor:"
 
-#: accountconfiguration.cpp:239
+#: accountconfiguration.cpp:240
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Port:"
 
-#: accountconfiguration.cpp:240
+#: accountconfiguration.cpp:241
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Nom d'usuari:"
 
-#: accountconfiguration.cpp:242
+#: accountconfiguration.cpp:243
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "Encriptatge:"
 
-#: accountconfiguration.cpp:244
+#: accountconfiguration.cpp:245
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-21 02:24+0000\n"
+"POT-Creation-Date: 2024-03-05 02:20+0000\n"
 "PO-Revision-Date: 2022-04-09 19:22+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -53,40 +53,40 @@ msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Emailová adre&sa:"
 
-#: accountconfiguration.cpp:235
+#: accountconfiguration.cpp:236
 #, fuzzy, kde-format
 #| msgid "Mail transport account deleted."
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Účet prenosu pošty vymazaný."
 
-#: accountconfiguration.cpp:238
+#: accountconfiguration.cpp:239
 #, fuzzy, kde-format
 #| msgid "Username:"
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Užívateľské meno:"
 
-#: accountconfiguration.cpp:239
+#: accountconfiguration.cpp:240
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr ""
 
-#: accountconfiguration.cpp:240
+#: accountconfiguration.cpp:241
 #, fuzzy, kde-format
 #| msgid "Username:"
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Užívateľské meno:"
 
-#: accountconfiguration.cpp:242
+#: accountconfiguration.cpp:243
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr ""
 
-#: accountconfiguration.cpp:244
+#: accountconfiguration.cpp:245
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"

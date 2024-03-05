@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-21 02:24+0000\n"
+"POT-Creation-Date: 2024-03-05 02:20+0000\n"
 "PO-Revision-Date: 2010-09-24 16:24+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <bhashaghar@googlegroups.com>\n"
@@ -54,13 +54,13 @@ msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr ""
 
-#: accountconfiguration.cpp:235
+#: accountconfiguration.cpp:236
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr ""
 
-#: accountconfiguration.cpp:238
+#: accountconfiguration.cpp:239
 #, fuzzy, kde-format
 #| msgctxt "Default name for new email accounts/identities."
 #| msgid "Unnamed"
@@ -68,13 +68,13 @@ msgctxt "log entry content"
 msgid "Host:"
 msgstr "बेनाम"
 
-#: accountconfiguration.cpp:239
+#: accountconfiguration.cpp:240
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr ""
 
-#: accountconfiguration.cpp:240
+#: accountconfiguration.cpp:241
 #, fuzzy, kde-format
 #| msgctxt "Default name for new email accounts/identities."
 #| msgid "Unnamed"
@@ -82,13 +82,13 @@ msgctxt "log entry content"
 msgid "Username:"
 msgstr "बेनाम"
 
-#: accountconfiguration.cpp:242
+#: accountconfiguration.cpp:243
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr ""
 
-#: accountconfiguration.cpp:244
+#: accountconfiguration.cpp:245
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-21 02:24+0000\n"
+"POT-Creation-Date: 2024-03-05 02:20+0000\n"
 "PO-Revision-Date: 2024-02-17 21:20+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -53,37 +53,37 @@ msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Elsődleges e-mail cím:"
 
-#: accountconfiguration.cpp:235
+#: accountconfiguration.cpp:236
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Levéltovábbítás beállítása befejezve: %1"
 
-#: accountconfiguration.cpp:238
+#: accountconfiguration.cpp:239
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Gépnév:"
 
-#: accountconfiguration.cpp:239
+#: accountconfiguration.cpp:240
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Port:"
 
-#: accountconfiguration.cpp:240
+#: accountconfiguration.cpp:241
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Felhasználónév:"
 
-#: accountconfiguration.cpp:242
+#: accountconfiguration.cpp:243
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "Titkosítás:"
 
-#: accountconfiguration.cpp:244
+#: accountconfiguration.cpp:245
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
