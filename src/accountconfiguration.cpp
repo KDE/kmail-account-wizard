@@ -230,8 +230,8 @@ void AccountConfiguration::save(ConsoleLog *consoleLog)
     if (mHasTransport) {
         // create transport
         using TransportAuth = MailTransport::Transport::EnumAuthenticationType;
-        MailTransport::TransportManager::self()->addTransport(mMailTransport);
         mMailTransport->save();
+        MailTransport::TransportManager::self()->addTransport(mMailTransport);
 
         QString logEntryText = u"<h3>"_s + i18nc("log entry content", "Mail transport setup completed: %1", mMailTransport->name()) + u"</h3>"_s;
 
