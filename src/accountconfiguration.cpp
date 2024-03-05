@@ -131,8 +131,19 @@ Resource::ResourceInfo AccountConfiguration::createImapResource() const
         {u"UseDefaultIdentity"_s, false},
         {u"AccountIdentity"_s, mIdentity.uoid()},
         {u"Authentication"_s, mIncomingAuthenticationProtocol},
-        {u"Safety"_s, mIncomingSecurityProtocol},
     };
+
+    switch (mIncomingSecurityProtocol) {
+    case MailTransport::Transport::EnumEncryption::None:
+        info.settings[u"Safety"_s] = QStringLiteral("None");
+        break;
+    case MailTransport::Transport::EnumEncryption::SSL:
+        info.settings[u"Safety"_s] = QStringLiteral("SSL");
+        break;
+    case MailTransport::Transport::EnumEncryption::TLS:
+        info.settings[u"Safety"_s] = QStringLiteral("STARTTLS");
+        break;
+    }
     return info;
 }
 
