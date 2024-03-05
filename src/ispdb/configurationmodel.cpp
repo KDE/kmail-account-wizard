@@ -149,6 +149,7 @@ void ConfigurationModel::createAutomaticAccount(int index, ConsoleLog *consoleLo
     // Create SMTP transport
     if (configuration.outgoing) {
         auto mt = accountConfiguration->mailTransport();
+        mt->setHost(configuration.outgoing->hostname);
         if (configuration.outgoing->port > 0) {
             mt->setPort(configuration.outgoing->port);
         }
