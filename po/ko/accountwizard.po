@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-05 02:20+0000\n"
+"POT-Creation-Date: 2024-03-06 02:18+0000\n"
 "PO-Revision-Date: 2024-02-19 21:31+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -27,61 +27,61 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: accountconfiguration.cpp:192 ispdb/configurationmodel.cpp:137
+#: accountconfiguration.cpp:203 ispdb/configurationmodel.cpp:137
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "이름 없음"
 
-#: accountconfiguration.cpp:203
+#: accountconfiguration.cpp:214
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "이메일 프로필 만들기: %1"
 
-#: accountconfiguration.cpp:206
+#: accountconfiguration.cpp:217
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "전체 이름:"
 
-#: accountconfiguration.cpp:207
+#: accountconfiguration.cpp:218
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "주 이메일 주소:"
 
-#: accountconfiguration.cpp:236
+#: accountconfiguration.cpp:247
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "메일 전송 설정이 완료됨: %1"
 
-#: accountconfiguration.cpp:239
+#: accountconfiguration.cpp:250
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "호스트:"
 
-#: accountconfiguration.cpp:240
+#: accountconfiguration.cpp:251
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "포트:"
 
-#: accountconfiguration.cpp:241
+#: accountconfiguration.cpp:252
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "사용자 이름:"
 
-#: accountconfiguration.cpp:243
+#: accountconfiguration.cpp:254
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "암호화:"
 
-#: accountconfiguration.cpp:245
+#: accountconfiguration.cpp:256
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"

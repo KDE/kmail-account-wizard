@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-05 02:20+0000\n"
+"POT-Creation-Date: 2024-03-06 02:18+0000\n"
 "PO-Revision-Date: 2024-02-10 13:37+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -36,67 +36,67 @@ msgid "Your emails"
 msgstr "vovan2482@mail.ru,kolyadas89@gmail.com,walker@mail.ru"
 
 # Не "Безымянный", потому что "учётная запись" женского рода, а "профиль" -- мужского. --aspotashev
-#: accountconfiguration.cpp:192 ispdb/configurationmodel.cpp:137
+#: accountconfiguration.cpp:203 ispdb/configurationmodel.cpp:137
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Без имени"
 
-#: accountconfiguration.cpp:203
+#: accountconfiguration.cpp:214
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr ""
 
-#: accountconfiguration.cpp:206
+#: accountconfiguration.cpp:217
 #, fuzzy, kde-format
 #| msgid "Full name:"
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Полное имя:"
 
-#: accountconfiguration.cpp:207
+#: accountconfiguration.cpp:218
 #, fuzzy, kde-format
 #| msgid "E-mail address:"
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Адрес электронной почты:"
 
-#: accountconfiguration.cpp:236
+#: accountconfiguration.cpp:247
 #, fuzzy, kde-format
 #| msgid "Mail transport account deleted."
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Учётная запись для отправки почты удалена."
 
-#: accountconfiguration.cpp:239
+#: accountconfiguration.cpp:250
 #, fuzzy, kde-format
 #| msgid "Username:"
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Имя пользователя:"
 
-#: accountconfiguration.cpp:240
+#: accountconfiguration.cpp:251
 #, fuzzy, kde-format
 #| msgid "Port:"
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Порт:"
 
-#: accountconfiguration.cpp:241
+#: accountconfiguration.cpp:252
 #, fuzzy, kde-format
 #| msgid "Username:"
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Имя пользователя:"
 
-#: accountconfiguration.cpp:243
+#: accountconfiguration.cpp:254
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr ""
 
-#: accountconfiguration.cpp:245
+#: accountconfiguration.cpp:256
 #, fuzzy, kde-format
 #| msgid "Authentication Method:"
 msgctxt "log entry content"

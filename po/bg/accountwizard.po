@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-05 02:20+0000\n"
+"POT-Creation-Date: 2024-03-06 02:18+0000\n"
 "PO-Revision-Date: 2024-02-17 13:49+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -27,61 +27,61 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mkondarev@yahoo.de"
 
-#: accountconfiguration.cpp:192 ispdb/configurationmodel.cpp:137
+#: accountconfiguration.cpp:203 ispdb/configurationmodel.cpp:137
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Неозаглавен"
 
-#: accountconfiguration.cpp:203
+#: accountconfiguration.cpp:214
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "Създаване на пощенска самоличност: %1"
 
-#: accountconfiguration.cpp:206
+#: accountconfiguration.cpp:217
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Цяло име:"
 
-#: accountconfiguration.cpp:207
+#: accountconfiguration.cpp:218
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Основен адрес на е-поща:"
 
-#: accountconfiguration.cpp:236
+#: accountconfiguration.cpp:247
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Настройката за транспорт на пощата завърши: %1"
 
-#: accountconfiguration.cpp:239
+#: accountconfiguration.cpp:250
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Хост:"
 
-#: accountconfiguration.cpp:240
+#: accountconfiguration.cpp:251
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Порт:"
 
-#: accountconfiguration.cpp:241
+#: accountconfiguration.cpp:252
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Потребителско име:"
 
-#: accountconfiguration.cpp:243
+#: accountconfiguration.cpp:254
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "Шифроване:"
 
-#: accountconfiguration.cpp:245
+#: accountconfiguration.cpp:256
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
