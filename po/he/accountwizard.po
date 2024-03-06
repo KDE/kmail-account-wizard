@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-21 00:38+0000\n"
+"POT-Creation-Date: 2024-03-06 00:38+0000\n"
 "PO-Revision-Date: 2024-02-17 13:55+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -26,61 +26,61 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ttv200@gmail.com,kde-l10n-he@kde.org"
 
-#: accountconfiguration.cpp:178 ispdb/configurationmodel.cpp:135
+#: accountconfiguration.cpp:189 ispdb/configurationmodel.cpp:135
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "ללא שם"
 
-#: accountconfiguration.cpp:189
+#: accountconfiguration.cpp:200
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "יצירת זהות דוא״ל: %1"
 
-#: accountconfiguration.cpp:192
+#: accountconfiguration.cpp:203
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "שם מלא:"
 
-#: accountconfiguration.cpp:193
+#: accountconfiguration.cpp:204
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "כתובת דוא״ל עיקרית:"
 
-#: accountconfiguration.cpp:221
+#: accountconfiguration.cpp:233
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "הגדרת תעבורת דוא״ל הושלמה: %1"
 
-#: accountconfiguration.cpp:224
+#: accountconfiguration.cpp:236
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "מארח:"
 
-#: accountconfiguration.cpp:225
+#: accountconfiguration.cpp:237
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "פתחה:"
 
-#: accountconfiguration.cpp:226
+#: accountconfiguration.cpp:238
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "שם משתמש:"
 
-#: accountconfiguration.cpp:228
+#: accountconfiguration.cpp:240
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "הצפנה:"
 
-#: accountconfiguration.cpp:230
+#: accountconfiguration.cpp:242
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"

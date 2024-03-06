@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-21 00:38+0000\n"
+"POT-Creation-Date: 2024-03-06 00:38+0000\n"
 "PO-Revision-Date: 2012-07-09 11:22+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -29,66 +29,66 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "khoemsokhem@khmeros.info,​​mornmet@khmeros.info,sutha@khmeros.info"
 
-#: accountconfiguration.cpp:178 ispdb/configurationmodel.cpp:135
+#: accountconfiguration.cpp:189 ispdb/configurationmodel.cpp:135
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "គ្មាន​ឈ្មោះ"
 
-#: accountconfiguration.cpp:189
+#: accountconfiguration.cpp:200
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr ""
 
-#: accountconfiguration.cpp:192
+#: accountconfiguration.cpp:203
 #, fuzzy, kde-format
 #| msgid "Full Name"
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "ឈ្មោះ​ពេញ"
 
-#: accountconfiguration.cpp:193
+#: accountconfiguration.cpp:204
 #, fuzzy, kde-format
 #| msgid "E-mail address:"
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "អាសយដ្ឋាន​អ៊ីមែល ៖"
 
-#: accountconfiguration.cpp:221
+#: accountconfiguration.cpp:233
 #, fuzzy, kde-format
 #| msgid "Mail transport account deleted."
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "បាន​លុប​គណនី​បញ្ជូន​សំបុត្រ ។"
 
-#: accountconfiguration.cpp:224
+#: accountconfiguration.cpp:236
 #, fuzzy, kde-format
 #| msgid "Username:"
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "ឈ្មោះ​អ្នក​ប្រើ ៖"
 
-#: accountconfiguration.cpp:225
+#: accountconfiguration.cpp:237
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr ""
 
-#: accountconfiguration.cpp:226
+#: accountconfiguration.cpp:238
 #, fuzzy, kde-format
 #| msgid "Username:"
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "ឈ្មោះ​អ្នក​ប្រើ ៖"
 
-#: accountconfiguration.cpp:228
+#: accountconfiguration.cpp:240
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr ""
 
-#: accountconfiguration.cpp:230
+#: accountconfiguration.cpp:242
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"

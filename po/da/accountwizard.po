@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-21 00:38+0000\n"
+"POT-Creation-Date: 2024-03-06 00:38+0000\n"
 "PO-Revision-Date: 2021-09-09 21:52+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -27,66 +27,66 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mschlander@opensuse.org"
 
-#: accountconfiguration.cpp:178 ispdb/configurationmodel.cpp:135
+#: accountconfiguration.cpp:189 ispdb/configurationmodel.cpp:135
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Unavngiven"
 
-#: accountconfiguration.cpp:189
+#: accountconfiguration.cpp:200
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr ""
 
-#: accountconfiguration.cpp:192
+#: accountconfiguration.cpp:203
 #, fuzzy, kde-format
 #| msgid "Full name:"
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Fuldt navn:"
 
-#: accountconfiguration.cpp:193
+#: accountconfiguration.cpp:204
 #, fuzzy, kde-format
 #| msgid "E-mail address:"
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "E-mailadresse:"
 
-#: accountconfiguration.cpp:221
+#: accountconfiguration.cpp:233
 #, fuzzy, kde-format
 #| msgid "Mail transport account deleted."
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Mail-transport-konto slettet."
 
-#: accountconfiguration.cpp:224
+#: accountconfiguration.cpp:236
 #, fuzzy, kde-format
 #| msgid "Username:"
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Brugernavn:"
 
-#: accountconfiguration.cpp:225
+#: accountconfiguration.cpp:237
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr ""
 
-#: accountconfiguration.cpp:226
+#: accountconfiguration.cpp:238
 #, fuzzy, kde-format
 #| msgid "Username:"
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Brugernavn:"
 
-#: accountconfiguration.cpp:228
+#: accountconfiguration.cpp:240
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr ""
 
-#: accountconfiguration.cpp:230
+#: accountconfiguration.cpp:242
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
