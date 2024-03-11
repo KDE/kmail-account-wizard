@@ -15,10 +15,14 @@
 
 using namespace Qt::Literals::StringLiterals;
 
-Configuration::Configuration(const Server &_incoming, std::optional<Server> _outgoing, const QString &_shortDisplayName)
+Configuration::Configuration(const Server &_incoming,
+                             std::optional<Server> _outgoing,
+                             const QString &_shortDisplayName,
+                             std::optional<GroupwareServer> groupware)
     : shortDisplayName(_shortDisplayName)
     , incoming(_incoming)
     , outgoing(_outgoing)
+    , groupware(groupware)
 {
 }
 
@@ -93,12 +97,15 @@ void ConfigurationModel::setEmailProvider(const EmailProvider &emailProvider)
     m_configurations.clear();
 
     for (const auto &server : emailProvider.imapServers) {
-        m_configurations.emplace_back(server, preferredOutgoingServer, emailProvider.shortDisplayName);
+        m_configurations.emplace_back(server, preferredOutgoingServer, emailProvider.shortDisplayName, emailProvider.groupware);
     }
 
     for (const auto &server : emailProvider.popServers) {
-        m_configurations.emplace_back(server, preferredOutgoingServer, emailProvider.shortDisplayName);
+        m_configurations.emplace_back(server, preferredOutgoingServer, emailProvider.shortDisplayName, emailProvider.groupware);
     }
+
+    m_hasGroupwareSupport = emailProvider.groupware.has_value();
+    Q_EMIT hasGroupwareSupportChanged();
 
     endResetModel();
 }
@@ -113,6 +120,11 @@ void ConfigurationModel::setEmail(const QString &email)
     m_email = email;
 }
 
+bool ConfigurationModel::hasGroupwareSupport() const
+{
+    return m_hasGroupwareSupport;
+}
+
 void ConfigurationModel::setFullName(const QString &fullName)
 {
     m_fullName = fullName;
@@ -123,7 +135,7 @@ const Configuration &ConfigurationModel::configuration(int index) const
     return m_configurations[index];
 }
 
-void ConfigurationModel::createAutomaticAccount(int index, ConsoleLog *consoleLog)
+void ConfigurationModel::createAutomaticAccount(int index, ConsoleLog *consoleLog, bool groupware)
 {
     qCDebug(ACCOUNTWIZARD_LOG) << " Create Automatic Account" << index;
     const auto &configuration = m_configurations[index];
@@ -171,5 +183,9 @@ void ConfigurationModel::createAutomaticAccount(int index, ConsoleLog *consoleLo
     } else {
         accountConfiguration->setHasTransport(false);
     }
+    if (groupware && configuration.groupware) {
+        accountConfiguration->setGroupware(configuration.groupware);
+    }
+
     accountConfiguration->save(consoleLog);
 }

@@ -71,7 +71,6 @@ void IspdbService::requestConfig(const KMime::Types::AddrSpec &addrSpec, const S
 void IspdbService::handleReply(QNetworkReply *const reply, const KMime::Types::AddrSpec &addrSpec, const SearchServerType searchServerType)
 {
     const auto data = reply->readAll();
-    qWarning() << data;
     QDomDocument document;
     const QDomDocument::ParseResult result = document.setContent(data);
     if (!result) {
@@ -139,6 +138,10 @@ void IspdbService::handleReply(QNetworkReply *const reply, const KMime::Types::A
     case DataBase:
         foundInServerTypeMessage = i18n("Configuration found in Mozilla FAI Database.");
         break;
+    }
+
+    if (addrSpec.domain.endsWith(QStringLiteral("gmail.com"))) {
+        emailProvider.groupware = GMailGroupware{};
     }
 
     Q_EMIT finished(emailProvider, foundInServerTypeMessage);
