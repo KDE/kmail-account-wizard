@@ -22,7 +22,7 @@ WizardPage {
                 applicationWindow().pageStack.push(Qt.createComponent('org.kde.pim.accountwizard', 'ManualConfigurationPage'));
             } else {
                 applicationWindow().pageStack.push(Qt.createComponent('org.kde.pim.accountwizard', 'DetailsPage'));
-                SetupManager.configurationModel.createAutomaticAccount(configurationGroup.checkedButton.index, ConsoleLog);
+                SetupManager.configurationModel.createAutomaticAccount(configurationGroup.checkedButton.index, ConsoleLog, calendarCheck.checked);
             }
         }
     }
@@ -107,6 +107,24 @@ WizardPage {
             checked: SetupManager.noConfigFound
 
             QQC2.ButtonGroup.group: configurationGroup
+        }
+    }
+
+    FormCard.FormHeader {
+        visible: calendarContactCard.visible
+        title: i18nc("@title:group", "Calendar and Contacts")
+    }
+
+    FormCard.FormCard {
+        id: calendarContactCard
+
+        visible: SetupManager.configurationModel.hasGroupwareSupport
+
+        FormCard.FormSwitchDelegate {
+            id: calendarCheck
+
+            text: i18nc("@option:check", "Enable calendar and contact integration")
+            checked: visible
         }
     }
 }

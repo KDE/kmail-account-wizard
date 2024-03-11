@@ -146,6 +146,17 @@ Resource::ResourceInfo AccountConfiguration::createImapResource() const
     return info;
 }
 
+Resource::ResourceInfo AccountConfiguration::createGmailResource() const
+{
+    Resource::ResourceInfo info;
+    info.typeIdentifier = u"akonadi_google_resource"_s;
+    info.name = u"Google (%1)"_s.arg(mIdentity.primaryEmailAddress());
+    info.settings = {
+        {u"Account"_s, mIdentity.primaryEmailAddress()},
+    };
+    return info;
+}
+
 Resource::ResourceInfo AccountConfiguration::createKolabResource() const
 {
     auto info = createImapResource();
@@ -247,6 +258,12 @@ void AccountConfiguration::save(ConsoleLog *consoleLog)
         mIdentity.setTransport(QString::number(mMailTransport->id()));
     }
 
+    if (mGroupware) {
+        if (std::holds_alternative<GMailGroupware>(mGroupware.value())) {
+            Resource::ResourceInfo info = createGmailResource();
+            generateResource(std::move(info), consoleLog);
+        }
+    }
     mIdentityManager->saveIdentity(mIdentity);
 }
 
@@ -502,6 +519,20 @@ void AccountConfiguration::setIncomingUserName(const QString &newIncomingUserNam
 void AccountConfiguration::setHasTransport(bool hasTransport)
 {
     mHasTransport = hasTransport;
+}
+
+std::optional<GroupwareServer> AccountConfiguration::groupware() const
+{
+    return mGroupware;
+}
+
+void AccountConfiguration::setGroupware(std::optional<GroupwareServer> groupware)
+{
+    if (groupware) {
+        if (std::holds_alternative<GMailGroupware>(groupware.value())) {
+            mGroupware = std::get<GMailGroupware>(groupware.value());
+        }
+    }
 }
 
 QDebug operator<<(QDebug d, const AccountConfiguration &t)

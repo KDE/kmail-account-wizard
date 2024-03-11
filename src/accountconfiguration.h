@@ -5,6 +5,7 @@
 */
 #pragma once
 
+#include "ispdb/serverconfiguration.h"
 #include "resource.h"
 #include <KIdentityManagementCore/Identity>
 #include <KIdentityManagementCore/IdentityManager>
@@ -101,6 +102,8 @@ public:
     [[nodiscard]] QString password() const;
     void setPassword(const QString &newPassword);
 
+    std::optional<GroupwareServer> groupware() const;
+    void setGroupware(std::optional<GroupwareServer> groupware);
 Q_SIGNALS:
     void passwordChanged();
     void emailChanged();
@@ -134,6 +137,7 @@ private:
     [[nodiscard]] Resource::ResourceInfo createPop3Resource() const;
     [[nodiscard]] Resource::ResourceInfo createImapResource() const;
     [[nodiscard]] Resource::ResourceInfo createKolabResource() const;
+    [[nodiscard]] Resource::ResourceInfo createGmailResource() const;
     [[nodiscard]] QString generateUniqueAccountName() const;
     void slotTestFail();
     void slotTestResult(const QString &result);
@@ -165,6 +169,7 @@ private:
     KIdentityManagementCore::IdentityManager *mIdentityManager;
     mutable KIdentityManagementCore::Identity mIdentity;
     bool mHasTransport = true;
+    std::optional<GroupwareServer> mGroupware;
 };
 
 QDebug operator<<(QDebug d, const AccountConfiguration &t);

@@ -32,6 +32,14 @@ struct Server {
 QDebug operator<<(QDebug d, const Server &t);
 Q_DECLARE_TYPEINFO(Server, Q_MOVABLE_TYPE);
 
+struct GMailGroupware {
+};
+struct DAVGroupware {
+    QUrl &server;
+};
+
+using GroupwareServer = std::variant<GMailGroupware, DAVGroupware>;
+
 struct EmailProvider {
     QStringList domains;
     QString displayName;
@@ -40,6 +48,8 @@ struct EmailProvider {
     QList<Server> imapServers;
     QList<Server> popServers;
     QList<Server> smtpServers;
+
+    std::optional<GroupwareServer> groupware;
 };
 QDebug operator<<(QDebug d, const EmailProvider &t);
 Q_DECLARE_TYPEINFO(EmailProvider, Q_MOVABLE_TYPE);
