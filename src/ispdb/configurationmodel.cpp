@@ -49,7 +49,7 @@ QVariant ConfigurationModel::data(const QModelIndex &index, int role) const
         return incomingServer.type == Server::Type::IMAP ? i18n("IMAP") : i18n("POP3");
     case DescriptionRole:
         return incomingServer.type == Server::Type::IMAP ? i18n("Keep your folders and emails synced on your server")
-                                                         : i18n("Keep your folders and emails on your computer");
+                                                         : i18n("Remove your emails from your server and keep them only on your computer");
     case IncomingHostRole:
         return incomingServer.hostname;
     case IncomingTagsRole:
