@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-06 00:38+0000\n"
+"POT-Creation-Date: 2024-03-12 00:38+0000\n"
 "PO-Revision-Date: 2024-02-19 12:11+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -32,91 +32,91 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "translator@legisign.org"
 
-#: accountconfiguration.cpp:189 ispdb/configurationmodel.cpp:135
+#: accountconfiguration.cpp:200 ispdb/configurationmodel.cpp:147
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Nimetön"
 
-#: accountconfiguration.cpp:200
+#: accountconfiguration.cpp:211
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr ""
 
-#: accountconfiguration.cpp:203
+#: accountconfiguration.cpp:214
 #, fuzzy, kde-format
 #| msgid "Full name:"
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Koko nimi:"
 
-#: accountconfiguration.cpp:204
+#: accountconfiguration.cpp:215
 #, fuzzy, kde-format
 #| msgid "E-mail address:"
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Sähköpostiosoite:"
 
-#: accountconfiguration.cpp:233
+#: accountconfiguration.cpp:244
 #, fuzzy, kde-format
 #| msgid "Mail transport account deleted."
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Postinvälitystili poistettu."
 
-#: accountconfiguration.cpp:236
+#: accountconfiguration.cpp:247
 #, fuzzy, kde-format
 #| msgid "Hostname:"
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Konenimi:"
 
-#: accountconfiguration.cpp:237
+#: accountconfiguration.cpp:248
 #, fuzzy, kde-format
 #| msgid "Port:"
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Portti:"
 
-#: accountconfiguration.cpp:238
+#: accountconfiguration.cpp:249
 #, fuzzy, kde-format
 #| msgid "Username:"
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Käyttäjätunnus:"
 
-#: accountconfiguration.cpp:240
+#: accountconfiguration.cpp:251
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr ""
 
-#: accountconfiguration.cpp:242
+#: accountconfiguration.cpp:253
 #, fuzzy, kde-format
 #| msgid "Authentication Method:"
 msgctxt "log entry content"
 msgid "Authentication:"
 msgstr "Todennustapa:"
 
-#: ispdb/configurationmodel.cpp:45 ispdb/serverconfiguration.cpp:23
+#: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
 #, kde-format
 msgid "IMAP"
 msgstr "IMAP"
 
-#: ispdb/configurationmodel.cpp:45 ispdb/serverconfiguration.cpp:26
+#: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:26
 #: qml/ManualConfigurationPage.qml:90
 #, kde-format
 msgid "POP3"
 msgstr "POP3"
 
-#: ispdb/configurationmodel.cpp:47
+#: ispdb/configurationmodel.cpp:51
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
 msgstr "Pidä kansiot ja viestit tahdistettuna palvelimessa"
 
-#: ispdb/configurationmodel.cpp:48
+#: ispdb/configurationmodel.cpp:52
 #, kde-format
 msgid "Keep your folders and emails on your computer"
 msgstr "Pidä kansiot ja viestit paikallisella koneella"
@@ -143,17 +143,17 @@ msgctxt "No security mechanism"
 msgid "None"
 msgstr "Ei mitään"
 
-#: ispdbservice.cpp:134
+#: ispdbservice.cpp:133
 #, kde-format
 msgid "Configuration found auto config file."
 msgstr "Määritys löytyi automaattimääritystiedostosta."
 
-#: ispdbservice.cpp:137
+#: ispdbservice.cpp:136
 #, kde-format
 msgid "Configuration found in well-known file."
 msgstr "Määritys löytyi tunnetusta tiedostosta."
 
-#: ispdbservice.cpp:140
+#: ispdbservice.cpp:139
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Määritys löytyi Mozillan FAI-tietokannasta."
@@ -230,6 +230,18 @@ msgstr "ispdb-palvelimesta ei löytynyt määritystä."
 #, kde-format
 msgid "Manual Configuration"
 msgstr "Manuaalinen asetus"
+
+#: qml/ConfigurationSelectionPage.qml:115
+#, kde-format
+msgctxt "@title:group"
+msgid "Calendar and Contacts"
+msgstr ""
+
+#: qml/ConfigurationSelectionPage.qml:126
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable calendar and contact integration"
+msgstr ""
 
 #: qml/DetailsPage.qml:15
 #, fuzzy, kde-format

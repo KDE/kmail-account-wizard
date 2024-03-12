@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-06 00:38+0000\n"
+"POT-Creation-Date: 2024-03-12 00:38+0000\n"
 "PO-Revision-Date: 2024-02-17 13:24+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -27,84 +27,84 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mkondarev@yahoo.de"
 
-#: accountconfiguration.cpp:189 ispdb/configurationmodel.cpp:135
+#: accountconfiguration.cpp:200 ispdb/configurationmodel.cpp:147
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Неозаглавен"
 
-#: accountconfiguration.cpp:200
+#: accountconfiguration.cpp:211
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "Създаване на пощенска самоличност: %1"
 
-#: accountconfiguration.cpp:203
+#: accountconfiguration.cpp:214
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Цяло име:"
 
-#: accountconfiguration.cpp:204
+#: accountconfiguration.cpp:215
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Основен адрес на е-поща:"
 
-#: accountconfiguration.cpp:233
+#: accountconfiguration.cpp:244
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Настройката за транспорт на пощата завърши: %1"
 
-#: accountconfiguration.cpp:236
+#: accountconfiguration.cpp:247
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Хост:"
 
-#: accountconfiguration.cpp:237
+#: accountconfiguration.cpp:248
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Порт:"
 
-#: accountconfiguration.cpp:238
+#: accountconfiguration.cpp:249
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Потребителско име:"
 
-#: accountconfiguration.cpp:240
+#: accountconfiguration.cpp:251
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "Шифроване:"
 
-#: accountconfiguration.cpp:242
+#: accountconfiguration.cpp:253
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
 msgstr "Удостоверяване:"
 
-#: ispdb/configurationmodel.cpp:45 ispdb/serverconfiguration.cpp:23
+#: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
 #, kde-format
 msgid "IMAP"
 msgstr "IMAP"
 
-#: ispdb/configurationmodel.cpp:45 ispdb/serverconfiguration.cpp:26
+#: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:26
 #: qml/ManualConfigurationPage.qml:90
 #, kde-format
 msgid "POP3"
 msgstr "POP3"
 
-#: ispdb/configurationmodel.cpp:47
+#: ispdb/configurationmodel.cpp:51
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
 msgstr "Дръжте папките и имейлите си синхронизирани на вашия сървър"
 
-#: ispdb/configurationmodel.cpp:48
+#: ispdb/configurationmodel.cpp:52
 #, kde-format
 msgid "Keep your folders and emails on your computer"
 msgstr "Дръжте папките и имейлите си синхронизирани на вашия компютър"
@@ -131,17 +131,17 @@ msgctxt "No security mechanism"
 msgid "None"
 msgstr "Без"
 
-#: ispdbservice.cpp:134
+#: ispdbservice.cpp:133
 #, kde-format
 msgid "Configuration found auto config file."
 msgstr "Открит е файл auto config."
 
-#: ispdbservice.cpp:137
+#: ispdbservice.cpp:136
 #, kde-format
 msgid "Configuration found in well-known file."
 msgstr "Открит е добе познат конфигурационен файл."
 
-#: ispdbservice.cpp:140
+#: ispdbservice.cpp:139
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Намерена е е конфигурация в Mozilla FAI Database."
@@ -217,6 +217,18 @@ msgstr ""
 #, kde-format
 msgid "Manual Configuration"
 msgstr "Ръчна конфигурация"
+
+#: qml/ConfigurationSelectionPage.qml:115
+#, kde-format
+msgctxt "@title:group"
+msgid "Calendar and Contacts"
+msgstr ""
+
+#: qml/ConfigurationSelectionPage.qml:126
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable calendar and contact integration"
+msgstr ""
 
 #: qml/DetailsPage.qml:15
 #, kde-format
