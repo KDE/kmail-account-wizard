@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-06 02:18+0000\n"
+"POT-Creation-Date: 2024-03-12 02:20+0000\n"
 "PO-Revision-Date: 2024-02-19 21:31+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -27,84 +27,84 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: accountconfiguration.cpp:203 ispdb/configurationmodel.cpp:137
+#: accountconfiguration.cpp:214 ispdb/configurationmodel.cpp:149
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "이름 없음"
 
-#: accountconfiguration.cpp:214
+#: accountconfiguration.cpp:225
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "이메일 프로필 만들기: %1"
 
-#: accountconfiguration.cpp:217
+#: accountconfiguration.cpp:228
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "전체 이름:"
 
-#: accountconfiguration.cpp:218
+#: accountconfiguration.cpp:229
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "주 이메일 주소:"
 
-#: accountconfiguration.cpp:247
+#: accountconfiguration.cpp:258
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "메일 전송 설정이 완료됨: %1"
 
-#: accountconfiguration.cpp:250
+#: accountconfiguration.cpp:261
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "호스트:"
 
-#: accountconfiguration.cpp:251
+#: accountconfiguration.cpp:262
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "포트:"
 
-#: accountconfiguration.cpp:252
+#: accountconfiguration.cpp:263
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "사용자 이름:"
 
-#: accountconfiguration.cpp:254
+#: accountconfiguration.cpp:265
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "암호화:"
 
-#: accountconfiguration.cpp:256
+#: accountconfiguration.cpp:267
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
 msgstr "인증:"
 
-#: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:23
+#: ispdb/configurationmodel.cpp:51 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
 #, kde-format
 msgid "IMAP"
 msgstr "IMAP"
 
-#: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:26
+#: ispdb/configurationmodel.cpp:51 ispdb/serverconfiguration.cpp:26
 #: qml/ManualConfigurationPage.qml:90
 #, kde-format
 msgid "POP3"
 msgstr "POP3"
 
-#: ispdb/configurationmodel.cpp:49
+#: ispdb/configurationmodel.cpp:53
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
 msgstr "폴더와 이메일을 서버와 동기화"
 
-#: ispdb/configurationmodel.cpp:50
+#: ispdb/configurationmodel.cpp:54
 #, kde-format
 msgid "Keep your folders and emails on your computer"
 msgstr "폴더와 이메일을 내 컴퓨터에 저장"
@@ -131,17 +131,17 @@ msgctxt "No security mechanism"
 msgid "None"
 msgstr "없음"
 
-#: ispdbservice.cpp:134
+#: ispdbservice.cpp:133
 #, kde-format
 msgid "Configuration found auto config file."
 msgstr "자동 설정 파일에서 설정을 찾았습니다."
 
-#: ispdbservice.cpp:137
+#: ispdbservice.cpp:136
 #, kde-format
 msgid "Configuration found in well-known file."
 msgstr "well-known 파일에서 설정을 찾았습니다."
 
-#: ispdbservice.cpp:140
+#: ispdbservice.cpp:139
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Mozilla FAI 데이터베이스에서 설정을 찾았습니다."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-06 02:18+0000\n"
+"POT-Creation-Date: 2024-03-12 02:20+0000\n"
 "PO-Revision-Date: 2010-03-18 00:57-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -27,40 +27,40 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kscanne@gmail.com"
 
-#: accountconfiguration.cpp:203 ispdb/configurationmodel.cpp:137
+#: accountconfiguration.cpp:214 ispdb/configurationmodel.cpp:149
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Gan ainm"
 
-#: accountconfiguration.cpp:214
+#: accountconfiguration.cpp:225
 #, fuzzy, kde-format
 #| msgid "Create a new identity"
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "Cruthaigh aitheantas nua"
 
-#: accountconfiguration.cpp:217
+#: accountconfiguration.cpp:228
 #, fuzzy, kde-format
 #| msgid "Full Name"
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Ainm Iomlán"
 
-#: accountconfiguration.cpp:218
+#: accountconfiguration.cpp:229
 #, fuzzy, kde-format
 #| msgid "E-mail address:"
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Seoladh ríomhphoist:"
 
-#: accountconfiguration.cpp:247
+#: accountconfiguration.cpp:258
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr ""
 
-#: accountconfiguration.cpp:250
+#: accountconfiguration.cpp:261
 #, fuzzy, kde-format
 #| msgctxt "Default name for new email accounts/identities."
 #| msgid "Unnamed"
@@ -68,13 +68,13 @@ msgctxt "log entry content"
 msgid "Host:"
 msgstr "Gan ainm"
 
-#: accountconfiguration.cpp:251
+#: accountconfiguration.cpp:262
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr ""
 
-#: accountconfiguration.cpp:252
+#: accountconfiguration.cpp:263
 #, fuzzy, kde-format
 #| msgctxt "Default name for new email accounts/identities."
 #| msgid "Unnamed"
@@ -82,36 +82,36 @@ msgctxt "log entry content"
 msgid "Username:"
 msgstr "Gan ainm"
 
-#: accountconfiguration.cpp:254
+#: accountconfiguration.cpp:265
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr ""
 
-#: accountconfiguration.cpp:256
+#: accountconfiguration.cpp:267
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
 msgstr ""
 
-#: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:23
+#: ispdb/configurationmodel.cpp:51 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
 #, kde-format
 msgid "IMAP"
 msgstr ""
 
-#: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:26
+#: ispdb/configurationmodel.cpp:51 ispdb/serverconfiguration.cpp:26
 #: qml/ManualConfigurationPage.qml:90
 #, kde-format
 msgid "POP3"
 msgstr ""
 
-#: ispdb/configurationmodel.cpp:49
+#: ispdb/configurationmodel.cpp:53
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
 msgstr ""
 
-#: ispdb/configurationmodel.cpp:50
+#: ispdb/configurationmodel.cpp:54
 #, kde-format
 msgid "Keep your folders and emails on your computer"
 msgstr ""
@@ -138,17 +138,17 @@ msgctxt "No security mechanism"
 msgid "None"
 msgstr ""
 
-#: ispdbservice.cpp:134
+#: ispdbservice.cpp:133
 #, kde-format
 msgid "Configuration found auto config file."
 msgstr ""
 
-#: ispdbservice.cpp:137
+#: ispdbservice.cpp:136
 #, kde-format
 msgid "Configuration found in well-known file."
 msgstr ""
 
-#: ispdbservice.cpp:140
+#: ispdbservice.cpp:139
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
 msgstr ""

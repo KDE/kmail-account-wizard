@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-06 02:18+0000\n"
+"POT-Creation-Date: 2024-03-12 02:20+0000\n"
 "PO-Revision-Date: 2024-02-19 08:00+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -31,84 +31,84 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "franklin@goodhorse.idv.tw"
 
-#: accountconfiguration.cpp:203 ispdb/configurationmodel.cpp:137
+#: accountconfiguration.cpp:214 ispdb/configurationmodel.cpp:149
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "未命名"
 
-#: accountconfiguration.cpp:214
+#: accountconfiguration.cpp:225
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "建立電子郵件身份：%1"
 
-#: accountconfiguration.cpp:217
+#: accountconfiguration.cpp:228
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "全名："
 
-#: accountconfiguration.cpp:218
+#: accountconfiguration.cpp:229
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "主要電子郵件地址："
 
-#: accountconfiguration.cpp:247
+#: accountconfiguration.cpp:258
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "郵件傳遞設定已完成：%1"
 
-#: accountconfiguration.cpp:250
+#: accountconfiguration.cpp:261
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "主機："
 
-#: accountconfiguration.cpp:251
+#: accountconfiguration.cpp:262
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "連接埠："
 
-#: accountconfiguration.cpp:252
+#: accountconfiguration.cpp:263
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "使用者名稱："
 
-#: accountconfiguration.cpp:254
+#: accountconfiguration.cpp:265
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "加密："
 
-#: accountconfiguration.cpp:256
+#: accountconfiguration.cpp:267
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
 msgstr "認證："
 
-#: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:23
+#: ispdb/configurationmodel.cpp:51 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
 #, kde-format
 msgid "IMAP"
 msgstr "IMAP"
 
-#: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:26
+#: ispdb/configurationmodel.cpp:51 ispdb/serverconfiguration.cpp:26
 #: qml/ManualConfigurationPage.qml:90
 #, kde-format
 msgid "POP3"
 msgstr "POP3"
 
-#: ispdb/configurationmodel.cpp:49
+#: ispdb/configurationmodel.cpp:53
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
 msgstr "將您的資料夾與郵件同步到您的伺服器上"
 
-#: ispdb/configurationmodel.cpp:50
+#: ispdb/configurationmodel.cpp:54
 #, kde-format
 msgid "Keep your folders and emails on your computer"
 msgstr "將您的資料夾與郵件儲存在您的電腦上"
@@ -135,17 +135,17 @@ msgctxt "No security mechanism"
 msgid "None"
 msgstr "無"
 
-#: ispdbservice.cpp:134
+#: ispdbservice.cpp:133
 #, kde-format
 msgid "Configuration found auto config file."
 msgstr "在自動設定檔案中找到了設定找到。"
 
-#: ispdbservice.cpp:137
+#: ispdbservice.cpp:136
 #, kde-format
 msgid "Configuration found in well-known file."
 msgstr "在 well-known 檔案中找到了設定。"
 
-#: ispdbservice.cpp:140
+#: ispdbservice.cpp:139
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "在 Mozilla FAI 資料庫中找到了設定設定。"

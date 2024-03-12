@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-06 02:18+0000\n"
+"POT-Creation-Date: 2024-03-12 02:20+0000\n"
 "PO-Revision-Date: 2024-01-02 12:24+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -29,90 +29,90 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "axel@esperanto-jeunes.org,okellogg@users.sourceforge.net"
 
-#: accountconfiguration.cpp:203 ispdb/configurationmodel.cpp:137
+#: accountconfiguration.cpp:214 ispdb/configurationmodel.cpp:149
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Sennoma"
 
-#: accountconfiguration.cpp:214
+#: accountconfiguration.cpp:225
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr ""
 
-#: accountconfiguration.cpp:217
+#: accountconfiguration.cpp:228
 #, fuzzy, kde-format
 #| msgid "Full name:"
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Plena nomo:"
 
-#: accountconfiguration.cpp:218
+#: accountconfiguration.cpp:229
 #, fuzzy, kde-format
 #| msgid "E-mail address:"
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Retpoŝta adreso:"
 
-#: accountconfiguration.cpp:247
+#: accountconfiguration.cpp:258
 #, fuzzy, kde-format
 #| msgid "Resource setup completed."
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Rimeda agordo finiĝis."
 
-#: accountconfiguration.cpp:250
+#: accountconfiguration.cpp:261
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr ""
 
-#: accountconfiguration.cpp:251
+#: accountconfiguration.cpp:262
 #, fuzzy, kde-format
 #| msgid "Port:"
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Pordo:"
 
-#: accountconfiguration.cpp:252
+#: accountconfiguration.cpp:263
 #, fuzzy, kde-format
 #| msgid "Username:"
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Uzantnomo:"
 
-#: accountconfiguration.cpp:254
+#: accountconfiguration.cpp:265
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr ""
 
-#: accountconfiguration.cpp:256
+#: accountconfiguration.cpp:267
 #, fuzzy, kde-format
 #| msgid "Authentication Method:"
 msgctxt "log entry content"
 msgid "Authentication:"
 msgstr "Aŭtentiga Metodo:"
 
-#: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:23
+#: ispdb/configurationmodel.cpp:51 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
 #, kde-format
 msgid "IMAP"
 msgstr "IMAP"
 
-#: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:26
+#: ispdb/configurationmodel.cpp:51 ispdb/serverconfiguration.cpp:26
 #: qml/ManualConfigurationPage.qml:90
 #, kde-format
 msgid "POP3"
 msgstr "POP3"
 
-#: ispdb/configurationmodel.cpp:49
+#: ispdb/configurationmodel.cpp:53
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
 msgstr "Konservi viajn dosierujojn kaj retpoŝtojn sinkronigitaj en via servilo"
 
-#: ispdb/configurationmodel.cpp:50
+#: ispdb/configurationmodel.cpp:54
 #, kde-format
 msgid "Keep your folders and emails on your computer"
 msgstr "Konservi viajn dosierujojn kaj retpoŝtojn en via komputilo"
@@ -139,17 +139,17 @@ msgctxt "No security mechanism"
 msgid "None"
 msgstr "Neniu"
 
-#: ispdbservice.cpp:134
+#: ispdbservice.cpp:133
 #, kde-format
 msgid "Configuration found auto config file."
 msgstr "Agordo trovis aŭtomat-agordan dosieron."
 
-#: ispdbservice.cpp:137
+#: ispdbservice.cpp:136
 #, kde-format
 msgid "Configuration found in well-known file."
 msgstr "Agordo trovita en komune konata dosiero."
 
-#: ispdbservice.cpp:140
+#: ispdbservice.cpp:139
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Agordo trovita en Mozilla FAI-Datumbazo."

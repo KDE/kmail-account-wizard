@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-06 02:18+0000\n"
+"POT-Creation-Date: 2024-03-12 02:20+0000\n"
 "PO-Revision-Date: 2024-02-24 12:50+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -29,86 +29,86 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "safa1996alfulaij@gmail.com"
 
-#: accountconfiguration.cpp:203 ispdb/configurationmodel.cpp:137
+#: accountconfiguration.cpp:214 ispdb/configurationmodel.cpp:149
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "غير مسمًّى"
 
-#: accountconfiguration.cpp:214
+#: accountconfiguration.cpp:225
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "أنشئ هوية البريد الإلكتروني: %1"
 
-#: accountconfiguration.cpp:217
+#: accountconfiguration.cpp:228
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "الاسم كاملًا:"
 
-#: accountconfiguration.cpp:218
+#: accountconfiguration.cpp:229
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "عنوان البريد الإلكترونيّ الأساسي:"
 
-#: accountconfiguration.cpp:247
+#: accountconfiguration.cpp:258
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "اكتمل إعداد نقل البريد: %1"
 
-#: accountconfiguration.cpp:250
+#: accountconfiguration.cpp:261
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "المضيف:"
 
-#: accountconfiguration.cpp:251
+#: accountconfiguration.cpp:262
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "المنفذ:"
 
-#: accountconfiguration.cpp:252
+#: accountconfiguration.cpp:263
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "اسم المستخدم:"
 
-#: accountconfiguration.cpp:254
+#: accountconfiguration.cpp:265
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "التّعمية:"
 
-#: accountconfiguration.cpp:256
+#: accountconfiguration.cpp:267
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
 msgstr "الاستيثاق:"
 
-#: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:23
+#: ispdb/configurationmodel.cpp:51 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
 #, kde-format
 msgid "IMAP"
 msgstr "IMAP"
 
-#: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:26
+#: ispdb/configurationmodel.cpp:51 ispdb/serverconfiguration.cpp:26
 #: qml/ManualConfigurationPage.qml:90
 #, kde-format
 msgid "POP3"
 msgstr "POP3"
 
-#: ispdb/configurationmodel.cpp:49
+#: ispdb/configurationmodel.cpp:53
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
 msgstr ""
 "حافظ على مزامنة المجلدات ورسائل البريد الإلكتروني الخاصة بك على الخادم الخاص "
 "بك"
 
-#: ispdb/configurationmodel.cpp:50
+#: ispdb/configurationmodel.cpp:54
 #, kde-format
 msgid "Keep your folders and emails on your computer"
 msgstr ""
@@ -137,17 +137,17 @@ msgctxt "No security mechanism"
 msgid "None"
 msgstr "لا شيء"
 
-#: ispdbservice.cpp:134
+#: ispdbservice.cpp:133
 #, kde-format
 msgid "Configuration found auto config file."
 msgstr "عثر على ملف الضبط آليّ."
 
-#: ispdbservice.cpp:137
+#: ispdbservice.cpp:136
 #, kde-format
 msgid "Configuration found in well-known file."
 msgstr "عُثر  الضبط في ملف well-known"
 
-#: ispdbservice.cpp:140
+#: ispdbservice.cpp:139
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "عثر على الضبط في قاعدة بيانات Mozilla FAI."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-06 02:18+0000\n"
+"POT-Creation-Date: 2024-03-12 02:20+0000\n"
 "PO-Revision-Date: 2014-03-31 23:39+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -29,92 +29,92 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "m.j.wiese@web.de, s_dibbern@web.de"
 
-#: accountconfiguration.cpp:203 ispdb/configurationmodel.cpp:137
+#: accountconfiguration.cpp:214 ispdb/configurationmodel.cpp:149
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Ahn Naam"
 
-#: accountconfiguration.cpp:214
+#: accountconfiguration.cpp:225
 #, fuzzy, kde-format
 #| msgid "Create new identity"
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "Nieg Identiteet opstellen"
 
-#: accountconfiguration.cpp:217
+#: accountconfiguration.cpp:228
 #, fuzzy, kde-format
 #| msgid "Full name:"
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Heel Naam:"
 
-#: accountconfiguration.cpp:218
+#: accountconfiguration.cpp:229
 #, fuzzy, kde-format
 #| msgid "E-mail address:"
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Nettpostadress:"
 
-#: accountconfiguration.cpp:247
+#: accountconfiguration.cpp:258
 #, fuzzy, kde-format
 #| msgid "Mail transport account deleted."
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Konto för Nettpost-Överdregen wöör wegdaan."
 
-#: accountconfiguration.cpp:250
+#: accountconfiguration.cpp:261
 #, fuzzy, kde-format
 #| msgid "Username:"
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Brukernaam:"
 
-#: accountconfiguration.cpp:251
+#: accountconfiguration.cpp:262
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr ""
 
-#: accountconfiguration.cpp:252
+#: accountconfiguration.cpp:263
 #, fuzzy, kde-format
 #| msgid "Username:"
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Brukernaam:"
 
-#: accountconfiguration.cpp:254
+#: accountconfiguration.cpp:265
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr ""
 
-#: accountconfiguration.cpp:256
+#: accountconfiguration.cpp:267
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
 msgstr ""
 
-#: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:23
+#: ispdb/configurationmodel.cpp:51 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
 #, fuzzy, kde-format
 #| msgid "IMAP, %1"
 msgid "IMAP"
 msgstr "IMAP, %1"
 
-#: ispdb/configurationmodel.cpp:47 ispdb/serverconfiguration.cpp:26
+#: ispdb/configurationmodel.cpp:51 ispdb/serverconfiguration.cpp:26
 #: qml/ManualConfigurationPage.qml:90
 #, fuzzy, kde-format
 #| msgid "POP3, %1"
 msgid "POP3"
 msgstr "POP3, %1"
 
-#: ispdb/configurationmodel.cpp:49
+#: ispdb/configurationmodel.cpp:53
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
 msgstr ""
 
-#: ispdb/configurationmodel.cpp:50
+#: ispdb/configurationmodel.cpp:54
 #, kde-format
 msgid "Keep your folders and emails on your computer"
 msgstr ""
@@ -142,18 +142,18 @@ msgctxt "No security mechanism"
 msgid "None"
 msgstr ""
 
-#: ispdbservice.cpp:134
+#: ispdbservice.cpp:133
 #, fuzzy, kde-format
 #| msgid "Autodetecting settings failed"
 msgid "Configuration found auto config file."
 msgstr "Instellen laat sik nich automaatsch opdecken."
 
-#: ispdbservice.cpp:137
+#: ispdbservice.cpp:136
 #, kde-format
 msgid "Configuration found in well-known file."
 msgstr ""
 
-#: ispdbservice.cpp:140
+#: ispdbservice.cpp:139
 #, fuzzy, kde-format
 #| msgid "Lookup configuration: Mozilla database"
 msgid "Configuration found in Mozilla FAI Database."
