@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-12 00:38+0000\n"
-"PO-Revision-Date: 2024-02-17 11:40+0100\n"
+"PO-Revision-Date: 2024-03-12 11:48+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -227,13 +227,13 @@ msgstr "Configuració manual"
 #, kde-format
 msgctxt "@title:group"
 msgid "Calendar and Contacts"
-msgstr ""
+msgstr "Calendari i contactes"
 
 #: qml/ConfigurationSelectionPage.qml:126
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable calendar and contact integration"
-msgstr ""
+msgstr "Habilita la integració del calendari i els contactes"
 
 #: qml/DetailsPage.qml:15
 #, kde-format
