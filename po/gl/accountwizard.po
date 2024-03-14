@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-12 00:38+0000\n"
+"POT-Creation-Date: 2024-03-14 00:38+0000\n"
 "PO-Revision-Date: 2024-02-19 21:17+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -108,8 +108,9 @@ msgid "Keep your folders and emails synced on your server"
 msgstr "Manter os seus cartafoles e mensaxes sincronizados no seu servidor."
 
 #: ispdb/configurationmodel.cpp:52
-#, kde-format
-msgid "Keep your folders and emails on your computer"
+#, fuzzy, kde-format
+#| msgid "Keep your folders and emails on your computer"
+msgid "Remove your emails from your server and keep them only on your computer"
 msgstr "Manter os seus cartafoles e mensaxes no seu computador."
 
 #: ispdb/serverconfiguration.cpp:29

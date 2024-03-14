@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-12 00:38+0000\n"
+"POT-Creation-Date: 2024-03-14 00:38+0000\n"
 "PO-Revision-Date: 2024-02-19 12:11+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -117,8 +117,9 @@ msgid "Keep your folders and emails synced on your server"
 msgstr "Pidä kansiot ja viestit tahdistettuna palvelimessa"
 
 #: ispdb/configurationmodel.cpp:52
-#, kde-format
-msgid "Keep your folders and emails on your computer"
+#, fuzzy, kde-format
+#| msgid "Keep your folders and emails on your computer"
+msgid "Remove your emails from your server and keep them only on your computer"
 msgstr "Pidä kansiot ja viestit paikallisella koneella"
 
 #: ispdb/serverconfiguration.cpp:29

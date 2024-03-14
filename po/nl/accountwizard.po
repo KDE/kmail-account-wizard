@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-12 00:38+0000\n"
-"PO-Revision-Date: 2024-02-17 10:40+0100\n"
+"POT-Creation-Date: 2024-03-14 00:38+0000\n"
+"PO-Revision-Date: 2024-03-12 09:03+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -107,8 +107,9 @@ msgid "Keep your folders and emails synced on your server"
 msgstr "Uw mappen en e-mails gesynchroniseerd houden op uw server"
 
 #: ispdb/configurationmodel.cpp:52
-#, kde-format
-msgid "Keep your folders and emails on your computer"
+#, fuzzy, kde-format
+#| msgid "Keep your folders and emails on your computer"
+msgid "Remove your emails from your server and keep them only on your computer"
 msgstr "Uw mappen en e-mails op uw computer houden"
 
 #: ispdb/serverconfiguration.cpp:29
@@ -223,13 +224,13 @@ msgstr "Handmatige configuratie"
 #, kde-format
 msgctxt "@title:group"
 msgid "Calendar and Contacts"
-msgstr ""
+msgstr "Agenda en contactpersonen"
 
 #: qml/ConfigurationSelectionPage.qml:126
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable calendar and contact integration"
-msgstr ""
+msgstr "Integratie van agenda en contactpersonen"
 
 #: qml/DetailsPage.qml:15
 #, kde-format

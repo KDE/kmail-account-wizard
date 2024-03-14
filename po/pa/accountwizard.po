@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-12 00:38+0000\n"
+"POT-Creation-Date: 2024-03-14 00:38+0000\n"
 "PO-Revision-Date: 2011-01-04 07:50+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <kde-i18n-doc@kde.org>\n"
@@ -110,7 +110,7 @@ msgstr ""
 
 #: ispdb/configurationmodel.cpp:52
 #, kde-format
-msgid "Keep your folders and emails on your computer"
+msgid "Remove your emails from your server and keep them only on your computer"
 msgstr ""
 
 #: ispdb/serverconfiguration.cpp:29

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-12 00:38+0000\n"
+"POT-Creation-Date: 2024-03-14 00:38+0000\n"
 "PO-Revision-Date: 2024-02-17 21:20+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -107,8 +107,9 @@ msgid "Keep your folders and emails synced on your server"
 msgstr "Mappák és e-mailek szinkronizálása a kiszolgálón"
 
 #: ispdb/configurationmodel.cpp:52
-#, kde-format
-msgid "Keep your folders and emails on your computer"
+#, fuzzy, kde-format
+#| msgid "Keep your folders and emails on your computer"
+msgid "Remove your emails from your server and keep them only on your computer"
 msgstr "Mappák és e-mailek tárolása a számítógépen"
 
 #: ispdb/serverconfiguration.cpp:29

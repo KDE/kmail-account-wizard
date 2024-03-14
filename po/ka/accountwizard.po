@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-12 00:38+0000\n"
-"PO-Revision-Date: 2024-02-17 04:08+0100\n"
+"POT-Creation-Date: 2024-03-14 00:38+0000\n"
+"PO-Revision-Date: 2024-03-12 05:11+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -106,8 +106,9 @@ msgid "Keep your folders and emails synced on your server"
 msgstr "იქონიეთ თქვენი საქაღალდეები და ელფოსტა სინქონიზებული თქვენს სერვერთან"
 
 #: ispdb/configurationmodel.cpp:52
-#, kde-format
-msgid "Keep your folders and emails on your computer"
+#, fuzzy, kde-format
+#| msgid "Keep your folders and emails on your computer"
+msgid "Remove your emails from your server and keep them only on your computer"
 msgstr "იქონიეთ თქვენი საქაღალდეები და ელფოსტა თქვენს კომპიუტერზე"
 
 #: ispdb/serverconfiguration.cpp:29
@@ -222,13 +223,13 @@ msgstr "ხელით მორგება"
 #, kde-format
 msgctxt "@title:group"
 msgid "Calendar and Contacts"
-msgstr ""
+msgstr "კალენდარი და კონტაქტები"
 
 #: qml/ConfigurationSelectionPage.qml:126
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable calendar and contact integration"
-msgstr ""
+msgstr "კალენდრისა და კონტაქტების ინტეგრაციის ჩართვა"
 
 #: qml/DetailsPage.qml:15
 #, kde-format
