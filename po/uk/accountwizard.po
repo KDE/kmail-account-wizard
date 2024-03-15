@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-14 00:38+0000\n"
-"PO-Revision-Date: 2024-03-12 20:23+0200\n"
+"PO-Revision-Date: 2024-03-14 20:21+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -108,10 +108,11 @@ msgid "Keep your folders and emails synced on your server"
 msgstr "Зберігати теки і повідомлення синхронізованими на сервері"
 
 #: ispdb/configurationmodel.cpp:52
-#, fuzzy, kde-format
-#| msgid "Keep your folders and emails on your computer"
+#, kde-format
 msgid "Remove your emails from your server and keep them only on your computer"
-msgstr "Зберігати ваші теки і повідомлення на вашому комп'ютері"
+msgstr ""
+"Вилучати ваші повідомлення з вашого сервера і зберігати їх лише на вашому "
+"комп'ютері"
 
 #: ispdb/serverconfiguration.cpp:29
 #, kde-format

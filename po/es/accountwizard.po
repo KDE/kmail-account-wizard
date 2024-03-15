@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-14 00:38+0000\n"
-"PO-Revision-Date: 2024-03-12 22:21+0100\n"
+"PO-Revision-Date: 2024-03-14 03:31+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -108,10 +108,9 @@ msgid "Keep your folders and emails synced on your server"
 msgstr "Mantener las carpetas y los mensajes sincronizados con el servidor"
 
 #: ispdb/configurationmodel.cpp:52
-#, fuzzy, kde-format
-#| msgid "Keep your folders and emails on your computer"
+#, kde-format
 msgid "Remove your emails from your server and keep them only on your computer"
-msgstr "Mantener las carpetas y los mensajes en su equipo"
+msgstr "Eliminar los mensajes del servidor y guardarlos solo en el equipo"
 
 #: ispdb/serverconfiguration.cpp:29
 #, kde-format

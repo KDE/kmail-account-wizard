@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-runtime-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-14 00:38+0000\n"
-"PO-Revision-Date: 2024-03-12 13:25+0300\n"
+"PO-Revision-Date: 2024-03-14 13:59+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -114,10 +114,9 @@ msgid "Keep your folders and emails synced on your server"
 msgstr "Klasörleri ve e-postaları sunucuyla eşzamanlı tut"
 
 #: ispdb/configurationmodel.cpp:52
-#, fuzzy, kde-format
-#| msgid "Keep your folders and emails on your computer"
+#, kde-format
 msgid "Remove your emails from your server and keep them only on your computer"
-msgstr "Klasörleri ve e-postaları bilgisayarda tut"
+msgstr "E-postaları sunucudan kaldır ve yalnızca bilgisayarda sakla"
 
 #: ispdb/serverconfiguration.cpp:29
 #, kde-format
@@ -169,7 +168,7 @@ msgstr "Kişisel Bilgi Yöneticisi hesaplarını yapılandırmaya yardım eder"
 #: main.cpp:33
 #, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
-msgstr "(c) 2009-2024 Akonadi geliştiricileri"
+msgstr "(c) 2009–2024 Akonadi geliştiricileri"
 
 #: main.cpp:36
 #, kde-format
