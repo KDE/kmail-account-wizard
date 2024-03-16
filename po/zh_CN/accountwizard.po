@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-14 00:38+0000\n"
-"PO-Revision-Date: 2024-03-14 19:27\n"
+"PO-Revision-Date: 2024-03-15 21:00\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -49,25 +49,25 @@ msgstr "全名："
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
-msgstr ""
+msgstr "主要电子邮件地址："
 
 #: accountconfiguration.cpp:244
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
-msgstr ""
+msgstr "邮件传输设置完成: %1"
 
 #: accountconfiguration.cpp:247
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
-msgstr ""
+msgstr "主机名:"
 
 #: accountconfiguration.cpp:248
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
-msgstr ""
+msgstr "端口："
 
 #: accountconfiguration.cpp:249
 #, kde-format
@@ -79,25 +79,25 @@ msgstr "用户名："
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
-msgstr ""
+msgstr "加密："
 
 #: accountconfiguration.cpp:253
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
-msgstr ""
+msgstr "身份验证："
 
 #: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
 #, kde-format
 msgid "IMAP"
-msgstr ""
+msgstr "IMAP"
 
 #: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:26
 #: qml/ManualConfigurationPage.qml:90
 #, kde-format
 msgid "POP3"
-msgstr ""
+msgstr "POP3"
 
 #: ispdb/configurationmodel.cpp:51
 #, kde-format
@@ -112,12 +112,12 @@ msgstr ""
 #: ispdb/serverconfiguration.cpp:29
 #, kde-format
 msgid "SMTP"
-msgstr ""
+msgstr "SMTP"
 
 #: ispdb/serverconfiguration.cpp:35
 #, kde-format
 msgid "SSL/TLS"
-msgstr ""
+msgstr "SSL/TLS"
 
 #: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:121
 #: qml/ManualConfigurationPage.qml:226
@@ -129,7 +129,7 @@ msgstr ""
 #, kde-format
 msgctxt "No security mechanism"
 msgid "None"
-msgstr ""
+msgstr "无"
 
 #: ispdbservice.cpp:133
 #, kde-format
@@ -215,13 +215,13 @@ msgstr ""
 #: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
 #, kde-format
 msgid "Manual Configuration"
-msgstr ""
+msgstr "手动配置"
 
 #: qml/ConfigurationSelectionPage.qml:115
 #, kde-format
 msgctxt "@title:group"
 msgid "Calendar and Contacts"
-msgstr ""
+msgstr "日历和联系人"
 
 #: qml/ConfigurationSelectionPage.qml:126
 #, kde-format
@@ -285,7 +285,7 @@ msgstr ""
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:206
 #, kde-format
 msgid "Port:"
-msgstr ""
+msgstr "端口："
 
 #: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:220
 #, kde-format
