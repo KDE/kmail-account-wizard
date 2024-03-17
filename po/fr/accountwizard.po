@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-14 00:38+0000\n"
-"PO-Revision-Date: 2024-03-13 14:02+0100\n"
+"PO-Revision-Date: 2024-03-15 08:42+0100\n"
 "Last-Translator: xavier <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -114,10 +114,11 @@ msgid "Keep your folders and emails synced on your server"
 msgstr "Conservez vos dossiers et courriels synchronisés sur votre serveur"
 
 #: ispdb/configurationmodel.cpp:52
-#, fuzzy, kde-format
-#| msgid "Keep your folders and emails on your computer"
+#, kde-format
 msgid "Remove your emails from your server and keep them only on your computer"
-msgstr "Conservez vos dossiers et vos courriels sur votre ordinateur"
+msgstr ""
+"Supprimer les courriels sur votre serveur et ne les conserver que sur votre "
+"ordinateur"
 
 #: ispdb/serverconfiguration.cpp:29
 #, kde-format
