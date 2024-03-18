@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-14 00:38+0000\n"
-"PO-Revision-Date: 2024-02-24 17:01+0100\n"
+"PO-Revision-Date: 2024-03-17 11:18+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -108,10 +108,9 @@ msgid "Keep your folders and emails synced on your server"
 msgstr "Synchronizuj swoje katalogi i pocztę z serwerem"
 
 #: ispdb/configurationmodel.cpp:52
-#, fuzzy, kde-format
-#| msgid "Keep your folders and emails on your computer"
+#, kde-format
 msgid "Remove your emails from your server and keep them only on your computer"
-msgstr "Zachowaj swoje katalogi i pocztę na swoim komputerze"
+msgstr "Usuń moją pocztę z serwera i przechowuj ją tylko na moim komputerze"
 
 #: ispdb/serverconfiguration.cpp:29
 #, kde-format
@@ -225,13 +224,13 @@ msgstr "Ustawianie ręczne"
 #, kde-format
 msgctxt "@title:group"
 msgid "Calendar and Contacts"
-msgstr ""
+msgstr "Kalendarz i Kontakty"
 
 #: qml/ConfigurationSelectionPage.qml:126
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable calendar and contact integration"
-msgstr ""
+msgstr "Włącz obsługę kalendarza i kontaktów"
 
 #: qml/DetailsPage.qml:15
 #, kde-format

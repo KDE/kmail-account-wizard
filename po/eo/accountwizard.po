@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-14 00:38+0000\n"
-"PO-Revision-Date: 2024-02-18 08:21+0100\n"
+"PO-Revision-Date: 2024-03-17 05:34+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -107,10 +107,10 @@ msgid "Keep your folders and emails synced on your server"
 msgstr "Konservi viajn dosierujojn kaj retpoŝtojn sinkronigitaj en via servilo"
 
 #: ispdb/configurationmodel.cpp:52
-#, fuzzy, kde-format
-#| msgid "Keep your folders and emails on your computer"
+#, kde-format
 msgid "Remove your emails from your server and keep them only on your computer"
-msgstr "Konservi viajn dosierujojn kaj retpoŝtojn en via komputilo"
+msgstr ""
+"Forigi viajn retpoŝtojn de via servilo kaj konservi ilin nur en via komputilo"
 
 #: ispdb/serverconfiguration.cpp:29
 #, kde-format
@@ -224,13 +224,13 @@ msgstr "Permana Agordo"
 #, kde-format
 msgctxt "@title:group"
 msgid "Calendar and Contacts"
-msgstr ""
+msgstr "Kalendaro kaj Kontaktoj"
 
 #: qml/ConfigurationSelectionPage.qml:126
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable calendar and contact integration"
-msgstr ""
+msgstr "Ebligi integriĝon de kalendaro kaj kontaktoj"
 
 #: qml/DetailsPage.qml:15
 #, kde-format
