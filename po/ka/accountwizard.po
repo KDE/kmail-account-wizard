@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-12 02:20+0000\n"
-"PO-Revision-Date: 2024-01-02 05:25+0100\n"
+"PO-Revision-Date: 2024-03-20 05:19+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -38,46 +38,40 @@ msgstr "უსახელო"
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
-msgstr ""
+msgstr "ელფოსტის იდენტიფიკატორის შექმნა: %1"
 
 #: accountconfiguration.cpp:228
-#, fuzzy, kde-format
-#| msgid "Full name:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "სრული სახელი:"
 
 #: accountconfiguration.cpp:229
-#, fuzzy, kde-format
-#| msgid "E-mail address:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
-msgstr "ელფოსტის მისამართი:"
+msgstr "ძირითადი ელფოსტის მისამართი:"
 
 #: accountconfiguration.cpp:258
-#, fuzzy, kde-format
-#| msgid "Mail transport account deleted."
+#, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
-msgstr "ფოსტის ტრანსპორტის ანგარიში წაიშალა."
+msgstr "ელფოსტის ტრანსპორტის მორგება დასრულდა: %1"
 
 #: accountconfiguration.cpp:261
-#, fuzzy, kde-format
-#| msgid "Hostname:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Host:"
-msgstr "ჰოსტის სახელი:"
+msgstr "ჰოსტი:"
 
 #: accountconfiguration.cpp:262
-#, fuzzy, kde-format
-#| msgid "Port:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "პორტი:"
 
 #: accountconfiguration.cpp:263
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "მომხმარებელი:"
@@ -86,14 +80,13 @@ msgstr "მომხმარებელი:"
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
-msgstr ""
+msgstr "დაშიფრვა:"
 
 #: accountconfiguration.cpp:267
-#, fuzzy, kde-format
-#| msgid "Authentication Method:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
-msgstr "ავთენტიკაციის მეთოდი:"
+msgstr "ავთენტიკაცია:"
 
 #: ispdb/configurationmodel.cpp:51 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
@@ -205,11 +198,10 @@ msgid "Outgoing"
 msgstr "გამავალი"
 
 #: qml/ConfigurationSelectionPage.qml:16
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgctxt "@title:group"
 msgid "Configuration Selection"
-msgstr "ავტოკონფიგურაცია ნაპოვნია."
+msgstr "კონფიგურაციის არჩევანი"
 
 #: qml/ConfigurationSelectionPage.qml:39
 #, kde-format
@@ -217,10 +209,9 @@ msgid "Available configurations"
 msgstr "ხელმისაწვდომი კონფიგურაციები"
 
 #: qml/ConfigurationSelectionPage.qml:56
-#, fuzzy, kde-format
-#| msgid "No config found from ispdb server."
+#, kde-format
 msgid "No configuration found from the internet for this server."
-msgstr "Ispdb სერვერიდან კონფიგურაცია ვერ ვიპოვე."
+msgstr "ამ სერვერისთვის ინტერნეტში კონფიგურაცია ვერ ვიპოვე."
 
 #: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
 #, kde-format
@@ -228,8 +219,7 @@ msgid "Manual Configuration"
 msgstr "ხელით მორგება"
 
 #: qml/DetailsPage.qml:15
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@title:group"
 msgid "Details"
 msgstr "დეტალები"
@@ -238,7 +228,7 @@ msgstr "დეტალები"
 #, kde-format
 msgctxt "@action:button"
 msgid "Quit"
-msgstr ""
+msgstr "გამორთვა"
 
 #: qml/DetailsPage.qml:24
 #, kde-format
@@ -249,7 +239,7 @@ msgstr "დეტალები"
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
-msgstr ""
+msgstr "დეტალები ხელმისაწვდომი არაა."
 
 #: qml/ManualConfigurationPage.qml:18
 #, kde-format
@@ -294,7 +284,7 @@ msgstr "უსაფრთხოება:"
 #: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:225
 #, kde-format
 msgid "SSL/TLS (recommanded)"
-msgstr ""
+msgstr "SSL/TLS (რეკომენდებულია)"
 
 #: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:224
 #, kde-format
@@ -344,12 +334,12 @@ msgstr "GSSAPI"
 #: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:249
 #, kde-format
 msgid "XOAuth (Gmail)"
-msgstr ""
+msgstr "XOAuth (Gmail)"
 
 #: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:250
 #, kde-format
 msgid "APOP"
-msgstr ""
+msgstr "APOP"
 
 #: qml/ManualConfigurationPage.qml:162 qml/ManualConfigurationPage.qml:263
 #, kde-format
@@ -379,22 +369,19 @@ msgstr "პირადი ინფორმაცია"
 #: qml/PersonalDataPage.qml:43
 #, kde-format
 msgid "Connect your Email Account"
-msgstr ""
+msgstr "მიიერთეთ თქვენი ელფოსტის ანგარიში"
 
 #: qml/PersonalDataPage.qml:51
-#, fuzzy, kde-format
-#| msgid ""
-#| "To use your current email address fill in your credentials.<br />This "
-#| "wizard will automatically search for a working and recommended server "
-#| "configuration."
+#, kde-format
 msgid ""
 "To use your current email address fill in your credentials. This wizard will "
 "automatically search for a working and recommended server configuration. "
 "Only the domain name part of the e-mail address will be sent over the "
 "Internet."
 msgstr ""
-"თქვენი მიმდინარე ელფოსტის გამოსაყენებლად შეავსეთ ავტორიზაციის დეტალები.<br /"
-">ოსტატი ავტომატურად მოძებნის მუშა და რეკომენდებულ სერვერის კონფიგურაციას."
+"თქვენი მიმდინარე ელფოსტის გამოსაყენებლად შეავსეთ ავტორიზაციის დეტალები."
+"ოსტატი ავტომატურად მოძებნის მუშა და რეკომენდებულ სერვერის კონფიგურაციას. "
+"ინტერნეტში, მხოლოდ, თქვენი ელფოსტის დომენის ნაწილი გაიგზავნება."
 
 #: qml/PersonalDataPage.qml:57
 #, kde-format
@@ -419,22 +406,21 @@ msgid "boss@example.corp"
 msgstr "ვითომუფროსი@მაგალითი.კომპ"
 
 #: qml/PersonalDataPage.qml:78
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password (optional):"
-msgstr "პაროლი:"
+msgstr "პაროლი (არასავალდებულო):"
 
 #: qml/WizardPage.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr ""
+msgstr "წინა"
 
 #: qml/WizardPage.qml:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "შემდეგი"
 
 #: resource.cpp:72
 #, kde-format
@@ -467,11 +453,11 @@ msgid "Unable to configure resource instance."
 msgstr "რესურსის გაშვებული ასლის მორგების შეცდომა."
 
 #: resource.cpp:131
-#, fuzzy, kde-format
-#| msgid "Could not convert value of setting '%1' to required type %2."
+#, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
-msgstr "პარამეტრის მნიშვნელობის '%1' საჭირო ტიპამდე '%2' გარდაქმნის შეცდომა."
+msgstr ""
+"პარამეტრის მნიშვნელობის '%1' ტიპი% %2 საჭირო ტიპამდე '%3' გარდაქმნის შეცდომა."
 
 #: resource.cpp:144
 #, kde-format
@@ -484,29 +470,28 @@ msgid "Could not save settings: %1"
 msgstr "პარამეტრების შენახვის შეცდომა: %1"
 
 #: resource.cpp:156
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
-msgstr "რესურსის მორგება დასრულდა."
+msgstr "რესურსის მორგება დასრულდა: %1"
 
 #: resource.cpp:159
 #, kde-format
 msgctxt "log entry content"
 msgid "Resouce type:"
-msgstr ""
+msgstr "რესურსის ტიპი:"
 
 #: resource.cpp:169
 #, kde-format
 msgctxt "Indication that the password set for the resource is empty"
 msgid "Empty"
-msgstr ""
+msgstr "ცარიელი"
 
 #: resource.cpp:174
 #, kde-format
 msgctxt "label"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #~ msgid "STARTTLS"
 #~ msgstr "STARTTLS"
