@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-14 00:38+0000\n"
-"PO-Revision-Date: 2024-03-04 16:09+0200\n"
+"PO-Revision-Date: 2024-03-24 11:55+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -104,13 +104,12 @@ msgstr "POP3"
 #: ispdb/configurationmodel.cpp:51
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
-msgstr "Turiet mapes un vēstules sinhronizētas ar serveri"
+msgstr "Paturēt mapes un vēstules sinhronizētas ar serveri"
 
 #: ispdb/configurationmodel.cpp:52
-#, fuzzy, kde-format
-#| msgid "Keep your folders and emails on your computer"
+#, kde-format
 msgid "Remove your emails from your server and keep them only on your computer"
-msgstr "Turiet mapes un e-pastus savā datorā"
+msgstr "Dzēst e-pastus no servera un tos paturēt tikai datorā"
 
 #: ispdb/serverconfiguration.cpp:29
 #, kde-format
@@ -224,13 +223,13 @@ msgstr "Manuālā konfigurācija"
 #, kde-format
 msgctxt "@title:group"
 msgid "Calendar and Contacts"
-msgstr ""
+msgstr "Kalendārs un kontakti"
 
 #: qml/ConfigurationSelectionPage.qml:126
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable calendar and contact integration"
-msgstr ""
+msgstr "Ieslēgt kalendāra un kontaktu integrāciju"
 
 #: qml/DetailsPage.qml:15
 #, kde-format
