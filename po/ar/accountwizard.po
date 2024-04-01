@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-14 00:38+0000\n"
-"PO-Revision-Date: 2024-02-24 12:50+0400\n"
+"PO-Revision-Date: 2024-03-31 12:05+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -109,12 +109,9 @@ msgstr ""
 "بك"
 
 #: ispdb/configurationmodel.cpp:52
-#, fuzzy, kde-format
-#| msgid "Keep your folders and emails on your computer"
+#, kde-format
 msgid "Remove your emails from your server and keep them only on your computer"
-msgstr ""
-"احتفظ بالمجلدات ورسائل البريد الإلكتروني الخاصة بك على جهاز الكمبيوتر الخاص "
-"بك"
+msgstr "أزل رسائلك الإلكترونية من على خادمك واحتفظ بها على حاسوبك فقط"
 
 #: ispdb/serverconfiguration.cpp:29
 #, kde-format
@@ -228,13 +225,13 @@ msgstr "ضبط يدوي"
 #, kde-format
 msgctxt "@title:group"
 msgid "Calendar and Contacts"
-msgstr ""
+msgstr "المتراسلون والتقويم"
 
 #: qml/ConfigurationSelectionPage.qml:126
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable calendar and contact integration"
-msgstr ""
+msgstr "تمكن تكامل التقويم والمتراسلون"
 
 #: qml/DetailsPage.qml:15
 #, kde-format
