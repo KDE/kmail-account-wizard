@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-14 00:38+0000\n"
-"PO-Revision-Date: 2024-02-19 08:00+0900\n"
+"PO-Revision-Date: 2024-04-04 17:38+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.04.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
@@ -109,10 +109,9 @@ msgid "Keep your folders and emails synced on your server"
 msgstr "將您的資料夾與郵件同步到您的伺服器上"
 
 #: ispdb/configurationmodel.cpp:52
-#, fuzzy, kde-format
-#| msgid "Keep your folders and emails on your computer"
+#, kde-format
 msgid "Remove your emails from your server and keep them only on your computer"
-msgstr "將您的資料夾與郵件儲存在您的電腦上"
+msgstr "從伺服器移除您的郵件並只將它們保留於您的電腦上"
 
 #: ispdb/serverconfiguration.cpp:29
 #, kde-format
@@ -226,13 +225,13 @@ msgstr "手動設定"
 #, kde-format
 msgctxt "@title:group"
 msgid "Calendar and Contacts"
-msgstr ""
+msgstr "行事曆與聯絡人"
 
 #: qml/ConfigurationSelectionPage.qml:126
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable calendar and contact integration"
-msgstr ""
+msgstr "啟用行事曆與聯絡人整合"
 
 #: qml/DetailsPage.qml:15
 #, kde-format
