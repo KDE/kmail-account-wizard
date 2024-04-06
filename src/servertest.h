@@ -32,6 +32,6 @@ Q_SIGNALS:
     void testFail();
 
 private:
-    void testFinished(const QVector<int> &list);
+    void testFinished(const QList<int> &list);
     MailTransport::ServerTest *const m_serverTest;
 };
