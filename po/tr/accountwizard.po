@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-runtime-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-14 00:38+0000\n"
-"PO-Revision-Date: 2024-03-14 13:59+0300\n"
+"PO-Revision-Date: 2024-04-30 00:20+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.07.70\n"
 "X-POOTLE-MTIME: 1413102276.000000\n"
 
 #, kde-format
@@ -445,17 +445,17 @@ msgstr "Sonraki"
 #: resource.cpp:72
 #, kde-format
 msgid "Resource type '%1' is not available."
-msgstr "Özkaynak türü ‘%1’ kullanılabilir değil."
+msgstr "Özkaynak türü “%1” kullanılabilir değil."
 
 #: resource.cpp:85
 #, kde-format
 msgid "Resource '%1' is already set up."
-msgstr "Özkaynak türü ‘%1’ halihazırda ayarlı."
+msgstr "Özkaynak türü “%1” halihazırda ayarlı."
 
 #: resource.cpp:92
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr "‘%1’ için özkaynak örneği oluşturuluyor…"
+msgstr "“%1” için özkaynak örneği oluşturuluyor…"
 
 #: resource.cpp:101
 #, kde-format
@@ -476,12 +476,12 @@ msgstr "Özkaynak örneği yapılandırılamadı."
 #, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
-msgstr "%2 türündeki ‘%1’ ayarının değeri gerekli %3 türüne dönüştürülemedi."
+msgstr "%2 türündeki “%1” ayarının değeri gerekli %3 türüne dönüştürülemedi."
 
 #: resource.cpp:144
 #, kde-format
 msgid "Could not set setting '%1': %2"
-msgstr "‘%1’ ayarı yapılamadı: %2"
+msgstr "“%1” ayarı yapılamadı: %2"
 
 #: resource.cpp:150
 #, kde-format
