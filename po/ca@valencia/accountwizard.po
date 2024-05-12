@@ -455,7 +455,7 @@ msgstr "El recurs «%1» ja s'ha configurat."
 #: resource.cpp:92
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr "S'està creant la instància del recurs per a «%1»..."
+msgstr "S'està creant la instància del recurs per a «%1»…"
 
 #: resource.cpp:101
 #, kde-format
@@ -465,7 +465,7 @@ msgstr "No s'ha pogut crear la instància del recurs: %1"
 #: resource.cpp:108
 #, kde-format
 msgid "Configuring resource instance..."
-msgstr "S'està configurant la instància del recurs..."
+msgstr "S'està configurant la instància del recurs…"
 
 #: resource.cpp:112
 #, kde-format
