@@ -33,9 +33,9 @@ int main(int argc, char **argv)
                          i18n("(c) 2009-2024 the Akonadi developers"),
                          QString(),
                          QStringLiteral("https://community.kde.org/KDE_PIM/Akonadi"));
-    aboutData.addAuthor(i18n("Volker Krause"), i18n("Author"), QStringLiteral("vkrause@kde.org"));
-    aboutData.addAuthor(i18n("Laurent Montel"), i18n("Maintainer"), QStringLiteral("montel@kde.org"));
-    aboutData.addAuthor(i18n("Carl Schwan"), i18n("Maintainer"), QStringLiteral("carl@carlschwan.eu"));
+    aboutData.addAuthor(i18nc("@info:credit", "Volker Krause"), i18n("Author"), QStringLiteral("vkrause@kde.org"));
+    aboutData.addAuthor(i18nc("@info:credit", "Laurent Montel"), i18n("Maintainer"), QStringLiteral("montel@kde.org"));
+    aboutData.addAuthor(i18nc("@info:credit", "Carl Schwan"), i18n("Maintainer"), QStringLiteral("carl@carlschwan.eu"));
     aboutData.setProductName(QByteArrayLiteral("Akonadi/Account Wizard"));
     app.setOrganizationDomain(QStringLiteral("kde.org"));
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("kontact")));
