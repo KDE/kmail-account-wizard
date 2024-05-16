@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-14 00:38+0000\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
 "PO-Revision-Date: 2024-03-14 05:55+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -161,7 +161,9 @@ msgid "(c) 2009-2024 the Akonadi developers"
 msgstr "(c) 2009‏-2024 צוות הפיתוח של Akonadi"
 
 #: main.cpp:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Volker Krause"
+msgctxt "@info:credit"
 msgid "Volker Krause"
 msgstr "וולקר קראוזה"
 
@@ -171,7 +173,9 @@ msgid "Author"
 msgstr "יוצר"
 
 #: main.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Laurent Montel"
+msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "לורנט מונטל"
 
@@ -181,7 +185,9 @@ msgid "Maintainer"
 msgstr "מתחזק"
 
 #: main.cpp:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Carl Schwan"
+msgctxt "@info:credit"
 msgid "Carl Schwan"
 msgstr "קארל שוואן"
 

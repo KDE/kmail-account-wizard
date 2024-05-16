@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-14 00:38+0000\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
 "PO-Revision-Date: 2021-08-14 09:44+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -171,7 +171,9 @@ msgid "(c) 2009-2024 the Akonadi developers"
 msgstr "(c) 2009-2020 os programadores do Akonadi"
 
 #: main.cpp:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Volker Krause"
+msgctxt "@info:credit"
 msgid "Volker Krause"
 msgstr "Volker Krause"
 
@@ -181,7 +183,9 @@ msgid "Author"
 msgstr "Autoria"
 
 #: main.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Laurent Montel"
+msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
@@ -192,6 +196,7 @@ msgstr ""
 
 #: main.cpp:38
 #, kde-format
+msgctxt "@info:credit"
 msgid "Carl Schwan"
 msgstr ""
 

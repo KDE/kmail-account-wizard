@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-14 00:38+0000\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
 "PO-Revision-Date: 2012-07-09 11:22+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -174,7 +174,9 @@ msgid "(c) 2009-2024 the Akonadi developers"
 msgstr "រក្សាសិទ្ធិ ២០០៩ ដោយ​អ្នក​អភិវឌ្ឍន៍ Akonadi"
 
 #: main.cpp:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Volker Krause"
+msgctxt "@info:credit"
 msgid "Volker Krause"
 msgstr "Volker Krause"
 
@@ -184,7 +186,9 @@ msgid "Author"
 msgstr "អ្នក​និពន្ធ"
 
 #: main.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Laurent Montel"
+msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
@@ -195,6 +199,7 @@ msgstr ""
 
 #: main.cpp:38
 #, kde-format
+msgctxt "@info:credit"
 msgid "Carl Schwan"
 msgstr ""
 

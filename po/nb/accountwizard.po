@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-14 00:38+0000\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
 "PO-Revision-Date: 2014-01-12 10:27+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -172,7 +172,9 @@ msgid "(c) 2009-2024 the Akonadi developers"
 msgstr ""
 
 #: main.cpp:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Volker Krause"
+msgctxt "@info:credit"
 msgid "Volker Krause"
 msgstr "Volker Krause"
 
@@ -182,7 +184,9 @@ msgid "Author"
 msgstr "Forfatter"
 
 #: main.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Laurent Montel"
+msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
@@ -193,6 +197,7 @@ msgstr ""
 
 #: main.cpp:38
 #, kde-format
+msgctxt "@info:credit"
 msgid "Carl Schwan"
 msgstr ""
 
