@@ -3,21 +3,21 @@
 # SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2023 Vít Pelčák <vit@pelcak.org>
 # Lukáš Tinkl <ltinkl@redhat.com>, 2010.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012, 2013.
-# Vit Pelcak <vit@pelcak.org>, 2021.
+# SPDX-FileCopyrightText: 2021, 2024 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-14 00:38+0000\n"
-"PO-Revision-Date: 2023-11-06 11:32+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2024-04-30 15:13+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #, kde-format
@@ -40,55 +40,55 @@ msgstr "Nepojmenované"
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
-msgstr ""
+msgstr "Vytvořit poštovní identitu: %1"
 
 #: accountconfiguration.cpp:214
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
-msgstr ""
+msgstr "Celé jméno:"
 
 #: accountconfiguration.cpp:215
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
-msgstr ""
+msgstr "Primární e-mailová adresa"
 
 #: accountconfiguration.cpp:244
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
-msgstr ""
+msgstr "Nastavení přenosu pošty bylo dokončeno: %1"
 
 #: accountconfiguration.cpp:247
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
-msgstr ""
+msgstr "Hostitel:"
 
 #: accountconfiguration.cpp:248
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
 #: accountconfiguration.cpp:249
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
-msgstr ""
+msgstr "Uživatelské jméno:"
 
 #: accountconfiguration.cpp:251
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
-msgstr ""
+msgstr "Šifrování:"
 
 #: accountconfiguration.cpp:253
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
-msgstr ""
+msgstr "Ověření:"
 
 #: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
@@ -163,7 +163,7 @@ msgstr "Pomáhá s nastavením účtů pro PIM"
 #: main.cpp:33
 #, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
-msgstr ""
+msgstr "(c) 2009-2024 vývojáři Akonadi"
 
 #: main.cpp:36
 #, kde-format
@@ -204,7 +204,7 @@ msgstr "Odchozí"
 #, kde-format
 msgctxt "@title:group"
 msgid "Configuration Selection"
-msgstr ""
+msgstr "Výběr nastavemí"
 
 #: qml/ConfigurationSelectionPage.qml:39
 #, kde-format
@@ -214,7 +214,7 @@ msgstr "Dostupná nastavení"
 #: qml/ConfigurationSelectionPage.qml:56
 #, kde-format
 msgid "No configuration found from the internet for this server."
-msgstr ""
+msgstr "Pro tento server nejsou na internetu dostupná žádná nastavení."
 
 #: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
 #, kde-format
@@ -225,13 +225,13 @@ msgstr "Manuální nastavení"
 #, kde-format
 msgctxt "@title:group"
 msgid "Calendar and Contacts"
-msgstr ""
+msgstr "Kalendář a kontakty"
 
 #: qml/ConfigurationSelectionPage.qml:126
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable calendar and contact integration"
-msgstr ""
+msgstr "Povolit integraci kalendáře a kontaktů"
 
 #: qml/DetailsPage.qml:15
 #, kde-format
@@ -254,7 +254,7 @@ msgstr "Podrobnosti"
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
-msgstr ""
+msgstr "Žádné podrobnosti nejsou dostupné."
 
 #: qml/ManualConfigurationPage.qml:18
 #, kde-format
@@ -269,7 +269,7 @@ msgstr "Vytvořit účet"
 #: qml/ManualConfigurationPage.qml:67
 #, kde-format
 msgid "Incoming Server Parameters"
-msgstr ""
+msgstr "Parametry příchozícho serveru"
 
 #: qml/ManualConfigurationPage.qml:73
 #, kde-format
@@ -299,7 +299,7 @@ msgstr "Zabezpečení:"
 #: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:225
 #, kde-format
 msgid "SSL/TLS (recommended)"
-msgstr ""
+msgstr "SSL/TLS (doporučeno)"
 
 # žádné parametry funkce v inspektoru funkcí
 #: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:224
@@ -350,7 +350,7 @@ msgstr "GSSAPI"
 #: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:249
 #, kde-format
 msgid "XOAuth (Gmail)"
-msgstr ""
+msgstr "XOAuth (Gmail)"
 
 #: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:250
 #, kde-format
@@ -365,12 +365,12 @@ msgstr "Uživatelské jméno:"
 #: qml/ManualConfigurationPage.qml:177
 #, kde-format
 msgid "Download all messages for offline use"
-msgstr ""
+msgstr "Stáhnout všechny zprávy pro použití v odpojeném stavu"
 
 #: qml/ManualConfigurationPage.qml:186
 #, kde-format
 msgid "Outgoing Server Parameters"
-msgstr ""
+msgstr "Parametry odchozího serveru"
 
 #: qml/ManualConfigurationPage.qml:193
 #, kde-format
@@ -385,7 +385,7 @@ msgstr "Osobní informace"
 #: qml/PersonalDataPage.qml:43
 #, kde-format
 msgid "Connect your Email Account"
-msgstr ""
+msgstr "Připojte svůj poštovní účet"
 
 #: qml/PersonalDataPage.qml:51
 #, kde-format
@@ -469,7 +469,7 @@ msgstr "Nelze nastavit instanci zdroje."
 #, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
-msgstr ""
+msgstr "Nelze převést hodnotu nastavení '%1' s typem %2 na požadovaný typ %3."
 
 #: resource.cpp:144
 #, kde-format
@@ -485,22 +485,22 @@ msgstr "Nastavení nelze uložit: %1"
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
-msgstr ""
+msgstr "Nastavení zdroje bylo dokončeno: %1"
 
 #: resource.cpp:159
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
-msgstr ""
+msgstr "Typ zdroje:"
 
 #: resource.cpp:169
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
-msgstr ""
+msgstr "Prázdné"
 
 #: resource.cpp:174
 #, kde-format
 msgctxt "label"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
