@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-16 00:39+0000\n"
-"PO-Revision-Date: 2024-04-04 17:38+0900\n"
+"PO-Revision-Date: 2024-05-18 17:33+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -166,8 +166,7 @@ msgid "(c) 2009-2024 the Akonadi developers"
 msgstr "(c) 2009-2024 Akonadi 開發群"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Volker Krause"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Volker Krause"
 msgstr "Volker Krause"
@@ -178,8 +177,7 @@ msgid "Author"
 msgstr "作者"
 
 #: main.cpp:37
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -190,8 +188,7 @@ msgid "Maintainer"
 msgstr "維護者"
 
 #: main.cpp:38
-#, fuzzy, kde-format
-#| msgid "Carl Schwan"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
