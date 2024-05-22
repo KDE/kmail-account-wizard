@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-22 00:39+0000\n"
 "PO-Revision-Date: 2024-02-19 21:31+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -147,46 +147,46 @@ msgstr "well-known 파일에서 설정을 찾았습니다."
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Mozilla FAI 데이터베이스에서 설정을 찾았습니다."
 
-#: main.cpp:29
+#: main.cpp:47
 #, kde-format
 msgid "Account Assistant"
 msgstr "계정 마법사"
 
-#: main.cpp:31
+#: main.cpp:49
 #, kde-format
 msgid "Helps setting up PIM accounts"
 msgstr "PIM 계정 설정을 도와 줍니다"
 
-#: main.cpp:33
+#: main.cpp:51
 #, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
 msgstr "(c) 2009-2024 the Akonadi developers"
 
-#: main.cpp:36
+#: main.cpp:54
 #, fuzzy, kde-format
 #| msgid "Volker Krause"
 msgctxt "@info:credit"
 msgid "Volker Krause"
 msgstr "Volker Krause"
 
-#: main.cpp:36
+#: main.cpp:54
 #, kde-format
 msgid "Author"
 msgstr "작성자"
 
-#: main.cpp:37
+#: main.cpp:55
 #, fuzzy, kde-format
 #| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:37 main.cpp:38
+#: main.cpp:55 main.cpp:56
 #, kde-format
 msgid "Maintainer"
 msgstr "관리자"
 
-#: main.cpp:38
+#: main.cpp:56
 #, fuzzy, kde-format
 #| msgid "Carl Schwan"
 msgctxt "@info:credit"
