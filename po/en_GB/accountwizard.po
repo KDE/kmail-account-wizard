@@ -2,21 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Andrew Coles <andrew_coles@yahoo.co.uk>, 2010, 2015.
-# Steve Allewell <steve.allewell@gmail.com>, 2016, 2017, 2018, 2019, 2020, 2021.
+# SPDX-FileCopyrightText: 2016, 2017, 2018, 2019, 2020, 2021, 2024 Steve Allewell <steve.allewell@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-14 00:38+0000\n"
-"PO-Revision-Date: 2021-08-14 12:18+0100\n"
+"PO-Revision-Date: 2024-05-30 19:30+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
-"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language-Team: British English\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.04.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -35,49 +35,43 @@ msgid "Unnamed"
 msgstr "Unnamed"
 
 #: accountconfiguration.cpp:211
-#, fuzzy, kde-format
-#| msgid "Create new identity"
+#, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
-msgstr "Create new identity"
+msgstr "Create email identity: %1"
 
 #: accountconfiguration.cpp:214
-#, fuzzy, kde-format
-#| msgid "Full name:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Full name:"
 
 #: accountconfiguration.cpp:215
-#, fuzzy, kde-format
-#| msgid "E-mail address:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
-msgstr "E-mail address:"
+msgstr "Primary email address:"
 
 #: accountconfiguration.cpp:244
-#, fuzzy, kde-format
-#| msgid "Mail transport account deleted."
+#, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
-msgstr "Mail transport account deleted."
+msgstr "Mail transport setup completed: %1"
 
 #: accountconfiguration.cpp:247
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Host:"
-msgstr "Username:"
+msgstr "Host:"
 
 #: accountconfiguration.cpp:248
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
 #: accountconfiguration.cpp:249
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Username:"
@@ -86,78 +80,73 @@ msgstr "Username:"
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
-msgstr ""
+msgstr "Encryption:"
 
 #: accountconfiguration.cpp:253
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
-msgstr ""
+msgstr "Authentication:"
 
 #: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
-#, fuzzy, kde-format
-#| msgid "IMAP, %1"
+#, kde-format
 msgid "IMAP"
-msgstr "IMAP, %1"
+msgstr "IMAP"
 
 #: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:26
 #: qml/ManualConfigurationPage.qml:90
-#, fuzzy, kde-format
-#| msgid "POP3, %1"
+#, kde-format
 msgid "POP3"
-msgstr "POP3, %1"
+msgstr "POP3"
 
 #: ispdb/configurationmodel.cpp:51
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
-msgstr ""
+msgstr "Keep your folders and emails synced on your server"
 
 #: ispdb/configurationmodel.cpp:52
 #, kde-format
 msgid "Remove your emails from your server and keep them only on your computer"
 msgstr ""
+"Remove your emails from your server and keep them only on your computer"
 
 #: ispdb/serverconfiguration.cpp:29
-#, fuzzy, kde-format
-#| msgid "SMTP, %1"
+#, kde-format
 msgid "SMTP"
-msgstr "SMTP, %1"
+msgstr "SMTP"
 
 #: ispdb/serverconfiguration.cpp:35
 #, kde-format
 msgid "SSL/TLS"
-msgstr ""
+msgstr "SSL/TLS"
 
 #: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:121
 #: qml/ManualConfigurationPage.qml:226
 #, kde-format
 msgid "StartTLS"
-msgstr ""
+msgstr "StartTLS"
 
 #: ispdb/serverconfiguration.cpp:41
 #, kde-format
 msgctxt "No security mechanism"
 msgid "None"
-msgstr ""
+msgstr "None"
 
 #: ispdbservice.cpp:133
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgid "Configuration found auto config file."
-msgstr "Autoconfiguration found."
+msgstr "Configuration found auto config file."
 
 #: ispdbservice.cpp:136
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgid "Configuration found in well-known file."
-msgstr "Autoconfiguration found."
+msgstr "Configuration found in well-known file."
 
 #: ispdbservice.cpp:139
-#, fuzzy, kde-format
-#| msgid "Lookup configuration: Mozilla database"
+#, kde-format
 msgid "Configuration found in Mozilla FAI Database."
-msgstr "Lookup configuration: Mozilla database"
+msgstr "Configuration found in Mozilla FAI Database."
 
 #: main.cpp:29
 #, kde-format
@@ -170,10 +159,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "Helps setting up PIM accounts"
 
 #: main.cpp:33
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2020 the Akonadi developers"
+#, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
-msgstr "(c) 2009-2020 the Akonadi developers"
+msgstr "(c) 2009-2024 the Akonadi developers"
 
 #: main.cpp:36
 #, kde-format
@@ -193,89 +181,83 @@ msgstr "Laurent Montel"
 #: main.cpp:37 main.cpp:38
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Maintainer"
 
 #: main.cpp:38
 #, kde-format
 msgid "Carl Schwan"
-msgstr ""
+msgstr "Carl Schwan"
 
 #: qml/ConfigurationDelegate.qml:93
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming"
-msgstr "Incoming:"
+msgstr "Incoming"
 
 #: qml/ConfigurationDelegate.qml:114
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing"
-msgstr "Outgoing:"
+msgstr "Outgoing"
 
 #: qml/ConfigurationSelectionPage.qml:16
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgctxt "@title:group"
 msgid "Configuration Selection"
-msgstr "Autoconfiguration found."
+msgstr "Configuration Selection"
 
 #: qml/ConfigurationSelectionPage.qml:39
 #, kde-format
 msgid "Available configurations"
-msgstr ""
+msgstr "Available configurations"
 
 #: qml/ConfigurationSelectionPage.qml:56
-#, fuzzy, kde-format
-#| msgid "No config found to edit"
+#, kde-format
 msgid "No configuration found from the internet for this server."
-msgstr "No config found to edit"
+msgstr "No configuration found from the internet for this server."
 
 #: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
 #, kde-format
 msgid "Manual Configuration"
-msgstr ""
+msgstr "Manual Configuration"
 
 #: qml/ConfigurationSelectionPage.qml:115
 #, kde-format
 msgctxt "@title:group"
 msgid "Calendar and Contacts"
-msgstr ""
+msgstr "Calendar and Contacts"
 
 #: qml/ConfigurationSelectionPage.qml:126
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable calendar and contact integration"
-msgstr ""
+msgstr "Enable calendar and contact integration"
 
 #: qml/DetailsPage.qml:15
-#, fuzzy, kde-format
-#| msgid "&Details..."
+#, kde-format
 msgctxt "@title:group"
 msgid "Details"
-msgstr "&Details..."
+msgstr "Details"
 
 #: qml/DetailsPage.qml:18
 #, kde-format
 msgctxt "@action:button"
 msgid "Quit"
-msgstr ""
+msgstr "Quit"
 
 #: qml/DetailsPage.qml:24
-#, fuzzy, kde-format
-#| msgid "&Details..."
+#, kde-format
 msgid "Details"
-msgstr "&Details..."
+msgstr "Details"
 
 #: qml/DetailsPage.qml:61
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
-msgstr ""
+msgstr "No details available."
 
 #: qml/ManualConfigurationPage.qml:18
 #, kde-format
 msgid "Recheck"
-msgstr ""
+msgstr "Recheck"
 
 #: qml/ManualConfigurationPage.qml:25
 #, kde-format
@@ -283,31 +265,29 @@ msgid "Create Account"
 msgstr "Create Account"
 
 #: qml/ManualConfigurationPage.qml:67
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming Server Parameters"
-msgstr "Incoming:"
+msgstr "Incoming Server Parameters"
 
 #: qml/ManualConfigurationPage.qml:73
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming server:"
-msgstr "Incoming:"
+msgstr "Incoming server:"
 
 #: qml/ManualConfigurationPage.qml:85
 #, kde-format
 msgid "Protocol:"
-msgstr ""
+msgstr "Protocol:"
 
 #: qml/ManualConfigurationPage.qml:91
 #, kde-format
 msgid "Kolab"
-msgstr ""
+msgstr "Kolab"
 
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:206
 #, kde-format
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
 #: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:220
 #, kde-format
@@ -317,62 +297,62 @@ msgstr "Security:"
 #: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:225
 #, kde-format
 msgid "SSL/TLS (recommended)"
-msgstr ""
+msgstr "SSL/TLS (recommended)"
 
 #: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:224
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "None"
 
 #: qml/ManualConfigurationPage.qml:136 qml/ManualConfigurationPage.qml:238
 #, kde-format
 msgid "Authentication Method:"
-msgstr ""
+msgstr "Authentication Method:"
 
 #: qml/ManualConfigurationPage.qml:140 qml/ManualConfigurationPage.qml:242
 #, kde-format
 msgid "Clear text"
-msgstr ""
+msgstr "Clear text"
 
 #: qml/ManualConfigurationPage.qml:141 qml/ManualConfigurationPage.qml:243
 #, kde-format
 msgid "PLAIN"
-msgstr ""
+msgstr "PLAIN"
 
 #: qml/ManualConfigurationPage.qml:142 qml/ManualConfigurationPage.qml:244
 #, kde-format
 msgid "LOGIN"
-msgstr ""
+msgstr "LOGIN"
 
 #: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:245
 #, kde-format
 msgid "CRAM-MD5"
-msgstr ""
+msgstr "CRAM-MD5"
 
 #: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:246
 #, kde-format
 msgid "DIGEST-MD5"
-msgstr ""
+msgstr "DIGEST-MD5"
 
 #: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:247
 #, kde-format
 msgid "NTLM"
-msgstr ""
+msgstr "NTLM"
 
 #: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:248
 #, kde-format
 msgid "GSSAPI"
-msgstr ""
+msgstr "GSSAPI"
 
 #: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:249
 #, kde-format
 msgid "XOAuth (Gmail)"
-msgstr ""
+msgstr "XOAuth (Gmail)"
 
 #: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:250
 #, kde-format
 msgid "APOP"
-msgstr ""
+msgstr "APOP"
 
 #: qml/ManualConfigurationPage.qml:162 qml/ManualConfigurationPage.qml:263
 #, kde-format
@@ -382,46 +362,40 @@ msgstr "Username:"
 #: qml/ManualConfigurationPage.qml:177
 #, kde-format
 msgid "Download all messages for offline use"
-msgstr ""
+msgstr "Download all messages for offline use"
 
 #: qml/ManualConfigurationPage.qml:186
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing Server Parameters"
-msgstr "Outgoing:"
+msgstr "Outgoing Server Parameters"
 
 #: qml/ManualConfigurationPage.qml:193
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing server:"
-msgstr "Outgoing:"
+msgstr "Outgoing server:"
 
 #: qml/PersonalDataPage.qml:15
 #, kde-format
 msgid "Personal Information"
-msgstr ""
+msgstr "Personal Information"
 
 #: qml/PersonalDataPage.qml:43
 #, kde-format
 msgid "Connect your Email Account"
-msgstr ""
+msgstr "Connect your Email Account"
 
 #: qml/PersonalDataPage.qml:51
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check online for the settings needed for this email provider. Only the "
-#| "domain name part of the e-mail address will be sent over the Internet at "
-#| "this point. If this option is unchecked, the account can be set up "
-#| "manually."
+#, kde-format
 msgid ""
 "To use your current email address fill in your credentials. This wizard will "
 "automatically search for a working and recommended server configuration. "
 "Only the domain name part of the e-mail address will be sent over the "
 "Internet."
 msgstr ""
-"Check online for the settings needed for this email provider. Only the "
-"domain name part of the e-mail address will be sent over the Internet at "
-"this point. If this option is not ticked, the account can be set up manually."
+"To use your current email address fill in your credentials. This wizard will "
+"automatically search for a working and recommended server configuration. "
+"Only the domain name part of the e-mail address will be sent over the "
+"Internet."
 
 #: qml/PersonalDataPage.qml:57
 #, kde-format
@@ -432,7 +406,7 @@ msgstr "Full name:"
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
-msgstr ""
+msgstr "John Smith"
 
 #: qml/PersonalDataPage.qml:67
 #, kde-format
@@ -443,25 +417,24 @@ msgstr "E-mail address:"
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
-msgstr ""
+msgstr "boss@example.corp"
 
 #: qml/PersonalDataPage.qml:86
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password (optional):"
-msgstr "Password:"
+msgstr "Password (optional):"
 
 #: qml/WizardPage.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr ""
+msgstr "Previous"
 
 #: qml/WizardPage.qml:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "Next"
 
 #: resource.cpp:72
 #, kde-format
@@ -494,11 +467,11 @@ msgid "Unable to configure resource instance."
 msgstr "Unable to configure resource instance."
 
 #: resource.cpp:131
-#, fuzzy, kde-format
-#| msgid "Could not convert value of setting '%1' to required type %2."
+#, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
-msgstr "Could not convert value of setting '%1' to required type %2."
+msgstr ""
+"Could not convert value of setting '%1' with type %2 to required type %3."
 
 #: resource.cpp:144
 #, kde-format
@@ -511,30 +484,28 @@ msgid "Could not save settings: %1"
 msgstr "Could not save settings: %1"
 
 #: resource.cpp:156
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
-msgstr "Resource setup completed."
+msgstr "Resource setup completed: %1"
 
 #: resource.cpp:159
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
-msgstr "Resource setup completed."
+msgstr "Resource type:"
 
 #: resource.cpp:169
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
-msgstr ""
+msgstr "Empty"
 
 #: resource.cpp:174
 #, kde-format
 msgctxt "label"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #~ msgid "Setting up identity..."
 #~ msgstr "Setting up identity..."
