@@ -510,39 +510,3 @@ msgstr "Празно"
 msgctxt "label"
 msgid "%1:"
 msgstr "%1:"
-
-#~ msgid "STARTTLS"
-#~ msgstr "STARTTLS"
-
-#~ msgid "Setting up identity..."
-#~ msgstr "Настройване на самоличността..."
-
-#~ msgid "Identity set up."
-#~ msgstr "Създадена самоличност."
-
-#~ msgid "Identity removed."
-#~ msgstr "Самоличността е премахната."
-
-#~ msgid "Setting up mail transport account..."
-#~ msgstr "Настройване на пощенския транспорт на акаунт..."
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr ""
-#~ "Транспортът на поща използва криптиране \"%1\" и удостоверяване \"%2\"."
-
-#~ msgid "Mail transport account set up."
-#~ msgstr "Настройка на акаунт за пощенски транспорт."
-
-#~ msgid "Set Up Your Existing Email Address"
-#~ msgstr "Настройте съществуващия си имейл адрес"
-
-#~ msgid "Continue"
-#~ msgstr "Продължаване"
-
-#~ msgid ""
-#~ "Check online for the settings needed for this email provider. Only the "
-#~ "domain name part of the e-mail address will be sent over the Internet."
-#~ msgstr ""
-#~ "Проверяване онлайн за настройките, необходими за този доставчик на "
-#~ "електронна поща. На този етап през интернет ще бъде изпратена само частта "
-#~ "с име на домейн от имейл адреса."
