@@ -32,11 +32,14 @@ void IspdbService::requestConfig(const KMime::Types::AddrSpec &addrSpec, const S
     QUrl url;
     const QString path = QStringLiteral("/mail/config-v1.1.xml");
     switch (searchServerType) {
+    case IspHttpsAutoConfig:
+        url = QUrl(QStringLiteral("https://autoconfig.") + domain.toLower() + path);
+        break;
     case IspAutoConfig:
         url = QUrl(QStringLiteral("http://autoconfig.") + domain.toLower() + path);
         break;
     case IspWellKnow:
-        url = QUrl(QStringLiteral("http://") + domain.toLower() + QStringLiteral("/.well-known/autoconfig") + path);
+        url = QUrl(QStringLiteral("https://") + domain.toLower() + QStringLiteral("/.well-known/autoconfig") + path);
         break;
     case DataBase:
         url = QUrl(QStringLiteral("https://autoconfig.thunderbird.net/v1.1/") + domain.toLower());
@@ -51,16 +54,9 @@ void IspdbService::requestConfig(const KMime::Types::AddrSpec &addrSpec, const S
         reply->deleteLater();
         if (reply->attribute(QNetworkRequest::HttpStatusCodeAttribute) != 200) {
             qCDebug(ACCOUNTWIZARD_LOG) << "Fetching failed" << searchServerType << reply->errorString();
-
-            switch (searchServerType) {
-            case IspAutoConfig:
-                requestConfig(addrSpec, IspWellKnow);
-                break;
-            case IspWellKnow:
-                break;
-            case DataBase:
-                requestConfig(addrSpec, IspAutoConfig);
-                break;
+            if (searchServerType != SearchServerType::Last) {
+                int index = static_cast<int>(searchServerType);
+                requestConfig(addrSpec, static_cast<SearchServerType>(++index));
             }
         }
 

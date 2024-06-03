@@ -25,9 +25,11 @@ Q_SIGNALS:
 
 private:
     enum SearchServerType {
-        IspAutoConfig = 0, ///< http://autoconfig.example.com/mail/config-v1.1.xml
-        IspWellKnow, ///< http://example.com/.well-known/autoconfig/mail/config-v1.1.xml
-        DataBase ///< https://autoconfig.thunderbird.net/v1.1/example.com */
+        DataBase = 0, ///< https://autoconfig.thunderbird.net/v1.1/example.com */
+        IspHttpsAutoConfig = 1, ///< https://autoconfig.example.com/mail/config-v1.1.xml
+        IspAutoConfig = 2, ///< http://autoconfig.example.com/mail/config-v1.1.xml
+        IspWellKnow = 3, ///< https://example.com/.well-known/autoconfig/mail/config-v1.1.xml
+        Last = IspWellKnow
     };
     void requestConfig(const KMime::Types::AddrSpec &addrSpec, const SearchServerType searchServerType);
     void handleReply(QNetworkReply *const reply, const KMime::Types::AddrSpec &addrSpec, const SearchServerType searchServerType);
