@@ -32,8 +32,8 @@ int ConsoleLog::rowCount(const QModelIndex &parent) const
 QHash<int, QByteArray> ConsoleLog::roleNames() const
 {
     return {
-        {OutputRole, "output"},
-        {EntryTypeRole, "type"},
+        {OutputRole, QByteArrayLiteral("output")},
+        {EntryTypeRole, QByteArrayLiteral("type")},
     };
 }
 
