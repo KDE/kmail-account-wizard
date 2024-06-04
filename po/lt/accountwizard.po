@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:39+0000\n"
+"POT-Creation-Date: 2024-06-04 00:39+0000\n"
 "PO-Revision-Date: 2019-07-06 13:44+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -143,19 +143,19 @@ msgctxt "No security mechanism"
 msgid "None"
 msgstr ""
 
-#: ispdbservice.cpp:133
+#: ispdbservice.cpp:129
 #, fuzzy, kde-format
 #| msgid "Autoconfiguration found."
 msgid "Configuration found auto config file."
 msgstr "Automatinė konfigūracija rasta."
 
-#: ispdbservice.cpp:136
+#: ispdbservice.cpp:132
 #, fuzzy, kde-format
 #| msgid "Autoconfiguration found."
 msgid "Configuration found in well-known file."
 msgstr "Automatinė konfigūracija rasta."
 
-#: ispdbservice.cpp:139
+#: ispdbservice.cpp:135
 #, fuzzy, kde-format
 #| msgid "Lookup configuration: Mozilla database"
 msgid "Configuration found in Mozilla FAI Database."

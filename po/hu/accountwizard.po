@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:39+0000\n"
+"POT-Creation-Date: 2024-06-04 00:39+0000\n"
 "PO-Revision-Date: 2024-05-22 10:43+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -135,17 +135,17 @@ msgctxt "No security mechanism"
 msgid "None"
 msgstr "Nincs"
 
-#: ispdbservice.cpp:133
+#: ispdbservice.cpp:129
 #, kde-format
 msgid "Configuration found auto config file."
 msgstr "Beállítás megtalálva az automatikus konfigurációs fájlban."
 
-#: ispdbservice.cpp:136
+#: ispdbservice.cpp:132
 #, kde-format
 msgid "Configuration found in well-known file."
 msgstr "Beállítás megtalálva a well-known fájlban."
 
-#: ispdbservice.cpp:139
+#: ispdbservice.cpp:135
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Beállítás megtalálva a Mozilla FAI adatbázisban."

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-runtime-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:39+0000\n"
+"POT-Creation-Date: 2024-06-04 00:39+0000\n"
 "PO-Revision-Date: 2024-05-17 01:35+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -140,17 +140,17 @@ msgctxt "No security mechanism"
 msgid "None"
 msgstr "Yok"
 
-#: ispdbservice.cpp:133
+#: ispdbservice.cpp:129
 #, kde-format
 msgid "Configuration found auto config file."
 msgstr "Yapılandırma, kendiliğinden yapılandırma dosyası buldu."
 
-#: ispdbservice.cpp:136
+#: ispdbservice.cpp:132
 #, kde-format
 msgid "Configuration found in well-known file."
 msgstr "Yapılandırma, iyi bilinen dosyada bulundu."
 
-#: ispdbservice.cpp:139
+#: ispdbservice.cpp:135
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Yapılandırma, Mozilla FAI veritabanında bulundu."
