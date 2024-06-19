@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop-application">
+  <id>org.kde.accountwizard.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <developer id="org.kde">
+    <name translate="no">KDE</name>
+  </developer>
+  <name>Account Wizard</name>
+  <summary>Configure accounts</summary>
+  <description>
+  </description>
+  <content_rating type="oars-1.1"/>
+  <url type="donation">https://kde.org/fr/community/donations/?app=kmail-account-wizard&amp;source=appdata</url>
+  <url type="vcs-browser">https://invent.kde.org/pim/kmail-account-wizard/</url>
+  <project_group>KDE</project_group>
+  <provides>
+    <binary>accountwizard</binary>
+  </provides>
+  <launchable type="desktop-id">org.kde.accountwizard.desktop</launchable>
+  <releases>
+    <release version="6.1.1" date="2024-06-13"/>
+  </releases>
+</component>
