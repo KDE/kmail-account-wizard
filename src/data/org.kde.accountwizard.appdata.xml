@@ -9,6 +9,9 @@
   <name>Account Wizard</name>
   <summary>Configure accounts</summary>
   <description>
+    <p>
+      Accountwizard allows to edit, create, delete accounts.
+    </p>
   </description>
   <content_rating type="oars-1.1"/>
   <url type="donation">https://kde.org/fr/community/donations/?app=kmail-account-wizard&amp;source=appdata</url>
