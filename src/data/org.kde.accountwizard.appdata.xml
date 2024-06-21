@@ -7,11 +7,35 @@
     <name translate="no">KDE</name>
   </developer>
   <name>Account Wizard</name>
+  <name xml:lang="ca">Assistent de comptes</name>
+  <name xml:lang="ca-valencia">Assistent de comptes</name>
+  <name xml:lang="ia">Assistente pro Conto</name>
+  <name xml:lang="nl">Accountassistent</name>
+  <name xml:lang="sl">Čarovnik za račun</name>
+  <name xml:lang="tr">Hesap Sihirbazı</name>
+  <name xml:lang="uk">Майстер облікових записів</name>
+  <name xml:lang="x-test">xxAccount Wizardxx</name>
   <summary>Configure accounts</summary>
+  <summary xml:lang="ca">Configuració de comptes</summary>
+  <summary xml:lang="ca-valencia">Configuració de comptes</summary>
+  <summary xml:lang="ia">Configura contos</summary>
+  <summary xml:lang="nl">Accounts configureren</summary>
+  <summary xml:lang="sl">Konfigurira račune</summary>
+  <summary xml:lang="tr">Hesapları Yapılandır</summary>
+  <summary xml:lang="uk">Налаштувати облікові записи</summary>
+  <summary xml:lang="x-test">xxConfigure accountsxx</summary>
   <description>
     <p>
       Accountwizard allows to edit, create, delete accounts.
     </p>
+    <p xml:lang="ca">L'assistent de comptes permet editar, crear i suprimir comptes.</p>
+    <p xml:lang="ca-valencia">L'assistent de comptes permet editar, crear i suprimir comptes.</p>
+    <p xml:lang="ia">Accountwizard te permitte modificar, crear, deler contos.</p>
+    <p xml:lang="nl">Accountassistent biedt het bewerken, aanmaken, verwijderen van accounts.</p>
+    <p xml:lang="sl">Čarovnik accountwizard omogoča urejanje, kreiranje, brisanje računov.</p>
+    <p xml:lang="tr">Hesap sihirbazı; hesaplar oluşturmanıza, onları düzenlemenize veya silmenize olanak tanır.</p>
+    <p xml:lang="uk">Майстер облікових записів надає змогу редагувати, створювати та вилучати облікові записи.</p>
+    <p xml:lang="x-test">xxAccountwizard allows to edit, create, delete accounts.xx</p>
   </description>
   <content_rating type="oars-1.1"/>
   <url type="donation">https://kde.org/fr/community/donations/?app=kmail-account-wizard&amp;source=appdata</url>
