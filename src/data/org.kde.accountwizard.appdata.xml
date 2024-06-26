@@ -40,7 +40,7 @@
   <summary xml:lang="x-test">xxConfigure accountsxx</summary>
   <description>
     <p>
-      Accountwizard allows to edit, create, delete accounts.
+	    Accountwizard allows to edit, create, delete accounts. Accountwizard supports IMAP/POP3/Kolab account type. Account information can be found by using ispd service.
     </p>
     <p xml:lang="ca">L'assistent de comptes permet editar, crear i suprimir comptes.</p>
     <p xml:lang="ca-valencia">L'assistent de comptes permet editar, crear i suprimir comptes.</p>
