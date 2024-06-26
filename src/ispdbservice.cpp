@@ -51,7 +51,6 @@ void IspdbService::requestConfig(const KMime::Types::AddrSpec &addrSpec, const S
     auto reply = mNetworkAccessManager->get(request);
 
     connect(reply, &QNetworkReply::finished, this, [this, addrSpec, reply, searchServerType]() {
-        reply->deleteLater();
         if (reply->attribute(QNetworkRequest::HttpStatusCodeAttribute) != 200) {
             qCDebug(ACCOUNTWIZARD_LOG) << "Fetching failed" << searchServerType << reply->errorString();
             if (searchServerType != SearchServerType::Last) {
@@ -61,6 +60,7 @@ void IspdbService::requestConfig(const KMime::Types::AddrSpec &addrSpec, const S
         }
 
         handleReply(reply, addrSpec, searchServerType);
+        reply->deleteLater();
     });
 }
 
