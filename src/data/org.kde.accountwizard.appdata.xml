@@ -7,6 +7,8 @@
     <name translate="no">KDE</name>
   </developer>
   <name>Account Wizard</name>
+  <name xml:lang="ar">مرشد الحساب</name>
+  <name xml:lang="bg">Съветник създаване на акаунт</name>
   <name xml:lang="ca">Assistent de comptes</name>
   <name xml:lang="ca-valencia">Assistent de comptes</name>
   <name xml:lang="cs">Průvodce nastavením účtu</name>
@@ -23,6 +25,8 @@
   <name xml:lang="uk">Майстер облікових записів</name>
   <name xml:lang="x-test">xxAccount Wizardxx</name>
   <summary>Configure accounts</summary>
+  <summary xml:lang="ar">اضبط الحسابات</summary>
+  <summary xml:lang="bg">Конфигуриране на акаунт</summary>
   <summary xml:lang="ca">Configuració de comptes</summary>
   <summary xml:lang="ca-valencia">Configuració de comptes</summary>
   <summary xml:lang="cs">Nastavit účty</summary>
@@ -42,20 +46,6 @@
     <p>
 	    Accountwizard allows to edit, create, delete accounts. Accountwizard supports IMAP/POP3/Kolab account type. Account information can be found by using ispd service.
     </p>
-    <p xml:lang="ca">L'assistent de comptes permet editar, crear i suprimir comptes.</p>
-    <p xml:lang="ca-valencia">L'assistent de comptes permet editar, crear i suprimir comptes.</p>
-    <p xml:lang="en-GB">Accountwizard allows to edit, create, delete accounts.</p>
-    <p xml:lang="es">Este asistente permite crear, modificar y borrar cuentas.</p>
-    <p xml:lang="he">אשף החשבונות מאפשר לערוך, ליצור או למחוק חשבונות.</p>
-    <p xml:lang="ia">Accountwizard te permitte modificar, crear, deler contos.</p>
-    <p xml:lang="it">La procedura guidata per la creazione di account (accountwizard) permette di modificare, creare ed eliminare account.</p>
-    <p xml:lang="ka">ანგარიშების მორგების ოსტატი საშუალებას გაძლევთ, ანგარიშები ჩაასწოროთ, შექმნათ ან წაშალოთ.</p>
-    <p xml:lang="nl">Accountassistent biedt het bewerken, aanmaken, verwijderen van accounts.</p>
-    <p xml:lang="sl">Čarovnik accountwizard omogoča urejanje, kreiranje, brisanje računov.</p>
-    <p xml:lang="sv">Kontoguiden gör det möjligt att redigera, skapa och ta bort konton.</p>
-    <p xml:lang="tr">Hesap sihirbazı; hesaplar oluşturmanıza, onları düzenlemenize veya silmenize olanak tanır.</p>
-    <p xml:lang="uk">Майстер облікових записів надає змогу редагувати, створювати та вилучати облікові записи.</p>
-    <p xml:lang="x-test">xxAccountwizard allows to edit, create, delete accounts.xx</p>
   </description>
   <content_rating type="oars-1.1"/>
   <url type="donation">https://kde.org/fr/community/donations/?app=kmail-account-wizard&amp;source=appdata</url>
