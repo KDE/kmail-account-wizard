@@ -13,6 +13,7 @@
   <name xml:lang="ca-valencia">Assistent de comptes</name>
   <name xml:lang="cs">Průvodce nastavením účtu</name>
   <name xml:lang="en-GB">Account Wizard</name>
+  <name xml:lang="eo">Account Wizard</name>
   <name xml:lang="es">Asistente de cuentas</name>
   <name xml:lang="fr">Assistant de comptes</name>
   <name xml:lang="he">אשף החשבונות</name>
@@ -32,6 +33,7 @@
   <summary xml:lang="ca-valencia">Configuració de comptes</summary>
   <summary xml:lang="cs">Nastavit účty</summary>
   <summary xml:lang="en-GB">Configure accounts</summary>
+  <summary xml:lang="eo">Agordi kontojn</summary>
   <summary xml:lang="es">Configurar cuentas</summary>
   <summary xml:lang="fr">Configurer les comptes</summary>
   <summary xml:lang="he">הגדרת חשבונות</summary>
@@ -51,6 +53,7 @@
     <p xml:lang="bg">Accountwizard позволява редактиране, създаване, изтриване на акаунти. Accountwizard поддържа IMAP/POP3/Kolab тип акаунт. Информацията за акаунта може да бъде намерена чрез услугата ispd.</p>
     <p xml:lang="ca">L'assistent de comptes permet editar, crear i suprimir comptes. L'assistent admet tipus de compte IMAP/POP3/Kolab. La informació del compte es pot trobar fent servir el servei de l'«ispd».</p>
     <p xml:lang="en-GB">Accountwizard allows you to edit, create, delete accounts. Accountwizard supports IMAP/POP3/Kolab account type. Account information can be found by using ispd service.</p>
+    <p xml:lang="eo">Kontosorĉisto permesas redakti, krei, forigi kontojn. Kontosorĉisto subtenas kontotipojn IMAP/POP3/Kolab. Kontinformo troveblas per uzo de servo ispd.</p>
     <p xml:lang="es">El asistente de cuentas le permite crear, modificar y borrar cuentas. Permite usar cuentas de tipo IMAP, POP3 y Kolab. La información sobre la cuenta se puede encontrar usando el servicio ispd.</p>
     <p xml:lang="fr">L'assistant de comptes vous permet de modifier, créer, supprimer des comptes. Il prend en charge le type de compte IMAP / POP3 / Kolab. Les informations de compte peuvent être trouvées en utilisant le service « ispd ».</p>
     <p xml:lang="he">אשף החשבונות/AccountWizard מאפשר לך לערוך, ליצור או למחוק חשבונות. אשף החשבונות תומך בסוגי החשבונות IMAP/POP3/Kolab. אפשר למצוא את פרטי החשבון דרך השירות ispd.</p>
