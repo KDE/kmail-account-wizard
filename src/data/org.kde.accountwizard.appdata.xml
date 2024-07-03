@@ -62,6 +62,7 @@
     <p xml:lang="ka">Accountwizard საშუალება გაძლევთ, ჩაასწოროთ, შექმნათ და წაშალოთ ანგარიშები. AccountWizard-ს აქვს IMAP/POP3/Kolab ანგარიშის ტიპების მხარდაჭერა. ანგარიშის ინფორმაცია ispd სერვისის საშუალებით შეგიძლიათ, იპოვოთ.</p>
     <p xml:lang="nl">Accountassistent biedt het bewerken, aanmaken, verwijderen van accounts. Accountassistent ondersteunt het IMAP/POP3/Kolab accounttype. Accountinformatie is te vinden door de ispd-service te gebruiken.</p>
     <p xml:lang="sl">Accountwizard omogoča urejanje, ustvarjanje, brisanje računov. Accountwizard podpira vrste računa IMAP/POP3/Kolab. Podatke o računu najdete s storitvijo ispd.</p>
+    <p xml:lang="sv">Kontoguiden gör det möjligt att redigera, skapa och ta bort konton. Kontoguiden stöder kontotyperna IMAP/POP3/Kolab. Kontoinformation kan lokaliseras genom att använda tjänsten ispd.</p>
     <p xml:lang="tr">Hesap Sihirbazı; hesapları düzenlemeye, oluşturmaya, silmeye izin verir. Hesap Sihirbazı, IMAP/POP3/Kolab hesap türlerini destekler. Hesap bilgileri ISPD hizmeti kullanılarak bulunabilir.</p>
     <p xml:lang="uk">За допомогою майстра облікових записів можна редагувати, створювати і вилучати облікові записи. У майстрі передбачено підтримку типів облікових записів IMAP, POP3 та Kolab. Відомості облікових записів можна отримувати за допомогою служби ispd.</p>
     <p xml:lang="x-test">xxAccountwizard allows to edit, create, delete accounts. Accountwizard supports IMAP/POP3/Kolab account type. Account information can be found by using ispd service.xx</p>
