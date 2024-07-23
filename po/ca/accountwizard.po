@@ -516,39 +516,3 @@ msgstr "Buit"
 msgctxt "label"
 msgid "%1:"
 msgstr "%1:"
-
-#~ msgid "STARTTLS"
-#~ msgstr "STARTTLS"
-
-#~ msgid "Setting up identity..."
-#~ msgstr "S'està arranjant la identitat..."
-
-#~ msgid "Identity set up."
-#~ msgstr "S'ha arranjat la identitat."
-
-#~ msgid "Identity removed."
-#~ msgstr "S'ha eliminat la identitat."
-
-#~ msgid "Setting up mail transport account..."
-#~ msgstr "S'està arranjant el transport de correu del compte..."
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr ""
-#~ "El transport de correu usa l'encriptatge «%1» i l'autenticació «%2»."
-
-#~ msgid "Mail transport account set up."
-#~ msgstr "S'ha arranjat el transport de correu del compte."
-
-#~ msgid "Set Up Your Existing Email Address"
-#~ msgstr "Definiu la vostra adreça de correu existent"
-
-#~ msgid "Continue"
-#~ msgstr "Continua"
-
-#~ msgid ""
-#~ "Check online for the settings needed for this email provider. Only the "
-#~ "domain name part of the e-mail address will be sent over the Internet."
-#~ msgstr ""
-#~ "Comprova en línia la configuració necessària per a aquest proveïdor de "
-#~ "correu. Només s'enviarà a Internet la part del nom del domini de l'adreça "
-#~ "de correu."
