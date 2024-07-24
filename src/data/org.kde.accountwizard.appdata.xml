@@ -64,6 +64,7 @@
     <p xml:lang="fr">L'assistant de comptes vous permet de modifier, créer, supprimer des comptes. Il prend en charge le type de compte IMAP / POP3 / Kolab. Les informations de compte peuvent être trouvées en utilisant le service « ispd ».</p>
     <p xml:lang="he">אשף החשבונות/AccountWizard מאפשר לך לערוך, ליצור או למחוק חשבונות. אשף החשבונות תומך בסוגי החשבונות IMAP/POP3/Kolab. אפשר למצוא את פרטי החשבון דרך השירות ispd.</p>
     <p xml:lang="ia">Accountwizard permitte editar, crear, deler contos. Accountwizard supporta typo de conto de IMAP/POP3/Kolab. Information de conto pote esser usate per usar le servicio ispd.</p>
+    <p xml:lang="it">La procedura guidata per la creazione di account (accountwizard) permette di modificare, creare ed eliminare account. Supporta account di tipo IMAP/POP3/Kolab. Le informazioni sull'account possono essere trovate usando il servizio ispd.</p>
     <p xml:lang="ka">Accountwizard საშუალება გაძლევთ, ჩაასწოროთ, შექმნათ და წაშალოთ ანგარიშები. AccountWizard-ს აქვს IMAP/POP3/Kolab ანგარიშის ტიპების მხარდაჭერა. ანგარიშის ინფორმაცია ispd სერვისის საშუალებით შეგიძლიათ, იპოვოთ.</p>
     <p xml:lang="nl">Accountassistent biedt het bewerken, aanmaken, verwijderen van accounts. Accountassistent ondersteunt het IMAP/POP3/Kolab accounttype. Accountinformatie is te vinden door de ispd-service te gebruiken.</p>
     <p xml:lang="pl">Pomocnik Kont umożliwia zmianę, tworzenie i usuwanie kont. Pomocnik Kont obsługuje konta IMAP/POP3/Kolab. Szczegóły o koncie można znaleźć poprzez usługę ispd.</p>
