@@ -56,6 +56,7 @@
     <p>
 	    Accountwizard allows to edit, create, delete accounts. Accountwizard supports IMAP/POP3/Kolab account type. Account information can be found by using ispd service.
     </p>
+    <p xml:lang="ar">يسمح معالج الحساب بتحرير الحسابات وإنشائها وحذفها. يدعم معالج الحسابات نوع الحساب IMAP/POP3/Kolab. يمكن العثور على معلومات الحساب باستخدام خدمة ispd.</p>
     <p xml:lang="bg">Accountwizard позволява редактиране, създаване, изтриване на акаунти. Accountwizard поддържа IMAP/POP3/Kolab тип акаунт. Информацията за акаунта може да бъде намерена чрез услугата ispd.</p>
     <p xml:lang="ca">L'assistent de comptes permet editar, crear i suprimir comptes. L'assistent admet tipus de compte IMAP/POP3/Kolab. La informació del compte es pot trobar fent servir el servei de l'«ispd».</p>
     <p xml:lang="ca-valencia">L'assistent de comptes permet editar, crear i suprimir comptes. L'assistent admet tipus de compte IMAP/POP3/Kolab. La informació del compte es pot trobar fent servir el servei de l'«ispd».</p>
