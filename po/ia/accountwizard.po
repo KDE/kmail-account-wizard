@@ -587,7 +587,7 @@ msgstr "%1:"
 #~ msgstr "Error de importar"
 
 #~ msgid "Cannot read data from the certificate file: %1"
-#~ msgstr "Non poite leger datos ex le file de certificato: %1"
+#~ msgstr "Non pote leger datos ex le file de certificato: %1"
 
 #~ msgid "Failed to import key: %1"
 #~ msgstr "Il falleva a importar clave: '%1'."
