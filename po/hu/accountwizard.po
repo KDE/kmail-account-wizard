@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-04 00:39+0000\n"
+"POT-Creation-Date: 2024-08-10 02:39+0000\n"
 "PO-Revision-Date: 2024-05-22 10:43+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -150,44 +150,44 @@ msgstr "Beállítás megtalálva a well-known fájlban."
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Beállítás megtalálva a Mozilla FAI adatbázisban."
 
-#: main.cpp:47
+#: main.cpp:46
 #, kde-format
 msgid "Account Assistant"
 msgstr "Azonosítóvarázsló"
 
-#: main.cpp:49
+#: main.cpp:48
 #, kde-format
 msgid "Helps setting up PIM accounts"
 msgstr "Segít a PIM azonosítók beállításában"
 
-#: main.cpp:51
+#: main.cpp:50
 #, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
 msgstr "© Az Akonadi fejlesztői, 2009-2024."
 
-#: main.cpp:54
+#: main.cpp:53
 #, kde-format
 msgctxt "@info:credit"
 msgid "Volker Krause"
 msgstr "Volker Krause"
 
-#: main.cpp:54
+#: main.cpp:53
 #, kde-format
 msgid "Author"
 msgstr "Szerző"
 
-#: main.cpp:55
+#: main.cpp:54
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:55 main.cpp:56
+#: main.cpp:54 main.cpp:55
 #, kde-format
 msgid "Maintainer"
 msgstr "Karbantartó"
 
-#: main.cpp:56
+#: main.cpp:55
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
