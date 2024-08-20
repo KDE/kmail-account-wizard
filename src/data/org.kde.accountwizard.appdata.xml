@@ -23,6 +23,7 @@
   <name xml:lang="ia">Assistente pro Conto</name>
   <name xml:lang="it">Procedura guidata per la creazione di account</name>
   <name xml:lang="ka">ანგარიშის მორგება</name>
+  <name xml:lang="ko">계정 마법사</name>
   <name xml:lang="nl">Accountassistent</name>
   <name xml:lang="pl">Pomocnik Kont</name>
   <name xml:lang="sl">Čarovnik za račun</name>
@@ -48,6 +49,7 @@
   <summary xml:lang="ia">Configura contos</summary>
   <summary xml:lang="it">Configura account</summary>
   <summary xml:lang="ka">ანგარიშების მორგება</summary>
+  <summary xml:lang="ko">계정 설정</summary>
   <summary xml:lang="nl">Accounts configureren</summary>
   <summary xml:lang="pl">Ustawienia kont</summary>
   <summary xml:lang="sl">Konfigurira račune</summary>
@@ -75,6 +77,7 @@
     <p xml:lang="ia">Accountwizard permitte editar, crear, deler contos. Accountwizard supporta typo de conto de IMAP/POP3/Kolab. Information de conto pote esser usate per usar le servicio ispd.</p>
     <p xml:lang="it">La procedura guidata per la creazione di account (accountwizard) permette di modificare, creare ed eliminare account. Supporta account di tipo IMAP/POP3/Kolab. Le informazioni sull'account possono essere trovate usando il servizio ispd.</p>
     <p xml:lang="ka">Accountwizard საშუალება გაძლევთ, ჩაასწოროთ, შექმნათ და წაშალოთ ანგარიშები. AccountWizard-ს აქვს IMAP/POP3/Kolab ანგარიშის ტიპების მხარდაჭერა. ანგარიშის ინფორმაცია ispd სერვისის საშუალებით შეგიძლიათ, იპოვოთ.</p>
+    <p xml:lang="ko">계정 마법사를 사용하여 계정을 편집, 생성, 삭제할 수 있습니다. IMAP/POP3/Kolab 계정을 지원합니다. ispd 서비스를 통해서 계정 정보를 가져올 수 있습니다.</p>
     <p xml:lang="nl">Accountassistent biedt het bewerken, aanmaken, verwijderen van accounts. Accountassistent ondersteunt het IMAP/POP3/Kolab accounttype. Accountinformatie is te vinden door de ispd-service te gebruiken.</p>
     <p xml:lang="pl">Pomocnik Kont umożliwia zmianę, tworzenie i usuwanie kont. Pomocnik Kont obsługuje konta IMAP/POP3/Kolab. Szczegóły o koncie można znaleźć poprzez usługę ispd.</p>
     <p xml:lang="sl">Accountwizard omogoča urejanje, ustvarjanje, brisanje računov. Accountwizard podpira vrste računa IMAP/POP3/Kolab. Podatke o računu najdete s storitvijo ispd.</p>
