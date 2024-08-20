@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-10 02:39+0000\n"
-"PO-Revision-Date: 2024-02-19 21:31+0100\n"
+"PO-Revision-Date: 2024-08-19 23:26+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -105,10 +105,9 @@ msgid "Keep your folders and emails synced on your server"
 msgstr "폴더와 이메일을 서버와 동기화"
 
 #: ispdb/configurationmodel.cpp:52
-#, fuzzy, kde-format
-#| msgid "Keep your folders and emails on your computer"
+#, kde-format
 msgid "Remove your emails from your server and keep them only on your computer"
-msgstr "폴더와 이메일을 내 컴퓨터에 저장"
+msgstr "서버에서 이메일을 삭제하고 내 컴퓨터에만 저장"
 
 #: ispdb/serverconfiguration.cpp:29
 #, kde-format
@@ -163,8 +162,7 @@ msgid "(c) 2009-2024 the Akonadi developers"
 msgstr "(c) 2009-2024 the Akonadi developers"
 
 #: main.cpp:53
-#, fuzzy, kde-format
-#| msgid "Volker Krause"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Volker Krause"
 msgstr "Volker Krause"
@@ -175,8 +173,7 @@ msgid "Author"
 msgstr "작성자"
 
 #: main.cpp:54
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -187,8 +184,7 @@ msgid "Maintainer"
 msgstr "관리자"
 
 #: main.cpp:55
-#, fuzzy, kde-format
-#| msgid "Carl Schwan"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
@@ -228,13 +224,13 @@ msgstr "수동 설정"
 #, kde-format
 msgctxt "@title:group"
 msgid "Calendar and Contacts"
-msgstr ""
+msgstr "캘린더와 연락처"
 
 #: qml/ConfigurationSelectionPage.qml:126
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable calendar and contact integration"
-msgstr ""
+msgstr "캘린더와 연락처 통합 활성화"
 
 #: qml/DetailsPage.qml:15
 #, kde-format
