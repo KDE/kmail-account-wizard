@@ -43,21 +43,18 @@ msgstr ""
 
 #: accountconfiguration.cpp:214
 #, fuzzy, kde-format
-#| msgid "Full name:"
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Fullt navn:"
 
 #: accountconfiguration.cpp:215
 #, fuzzy, kde-format
-#| msgid "E-mail address:"
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "E-postadresse:"
 
 #: accountconfiguration.cpp:244
 #, fuzzy, kde-format
-#| msgid "Resource setup completed."
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Ressursoppsett fullført."
@@ -76,7 +73,6 @@ msgstr ""
 
 #: accountconfiguration.cpp:249
 #, fuzzy, kde-format
-#| msgid "Username:"
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Brukernavn:"
@@ -96,14 +92,12 @@ msgstr ""
 #: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
 #, fuzzy, kde-format
-#| msgid "IMAP, %1"
 msgid "IMAP"
 msgstr "IMAP, %1"
 
 #: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:26
 #: qml/ManualConfigurationPage.qml:90
 #, fuzzy, kde-format
-#| msgid "POP3, %1"
 msgid "POP3"
 msgstr "POP3, %1"
 
@@ -119,7 +113,6 @@ msgstr ""
 
 #: ispdb/serverconfiguration.cpp:29
 #, fuzzy, kde-format
-#| msgid "SMTP, %1"
 msgid "SMTP"
 msgstr "SMTP, %1"
 
@@ -152,7 +145,6 @@ msgstr ""
 
 #: ispdbservice.cpp:135
 #, fuzzy, kde-format
-#| msgid "Lookup configuration: Mozilla database"
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Slår opp oppsett: Mozilla database"
 
@@ -173,7 +165,6 @@ msgstr ""
 
 #: main.cpp:53
 #, fuzzy, kde-format
-#| msgid "Volker Krause"
 msgctxt "@info:credit"
 msgid "Volker Krause"
 msgstr "Volker Krause"
@@ -185,7 +176,6 @@ msgstr "Forfatter"
 
 #: main.cpp:54
 #, fuzzy, kde-format
-#| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -203,13 +193,11 @@ msgstr ""
 
 #: qml/ConfigurationDelegate.qml:93
 #, fuzzy, kde-format
-#| msgid "Incoming:"
 msgid "Incoming"
 msgstr "Innkommende:"
 
 #: qml/ConfigurationDelegate.qml:114
 #, fuzzy, kde-format
-#| msgid "Outgoing:"
 msgid "Outgoing"
 msgstr "Utgående:"
 
@@ -276,19 +264,16 @@ msgstr ""
 
 #: qml/ManualConfigurationPage.qml:25
 #, fuzzy, kde-format
-#| msgid "Add Account"
 msgid "Create Account"
 msgstr "Legg til konto"
 
 #: qml/ManualConfigurationPage.qml:67
 #, fuzzy, kde-format
-#| msgid "Incoming:"
 msgid "Incoming Server Parameters"
 msgstr "Innkommende:"
 
 #: qml/ManualConfigurationPage.qml:73
 #, fuzzy, kde-format
-#| msgid "Incoming:"
 msgid "Incoming server:"
 msgstr "Innkommende:"
 
@@ -384,13 +369,11 @@ msgstr ""
 
 #: qml/ManualConfigurationPage.qml:186
 #, fuzzy, kde-format
-#| msgid "Outgoing:"
 msgid "Outgoing Server Parameters"
 msgstr "Utgående:"
 
 #: qml/ManualConfigurationPage.qml:193
 #, fuzzy, kde-format
-#| msgid "Outgoing:"
 msgid "Outgoing server:"
 msgstr "Utgående:"
 
@@ -406,11 +389,6 @@ msgstr ""
 
 #: qml/PersonalDataPage.qml:51
 #, fuzzy, kde-format
-#| msgid ""
-#| "Check online for the settings needed for this email provider. Only the "
-#| "domain name part of the e-mail address will be sent over the Internet at "
-#| "this point. If this option is unchecked, the account can be set up "
-#| "manually."
 msgid ""
 "To use your current email address fill in your credentials. This wizard will "
 "automatically search for a working and recommended server configuration. "
@@ -445,7 +423,6 @@ msgstr ""
 
 #: qml/PersonalDataPage.qml:86
 #, fuzzy, kde-format
-#| msgid "Password:"
 msgid "Password (optional):"
 msgstr "Passord:"
 
@@ -493,7 +470,6 @@ msgstr "Klarte ikke sette opp ressursinstans."
 
 #: resource.cpp:131
 #, fuzzy, kde-format
-#| msgid "Could not convert value of setting '%1' to required type %2."
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
 msgstr ""
@@ -511,14 +487,12 @@ msgstr ""
 
 #: resource.cpp:156
 #, fuzzy, kde-format
-#| msgid "Resource setup completed."
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
 msgstr "Ressursoppsett fullført."
 
 #: resource.cpp:159
 #, fuzzy, kde-format
-#| msgid "Resource setup completed."
 msgctxt "log entry content"
 msgid "Resource type:"
 msgstr "Ressursoppsett fullført."

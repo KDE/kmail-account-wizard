@@ -49,14 +49,12 @@ msgstr ""
 
 #: accountconfiguration.cpp:215
 #, fuzzy, kde-format
-#| msgid "E-mail address:"
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "E-boastačujuhus:"
 
 #: accountconfiguration.cpp:244
 #, fuzzy, kde-format
-#| msgid "Resource setup completed."
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Ressursaheivehus lea geargan."
@@ -75,8 +73,6 @@ msgstr ""
 
 #: accountconfiguration.cpp:249
 #, fuzzy, kde-format
-#| msgctxt "Default name for new email accounts/identities."
-#| msgid "Unnamed"
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Namaheapmi"
@@ -169,7 +165,6 @@ msgstr ""
 
 #: main.cpp:53
 #, fuzzy, kde-format
-#| msgid "Volker Krause"
 msgctxt "@info:credit"
 msgid "Volker Krause"
 msgstr "Volker Krause"
@@ -181,7 +176,6 @@ msgstr "Čálli"
 
 #: main.cpp:54
 #, fuzzy, kde-format
-#| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -270,7 +264,6 @@ msgstr ""
 
 #: qml/ManualConfigurationPage.qml:25
 #, fuzzy, kde-format
-#| msgid "Add Account"
 msgid "Create Account"
 msgstr "Lasit konto"
 
@@ -427,7 +420,6 @@ msgstr ""
 
 #: qml/PersonalDataPage.qml:86
 #, fuzzy, kde-format
-#| msgid "Password:"
 msgid "Password (optional):"
 msgstr "Beassansátni:"
 
@@ -491,14 +483,12 @@ msgstr ""
 
 #: resource.cpp:156
 #, fuzzy, kde-format
-#| msgid "Resource setup completed."
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
 msgstr "Ressursaheivehus lea geargan."
 
 #: resource.cpp:159
 #, fuzzy, kde-format
-#| msgid "Resource setup completed."
 msgctxt "log entry content"
 msgid "Resource type:"
 msgstr "Ressursaheivehus lea geargan."
