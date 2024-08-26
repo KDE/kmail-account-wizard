@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-10 00:42+0000\n"
-"PO-Revision-Date: 2024-03-20 21:52+0100\n"
+"PO-Revision-Date: 2024-08-19 22:59+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -165,8 +165,7 @@ msgid "(c) 2009-2024 the Akonadi developers"
 msgstr "© 2009-2024, die Akonadi-Entwickler"
 
 #: main.cpp:53
-#, fuzzy, kde-format
-#| msgid "Volker Krause"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Volker Krause"
 msgstr "Volker Krause"
@@ -177,8 +176,7 @@ msgid "Author"
 msgstr "Autor"
 
 #: main.cpp:54
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -189,8 +187,7 @@ msgid "Maintainer"
 msgstr "Betreuer"
 
 #: main.cpp:55
-#, fuzzy, kde-format
-#| msgid "Carl Schwan"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
