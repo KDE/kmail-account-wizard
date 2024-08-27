@@ -12,6 +12,7 @@
   <name xml:lang="ca">Assistent de comptes</name>
   <name xml:lang="ca-valencia">Assistent de comptes</name>
   <name xml:lang="cs">Průvodce nastavením účtu</name>
+  <name xml:lang="de">Zugangsassistent</name>
   <name xml:lang="en-GB">Account Wizard</name>
   <name xml:lang="eo">Account Wizard</name>
   <name xml:lang="es">Asistente de cuentas</name>
@@ -38,6 +39,7 @@
   <summary xml:lang="ca">Configuració de comptes</summary>
   <summary xml:lang="ca-valencia">Configuració de comptes</summary>
   <summary xml:lang="cs">Nastavit účty</summary>
+  <summary xml:lang="de">Postfächer einrichten</summary>
   <summary xml:lang="en-GB">Configure accounts</summary>
   <summary xml:lang="eo">Agordi kontojn</summary>
   <summary xml:lang="es">Configurar cuentas</summary>
@@ -66,6 +68,7 @@
     <p xml:lang="bg">Accountwizard позволява редактиране, създаване, изтриване на акаунти. Accountwizard поддържа IMAP/POP3/Kolab тип акаунт. Информацията за акаунта може да бъде намерена чрез услугата ispd.</p>
     <p xml:lang="ca">L'assistent de comptes permet editar, crear i suprimir comptes. L'assistent admet tipus de compte IMAP/POP3/Kolab. La informació del compte es pot trobar fent servir el servei de l'«ispd».</p>
     <p xml:lang="ca-valencia">L'assistent de comptes permet editar, crear i suprimir comptes. L'assistent admet tipus de compte IMAP/POP3/Kolab. La informació del compte es pot trobar fent servir el servei de l'«ispd».</p>
+    <p xml:lang="de">Mit dem Zugangsassistenten können Postfächer bearbeitet, erstellt und gelöscht werden. Der Zugangsassistent unterstützt IMAP-, POP- und Kolab-Postfächer. Die Postfachinformationen sind mit dem ispd-Dienst abrufbar.</p>
     <p xml:lang="en-GB">Accountwizard allows you to edit, create, delete accounts. Accountwizard supports IMAP/POP3/Kolab account type. Account information can be found by using ispd service.</p>
     <p xml:lang="eo">Kontosorĉisto permesas redakti, krei, forigi kontojn. Kontosorĉisto subtenas kontotipojn IMAP/POP3/Kolab. Kontinformo troveblas per uzo de servo ispd.</p>
     <p xml:lang="es">El asistente de cuentas le permite crear, modificar y borrar cuentas. Permite usar cuentas de tipo IMAP, POP3 y Kolab. La información sobre la cuenta se puede encontrar usando el servicio ispd.</p>
