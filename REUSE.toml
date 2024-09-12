@@ -1,0 +1,10 @@
+version = 1
+SPDX-PackageName = "kmail-account-wizard"
+SPDX-PackageSupplier = "Montel Laurent <montel@kde.org>"
+SPDX-PackageDownloadLocation = "https://invent.kde.org/pim/kmail-account-wizard"
+
+[[annotations]]
+path = ["MAINTAINERS", "src/HOWTO", "src/TODO", "src/ispdb/autotests/data/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "none"
+SPDX-License-Identifier = "CC0-1.0"

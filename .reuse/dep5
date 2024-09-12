@@ -1,8 +1,0 @@
-Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: kmail-account-wizard
-Upstream-Contact: Montel Laurent <montel@kde.org>
-Source: https://invent.kde.org/pim/kmail-account-wizard
-
-Files: MAINTAINERS src/HOWTO src/TODO src/ispdb/autotests/data/*
-Copyright: none
-License: CC0-1.0
