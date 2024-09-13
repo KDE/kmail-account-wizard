@@ -161,9 +161,9 @@ void Resource::instanceCreateResult(KJob *job)
     for (QMap<QString, QVariant>::const_iterator it = mResourceInfo.settings.constBegin(); it != end; ++it) {
         QString value = it.value().toString();
         if (it.key() == u"Authentication"_s) {
-            value = QLatin1String(QMetaEnum::fromType<MailTransport::Transport::EnumAuthenticationType>().key(it.value().toInt()));
+            value = QLatin1StringView(QMetaEnum::fromType<MailTransport::Transport::EnumAuthenticationType>().key(it.value().toInt()));
         } else if (it.key() == u"Safety"_s) {
-            value = QLatin1String(QMetaEnum::fromType<MailTransport::Transport::EnumEncryption>().key(it.value().toInt()));
+            value = QLatin1StringView(QMetaEnum::fromType<MailTransport::Transport::EnumEncryption>().key(it.value().toInt()));
         } else if (it.key() == u"Password"_s) {
             if (value.isEmpty()) {
                 value = i18nc("Empty password", "Empty");

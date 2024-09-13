@@ -247,11 +247,11 @@ void AccountConfiguration::save(ConsoleLog *consoleLog)
         logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Host:"), mMailTransport->host());
         logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Port:"), QString::number(mMailTransport->port()));
         logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Username:"), mMailTransport->userName());
-        logEntryText +=
-            u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Encryption:"),
-                                           QLatin1String(QMetaEnum::fromType<MailTransport::Transport::EnumEncryption>().key(mMailTransport->encryption())));
+        logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(
+            i18nc("log entry content", "Encryption:"),
+            QLatin1StringView(QMetaEnum::fromType<MailTransport::Transport::EnumEncryption>().key(mMailTransport->encryption())));
         logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Authentication:"),
-                                                       QLatin1String(QMetaEnum::fromType<TransportAuth>().key(mMailTransport->authenticationType())));
+                                                       QLatin1StringView(QMetaEnum::fromType<TransportAuth>().key(mMailTransport->authenticationType())));
         logEntryText += u"</ul>"_s;
         consoleLog->success(logEntryText);
 
