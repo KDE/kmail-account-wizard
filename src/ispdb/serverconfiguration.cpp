@@ -67,8 +67,7 @@ std::optional<Server> Server::fromDomElement(const QDomElement &element, const K
                 server.socketType = MailTransport::TransportBase::None;
             } else if (type == QLatin1StringView("SSL")) {
                 server.socketType = MailTransport::TransportBase::SSL;
-            }
-            if (type == QLatin1StringView("STARTTLS")) {
+            } else if (type == QLatin1StringView("STARTTLS")) {
                 server.socketType = MailTransport::TransportBase::TLS;
             }
         } else if (tagName == QLatin1StringView("username")) {
