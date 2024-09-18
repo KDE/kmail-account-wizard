@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 project(kmail-account-wizard VERSION ${PIM_VERSION})
 set(KDEPIM_LIB_SOVERSION "6")
 
-set(KF_MIN_VERSION "6.5.0")
+set(KF_MIN_VERSION "6.6.0")
 
 find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
