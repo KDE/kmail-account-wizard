@@ -34,6 +34,15 @@ include(ECMDeprecationSettings)
 include(ECMFeatureSummary)
 include(ECMQmlModule)
 
+include(ECMCheckOutboundLicense)
+file(GLOB_RECURSE ALL_SOURCE_FILES
+src/*.cpp
+src/*.h
+autotests/*.cpp
+autotests/*.h
+)
+ecm_check_outbound_license(LICENSES GPL-2.0-only  FILES ${ALL_SOURCE_FILES})
+
 # Do NOT add quote
 set(KDEPIM_DEV_VERSION alpha)
 set(RELEASE_SERVICE_VERSION "24.11.40")
