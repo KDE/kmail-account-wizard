@@ -126,6 +126,7 @@ void IspdbService::handleReply(QNetworkReply *const reply, const KMime::Types::A
     QString foundInServerTypeMessage;
     switch (searchServerType) {
     case IspAutoConfig:
+    case IspHttpsAutoConfig:
         foundInServerTypeMessage = i18n("Configuration found auto config file.");
         break;
     case IspWellKnow:
