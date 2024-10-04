@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-10 00:42+0000\n"
+"POT-Creation-Date: 2024-10-04 00:40+0000\n"
 "PO-Revision-Date: 2024-07-09 13:19+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -136,17 +136,17 @@ msgctxt "No security mechanism"
 msgid "None"
 msgstr "Bat ere ez"
 
-#: ispdbservice.cpp:129
+#: ispdbservice.cpp:130
 #, kde-format
 msgid "Configuration found auto config file."
 msgstr "Konfigurazioa aurkitu da, konfigurazio automatikoko fitxategia."
 
-#: ispdbservice.cpp:132
+#: ispdbservice.cpp:133
 #, kde-format
 msgid "Configuration found in well-known file."
 msgstr "Konfigurazioa ondo ezagutzen den fitxategian aurkitu da."
 
-#: ispdbservice.cpp:135
+#: ispdbservice.cpp:136
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Konfigurazioa Mozilla FAI datu-basean aurkitu da."

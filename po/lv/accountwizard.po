@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-10 00:42+0000\n"
-"PO-Revision-Date: 2024-03-24 11:55+0200\n"
-"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"POT-Creation-Date: 2024-10-04 00:40+0000\n"
+"PO-Revision-Date: 2024-10-01 19:02+0300\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.08.0\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -133,17 +133,17 @@ msgctxt "No security mechanism"
 msgid "None"
 msgstr "Nav"
 
-#: ispdbservice.cpp:129
+#: ispdbservice.cpp:130
 #, kde-format
 msgid "Configuration found auto config file."
 msgstr "Konfigurācijas rīks ir atradis automātiskas konfigurācijas datni."
 
-#: ispdbservice.cpp:132
+#: ispdbservice.cpp:133
 #, kde-format
 msgid "Configuration found in well-known file."
 msgstr "Konfigurācija ir atrasta labi zināmā datnē."
 
-#: ispdbservice.cpp:135
+#: ispdbservice.cpp:136
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Konfigurācija atrasta „Mozilla“ FAI datubāzē."
@@ -161,11 +161,10 @@ msgstr "Palīdz iestatīt PIM kontus"
 #: main.cpp:50
 #, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
-msgstr "(c) 2009–2024 „Akonadi“ izstrādātāji"
+msgstr "(c) 2009—2024 „Akonadi“ izstrādātāji"
 
 #: main.cpp:53
-#, fuzzy, kde-format
-#| msgid "Volker Krause"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Volker Krause"
 msgstr "Volker Krause"
@@ -176,8 +175,7 @@ msgid "Author"
 msgstr "Autors"
 
 #: main.cpp:54
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -188,8 +186,7 @@ msgid "Maintainer"
 msgstr "Uzturētājs"
 
 #: main.cpp:55
-#, fuzzy, kde-format
-#| msgid "Carl Schwan"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
