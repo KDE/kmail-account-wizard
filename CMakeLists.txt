@@ -94,7 +94,7 @@ set_package_properties(Qt6Keychain PROPERTIES
                                    TYPE OPTIONAL)
 
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
-ecm_set_disabled_deprecation_versions(QT 6.7.2 KF 6.8.0)
+ecm_set_disabled_deprecation_versions(QT 6.7.2 KF 6.7.0)
 
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
