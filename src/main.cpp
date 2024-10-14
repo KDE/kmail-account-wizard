@@ -7,7 +7,6 @@
 #include <KAboutData>
 #include <KCrash>
 #include <KDBusService>
-#include <KLocalizedContext>
 #include <KLocalizedString>
 
 #include <QApplication>
@@ -16,6 +15,9 @@
 #include <QIcon>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#if KI18N_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+#include <KLocalizedQmlContext>
+#endif
 #define HAVE_KICONTHEME __has_include(<KIconTheme>)
 #if HAVE_KICONTHEME
 #include <KIconTheme>
@@ -71,7 +73,12 @@ int main(int argc, char **argv)
     }
 
     QQmlApplicationEngine engine;
+
+#if KI18N_VERSION < QT_VERSION_CHECK(6, 8, 0)
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
+#else
+    engine.rootContext()->setContextObject(new KLocalizedQmlContext(&engine));
+#endif
 
     engine.loadFromModule("org.kde.pim.accountwizard", "Main");
 
