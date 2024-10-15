@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-04 00:40+0000\n"
+"POT-Creation-Date: 2024-10-15 00:40+0000\n"
 "PO-Revision-Date: 2024-05-18 17:33+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -150,44 +150,44 @@ msgstr "在 well-known 檔案中找到了設定。"
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "在 Mozilla FAI 資料庫中找到了設定設定。"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "Account Assistant"
 msgstr "帳號小助手"
 
-#: main.cpp:48
+#: main.cpp:50
 #, kde-format
 msgid "Helps setting up PIM accounts"
 msgstr "協助設定 PIM 帳號"
 
-#: main.cpp:50
+#: main.cpp:52
 #, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
 msgstr "(c) 2009-2024 Akonadi 開發群"
 
-#: main.cpp:53
+#: main.cpp:55
 #, kde-format
 msgctxt "@info:credit"
 msgid "Volker Krause"
 msgstr "Volker Krause"
 
-#: main.cpp:53
+#: main.cpp:55
 #, kde-format
 msgid "Author"
 msgstr "作者"
 
-#: main.cpp:54
+#: main.cpp:56
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:54 main.cpp:55
+#: main.cpp:56 main.cpp:57
 #, kde-format
 msgid "Maintainer"
 msgstr "維護者"
 
-#: main.cpp:55
+#: main.cpp:57
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
