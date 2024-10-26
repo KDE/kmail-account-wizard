@@ -13,7 +13,12 @@ class ConsoleLog : public QAbstractListModel
     QML_SINGLETON
 
 public:
-    enum EntryType { Success, Info, Warning, Error };
+    enum EntryType {
+        Success,
+        Info,
+        Warning,
+        Error
+    };
     Q_ENUM(EntryType)
 
     enum ExtraRoles {
