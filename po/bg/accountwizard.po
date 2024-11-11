@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-15 00:40+0000\n"
-"PO-Revision-Date: 2024-05-16 11:19+0200\n"
+"PO-Revision-Date: 2024-11-10 12:14+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.11.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -140,7 +140,7 @@ msgstr "Открит е файл auto config."
 #: ispdbservice.cpp:133
 #, kde-format
 msgid "Configuration found in well-known file."
-msgstr "Открит е добе познат конфигурационен файл."
+msgstr "Открит е добре познат конфигурационен файл."
 
 #: ispdbservice.cpp:136
 #, kde-format
