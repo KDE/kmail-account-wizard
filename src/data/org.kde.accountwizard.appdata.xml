@@ -29,6 +29,7 @@
   <name xml:lang="lv">Account Wizard</name>
   <name xml:lang="nl">Accountassistent</name>
   <name xml:lang="pl">Pomocnik Kont</name>
+  <name xml:lang="sk">Sprievodca účtom</name>
   <name xml:lang="sl">Čarovnik za račun</name>
   <name xml:lang="sv">Kontoguide</name>
   <name xml:lang="tr">Hesap Sihirbazı</name>
@@ -58,6 +59,7 @@
   <summary xml:lang="lv">Konfigurējiet kontus</summary>
   <summary xml:lang="nl">Accounts configureren</summary>
   <summary xml:lang="pl">Ustawienia kont</summary>
+  <summary xml:lang="sk">Nastaviť účty</summary>
   <summary xml:lang="sl">Konfigurira račune</summary>
   <summary xml:lang="sv">Anpassa konton</summary>
   <summary xml:lang="tr">Hesapları Yapılandır</summary>
