@@ -15,6 +15,7 @@
 #include <QIcon>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QQuickStyle>
 #if KI18N_VERSION >= QT_VERSION_CHECK(6, 8, 0)
 #include <KLocalizedQmlContext>
 #endif
@@ -37,6 +38,12 @@ int main(int argc, char **argv)
     QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
     QApplication app(argc, argv);
     KLocalizedString::setApplicationDomain(QByteArrayLiteral("accountwizard"));
+
+    // Default to org.kde.desktop style unless the user forces another style
+    if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE")) {
+        QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));
+    }
+
 #if HAVE_STYLE_MANAGER
     KStyleManager::initStyle();
 #else // !HAVE_STYLE_MANAGER
