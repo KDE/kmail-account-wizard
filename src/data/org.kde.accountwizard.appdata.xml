@@ -29,6 +29,7 @@
   <name xml:lang="lv">Account Wizard</name>
   <name xml:lang="nl">Accountassistent</name>
   <name xml:lang="pl">Pomocnik Kont</name>
+  <name xml:lang="ru">Мастер настройки учётных записей</name>
   <name xml:lang="sk">Sprievodca účtom</name>
   <name xml:lang="sl">Čarovnik za račun</name>
   <name xml:lang="sv">Kontoguide</name>
@@ -59,6 +60,7 @@
   <summary xml:lang="lv">Konfigurējiet kontus</summary>
   <summary xml:lang="nl">Accounts configureren</summary>
   <summary xml:lang="pl">Ustawienia kont</summary>
+  <summary xml:lang="ru">Настройка учётных записей</summary>
   <summary xml:lang="sl">Konfigurira račune</summary>
   <summary xml:lang="sv">Anpassa konton</summary>
   <summary xml:lang="tr">Hesapları Yapılandır</summary>
@@ -90,6 +92,7 @@
     <p xml:lang="lv">„Accountwizard“ ļauj rediģēt, veidot un dzēst kontus. „Accountwizard“ atbalsta IMAP/POP3/„Kolab“ kontus. Konta informāciju tas ļauj atrast, izmantojot „ispd“ pakalpojumu.</p>
     <p xml:lang="nl">Accountassistent biedt het bewerken, aanmaken, verwijderen van accounts. Accountassistent ondersteunt het IMAP/POP3/Kolab accounttype. Accountinformatie is te vinden door de ispd-service te gebruiken.</p>
     <p xml:lang="pl">Pomocnik Kont umożliwia zmianę, tworzenie i usuwanie kont. Pomocnik Kont obsługuje konta IMAP/POP3/Kolab. Szczegóły o koncie można znaleźć poprzez usługę ispd.</p>
+    <p xml:lang="ru">Мастер настройки учётных записей позволяет создавать, изменять и удалять учётные записи. Программа поддерживает работу с учётными записями IMAP, POP3 и Kolab. Сведения об учётных записях можно получить с помощью службы ispd.</p>
     <p xml:lang="sl">Accountwizard omogoča urejanje, ustvarjanje, brisanje računov. Accountwizard podpira vrste računa IMAP/POP3/Kolab. Podatke o računu najdete s storitvijo ispd.</p>
     <p xml:lang="sv">Kontoguiden gör det möjligt att redigera, skapa och ta bort konton. Kontoguiden stöder kontotyperna IMAP/POP3/Kolab. Kontoinformation kan lokaliseras genom att använda tjänsten ispd.</p>
     <p xml:lang="tr">Hesap Sihirbazı; hesapları düzenlemeye, oluşturmaya, silmeye izin verir. Hesap Sihirbazı, IMAP/POP3/Kolab hesap türlerini destekler. Hesap bilgileri ISPD hizmeti kullanılarak bulunabilir.</p>
