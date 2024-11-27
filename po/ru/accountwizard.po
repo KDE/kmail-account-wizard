@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-20 00:40+0000\n"
+"POT-Creation-Date: 2024-11-27 00:41+0000\n"
 "PO-Revision-Date: 2024-11-22 15:19+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -158,44 +158,44 @@ msgstr "Конфигурация найдена в файле well-known."
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Конфигурация найдена в базе данных Mozilla."
 
-#: main.cpp:55
+#: main.cpp:41
 #, kde-format
 msgid "Account Assistant"
 msgstr "Мастер создания учётных записей"
 
-#: main.cpp:57
+#: main.cpp:43
 #, kde-format
 msgid "Helps setting up PIM accounts"
 msgstr "Помогает создать учётные записи электронного секретаря"
 
-#: main.cpp:59
+#: main.cpp:45
 #, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
 msgstr "© Разработчики Akonadi, 2009–2024"
 
-#: main.cpp:62
+#: main.cpp:48
 #, kde-format
 msgctxt "@info:credit"
 msgid "Volker Krause"
 msgstr "Volker Krause"
 
-#: main.cpp:62
+#: main.cpp:48
 #, kde-format
 msgid "Author"
 msgstr "Автор"
 
-#: main.cpp:63
+#: main.cpp:49
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:63 main.cpp:64
+#: main.cpp:49 main.cpp:50
 #, kde-format
 msgid "Maintainer"
 msgstr "Сопровождающий"
 
-#: main.cpp:64
+#: main.cpp:50
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"

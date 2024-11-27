@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-20 00:40+0000\n"
+"POT-Creation-Date: 2024-11-27 00:41+0000\n"
 "PO-Revision-Date: 2017-05-07 21:01+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -158,47 +158,47 @@ msgstr "Automatsko podešavanje nađeno."
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Podešavanje potrage: Mozillina baza"
 
-#: main.cpp:55
+#: main.cpp:41
 #, kde-format
 msgid "Account Assistant"
 msgstr "Asistent naloga"
 
-#: main.cpp:57
+#: main.cpp:43
 #, kde-format
 msgid "Helps setting up PIM accounts"
 msgstr "Pomaže u postavljanju PIM naloga"
 
-#: main.cpp:59
+#: main.cpp:45
 #, fuzzy, kde-format
 #| msgid "(c) 2009-2017 the Akonadi developers"
 msgid "(c) 2009-2024 the Akonadi developers"
 msgstr "© 2009–2017, programeri Akonadija"
 
-#: main.cpp:62
+#: main.cpp:48
 #, fuzzy, kde-format
 #| msgid "Volker Krause"
 msgctxt "@info:credit"
 msgid "Volker Krause"
 msgstr "Folker Krause"
 
-#: main.cpp:62
+#: main.cpp:48
 #, kde-format
 msgid "Author"
 msgstr "Autor"
 
-#: main.cpp:63
+#: main.cpp:49
 #, fuzzy, kde-format
 #| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Loren Montel"
 
-#: main.cpp:63 main.cpp:64
+#: main.cpp:49 main.cpp:50
 #, kde-format
 msgid "Maintainer"
 msgstr ""
 
-#: main.cpp:64
+#: main.cpp:50
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
