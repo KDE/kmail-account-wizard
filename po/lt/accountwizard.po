@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-27 00:41+0000\n"
-"PO-Revision-Date: 2019-07-06 13:44+0300\n"
+"PO-Revision-Date: 2024-11-30 15:16+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,45 +41,40 @@ msgstr "Be pavadinimo"
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
-msgstr ""
+msgstr "Sukurti el. pašto tapatybę: %1"
 
 #: accountconfiguration.cpp:214
-#, fuzzy, kde-format
-#| msgid "Full name:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
-msgstr "Visas vardas:"
+msgstr "Vardas, pavardė:"
 
 #: accountconfiguration.cpp:215
-#, fuzzy, kde-format
-#| msgid "E-mail address:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
-msgstr "El. pašto adresas:"
+msgstr "Pirminis el. pašto adresas:"
 
 #: accountconfiguration.cpp:244
-#, fuzzy, kde-format
-#| msgid "Mail transport account deleted."
+#, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
-msgstr "Pašto perdavimo paskyra ištrinta."
+msgstr "Pašto perdavimo sąranka užbaigta: %1"
 
 #: accountconfiguration.cpp:247
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Host:"
-msgstr "Naudotojo vardas:"
+msgstr "Mazgas:"
 
 #: accountconfiguration.cpp:248
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
-msgstr ""
+msgstr "Prievadas:"
 
 #: accountconfiguration.cpp:249
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Naudotojo vardas:"
@@ -88,78 +83,73 @@ msgstr "Naudotojo vardas:"
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
-msgstr ""
+msgstr "Šifravimas:"
 
 #: accountconfiguration.cpp:253
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
-msgstr ""
+msgstr "Tapatybės nustatymas:"
 
 #: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
-#, fuzzy, kde-format
-#| msgid "IMAP, %1"
+#, kde-format
 msgid "IMAP"
-msgstr "IMAP, %1"
+msgstr "IMAP"
 
 #: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:26
 #: qml/ManualConfigurationPage.qml:90
-#, fuzzy, kde-format
-#| msgid "POP3, %1"
+#, kde-format
 msgid "POP3"
-msgstr "POP3, %1"
+msgstr "POP3"
 
 #: ispdb/configurationmodel.cpp:51
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
-msgstr ""
+msgstr "Laikyti aplankus ir el. laiškus sinchronizuotus serveryje"
 
 #: ispdb/configurationmodel.cpp:52
 #, kde-format
 msgid "Remove your emails from your server and keep them only on your computer"
 msgstr ""
+"Pašalinti el. laiškus iš serverio ir laikyti juos tik savo kompiuteryje"
 
 #: ispdb/serverconfiguration.cpp:29
-#, fuzzy, kde-format
-#| msgid "SMTP, %1"
+#, kde-format
 msgid "SMTP"
-msgstr "SMTP, %1"
+msgstr "SMTP"
 
 #: ispdb/serverconfiguration.cpp:35
 #, kde-format
 msgid "SSL/TLS"
-msgstr ""
+msgstr "SSL/TLS"
 
 #: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:121
 #: qml/ManualConfigurationPage.qml:226
 #, kde-format
 msgid "StartTLS"
-msgstr ""
+msgstr "StartTLS"
 
 #: ispdb/serverconfiguration.cpp:41
 #, kde-format
 msgctxt "No security mechanism"
 msgid "None"
-msgstr ""
+msgstr "Nėra"
 
 #: ispdbservice.cpp:130
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgid "Configuration found auto config file."
-msgstr "Automatinė konfigūracija rasta."
+msgstr "Konfigūracija surado automatinės konfigūracijos failą."
 
 #: ispdbservice.cpp:133
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgid "Configuration found in well-known file."
-msgstr "Automatinė konfigūracija rasta."
+msgstr "Konfigūracija surasta „well-known“ faile."
 
 #: ispdbservice.cpp:136
-#, fuzzy, kde-format
-#| msgid "Lookup configuration: Mozilla database"
+#, kde-format
 msgid "Configuration found in Mozilla FAI Database."
-msgstr "Konfigūracijos paieška: Mozilla duomenų bazė"
+msgstr "Konfigūracija surasta „Mozilla FAI“ duomenų bazėje."
 
 #: main.cpp:41
 #, kde-format
@@ -172,14 +162,12 @@ msgid "Helps setting up PIM accounts"
 msgstr "Padeda sukurti asmeninės informacijos tvarkymo (PIM) paskyras"
 
 #: main.cpp:45
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2019 the Akonadi developers"
+#, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
-msgstr "(c) 2009-2019 the Akonadi programuotojai"
+msgstr "(c) 2009–2024 Akonadi plėtotojai"
 
 #: main.cpp:48
-#, fuzzy, kde-format
-#| msgid "Volker Krause"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Volker Krause"
 msgstr "Volker Krause"
@@ -190,8 +178,7 @@ msgid "Author"
 msgstr "Autorius"
 
 #: main.cpp:49
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -199,188 +186,179 @@ msgstr "Laurent Montel"
 #: main.cpp:49 main.cpp:50
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Prižiūrėtojas"
 
 #: main.cpp:50
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
-msgstr ""
+msgstr "Carl Schwan"
 
 #: qml/ConfigurationDelegate.qml:93
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming"
-msgstr "Gavimo:"
+msgstr "Gaunamieji"
 
 #: qml/ConfigurationDelegate.qml:114
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing"
-msgstr "Siuntimo:"
+msgstr "Siunčiamieji"
 
 #: qml/ConfigurationSelectionPage.qml:16
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgctxt "@title:group"
 msgid "Configuration Selection"
-msgstr "Automatinė konfigūracija rasta."
+msgstr "Konfigūracijos pasirinkimas"
 
 #: qml/ConfigurationSelectionPage.qml:39
 #, kde-format
 msgid "Available configurations"
-msgstr ""
+msgstr "Prieinamos konfigūracijos"
 
 #: qml/ConfigurationSelectionPage.qml:56
-#, fuzzy, kde-format
-#| msgid "No config found to edit"
+#, kde-format
 msgid "No configuration found from the internet for this server."
-msgstr "Nėrasta jokios konfigūracijos, kurią taisyti"
+msgstr "Internete nerasta jokios konfigūracijos šiam serveriui."
 
 #: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
 #, kde-format
 msgid "Manual Configuration"
-msgstr ""
+msgstr "Rankinė konfigūracija"
 
 #: qml/ConfigurationSelectionPage.qml:115
 #, kde-format
 msgctxt "@title:group"
 msgid "Calendar and Contacts"
-msgstr ""
+msgstr "Kalendorius ir adresatai"
 
 #: qml/ConfigurationSelectionPage.qml:126
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable calendar and contact integration"
-msgstr ""
+msgstr "Įjungti kalendoriaus ir adresatų integraciją"
 
 #: qml/DetailsPage.qml:15
-#, fuzzy, kde-format
-#| msgid "&Details..."
+#, kde-format
 msgctxt "@title:group"
 msgid "Details"
-msgstr "&Išsamiau..."
+msgstr "Išsamiau"
 
 #: qml/DetailsPage.qml:18
 #, kde-format
 msgctxt "@action:button"
 msgid "Quit"
-msgstr ""
+msgstr "Išeiti"
 
 #: qml/DetailsPage.qml:24
-#, fuzzy, kde-format
-#| msgid "&Details..."
+#, kde-format
 msgid "Details"
-msgstr "&Išsamiau..."
+msgstr "Išsamiau"
 
 #: qml/DetailsPage.qml:61
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
-msgstr ""
+msgstr "Nėra prieinama išsamesnė informacija."
 
 #: qml/ManualConfigurationPage.qml:18
 #, kde-format
 msgid "Recheck"
-msgstr ""
+msgstr "Tikrinti iš naujo"
 
 #: qml/ManualConfigurationPage.qml:25
-#, fuzzy, kde-format
-#| msgid "Setting up Account"
+#, kde-format
 msgid "Create Account"
-msgstr "Paskyros nuostatos"
+msgstr "Sukurti paskyrą"
 
 #: qml/ManualConfigurationPage.qml:67
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming Server Parameters"
-msgstr "Gavimo:"
+msgstr "Gaunamųjų serverio parametrai"
 
 #: qml/ManualConfigurationPage.qml:73
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming server:"
-msgstr "Gavimo:"
+msgstr "Gaunamųjų serveris:"
 
 #: qml/ManualConfigurationPage.qml:85
 #, kde-format
 msgid "Protocol:"
-msgstr ""
+msgstr "Protokolas:"
 
 #: qml/ManualConfigurationPage.qml:91
 #, kde-format
 msgid "Kolab"
-msgstr ""
+msgstr "Kolab"
 
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:206
 #, kde-format
 msgid "Port:"
-msgstr ""
+msgstr "Prievadas:"
 
 #: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:220
 #, kde-format
 msgid "Security:"
-msgstr ""
+msgstr "Saugumas:"
 
 #: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:225
 #, kde-format
 msgid "SSL/TLS (recommended)"
-msgstr ""
+msgstr "SSL/TLS (rekomenduojama)"
 
 #: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:224
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Nėra"
 
 #: qml/ManualConfigurationPage.qml:136 qml/ManualConfigurationPage.qml:238
 #, kde-format
 msgid "Authentication Method:"
-msgstr ""
+msgstr "Tapatybės nustatymo metodas:"
 
 #: qml/ManualConfigurationPage.qml:140 qml/ManualConfigurationPage.qml:242
 #, kde-format
 msgid "Clear text"
-msgstr ""
+msgstr "Atvirasis tekstas"
 
 #: qml/ManualConfigurationPage.qml:141 qml/ManualConfigurationPage.qml:243
 #, kde-format
 msgid "PLAIN"
-msgstr ""
+msgstr "GRYNASIS"
 
 #: qml/ManualConfigurationPage.qml:142 qml/ManualConfigurationPage.qml:244
 #, kde-format
 msgid "LOGIN"
-msgstr ""
+msgstr "PRISIJUNGIMAS"
 
 #: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:245
 #, kde-format
 msgid "CRAM-MD5"
-msgstr ""
+msgstr "CRAM-MD5"
 
 #: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:246
 #, kde-format
 msgid "DIGEST-MD5"
-msgstr ""
+msgstr "DIGEST-MD5"
 
 #: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:247
 #, kde-format
 msgid "NTLM"
-msgstr ""
+msgstr "NTLM"
 
 #: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:248
 #, kde-format
 msgid "GSSAPI"
-msgstr ""
+msgstr "GSSAPI"
 
 #: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:249
 #, kde-format
 msgid "XOAuth (Gmail)"
-msgstr ""
+msgstr "XOAuth (Gmail)"
 
 #: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:250
 #, kde-format
 msgid "APOP"
-msgstr ""
+msgstr "APOP"
 
 #: qml/ManualConfigurationPage.qml:162 qml/ManualConfigurationPage.qml:263
 #, kde-format
@@ -391,57 +369,51 @@ msgstr "Naudotojo vardas:"
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr ""
+"Atsisiųsti visus laiškus, kad galima būtų jais naudotis be interneto ryšio"
 
 #: qml/ManualConfigurationPage.qml:186
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing Server Parameters"
-msgstr "Siuntimo:"
+msgstr "Siunčiamųjų serverio parametrai"
 
 #: qml/ManualConfigurationPage.qml:193
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing server:"
-msgstr "Siuntimo:"
+msgstr "Siunčiamųjų serveris:"
 
 #: qml/PersonalDataPage.qml:15
 #, kde-format
 msgid "Personal Information"
-msgstr ""
+msgstr "Asmeninė informacija"
 
 #: qml/PersonalDataPage.qml:43
 #, kde-format
 msgid "Connect your Email Account"
-msgstr ""
+msgstr "Prijunkite savo el. pašto paskyrą"
 
 #: qml/PersonalDataPage.qml:51
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check online for the settings needed for this email provider. Only the "
-#| "domain name part of the e-mail address will be sent over the Internet at "
-#| "this point. If this option is unchecked, the account can be set up "
-#| "manually."
+#, kde-format
 msgid ""
 "To use your current email address fill in your credentials. This wizard will "
 "automatically search for a working and recommended server configuration. "
 "Only the domain name part of the e-mail address will be sent over the "
 "Internet."
 msgstr ""
-"Patikrinti internete ar yra šiam el. pašto teikėjui reikalingi nustatymai. "
-"Šiuo atveju iš el. pašto dalies į internetą bus išsiųstas tik srities "
-"pavadinimas. Jei ši parinktis nepažymėta, paskyrą galite nustatyti rankiniu "
-"būdu."
+"Norėdami naudoti esamą el. pašto adresą, įrašykite prisijungimo duomenis. "
+"Šis vediklis automatiškai atliks veikiančios ir rekomenduojamos serverio "
+"konfigūracijos paiešką. Internetu bus persiųsta tik el. pašto adreso domeno "
+"pavadinimo dalis."
 
 #: qml/PersonalDataPage.qml:57
 #, kde-format
 msgid "Full name:"
-msgstr "Visas vardas:"
+msgstr "Vardas, pavardė:"
 
 #: qml/PersonalDataPage.qml:58
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
-msgstr ""
+msgstr "Vardenis Pavardenis"
 
 #: qml/PersonalDataPage.qml:67
 #, kde-format
@@ -452,30 +424,29 @@ msgstr "El. pašto adresas:"
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
-msgstr ""
+msgstr "vadovas@pavyzdys.corp"
 
 #: qml/PersonalDataPage.qml:86
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password (optional):"
-msgstr "Slaptažodis:"
+msgstr "Slaptažodis (nebūtina):"
 
 #: qml/WizardPage.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr ""
+msgstr "Ankstesnis"
 
 #: qml/WizardPage.qml:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "Kitas"
 
 #: resource.cpp:72
 #, kde-format
 msgid "Resource type '%1' is not available."
-msgstr "Ištekliaus tipas \"%1\" yra neprieinamas."
+msgstr "Ištekliaus tipas „%1“ yra neprieinamas."
 
 #: resource.cpp:85
 #, kde-format
@@ -485,12 +456,12 @@ msgstr "Išteklius „%1“ jau yra nustatytas."
 #: resource.cpp:92
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr "Kuriamas ištekliaus egzempliorius, skirtas \"%1\"..."
+msgstr "Kuriamas ištekliaus egzempliorius, skirtas „%1“..."
 
 #: resource.cpp:101
 #, kde-format
 msgid "Failed to create resource instance: %1"
-msgstr "Nepavyko sukurti ištekliaus egzemplioriaus: %1"
+msgstr "Nepavyko sukurti ištekliaus egzemplioriaus : %1"
 
 #: resource.cpp:108
 #, kde-format
@@ -500,51 +471,49 @@ msgstr "Konfigūruojamas ištekliaus egzempliorius..."
 #: resource.cpp:112
 #, kde-format
 msgid "Unable to configure resource instance."
-msgstr "Nepavyko sukonfigūruoti ištekliaus egzemplioriaus."
+msgstr "Nepavyko konfigūruoti ištekliaus egzemplioriaus."
 
 #: resource.cpp:131
-#, fuzzy, kde-format
-#| msgid "Could not convert value of setting '%1' to required type %2."
+#, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
-msgstr "Nepavyko pakeisti nustatymo „%1“ reikšmės į reikalingą „%2“ tipą."
+msgstr ""
+"Nepavyko konvertuoti „%1“ nuostatos, kurios tipas %2, reikšmės į reikalingą "
+"%3 tipą."
 
 #: resource.cpp:144
 #, kde-format
 msgid "Could not set setting '%1': %2"
-msgstr "Nepavyko nustatyti nustatymo \"%1\": %2"
+msgstr "Nepavyko nustatyti nuostatos „%1“: %2"
 
 #: resource.cpp:150
-#, fuzzy, kde-format
-#| msgid "Could not set setting '%1': %2"
+#, kde-format
 msgid "Could not save settings: %1"
-msgstr "Nepavyko nustatyti nustatymo \"%1\": %2"
+msgstr "Nepavyko įrašyti nuostatų: %1"
 
 #: resource.cpp:156
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
-msgstr "Ištekliaus sąranka užbaigta."
+msgstr "Ištekliaus sąranka užbaigta: %1"
 
 #: resource.cpp:159
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
-msgstr "Ištekliaus sąranka užbaigta."
+msgstr "Ištekliaus tipas:"
 
 #: resource.cpp:169
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
-msgstr ""
+msgstr "Tuščias"
 
 #: resource.cpp:174
 #, kde-format
 msgctxt "label"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #~ msgid "Setting up identity..."
 #~ msgstr "Nustatoma tapatybė..."
