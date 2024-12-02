@@ -17,6 +17,7 @@
   <name xml:lang="eo">Account Wizard</name>
   <name xml:lang="es">Asistente de cuentas</name>
   <name xml:lang="eu">Kontu-morroia</name>
+  <name xml:lang="fi">Opastettu tilin asetus</name>
   <name xml:lang="fr">Assistant de comptes</name>
   <name xml:lang="gl">Asistente de contas</name>
   <name xml:lang="he">אשף החשבונות</name>
@@ -48,6 +49,7 @@
   <summary xml:lang="eo">Agordi kontojn</summary>
   <summary xml:lang="es">Configurar cuentas</summary>
   <summary xml:lang="eu">Konfiguratu kontuak</summary>
+  <summary xml:lang="fi">Tiliasetukset</summary>
   <summary xml:lang="fr">Configurer les comptes</summary>
   <summary xml:lang="gl">Configurar as contas.</summary>
   <summary xml:lang="he">הגדרת חשבונות</summary>
@@ -81,6 +83,7 @@
     <p xml:lang="eo">Kontosorĉisto permesas redakti, krei, forigi kontojn. Kontosorĉisto subtenas kontotipojn IMAP/POP3/Kolab. Kontinformo troveblas per uzo de servo ispd.</p>
     <p xml:lang="es">El asistente de cuentas le permite crear, modificar y borrar cuentas. Permite usar cuentas de tipo IMAP, POP3 y Kolab. La información sobre la cuenta se puede encontrar usando el servicio ispd.</p>
     <p xml:lang="eu">Kontu-morroiak kontuak editatzen, sortzen, ezabatzen uzten dizu. Kontu-morroiak IMAP/POP3/Kolab kontu motak onartzen ditu. Kontuen informazioa «ispd» zerbitzua erabiliz aurki daiteke.</p>
+    <p xml:lang="fi">Opastetulla tilin asetuksella voi luoda, muokata ja poistaa tilejä. Asetus tukee IMAP-, POP3- ja Kolab-tilejä. Tilin tietoja voi etsiä ispd-palvelulla.</p>
     <p xml:lang="fr">L'assistant de comptes vous permet de modifier, créer, supprimer des comptes. Il prend en charge le type de compte IMAP / POP3 / Kolab. Les informations de compte peuvent être trouvées en utilisant le service « ispd ».</p>
     <p xml:lang="gl">O asistente de contas permite editar, crear e eliminar contas. Permite contas de IMAP, POP3 e Kolab. A información da conta pode atoparse co servizo ispd.</p>
     <p xml:lang="he">אשף החשבונות/AccountWizard מאפשר לך לערוך, ליצור או למחוק חשבונות. אשף החשבונות תומך בסוגי החשבונות IMAP/POP3/Kolab. אפשר למצוא את פרטי החשבון דרך השירות ispd.</p>
