@@ -9,6 +9,8 @@
 #include <KDBusService>
 #include <KLocalizedString>
 
+#include <KIconTheme>
+#include <KLocalizedQmlContext>
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QDebug>
@@ -16,10 +18,6 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QQuickStyle>
-#if KI18N_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-#include <KLocalizedQmlContext>
-#endif
-#include <KIconTheme>
 
 #include <KStyleManager>
 using namespace Qt::Literals::StringLiterals;
@@ -67,11 +65,7 @@ int main(int argc, char **argv)
 
     QQmlApplicationEngine engine;
 
-#if KI18N_VERSION < QT_VERSION_CHECK(6, 8, 0)
-    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
-#else
     engine.rootContext()->setContextObject(new KLocalizedQmlContext(&engine));
-#endif
 
     engine.loadFromModule("org.kde.pim.accountwizard", "Main");
 
