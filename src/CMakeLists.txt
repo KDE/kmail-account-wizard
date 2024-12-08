@@ -78,11 +78,9 @@ if(TARGET KF6::IconThemes)
 	target_link_libraries(accountwizard PRIVATE KF6::IconThemes)
 endif()
 
-if(TARGET KF6::I18nQml)
 target_link_libraries(accountwizard PUBLIC
         KF6::I18nQml
 )
-endif()
 target_link_libraries(accountwizard PRIVATE accountwizard_static accountwizard_staticplugin)
 
 if (BUILD_TESTING)
