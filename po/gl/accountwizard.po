@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-15 00:40+0000\n"
-"PO-Revision-Date: 2024-05-17 21:03+0200\n"
+"PO-Revision-Date: 2024-12-08 14:42+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -216,7 +216,7 @@ msgstr "Configuracións dispoñíbeis"
 #: qml/ConfigurationSelectionPage.qml:56
 #, kde-format
 msgid "No configuration found from the internet for this server."
-msgstr "Non se atopou en internet unha configuración para o servidor."
+msgstr "Non se atopou en Internet unha configuración para o servidor."
 
 #: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
 #, kde-format
