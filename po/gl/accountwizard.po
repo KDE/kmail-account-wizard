@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-27 00:41+0000\n"
-"PO-Revision-Date: 2024-05-17 21:03+0200\n"
+"POT-Creation-Date: 2024-12-09 00:41+0000\n"
+"PO-Revision-Date: 2024-12-08 14:42+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -149,44 +149,44 @@ msgstr "Atopouse unha configuración non ficheiro habitual."
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Atopouse unha configuración na base de datos FAI de Mozilla."
 
-#: main.cpp:41
+#: main.cpp:39
 #, kde-format
 msgid "Account Assistant"
 msgstr "Asistente de Contas"
 
-#: main.cpp:43
+#: main.cpp:41
 #, kde-format
 msgid "Helps setting up PIM accounts"
 msgstr "Axuda a configurar as contas de PIM"
 
-#: main.cpp:45
+#: main.cpp:43
 #, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
 msgstr "© 2009-2024 Persoas desenvolvedoras de Akonadi"
 
-#: main.cpp:48
+#: main.cpp:46
 #, kde-format
 msgctxt "@info:credit"
 msgid "Volker Krause"
 msgstr "Volker Krause"
 
-#: main.cpp:48
+#: main.cpp:46
 #, kde-format
 msgid "Author"
 msgstr "Autoría"
 
-#: main.cpp:49
+#: main.cpp:47
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:49 main.cpp:50
+#: main.cpp:47 main.cpp:48
 #, kde-format
 msgid "Maintainer"
 msgstr "Mantemento."
 
-#: main.cpp:50
+#: main.cpp:48
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
@@ -216,7 +216,7 @@ msgstr "Configuracións dispoñíbeis"
 #: qml/ConfigurationSelectionPage.qml:56
 #, kde-format
 msgid "No configuration found from the internet for this server."
-msgstr "Non se atopou en internet unha configuración para o servidor."
+msgstr "Non se atopou en Internet unha configuración para o servidor."
 
 #: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
 #, kde-format

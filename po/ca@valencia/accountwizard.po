@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-27 00:41+0000\n"
+"POT-Creation-Date: 2024-12-09 00:41+0000\n"
 "PO-Revision-Date: 2024-05-16 15:50+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -154,44 +154,44 @@ msgstr "S'ha trobat la configuració en un fitxer ben conegut."
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "S'ha trobat la configuració en la Base de dades FAI de Mozilla."
 
-#: main.cpp:41
+#: main.cpp:39
 #, kde-format
 msgid "Account Assistant"
 msgstr "Assistent de compte"
 
-#: main.cpp:43
+#: main.cpp:41
 #, kde-format
 msgid "Helps setting up PIM accounts"
 msgstr "Ajuda a configurar els comptes PIM"
 
-#: main.cpp:45
+#: main.cpp:43
 #, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
 msgstr "(c) 2009-2024, els desenvolupadors d'Akonadi"
 
-#: main.cpp:48
+#: main.cpp:46
 #, kde-format
 msgctxt "@info:credit"
 msgid "Volker Krause"
 msgstr "Volker Krause"
 
-#: main.cpp:48
+#: main.cpp:46
 #, kde-format
 msgid "Author"
 msgstr "Autoria"
 
-#: main.cpp:49
+#: main.cpp:47
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:49 main.cpp:50
+#: main.cpp:47 main.cpp:48
 #, kde-format
 msgid "Maintainer"
 msgstr "Mantenidor"
 
-#: main.cpp:50
+#: main.cpp:48
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
