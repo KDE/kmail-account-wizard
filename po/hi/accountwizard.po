@@ -1,152 +1,149 @@
-# Sanskrit translations for kmail-account-wizard package.
+# Hindi translations for kmail-account-wizard package.
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kmail-account-wizard package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
-# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-09 00:41+0000\n"
-"PO-Revision-Date: 2024-12-14 01:08+0530\n"
-"Last-Translator: kali <skkalwar999@gmail.com>\n"
-"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
-"Language: sa\n"
+"PO-Revision-Date: 2024-12-15 17:36+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
+"Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n>2);\n"
-"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "भवतः नामानि"
+msgstr "तुम्हारे नाम"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "भवतः ईमेलपत्राणि"
+msgstr "आपके ईमेल"
 
 #: accountconfiguration.cpp:200 ispdb/configurationmodel.cpp:147
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
-msgstr "अनामिका"
+msgstr "अज्ञात"
 
 #: accountconfiguration.cpp:211
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
-msgstr "ईमेलपरिचयं रचयन्तु: %1"
+msgstr "ईमेल पहचान बनाएं: %1"
 
 #: accountconfiguration.cpp:214
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
-msgstr "सम्पूर्ण नाम : १."
+msgstr "पूरा नाम:"
 
 #: accountconfiguration.cpp:215
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
-msgstr "प्राथमिकं ईमेल-सङ्केतं : १."
+msgstr "प्राथमिक विद्युतडाक पता:"
 
 #: accountconfiguration.cpp:244
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
-msgstr "मेलपरिवहनव्यवस्थापनं सम्पन्नम्: %1"
+msgstr "मेल ट्रांसपोर्ट सेटअप पूर्ण: %1"
 
 #: accountconfiguration.cpp:247
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
-msgstr "निमन्त्रकः:"
+msgstr "मेज़बान:"
 
 #: accountconfiguration.cpp:248
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
-msgstr "पोताश्रय:"
+msgstr "पत्तन:"
 
 #: accountconfiguration.cpp:249
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
-msgstr "उपयोक्तृनाम : १."
+msgstr "उपयोगकर्ता नाम:"
 
 #: accountconfiguration.cpp:251
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
-msgstr "एन्क्रिप्शन : १."
+msgstr "कूटलेखन:"
 
 #: accountconfiguration.cpp:253
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
-msgstr "प्रमाणीकरणम् : १."
+msgstr "प्रमाणीकरण:"
 
 #: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
 #, kde-format
 msgid "IMAP"
-msgstr "IMAP"
+msgstr "आईएमएपी"
 
 #: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:26
 #: qml/ManualConfigurationPage.qml:90
 #, kde-format
 msgid "POP3"
-msgstr "POP3"
+msgstr "पॉप 3"
 
 #: ispdb/configurationmodel.cpp:51
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
-msgstr "भवतः पुटं ईमेल च भवतः सर्वरे समन्वयितं कुर्वन्तु"
+msgstr "अपने फ़ोल्डर्स और ईमेल को अपने सर्वर पर सिंक रखें"
 
 #: ispdb/configurationmodel.cpp:52
 #, kde-format
 msgid "Remove your emails from your server and keep them only on your computer"
-msgstr "स्वस्य ईमेल-पत्राणि स्वस्य सर्वरात् निष्कास्य केवलं सङ्गणके एव स्थापयन्तु"
+msgstr "अपने ईमेल को अपने सर्वर से हटा दें और उन्हें केवल अपने कंप्यूटर पर ही रखें"
 
 #: ispdb/serverconfiguration.cpp:29
 #, kde-format
 msgid "SMTP"
-msgstr "एस एम टी पी"
+msgstr "एसएमटीपी"
 
 #: ispdb/serverconfiguration.cpp:35
 #, kde-format
 msgid "SSL/TLS"
-msgstr "SSL/TLS इति"
+msgstr "एसएसएल/टीएलएस"
 
 #: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:121
 #: qml/ManualConfigurationPage.qml:226
 #, kde-format
 msgid "StartTLS"
-msgstr "StartTLS इति"
+msgstr "स्टार्टटीएलएस"
 
 #: ispdb/serverconfiguration.cpp:41
 #, kde-format
 msgctxt "No security mechanism"
 msgid "None"
-msgstr "न कश्चित्"
+msgstr "कोई नहीं"
 
 #: ispdbservice.cpp:130
 #, kde-format
 msgid "Configuration found auto config file."
-msgstr "विन्यासः स्वयमेव विन्याससञ्चिकां प्राप्तवती।"
+msgstr "कॉन्फ़िगरेशन में स्वचालित कॉन्फ़िगरेशन फ़ाइल मिली."
 
 #: ispdbservice.cpp:133
 #, kde-format
 msgid "Configuration found in well-known file."
-msgstr "सुप्रसिद्धसञ्चिकायां विन्यासः प्राप्यते ।"
+msgstr "कॉन्फ़िगरेशन सुप्रसिद्ध फ़ाइल में पाया गया."
 
 #: ispdbservice.cpp:136
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
-msgstr "Mozilla FAI Database इत्यत्र विन्यासः प्राप्तः ।"
+msgstr "कॉन्फ़िगरेशन मोज़िला FAI डेटाबेस में पाया गया."
 
 #: main.cpp:39
 #, kde-format
@@ -156,141 +153,141 @@ msgstr "लेखा सहायक"
 #: main.cpp:41
 #, kde-format
 msgid "Helps setting up PIM accounts"
-msgstr "PIM खातानां स्थापनायां सहायकं भवति"
+msgstr "PIM खाते सेट अप करने में सहायता करता है"
 
 #: main.cpp:43
 #, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
-msgstr "(ग) २००९-२०२४ अकोनाडी विकासकाः"
+msgstr "(सी) 2009-2024 अकोनाडी डेवलपर्स"
 
 #: main.cpp:46
 #, kde-format
 msgctxt "@info:credit"
 msgid "Volker Krause"
-msgstr "वोल्कर क्राउस"
+msgstr "वोल्कर क्राउज़"
 
 #: main.cpp:46
 #, kde-format
 msgid "Author"
-msgstr "लेखकः"
+msgstr "लेखक"
 
 #: main.cpp:47
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
-msgstr "लॉरेण्ट् मोंटेल्"
+msgstr "लॉरेंट मोंटेल"
 
 #: main.cpp:47 main.cpp:48
 #, kde-format
 msgid "Maintainer"
-msgstr "परिपालकः"
+msgstr "मेंटेनर"
 
 #: main.cpp:48
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
-msgstr "कार्ल स्वान्"
+msgstr "कार्ल स्वान"
 
 #: qml/ConfigurationDelegate.qml:93
 #, kde-format
 msgid "Incoming"
-msgstr "आगमनम्"
+msgstr "आने वाली"
 
 #: qml/ConfigurationDelegate.qml:114
 #, kde-format
 msgid "Outgoing"
-msgstr "बहिर्गामी"
+msgstr "जावक"
 
 #: qml/ConfigurationSelectionPage.qml:16
 #, kde-format
 msgctxt "@title:group"
 msgid "Configuration Selection"
-msgstr "विन्यासचयनम्"
+msgstr "कॉन्फ़िगरेशन चयन"
 
 #: qml/ConfigurationSelectionPage.qml:39
 #, kde-format
 msgid "Available configurations"
-msgstr "उपलब्धानि विन्यासानि"
+msgstr "उपलब्ध कॉन्फ़िगरेशन"
 
 #: qml/ConfigurationSelectionPage.qml:56
 #, kde-format
 msgid "No configuration found from the internet for this server."
-msgstr "अस्य सर्वरस्य कृते अन्तर्जालतः कोऽपि विन्यासः न प्राप्तः ।"
+msgstr "इस सर्वर के लिए इंटरनेट पर कोई कॉन्फ़िगरेशन नहीं मिला."
 
 #: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
 #, kde-format
 msgid "Manual Configuration"
-msgstr "मैनुअल विन्यास"
+msgstr "मैनुअल कॉन्फ़िगरेशन"
 
 #: qml/ConfigurationSelectionPage.qml:115
 #, kde-format
 msgctxt "@title:group"
 msgid "Calendar and Contacts"
-msgstr "पञ्चाङ्ग एवं सम्पर्क"
+msgstr "कैलेंडर और संपर्क"
 
 #: qml/ConfigurationSelectionPage.qml:126
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable calendar and contact integration"
-msgstr "पञ्चाङ्गं सम्पर्कं च एकीकरणं सक्षमं कुर्वन्तु"
+msgstr "कैलेंडर और संपर्क एकीकरण सक्षम करें"
 
 #: qml/DetailsPage.qml:15
 #, kde-format
 msgctxt "@title:group"
 msgid "Details"
-msgstr "वर्णन"
+msgstr "विवरण"
 
 #: qml/DetailsPage.qml:18
 #, kde-format
 msgctxt "@action:button"
 msgid "Quit"
-msgstr "परिजहातु"
+msgstr "छोड़ना"
 
 #: qml/DetailsPage.qml:24
 #, kde-format
 msgid "Details"
-msgstr "वर्णन"
+msgstr "विवरण"
 
 #: qml/DetailsPage.qml:61
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
-msgstr "विवरणं उपलब्धं नास्ति।"
+msgstr "कोई विवरण उपलब्ध नहीं है."
 
 #: qml/ManualConfigurationPage.qml:18
 #, kde-format
 msgid "Recheck"
-msgstr "पुनः परीक्षण करें"
+msgstr "पुनः जांच करें"
 
 #: qml/ManualConfigurationPage.qml:25
 #, kde-format
 msgid "Create Account"
-msgstr "खाता रचयन्तु"
+msgstr "खाता बनाएं"
 
 #: qml/ManualConfigurationPage.qml:67
 #, kde-format
 msgid "Incoming Server Parameters"
-msgstr "आगच्छन्तं सर्वर पैरामीटर्"
+msgstr "इनकमिंग सर्वर पैरामीटर"
 
 #: qml/ManualConfigurationPage.qml:73
 #, kde-format
 msgid "Incoming server:"
-msgstr "आगच्छन् सर्वरः : १."
+msgstr "आवक सर्वर:"
 
 #: qml/ManualConfigurationPage.qml:85
 #, kde-format
 msgid "Protocol:"
-msgstr "प्रोटोकॉलः : १."
+msgstr "शिष्टाचार:"
 
 #: qml/ManualConfigurationPage.qml:91
 #, kde-format
 msgid "Kolab"
-msgstr "कोलाब"
+msgstr "सहयोग"
 
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:206
 #, kde-format
 msgid "Port:"
-msgstr "पोताश्रय:"
+msgstr "पत्तन:"
 
 #: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:220
 #, kde-format
@@ -300,42 +297,42 @@ msgstr "सुरक्षा:"
 #: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:225
 #, kde-format
 msgid "SSL/TLS (recommended)"
-msgstr "SSL/TLS (अनुशंसितम्) २."
+msgstr "SSL/TLS (अनुशंसित)"
 
 #: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:224
 #, kde-format
 msgid "None"
-msgstr "न कश्चित्"
+msgstr "कोई नहीं"
 
 #: qml/ManualConfigurationPage.qml:136 qml/ManualConfigurationPage.qml:238
 #, kde-format
 msgid "Authentication Method:"
-msgstr "प्रमाणीकरणविधिः : १."
+msgstr "प्रमाणीकरण विधि:"
 
 #: qml/ManualConfigurationPage.qml:140 qml/ManualConfigurationPage.qml:242
 #, kde-format
 msgid "Clear text"
-msgstr "पाठः स्पष्टः"
+msgstr "स्पष्ट पाठ"
 
 #: qml/ManualConfigurationPage.qml:141 qml/ManualConfigurationPage.qml:243
 #, kde-format
 msgid "PLAIN"
-msgstr "सम"
+msgstr "मैदान"
 
 #: qml/ManualConfigurationPage.qml:142 qml/ManualConfigurationPage.qml:244
 #, kde-format
 msgid "LOGIN"
-msgstr "LOGIN इति"
+msgstr "लॉग इन करें"
 
 #: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:245
 #, kde-format
 msgid "CRAM-MD5"
-msgstr "CRAM-MD5"
+msgstr "क्रैम-MD5"
 
 #: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:246
 #, kde-format
 msgid "DIGEST-MD5"
-msgstr "DIGEST-MD5"
+msgstr "डाइजेस्ट-MD5"
 
 #: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:247
 #, kde-format
@@ -345,47 +342,47 @@ msgstr "एनटीएलएम"
 #: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:248
 #, kde-format
 msgid "GSSAPI"
-msgstr "GSSAPI"
+msgstr "जीएसएसएपीआई"
 
 #: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:249
 #, kde-format
 msgid "XOAuth (Gmail)"
-msgstr "XOAuth (जीमेल) ९."
+msgstr "XOAuth (जीमेल)"
 
 #: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:250
 #, kde-format
 msgid "APOP"
-msgstr "APOP"
+msgstr "एक पॉप"
 
 #: qml/ManualConfigurationPage.qml:162 qml/ManualConfigurationPage.qml:263
 #, kde-format
 msgid "Username:"
-msgstr "उपयोक्तृनाम : १."
+msgstr "उपयोगकर्ता नाम:"
 
 #: qml/ManualConfigurationPage.qml:177
 #, kde-format
 msgid "Download all messages for offline use"
-msgstr "अफलाइन उपयोगाय सर्वान् सन्देशान् डाउनलोड् कुर्वन्तु"
+msgstr "ऑफ़लाइन उपयोग के लिए सभी संदेश डाउनलोड करें"
 
 #: qml/ManualConfigurationPage.qml:186
 #, kde-format
 msgid "Outgoing Server Parameters"
-msgstr "बहिर्गच्छन्तं सर्वर पैरामीटर्"
+msgstr "आउटगोइंग सर्वर पैरामीटर"
 
 #: qml/ManualConfigurationPage.qml:193
 #, kde-format
 msgid "Outgoing server:"
-msgstr "बहिर्गच्छन् सर्वरः : १."
+msgstr "आउटगोइंग सर्वर:"
 
 #: qml/PersonalDataPage.qml:15
 #, kde-format
 msgid "Personal Information"
-msgstr "व्यक्तिगत सूचना"
+msgstr "व्यक्तिगत जानकारी"
 
 #: qml/PersonalDataPage.qml:43
 #, kde-format
 msgid "Connect your Email Account"
-msgstr "स्वस्य Email खातं संयोजयन्तु"
+msgstr "अपना ईमेल खाता कनेक्ट करें"
 
 #: qml/PersonalDataPage.qml:51
 #, kde-format
@@ -395,115 +392,116 @@ msgid ""
 "Only the domain name part of the e-mail address will be sent over the "
 "Internet."
 msgstr ""
-"वर्तमानं ईमेल-सङ्केतं उपयोक्तुं स्वस्य प्रमाणपत्राणि पूरयन्तु । एषः विजार्ड् स्वयमेव कार्यं कुर्वन् "
-"अनुशंसितं च सर्वर-विन्यासं अन्वेषयिष्यति । केवलं ई-मेल-सङ्केतस्य डोमेन-नामभागः एव "
-"अन्तर्जालमाध्यमेन प्रेषितः भविष्यति ।"
+"अपने वर्तमान ईमेल पते का उपयोग करने के लिए अपने क्रेडेंशियल भरें। यह विज़ार्ड स्वचालित रूप से "
+"एक कार्यशील और अनुशंसित सर्वर कॉन्फ़िगरेशन की खोज करेगा। ईमेल पते का केवल डोमेन नाम वाला "
+"भाग ही इंटरनेट पर भेजा जाएगा।"
 
 #: qml/PersonalDataPage.qml:57
 #, kde-format
 msgid "Full name:"
-msgstr "सम्पूर्ण नाम : १."
+msgstr "पूरा नाम:"
 
 #: qml/PersonalDataPage.qml:58
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
-msgstr "जॉन् स्मिथः"
+msgstr "जॉन स्मिथ"
 
 #: qml/PersonalDataPage.qml:67
 #, kde-format
 msgid "E-mail address:"
-msgstr "ई-मेल-सङ्केतः : १."
+msgstr "मेल पता:"
 
 #: qml/PersonalDataPage.qml:68
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
-msgstr "boss@example.corp"
+msgstr "बॉस@example.corp"
 
 #: qml/PersonalDataPage.qml:86
 #, kde-format
 msgid "Password (optional):"
-msgstr "गुप्तशब्दः (वैकल्पिकः): १."
+msgstr "पासवर्ड (वैकल्पिक):"
 
 #: qml/WizardPage.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr "पूर्वतनम्‌"
+msgstr "पहले का"
 
 #: qml/WizardPage.qml:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr "अग्रिम"
+msgstr "अगला"
 
 #: resource.cpp:72
 #, kde-format
 msgid "Resource type '%1' is not available."
-msgstr "संसाधनप्रकारः '%1' उपलब्धः नास्ति ।"
+msgstr "संसाधन प्रकार '%1' उपलब्ध नहीं है."
 
 #: resource.cpp:85
 #, kde-format
 msgid "Resource '%1' is already set up."
-msgstr "संसाधनं '%1' पूर्वमेव स्थापितं अस्ति ।"
+msgstr "संसाधन '%1' पहले से ही सेट है."
 
 #: resource.cpp:92
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr "'%1' कृते संसाधनदृष्टान्तं निर्माय..."
+msgstr "'%1' के लिए संसाधन इंस्टैंस बनाया जा रहा है..."
 
 #: resource.cpp:101
 #, kde-format
 msgid "Failed to create resource instance: %1"
-msgstr "संसाधनदृष्टान्तं निर्मातुं असफलम्: %1"
+msgstr "संसाधन इंस्टैंस बनाने में विफल: %1"
 
 #: resource.cpp:108
 #, kde-format
 msgid "Configuring resource instance..."
-msgstr "संसाधनदृष्टान्तं विन्यस्तं..."
+msgstr "संसाधन इंस्टैंस कॉन्फ़िगर किया जा रहा है..."
 
 #: resource.cpp:112
 #, kde-format
 msgid "Unable to configure resource instance."
-msgstr "संसाधनदृष्टान्तं विन्यस्तुं असमर्थम् ।"
+msgstr "संसाधन इंस्टैंस कॉन्फ़िगर करने में असमर्थ."
 
 #: resource.cpp:131
 #, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
-msgstr "%2 प्रकारेण सह '%1' सेटिङ्ग् इत्यस्य मूल्यं आवश्यकप्रकारं %3 मध्ये परिवर्तयितुं न शक्तम् ।"
+msgstr ""
+"प्रकार %2 के साथ सेटिंग '%1' का मान आवश्यक प्रकार %3 में परिवर्तित नहीं किया जा सका।"
 
 #: resource.cpp:144
 #, kde-format
 msgid "Could not set setting '%1': %2"
-msgstr "'%1': %2 सेटिङ्ग् सेट् कर्तुं न शक्यते"
+msgstr "सेटिंग '%1' सेट नहीं की जा सकी: %2"
 
 #: resource.cpp:150
 #, kde-format
 msgid "Could not save settings: %1"
-msgstr "सेटिङ्ग्स् रक्षितुम् न शक्तम्: %1"
+msgstr "सेटिंग सहेजी नहीं जा सकी: %1"
 
 #: resource.cpp:156
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
-msgstr "संसाधनस्थापनं सम्पन्नम्: %1"
+msgstr "संसाधन सेटअप पूर्ण: %1"
 
 #: resource.cpp:159
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
-msgstr "संसाधनप्रकारः : १."
+msgstr "संसाधन प्रकार:"
 
 #: resource.cpp:169
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
-msgstr "रिक्तम्‌"
+msgstr "खाली"
 
 #: resource.cpp:174
 #, kde-format
 msgctxt "label"
 msgid "%1:"
-msgstr "%1: १."
+msgstr "%1:"
