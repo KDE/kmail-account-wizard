@@ -21,6 +21,7 @@
   <name xml:lang="fr">Assistant de comptes</name>
   <name xml:lang="gl">Asistente de contas</name>
   <name xml:lang="he">אשף החשבונות</name>
+  <name xml:lang="hi">खाता विज़ार्ड</name>
   <name xml:lang="hu">Fiókvarázsló</name>
   <name xml:lang="ia">Assistente pro Conto</name>
   <name xml:lang="id">Wisaya Akun</name>
@@ -54,6 +55,7 @@
   <summary xml:lang="fr">Configurer les comptes</summary>
   <summary xml:lang="gl">Configurar as contas.</summary>
   <summary xml:lang="he">הגדרת חשבונות</summary>
+  <summary xml:lang="hi">खाते कॉन्फ़िगर करें</summary>
   <summary xml:lang="hu">Fiókok beállítása</summary>
   <summary xml:lang="ia">Configura contos</summary>
   <summary xml:lang="id">Konfigurasi akun</summary>
@@ -89,6 +91,7 @@
     <p xml:lang="fr">L'assistant de comptes vous permet de modifier, créer, supprimer des comptes. Il prend en charge le type de compte IMAP / POP3 / Kolab. Les informations de compte peuvent être trouvées en utilisant le service « ispd ».</p>
     <p xml:lang="gl">O asistente de contas permite editar, crear e eliminar contas. Permite contas de IMAP, POP3 e Kolab. A información da conta pode atoparse co servizo ispd.</p>
     <p xml:lang="he">אשף החשבונות/AccountWizard מאפשר לך לערוך, ליצור או למחוק חשבונות. אשף החשבונות תומך בסוגי החשבונות IMAP/POP3/Kolab. אפשר למצוא את פרטי החשבון דרך השירות ispd.</p>
+    <p xml:lang="hi">अकाउंटविज़ार्ड अकाउंट को संपादित करने, बनाने, हटाने की अनुमति देता है। अकाउंटविज़ार्ड IMAP/POP3/कोलैब अकाउंट प्रकार का समर्थन करता है। ispd सेवा का उपयोग करके खाता जानकारी प्राप्त की जा सकती है।</p>
     <p xml:lang="hu">A Fiókvarázsló lehetővé teszi fiókok szerkesztését, létrehozását és törlését. A Fiókvarázsló az IMAP/POP3/Kolab fióktípusokat támogatja. A fiókinformációkat az ispd szolgáltatás használatával lehet megtalálni.</p>
     <p xml:lang="ia">Accountwizard permitte editar, crear, deler contos. Accountwizard supporta typo de conto de IMAP/POP3/Kolab. Information de conto pote esser usate per usar le servicio ispd.</p>
     <p xml:lang="id">Accountwizard memungkinkan untuk mengedit, membuat, menghapus akun. Accountwizard mendukung jenis akun IMAP/POP3/Kolab. Informasi akun dapat ditemukan dengan menggunakan layanan ispd.</p>
