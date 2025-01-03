@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-09 00:41+0000\n"
+"POT-Creation-Date: 2025-01-03 00:42+0000\n"
 "PO-Revision-Date: 2024-07-20 10:32+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -160,8 +160,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "Pomaga ustawić konta zarządzania informacjami osobistymi"
 
 #: main.cpp:43
-#, kde-format
-msgid "(c) 2009-2024 the Akonadi developers"
+#, fuzzy, kde-format
+#| msgid "(c) 2009-2024 the Akonadi developers"
+msgid "(c) 2009-2025 the Akonadi developers"
 msgstr "(c) 2009-2024 Programiści Akonadi"
 
 #: main.cpp:46

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-09 00:41+0000\n"
+"POT-Creation-Date: 2025-01-03 00:42+0000\n"
 "PO-Revision-Date: 2019-11-16 15:08+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -170,7 +170,7 @@ msgstr "Abiline PIM-i kontode loomisel"
 #: main.cpp:43
 #, fuzzy, kde-format
 #| msgid "(c) 2009-2019 the Akonadi developers"
-msgid "(c) 2009-2024 the Akonadi developers"
+msgid "(c) 2009-2025 the Akonadi developers"
 msgstr "(c) 2009-2019: Akonadi arendajad"
 
 #: main.cpp:46

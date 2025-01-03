@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-09 00:41+0000\n"
+"POT-Creation-Date: 2025-01-03 00:42+0000\n"
 "PO-Revision-Date: 2024-11-30 15:16+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -162,8 +162,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "Padeda sukurti asmeninės informacijos tvarkymo (PIM) paskyras"
 
 #: main.cpp:43
-#, kde-format
-msgid "(c) 2009-2024 the Akonadi developers"
+#, fuzzy, kde-format
+#| msgid "(c) 2009-2024 the Akonadi developers"
+msgid "(c) 2009-2025 the Akonadi developers"
 msgstr "(c) 2009–2024 Akonadi plėtotojai"
 
 #: main.cpp:46

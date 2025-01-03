@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-09 00:41+0000\n"
+"POT-Creation-Date: 2025-01-03 00:42+0000\n"
 "PO-Revision-Date: 2024-05-16 12:15+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -160,8 +160,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "يساعد في ضبط حسابات إدارة المعلومات الشّخصيّة"
 
 #: main.cpp:43
-#, kde-format
-msgid "(c) 2009-2024 the Akonadi developers"
+#, fuzzy, kde-format
+#| msgid "(c) 2009-2024 the Akonadi developers"
+msgid "(c) 2009-2025 the Akonadi developers"
 msgstr "© 2009-2024 لمطوّري «أكونادي»"
 
 #: main.cpp:46
