@@ -1,17 +1,17 @@
 # Translation of accountwizard.po to Catalan
-# Copyright (C) 2010-2024 This_file_is_part_of_KDE
+# Copyright (C) 2010-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Manuel Tortosa Moreno <manutortosa@gmail.com>, 2010.
-# Josep M. Ferrer <txemaq@gmail.com>, 2010, 2012, 2015, 2016, 2017, 2018, 2020, 2021, 2023, 2024.
+# Josep M. Ferrer <txemaq@gmail.com>, 2010, 2012, 2015, 2016, 2017, 2018, 2020, 2021, 2023, 2024, 2025.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2013, 2014, 2015, 2016, 2017, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-03 00:42+0000\n"
-"PO-Revision-Date: 2024-05-16 15:50+0200\n"
+"PO-Revision-Date: 2025-01-03 10:06+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -165,10 +165,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "Ajuda a configurar els comptes PIM"
 
 #: main.cpp:43
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2024 the Akonadi developers"
+#, kde-format
 msgid "(c) 2009-2025 the Akonadi developers"
-msgstr "(c) 2009-2024, els desenvolupadors de l'Akonadi"
+msgstr "(c) 2009-2025, els desenvolupadors de l'Akonadi"
 
 #: main.cpp:46
 #, kde-format
@@ -517,39 +516,3 @@ msgstr "Buit"
 msgctxt "label"
 msgid "%1:"
 msgstr "%1:"
-
-#~ msgid "STARTTLS"
-#~ msgstr "STARTTLS"
-
-#~ msgid "Setting up identity..."
-#~ msgstr "S'està arranjant la identitat..."
-
-#~ msgid "Identity set up."
-#~ msgstr "S'ha arranjat la identitat."
-
-#~ msgid "Identity removed."
-#~ msgstr "S'ha eliminat la identitat."
-
-#~ msgid "Setting up mail transport account..."
-#~ msgstr "S'està arranjant el transport de correu del compte..."
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr ""
-#~ "El transport de correu usa l'encriptatge «%1» i l'autenticació «%2»."
-
-#~ msgid "Mail transport account set up."
-#~ msgstr "S'ha arranjat el transport de correu del compte."
-
-#~ msgid "Set Up Your Existing Email Address"
-#~ msgstr "Definiu la vostra adreça de correu existent"
-
-#~ msgid "Continue"
-#~ msgstr "Continua"
-
-#~ msgid ""
-#~ "Check online for the settings needed for this email provider. Only the "
-#~ "domain name part of the e-mail address will be sent over the Internet."
-#~ msgstr ""
-#~ "Comprova en línia la configuració necessària per a aquest proveïdor de "
-#~ "correu. Només s'enviarà a Internet la part del nom del domini de l'adreça "
-#~ "de correu."
