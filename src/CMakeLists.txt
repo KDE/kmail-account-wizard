@@ -74,14 +74,7 @@ endif()
 add_executable(accountwizard
     main.cpp
 )
-if(TARGET KF6::IconThemes)
-	target_link_libraries(accountwizard PRIVATE KF6::IconThemes)
-endif()
-
-target_link_libraries(accountwizard PUBLIC
-        KF6::I18nQml
-)
-target_link_libraries(accountwizard PRIVATE accountwizard_static accountwizard_staticplugin)
+target_link_libraries(accountwizard PRIVATE accountwizard_static accountwizard_staticplugin KF6::IconThemes KF6::I18nQml)
 
 if (BUILD_TESTING)
     add_subdirectory(autotests)
