@@ -159,7 +159,7 @@ msgstr "帮助设置个人账户"
 #: main.cpp:52
 #, kde-format
 msgid "(c) 2009-2024 the Akonadi developers"
-msgstr ""
+msgstr "(c) 2009-2024 Akonadi 开发者"
 
 #: main.cpp:55
 #, kde-format
