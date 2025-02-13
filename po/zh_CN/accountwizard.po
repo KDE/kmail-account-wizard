@@ -37,7 +37,7 @@ msgstr "未命名"
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
-msgstr ""
+msgstr "创建电子邮件身份： %1"
 
 #: accountconfiguration.cpp:214
 #, kde-format
@@ -102,12 +102,12 @@ msgstr "POP3"
 #: ispdb/configurationmodel.cpp:51
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
-msgstr ""
+msgstr "保持您的文件和电子邮件与您的服务器同步"
 
 #: ispdb/configurationmodel.cpp:52
 #, kde-format
 msgid "Remove your emails from your server and keep them only on your computer"
-msgstr ""
+msgstr "从您的服务器上删除您的电子邮件并将其保留在您的计算机上"
 
 #: ispdb/serverconfiguration.cpp:29
 #, kde-format
@@ -123,7 +123,7 @@ msgstr "SSL/TLS"
 #: qml/ManualConfigurationPage.qml:226
 #, kde-format
 msgid "StartTLS"
-msgstr ""
+msgstr "开启 TLS"
 
 #: ispdb/serverconfiguration.cpp:41
 #, kde-format
@@ -134,17 +134,17 @@ msgstr "无"
 #: ispdbservice.cpp:130
 #, kde-format
 msgid "Configuration found auto config file."
-msgstr ""
+msgstr "配置找到了自动配置文件。"
 
 #: ispdbservice.cpp:133
 #, kde-format
 msgid "Configuration found in well-known file."
-msgstr ""
+msgstr "在已知文件中找到了配置。"
 
 #: ispdbservice.cpp:136
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
-msgstr ""
+msgstr "在 Mozilla FAI 数据库中找到了配置。"
 
 #: main.cpp:48
 #, kde-format
@@ -181,39 +181,39 @@ msgstr "Laurent Montel"
 #: main.cpp:56 main.cpp:57
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "维护人员"
 
 #: main.cpp:57
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
-msgstr ""
+msgstr "Carl Schwan"
 
 #: qml/ConfigurationDelegate.qml:93
 #, kde-format
 msgid "Incoming"
-msgstr ""
+msgstr "传入"
 
 #: qml/ConfigurationDelegate.qml:114
 #, kde-format
 msgid "Outgoing"
-msgstr ""
+msgstr "传出"
 
 #: qml/ConfigurationSelectionPage.qml:16
 #, kde-format
 msgctxt "@title:group"
 msgid "Configuration Selection"
-msgstr ""
+msgstr "配置选中内容"
 
 #: qml/ConfigurationSelectionPage.qml:39
 #, kde-format
 msgid "Available configurations"
-msgstr ""
+msgstr "可用配置"
 
 #: qml/ConfigurationSelectionPage.qml:56
 #, kde-format
 msgid "No configuration found from the internet for this server."
-msgstr ""
+msgstr "未从互联网找到此服务器的配置。"
 
 #: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
 #, kde-format
@@ -230,60 +230,60 @@ msgstr "日历和联系人"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable calendar and contact integration"
-msgstr ""
+msgstr "启用日历和联系人集成"
 
 #: qml/DetailsPage.qml:15
 #, kde-format
 msgctxt "@title:group"
 msgid "Details"
-msgstr ""
+msgstr "详情"
 
 #: qml/DetailsPage.qml:18
 #, kde-format
 msgctxt "@action:button"
 msgid "Quit"
-msgstr ""
+msgstr "退出"
 
 #: qml/DetailsPage.qml:24
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "详情"
 
 #: qml/DetailsPage.qml:61
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
-msgstr ""
+msgstr "没有可用的详情。"
 
 #: qml/ManualConfigurationPage.qml:18
 #, kde-format
 msgid "Recheck"
-msgstr ""
+msgstr "重新检查"
 
 #: qml/ManualConfigurationPage.qml:25
 #, kde-format
 msgid "Create Account"
-msgstr ""
+msgstr "创建帐户"
 
 #: qml/ManualConfigurationPage.qml:67
 #, kde-format
 msgid "Incoming Server Parameters"
-msgstr ""
+msgstr "传入服务器参数"
 
 #: qml/ManualConfigurationPage.qml:73
 #, kde-format
 msgid "Incoming server:"
-msgstr ""
+msgstr "收件服务器："
 
 #: qml/ManualConfigurationPage.qml:85
 #, kde-format
 msgid "Protocol:"
-msgstr ""
+msgstr "协议："
 
 #: qml/ManualConfigurationPage.qml:91
 #, kde-format
 msgid "Kolab"
-msgstr ""
+msgstr "Kolab"
 
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:206
 #, kde-format
@@ -293,67 +293,67 @@ msgstr "端口："
 #: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:220
 #, kde-format
 msgid "Security:"
-msgstr ""
+msgstr "安全性："
 
 #: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:225
 #, kde-format
 msgid "SSL/TLS (recommended)"
-msgstr ""
+msgstr "SSL/TLS (推荐)"
 
 #: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:224
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "空"
 
 #: qml/ManualConfigurationPage.qml:136 qml/ManualConfigurationPage.qml:238
 #, kde-format
 msgid "Authentication Method:"
-msgstr ""
+msgstr "身份认证方式："
 
 #: qml/ManualConfigurationPage.qml:140 qml/ManualConfigurationPage.qml:242
 #, kde-format
 msgid "Clear text"
-msgstr ""
+msgstr "清空文本"
 
 #: qml/ManualConfigurationPage.qml:141 qml/ManualConfigurationPage.qml:243
 #, kde-format
 msgid "PLAIN"
-msgstr ""
+msgstr "PLAIN"
 
 #: qml/ManualConfigurationPage.qml:142 qml/ManualConfigurationPage.qml:244
 #, kde-format
 msgid "LOGIN"
-msgstr ""
+msgstr "登录"
 
 #: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:245
 #, kde-format
 msgid "CRAM-MD5"
-msgstr ""
+msgstr "CRAM-MD5"
 
 #: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:246
 #, kde-format
 msgid "DIGEST-MD5"
-msgstr ""
+msgstr "DIGEST-MD5"
 
 #: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:247
 #, kde-format
 msgid "NTLM"
-msgstr ""
+msgstr "NTLM"
 
 #: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:248
 #, kde-format
 msgid "GSSAPI"
-msgstr ""
+msgstr "GSSAPI"
 
 #: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:249
 #, kde-format
 msgid "XOAuth (Gmail)"
-msgstr ""
+msgstr "XOAuth (Gmail)"
 
 #: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:250
 #, kde-format
 msgid "APOP"
-msgstr ""
+msgstr "APOP"
 
 #: qml/ManualConfigurationPage.qml:162 qml/ManualConfigurationPage.qml:263
 #, kde-format
@@ -363,27 +363,27 @@ msgstr "用户名："
 #: qml/ManualConfigurationPage.qml:177
 #, kde-format
 msgid "Download all messages for offline use"
-msgstr ""
+msgstr "下载全部邮件以便离线使用"
 
 #: qml/ManualConfigurationPage.qml:186
 #, kde-format
 msgid "Outgoing Server Parameters"
-msgstr ""
+msgstr "传出服务器参数"
 
 #: qml/ManualConfigurationPage.qml:193
 #, kde-format
 msgid "Outgoing server:"
-msgstr ""
+msgstr "发件服务器："
 
 #: qml/PersonalDataPage.qml:15
 #, kde-format
 msgid "Personal Information"
-msgstr ""
+msgstr "个人信息"
 
 #: qml/PersonalDataPage.qml:43
 #, kde-format
 msgid "Connect your Email Account"
-msgstr ""
+msgstr "连接到您的电子邮件账户"
 
 #: qml/PersonalDataPage.qml:51
 #, kde-format
@@ -393,6 +393,8 @@ msgid ""
 "Only the domain name part of the e-mail address will be sent over the "
 "Internet."
 msgstr ""
+"需要使用您当前的电子邮件地址填写您的凭据。这个向导将自动搜索一个正常工作和推"
+"荐的服务器配置。 只有电子邮件地址的域名部分将通过互联网发送。"
 
 #: qml/PersonalDataPage.qml:57
 #, kde-format
@@ -403,7 +405,7 @@ msgstr "全名："
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
-msgstr ""
+msgstr "John Smith"
 
 #: qml/PersonalDataPage.qml:67
 #, kde-format
@@ -414,24 +416,24 @@ msgstr "电子邮件地址："
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
-msgstr ""
+msgstr "boss@example.corp"
 
 #: qml/PersonalDataPage.qml:86
 #, kde-format
 msgid "Password (optional):"
-msgstr ""
+msgstr "密码（选填）："
 
 #: qml/WizardPage.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr ""
+msgstr "上一步"
 
 #: qml/WizardPage.qml:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "下一步"
 
 #: resource.cpp:72
 #, kde-format
@@ -467,7 +469,7 @@ msgstr "无法配置资源实例。"
 #, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
-msgstr ""
+msgstr "无法将 %2 类型的设置数值 '%1' 转换为所需的 %3 。"
 
 #: resource.cpp:144
 #, kde-format
@@ -483,22 +485,22 @@ msgstr "无法保存设置：%1"
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
-msgstr ""
+msgstr "资源设置完成: %1"
 
 #: resource.cpp:159
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
-msgstr ""
+msgstr "资源类型："
 
 #: resource.cpp:169
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
-msgstr ""
+msgstr "空"
 
 #: resource.cpp:174
 #, kde-format
 msgctxt "label"
 msgid "%1:"
-msgstr ""
+msgstr "%1："
