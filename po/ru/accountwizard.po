@@ -6,13 +6,13 @@
 # Julia Dronova <juliette.tux@gmail.com>, 2012.
 # Yuri Efremov <yur.arh@gmail.com>, 2013.
 # SPDX-FileCopyrightText: 2018, 2019, 2020, 2022, 2024 Alexander Yavorsky <kekcuha@gmail.com>
-# SPDX-FileCopyrightText: 2024 Olesya Gerasimenko <translation-team@basealt.ru>
+# SPDX-FileCopyrightText: 2024, 2025 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-03 00:42+0000\n"
-"PO-Revision-Date: 2024-11-22 15:19+0300\n"
+"PO-Revision-Date: 2025-04-02 12:41+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -169,10 +169,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "Помогает создать учётные записи электронного секретаря"
 
 #: main.cpp:43
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2024 the Akonadi developers"
+#, kde-format
 msgid "(c) 2009-2025 the Akonadi developers"
-msgstr "© Разработчики Akonadi, 2009–2024"
+msgstr "© Разработчики Akonadi, 2009–2025"
 
 #: main.cpp:46
 #, kde-format
