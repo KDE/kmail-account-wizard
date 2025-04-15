@@ -6,7 +6,7 @@
 #include "ispdb/serverconfiguration.h"
 #include <KLocalizedString>
 
-QString replacePlaceholders(const QString &in, const KMime::Types::AddrSpec &addrSpec)
+static QString replacePlaceholders(const QString &in, const KMime::Types::AddrSpec &addrSpec)
 {
     QString out(in);
     out.replace(QLatin1StringView("%EMAILLOCALPART%"), addrSpec.localPart);
