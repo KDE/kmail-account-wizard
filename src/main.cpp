@@ -40,7 +40,7 @@ int main(int argc, char **argv)
                          QStringLiteral("0.3"),
                          i18n("Helps setting up PIM accounts"),
                          KAboutLicense::LGPL,
-                         i18n("(c) 2009-2025 the Akonadi developers"),
+                         i18n("© 2009-2025 the Akonadi developers"),
                          QString(),
                          QStringLiteral("https://community.kde.org/KDE_PIM/Akonadi"));
     aboutData.addAuthor(i18nc("@info:credit", "Volker Krause"), i18n("Author"), QStringLiteral("vkrause@kde.org"));
