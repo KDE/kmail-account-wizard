@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-03 00:42+0000\n"
+"POT-Creation-Date: 2025-05-19 00:43+0000\n"
 "PO-Revision-Date: 2021-09-03 10:38+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -170,7 +170,7 @@ msgstr "Βοηθάει στην προετοιμασία λογαριασμών 
 #: main.cpp:43
 #, fuzzy, kde-format
 #| msgid "(c) 2009-2020 the Akonadi developers"
-msgid "(c) 2009-2025 the Akonadi developers"
+msgid "© 2009-2025 the Akonadi developers"
 msgstr "(c) 2009-2020 οι προγραμματιστές Akonadi"
 
 #: main.cpp:46

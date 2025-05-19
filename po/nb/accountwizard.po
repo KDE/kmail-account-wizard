@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-03 00:42+0000\n"
+"POT-Creation-Date: 2025-05-19 00:43+0000\n"
 "PO-Revision-Date: 2014-01-12 10:27+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -160,7 +160,7 @@ msgstr "Hjelper til å sette opp PIM-kontoer"
 
 #: main.cpp:43
 #, kde-format
-msgid "(c) 2009-2025 the Akonadi developers"
+msgid "© 2009-2025 the Akonadi developers"
 msgstr ""
 
 #: main.cpp:46
