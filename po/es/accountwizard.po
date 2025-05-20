@@ -1,4 +1,5 @@
-# Translation of accountwizard.po to Spanish
+# Spanish translations for accountwizard.po package.
+# Copyright (C) 2010-2025 This file is copyright:
 # This file is distributed under the same license as the kmail-account-wizard package.
 #
 # SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2015, 2016, 2017, 2018, 2019 Javier Viñal <fjvinal@gmail.com>
@@ -8,14 +9,14 @@ msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-19 00:43+0000\n"
-"PO-Revision-Date: 2025-01-03 12:19+0100\n"
+"PO-Revision-Date: 2025-05-20 01:38+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -158,10 +159,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "Ayuda a configurar cuentas PIM"
 
 #: main.cpp:43
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2025 the Akonadi developers"
+#, kde-format
 msgid "© 2009-2025 the Akonadi developers"
-msgstr "© 2009-2025, los desarrolladores de Akonadi"
+msgstr "© 2009-2025 Los desarrolladores de Akonadi"
 
 #: main.cpp:46
 #, kde-format
@@ -453,7 +453,7 @@ msgstr "El recurso «%1» ya está configurado."
 #: resource.cpp:92
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr "Creando instancia de recurso para «%1»..."
+msgstr "Creando instancia de recurso para «%1»…"
 
 #: resource.cpp:101
 #, kde-format
@@ -463,7 +463,7 @@ msgstr "Ha fallado la creación de la instancia del recurso: %1"
 #: resource.cpp:108
 #, kde-format
 msgid "Configuring resource instance..."
-msgstr "Configurando instancia del recurso..."
+msgstr "Configurando instancia del recurso…"
 
 #: resource.cpp:112
 #, kde-format
@@ -511,366 +511,3 @@ msgstr "Vacío"
 msgctxt "label"
 msgid "%1:"
 msgstr "%1:"
-
-#~ msgid "STARTTLS"
-#~ msgstr "STARTTLS"
-
-#~ msgid "Setting up identity..."
-#~ msgstr "Configurando identidad..."
-
-#~ msgid "Identity set up."
-#~ msgstr "Identidad configurada."
-
-#~ msgid "Identity removed."
-#~ msgstr "Identidad eliminada."
-
-#~ msgid "Setting up mail transport account..."
-#~ msgstr "Configurando cuenta de transporte de correo..."
-
-#~ msgid "Mail transport uses '%1' encryption and '%2' authentication."
-#~ msgstr "El transporte de correo usa cifrado «%1» y autenticación «%2»."
-
-#~ msgid "Mail transport account set up."
-#~ msgstr "Configuración de cuenta de transporte de correo."
-
-#~ msgid "Set Up Your Existing Email Address"
-#~ msgstr "Configurar su dirección de correo existente"
-
-#~ msgid "Continue"
-#~ msgstr "Continuar"
-
-#~ msgid ""
-#~ "Check online for the settings needed for this email provider. Only the "
-#~ "domain name part of the e-mail address will be sent over the Internet."
-#~ msgstr ""
-#~ "Comprobar con conexión las preferencias para este proveedor de correo. "
-#~ "Solo se enviará a internet la parte del nombre de dominio de su dirección "
-#~ "de correo."
-
-#~ msgid ""
-#~ "There seems to be a problem in reaching this server or choosing a safe "
-#~ "way to sent the credentials to server. We advise you to check the "
-#~ "settings of the account and adjust it manually if needed."
-#~ msgstr ""
-#~ "Parece que hay un problema para acceder a este servidor o para elegir un "
-#~ "modo seguro de enviar las credenciales al servidor. Le recomendamos que "
-#~ "compruebe las preferencias de la cuenta y que las ajuste manualmente si "
-#~ "es necesario."
-
-#~ msgid "Autodetecting settings failed"
-#~ msgstr "La detección automática de ajustes ha fallado"
-
-#~ msgid "Writing config file for %1..."
-#~ msgstr "Escribiendo archivo de configuración para %1..."
-
-#~ msgid "Config file for %1 is writing."
-#~ msgstr "Se está escribiendo el archivo de configuración para %1."
-
-#~ msgid "Config file for %1 was not changed."
-#~ msgstr "No se ha cambiado el archivo de configuración para %1."
-
-#~ msgid "No given name for the configuration."
-#~ msgstr "No se ha indicado ningún nombre para la configuración."
-
-#~ msgid "Unknown configuration name '%1'"
-#~ msgstr "Nombre de configuración «%1» desconocido"
-
-#~ msgid "Account Wizard"
-#~ msgstr "Asistente de cuentas"
-
-#~ msgid "Error while generating new key pair for your account %1: %2"
-#~ msgstr ""
-#~ "Ha ocurrido un error al generar el nuevo par de claves para su cuenta %1: "
-#~ "%2"
-
-#~ msgid "Could not detect valid key type"
-#~ msgstr "No se ha podido detectar un tipo de clave válido"
-
-#~ msgid "Import error"
-#~ msgstr "Error de importación"
-
-#~ msgid "Cannot read data from the certificate file: %1"
-#~ msgstr "No se pueden leer datos del archivo de certificado: %1"
-
-#~ msgid "Failed to import key: %1"
-#~ msgstr "Ha fallado la importación de la clave: %1"
-
-#~ msgid "Failed to import key."
-#~ msgstr "Ha fallado la importación de la clave."
-
-#~ msgid "No key"
-#~ msgstr "Sin clave"
-
-#~ msgid "Generate a new key pair"
-#~ msgstr "Generar nuevo par de claves"
-
-#~ msgid "Import a key"
-#~ msgstr "Importar una clave"
-
-#~ msgid "Certificates"
-#~ msgstr "Certificados"
-
-#~ msgid "Any files"
-#~ msgstr "Todos los archivos"
-
-#~ msgid "Select Certificate File"
-#~ msgstr "Seleccione el archivo del certificado"
-
-#~ msgid "Importing key..."
-#~ msgstr "Importando clave..."
-
-#~ msgid "Lookup configuration: Email provider"
-#~ msgstr "Configuración de búsqueda: proveedor de correo"
-
-#~ msgid "Lookup configuration: Trying common server name"
-#~ msgstr "Configuración de búsqueda: probando nombre común del servidor"
-
-#~ msgid "Lookup configuration: Mozilla database"
-#~ msgstr "Configuración de búsqueda: base de datos de Mozilla"
-
-#~ msgid "Skipping key publishing"
-#~ msgstr "Omitiendo la publicación de la clave"
-
-#~ msgid "Publishing OpenPGP key..."
-#~ msgstr "Publicando clave OpenPGP..."
-
-#~ msgid "Key publishing was canceled."
-#~ msgstr "Se ha cancelado la publicación de la clave."
-
-#~ msgid "Key publishing failed: not online, or GnuPG too old."
-#~ msgstr ""
-#~ "Ha fallado la publicación de la clave: no está conectado o GnuPG es "
-#~ "demasiado antiguo."
-
-#~ msgid "Your email provider does not support key publishing."
-#~ msgstr "Su proveedor de correo no admite la publicación de claves."
-
-#~ msgid "An error occurred while creating key publishing request."
-#~ msgstr "Ha ocurrido un error al crear peticiones de publicación de claves."
-
-#~ msgid "Key publishing error: mail transport is not configured"
-#~ msgstr ""
-#~ "Error de publicación de clave: el transporte de correo no está configurado"
-
-#~ msgid "Key publishing error: failed to create request email"
-#~ msgstr ""
-#~ "Error de publicación de clave: ha fallado la creación del correo de "
-#~ "petición"
-
-#~ msgid "Failed to send key publishing request: %1"
-#~ msgstr "Ha fallado el envío de la petición de publicación de clave: %1"
-
-#~ msgid "Key publishing request sent."
-#~ msgstr "Petición de publicación de clave enviada."
-
-#~ msgid "Failed to publish the key."
-#~ msgstr "Ha fallado la publicación de la clave."
-
-#~ msgid "Key has been published on %1"
-#~ msgstr "La clave se ha publicado en %1"
-
-#~ msgid "Setting up LDAP server..."
-#~ msgstr "Configurando el servidor LDAP..."
-
-#~ msgid "Needed parameters are missing for LDAP config: server '%1'"
-#~ msgstr ""
-#~ "Faltan los parámetros necesarios para la configuración de LDAP: servidor "
-#~ "«%1»"
-
-#~ msgid "LDAP set up."
-#~ msgstr "Configuración de LDAP."
-
-#~ msgid "LDAP not configuring."
-#~ msgstr "LDAP no configurado."
-
-#~ msgid "Removed LDAP entry."
-#~ msgstr "Entrada LDAP eliminada."
-
-#~ msgid "No config found to edit"
-#~ msgstr "No se ha encontrado ninguna configuración para editar"
-
-#~ msgid "Removed resource instance for '%1'."
-#~ msgstr "Se ha eliminado la instancia del recurso para «%1»."
-
-#~ msgid "Searching for autoconfiguration..."
-#~ msgstr "Buscando configuración automática..."
-
-#~ msgid "Autoconfiguration failed."
-#~ msgstr "La configuración automática ha fallado."
-
-#~ msgid "Provide personal data"
-#~ msgstr "Proporcionar datos personales"
-
-#~ msgid "Secure your Communication"
-#~ msgstr "Asegure su comunicación"
-
-#~ msgid "Select Account Type"
-#~ msgstr "Seleccione tipo de cuenta"
-
-#~ msgid "Select Provider"
-#~ msgstr "Seleccionar proveedor"
-
-#~ msgid "Loading Assistant"
-#~ msgstr "Carga del asistente"
-
-#~ msgid "Setting up Account"
-#~ msgstr "Configuración de cuenta"
-
-#~ msgid "ISPDB Assistant"
-#~ msgstr "Asistente ISPDB"
-
-#~ msgid "(c) 2010 Omat Holding B.V."
-#~ msgstr "© 2010 Omat Holding B.V."
-
-#~ msgid "Tom Albers"
-#~ msgstr "Tom Albers"
-
-#~ msgid "Tries to fetch the settings for that email address"
-#~ msgstr "Intenta obtener las preferencias para esta dirección de correo"
-
-#~ msgid "No script specified in '%1'."
-#~ msgstr "No se ha especificado guion en «%1»."
-
-#~ msgid "Unable to load assistant: File '%1' does not exist."
-#~ msgstr "No es posible cargar el asistente. El archivo «%1» no existe."
-
-#~ msgid "Loading script '%1'..."
-#~ msgstr "Cargando guion «%1»..."
-
-#~ msgid "Failed to load script: '%1'."
-#~ msgstr "Ha fallado al cargar guion «%1»."
-
-#~ msgid "Only offer accounts that support the given type."
-#~ msgstr "Solo ofrece cuentas que admiten el tipo proporcionado."
-
-#~ msgid "Run the specified assistant."
-#~ msgstr "Ejecuta el asistente especificado."
-
-#~ msgid "unpack fullpath on startup and launch that assistant"
-#~ msgstr ""
-#~ "desempaquetar la ruta completa en el arranque y lanzar ese asistente"
-
-#~ msgid "Returns types of assistants"
-#~ msgstr "Devuelve tipos de asistente"
-
-#~ msgid "The following assistants are available:"
-#~ msgstr "LOs siguientes asistentes están disponibles:"
-
-#~ msgid "Fetching provider list..."
-#~ msgstr "Recuperando la lista de proveedores..."
-
-#~ msgid "Setting up account..."
-#~ msgstr "Configurando cuenta..."
-
-#~ msgid "Setup complete."
-#~ msgstr "Configuración finalizada."
-
-#~ msgid "Failed to set up account, rolling back..."
-#~ msgstr "Ha fallado al configurar la cuenta, deshaciendo..."
-
-#~ msgid "Failed to set up account."
-#~ msgstr "Ha fallado al configurar la cuenta."
-
-#~ msgid "Could not load config dialog for UID '%1'"
-#~ msgstr "No se ha podido cargar el diálogo de configuración para el UID «%1»"
-
-#~ msgid ""
-#~ "Protect yourself against surveillance by encrypting your Mails with "
-#~ "GnuPG. By generating or selecting a public / private key pair now mails "
-#~ "can be encrypted using the public key while only you can decrypt them "
-#~ "with your private key."
-#~ msgstr ""
-#~ "Protéjase contra la vigilancia cifrando sus correos con GnuPG. Al generar "
-#~ "o seleccionar un par de claves pública/privada, los correos pueden "
-#~ "cifrarse usando la clave pública, mientras que solo usted puede "
-#~ "descifrarlos usando su clave privada."
-
-#~ msgid ""
-#~ "<html><head/><body><p>When sending mails KMail automatically looks for "
-#~ "encryption keys of your recipients and secures the mail when keys for "
-#~ "each recipient can be found.</p><p>It also signs your mails "
-#~ "cryptographically so that it can be verified that your messages have not "
-#~ "been tampered with.</p></body></html>"
-#~ msgstr ""
-#~ "<html><head/><body><p>Al enviar correos, KMail busca automáticamente las "
-#~ "claves de cifrado de sus destinatarios y asegura el correo cuando las "
-#~ "claves de cada destinatario pueden encontrarse.</p><p>También firma sus "
-#~ "correos criptográficamente de modo que pueda verificarse que sus mensajes "
-#~ "no se han manipulado..</p></body></html>"
-
-#~ msgid "Secure outgoing emails, if possible"
-#~ msgstr "Asegurar el correo saliente, si es posible"
-
-#~ msgid "Select key for this account:"
-#~ msgstr "Seleccione una clave para esta cuenta:"
-
-#~ msgid "Checking key publishing support ..."
-#~ msgstr "Comprobando el reconocimiento de publicación de clave..."
-
-#~ msgid "Register &this key with your email provider"
-#~ msgstr "Registrar es&ta clave con su proveedor de correo"
-
-#~ msgid ""
-#~ "Your email service provider supports a service to provide your public key "
-#~ "so that others can find it.\n"
-#~ "This means that your public key can be queried from your email provider "
-#~ "and others can then use it to secure their email communication with you."
-#~ msgstr ""
-#~ "Su proveedor del servicio de correo admite un servicio para proporcionar "
-#~ "su clave pública de modo que otros puedan localizarla.\n"
-#~ "Esto significa que su clave pública puede consultarse desde su proveedor "
-#~ "de correo y otros pueden usarla para asegurar su comunicación por correo "
-#~ "con usted."
-
-#~ msgid "Publish &this key on public key server"
-#~ msgstr "Publicar es&ta clave en un servidor de clave pública"
-
-#~ msgid ""
-#~ "Your email service provider does not support key publishing. You should "
-#~ "publish your key so that other users can retrieve it and use it to secure "
-#~ "their email communication with you.\n"
-#~ "You can alternatively publish your key on a public key server, but you "
-#~ "should be aware that your email address will be publicly listed and they "
-#~ "key cannot be removed from there, only revoked."
-#~ msgstr ""
-#~ "Su proveedor de servicio de correo no admite la publicación de claves. "
-#~ "Usted debería publicar su clave, de modo que otros usuarios puedan "
-#~ "recuperarla y usarla para asegurar sus comunicaciones con usted.\n"
-#~ "Usted puede, alternativamente, publicar su clave en un servidor de clave "
-#~ "pública, pero debería tener en cuenta que su dirección de correo se hará "
-#~ "pública y que la clave no puede eliminarse desde aquí, solo revocarse."
-
-#~ msgid "Loading assistant..."
-#~ msgstr "Cargando asistente..."
-
-#~ msgid ""
-#~ "With a few simple steps we create the right settings for you. Please "
-#~ "follow the steps of this wizard carefully."
-#~ msgstr ""
-#~ "Con solo unos sencillos pasos creamos la configuración correcta para "
-#~ "usted. Siga los pasos de este asistente cuidadosamente."
-
-#~ msgid "Find pro&vider settings on the Internet"
-#~ msgstr "Buscar preferencias del pro&veedor en Internet"
-
-#~ msgid "IMAP account"
-#~ msgstr "Cuenta IMAP"
-
-#~ msgid "POP&3 account"
-#~ msgstr "Cuenta POP&3"
-
-#~ msgid ""
-#~ "Select your provider from the list below or click back if your provider "
-#~ "is not listed"
-#~ msgstr ""
-#~ "Seleccione su proveedor de la lista inferior o pulse atrás si su "
-#~ "proveedor no está listado"
-
-#~ msgid "Select which kind of account you want to create:"
-#~ msgstr "Seleccione que clase de cuentas quiere crear:"
-
-#~ msgid "Check for more on Internet"
-#~ msgstr "Compruebe más en Internet"
-
-#~ msgid "Unknown security setting for LDAP server"
-#~ msgstr "Preferencia de seguridad desconocida para el servidor LDAP"

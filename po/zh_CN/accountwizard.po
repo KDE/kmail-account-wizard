@@ -157,10 +157,9 @@ msgid "Helps setting up PIM accounts"
 msgstr "帮助设置个人账户"
 
 #: main.cpp:43
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2025 the Akonadi developers"
+#, kde-format
 msgid "© 2009-2025 the Akonadi developers"
-msgstr "(c) 2009-2025 the Akonadi developers"
+msgstr ""
 
 #: main.cpp:46
 #, kde-format
