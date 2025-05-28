@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-19 00:43+0000\n"
-"PO-Revision-Date: 2025-01-08 15:07+0100\n"
+"PO-Revision-Date: 2025-05-27 11:57+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -159,8 +159,7 @@ msgid "Helps setting up PIM accounts"
 msgstr "Il adjuta a configurar contos de PIM"
 
 #: main.cpp:43
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2025 the Akonadi developers"
+#, kde-format
 msgid "© 2009-2025 the Akonadi developers"
 msgstr "(c) 2009-2025 le disveloppatores de Akonadi"
 
