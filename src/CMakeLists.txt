@@ -49,39 +49,50 @@ ecm_qt_declare_logging_category(accountwizard_static
     EXPORT ACCOUNTWIZARD
 )
 
-
-target_link_libraries(accountwizard_static PUBLIC
-    KPim6::AkonadiCore
-    KPim6::AkonadiWidgets
-    KPim6::MailTransport
-    KPim6::Mime
-    KPim6::IdentityManagementCore
-    KF6::KIOCore
-    KF6::WidgetsAddons
-    KF6::I18n
-    KF6::Crash
-    KF6::DBusAddons
-    Qt::Xml
-    Qt::Quick
-    Qt::QuickControls2
+target_link_libraries(
+    accountwizard_static
+    PUBLIC
+        KPim6::AkonadiCore
+        KPim6::AkonadiWidgets
+        KPim6::MailTransport
+        KPim6::Mime
+        KPim6::IdentityManagementCore
+        KF6::KIOCore
+        KF6::WidgetsAddons
+        KF6::I18n
+        KF6::Crash
+        KF6::DBusAddons
+        Qt::Xml
+        Qt::Quick
+        Qt::QuickControls2
 )
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(accountwizard_static PROPERTIES UNITY_BUILD ON)
 endif()
 
 ## Binary target
-add_executable(accountwizard
-    main.cpp
+add_executable(accountwizard main.cpp)
+target_link_libraries(
+    accountwizard
+    PRIVATE
+        accountwizard_static
+        accountwizard_staticplugin
+        KF6::IconThemes
+        KF6::I18nQml
 )
-target_link_libraries(accountwizard PRIVATE accountwizard_static accountwizard_staticplugin KF6::IconThemes KF6::I18nQml)
 
-if (BUILD_TESTING)
+if(BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
 
 ## Install
 install(TARGETS accountwizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-install(PROGRAMS org.kde.accountwizard.desktop DESTINATION ${KDE_INSTALL_APPDIR})
-install(FILES data/org.kde.accountwizard.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
-
+install(
+    PROGRAMS org.kde.accountwizard.desktop
+    DESTINATION ${KDE_INSTALL_APPDIR}
+)
+install(
+    FILES data/org.kde.accountwizard.appdata.xml
+    DESTINATION ${KDE_INSTALL_METAINFODIR}
+)

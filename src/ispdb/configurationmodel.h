@@ -11,7 +11,7 @@
 class ConsoleLog;
 
 struct Configuration {
-    explicit Configuration(const Server &incomming, std::optional<Server> outgoing, const QString &shortDisplayName, std::optional<GroupwareServer> groupware);
+    explicit Configuration(const Server &incoming, std::optional<Server> outgoing, const QString &shortDisplayName, std::optional<GroupwareServer> groupware);
     QString shortDisplayName;
     Server incoming;
     std::optional<Server> outgoing;
