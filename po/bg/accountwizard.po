@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-19 00:43+0000\n"
-"PO-Revision-Date: 2025-05-20 19:31+0200\n"
+"PO-Revision-Date: 2025-06-21 12:50+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -160,7 +160,7 @@ msgstr "Помага за настройване на PIM акаунти"
 #: main.cpp:43
 #, kde-format
 msgid "© 2009-2025 the Akonadi developers"
-msgstr "(c) 2009-2025 Разработчиците на Akonadi"
+msgstr "© 2009-2025 Разработчиците на Akonadi"
 
 #: main.cpp:46
 #, kde-format
