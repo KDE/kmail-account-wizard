@@ -68,7 +68,12 @@ target_link_libraries(
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(accountwizard_static PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        accountwizard_static
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 
 ## Binary target
@@ -87,12 +92,10 @@ if(BUILD_TESTING)
 endif()
 
 ## Install
-install(TARGETS accountwizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(
-    PROGRAMS org.kde.accountwizard.desktop
-    DESTINATION ${KDE_INSTALL_APPDIR}
+    TARGETS
+        accountwizard
+        ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
 )
-install(
-    FILES data/org.kde.accountwizard.appdata.xml
-    DESTINATION ${KDE_INSTALL_METAINFODIR}
-)
+install(PROGRAMS org.kde.accountwizard.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(FILES data/org.kde.accountwizard.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
