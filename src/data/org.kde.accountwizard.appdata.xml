@@ -31,6 +31,7 @@
   <name xml:lang="lv">Account Wizard</name>
   <name xml:lang="nl">Accountassistent</name>
   <name xml:lang="pl">Pomocnik Kont</name>
+  <name xml:lang="pt-BR">Assistente de Conta</name>
   <name xml:lang="ru">Мастер настройки учётных записей</name>
   <name xml:lang="sa">खाता विजार्ड</name>
   <name xml:lang="sk">Sprievodca účtom</name>
@@ -66,6 +67,7 @@
   <summary xml:lang="lv">Konfigurējiet kontus</summary>
   <summary xml:lang="nl">Accounts configureren</summary>
   <summary xml:lang="pl">Ustawienia kont</summary>
+  <summary xml:lang="pt-BR">Configurar contas</summary>
   <summary xml:lang="ru">Настройка учётных записей</summary>
   <summary xml:lang="sa">खातानि विन्यस्यताम्</summary>
   <summary xml:lang="sk">Nastaviť účty</summary>
@@ -103,6 +105,7 @@
     <p xml:lang="lv">„Accountwizard“ ļauj rediģēt, veidot un dzēst kontus. „Accountwizard“ atbalsta IMAP/POP3/„Kolab“ kontus. Konta informāciju tas ļauj atrast, izmantojot „ispd“ pakalpojumu.</p>
     <p xml:lang="nl">Accountassistent biedt het bewerken, aanmaken, verwijderen van accounts. Accountassistent ondersteunt het IMAP/POP3/Kolab accounttype. Accountinformatie is te vinden door de ispd-service te gebruiken.</p>
     <p xml:lang="pl">Pomocnik Kont umożliwia zmianę, tworzenie i usuwanie kont. Pomocnik Kont obsługuje konta IMAP/POP3/Kolab. Szczegóły o koncie można znaleźć poprzez usługę ispd.</p>
+    <p xml:lang="pt-BR">O Assistente de Conta permite editar, criar e excluir contas. O Assistente de Conta suporta contas do tipo IMAP/POP3/Kolab. As informações da conta podem ser encontradas usando o serviço ispd.</p>
     <p xml:lang="ru">Мастер настройки учётных записей позволяет создавать, изменять и удалять учётные записи. Программа поддерживает работу с учётными записями IMAP, POP3 и Kolab. Сведения об учётных записях можно получить с помощью службы ispd.</p>
     <p xml:lang="sa">खाताविजार्ड् खातानां सम्पादनं, निर्माणं, विलोपनं च कर्तुं शक्नोति । Accountwizard IMAP/POP3/Kolab खाताप्रकारस्य समर्थनं करोति । खातासूचना ispd सेवायाः उपयोगेन प्राप्तुं शक्यते ।</p>
     <p xml:lang="sl">Accountwizard omogoča urejanje, ustvarjanje, brisanje računov. Accountwizard podpira vrste računa IMAP/POP3/Kolab. Podatke o računu najdete s storitvijo ispd.</p>
