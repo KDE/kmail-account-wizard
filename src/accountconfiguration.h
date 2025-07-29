@@ -128,7 +128,6 @@ Q_SIGNALS:
     void finished(const QString &msg);
 
     void serverTestInProgressModeChanged();
-    void serverTestDone();
 
 protected:
     void generateResource(const Resource::ResourceInfo &info, ConsoleLog *consoleLog);
