@@ -61,7 +61,7 @@ msgstr "邮件传输设置完成: %1"
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
-msgstr "主机名:"
+msgstr "主机名："
 
 #: accountconfiguration.cpp:248
 #, kde-format
@@ -159,7 +159,7 @@ msgstr "帮助设置个人账户"
 #: main.cpp:43
 #, kde-format
 msgid "© 2009-2025 the Akonadi developers"
-msgstr ""
+msgstr "© 2009-2025 the Akonadi developers"
 
 #: main.cpp:46
 #, kde-format
@@ -421,7 +421,7 @@ msgstr "boss@example.corp"
 #: qml/PersonalDataPage.qml:86
 #, kde-format
 msgid "Password (optional):"
-msgstr "密码（选填）："
+msgstr "密码 (选填) ："
 
 #: qml/WizardPage.qml:15
 #, kde-format
@@ -469,7 +469,7 @@ msgstr "无法配置资源实例。"
 #, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
-msgstr "无法将 %2 类型的设置数值 '%1' 转换为所需的 %3 。"
+msgstr "无法将类型为 %2 的设置 '%1' 的值转换为所需的类型 %3。"
 
 #: resource.cpp:144
 #, kde-format
