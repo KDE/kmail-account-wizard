@@ -448,7 +448,7 @@ msgstr "نوع الموارد ’%1‘ غير متوفّر."
 #: resource.cpp:85
 #, kde-format
 msgid "Resource '%1' is already set up."
-msgstr "ضُبط المورد ’%1‘ بالفعل."
+msgstr "ضُبط المورد ’%1‘ فعلًا."
 
 #: resource.cpp:92
 #, kde-format
