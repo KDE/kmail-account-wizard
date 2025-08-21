@@ -272,12 +272,12 @@ msgstr "أنشئ حسابًا"
 #: qml/ManualConfigurationPage.qml:67
 #, kde-format
 msgid "Incoming Server Parameters"
-msgstr "معاملات خادوم الوارد:"
+msgstr "معاملات خادم الوارد:"
 
 #: qml/ManualConfigurationPage.qml:73
 #, kde-format
 msgid "Incoming server:"
-msgstr "خادوم الوارد:"
+msgstr "خادم الوارد:"
 
 #: qml/ManualConfigurationPage.qml:85
 #, kde-format
@@ -372,12 +372,12 @@ msgstr "نزّل كلّ الرّسائل للاستخدام بلا اتّصال"
 #: qml/ManualConfigurationPage.qml:186
 #, kde-format
 msgid "Outgoing Server Parameters"
-msgstr "معاملات الخادوم الصادر"
+msgstr "معاملات الخادم الصادر"
 
 #: qml/ManualConfigurationPage.qml:193
 #, kde-format
 msgid "Outgoing server:"
-msgstr "خادوم الصّادر:"
+msgstr "خادم الصّادر:"
 
 #: qml/PersonalDataPage.qml:15
 #, kde-format
