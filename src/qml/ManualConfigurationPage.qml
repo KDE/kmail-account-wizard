@@ -136,17 +136,23 @@ WizardPage {
             text: i18n("Authentication Method:")
             textRole: "text"
             valueRole: "value"
-            model: [
-                { value: Transport.CLEAR, text: i18n("Normal Password") },
-                { value: Transport.PLAIN, text: i18n("PLAIN") },
-                { value: Transport.LOGIN, text: i18n("LOGIN") },
-                { value: Transport.CRAM_MD5, text: i18n("CRAM-MD5") },
-                { value: Transport.CRAM_MD5, text: i18n("DIGEST-MD5") },
-                { value: Transport.NTLM, text: i18n("NTLM") },
-                { value: Transport.GSSAPI, text: i18n("Kerberos / GSSAPI") },
-                { value: Transport.XOAuth2, text: i18n("XOAuth (Gmail)") },
-                { value: Transport.APOP, text: i18n("APOP") },
-            ]
+
+            model: {
+                let model = [
+                       { value: Transport.CLEAR, text: i18n("Normal Password") },
+                       { value: Transport.PLAIN, text: i18n("PLAIN") },
+                       { value: Transport.LOGIN, text: i18n("LOGIN") },
+                       { value: Transport.CRAM_MD5, text: i18n("CRAM-MD5") },
+                       { value: Transport.CRAM_MD5, text: i18n("DIGEST-MD5") },
+                       { value: Transport.NTLM, text: i18n("NTLM") },
+                       { value: Transport.GSSAPI, text: i18n("Kerberos / GSSAPI") },
+                       { value: Transport.XOAuth2, text: i18n("XOAuth (Gmail)") },
+                ];
+                if (manualConfiguration.incomingProtocol == AccountConfiguration.POP3) {
+                    model.push({ value: Transport.APOP, text: i18n("APOP") });
+                }
+                return model;
+            }
             Component.onCompleted: {
                 currentIndex = indexOfValue(manualConfiguration.incomingAuthenticationProtocol);
             }
