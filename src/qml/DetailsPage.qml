@@ -15,8 +15,8 @@ WizardPage {
     title: i18nc("@title:group", "Details")
 
     nextAction {
-        text: i18nc("@action:button", "Quit")
-        icon.name: 'application-exit-symbolic'
+        text: i18nc("@action:button", "Finish")
+        icon.name: 'dialog-ok'
         onTriggered: Qt.quit();
     }
 
