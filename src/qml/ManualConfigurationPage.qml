@@ -247,7 +247,6 @@ WizardPage {
                 { value: Transport.NTLM, text: i18n("NTLM") },
                 { value: Transport.GSSAPI, text: i18n("GSSAPI") },
                 { value: Transport.XOAuth2, text: i18n("XOAuth (Gmail)") },
-                { value: Transport.APOP, text: i18n("APOP") },
             ]
             Component.onCompleted: currentIndex = indexOfValue(manualConfiguration.mailTransport.authenticationType);
 
