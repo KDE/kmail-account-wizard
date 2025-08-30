@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-19 00:43+0000\n"
+"POT-Creation-Date: 2025-08-30 00:43+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -122,7 +122,7 @@ msgid "SSL/TLS"
 msgstr "SSL/TLS इति"
 
 #: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:121
-#: qml/ManualConfigurationPage.qml:226
+#: qml/ManualConfigurationPage.qml:232
 #, kde-format
 msgid "StartTLS"
 msgstr "StartTLS इति"
@@ -244,8 +244,8 @@ msgstr "वर्णन"
 #: qml/DetailsPage.qml:18
 #, kde-format
 msgctxt "@action:button"
-msgid "Quit"
-msgstr "परिजहातु"
+msgid "Finish"
+msgstr ""
 
 #: qml/DetailsPage.qml:24
 #, kde-format
@@ -288,95 +288,105 @@ msgstr "प्रोटोकॉलः :"
 msgid "Kolab"
 msgstr "कोलाब"
 
-#: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:206
+#: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:212
 #, kde-format
 msgid "Port:"
 msgstr "पोताश्रय:"
 
-#: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:220
+#: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:226
 #, kde-format
 msgid "Security:"
 msgstr "सुरक्षा:"
 
-#: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:225
+#: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:231
 #, kde-format
 msgid "SSL/TLS (recommended)"
 msgstr "SSL/TLS (अनुशंसितम्)"
 
-#: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:224
+#: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:230
 #, kde-format
 msgid "None"
 msgstr "न कश्चित्"
 
-#: qml/ManualConfigurationPage.qml:136 qml/ManualConfigurationPage.qml:238
+#: qml/ManualConfigurationPage.qml:136 qml/ManualConfigurationPage.qml:244
 #, kde-format
 msgid "Authentication Method:"
 msgstr "प्रमाणीकरणविधिः :"
 
-#: qml/ManualConfigurationPage.qml:140 qml/ManualConfigurationPage.qml:242
+#: qml/ManualConfigurationPage.qml:142
 #, kde-format
-msgid "Clear text"
-msgstr "पाठः स्पष्टः"
+msgid "Normal Password"
+msgstr ""
 
-#: qml/ManualConfigurationPage.qml:141 qml/ManualConfigurationPage.qml:243
+#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:249
 #, kde-format
 msgid "PLAIN"
 msgstr "सम"
 
-#: qml/ManualConfigurationPage.qml:142 qml/ManualConfigurationPage.qml:244
+#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:250
 #, kde-format
 msgid "LOGIN"
 msgstr "LOGIN इति"
 
-#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:245
+#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:251
 #, kde-format
 msgid "CRAM-MD5"
 msgstr "CRAM-MD5"
 
-#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:246
+#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:252
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr "DIGEST-MD5"
 
-#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:247
+#: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:253
 #, kde-format
 msgid "NTLM"
 msgstr "एनटीएलएम"
 
-#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:248
+#: qml/ManualConfigurationPage.qml:148
 #, kde-format
-msgid "GSSAPI"
-msgstr "GSSAPI"
+msgid "Kerberos / GSSAPI"
+msgstr ""
 
-#: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:249
+#: qml/ManualConfigurationPage.qml:149 qml/ManualConfigurationPage.qml:255
 #, kde-format
 msgid "XOAuth (Gmail)"
 msgstr "XOAuth (जीमेल)"
 
-#: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:250
+#: qml/ManualConfigurationPage.qml:152
 #, kde-format
 msgid "APOP"
 msgstr "APOP"
 
-#: qml/ManualConfigurationPage.qml:162 qml/ManualConfigurationPage.qml:263
+#: qml/ManualConfigurationPage.qml:168 qml/ManualConfigurationPage.qml:268
 #, kde-format
 msgid "Username:"
 msgstr "उपयोक्तृनाम :"
 
-#: qml/ManualConfigurationPage.qml:177
+#: qml/ManualConfigurationPage.qml:183
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr "अफलाइन उपयोगाय सर्वान् सन्देशान् डाउनलोड् कुर्वन्तु"
 
-#: qml/ManualConfigurationPage.qml:186
+#: qml/ManualConfigurationPage.qml:192
 #, kde-format
 msgid "Outgoing Server Parameters"
 msgstr "बहिर्गच्छन्तं सर्वर पैरामीटर्"
 
-#: qml/ManualConfigurationPage.qml:193
+#: qml/ManualConfigurationPage.qml:199
 #, kde-format
 msgid "Outgoing server:"
 msgstr "बहिर्गच्छन् सर्वरः :"
+
+#: qml/ManualConfigurationPage.qml:248
+#, kde-format
+msgid "Clear text"
+msgstr "पाठः स्पष्टः"
+
+#: qml/ManualConfigurationPage.qml:254
+#, kde-format
+msgid "GSSAPI"
+msgstr "GSSAPI"
 
 #: qml/PersonalDataPage.qml:15
 #, kde-format
@@ -508,3 +518,7 @@ msgstr "रिक्तम्‌"
 msgctxt "label"
 msgid "%1:"
 msgstr "%1:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Quit"
+#~ msgstr "परिजहातु"
