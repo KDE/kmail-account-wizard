@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-30 00:43+0000\n"
-"PO-Revision-Date: 2025-05-19 09:07+0300\n"
+"PO-Revision-Date: 2025-08-30 13:26+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -247,7 +247,7 @@ msgstr "Подробиці"
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
-msgstr ""
+msgstr "Завершити"
 
 #: qml/DetailsPage.qml:24
 #, kde-format
@@ -318,7 +318,7 @@ msgstr "Спосіб розпізнавання:"
 #: qml/ManualConfigurationPage.qml:142
 #, kde-format
 msgid "Normal Password"
-msgstr ""
+msgstr "Звичайний пароль"
 
 #: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:249
 #, kde-format
@@ -348,7 +348,7 @@ msgstr "NTLM"
 #: qml/ManualConfigurationPage.qml:148
 #, kde-format
 msgid "Kerberos / GSSAPI"
-msgstr ""
+msgstr "Kerberos / GSSAPI"
 
 #: qml/ManualConfigurationPage.qml:149 qml/ManualConfigurationPage.qml:255
 #, kde-format

@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-runtime-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-30 00:43+0000\n"
-"PO-Revision-Date: 2025-05-20 22:07+0300\n"
+"PO-Revision-Date: 2025-08-30 18:44+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.0\n"
 "X-POOTLE-MTIME: 1413102276.000000\n"
 
 #, kde-format
@@ -251,7 +251,7 @@ msgstr "Ayrıntılar"
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
-msgstr ""
+msgstr "Bitir"
 
 #: qml/DetailsPage.qml:24
 #, kde-format
@@ -322,7 +322,7 @@ msgstr "Kimlik doğrulama yöntemi:"
 #: qml/ManualConfigurationPage.qml:142
 #, kde-format
 msgid "Normal Password"
-msgstr ""
+msgstr "Normal Parola"
 
 #: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:249
 #, kde-format
@@ -352,7 +352,7 @@ msgstr "NTLM"
 #: qml/ManualConfigurationPage.qml:148
 #, kde-format
 msgid "Kerberos / GSSAPI"
-msgstr ""
+msgstr "Kerberos / GSSAPI"
 
 #: qml/ManualConfigurationPage.qml:149 qml/ManualConfigurationPage.qml:255
 #, kde-format
