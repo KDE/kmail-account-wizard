@@ -99,7 +99,6 @@ set(QT6KEYCHAIN_LIB_VERSION "0.14.2")
 # Find KF6 package
 find_package(KF6I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6DBusAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF6DocTools ${KF_MIN_VERSION} REQUIRED)
 find_package(KF6Crash ${KF_MIN_VERSION} REQUIRED)
 find_package(KF6KIO ${KF_MIN_VERSION} REQUIRED)
 find_package(KF6IconThemes ${KF_MIN_VERSION} QUIET)
