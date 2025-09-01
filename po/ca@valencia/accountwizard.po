@@ -211,7 +211,7 @@ msgstr "Eixint"
 #, kde-format
 msgctxt "@title:group"
 msgid "Configuration Selection"
-msgstr "Seleccioneu la configuració"
+msgstr "Trieu la configuració"
 
 #: qml/ConfigurationSelectionPage.qml:39
 #, kde-format
