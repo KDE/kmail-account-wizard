@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-30 00:43+0000\n"
 "PO-Revision-Date: 2024-05-29 11:22+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -246,7 +246,7 @@ msgstr "Podrobnosti"
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
-msgstr ""
+msgstr "Dokončit"
 
 #: qml/DetailsPage.qml:24
 #, kde-format
@@ -517,7 +517,3 @@ msgstr "Prázdné"
 msgctxt "label"
 msgid "%1:"
 msgstr "%1:"
-
-#~ msgctxt "@action:button"
-#~ msgid "Quit"
-#~ msgstr "Ukončit"
