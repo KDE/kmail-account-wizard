@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <KMime/HeaderParsing>
+#include <KMime/Types>
 #include <MailTransport/Transport>
 #include <QDomElement>
 #include <QList>
