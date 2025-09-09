@@ -39,7 +39,6 @@
   <name xml:lang="sv">Kontoguide</name>
   <name xml:lang="tr">Hesap Sihirbazı</name>
   <name xml:lang="uk">Майстер облікових записів</name>
-  <name xml:lang="x-test">xxAccount Wizardxx</name>
   <name xml:lang="zh-CN">账户向导</name>
   <name xml:lang="zh-TW">帳號精靈</name>
   <summary>Configure accounts</summary>
@@ -75,7 +74,6 @@
   <summary xml:lang="sv">Anpassa konton</summary>
   <summary xml:lang="tr">Hesapları Yapılandır</summary>
   <summary xml:lang="uk">Налаштувати облікові записи</summary>
-  <summary xml:lang="x-test">xxConfigure accountsxx</summary>
   <summary xml:lang="zh-CN">配置账户</summary>
   <summary xml:lang="zh-TW">設定帳號</summary>
   <description>
@@ -112,7 +110,6 @@
     <p xml:lang="sv">Kontoguiden gör det möjligt att redigera, skapa och ta bort konton. Kontoguiden stöder kontotyperna IMAP/POP3/Kolab. Kontoinformation kan lokaliseras genom att använda tjänsten ispd.</p>
     <p xml:lang="tr">Hesap Sihirbazı; hesapları düzenlemeye, oluşturmaya, silmeye izin verir. Hesap Sihirbazı, IMAP/POP3/Kolab hesap türlerini destekler. Hesap bilgileri ISPD hizmeti kullanılarak bulunabilir.</p>
     <p xml:lang="uk">За допомогою майстра облікових записів можна редагувати, створювати і вилучати облікові записи. У майстрі передбачено підтримку типів облікових записів IMAP, POP3 та Kolab. Відомості облікових записів можна отримувати за допомогою служби ispd.</p>
-    <p xml:lang="x-test">xxAccountwizard allows to edit, create, delete accounts. Accountwizard supports IMAP/POP3/Kolab account type. Account information can be found by using ispd service.xx</p>
     <p xml:lang="zh-CN">账户向导允许编辑、创建、删除帐户。账户向导支持 IMAP/POP3/Kolab 帐户类型。使用 ispd 服务可以找到帐户信息。</p>
     <p xml:lang="zh-TW">帳號精靈讓您編輯、建立或刪除帳號。它支援 IMAP、POP3、Kolab 帳號類型。帳號資訊可以利用 ispd 服務取得。</p>
   </description>
