@@ -514,7 +514,3 @@ msgstr "空"
 msgctxt "label"
 msgid "%1:"
 msgstr "%1："
-
-#~ msgctxt "@action:button"
-#~ msgid "Quit"
-#~ msgstr "退出"
