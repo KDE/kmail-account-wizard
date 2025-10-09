@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-30 00:43+0000\n"
-"PO-Revision-Date: 2025-06-10 23:19+0200\n"
+"PO-Revision-Date: 2025-10-09 00:57+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -242,7 +242,7 @@ msgstr "자세히"
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
-msgstr ""
+msgstr "완료"
 
 #: qml/DetailsPage.qml:24
 #, kde-format
@@ -313,7 +313,7 @@ msgstr "인증 방식:"
 #: qml/ManualConfigurationPage.qml:142
 #, kde-format
 msgid "Normal Password"
-msgstr ""
+msgstr "일반 암호"
 
 #: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:249
 #, kde-format
@@ -343,7 +343,7 @@ msgstr "NTLM"
 #: qml/ManualConfigurationPage.qml:148
 #, kde-format
 msgid "Kerberos / GSSAPI"
-msgstr ""
+msgstr "Kerberos/GSSAPI"
 
 #: qml/ManualConfigurationPage.qml:149 qml/ManualConfigurationPage.qml:255
 #, kde-format
