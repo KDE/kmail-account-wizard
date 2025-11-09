@@ -242,7 +242,7 @@ msgstr "详情"
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
-msgstr ""
+msgstr "完成"
 
 #: qml/DetailsPage.qml:24
 #, kde-format
@@ -313,7 +313,7 @@ msgstr "身份认证方式："
 #: qml/ManualConfigurationPage.qml:142
 #, kde-format
 msgid "Normal Password"
-msgstr ""
+msgstr "普通密码"
 
 #: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:249
 #, kde-format
@@ -343,7 +343,7 @@ msgstr "NTLM"
 #: qml/ManualConfigurationPage.qml:148
 #, kde-format
 msgid "Kerberos / GSSAPI"
-msgstr ""
+msgstr "Kerberos / GSSAPI"
 
 #: qml/ManualConfigurationPage.qml:149 qml/ManualConfigurationPage.qml:255
 #, kde-format
@@ -378,7 +378,7 @@ msgstr "发件服务器："
 #: qml/ManualConfigurationPage.qml:248
 #, kde-format
 msgid "Clear text"
-msgstr "清空文本"
+msgstr "明文"
 
 #: qml/ManualConfigurationPage.qml:254
 #, kde-format
