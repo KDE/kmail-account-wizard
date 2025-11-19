@@ -153,6 +153,7 @@ void ConfigurationModel::createAutomaticAccount(int index, ConsoleLog *consoleLo
     accountConfiguration->setIncomingProtocol(configuration.incoming.type == Server::Type::POP3 ? AccountConfiguration::POP3 : AccountConfiguration::IMAP);
     accountConfiguration->setIncomingHostName(configuration.incoming.hostname);
     accountConfiguration->setIncomingPort(configuration.incoming.port);
+    accountConfiguration->setIncomingUserName(configuration.incoming.username);
     accountConfiguration->setPassword(m_password);
 
     accountConfiguration->setIncomingAuthenticationProtocol(configuration.incoming.authType);
