@@ -526,7 +526,3 @@ msgstr "Buit"
 msgctxt "label"
 msgid "%1:"
 msgstr "%1:"
-
-#~ msgctxt "@action:button"
-#~ msgid "Quit"
-#~ msgstr "Surt"
