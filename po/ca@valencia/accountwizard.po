@@ -473,7 +473,7 @@ msgstr "S'està creant la instància del recurs per a «%1»…"
 #: resource.cpp:101
 #, kde-format
 msgid "Failed to create resource instance: %1"
-msgstr "No s'ha pogut crear la instància del recurs: %1"
+msgstr "Ha fallat mentre es creava la instància del recurs: %1"
 
 #: resource.cpp:108
 #, kde-format
