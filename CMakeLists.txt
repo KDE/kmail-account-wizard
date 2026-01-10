@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 set(PIM_VERSION "6.6.40")
-cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.16)
 project(kmail-account-wizard VERSION ${PIM_VERSION})
 set(KDEPIM_LIB_SOVERSION "6")
 
