@@ -66,7 +66,7 @@ msgstr "S'ha completat la configuració del transport de correu: %1"
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
-msgstr "Servidor:"
+msgstr "Amfitrió:"
 
 #: accountconfiguration.cpp:248
 #, kde-format
