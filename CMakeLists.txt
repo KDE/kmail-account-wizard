@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.27)
 project(kmail-account-wizard VERSION ${PIM_VERSION})
 set(KDEPIM_LIB_SOVERSION "6")
 
-set(KF_MIN_VERSION "6.20.0")
+set(KF_MIN_VERSION "6.21.0")
 set(CMAKE_CXX_SCAN_FOR_MODULES OFF)
 find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
