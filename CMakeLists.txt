@@ -95,7 +95,7 @@ file(
 ecm_check_outbound_license(LICENSES GPL-2.0-only  FILES ${ALL_SOURCE_FILES})
 
 # Do NOT add quote
-set(KDEPIM_DEV_VERSION rc)
+set(KDEPIM_DEV_VERSION)
 set(RELEASE_SERVICE_VERSION "26.04.0")
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
