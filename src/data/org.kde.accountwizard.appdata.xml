@@ -110,6 +110,7 @@
     <p xml:lang="pt-BR">O Assistente de Conta permite editar, criar e excluir contas. O Assistente de Conta suporta contas do tipo IMAP/POP3/Kolab. As informações da conta podem ser encontradas usando o serviço ispd.</p>
     <p xml:lang="ru">Мастер настройки учётных записей позволяет создавать, изменять и удалять учётные записи. Программа поддерживает работу с учётными записями IMAP, POP3 и Kolab. Сведения об учётных записях можно получить с помощью службы ispd.</p>
     <p xml:lang="sa">खाताविजार्ड् खातानां सम्पादनं, निर्माणं, विलोपनं च कर्तुं शक्नोति । Accountwizard IMAP/POP3/Kolab खाताप्रकारस्य समर्थनं करोति । खातासूचना ispd सेवायाः उपयोगेन प्राप्तुं शक्यते ।</p>
+    <p xml:lang="sk">Accountwizard umožňuje upravovať, vytvárať a odstraňovať účty. Accountwizard podporuje typy účtov IMAP/POP3/Kolab. Informácie o účte je možné nájsť pomocou služby ispd.</p>
     <p xml:lang="sl">Accountwizard omogoča urejanje, ustvarjanje, brisanje računov. Accountwizard podpira vrste računa IMAP/POP3/Kolab. Podatke o računu najdete s storitvijo ispd.</p>
     <p xml:lang="sv">Kontoguiden gör det möjligt att redigera, skapa och ta bort konton. Kontoguiden stöder kontotyperna IMAP/POP3/Kolab. Kontoinformation kan lokaliseras genom att använda tjänsten ispd.</p>
     <p xml:lang="tr">Hesap Sihirbazı; hesapları düzenlemeye, oluşturmaya, silmeye izin verir. Hesap Sihirbazı, IMAP/POP3/Kolab hesap türlerini destekler. Hesap bilgileri ISPD hizmeti kullanılarak bulunabilir.</p>
