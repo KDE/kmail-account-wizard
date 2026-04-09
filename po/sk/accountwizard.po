@@ -14,8 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -37,32 +37,28 @@ msgstr "Nepomenované"
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
-msgstr ""
+msgstr "Vytvoriť e-mailovú identitu: %1"
 
 #: accountconfiguration.cpp:214
-#, fuzzy, kde-format
-#| msgid "Full name:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Celé meno:"
 
 #: accountconfiguration.cpp:215
-#, fuzzy, kde-format
-#| msgid "E-mail address:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Emailová adre&sa:"
 
 #: accountconfiguration.cpp:244
-#, fuzzy, kde-format
-#| msgid "Mail transport account deleted."
+#, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
-msgstr "Účet prenosu pošty vymazaný."
+msgstr "Mail transport setup completed: %1"
 
 #: accountconfiguration.cpp:247
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Užívateľské meno:"
@@ -71,11 +67,10 @@ msgstr "Užívateľské meno:"
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
 #: accountconfiguration.cpp:249
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Užívateľské meno:"
@@ -84,76 +79,70 @@ msgstr "Užívateľské meno:"
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
-msgstr ""
+msgstr "Šifrovanie:"
 
 #: accountconfiguration.cpp:253
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
-msgstr ""
+msgstr "Overenie totožnosti:"
 
 #: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
-#, fuzzy, kde-format
-#| msgid "IMAP, %1"
+#, kde-format
 msgid "IMAP"
-msgstr "IMAP, %1"
+msgstr "IMAP"
 
 #: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:26
 #: qml/ManualConfigurationPage.qml:90
-#, fuzzy, kde-format
-#| msgid "POP3, %1"
+#, kde-format
 msgid "POP3"
-msgstr "POP3, %1"
+msgstr "POP3"
 
 #: ispdb/configurationmodel.cpp:51
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
-msgstr ""
+msgstr "Udržiavať vaše priečinky a e-maily synchronizované na serveri"
 
 #: ispdb/configurationmodel.cpp:52
 #, kde-format
 msgid "Remove your emails from your server and keep them only on your computer"
-msgstr ""
+msgstr "Odstrániť vaše e-maily zo servera a ponechať ich iba na vašom počítači"
 
 #: ispdb/serverconfiguration.cpp:29
-#, fuzzy, kde-format
-#| msgid "SMTP, %1"
+#, kde-format
 msgid "SMTP"
-msgstr "SMTP, %1"
+msgstr "SMTP"
 
 #: ispdb/serverconfiguration.cpp:35
 #, kde-format
 msgid "SSL/TLS"
-msgstr ""
+msgstr "SSL/TLS"
 
 #: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:121
 #: qml/ManualConfigurationPage.qml:232
 #, kde-format
 msgid "StartTLS"
-msgstr ""
+msgstr "StartTLS"
 
 #: ispdb/serverconfiguration.cpp:41
 #, kde-format
 msgctxt "No security mechanism"
 msgid "None"
-msgstr ""
+msgstr "Žiadny"
 
 #: ispdbservice.cpp:130
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgid "Configuration found auto config file."
 msgstr "Automatické nastavenie nájdené."
 
 #: ispdbservice.cpp:133
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgid "Configuration found in well-known file."
 msgstr "Automatické nastavenie nájdené."
 
 #: ispdbservice.cpp:136
-#, fuzzy, kde-format
-#| msgid "Lookup configuration: Mozilla database"
+#, kde-format
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Nastavenie vyhľadávania: Databáza Mozilla"
 
@@ -168,14 +157,12 @@ msgid "Helps setting up PIM accounts"
 msgstr "Pomôže nastaviť PIM účty"
 
 #: main.cpp:43
-#, fuzzy, kde-format
-#| msgid "(c) 2009-2020 the Akonadi developers"
+#, kde-format
 msgid "© 2009-2025 the Akonadi developers"
 msgstr "(c) 2009-2020 Vývojári Akonadi"
 
 #: main.cpp:46
-#, fuzzy, kde-format
-#| msgid "Volker Krause"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Volker Krause"
 msgstr "Volker Krause"
@@ -186,8 +173,7 @@ msgid "Author"
 msgstr "Autor"
 
 #: main.cpp:47
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -195,29 +181,26 @@ msgstr "Laurent Montel"
 #: main.cpp:47 main.cpp:48
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Správca"
 
 #: main.cpp:48
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
-msgstr ""
+msgstr "Carl Schwan"
 
 #: qml/ConfigurationDelegate.qml:93
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming"
-msgstr "Prichádzajúci:"
+msgstr "Prichádzajúci"
 
 #: qml/ConfigurationDelegate.qml:114
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing"
-msgstr "Odchádzajúci:"
+msgstr "Odchádzajúci"
 
 #: qml/ConfigurationSelectionPage.qml:16
-#, fuzzy, kde-format
-#| msgid "Autoconfiguration found."
+#, kde-format
 msgctxt "@title:group"
 msgid "Configuration Selection"
 msgstr "Automatické nastavenie nájdené."
@@ -225,60 +208,57 @@ msgstr "Automatické nastavenie nájdené."
 #: qml/ConfigurationSelectionPage.qml:39
 #, kde-format
 msgid "Available configurations"
-msgstr ""
+msgstr "Dostupné konfigurácie"
 
 #: qml/ConfigurationSelectionPage.qml:56
-#, fuzzy, kde-format
-#| msgid "No config found to edit"
+#, kde-format
 msgid "No configuration found from the internet for this server."
 msgstr "Nenájdené nastavenie na úpravu"
 
 #: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
 #, kde-format
 msgid "Manual Configuration"
-msgstr ""
+msgstr "Ručná konfigurácia"
 
 #: qml/ConfigurationSelectionPage.qml:115
 #, kde-format
 msgctxt "@title:group"
 msgid "Calendar and Contacts"
-msgstr ""
+msgstr "Kalendár a kontakty"
 
 #: qml/ConfigurationSelectionPage.qml:126
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable calendar and contact integration"
-msgstr ""
+msgstr "Povoliť integráciu kalendára a kontaktov"
 
 #: qml/DetailsPage.qml:15
-#, fuzzy, kde-format
-#| msgid "&Details..."
+#, kde-format
 msgctxt "@title:group"
 msgid "Details"
-msgstr "Podrobnosti..."
+msgstr "Podrobnosti"
 
 #: qml/DetailsPage.qml:18
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
-msgstr ""
+msgstr "Dokončiť"
 
 #: qml/DetailsPage.qml:24
-#, fuzzy, kde-format
-#| msgid "&Details..."
+#, kde-format
 msgid "Details"
-msgstr "Podrobnosti..."
+msgstr "Podrobnosti"
 
 #: qml/DetailsPage.qml:61
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
-msgstr ""
+msgstr "Žiadne podrobnosti nie sú dostupné."
 
 #: qml/ManualConfigurationPage.qml:18
 #, kde-format
 msgid "Recheck"
-msgstr ""
+msgstr "Znova skontrolovať"
 
 #: qml/ManualConfigurationPage.qml:25
 #, kde-format
@@ -286,31 +266,29 @@ msgid "Create Account"
 msgstr "Vytvoriť účet"
 
 #: qml/ManualConfigurationPage.qml:67
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming Server Parameters"
 msgstr "Prichádzajúci:"
 
 #: qml/ManualConfigurationPage.qml:73
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming server:"
 msgstr "Prichádzajúci:"
 
 #: qml/ManualConfigurationPage.qml:85
 #, kde-format
 msgid "Protocol:"
-msgstr ""
+msgstr "Protokol:"
 
 #: qml/ManualConfigurationPage.qml:91
 #, kde-format
 msgid "Kolab"
-msgstr ""
+msgstr "Kolab"
 
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:212
 #, kde-format
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
 #: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:226
 #, kde-format
@@ -320,62 +298,62 @@ msgstr "Zabezpečenie:"
 #: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:231
 #, kde-format
 msgid "SSL/TLS (recommended)"
-msgstr ""
+msgstr "SSL/TLS (odporúčané)"
 
 #: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:230
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Žiadne"
 
 #: qml/ManualConfigurationPage.qml:136 qml/ManualConfigurationPage.qml:244
 #, kde-format
 msgid "Authentication Method:"
-msgstr ""
+msgstr "Metóda overenia totožnosti:"
 
 #: qml/ManualConfigurationPage.qml:142
 #, kde-format
 msgid "Normal Password"
-msgstr ""
+msgstr "Bežné heslo"
 
 #: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:249
 #, kde-format
 msgid "PLAIN"
-msgstr ""
+msgstr "PLAIN"
 
 #: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:250
 #, kde-format
 msgid "LOGIN"
-msgstr ""
+msgstr "LOGIN"
 
 #: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:251
 #, kde-format
 msgid "CRAM-MD5"
-msgstr ""
+msgstr "CRAM-MD5"
 
 #: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:252
 #, kde-format
 msgid "DIGEST-MD5"
-msgstr ""
+msgstr "DIGEST-MD5"
 
 #: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:253
 #, kde-format
 msgid "NTLM"
-msgstr ""
+msgstr "NTLM"
 
 #: qml/ManualConfigurationPage.qml:148
 #, kde-format
 msgid "Kerberos / GSSAPI"
-msgstr ""
+msgstr "Kerberos / GSSAPI"
 
 #: qml/ManualConfigurationPage.qml:149 qml/ManualConfigurationPage.qml:255
 #, kde-format
 msgid "XOAuth (Gmail)"
-msgstr ""
+msgstr "XOAuth (Gmail)"
 
 #: qml/ManualConfigurationPage.qml:152
 #, kde-format
 msgid "APOP"
-msgstr ""
+msgstr "APOP"
 
 #: qml/ManualConfigurationPage.qml:168 qml/ManualConfigurationPage.qml:268
 #, kde-format
@@ -385,47 +363,40 @@ msgstr "Užívateľské meno:"
 #: qml/ManualConfigurationPage.qml:183
 #, kde-format
 msgid "Download all messages for offline use"
-msgstr ""
+msgstr "Stiahnuť všetky správy na použitie v režime offline"
 
 #: qml/ManualConfigurationPage.qml:192
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing Server Parameters"
 msgstr "Odchádzajúci:"
 
 #: qml/ManualConfigurationPage.qml:199
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing server:"
 msgstr "Odchádzajúci:"
 
 #: qml/ManualConfigurationPage.qml:248
 #, kde-format
 msgid "Clear text"
-msgstr ""
+msgstr "Čistý text"
 
 #: qml/ManualConfigurationPage.qml:254
 #, kde-format
 msgid "GSSAPI"
-msgstr ""
+msgstr "GSSAPI"
 
 #: qml/PersonalDataPage.qml:15
 #, kde-format
 msgid "Personal Information"
-msgstr ""
+msgstr "Osobné informácie"
 
 #: qml/PersonalDataPage.qml:43
 #, kde-format
 msgid "Connect your Email Account"
-msgstr ""
+msgstr "Pripojte svoj e-mailový účet"
 
 #: qml/PersonalDataPage.qml:51
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check online for the settings needed for this email provider. Only the "
-#| "domain name part of the e-mail address will be sent over the Internet at "
-#| "this point. If this option is unchecked, the account can be set up "
-#| "manually."
+#, kde-format
 msgid ""
 "To use your current email address fill in your credentials. This wizard will "
 "automatically search for a working and recommended server configuration. "
@@ -445,7 +416,7 @@ msgstr "Celé meno:"
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
-msgstr ""
+msgstr "Ján Novák"
 
 #: qml/PersonalDataPage.qml:67
 #, kde-format
@@ -456,11 +427,10 @@ msgstr "Emailová adre&sa:"
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
-msgstr ""
+msgstr "sef@example.corp"
 
 #: qml/PersonalDataPage.qml:86
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password (optional):"
 msgstr "Heslo:"
 
@@ -468,13 +438,13 @@ msgstr "Heslo:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr ""
+msgstr "Predchádzajúci"
 
 #: qml/WizardPage.qml:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "Ďalej"
 
 #: resource.cpp:72
 #, kde-format
@@ -507,11 +477,11 @@ msgid "Unable to configure resource instance."
 msgstr "Zlyhalo nastavenie inštancie zdroja."
 
 #: resource.cpp:131
-#, fuzzy, kde-format
-#| msgid "Could not convert value of setting '%1' to required type %2."
+#, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
-msgstr "Nemôžem previesť hodnotu nastavenia '%1' na vyžadovaný typ %2."
+msgstr ""
+"Could not convert value of setting '%1' with type %2 to required type %3."
 
 #: resource.cpp:144
 #, kde-format
@@ -524,15 +494,13 @@ msgid "Could not save settings: %1"
 msgstr "Nemôžem uložiť nastavenie %1"
 
 #: resource.cpp:156
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
-msgstr "Nastavenie zdroja dokončené."
+msgstr "Resource setup completed: %1"
 
 #: resource.cpp:159
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
 msgstr "Nastavenie zdroja dokončené."
@@ -541,13 +509,13 @@ msgstr "Nastavenie zdroja dokončené."
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
-msgstr ""
+msgstr "Prázdne"
 
 #: resource.cpp:174
 #, kde-format
 msgctxt "label"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #~ msgid "Setting up identity..."
 #~ msgstr "Pripravujem identitu..."
