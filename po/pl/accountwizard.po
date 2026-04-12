@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Michał Lachowski <michal@lachowski.info>, 2010.
 # Marta Rybczyńska <kde-i18n@rybczynska.net>, 2010, 2013.
-# SPDX-FileCopyrightText: 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:52+0000\n"
-"PO-Revision-Date: 2025-11-08 08:55+0100\n"
+"PO-Revision-Date: 2026-04-11 09:10+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -435,7 +435,7 @@ msgstr "szef@przykład.corp"
 #: qml/PersonalDataPage.qml:86
 #, kde-format
 msgid "Password (optional):"
-msgstr "Hasło (dodatkowo):"
+msgstr "Hasło (niekonieczne):"
 
 #: qml/WizardPage.qml:15
 #, kde-format
@@ -462,7 +462,7 @@ msgstr "Zasób '%1' jest już ustawiony."
 #: resource.cpp:92
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr "Tworzenie zasobu \"%1\"..."
+msgstr "Tworzenie zasobu \"%1\"…"
 
 #: resource.cpp:101
 #, kde-format
@@ -472,7 +472,7 @@ msgstr "Nie udało się utworzyć zasobu: %1"
 #: resource.cpp:108
 #, kde-format
 msgid "Configuring resource instance..."
-msgstr "Ustawianie zasobu..."
+msgstr "Ustawianie zasobu…"
 
 #: resource.cpp:112
 #, kde-format
