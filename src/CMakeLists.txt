@@ -55,7 +55,7 @@ target_link_libraries(
         KPim6::AkonadiCore
         KPim6::AkonadiWidgets
         KPim6::MailTransport
-        KPim6::Mime
+        KF6::Mime
         KPim6::IdentityManagementCore
         KF6::KIOCore
         KF6::WidgetsAddons
