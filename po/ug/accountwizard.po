@@ -8,24 +8,25 @@ msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:52+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-05-31 19:01-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
+msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
+msgstr "sahranbay@gmail.com, gheyret@gmail.com"
 
 #: accountconfiguration.cpp:200 ispdb/configurationmodel.cpp:147
 #, kde-format
@@ -37,45 +38,40 @@ msgstr "ئاتسىز"
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
-msgstr ""
+msgstr "ئېلخەت كىملىكى قۇر: %1"
 
 #: accountconfiguration.cpp:214
-#, fuzzy, kde-format
-#| msgid "Full name:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "تولۇق ئاتى:"
 
 #: accountconfiguration.cpp:215
-#, fuzzy, kde-format
-#| msgid "E-mail address:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
-msgstr "ئېلخەت ئادرېس"
+msgstr "ئاساسىي ئېلخەت ئادرېسى:"
 
 #: accountconfiguration.cpp:244
-#, fuzzy, kde-format
-#| msgid "Mail transport account deleted."
+#, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
-msgstr "ئېلخەت يوللاش ھېساباتىنى ئۆچۈرۈلدى."
+msgstr ""
 
 #: accountconfiguration.cpp:247
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Host:"
-msgstr "ئىشلەتكۈچى ئاتى:"
+msgstr "مۇلازىمېتىر:"
 
 #: accountconfiguration.cpp:248
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
-msgstr ""
+msgstr "ئېغىز:"
 
 #: accountconfiguration.cpp:249
-#, fuzzy, kde-format
-#| msgid "Username:"
+#, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "ئىشلەتكۈچى ئاتى:"
@@ -84,27 +80,25 @@ msgstr "ئىشلەتكۈچى ئاتى:"
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
-msgstr ""
+msgstr "شىفىرلاش:"
 
 #: accountconfiguration.cpp:253
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
-msgstr ""
+msgstr "كىملىك دەلىللەش:"
 
 #: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
-#, fuzzy, kde-format
-#| msgid "IMAP, %1"
+#, kde-format
 msgid "IMAP"
-msgstr "IMAP، %1"
+msgstr ""
 
 #: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:26
 #: qml/ManualConfigurationPage.qml:90
-#, fuzzy, kde-format
-#| msgid "POP3, %1"
+#, kde-format
 msgid "POP3"
-msgstr "POP3، %1"
+msgstr ""
 
 #: ispdb/configurationmodel.cpp:51
 #, kde-format
@@ -117,10 +111,9 @@ msgid "Remove your emails from your server and keep them only on your computer"
 msgstr ""
 
 #: ispdb/serverconfiguration.cpp:29
-#, fuzzy, kde-format
-#| msgid "SMTP, %1"
+#, kde-format
 msgid "SMTP"
-msgstr "SMTP، %1"
+msgstr ""
 
 #: ispdb/serverconfiguration.cpp:35
 #, kde-format
@@ -137,13 +130,12 @@ msgstr ""
 #, kde-format
 msgctxt "No security mechanism"
 msgid "None"
-msgstr ""
+msgstr "يوق"
 
 #: ispdbservice.cpp:130
-#, fuzzy, kde-format
-#| msgid "Autodetecting settings failed"
+#, kde-format
 msgid "Configuration found auto config file."
-msgstr "تەڭشەكنى ئاپتوماتىك بايقاش مەغلۇپ بولدى"
+msgstr ""
 
 #: ispdbservice.cpp:133
 #, kde-format
@@ -166,26 +158,23 @@ msgid "Helps setting up PIM accounts"
 msgstr "PIM ھېساباتىنى تەڭشەشكە ياردەملىشىدۇ"
 
 #: main.cpp:43
-#, fuzzy, kde-format
-#| msgid "(c) 2009 the Akonadi developers"
+#, kde-format
 msgid "© 2009-2025 the Akonadi developers"
-msgstr "(c) 2009 the Akonadi developers"
+msgstr ""
 
 #: main.cpp:46
-#, fuzzy, kde-format
-#| msgid "Volker Krause"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Volker Krause"
-msgstr "Volker Krause"
+msgstr ""
 
 #: main.cpp:46
 #, kde-format
 msgid "Author"
-msgstr "ئاپتور"
+msgstr "يازغۇچى"
 
 #: main.cpp:47
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -193,32 +182,29 @@ msgstr "Laurent Montel"
 #: main.cpp:47 main.cpp:48
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "ئاسرىغۇچى"
 
 #: main.cpp:48
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
-msgstr ""
+msgstr "Carl Schwan"
 
 #: qml/ConfigurationDelegate.qml:93
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming"
-msgstr "كېلىۋاتىدۇ:"
+msgstr "كېلىۋاتىدۇ"
 
 #: qml/ConfigurationDelegate.qml:114
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing"
-msgstr "چىقىۋاتىدۇ:"
+msgstr "چىقىۋاتىدۇ"
 
 #: qml/ConfigurationSelectionPage.qml:16
-#, fuzzy, kde-format
-#| msgid "Autodetecting settings failed"
+#, kde-format
 msgctxt "@title:group"
 msgid "Configuration Selection"
-msgstr "تەڭشەكنى ئاپتوماتىك بايقاش مەغلۇپ بولدى"
+msgstr ""
 
 #: qml/ConfigurationSelectionPage.qml:39
 #, kde-format
@@ -248,23 +234,21 @@ msgid "Enable calendar and contact integration"
 msgstr ""
 
 #: qml/DetailsPage.qml:15
-#, fuzzy, kde-format
-#| msgid "&Details..."
+#, kde-format
 msgctxt "@title:group"
 msgid "Details"
-msgstr "تەپسىلاتلار(&D)..."
+msgstr "تەپسىلاتى"
 
 #: qml/DetailsPage.qml:18
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
-msgstr ""
+msgstr "تامام"
 
 #: qml/DetailsPage.qml:24
-#, fuzzy, kde-format
-#| msgid "&Details..."
+#, kde-format
 msgid "Details"
-msgstr "تەپسىلاتلار(&D)..."
+msgstr "تەپسىلاتى"
 
 #: qml/DetailsPage.qml:61
 #, kde-format
@@ -283,21 +267,19 @@ msgid "Create Account"
 msgstr "ھېسابات قۇر"
 
 #: qml/ManualConfigurationPage.qml:67
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming Server Parameters"
-msgstr "كېلىۋاتىدۇ:"
+msgstr ""
 
 #: qml/ManualConfigurationPage.qml:73
-#, fuzzy, kde-format
-#| msgid "Incoming:"
+#, kde-format
 msgid "Incoming server:"
-msgstr "كېلىۋاتىدۇ:"
+msgstr ""
 
 #: qml/ManualConfigurationPage.qml:85
 #, kde-format
 msgid "Protocol:"
-msgstr ""
+msgstr "كېلىشىم:"
 
 #: qml/ManualConfigurationPage.qml:91
 #, kde-format
@@ -307,12 +289,12 @@ msgstr ""
 #: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:212
 #, kde-format
 msgid "Port:"
-msgstr ""
+msgstr "ئېغىز:"
 
 #: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:226
 #, kde-format
 msgid "Security:"
-msgstr ""
+msgstr "بىخەتەرلىك:"
 
 #: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:231
 #, kde-format
@@ -322,7 +304,7 @@ msgstr ""
 #: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:230
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "يوق"
 
 #: qml/ManualConfigurationPage.qml:136 qml/ManualConfigurationPage.qml:244
 #, kde-format
@@ -385,21 +367,19 @@ msgid "Download all messages for offline use"
 msgstr ""
 
 #: qml/ManualConfigurationPage.qml:192
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing Server Parameters"
-msgstr "چىقىۋاتىدۇ:"
+msgstr ""
 
 #: qml/ManualConfigurationPage.qml:199
-#, fuzzy, kde-format
-#| msgid "Outgoing:"
+#, kde-format
 msgid "Outgoing server:"
-msgstr "چىقىۋاتىدۇ:"
+msgstr ""
 
 #: qml/ManualConfigurationPage.qml:248
 #, kde-format
 msgid "Clear text"
-msgstr ""
+msgstr "تېكىستنى تازىلا"
 
 #: qml/ManualConfigurationPage.qml:254
 #, kde-format
@@ -417,21 +397,13 @@ msgid "Connect your Email Account"
 msgstr ""
 
 #: qml/PersonalDataPage.qml:51
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check online for the settings needed for this email provider. Only the "
-#| "domain name part of the e-mail address will be sent over the Internet at "
-#| "this point. If this option is unchecked, the account can be set up "
-#| "manually."
+#, kde-format
 msgid ""
 "To use your current email address fill in your credentials. This wizard will "
 "automatically search for a working and recommended server configuration. "
 "Only the domain name part of the e-mail address will be sent over the "
 "Internet."
 msgstr ""
-"مەزكۇر ئېلخەت تەمىنلىگۈچىگە زۆرۈر بولغان تەڭشەكلەرنى توردىن تەكشۈرىدۇ. "
-"ئېلخەت ئادرېسىنىڭ تەركىبىدىكى دائىرە ئاتى بۆلىكىلا ئىنتېرنېتقا يوللىنىدۇ. "
-"ئەگەر بۇ تاللانما تاللانمىسا ھېساباتنى قولدا تەڭشەشكە توغرا كېلىدۇ."
 
 #: qml/PersonalDataPage.qml:57
 #, kde-format
@@ -447,7 +419,7 @@ msgstr ""
 #: qml/PersonalDataPage.qml:67
 #, kde-format
 msgid "E-mail address:"
-msgstr "ئېلخەت ئادرېس"
+msgstr "ئېلخەت ئادرېس:"
 
 #: qml/PersonalDataPage.qml:68
 #, kde-format
@@ -456,37 +428,36 @@ msgid "boss@example.corp"
 msgstr ""
 
 #: qml/PersonalDataPage.qml:86
-#, fuzzy, kde-format
-#| msgid "Password:"
+#, kde-format
 msgid "Password (optional):"
-msgstr "ئىم:"
+msgstr ""
 
 #: qml/WizardPage.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr ""
+msgstr "ئالدىنقى"
 
 #: qml/WizardPage.qml:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "كېيىنكى"
 
 #: resource.cpp:72
 #, kde-format
 msgid "Resource type '%1' is not available."
-msgstr "مەنبە تىپى ‹%1› يوق."
+msgstr "مەنبە تۈرى «%1» يوق."
 
 #: resource.cpp:85
 #, kde-format
 msgid "Resource '%1' is already set up."
-msgstr "مەنبە ‹%1› ئاللىقاچان تەڭشەلگەن."
+msgstr "مەنبە «%1» ئاللىقاچان تەڭشەلگەن."
 
 #: resource.cpp:92
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr "‹%1› نىڭ مەنبە ئۈلگىسىنى قۇرۇۋاتىدۇ…"
+msgstr "«%1» نىڭ مەنبە ئۈلگىسىنى قۇرۇۋاتىدۇ…"
 
 #: resource.cpp:101
 #, kde-format
@@ -504,49 +475,44 @@ msgid "Unable to configure resource instance."
 msgstr "مەنبە ئۈلگىسىنى سەپلىگىلى بولمىدى."
 
 #: resource.cpp:131
-#, fuzzy, kde-format
-#| msgid "Could not convert value of setting '%1' to required type %2."
+#, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
 msgstr ""
-"تەڭشەك ‹%1› نىڭ قىممىتىنى تەلەپ قىلىنغان تىپ %2 غا ئايلاندۇرغىلى بولمىدى."
 
 #: resource.cpp:144
 #, kde-format
 msgid "Could not set setting '%1': %2"
-msgstr "تەڭشەك ‹%1› نى بەلگىلىگىلى بولمىدى: %2"
+msgstr "تەڭشەك «%1» نى بەلگىلىگىلى بولمىدى: %2"
 
 #: resource.cpp:150
-#, fuzzy, kde-format
-#| msgid "Could not set setting '%1': %2"
+#, kde-format
 msgid "Could not save settings: %1"
-msgstr "تەڭشەك ‹%1› نى بەلگىلىگىلى بولمىدى: %2"
+msgstr "تەڭشەكنى ساقلىيالمىدى: %1"
 
 #: resource.cpp:156
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
-msgstr "مەنبە تەڭشەش تاماملاندى."
+msgstr ""
 
 #: resource.cpp:159
-#, fuzzy, kde-format
-#| msgid "Resource setup completed."
+#, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
-msgstr "مەنبە تەڭشەش تاماملاندى."
+msgstr ""
 
 #: resource.cpp:169
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
-msgstr ""
+msgstr "بوش"
 
 #: resource.cpp:174
 #, kde-format
 msgctxt "label"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #~ msgid "Setting up identity..."
 #~ msgstr "كىملىك تەڭشەۋاتىدۇ…"
@@ -585,27 +551,22 @@ msgstr ""
 #~ msgid "Config file for %1 was not changed."
 #~ msgstr "%1 نىڭ سەپلەش ھۆججىتى ئۆزگەرمىدى."
 
-#, fuzzy
 #~| msgid "Autodetecting settings failed"
 #~ msgid "Unknown configuration name '%1'"
 #~ msgstr "تەڭشەكنى ئاپتوماتىك بايقاش مەغلۇپ بولدى"
 
-#, fuzzy
 #~| msgid "Account Assistant"
 #~ msgid "Account Wizard"
 #~ msgstr "ھېسابات ياردەمچىسى"
 
-#, fuzzy
 #~| msgid "Failed to load script: '%1'."
 #~ msgid "Failed to import key: %1"
 #~ msgstr "قوليازمىنى ئوقۇش مەغلۇپ بولدى: ‹%1›."
 
-#, fuzzy
 #~| msgid "Failed to load script: '%1'."
 #~ msgid "Failed to import key."
 #~ msgstr "قوليازمىنى ئوقۇش مەغلۇپ بولدى: ‹%1›."
 
-#, fuzzy
 #~| msgid "Failed to load script: '%1'."
 #~ msgid "Failed to publish the key."
 #~ msgstr "قوليازمىنى ئوقۇش مەغلۇپ بولدى: ‹%1›."
@@ -637,7 +598,6 @@ msgstr ""
 #~ msgid "Setting up Account"
 #~ msgstr "ھېسابات تەڭشەش"
 
-#, fuzzy
 #~| msgid "Loading Assistant"
 #~ msgid "ISPDB Assistant"
 #~ msgstr "ياردەمچىنى ئوقۇۋاتىدۇ"
@@ -663,7 +623,6 @@ msgstr ""
 #~ msgid "unpack fullpath on startup and launch that assistant"
 #~ msgstr "قوزغالغاندا تولۇق يولنى يايىدۇ ۋە ياردەمچىنى ئىجرا قىلىدۇ"
 
-#, fuzzy
 #~| msgid "Run the specified assistant."
 #~ msgid "Returns types of assistants"
 #~ msgstr "بەلگىلەنگەن ياردەمچىنى ئىجرا قىلىدۇ."
@@ -693,7 +652,6 @@ msgstr ""
 #~ "بىر قانچە باسقۇچ ئارقىلىقلا توغرا بولغان تەڭشەشنى ئېلىپ بارغىلى بولىدۇ. "
 #~ "تۆۋەندىكى يېتەكچىنىڭ كۆرسەتمىسىگە بويسۇنۇپ مەشغۇلات قىلىڭ."
 
-#, fuzzy
 #~| msgid "Find provider settings on the Internet"
 #~ msgid "Find pro&vider settings on the Internet"
 #~ msgstr "تەمىنلىگۈچى تىزىمىنى ئىنتېرنېتتىن ئىزدەش"
@@ -701,17 +659,14 @@ msgstr ""
 #~ msgid "IMAP account"
 #~ msgstr "IMAP ھېساباتى"
 
-#, fuzzy
 #~| msgid "POP3 account"
 #~ msgid "POP&3 account"
 #~ msgstr "POP3 ھېساباتى"
 
-#, fuzzy
 #~| msgid "IMAP account"
 #~ msgid "Add Account"
 #~ msgstr "IMAP ھېساباتى"
 
-#, fuzzy
 #~| msgid ""
 #~| "Select your provider from the list below or click advanced if your "
 #~| "provider is not listed"
