@@ -39,6 +39,7 @@
   <name xml:lang="sl">Čarovnik za račun</name>
   <name xml:lang="sv">Kontoguide</name>
   <name xml:lang="tr">Hesap Sihirbazı</name>
+  <name xml:lang="ug">ھېساب يېتەكچىسى</name>
   <name xml:lang="uk">Майстер облікових записів</name>
   <name xml:lang="zh-CN">账户向导</name>
   <name xml:lang="zh-TW">帳號精靈</name>
@@ -75,6 +76,7 @@
   <summary xml:lang="sl">Konfigurira račune</summary>
   <summary xml:lang="sv">Anpassa konton</summary>
   <summary xml:lang="tr">Hesapları Yapılandır</summary>
+  <summary xml:lang="ug">ھېساب سەپلە</summary>
   <summary xml:lang="uk">Налаштувати облікові записи</summary>
   <summary xml:lang="zh-CN">配置账户</summary>
   <summary xml:lang="zh-TW">設定帳號</summary>
