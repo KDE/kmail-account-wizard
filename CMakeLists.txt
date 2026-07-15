@@ -134,7 +134,6 @@ find_package(
         QuickControls2
 )
 set(PIMCOMMON_LIB_VERSION "6.7.40")
-set(KPIM_MIME_VERSION "6.7.40")
 set(QT6KEYCHAIN_LIB_VERSION "0.15.0")
 
 # Find KF6 package
@@ -144,10 +143,6 @@ find_package(KF6Crash ${KF_MIN_VERSION} REQUIRED)
 find_package(KF6KIO ${KF_MIN_VERSION} REQUIRED)
 find_package(KF6IconThemes ${KF_MIN_VERSION} QUIET)
 find_package(KF6Mime ${KF_MIN_VERSION} CONFIG)
-if(NOT TARGET KF6::Mime)
-    find_package(KPim6Mime ${KPIM_MIME_VERSION} CONFIG REQUIRED)
-    add_library(KF6::Mime ALIAS KPim6::Mime)
-endif()
 find_package(KPim6Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 find_package(KPim6IdentityManagementCore ${IDENTITYMANAGEMENT_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6MailTransport ${KMAILTRANSPORT_LIB_VERSION} CONFIG REQUIRED)
