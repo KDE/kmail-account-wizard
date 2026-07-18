@@ -54,7 +54,6 @@ public:
     enum IncomingProtocol {
         IMAP,
         POP3,
-        KOLAB,
     };
     Q_ENUM(IncomingProtocol)
 
@@ -135,7 +134,6 @@ protected:
 private:
     [[nodiscard]] Resource::ResourceInfo createPop3Resource() const;
     [[nodiscard]] Resource::ResourceInfo createImapResource() const;
-    [[nodiscard]] Resource::ResourceInfo createKolabResource() const;
     [[nodiscard]] Resource::ResourceInfo createGmailResource() const;
     [[nodiscard]] QString generateUniqueAccountName() const;
     void slotTestFail();

@@ -89,9 +89,6 @@ QString AccountConfiguration::generateUniqueAccountName() const
     case IMAP:
         name = u"IMAP (%1)"_s.arg(mIdentity.primaryEmailAddress());
         break;
-    case KOLAB:
-        name = u"Kolab (%1)"_s.arg(mIdentity.primaryEmailAddress());
-        break;
     default:
         qCWarning(ACCOUNTWIZARD_LOG) << " invalid protocol: " << mIncomingProtocol;
         break;
@@ -158,14 +155,6 @@ Resource::ResourceInfo AccountConfiguration::createGmailResource() const
     return info;
 }
 
-Resource::ResourceInfo AccountConfiguration::createKolabResource() const
-{
-    auto info = createImapResource();
-    info.name = generateUniqueAccountName();
-    info.typeIdentifier = u"akonadi_kolab_resource"_s;
-    return info;
-}
-
 void AccountConfiguration::generateResource(const Resource::ResourceInfo &info, ConsoleLog *consoleLog)
 {
     auto resource = new Resource(consoleLog, this);
@@ -226,9 +215,6 @@ void AccountConfiguration::save(ConsoleLog *consoleLog)
     case IncomingProtocol::IMAP:
         info = createImapResource();
         break;
-    case IncomingProtocol::KOLAB:
-        info = createKolabResource();
-        break;
     default:
         qCWarning(ACCOUNTWIZARD_LOG) << " invalid protocol: " << mIncomingProtocol;
         return;
@@ -281,9 +267,6 @@ void AccountConfiguration::checkServer()
         protocol = u"pop"_s;
         break;
     case IMAP:
-        protocol = u"imap"_s;
-        break;
-    case KOLAB:
         protocol = u"imap"_s;
         break;
     }
