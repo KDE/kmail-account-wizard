@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-19 00:45+0000\n"
 "PO-Revision-Date: 2013-09-22 04:25+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -27,66 +27,66 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sairan@computer.org"
 
-#: accountconfiguration.cpp:200 ispdb/configurationmodel.cpp:147
+#: accountconfiguration.cpp:189 ispdb/configurationmodel.cpp:147
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Аталмаған"
 
-#: accountconfiguration.cpp:211
+#: accountconfiguration.cpp:200
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr ""
 
-#: accountconfiguration.cpp:214
+#: accountconfiguration.cpp:203
 #, fuzzy, kde-format
 #| msgid "Full name:"
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Толық аты:"
 
-#: accountconfiguration.cpp:215
+#: accountconfiguration.cpp:204
 #, fuzzy, kde-format
 #| msgid "E-mail address:"
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Эл.адресі:"
 
-#: accountconfiguration.cpp:244
+#: accountconfiguration.cpp:230
 #, fuzzy, kde-format
 #| msgid "Mail transport account deleted."
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Пошта тасымалының тіркелгісі өшірілді."
 
-#: accountconfiguration.cpp:247
+#: accountconfiguration.cpp:233
 #, fuzzy, kde-format
 #| msgid "Username:"
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Пайдаланушы:"
 
-#: accountconfiguration.cpp:248
+#: accountconfiguration.cpp:234
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr ""
 
-#: accountconfiguration.cpp:249
+#: accountconfiguration.cpp:235
 #, fuzzy, kde-format
 #| msgid "Username:"
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Пайдаланушы:"
 
-#: accountconfiguration.cpp:251
+#: accountconfiguration.cpp:237
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr ""
 
-#: accountconfiguration.cpp:253
+#: accountconfiguration.cpp:239
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
@@ -127,8 +127,8 @@ msgstr "SMTP, %1"
 msgid "SSL/TLS"
 msgstr ""
 
-#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:121
-#: qml/ManualConfigurationPage.qml:232
+#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:120
+#: qml/ManualConfigurationPage.qml:231
 #, kde-format
 msgid "StartTLS"
 msgstr ""
@@ -300,109 +300,104 @@ msgstr "Кіріс:"
 msgid "Protocol:"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:91
-#, kde-format
-msgid "Kolab"
-msgstr ""
-
-#: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:212
+#: qml/ManualConfigurationPage.qml:104 qml/ManualConfigurationPage.qml:211
 #, kde-format
 msgid "Port:"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:226
+#: qml/ManualConfigurationPage.qml:115 qml/ManualConfigurationPage.qml:225
 #, kde-format
 msgid "Security:"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:231
+#: qml/ManualConfigurationPage.qml:119 qml/ManualConfigurationPage.qml:230
 #, kde-format
 msgid "SSL/TLS (recommended)"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:230
+#: qml/ManualConfigurationPage.qml:121 qml/ManualConfigurationPage.qml:229
 #, kde-format
 msgid "None"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:136 qml/ManualConfigurationPage.qml:244
+#: qml/ManualConfigurationPage.qml:135 qml/ManualConfigurationPage.qml:243
 #, kde-format
 msgid "Authentication Method:"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:142
+#: qml/ManualConfigurationPage.qml:141
 #, kde-format
 msgid "Normal Password"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:249
+#: qml/ManualConfigurationPage.qml:142 qml/ManualConfigurationPage.qml:248
 #, kde-format
 msgid "PLAIN"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:250
+#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:249
 #, kde-format
 msgid "LOGIN"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:251
+#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:250
 #, kde-format
 msgid "CRAM-MD5"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:252
+#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:251
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:253
+#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:252
 #, kde-format
 msgid "NTLM"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:148
+#: qml/ManualConfigurationPage.qml:147
 #, kde-format
 msgid "Kerberos / GSSAPI"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:149 qml/ManualConfigurationPage.qml:255
+#: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:254
 #, kde-format
 msgid "XOAuth (Gmail)"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:152
+#: qml/ManualConfigurationPage.qml:151
 #, kde-format
 msgid "APOP"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:168 qml/ManualConfigurationPage.qml:268
+#: qml/ManualConfigurationPage.qml:167 qml/ManualConfigurationPage.qml:267
 #, kde-format
 msgid "Username:"
 msgstr "Пайдаланушы:"
 
-#: qml/ManualConfigurationPage.qml:183
+#: qml/ManualConfigurationPage.qml:182
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:192
+#: qml/ManualConfigurationPage.qml:191
 #, fuzzy, kde-format
 #| msgid "Outgoing:"
 msgid "Outgoing Server Parameters"
 msgstr "Шығыс:"
 
-#: qml/ManualConfigurationPage.qml:199
+#: qml/ManualConfigurationPage.qml:198
 #, fuzzy, kde-format
 #| msgid "Outgoing:"
 msgid "Outgoing server:"
 msgstr "Шығыс:"
 
-#: qml/ManualConfigurationPage.qml:248
+#: qml/ManualConfigurationPage.qml:247
 #, kde-format
 msgid "Clear text"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:254
+#: qml/ManualConfigurationPage.qml:253
 #, kde-format
 msgid "GSSAPI"
 msgstr ""

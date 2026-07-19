@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-19 00:45+0000\n"
 "PO-Revision-Date: 2022-04-09 19:22+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -27,61 +27,61 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "wizzardsk@gmail.com"
 
-#: accountconfiguration.cpp:200 ispdb/configurationmodel.cpp:147
+#: accountconfiguration.cpp:189 ispdb/configurationmodel.cpp:147
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Nepomenované"
 
-#: accountconfiguration.cpp:211
+#: accountconfiguration.cpp:200
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "Vytvoriť e-mailovú identitu: %1"
 
-#: accountconfiguration.cpp:214
+#: accountconfiguration.cpp:203
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Celé meno:"
 
-#: accountconfiguration.cpp:215
+#: accountconfiguration.cpp:204
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Emailová adre&sa:"
 
-#: accountconfiguration.cpp:244
+#: accountconfiguration.cpp:230
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Mail transport setup completed: %1"
 
-#: accountconfiguration.cpp:247
+#: accountconfiguration.cpp:233
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Užívateľské meno:"
 
-#: accountconfiguration.cpp:248
+#: accountconfiguration.cpp:234
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Port:"
 
-#: accountconfiguration.cpp:249
+#: accountconfiguration.cpp:235
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Užívateľské meno:"
 
-#: accountconfiguration.cpp:251
+#: accountconfiguration.cpp:237
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "Šifrovanie:"
 
-#: accountconfiguration.cpp:253
+#: accountconfiguration.cpp:239
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
@@ -119,8 +119,8 @@ msgstr "SMTP"
 msgid "SSL/TLS"
 msgstr "SSL/TLS"
 
-#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:121
-#: qml/ManualConfigurationPage.qml:232
+#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:120
+#: qml/ManualConfigurationPage.qml:231
 #, kde-format
 msgid "StartTLS"
 msgstr "StartTLS"
@@ -280,107 +280,102 @@ msgstr "Prichádzajúci:"
 msgid "Protocol:"
 msgstr "Protokol:"
 
-#: qml/ManualConfigurationPage.qml:91
-#, kde-format
-msgid "Kolab"
-msgstr "Kolab"
-
-#: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:212
+#: qml/ManualConfigurationPage.qml:104 qml/ManualConfigurationPage.qml:211
 #, kde-format
 msgid "Port:"
 msgstr "Port:"
 
-#: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:226
+#: qml/ManualConfigurationPage.qml:115 qml/ManualConfigurationPage.qml:225
 #, kde-format
 msgid "Security:"
 msgstr "Zabezpečenie:"
 
-#: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:231
+#: qml/ManualConfigurationPage.qml:119 qml/ManualConfigurationPage.qml:230
 #, kde-format
 msgid "SSL/TLS (recommended)"
 msgstr "SSL/TLS (odporúčané)"
 
-#: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:230
+#: qml/ManualConfigurationPage.qml:121 qml/ManualConfigurationPage.qml:229
 #, kde-format
 msgid "None"
 msgstr "Žiadne"
 
-#: qml/ManualConfigurationPage.qml:136 qml/ManualConfigurationPage.qml:244
+#: qml/ManualConfigurationPage.qml:135 qml/ManualConfigurationPage.qml:243
 #, kde-format
 msgid "Authentication Method:"
 msgstr "Metóda overenia totožnosti:"
 
-#: qml/ManualConfigurationPage.qml:142
+#: qml/ManualConfigurationPage.qml:141
 #, kde-format
 msgid "Normal Password"
 msgstr "Bežné heslo"
 
-#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:249
+#: qml/ManualConfigurationPage.qml:142 qml/ManualConfigurationPage.qml:248
 #, kde-format
 msgid "PLAIN"
 msgstr "PLAIN"
 
-#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:250
+#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:249
 #, kde-format
 msgid "LOGIN"
 msgstr "LOGIN"
 
-#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:251
+#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:250
 #, kde-format
 msgid "CRAM-MD5"
 msgstr "CRAM-MD5"
 
-#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:252
+#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:251
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr "DIGEST-MD5"
 
-#: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:253
+#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:252
 #, kde-format
 msgid "NTLM"
 msgstr "NTLM"
 
-#: qml/ManualConfigurationPage.qml:148
+#: qml/ManualConfigurationPage.qml:147
 #, kde-format
 msgid "Kerberos / GSSAPI"
 msgstr "Kerberos / GSSAPI"
 
-#: qml/ManualConfigurationPage.qml:149 qml/ManualConfigurationPage.qml:255
+#: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:254
 #, kde-format
 msgid "XOAuth (Gmail)"
 msgstr "XOAuth (Gmail)"
 
-#: qml/ManualConfigurationPage.qml:152
+#: qml/ManualConfigurationPage.qml:151
 #, kde-format
 msgid "APOP"
 msgstr "APOP"
 
-#: qml/ManualConfigurationPage.qml:168 qml/ManualConfigurationPage.qml:268
+#: qml/ManualConfigurationPage.qml:167 qml/ManualConfigurationPage.qml:267
 #, kde-format
 msgid "Username:"
 msgstr "Užívateľské meno:"
 
-#: qml/ManualConfigurationPage.qml:183
+#: qml/ManualConfigurationPage.qml:182
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr "Stiahnuť všetky správy na použitie v režime offline"
 
-#: qml/ManualConfigurationPage.qml:192
+#: qml/ManualConfigurationPage.qml:191
 #, kde-format
 msgid "Outgoing Server Parameters"
 msgstr "Odchádzajúci:"
 
-#: qml/ManualConfigurationPage.qml:199
+#: qml/ManualConfigurationPage.qml:198
 #, kde-format
 msgid "Outgoing server:"
 msgstr "Odchádzajúci:"
 
-#: qml/ManualConfigurationPage.qml:248
+#: qml/ManualConfigurationPage.qml:247
 #, kde-format
 msgid "Clear text"
 msgstr "Čistý text"
 
-#: qml/ManualConfigurationPage.qml:254
+#: qml/ManualConfigurationPage.qml:253
 #, kde-format
 msgid "GSSAPI"
 msgstr "GSSAPI"
@@ -516,6 +511,9 @@ msgstr "Prázdne"
 msgctxt "label"
 msgid "%1:"
 msgstr "%1:"
+
+#~ msgid "Kolab"
+#~ msgstr "Kolab"
 
 #~ msgid "Setting up identity..."
 #~ msgstr "Pripravujem identitu..."

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-19 00:45+0000\n"
 "PO-Revision-Date: 2025-08-30 11:20+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -32,61 +32,61 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "manutortosa@gmail.com,antonibella5@yahoo.com"
 
-#: accountconfiguration.cpp:200 ispdb/configurationmodel.cpp:147
+#: accountconfiguration.cpp:189 ispdb/configurationmodel.cpp:147
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Sense nom"
 
-#: accountconfiguration.cpp:211
+#: accountconfiguration.cpp:200
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "Crea una identitat de correu: %1"
 
-#: accountconfiguration.cpp:214
+#: accountconfiguration.cpp:203
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Nom complet:"
 
-#: accountconfiguration.cpp:215
+#: accountconfiguration.cpp:204
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Adreça primària de correu:"
 
-#: accountconfiguration.cpp:244
+#: accountconfiguration.cpp:230
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "S'ha completat la configuració del transport de correu: %1"
 
-#: accountconfiguration.cpp:247
+#: accountconfiguration.cpp:233
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Servidor:"
 
-#: accountconfiguration.cpp:248
+#: accountconfiguration.cpp:234
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Port:"
 
-#: accountconfiguration.cpp:249
+#: accountconfiguration.cpp:235
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Nom d'usuari:"
 
-#: accountconfiguration.cpp:251
+#: accountconfiguration.cpp:237
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "Encriptatge:"
 
-#: accountconfiguration.cpp:253
+#: accountconfiguration.cpp:239
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
@@ -127,8 +127,8 @@ msgstr "SMTP"
 msgid "SSL/TLS"
 msgstr "SSL/TLS"
 
-#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:121
-#: qml/ManualConfigurationPage.qml:232
+#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:120
+#: qml/ManualConfigurationPage.qml:231
 #, kde-format
 msgid "StartTLS"
 msgstr "StartTLS"
@@ -288,107 +288,102 @@ msgstr "Servidor d'entrada:"
 msgid "Protocol:"
 msgstr "Protocol:"
 
-#: qml/ManualConfigurationPage.qml:91
-#, kde-format
-msgid "Kolab"
-msgstr "Kolab"
-
-#: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:212
+#: qml/ManualConfigurationPage.qml:104 qml/ManualConfigurationPage.qml:211
 #, kde-format
 msgid "Port:"
 msgstr "Port:"
 
-#: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:226
+#: qml/ManualConfigurationPage.qml:115 qml/ManualConfigurationPage.qml:225
 #, kde-format
 msgid "Security:"
 msgstr "Seguretat:"
 
-#: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:231
+#: qml/ManualConfigurationPage.qml:119 qml/ManualConfigurationPage.qml:230
 #, kde-format
 msgid "SSL/TLS (recommended)"
 msgstr "SSL/TLS (recomanat)"
 
-#: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:230
+#: qml/ManualConfigurationPage.qml:121 qml/ManualConfigurationPage.qml:229
 #, kde-format
 msgid "None"
 msgstr "Cap"
 
-#: qml/ManualConfigurationPage.qml:136 qml/ManualConfigurationPage.qml:244
+#: qml/ManualConfigurationPage.qml:135 qml/ManualConfigurationPage.qml:243
 #, kde-format
 msgid "Authentication Method:"
 msgstr "Mètode d'autenticació:"
 
-#: qml/ManualConfigurationPage.qml:142
+#: qml/ManualConfigurationPage.qml:141
 #, kde-format
 msgid "Normal Password"
 msgstr "Contrasenya normal"
 
-#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:249
+#: qml/ManualConfigurationPage.qml:142 qml/ManualConfigurationPage.qml:248
 #, kde-format
 msgid "PLAIN"
 msgstr "PLAIN"
 
-#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:250
+#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:249
 #, kde-format
 msgid "LOGIN"
 msgstr "LOGIN"
 
-#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:251
+#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:250
 #, kde-format
 msgid "CRAM-MD5"
 msgstr "CRAM-MD5"
 
-#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:252
+#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:251
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr "DIGEST-MD5"
 
-#: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:253
+#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:252
 #, kde-format
 msgid "NTLM"
 msgstr "NTLM"
 
-#: qml/ManualConfigurationPage.qml:148
+#: qml/ManualConfigurationPage.qml:147
 #, kde-format
 msgid "Kerberos / GSSAPI"
 msgstr "Kerberos / GSSAPI"
 
-#: qml/ManualConfigurationPage.qml:149 qml/ManualConfigurationPage.qml:255
+#: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:254
 #, kde-format
 msgid "XOAuth (Gmail)"
 msgstr "XOAuth (Gmail)"
 
-#: qml/ManualConfigurationPage.qml:152
+#: qml/ManualConfigurationPage.qml:151
 #, kde-format
 msgid "APOP"
 msgstr "APOP"
 
-#: qml/ManualConfigurationPage.qml:168 qml/ManualConfigurationPage.qml:268
+#: qml/ManualConfigurationPage.qml:167 qml/ManualConfigurationPage.qml:267
 #, kde-format
 msgid "Username:"
 msgstr "Nom d'usuari:"
 
-#: qml/ManualConfigurationPage.qml:183
+#: qml/ManualConfigurationPage.qml:182
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr "Descarrega tots els missatges per a ús fora de línia"
 
-#: qml/ManualConfigurationPage.qml:192
+#: qml/ManualConfigurationPage.qml:191
 #, kde-format
 msgid "Outgoing Server Parameters"
 msgstr "Paràmetres del servidor de sortida"
 
-#: qml/ManualConfigurationPage.qml:199
+#: qml/ManualConfigurationPage.qml:198
 #, kde-format
 msgid "Outgoing server:"
 msgstr "Servidor de sortida:"
 
-#: qml/ManualConfigurationPage.qml:248
+#: qml/ManualConfigurationPage.qml:247
 #, kde-format
 msgid "Clear text"
 msgstr "Text en clar"
 
-#: qml/ManualConfigurationPage.qml:254
+#: qml/ManualConfigurationPage.qml:253
 #, kde-format
 msgid "GSSAPI"
 msgstr "GSSAPI"
@@ -526,6 +521,9 @@ msgstr "Buit"
 msgctxt "label"
 msgid "%1:"
 msgstr "%1:"
+
+#~ msgid "Kolab"
+#~ msgstr "Kolab"
 
 #~ msgctxt "@action:button"
 #~ msgid "Quit"
