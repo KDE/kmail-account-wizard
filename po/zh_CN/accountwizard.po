@@ -509,6 +509,3 @@ msgstr "空"
 msgctxt "label"
 msgid "%1:"
 msgstr "%1："
-
-#~ msgid "Kolab"
-#~ msgstr "Kolab"
