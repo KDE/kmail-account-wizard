@@ -38,6 +38,15 @@ void cleanupIdentities(std::unique_ptr<IdentityManager> &manager)
         manager->commit();
     }
 }
+
+void cleanupTransports(MailTransport::TransportManager *manager)
+{
+    QVERIFY(manager);
+    while (!manager->transports().isEmpty()) {
+        manager->removeTransport(manager->transports().first()->id());
+        manager->changesCommitted();
+    }
+}
 }
 
 AccountConfigurationTest::AccountConfigurationTest(QObject *parent)
@@ -63,6 +72,10 @@ void AccountConfigurationTest::init()
 
     mManager->commit();
     QCOMPARE(mManager->identities().count(), 1);
+
+    auto transportManager = MailTransport::TransportManager::self();
+    cleanupTransports(transportManager);
+    QVERIFY(transportManager->transports().isEmpty());
 }
 
 void AccountConfigurationTest::shouldHaveDefaultValues()
