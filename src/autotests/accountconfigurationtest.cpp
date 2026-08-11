@@ -75,7 +75,7 @@ void AccountConfigurationTest::shouldHaveDefaultValues()
     QCOMPARE(w.incomingSecurityProtocol(), MailTransport::Transport::EnumEncryption::SSL);
     QCOMPARE(w.incomingAuthenticationProtocol(), MailTransport::Transport::EnumAuthenticationType::LOGIN);
     QCOMPARE(w.incomingPort(), 995);
-    QVERIFY(!w.disconnectedModeEnabled());
+    QVERIFY(w.disconnectedModeEnabled());
 
     QVERIFY(w.mailTransport()->host().isEmpty());
     QVERIFY(w.mailTransport()->userName().isEmpty());
