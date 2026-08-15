@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:52+0000\n"
-"PO-Revision-Date: 2026-01-15 18:46+0100\n"
-"Last-Translator: Libor Filípek <filipek.libor@protonmail.com>\n"
+"PO-Revision-Date: 2026-08-14 11:48+0200\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: \n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -53,7 +53,7 @@ msgstr "Celé jméno:"
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
-msgstr "Primární e-mailová adresa"
+msgstr "Primární e-mailová adresa:"
 
 #: accountconfiguration.cpp:244
 #, kde-format
@@ -112,7 +112,7 @@ msgstr "Synchronizovat vaše složky a e-maily na serveru"
 #, kde-format
 msgid "Remove your emails from your server and keep them only on your computer"
 msgstr ""
-"Odstranit vaše e-maily ze serveru a uchovávat je pouze ve vašem počítači."
+"Odstranit vaše e-maily ze serveru a uchovávat je pouze ve vašem počítači"
 
 #: ispdb/serverconfiguration.cpp:29
 #, kde-format
