@@ -48,7 +48,7 @@ WizardPage {
     }
 
     FormCard.FormSectionText {
-        text: i18n("To use your current email address fill in your credentials. This wizard will automatically search for a working and recommended server configuration. Only the domain name part of the e-mail address will be sent over the Internet.")
+        text: i18n("To use your current email address fill in your credentials. This wizard will automatically search for a working and recommended server configuration.")
     }
 
     FormCard.FormCard {

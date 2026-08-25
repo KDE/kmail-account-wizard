@@ -4,6 +4,7 @@
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 #include "ispdb/serverconfiguration.h"
+#include <KAccountAutoconfig/KAutoconfigServer>
 #include <KLocalizedString>
 
 static QString replacePlaceholders(const QString &in, const KMime::Types::AddrSpec &addrSpec)
@@ -45,57 +46,67 @@ QStringList Server::tags() const
     return tags;
 }
 
-std::optional<Server> Server::fromDomElement(const QDomElement &element, const KMime::Types::AddrSpec &addrSpec)
+std::optional<Server::Type> fromProtocol(KAutoconfigServer::Protocol protocol)
 {
-    QDomNode o = element.firstChild();
+    switch (protocol) {
+    case KAutoconfigServer::IMAP:
+        return Server::IMAP;
+    case KAutoconfigServer::POP3:
+        return Server::POP3;
+    case KAutoconfigServer::SMTP:
+        return Server::SMTP;
+    default:
+        return {};
+    }
+}
+
+std::optional<MailTransport::Transport::EnumAuthenticationType> fromAuthenticationType(KAutoconfigServer::AuthenticationType authType)
+{
+    switch (authType) {
+    case KAutoconfigServer::PasswordCleartext:
+        return MailTransport::TransportBase::PLAIN;
+    case KAutoconfigServer::PasswordEncrypted:
+        return MailTransport::TransportBase::CRAM_MD5;
+    case KAutoconfigServer::Digest:
+    case KAutoconfigServer::Basic:
+    case KAutoconfigServer::UnknownAuthentication:
+    default:
+        return {};
+    }
+}
+
+std::optional<MailTransport::Transport::EnumEncryption> fromSocketType(KAutoconfigServer::SocketType socketType)
+{
+    switch (socketType) {
+    case KAutoconfigServer::Plain:
+        return MailTransport::TransportBase::None;
+    case KAutoconfigServer::SSL:
+        return MailTransport::TransportBase::SSL;
+    case KAutoconfigServer::STARTTLS:
+        return MailTransport::TransportBase::TLS;
+    case KAutoconfigServer::UnknownSocketType:
+    default:
+        return {};
+    }
+}
+
+std::optional<Server> Server::fromKAutoconfigServer(const KAutoconfigServer &autoconfigServer, const KMime::Types::AddrSpec &addrSpec)
+{
     Server server;
-    while (!o.isNull()) {
-        QDomElement f = o.toElement();
-        if (f.isNull()) {
-            o = o.nextSibling();
-            continue;
-        }
-
-        const QString tagName(f.tagName());
-        if (tagName == QLatin1StringView("hostname")) {
-            server.hostname = replacePlaceholders(f.text(), addrSpec);
-        } else if (tagName == QLatin1StringView("port")) {
-            server.port = f.text().toInt();
-        } else if (tagName == QLatin1StringView("socketType")) {
-            const QString type(f.text());
-            if (type == QLatin1StringView("plain")) {
-                server.socketType = MailTransport::TransportBase::None;
-            } else if (type == QLatin1StringView("SSL")) {
-                server.socketType = MailTransport::TransportBase::SSL;
-            } else if (type == QLatin1StringView("STARTTLS")) {
-                server.socketType = MailTransport::TransportBase::TLS;
-            }
-        } else if (tagName == QLatin1StringView("username")) {
-            server.username = replacePlaceholders(f.text(), addrSpec);
-        } else if (tagName == QLatin1StringView("authentication") && server.authType == MailTransport::Transport::PLAIN) {
-            const QString type(f.text());
-            if (type == QLatin1StringView("password-cleartext") || type == QLatin1StringView("plain")) {
-                server.authType = MailTransport::TransportBase::PLAIN;
-            } else if (type == QLatin1StringView("password-encrypted") || type == QLatin1StringView("secure")) {
-                server.authType = MailTransport::TransportBase::CRAM_MD5;
-            } else if (type == QLatin1StringView("NTLM")) {
-                server.authType = MailTransport::TransportBase::NTLM;
-            } else if (type == QLatin1StringView("GSSAPI")) {
-                server.authType = MailTransport::TransportBase::GSSAPI;
-            } else if (type == QLatin1StringView("client-ip-based")) {
-                server.authType = MailTransport::TransportBase::ANONYMOUS;
-            } else if (type == QLatin1StringView("none")) {
-                server.authType = MailTransport::TransportBase::ANONYMOUS;
-            } else if (type == QLatin1StringView("OAuth2")) {
-                server.authType = MailTransport::TransportBase::XOAUTH2;
-            }
-        }
-        o = o.nextSibling();
+    if (const auto type = fromProtocol(autoconfigServer.protocol())) {
+        server.type = type.value();
+    } else {
+        return {};
     }
-    if (server.port == -1) {
-        return std::nullopt;
+    server.hostname = autoconfigServer.url().host();
+    server.port = autoconfigServer.url().port();
+    server.username = addrSpec.asString();
+    if (const auto authType = fromAuthenticationType(autoconfigServer.authenticationType())) {
+        server.authType = authType.value();
     }
-
+    if (const auto socketType = fromSocketType(autoconfigServer.socketType())) {
+        server.socketType = socketType.value();
+    }
     return server;
 }
 
