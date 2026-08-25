@@ -86,9 +86,9 @@ void ConfigurationModel::setEmailProvider(const EmailProvider &emailProvider)
     std::optional<Server> preferredOutgoingServer;
 
     for (const auto &server : emailProvider.smtpServers) {
-        if (!preferredOutgoingServer || preferredOutgoingServer->socketType < server.socketType) {
-            preferredOutgoingServer = server;
-        }
+        preferredOutgoingServer = server;
+        break;
+        // The preferred server is the first one
     }
 
     beginResetModel();

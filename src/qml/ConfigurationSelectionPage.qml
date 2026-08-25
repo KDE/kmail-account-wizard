@@ -27,14 +27,6 @@ WizardPage {
         }
     }
 
-    header: Component.Banner {
-        id: ispdbSearchInfo
-        width: parent.width
-        type: Kirigami.MessageType.Information
-        text: SetupManager.searchIspdbFoundMessage
-        visible: SetupManager.searchIspdbFoundMessage.length > 0
-    }
-
     FormCard.FormHeader {
         title: i18n("Available configurations")
     }

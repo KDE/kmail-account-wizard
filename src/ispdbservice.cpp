@@ -8,140 +8,60 @@
 
 #include "accountwizard_debug.h"
 
-#include <KLocalizedString>
-#include <QDomDocument>
-#include <QNetworkAccessManager>
-#include <QNetworkReply>
-#include <QNetworkRequest>
-#include <qdom.h>
+#include <KAccountAutoconfig/KAccountAutoconfigJob>
 
 IspdbService::IspdbService(QObject *parent)
     : QObject(parent)
-    , mNetworkAccessManager(new QNetworkAccessManager(this))
 {
 }
 
 void IspdbService::start(const KMime::Types::AddrSpec &addrSpec)
 {
-    requestConfig(addrSpec, DataBase);
-}
+    const auto job = new KAccountAutoconfigJob(this);
+    job->setEmail(addrSpec.asString());
+    job->start();
 
-void IspdbService::requestConfig(const KMime::Types::AddrSpec &addrSpec, const SearchServerType searchServerType)
-{
-    const QString domain = addrSpec.domain;
-    QUrl url;
-    const QString path = QStringLiteral("/mail/config-v1.1.xml");
-    switch (searchServerType) {
-    case IspHttpsAutoConfig:
-        url = QUrl(QStringLiteral("https://autoconfig.") + domain.toLower() + path);
-        break;
-    case IspAutoConfig:
-        url = QUrl(QStringLiteral("http://autoconfig.") + domain.toLower() + path);
-        break;
-    case IspWellKnow:
-        url = QUrl(QStringLiteral("https://") + domain.toLower() + QStringLiteral("/.well-known/autoconfig") + path);
-        break;
-    case DataBase:
-        url = QUrl(QStringLiteral("https://autoconfig.thunderbird.net/v1.1/") + domain.toLower());
-    }
-
-    qCDebug(ACCOUNTWIZARD_LOG) << " url " << url;
-    QNetworkRequest request(url);
-    Q_EMIT requestedConfigFromUrl(url);
-    auto reply = mNetworkAccessManager->get(request);
-
-    connect(reply, &QNetworkReply::finished, this, [this, addrSpec, reply, searchServerType]() {
-        if (reply->attribute(QNetworkRequest::HttpStatusCodeAttribute) != 200) {
-            qCDebug(ACCOUNTWIZARD_LOG) << "Fetching failed" << searchServerType << reply->errorString();
-            if (searchServerType != SearchServerType::Last) {
-                int index = static_cast<int>(searchServerType);
-                requestConfig(addrSpec, static_cast<SearchServerType>(++index));
-            }
+    connect(job, &KJob::result, this, [this, addrSpec, job]() {
+        if (job->error()) {
+            qCDebug(ACCOUNTWIZARD_LOG) << "Job failed" << job->errorString();
+            Q_EMIT notConfigFound();
+        } else {
+            handleReply(job->servers(), addrSpec);
         }
-
-        handleReply(reply, addrSpec, searchServerType);
-        reply->deleteLater();
+        job->deleteLater();
     });
 }
 
-void IspdbService::handleReply(QNetworkReply *const reply, const KMime::Types::AddrSpec &addrSpec, const SearchServerType searchServerType)
+void IspdbService::handleReply(const QList<KAutoconfigServer> &servers, const KMime::Types::AddrSpec &addrSpec)
 {
-    const auto data = reply->readAll();
-    QDomDocument document;
-    const QDomDocument::ParseResult result = document.setContent(data);
-    if (!result) {
-        qCDebug(ACCOUNTWIZARD_LOG) << "Could not parse xml" << data;
-        if (searchServerType == IspWellKnow) { // Last one
-            Q_EMIT notConfigFound();
-        }
-        return;
-    }
-
-    const QDomElement docElem = document.documentElement();
-    const QDomNodeList emailProviders = docElem.elementsByTagName(QStringLiteral("emailProvider"));
-
-    if (emailProviders.isEmpty()) {
-        return;
-    }
-
     EmailProvider emailProvider;
-
-    QDomNode emailProviderNode = emailProviders.at(0).firstChild();
-    while (!emailProviderNode.isNull()) {
-        const QDomElement element = emailProviderNode.toElement();
-        if (element.isNull()) {
-            emailProviderNode = emailProviderNode.nextSibling();
-            continue;
+    for (const auto &server : servers) {
+        switch (server.protocol()) {
+        case KAutoconfigServer::IMAP:
+            if (const auto convertedServ = Server::fromKAutoconfigServer(server, addrSpec)) {
+                emailProvider.imapServers.append(convertedServ.value());
+            }
+            break;
+        case KAutoconfigServer::POP3:
+            if (const auto convertedServ = Server::fromKAutoconfigServer(server, addrSpec)) {
+                emailProvider.popServers.append(convertedServ.value());
+            }
+            break;
+        case KAutoconfigServer::SMTP:
+            if (const auto convertedServ = Server::fromKAutoconfigServer(server, addrSpec)) {
+                emailProvider.smtpServers.append(convertedServ.value());
+            }
+            break;
+        default:
+            break;
         }
-
-        const QString tagName(element.tagName());
-        if (tagName == QLatin1StringView("domain")) {
-            emailProvider.domains << element.text();
-        } else if (tagName == QLatin1StringView("displayName")) {
-            emailProvider.displayName = element.text();
-        } else if (tagName == QLatin1StringView("displayShortName")) {
-            emailProvider.shortDisplayName = element.text();
-        } else if (tagName == QLatin1StringView("incomingServer") && element.attribute(QStringLiteral("type")) == QLatin1StringView("imap")) {
-            auto server = Server::fromDomElement(element, addrSpec);
-            if (server) {
-                server->type = Server::Type::IMAP;
-                emailProvider.imapServers.append(*server);
-            }
-        } else if (tagName == QLatin1StringView("incomingServer") && element.attribute(QStringLiteral("type")) == QLatin1StringView("pop3")) {
-            auto server = Server::fromDomElement(element, addrSpec);
-            if (server) {
-                server->type = Server::Type::POP3;
-                emailProvider.popServers.append(*server);
-            }
-        } else if (tagName == QLatin1StringView("outgoingServer") && element.attribute(QStringLiteral("type")) == QLatin1StringView("smtp")) {
-            auto server = Server::fromDomElement(element, addrSpec);
-            if (server) {
-                server->type = Server::Type::SMTP;
-                emailProvider.smtpServers.append(*server);
-            }
-        }
-
-        emailProviderNode = emailProviderNode.nextSibling();
-    }
-    QString foundInServerTypeMessage;
-    switch (searchServerType) {
-    case IspAutoConfig:
-    case IspHttpsAutoConfig:
-        foundInServerTypeMessage = i18n("Configuration found auto config file.");
-        break;
-    case IspWellKnow:
-        foundInServerTypeMessage = i18n("Configuration found in well-known file.");
-        break;
-    case DataBase:
-        foundInServerTypeMessage = i18n("Configuration found in Mozilla FAI Database.");
-        break;
     }
 
     if (addrSpec.domain.endsWith(QStringLiteral("gmail.com"))) {
         emailProvider.groupware = GMailGroupware{};
     }
 
-    Q_EMIT finished(emailProvider, foundInServerTypeMessage);
+    Q_EMIT finished(emailProvider);
 }
 
 #include "moc_ispdbservice.cpp"

@@ -17,7 +17,6 @@ class SetupManager : public QObject
     Q_PROPERTY(QString password READ password WRITE setPassword NOTIFY passwordChanged)
     Q_PROPERTY(QString fullName READ fullName WRITE setFullName NOTIFY fullNameChanged)
     Q_PROPERTY(ConfigurationModel *configurationModel READ configurationModel CONSTANT)
-    Q_PROPERTY(QString searchIspdbFoundMessage MEMBER mSearchIspdbFoundMessage NOTIFY searchIspdbFoundMessageChanged)
     Q_PROPERTY(bool noConfigFound MEMBER mNoConfigFound NOTIFY noConfigFoundChanged)
     Q_PROPERTY(QString details READ details NOTIFY detailsChanged)
 
@@ -44,12 +43,11 @@ Q_SIGNALS:
     void fullNameChanged();
     void emailChanged();
     void passwordChanged();
-    void searchIspdbFoundMessageChanged();
     void noConfigFoundChanged();
     void detailsChanged();
 
 private:
-    void setEmailProvider(const EmailProvider &emailProvider, const QString &messageInfo);
+    void setEmailProvider(const EmailProvider &emailProvider);
     void clearConfiguration();
     void noConfigFound();
     void slotError(const QString &str);
@@ -58,7 +56,6 @@ private:
     QString mPassword;
     QString mEmail;
     QString mFullName;
-    QString mSearchIspdbFoundMessage;
     QString mDetails;
     IspdbService *const mIspdbService;
     ConfigurationModel *const mConfigurationModel;

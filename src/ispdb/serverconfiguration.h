@@ -5,9 +5,9 @@
 
 #pragma once
 
+#include <KAccountAutoconfig/KAutoconfigServer>
 #include <KMime/Types>
 #include <MailTransport/Transport>
-#include <QDomElement>
 #include <QList>
 #include <QString>
 #include <optional>
@@ -27,7 +27,7 @@ struct Server {
 
     [[nodiscard]] QStringList tags() const;
 
-    [[nodiscard]] static std::optional<Server> fromDomElement(const QDomElement &element, const KMime::Types::AddrSpec &addrSpec);
+    [[nodiscard]] static std::optional<Server> fromKAutoconfigServer(const KAutoconfigServer &element, const KMime::Types::AddrSpec &addrSpec);
 };
 QDebug operator<<(QDebug d, const Server &t);
 Q_DECLARE_TYPEINFO(Server, Q_RELOCATABLE_TYPE);
