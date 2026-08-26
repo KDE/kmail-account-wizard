@@ -16,6 +16,7 @@ import org.kde.kirigamiaddons.formcard as FormCard
 T.RadioDelegate {
     id: root
 
+    required property int index
     required property string name
     required property string description
     required property string incomingHost
