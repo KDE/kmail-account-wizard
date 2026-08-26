@@ -82,6 +82,7 @@ WizardPage {
                 FormCard.FormDelegateSeparator { visible: configurationDelegate.index !== 0}
 
                 ConfigurationDelegate {
+                    index: configurationDelegate.index
                     name: configurationDelegate.name
                     description: configurationDelegate.description
                     incomingHost: configurationDelegate.incomingHost
