@@ -13,6 +13,25 @@ import org.kde.kirigamiaddons.formcard as FormCard
 WizardPage {
     id: root
 
+    property int index: -1;
+
+    Component.onCompleted: {
+        if (root.index !== -1) {
+            SetupManager.configurationModel.initManualConfigFromAuto(manualConfiguration, root.index);
+        }
+
+        manualIncomingProtocol.currentIndex =
+            manualIncomingProtocol.indexOfValue(manualConfiguration.incomingProtocol);
+        manualIncomingSecurity.currentIndex =
+            manualIncomingSecurity.indexOfValue(manualConfiguration.incomingSecurityProtocol);
+        manualIncomingAuthenticationMethod.currentIndex =
+            manualIncomingAuthenticationMethod.indexOfValue(manualConfiguration.incomingAuthenticationProtocol);
+        manualOutgoingSecurity.currentIndex =
+            manualOutgoingSecurity.indexOfValue(manualConfiguration.mailTransport.encryption)
+        manualOutgoingAuthenticationMethod.currentIndex =
+            manualOutgoingAuthenticationMethod.indexOfValue(manualConfiguration.mailTransport.authenticationType);
+    }
+
     title: KI18n.i18n("Manual Configuration")
 
     actions: Kirigami.Action {

@@ -5,8 +5,11 @@
 #include "accountconfiguration.h"
 #include "accountwizard_debug.h"
 #include "consolelog.h"
+#include "logintestjob.h"
+#include <KIdentityManagementCore/Identity>
 #include <KIdentityManagementCore/IdentityManager>
 #include <KLocalizedString>
+#include <MailTransport/Transport>
 
 using namespace Qt::Literals::StringLiterals;
 
@@ -127,13 +130,57 @@ void ConfigurationModel::setFullName(const QString &fullName)
 
 const Configuration &ConfigurationModel::configuration(int index) const
 {
+    Q_ASSERT(index >= 0 && index < m_configurations.size());
     return m_configurations[index];
+}
+
+void ConfigurationModel::initManualConfigFromAuto(AccountConfiguration *manualConfig, int index) const
+{
+    const auto autoConfig = this->configuration(index);
+    if (manualConfig == nullptr) {
+        return;
+    }
+
+    manualConfig->setIncomingHostName(autoConfig.incoming.hostname);
+    manualConfig->setIncomingProtocol(autoConfig.incoming.type == Server::Type::POP3 ? AccountConfiguration::POP3 : AccountConfiguration::IMAP);
+    manualConfig->setIncomingPort(autoConfig.incoming.port);
+    manualConfig->setIncomingSecurityProtocol(autoConfig.incoming.socketType);
+    manualConfig->setIncomingAuthenticationProtocol(autoConfig.incoming.authType);
+    manualConfig->setIncomingUserName(autoConfig.incoming.username);
+
+    if (manualConfig->mailTransport() != nullptr && autoConfig.outgoing) {
+        manualConfig->mailTransport()->setHost(autoConfig.outgoing->hostname);
+        manualConfig->mailTransport()->setPort(autoConfig.outgoing->port);
+        manualConfig->mailTransport()->setEncryption(autoConfig.outgoing->socketType);
+        manualConfig->mailTransport()->setAuthenticationType(autoConfig.outgoing->authType);
+        manualConfig->mailTransport()->setUserName(autoConfig.outgoing->username);
+    }
+}
+
+void ConfigurationModel::testLogin(const int index)
+{
+    auto *login = new LoginTestJob();
+    login->setConfiguration(&this->configuration(index));
+    login->setPassword(m_password);
+
+    connect(login, &KJob::result, this, [this](KJob *job) {
+        if (job->error()) {
+            qCWarning(ACCOUNTWIZARD_LOG) << "Login failed:" << job->errorString();
+            Q_EMIT loginTestFinished(false);
+        } else {
+            qCDebug(ACCOUNTWIZARD_LOG) << "Login succeeded";
+            Q_EMIT loginTestFinished(true);
+        }
+        job->deleteLater();
+    });
+
+    login->start();
 }
 
 void ConfigurationModel::createAutomaticAccount(int index, ConsoleLog *consoleLog, bool groupware)
 {
     qCDebug(ACCOUNTWIZARD_LOG) << " Create Automatic Account" << index;
-    const auto &configuration = m_configurations[index];
+    const auto &configuration = this->configuration(index);
     qCDebug(ACCOUNTWIZARD_LOG) << configuration.incoming;
 
     auto accountConfiguration = new AccountConfiguration(KIdentityManagementCore::IdentityManager::self(), this);
