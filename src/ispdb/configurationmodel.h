@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include "accountconfiguration.h"
 #include "serverconfiguration.h"
 #include <QAbstractListModel>
 #include <QtQmlIntegration/qqmlintegration.h>
@@ -51,11 +52,14 @@ public:
     void clear();
 
     const Configuration &configuration(int index) const;
+    Q_INVOKABLE void initManualConfigFromAuto(AccountConfiguration *manualConfig, int index) const;
 
+    Q_INVOKABLE void testLogin(int index);
     Q_INVOKABLE void createAutomaticAccount(int index, ConsoleLog *consoleLog, bool groupware);
 
 Q_SIGNALS:
     void hasGroupwareSupportChanged();
+    void loginTestFinished(bool success);
 
 private:
     QString m_password;
