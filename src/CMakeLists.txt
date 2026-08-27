@@ -11,6 +11,8 @@ qt_add_qml_module(accountwizard_static
         qml/ConfigurationDelegate.qml
         qml/ConfigurationSelectionPage.qml
         qml/DetailsPage.qml
+        qml/FixPasswordPage.qml
+        qml/LoadingOverlay.qml
         qml/Main.qml
         qml/ManualConfigurationPage.qml
         qml/PersonalDataPage.qml
@@ -24,6 +26,8 @@ qt_add_qml_module(accountwizard_static
 
         ispdb/configurationmodel.h
         ispdb/configurationmodel.cpp
+        ispdb/logintestjob.h
+        ispdb/logintestjob.cpp
         ispdb/serverconfiguration.h
         ispdb/serverconfiguration.cpp
         ispdbservice.h
@@ -56,6 +60,8 @@ target_link_libraries(
         KPim6::AkonadiWidgets
         KPim6::MailTransport
         KPim6::AccountAutoconfig
+        KPim6::IMAP
+        KPim6::SMTP
         KF6::Mime
         KPim6::IdentityManagementCore
         KF6::KIOCore
