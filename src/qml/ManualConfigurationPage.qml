@@ -12,6 +12,25 @@ import org.kde.kirigamiaddons.formcard as FormCard
 WizardPage {
     id: root
 
+    property int index: -1;
+
+    Component.onCompleted: {
+        if (root.index !== -1) {
+            SetupManager.configurationModel.initManualConfigFromAuto(manualConfiguration, root.index);
+        }
+
+        manualIncomingProtocol.currentIndex =
+            manualIncomingProtocol.indexOfValue(manualConfiguration.incomingProtocol);
+        manualIncomingSecurity.currentIndex =
+            manualIncomingSecurity.indexOfValue(manualConfiguration.incomingSecurityProtocol);
+        manualIncomingAuthenticationMethod.currentIndex =
+            manualIncomingAuthenticationMethod.indexOfValue(manualConfiguration.incomingAuthenticationProtocol);
+        manualOutgoingSecurity.currentIndex =
+            manualOutgoingSecurity.indexOfValue(manualConfiguration.mailTransport.encryption)
+        manualOutgoingAuthenticationMethod.currentIndex =
+            manualOutgoingAuthenticationMethod.indexOfValue(manualConfiguration.mailTransport.authenticationType);
+    }
+
     title: i18n("Manual Configuration")
 
     actions: Kirigami.Action {
@@ -89,9 +108,6 @@ WizardPage {
                 { value: AccountConfiguration.IMAP, text: i18n("IMAP") },
                 { value: AccountConfiguration.POP3, text: i18n("POP3") },
             ]
-            Component.onCompleted: {
-                currentIndex = indexOfValue(manualConfiguration.incomingProtocol);
-            }
             onCurrentIndexChanged: {
                 manualConfiguration.incomingProtocol = model[currentIndex].value;
             }
@@ -120,9 +136,6 @@ WizardPage {
                 { value: Transport.TLS, text: i18n("StartTLS") },
                 { value: Transport.None, text: i18n("None") }
             ]
-            Component.onCompleted: {
-                currentIndex = indexOfValue(manualConfiguration.incomingSecurityProtocol);
-            }
             onCurrentIndexChanged: {
                 manualConfiguration.incomingSecurityProtocol = model[currentIndex].value;
             }
@@ -151,9 +164,6 @@ WizardPage {
                     model.push({ value: Transport.APOP, text: i18n("APOP") });
                 }
                 return model;
-            }
-            Component.onCompleted: {
-                currentIndex = indexOfValue(manualConfiguration.incomingAuthenticationProtocol);
             }
             onCurrentIndexChanged: {
                 manualConfiguration.incomingAuthenticationProtocol = model[currentIndex].value;
@@ -233,7 +243,6 @@ WizardPage {
             onCurrentIndexChanged: {
                 manualConfiguration.mailTransport.encryption = currentIndex
             }
-            Component.onCompleted: currentIndex = indexOfValue(manualConfiguration.mailTransport.encryption)
         }
 
         FormCard.FormDelegateSeparator {}
@@ -253,8 +262,6 @@ WizardPage {
                 { value: Transport.GSSAPI, text: i18n("GSSAPI") },
                 { value: Transport.XOAuth2, text: i18n("XOAuth (Gmail)") },
             ]
-            Component.onCompleted: currentIndex = indexOfValue(manualConfiguration.mailTransport.authenticationType);
-
             onCurrentIndexChanged: {
                 manualConfiguration.mailTransport.authenticationType = model[currentIndex].value;
             }
