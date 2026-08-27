@@ -49,6 +49,7 @@ Q_SIGNALS:
     void passwordChanged();
     void noConfigFoundChanged();
     void detailsChanged();
+    void autoConfigFinished();
 
 private:
     void setEmailProvider(const EmailProvider &emailProvider);

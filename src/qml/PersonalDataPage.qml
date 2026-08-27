@@ -13,7 +13,14 @@ import org.kde.kirigamiaddons.formcard as FormCard
 WizardPage {
     id: root
 
+    property bool loading: false;
+
     title: KI18n.i18n("Personal Information")
+
+    LoadingOverlay {
+        parent: applicationWindow().contentItem
+        loading: root.loading
+    }
 
     nextAction {
         onTriggered: {
@@ -22,10 +29,23 @@ WizardPage {
             SetupManager.fullName = nameField.text;
             SetupManager.email = addressEmailField.text;
             SetupManager.password = passwordField.text;
+            root.loading = true;
             SetupManager.searchConfiguration();
-            applicationWindow().pageStack.push(Qt.createComponent('org.kde.pim.accountwizard', 'ConfigurationSelectionPage'))
         }
         enabled: SetupManager.isValidAddress(addressEmailField.text.trim())
+    }
+
+    Connections {
+        target: SetupManager
+
+        function onAutoConfigFinished(): void {
+            if (!root.loading) {
+                return;
+                // Then the signal wasn't meant to be handled by this page
+            }
+            applicationWindow().pageStack.push(Qt.createComponent('org.kde.pim.accountwizard', 'ConfigurationSelectionPage'))
+            root.loading = false;
+        }
     }
 
     Kirigami.Icon {

@@ -116,6 +116,7 @@ bool SetupManager::isValidAddress(const QString &address)
 
 void SetupManager::setEmailProvider(const EmailProvider &emailProvider)
 {
+    Q_EMIT autoConfigFinished();
     qCDebug(ACCOUNTWIZARD_LOG) << " emailProvider " << emailProvider;
     mConfigurationModel->setEmailProvider(emailProvider);
 }
@@ -130,6 +131,7 @@ void SetupManager::clearConfiguration()
 
 void SetupManager::noConfigFound()
 {
+    Q_EMIT autoConfigFinished();
     mNoConfigFound = true;
     Q_EMIT noConfigFoundChanged();
 }
