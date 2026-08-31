@@ -144,7 +144,7 @@ private:
     // Incoming
     QString mIncomingUserName;
     QString mIncomingHostName;
-    uint mIncomingPort = 995;
+    uint mIncomingPort = 993;
 
     QString mPassword;
 
