@@ -39,6 +39,8 @@ public:
 
     Q_INVOKABLE QString toAce(const QString &idnString);
 
+    Q_INVOKABLE bool isValidAddress(const QString &address);
+
     [[nodiscard]] QString details() const;
 
 Q_SIGNALS:
