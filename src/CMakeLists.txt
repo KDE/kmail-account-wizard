@@ -69,6 +69,7 @@ target_link_libraries(
         KF6::I18n
         KF6::Crash
         KF6::DBusAddons
+        KF6::Codecs
         Qt::Xml
         Qt::Quick
         Qt::QuickControls2
