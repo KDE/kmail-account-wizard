@@ -37,8 +37,8 @@ QVariant ConfigurationModel::data(const QModelIndex &index, int role) const
     Q_ASSERT(checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid));
 
     const auto &configuration = m_configurations[index.row()];
-    const auto incomingServer = configuration.incoming;
-    const auto outgoingServer = configuration.outgoing;
+    const auto &incomingServer = configuration.incoming;
+    const auto &outgoingServer = configuration.outgoing;
 
     switch (role) {
     case Qt::DisplayRole:
