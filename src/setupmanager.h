@@ -38,6 +38,8 @@ public:
 
     Q_INVOKABLE void searchConfiguration();
 
+    Q_INVOKABLE QString toAce(const QString &idnString);
+
     [[nodiscard]] QString details() const;
 
 Q_SIGNALS:
