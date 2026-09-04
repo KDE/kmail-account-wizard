@@ -67,7 +67,7 @@ void AccountConfiguration::setEmail(const QString &email)
 {
     mIdentity.setPrimaryEmailAddress(email);
 
-    static QRegularExpression reg(u".*@"_s);
+    static const QRegularExpression reg(u".*@"_s);
     QString hostname = email;
     hostname.remove(reg);
     setIncomingHostName(hostname);
