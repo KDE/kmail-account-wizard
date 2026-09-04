@@ -10,6 +10,8 @@ import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 
+import org.kde.pim.accountwizard
+
 /**
  * Form delegate that corresponds to a checkbox.
  */
@@ -23,6 +25,7 @@ T.RadioDelegate {
     required property var incomingTags
     required property string outgoingHost
     required property var outgoingTags
+    readonly property var nonAsciiRegex: /([^\x00-\x7F])/
 
     leftPadding: Kirigami.Units.gridUnit
     topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
@@ -105,9 +108,29 @@ T.RadioDelegate {
                     }
                 }
 
-                QQC2.Label {
-                    text: root.incomingHost
+                RowLayout {
                     Layout.columnSpan: 2
+
+                    HoverHandler {
+                        id: incomingHostHoverHandler
+                    }
+
+                    QQC2.ToolTip.text: i18n("This hostname contains non-ASCII characters.")
+                    QQC2.ToolTip.visible: incomingHostHoverHandler.hovered && root.nonAsciiRegex.test(root.incomingHost)
+                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+
+                    QQC2.Label {
+                        text: root.nonAsciiRegex.test(root.incomingHost)
+                            ? root.incomingHost +  " (" + SetupManager.toAce(root.incomingHost) + ")"
+                            : root.incomingHost
+                    }
+
+                    Kirigami.Icon {
+                        source: "data-warning-symbolic"
+                        visible: root.nonAsciiRegex.test(root.incomingHost)
+                        implicitWidth: Kirigami.Units.iconSizes.small
+                        implicitHeight: Kirigami.Units.iconSizes.small
+                    }
                 }
 
                 QQC2.Label {
@@ -127,9 +150,29 @@ T.RadioDelegate {
                     }
                 }
 
-                QQC2.Label {
-                    text: root.outgoingHost
+                RowLayout {
                     Layout.columnSpan: 2
+
+                    HoverHandler {
+                        id: outgoingHostHoverHandler
+                    }
+
+                    QQC2.ToolTip.text: i18n("This hostname contains non-ASCII characters.")
+                    QQC2.ToolTip.visible: outgoingHostHoverHandler.hovered && root.nonAsciiRegex.test(root.outgoingHost)
+                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+
+                    QQC2.Label {
+                        text: root.nonAsciiRegex.test(root.outgoingHost)
+                            ? root.outgoingHost +  " (" + SetupManager.toAce(root.outgoingHost) + ")"
+                            : root.outgoingHost
+                    }
+
+                    Kirigami.Icon {
+                        source: "data-warning-symbolic"
+                        visible: root.nonAsciiRegex.test(root.outgoingHost)
+                        implicitWidth: Kirigami.Units.iconSizes.small
+                        implicitHeight: Kirigami.Units.iconSizes.small
+                    }
                 }
             }
         }
