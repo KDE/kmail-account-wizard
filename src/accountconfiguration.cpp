@@ -10,7 +10,6 @@
 #include "servertest.h"
 #include <KLocalizedString>
 #include <MailTransport/TransportManager>
-#include <QQmlEngine>
 #include <QRegularExpression>
 
 using namespace Qt::Literals::StringLiterals;

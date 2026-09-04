@@ -13,7 +13,6 @@
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QNetworkRequest>
-#include <qdom.h>
 
 IspdbService::IspdbService(QObject *parent)
     : QObject(parent)

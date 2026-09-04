@@ -5,11 +5,8 @@
 #include "accountconfiguration.h"
 #include "accountwizard_debug.h"
 #include "consolelog.h"
-#include "resource.h"
-#include <KIdentityManagementCore/Identity>
 #include <KIdentityManagementCore/IdentityManager>
 #include <KLocalizedString>
-#include <MailTransport/TransportManager>
 
 using namespace Qt::Literals::StringLiterals;
 
