@@ -136,18 +136,21 @@ void Resource::instanceCreateResult(KJob *job)
                     qCWarning(ACCOUNTWIZARD_LOG)
                         << "Impossible to convert argument : " << arg
                         << QStringLiteral("Could not convert value of setting '%1' to required type %2.").arg(it.key(), QLatin1StringView(targetType.name()));
+                    deleteLater();
                     return;
                 }
             }
             QDBusReply<void> reply = iface.call(methodName, arg);
             if (!reply.isValid()) {
                 mConsoleLog->error(i18n("Could not set setting '%1': %2", it.key(), reply.error().message()));
+                deleteLater();
                 return;
             }
         }
         QDBusReply<void> reply = iface.call(QStringLiteral("save"));
         if (!reply.isValid()) {
             mConsoleLog->error(i18n("Could not save settings: %1", reply.error().message()));
+            deleteLater();
             return;
         }
         mInstance.reconfigure();

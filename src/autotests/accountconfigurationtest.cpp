@@ -149,10 +149,10 @@ void AccountConfigurationTest::createResource()
     QCOMPARE(w.mailTransport()->encryption(), MailTransport::Transport::EnumEncryption::TLS);
     QCOMPARE(w.mailTransport()->authenticationType(), MailTransport::Transport::EnumAuthenticationType::CRAM_MD5);
 
-    auto consoleLog = new ConsoleLog();
+    std::unique_ptr<ConsoleLog> consoleLog(new ConsoleLog());
 
     QSignalSpy agentAdded(AgentManager::self(), &AgentManager::instanceAdded);
-    w.save(consoleLog);
+    w.save(consoleLog.get());
 
     QCOMPARE(mManager->identities().count(), 2);
     QCOMPARE(mManager->identityForUoid(w.identity().uoid()).fullName(), fullName);
