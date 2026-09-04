@@ -7,6 +7,7 @@
 #include "accountwizard_debug.h"
 #include "ispdbservice.h"
 #include <KEMailSettings>
+#include <QUrl>
 
 SetupManager::SetupManager(QObject *parent)
     : QObject(parent)
@@ -100,6 +101,10 @@ void SetupManager::searchConfiguration()
     KMime::Types::Mailbox box;
     box.fromUnicodeString(email());
     mIspdbService->start(box.addrSpec());
+}
+QString SetupManager::toAce(const QString &idnString)
+{
+    return QString::fromLatin1(QUrl::toAce(idnString));
 }
 
 void SetupManager::setEmailProvider(const EmailProvider &emailProvider)
