@@ -217,7 +217,7 @@ void AccountConfiguration::save(ConsoleLog *consoleLog)
         qCWarning(ACCOUNTWIZARD_LOG) << " invalid protocol: " << mIncomingProtocol;
         return;
     }
-    qCDebug(ACCOUNTWIZARD_LOG) << " info " << info;
+    // qCDebug(ACCOUNTWIZARD_LOG) << " info " << info;
     generateResource(std::move(info), consoleLog);
 
     if (mHasTransport) {
