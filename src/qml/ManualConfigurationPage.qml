@@ -104,7 +104,7 @@ WizardPage {
             label: i18n("Port:")
             value: manualConfiguration.incomingPort
             from: 1
-            to: 9999
+            to: 65535
             onValueChanged: manualConfiguration.incomingPort = value
         }
 
@@ -211,7 +211,7 @@ WizardPage {
             label: i18n("Port:")
             value: manualConfiguration.mailTransport.port
             from: 1
-            to: 9999
+            to: 65535
             onValueChanged: {
                 manualConfiguration.mailTransport.port = value;
                 manualConfiguration.checkConfiguration();
