@@ -187,6 +187,7 @@ void ConfigurationModel::createAutomaticAccount(int index, ConsoleLog *consoleLo
     }
 
     accountConfiguration->save(consoleLog);
+    accountConfiguration->deleteLater();
 }
 
 #include "moc_configurationmodel.cpp"
