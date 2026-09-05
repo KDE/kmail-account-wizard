@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-19 00:45+0000\n"
+"POT-Creation-Date: 2026-09-05 00:47+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -27,84 +27,84 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-china@kde.org"
 
-#: accountconfiguration.cpp:189 ispdb/configurationmodel.cpp:147
+#: accountconfiguration.cpp:188 ispdb/configurationmodel.cpp:144
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "未命名"
 
-#: accountconfiguration.cpp:200
+#: accountconfiguration.cpp:199
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "创建电子邮件身份： %1"
 
-#: accountconfiguration.cpp:203
+#: accountconfiguration.cpp:202
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "全名："
 
-#: accountconfiguration.cpp:204
+#: accountconfiguration.cpp:203
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "主要电子邮件地址："
 
-#: accountconfiguration.cpp:230
+#: accountconfiguration.cpp:229
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "邮件传输设置完成: %1"
 
-#: accountconfiguration.cpp:233
+#: accountconfiguration.cpp:232
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "主机名："
 
-#: accountconfiguration.cpp:234
+#: accountconfiguration.cpp:233
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "端口："
 
-#: accountconfiguration.cpp:235
+#: accountconfiguration.cpp:234
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "用户名："
 
-#: accountconfiguration.cpp:237
+#: accountconfiguration.cpp:236
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "加密："
 
-#: accountconfiguration.cpp:239
+#: accountconfiguration.cpp:238
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
 msgstr "身份验证："
 
-#: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:23
+#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
 #, kde-format
 msgid "IMAP"
 msgstr "IMAP"
 
-#: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:26
+#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:26
 #: qml/ManualConfigurationPage.qml:90
 #, kde-format
 msgid "POP3"
 msgstr "POP3"
 
-#: ispdb/configurationmodel.cpp:51
+#: ispdb/configurationmodel.cpp:48
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
 msgstr "保持您的文件和电子邮件与您的服务器同步"
 
-#: ispdb/configurationmodel.cpp:52
+#: ispdb/configurationmodel.cpp:49
 #, kde-format
 msgid "Remove your emails from your server and keep them only on your computer"
 msgstr "从您的服务器上删除您的电子邮件并将其保留在您的计算机上"
@@ -131,17 +131,17 @@ msgctxt "No security mechanism"
 msgid "None"
 msgstr "无"
 
-#: ispdbservice.cpp:130
+#: ispdbservice.cpp:129
 #, kde-format
 msgid "Configuration found auto config file."
 msgstr "配置找到了自动配置文件。"
 
-#: ispdbservice.cpp:133
+#: ispdbservice.cpp:132
 #, kde-format
 msgid "Configuration found in well-known file."
 msgstr "在已知文件中找到了配置。"
 
-#: ispdbservice.cpp:136
+#: ispdbservice.cpp:135
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "在 Mozilla FAI 数据库中找到了配置。"
@@ -476,35 +476,35 @@ msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
 msgstr "无法将类型为 %2 的设置 '%1' 的值转换为所需的类型 %3。"
 
-#: resource.cpp:144
+#: resource.cpp:145
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "无法设置“%1”: %2"
 
-#: resource.cpp:150
+#: resource.cpp:152
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "无法保存设置：%1"
 
-#: resource.cpp:156
+#: resource.cpp:159
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
 msgstr "资源设置完成: %1"
 
-#: resource.cpp:159
+#: resource.cpp:162
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
 msgstr "资源类型："
 
-#: resource.cpp:169
+#: resource.cpp:172
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
 msgstr "空"
 
-#: resource.cpp:174
+#: resource.cpp:177
 #, kde-format
 msgctxt "label"
 msgid "%1:"

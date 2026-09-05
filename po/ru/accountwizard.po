@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-19 00:45+0000\n"
+"POT-Creation-Date: 2026-09-05 00:47+0000\n"
 "PO-Revision-Date: 2025-12-11 19:11+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -39,84 +39,84 @@ msgstr ""
 "team@basealt.ru"
 
 # Не "Безымянный", потому что "учётная запись" женского рода, а "профиль" -- мужского. --aspotashev
-#: accountconfiguration.cpp:189 ispdb/configurationmodel.cpp:147
+#: accountconfiguration.cpp:188 ispdb/configurationmodel.cpp:144
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Без имени"
 
-#: accountconfiguration.cpp:200
+#: accountconfiguration.cpp:199
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "Профиль электронной почты: %1"
 
-#: accountconfiguration.cpp:203
+#: accountconfiguration.cpp:202
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Полное имя:"
 
-#: accountconfiguration.cpp:204
+#: accountconfiguration.cpp:203
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Основной адрес электронной почты:"
 
-#: accountconfiguration.cpp:230
+#: accountconfiguration.cpp:229
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Настройка отправки почты завершена: %1"
 
-#: accountconfiguration.cpp:233
+#: accountconfiguration.cpp:232
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Хост:"
 
-#: accountconfiguration.cpp:234
+#: accountconfiguration.cpp:233
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Порт:"
 
-#: accountconfiguration.cpp:235
+#: accountconfiguration.cpp:234
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Имя пользователя:"
 
-#: accountconfiguration.cpp:237
+#: accountconfiguration.cpp:236
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "Шифрование:"
 
-#: accountconfiguration.cpp:239
+#: accountconfiguration.cpp:238
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
 msgstr "Аутентификация:"
 
-#: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:23
+#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
 #, kde-format
 msgid "IMAP"
 msgstr "IMAP"
 
-#: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:26
+#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:26
 #: qml/ManualConfigurationPage.qml:90
 #, kde-format
 msgid "POP3"
 msgstr "POP3"
 
-#: ispdb/configurationmodel.cpp:51
+#: ispdb/configurationmodel.cpp:48
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
 msgstr "Синхронизировать папки и письма с севером"
 
-#: ispdb/configurationmodel.cpp:52
+#: ispdb/configurationmodel.cpp:49
 #, kde-format
 msgid "Remove your emails from your server and keep them only on your computer"
 msgstr "Удалить письма с сервера и хранить их только на компьютере"
@@ -143,17 +143,17 @@ msgctxt "No security mechanism"
 msgid "None"
 msgstr "Отсутствует"
 
-#: ispdbservice.cpp:130
+#: ispdbservice.cpp:129
 #, kde-format
 msgid "Configuration found auto config file."
 msgstr "Конфигурация найдена в файле auto config."
 
-#: ispdbservice.cpp:133
+#: ispdbservice.cpp:132
 #, kde-format
 msgid "Configuration found in well-known file."
 msgstr "Конфигурация найдена в файле well-known."
 
-#: ispdbservice.cpp:136
+#: ispdbservice.cpp:135
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Конфигурация найдена в базе данных Mozilla."
@@ -492,35 +492,35 @@ msgstr ""
 "Не удалось преобразовать значение параметра «%1» с типом %2 в необходимый "
 "тип %3."
 
-#: resource.cpp:144
+#: resource.cpp:145
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Не удалось установить параметр «%1»: %2"
 
-#: resource.cpp:150
+#: resource.cpp:152
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Не удалось сохранить параметры: %1"
 
-#: resource.cpp:156
+#: resource.cpp:159
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
 msgstr "Настройка источника данных завершена: %1"
 
-#: resource.cpp:159
+#: resource.cpp:162
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
 msgstr "Тип источника данных:"
 
-#: resource.cpp:169
+#: resource.cpp:172
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
 msgstr "Пусто"
 
-#: resource.cpp:174
+#: resource.cpp:177
 #, kde-format
 msgctxt "label"
 msgid "%1:"

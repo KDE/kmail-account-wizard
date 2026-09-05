@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-19 00:45+0000\n"
+"POT-Creation-Date: 2026-09-05 00:47+0000\n"
 "PO-Revision-Date: 2024-12-15 17:36+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -27,84 +27,84 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "आपके ईमेल"
 
-#: accountconfiguration.cpp:189 ispdb/configurationmodel.cpp:147
+#: accountconfiguration.cpp:188 ispdb/configurationmodel.cpp:144
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "अज्ञात"
 
-#: accountconfiguration.cpp:200
+#: accountconfiguration.cpp:199
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "ईमेल पहचान बनाएं: %1"
 
-#: accountconfiguration.cpp:203
+#: accountconfiguration.cpp:202
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "पूरा नाम:"
 
-#: accountconfiguration.cpp:204
+#: accountconfiguration.cpp:203
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "प्राथमिक विद्युतडाक पता:"
 
-#: accountconfiguration.cpp:230
+#: accountconfiguration.cpp:229
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "मेल ट्रांसपोर्ट सेटअप पूर्ण: %1"
 
-#: accountconfiguration.cpp:233
+#: accountconfiguration.cpp:232
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "मेज़बान:"
 
-#: accountconfiguration.cpp:234
+#: accountconfiguration.cpp:233
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "पत्तन:"
 
-#: accountconfiguration.cpp:235
+#: accountconfiguration.cpp:234
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "उपयोगकर्ता नाम:"
 
-#: accountconfiguration.cpp:237
+#: accountconfiguration.cpp:236
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "कूटलेखन:"
 
-#: accountconfiguration.cpp:239
+#: accountconfiguration.cpp:238
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
 msgstr "प्रमाणीकरण:"
 
-#: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:23
+#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
 #, kde-format
 msgid "IMAP"
 msgstr "आईएमएपी"
 
-#: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:26
+#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:26
 #: qml/ManualConfigurationPage.qml:90
 #, kde-format
 msgid "POP3"
 msgstr "पॉप 3"
 
-#: ispdb/configurationmodel.cpp:51
+#: ispdb/configurationmodel.cpp:48
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
 msgstr "अपने फ़ोल्डर्स और ईमेल को अपने सर्वर पर सिंक रखें"
 
-#: ispdb/configurationmodel.cpp:52
+#: ispdb/configurationmodel.cpp:49
 #, kde-format
 msgid "Remove your emails from your server and keep them only on your computer"
 msgstr "अपने ईमेल को अपने सर्वर से हटा दें और उन्हें केवल अपने कंप्यूटर पर ही रखें"
@@ -131,17 +131,17 @@ msgctxt "No security mechanism"
 msgid "None"
 msgstr "कोई नहीं"
 
-#: ispdbservice.cpp:130
+#: ispdbservice.cpp:129
 #, kde-format
 msgid "Configuration found auto config file."
 msgstr "कॉन्फ़िगरेशन में स्वचालित कॉन्फ़िगरेशन फ़ाइल मिली."
 
-#: ispdbservice.cpp:133
+#: ispdbservice.cpp:132
 #, kde-format
 msgid "Configuration found in well-known file."
 msgstr "कॉन्फ़िगरेशन सुप्रसिद्ध फ़ाइल में पाया गया."
 
-#: ispdbservice.cpp:136
+#: ispdbservice.cpp:135
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "कॉन्फ़िगरेशन मोज़िला FAI डेटाबेस में पाया गया."
@@ -479,35 +479,35 @@ msgid ""
 msgstr ""
 "प्रकार %2 के साथ सेटिंग '%1' का मान आवश्यक प्रकार %3 में परिवर्तित नहीं किया जा सका।"
 
-#: resource.cpp:144
+#: resource.cpp:145
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "सेटिंग '%1' सेट नहीं की जा सकी: %2"
 
-#: resource.cpp:150
+#: resource.cpp:152
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "सेटिंग सहेजी नहीं जा सकी: %1"
 
-#: resource.cpp:156
+#: resource.cpp:159
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
 msgstr "संसाधन सेटअप पूर्ण: %1"
 
-#: resource.cpp:159
+#: resource.cpp:162
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
 msgstr "संसाधन प्रकार:"
 
-#: resource.cpp:169
+#: resource.cpp:172
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
 msgstr "खाली"
 
-#: resource.cpp:174
+#: resource.cpp:177
 #, kde-format
 msgctxt "label"
 msgid "%1:"

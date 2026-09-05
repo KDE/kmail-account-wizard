@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-19 00:45+0000\n"
+"POT-Creation-Date: 2026-09-05 00:47+0000\n"
 "PO-Revision-Date: 2025-08-31 10:30+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -36,84 +36,84 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "vpinon@kde.org, jcorn@free.fr, renard@kde.org, sdepiets@gmail.com"
 
-#: accountconfiguration.cpp:189 ispdb/configurationmodel.cpp:147
+#: accountconfiguration.cpp:188 ispdb/configurationmodel.cpp:144
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Sans nom"
 
-#: accountconfiguration.cpp:200
+#: accountconfiguration.cpp:199
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "Créer une identité de courriel : %1"
 
-#: accountconfiguration.cpp:203
+#: accountconfiguration.cpp:202
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Nom complet :"
 
-#: accountconfiguration.cpp:204
+#: accountconfiguration.cpp:203
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Adresse primaire de courriel :"
 
-#: accountconfiguration.cpp:230
+#: accountconfiguration.cpp:229
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Configuration du transport de courriels terminée : %1"
 
-#: accountconfiguration.cpp:233
+#: accountconfiguration.cpp:232
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Hôte :"
 
-#: accountconfiguration.cpp:234
+#: accountconfiguration.cpp:233
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Port :"
 
-#: accountconfiguration.cpp:235
+#: accountconfiguration.cpp:234
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Nom d'utilisateur :"
 
-#: accountconfiguration.cpp:237
+#: accountconfiguration.cpp:236
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "Chiffrement :"
 
-#: accountconfiguration.cpp:239
+#: accountconfiguration.cpp:238
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
 msgstr "Authentification :"
 
-#: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:23
+#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
 #, kde-format
 msgid "IMAP"
 msgstr "IMAP"
 
-#: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:26
+#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:26
 #: qml/ManualConfigurationPage.qml:90
 #, kde-format
 msgid "POP3"
 msgstr "POP3"
 
-#: ispdb/configurationmodel.cpp:51
+#: ispdb/configurationmodel.cpp:48
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
 msgstr "Conservez vos dossiers et courriels synchronisés sur votre serveur"
 
-#: ispdb/configurationmodel.cpp:52
+#: ispdb/configurationmodel.cpp:49
 #, kde-format
 msgid "Remove your emails from your server and keep them only on your computer"
 msgstr ""
@@ -142,17 +142,17 @@ msgctxt "No security mechanism"
 msgid "None"
 msgstr "Aucun"
 
-#: ispdbservice.cpp:130
+#: ispdbservice.cpp:129
 #, kde-format
 msgid "Configuration found auto config file."
 msgstr "Configuration trouvée dans le fichier de configuration automatique"
 
-#: ispdbservice.cpp:133
+#: ispdbservice.cpp:132
 #, kde-format
 msgid "Configuration found in well-known file."
 msgstr "Configuration trouvée dans le fichier bien connu"
 
-#: ispdbservice.cpp:136
+#: ispdbservice.cpp:135
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
 msgstr ""
@@ -493,35 +493,35 @@ msgstr ""
 "Impossible de convertir la valeur du paramètre « %1 » de type %2 vers le "
 "type nécessaire %3."
 
-#: resource.cpp:144
+#: resource.cpp:145
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Impossible de définir le paramètre « %1 » : %2"
 
-#: resource.cpp:150
+#: resource.cpp:152
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Impossible d'enregistrer la configuration : %1"
 
-#: resource.cpp:156
+#: resource.cpp:159
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
 msgstr "Configuration de la ressource terminée : %1"
 
-#: resource.cpp:159
+#: resource.cpp:162
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
 msgstr "Type de ressource :"
 
-#: resource.cpp:169
+#: resource.cpp:172
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
 msgstr "Vide"
 
-#: resource.cpp:174
+#: resource.cpp:177
 #, kde-format
 msgctxt "label"
 msgid "%1:"

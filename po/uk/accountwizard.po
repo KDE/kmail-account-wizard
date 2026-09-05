@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-19 00:45+0000\n"
+"POT-Creation-Date: 2026-09-05 00:47+0000\n"
 "PO-Revision-Date: 2025-08-30 13:26+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -30,84 +30,84 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yurchor@ukr.net"
 
-#: accountconfiguration.cpp:189 ispdb/configurationmodel.cpp:147
+#: accountconfiguration.cpp:188 ispdb/configurationmodel.cpp:144
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Без назви"
 
-#: accountconfiguration.cpp:200
+#: accountconfiguration.cpp:199
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "Створити профіль електронної пошти: %1"
 
-#: accountconfiguration.cpp:203
+#: accountconfiguration.cpp:202
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Ім’я повністю:"
 
-#: accountconfiguration.cpp:204
+#: accountconfiguration.cpp:203
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Основна адреса ел. пошти:"
 
-#: accountconfiguration.cpp:230
+#: accountconfiguration.cpp:229
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Налаштовування передавання пошти завершено: %1"
 
-#: accountconfiguration.cpp:233
+#: accountconfiguration.cpp:232
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Вузол:"
 
-#: accountconfiguration.cpp:234
+#: accountconfiguration.cpp:233
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Порт:"
 
-#: accountconfiguration.cpp:235
+#: accountconfiguration.cpp:234
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Користувач:"
 
-#: accountconfiguration.cpp:237
+#: accountconfiguration.cpp:236
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "Шифрування:"
 
-#: accountconfiguration.cpp:239
+#: accountconfiguration.cpp:238
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
 msgstr "Розпізнавання:"
 
-#: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:23
+#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:23
 #: qml/ManualConfigurationPage.qml:89
 #, kde-format
 msgid "IMAP"
 msgstr "IMAP"
 
-#: ispdb/configurationmodel.cpp:49 ispdb/serverconfiguration.cpp:26
+#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:26
 #: qml/ManualConfigurationPage.qml:90
 #, kde-format
 msgid "POP3"
 msgstr "POP3"
 
-#: ispdb/configurationmodel.cpp:51
+#: ispdb/configurationmodel.cpp:48
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
 msgstr "Зберігати теки і повідомлення синхронізованими на сервері"
 
-#: ispdb/configurationmodel.cpp:52
+#: ispdb/configurationmodel.cpp:49
 #, kde-format
 msgid "Remove your emails from your server and keep them only on your computer"
 msgstr ""
@@ -136,17 +136,17 @@ msgctxt "No security mechanism"
 msgid "None"
 msgstr "Немає"
 
-#: ispdbservice.cpp:130
+#: ispdbservice.cpp:129
 #, kde-format
 msgid "Configuration found auto config file."
 msgstr "Виявлено файл автоматичних налаштувань."
 
-#: ispdbservice.cpp:133
+#: ispdbservice.cpp:132
 #, kde-format
 msgid "Configuration found in well-known file."
 msgstr "Виявлено налаштування у відомому файлі."
 
-#: ispdbservice.cpp:136
+#: ispdbservice.cpp:135
 #, kde-format
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Виявлено налаштування у базі даних Mozilla FAI."
@@ -485,35 +485,35 @@ msgstr ""
 "Не вдалося перетворити значення параметра «%1» з типом %2на значення "
 "потрібного типу %3."
 
-#: resource.cpp:144
+#: resource.cpp:145
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Не вдалося встановити значення параметра «%1»: %2"
 
-#: resource.cpp:150
+#: resource.cpp:152
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Не вдалося зберегти параметри: %1"
 
-#: resource.cpp:156
+#: resource.cpp:159
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
 msgstr "Налаштовування ресурсу завершено: %1"
 
-#: resource.cpp:159
+#: resource.cpp:162
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
 msgstr "Тип ресурсу:"
 
-#: resource.cpp:169
+#: resource.cpp:172
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
 msgstr "Порожній"
 
-#: resource.cpp:174
+#: resource.cpp:177
 #, kde-format
 msgctxt "label"
 msgid "%1:"
