@@ -114,12 +114,12 @@ msgstr "POP3"
 #: ispdb/configurationmodel.cpp:48
 #, kde-format
 msgid "Keep your folders and emails synced on your server"
-msgstr "Синхронизировать папки и письма с севером"
+msgstr "Синхронизировать папки и письма с сервером"
 
 #: ispdb/configurationmodel.cpp:49
 #, kde-format
 msgid "Remove your emails from your server and keep them only on your computer"
-msgstr "Удалить письма с сервера и хранить их только на компьютере"
+msgstr "Удалять письма с сервера и хранить их только на компьютере"
 
 #: ispdb/serverconfiguration.cpp:29
 #, kde-format
@@ -467,7 +467,7 @@ msgstr "Источник данных «%1» уже создан."
 #: resource.cpp:92
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr "Создание экземпляра источника данных для «%1»..."
+msgstr "Создание экземпляра источника данных для «%1»…"
 
 #: resource.cpp:101
 #, kde-format
@@ -477,12 +477,12 @@ msgstr "Не удалось создать экземпляр источника
 #: resource.cpp:108
 #, kde-format
 msgid "Configuring resource instance..."
-msgstr "Настройка экземпляра источника данных..."
+msgstr "Настройка экземпляра источника данных…"
 
 #: resource.cpp:112
 #, kde-format
 msgid "Unable to configure resource instance."
-msgstr "Не удалось создать экземпляр источника данных."
+msgstr "Не удалось настроить экземпляр источника данных."
 
 #: resource.cpp:131
 #, kde-format
