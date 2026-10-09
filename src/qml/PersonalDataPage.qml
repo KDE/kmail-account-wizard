@@ -77,7 +77,7 @@ WizardPage {
                     passwordField.enabled = true;
                 }
             }
-            onAccepted: nextAction.triggered()
+            onAccepted: nextAction.trigger()
         }
 
         FormCard.FormDelegateSeparator {}
@@ -86,7 +86,7 @@ WizardPage {
             id: passwordField
             label: KI18n.i18n("Password (optional):")
             onTextChanged: SetupManager.password = text
-            onAccepted: nextAction.triggered()
+            onAccepted: nextAction.trigger()
         }
     }
 }
