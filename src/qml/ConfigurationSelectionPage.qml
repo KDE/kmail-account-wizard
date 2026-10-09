@@ -42,6 +42,8 @@ WizardPage {
     FormCard.FormCard {
         id: availableConfigurations
 
+        autoSeparators: true
+
         QQC2.ButtonGroup {
             id: configurationGroup
         }
@@ -66,38 +68,15 @@ WizardPage {
             id: configurationRepeater
             model: SetupManager.configurationModel
 
-            delegate: ColumnLayout {
+            delegate: ConfigurationDelegate {
                 id: configurationDelegate
 
-                spacing: 0
-
                 required property int index
-                required property string name
-                required property string description
-                required property string incomingHost
-                required property var incomingTags
-                required property string outgoingHost
-                required property var outgoingTags
 
-                FormCard.FormDelegateSeparator { visible: configurationDelegate.index !== 0}
+                checked: index === 0
 
-                ConfigurationDelegate {
-                    name: configurationDelegate.name
-                    description: configurationDelegate.description
-                    incomingHost: configurationDelegate.incomingHost
-                    incomingTags: configurationDelegate.incomingTags
-                    outgoingHost: configurationDelegate.outgoingHost
-                    outgoingTags: configurationDelegate.outgoingTags
-
-                    checked: index === 0
-
-                    QQC2.ButtonGroup.group: configurationGroup
-                }
+                QQC2.ButtonGroup.group: configurationGroup
             }
-        }
-
-        FormCard.FormDelegateSeparator {
-            visible: configurationRepeater.count > 0 || SetupManager.noConfigFound
         }
 
         FormCard.FormRadioDelegate {
