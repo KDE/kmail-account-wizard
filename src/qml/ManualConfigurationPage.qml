@@ -89,11 +89,14 @@ WizardPage {
                 { value: AccountConfiguration.IMAP, text: i18n("IMAP") },
                 { value: AccountConfiguration.POP3, text: i18n("POP3") },
             ]
-            Component.onCompleted: {
-                currentIndex = indexOfValue(manualConfiguration.incomingProtocol);
+            Binding {
+                target: manualIncomingProtocol
+                property: "currentIndex"
+                value: manualIncomingProtocol.model.findIndex(entry => entry.value === manualConfiguration.incomingProtocol)
+                delayed: true
             }
-            onCurrentIndexChanged: {
-                manualConfiguration.incomingProtocol = model[currentIndex].value;
+            onActivated: index => {
+                manualConfiguration.incomingProtocol = manualIncomingProtocol.model[index].value;
             }
         }
 
@@ -120,11 +123,14 @@ WizardPage {
                 { value: Transport.TLS, text: i18n("StartTLS") },
                 { value: Transport.None, text: i18n("None") }
             ]
-            Component.onCompleted: {
-                currentIndex = indexOfValue(manualConfiguration.incomingSecurityProtocol);
+            Binding {
+                target: manualIncomingSecurity
+                property: "currentIndex"
+                value: manualIncomingSecurity.model.findIndex(entry => entry.value === manualConfiguration.incomingSecurityProtocol)
+                delayed: true
             }
-            onCurrentIndexChanged: {
-                manualConfiguration.incomingSecurityProtocol = model[currentIndex].value;
+            onActivated: index => {
+                manualConfiguration.incomingSecurityProtocol = manualIncomingSecurity.model[index].value;
             }
         }
 
@@ -152,11 +158,14 @@ WizardPage {
                 }
                 return model;
             }
-            Component.onCompleted: {
-                currentIndex = indexOfValue(manualConfiguration.incomingAuthenticationProtocol);
+            Binding {
+                target: manualIncomingAuthenticationMethod
+                property: "currentIndex"
+                value: manualIncomingAuthenticationMethod.model.findIndex(entry => entry.value === manualConfiguration.incomingAuthenticationProtocol)
+                delayed: true
             }
-            onCurrentIndexChanged: {
-                manualConfiguration.incomingAuthenticationProtocol = model[currentIndex].value;
+            onActivated: index => {
+                manualConfiguration.incomingAuthenticationProtocol = manualIncomingAuthenticationMethod.model[index].value;
             }
         }
 
@@ -230,10 +239,15 @@ WizardPage {
                 { value: Transport.SSL, text: i18n("SSL/TLS (recommended)") },
                 { value: Transport.TLS, text: i18n("StartTLS") }
             ]
-            onCurrentIndexChanged: {
-                manualConfiguration.mailTransport.encryption = currentIndex
+            Binding {
+                target: manualOutgoingSecurity
+                property: "currentIndex"
+                value: manualOutgoingSecurity.model.findIndex(entry => entry.value === manualConfiguration.mailTransport.encryption)
+                delayed: true
             }
-            Component.onCompleted: currentIndex = indexOfValue(manualConfiguration.mailTransport.encryption)
+            onActivated: index => {
+                manualConfiguration.mailTransport.encryption = manualOutgoingSecurity.model[index].value;
+            }
         }
 
         FormCard.FormDelegateSeparator {}
@@ -253,10 +267,14 @@ WizardPage {
                 { value: Transport.GSSAPI, text: i18n("GSSAPI") },
                 { value: Transport.XOAUTH2, text: i18n("XOAuth (Gmail)") },
             ]
-            Component.onCompleted: currentIndex = indexOfValue(manualConfiguration.mailTransport.authenticationType);
-
-            onCurrentIndexChanged: {
-                manualConfiguration.mailTransport.authenticationType = model[currentIndex].value;
+            Binding {
+                target: manualOutgoingAuthenticationMethod
+                property: "currentIndex"
+                value: manualOutgoingAuthenticationMethod.model.findIndex(entry => entry.value === manualConfiguration.mailTransport.authenticationType)
+                delayed: true
+            }
+            onActivated: index => {
+                manualConfiguration.mailTransport.authenticationType = manualOutgoingAuthenticationMethod.model[index].value;
             }
         }
 
