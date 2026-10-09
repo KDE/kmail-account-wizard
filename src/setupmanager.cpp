@@ -58,8 +58,12 @@ QString SetupManager::fullName() const
 
 void SetupManager::setFullName(const QString &fullName)
 {
+    if (mFullName == fullName) {
+        return;
+    }
     mFullName = fullName;
     mConfigurationModel->setFullName(fullName);
+    Q_EMIT fullNameChanged();
 }
 
 QString SetupManager::email() const
@@ -69,9 +73,13 @@ QString SetupManager::email() const
 
 void SetupManager::setEmail(const QString &email)
 {
+    if (mEmail == email) {
+        return;
+    }
     mEmail = email;
     mConfigurationModel->setEmail(email);
     clearConfiguration();
+    Q_EMIT emailChanged();
 }
 
 QString SetupManager::password() const
