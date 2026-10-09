@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 import QtQuick
+import org.kde.ki18n
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
@@ -12,17 +13,17 @@ import org.kde.kirigamiaddons.formcard as FormCard
 WizardPage {
     id: root
 
-    title: i18n("Manual Configuration")
+    title: KI18n.i18n("Manual Configuration")
 
     actions: Kirigami.Action {
-        text: i18n("Recheck")
+        text: KI18n.i18n("Recheck")
         checked: true
         onTriggered: manualConfiguration.checkServer()
         enabled: manualConfiguration.configurationIsValid && !manualConfiguration.serverTestInProgress
     }
 
     nextAction {
-        text: i18n("Create Account")
+        text: KI18n.i18n("Create Account")
         onTriggered: {
             applicationWindow().pageStack.push(Qt.createComponent('org.kde.pim.accountwizard', 'DetailsPage'));
             manualConfiguration.save(ConsoleLog);
@@ -64,13 +65,13 @@ WizardPage {
 
 
     FormCard.FormHeader {
-        title: i18n("Incoming Server Parameters")
+        title: KI18n.i18n("Incoming Server Parameters")
     }
 
     FormCard.FormCard {
         FormCard.FormTextFieldDelegate {
             id: manualIncomingHostName
-            label: i18n("Incoming server:")
+            label: KI18n.i18n("Incoming server:")
             inputMethodHints: Qt.ImhUrlCharactersOnly
             text: manualConfiguration.incomingHostName;
             onTextChanged: {
@@ -82,12 +83,12 @@ WizardPage {
 
         FormCard.FormComboBoxDelegate {
             id: manualIncomingProtocol
-            text: i18n("Protocol:")
+            text: KI18n.i18n("Protocol:")
             textRole: "text"
             valueRole: "value"
             model: [
-                { value: AccountConfiguration.IMAP, text: i18n("IMAP") },
-                { value: AccountConfiguration.POP3, text: i18n("POP3") },
+                { value: AccountConfiguration.IMAP, text: KI18n.i18n("IMAP") },
+                { value: AccountConfiguration.POP3, text: KI18n.i18n("POP3") },
             ]
             Binding {
                 target: manualIncomingProtocol
@@ -104,7 +105,7 @@ WizardPage {
 
         FormCard.FormSpinBoxDelegate {
             id: manualIncomingPort
-            label: i18n("Port:")
+            label: KI18n.i18n("Port:")
             value: manualConfiguration.incomingPort
             from: 1
             to: 65535
@@ -115,13 +116,13 @@ WizardPage {
 
         FormCard.FormComboBoxDelegate {
             id: manualIncomingSecurity
-            text: i18n("Security:")
+            text: KI18n.i18n("Security:")
             textRole: "text"
             valueRole: "value"
             model: [
-                { value: Transport.SSL, text: i18n("SSL/TLS (recommended)") },
-                { value: Transport.TLS, text: i18n("StartTLS") },
-                { value: Transport.None, text: i18n("None") }
+                { value: Transport.SSL, text: KI18n.i18n("SSL/TLS (recommended)") },
+                { value: Transport.TLS, text: KI18n.i18n("StartTLS") },
+                { value: Transport.None, text: KI18n.i18n("None") }
             ]
             Binding {
                 target: manualIncomingSecurity
@@ -138,23 +139,23 @@ WizardPage {
 
         FormCard.FormComboBoxDelegate {
             id: manualIncomingAuthenticationMethod
-            text: i18n("Authentication Method:")
+            text: KI18n.i18n("Authentication Method:")
             textRole: "text"
             valueRole: "value"
 
             model: {
                 let model = [
-                       { value: Transport.CLEAR, text: i18n("Normal Password") },
-                       { value: Transport.PLAIN, text: i18n("PLAIN") },
-                       { value: Transport.LOGIN, text: i18n("LOGIN") },
-                       { value: Transport.CRAM_MD5, text: i18n("CRAM-MD5") },
-                       { value: Transport.DIGEST_MD5, text: i18n("DIGEST-MD5") },
-                       { value: Transport.NTLM, text: i18n("NTLM") },
-                       { value: Transport.GSSAPI, text: i18n("Kerberos / GSSAPI") },
-                       { value: Transport.XOAUTH2, text: i18n("XOAuth (Gmail)") },
+                       { value: Transport.CLEAR, text: KI18n.i18n("Normal Password") },
+                       { value: Transport.PLAIN, text: KI18n.i18n("PLAIN") },
+                       { value: Transport.LOGIN, text: KI18n.i18n("LOGIN") },
+                       { value: Transport.CRAM_MD5, text: KI18n.i18n("CRAM-MD5") },
+                       { value: Transport.DIGEST_MD5, text: KI18n.i18n("DIGEST-MD5") },
+                       { value: Transport.NTLM, text: KI18n.i18n("NTLM") },
+                       { value: Transport.GSSAPI, text: KI18n.i18n("Kerberos / GSSAPI") },
+                       { value: Transport.XOAUTH2, text: KI18n.i18n("XOAuth (Gmail)") },
                 ];
                 if (manualConfiguration.incomingProtocol == AccountConfiguration.POP3) {
-                    model.push({ value: Transport.APOP, text: i18n("APOP") });
+                    model.push({ value: Transport.APOP, text: KI18n.i18n("APOP") });
                 }
                 return model;
             }
@@ -173,7 +174,7 @@ WizardPage {
 
         FormCard.FormTextFieldDelegate {
             id: manualIncomingUserName
-            label: i18n("Username:")
+            label: KI18n.i18n("Username:")
             inputMethodHints: Qt.ImhUrlCharactersOnly
             text: manualConfiguration.incomingUserName
             onTextChanged: {
@@ -188,7 +189,7 @@ WizardPage {
         FormCard.FormCheckDelegate {
             id: disconnectedModeEnabled
             visible: manualConfiguration.hasDisconnectedMode
-            text: i18n("Download all messages for offline use")
+            text: KI18n.i18n("Download all messages for offline use")
             onCheckedChanged: {
                 manualConfiguration.disconnectedModeEnabled = checked
             }
@@ -197,14 +198,14 @@ WizardPage {
     }
 
     FormCard.FormHeader {
-        title: i18n("Outgoing Server Parameters")
+        title: KI18n.i18n("Outgoing Server Parameters")
     }
 
     FormCard.FormCard {
 
         FormCard.FormTextFieldDelegate {
             id: manualOutgoingHostName
-            label: i18n("Outgoing server:")
+            label: KI18n.i18n("Outgoing server:")
             inputMethodHints: Qt.ImhUrlCharactersOnly
             text: manualConfiguration.mailTransport.host
             onTextChanged: {
@@ -217,7 +218,7 @@ WizardPage {
 
         FormCard.FormSpinBoxDelegate {
             id: manualOutgoingPort
-            label: i18n("Port:")
+            label: KI18n.i18n("Port:")
             value: manualConfiguration.mailTransport.port
             from: 1
             to: 65535
@@ -231,13 +232,13 @@ WizardPage {
 
         FormCard.FormComboBoxDelegate {
             id: manualOutgoingSecurity
-            text: i18n("Security:")
+            text: KI18n.i18n("Security:")
             textRole: "text"
             valueRole: "value"
             model: [
-                { value: Transport.None, text: i18n("None") },
-                { value: Transport.SSL, text: i18n("SSL/TLS (recommended)") },
-                { value: Transport.TLS, text: i18n("StartTLS") }
+                { value: Transport.None, text: KI18n.i18n("None") },
+                { value: Transport.SSL, text: KI18n.i18n("SSL/TLS (recommended)") },
+                { value: Transport.TLS, text: KI18n.i18n("StartTLS") }
             ]
             Binding {
                 target: manualOutgoingSecurity
@@ -254,18 +255,18 @@ WizardPage {
 
         FormCard.FormComboBoxDelegate {
             id: manualOutgoingAuthenticationMethod
-            text: i18n("Authentication Method:")
+            text: KI18n.i18n("Authentication Method:")
             textRole: "text"
             valueRole: "value"
             model: [
-                { value: Transport.CLEAR, text: i18n("Clear text") },
-                { value: Transport.PLAIN, text: i18n("PLAIN") },
-                { value: Transport.LOGIN, text: i18n("LOGIN") },
-                { value: Transport.CRAM_MD5, text: i18n("CRAM-MD5") },
-                { value: Transport.DIGEST_MD5, text: i18n("DIGEST-MD5") },
-                { value: Transport.NTLM, text: i18n("NTLM") },
-                { value: Transport.GSSAPI, text: i18n("GSSAPI") },
-                { value: Transport.XOAUTH2, text: i18n("XOAuth (Gmail)") },
+                { value: Transport.CLEAR, text: KI18n.i18n("Clear text") },
+                { value: Transport.PLAIN, text: KI18n.i18n("PLAIN") },
+                { value: Transport.LOGIN, text: KI18n.i18n("LOGIN") },
+                { value: Transport.CRAM_MD5, text: KI18n.i18n("CRAM-MD5") },
+                { value: Transport.DIGEST_MD5, text: KI18n.i18n("DIGEST-MD5") },
+                { value: Transport.NTLM, text: KI18n.i18n("NTLM") },
+                { value: Transport.GSSAPI, text: KI18n.i18n("GSSAPI") },
+                { value: Transport.XOAUTH2, text: KI18n.i18n("XOAuth (Gmail)") },
             ]
             Binding {
                 target: manualOutgoingAuthenticationMethod
@@ -282,7 +283,7 @@ WizardPage {
 
         FormCard.FormTextFieldDelegate {
             id: manualOutgoingUserName
-            label: i18n("Username:")
+            label: KI18n.i18n("Username:")
             inputMethodHints: Qt.ImhUrlCharactersOnly
             text: manualConfiguration.mailTransport.userName
             onTextChanged: {

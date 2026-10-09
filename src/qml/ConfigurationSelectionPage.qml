@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 import QtQuick
+import org.kde.ki18n
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
@@ -13,7 +14,7 @@ import org.kde.kirigamiaddons.components as Component
 WizardPage {
     id: root
 
-    title: i18nc("@title:group", "Configuration Selection")
+    title: KI18n.i18nc("@title:group", "Configuration Selection")
 
     nextAction {
         enabled: configurationGroup.checkedButton !== null
@@ -36,7 +37,7 @@ WizardPage {
     }
 
     FormCard.FormHeader {
-        title: i18n("Available configurations")
+        title: KI18n.i18n("Available configurations")
     }
 
     FormCard.FormCard {
@@ -55,7 +56,7 @@ WizardPage {
                 Kirigami.PlaceholderMessage {
                     anchors.centerIn: parent
                     width: parent.width - Kirigami.Units.gridUnit * 2
-                    text: i18n("No configuration found from the internet for this server.")
+                    text: KI18n.i18n("No configuration found from the internet for this server.")
                 }
             }
 
@@ -81,7 +82,7 @@ WizardPage {
 
         FormCard.FormRadioDelegate {
             id: configureManual
-            text: i18n("Manual Configuration")
+            text: KI18n.i18n("Manual Configuration")
 
             checked: SetupManager.noConfigFound
 
@@ -91,7 +92,7 @@ WizardPage {
 
     FormCard.FormHeader {
         visible: calendarContactCard.visible
-        title: i18nc("@title:group", "Calendar and Contacts")
+        title: KI18n.i18nc("@title:group", "Calendar and Contacts")
     }
 
     FormCard.FormCard {
@@ -102,7 +103,7 @@ WizardPage {
         FormCard.FormSwitchDelegate {
             id: calendarCheck
 
-            text: i18nc("@option:check", "Enable calendar and contact integration")
+            text: KI18n.i18nc("@option:check", "Enable calendar and contact integration")
             checked: visible
         }
     }

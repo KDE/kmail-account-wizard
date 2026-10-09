@@ -16,7 +16,6 @@
 #include <QDebug>
 #include <QIcon>
 #include <QQmlApplicationEngine>
-#include <QQmlContext>
 #include <QQuickStyle>
 
 #include <KStyleManager>
@@ -65,7 +64,7 @@ int main(int argc, char **argv)
 
     QQmlApplicationEngine engine;
 
-    engine.rootContext()->setContextObject(new KLocalizedQmlContext(&engine));
+    KLocalization::setupLocalizedContext(&engine);
 
     engine.loadFromModule("org.kde.pim.accountwizard", "Main");
 

@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 import QtQuick
+import org.kde.ki18n
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
@@ -12,16 +13,16 @@ import org.kde.kirigamiaddons.formcard as FormCard
 WizardPage {
     id: root
 
-    title: i18nc("@title:group", "Details")
+    title: KI18n.i18nc("@title:group", "Details")
 
     nextAction {
-        text: i18nc("@action:button", "Finish")
+        text: KI18n.i18nc("@action:button", "Finish")
         icon.name: 'dialog-ok'
         onTriggered: Qt.quit();
     }
 
     FormCard.FormHeader {
-        title: i18n("Details")
+        title: KI18n.i18n("Details")
     }
 
     FormCard.FormCard {
@@ -32,25 +33,15 @@ WizardPage {
 
             model: Account.ConsoleLog
 
-            delegate: ColumnLayout {
+            delegate: FormCard.FormTextDelegate {
                 id: logDelegate
 
                 required property int index
                 required property string output
                 required property int type
 
-                width: parent.width
-
-                FormCard.FormDelegateSeparator {
-                    visible: index !== 0
-                    opacity: 1
-                }
-
-                FormCard.FormTextDelegate {
-                    id: detailsInfo
-                    text: logDelegate.output
-                    textItem.wrapMode: Text.WordWrap
-                }
+                text: logDelegate.output
+                textItem.wrapMode: Text.WordWrap
             }
         }
 
@@ -58,7 +49,7 @@ WizardPage {
             id: placeholder
 
             visible: repeater.count === 0
-            text: i18nc("Placeholder", "No details available.")
+            text: KI18n.i18nc("Placeholder", "No details available.")
             textItem.wrapMode: Text.WordWrap
         }
     }

@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 import QtQuick
+import org.kde.ki18n
 import QtQuick.Templates as T
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
@@ -90,7 +91,7 @@ T.RadioDelegate {
 
                 QQC2.Label {
                     font.bold: true
-                    text: i18n("Incoming")
+                    text: KI18n.i18n("Incoming")
                 }
 
                 RowLayout {
@@ -111,7 +112,7 @@ T.RadioDelegate {
 
                 QQC2.Label {
                     font.bold: true
-                    text: i18n("Outgoing")
+                    text: KI18n.i18n("Outgoing")
                     visible: root.outgoingTags.length > 0
                 }
 

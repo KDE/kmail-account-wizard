@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 import QtQuick
+import org.kde.ki18n
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
@@ -12,14 +13,14 @@ FormCard.FormCardPage {
 
     readonly property Kirigami.Action previousAction: Kirigami.Action {
         icon.name: 'go-previous-symbolic'
-        text: i18nc("@action:button", "Previous")
+        text: KI18n.i18nc("@action:button", "Previous")
         visible: applicationWindow().pageStack.depth > 1
         onTriggered: applicationWindow().pageStack.pop();
     }
 
     readonly property Kirigami.Action nextAction: Kirigami.Action {
         icon.name: 'go-next-symbolic'
-        text: i18nc("@action:button", "Next")
+        text: KI18n.i18nc("@action:button", "Next")
     }
 
     footer: QQC2.ToolBar {
