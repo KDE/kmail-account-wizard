@@ -188,4 +188,50 @@ void AccountConfigurationTest::createResource_data()
                           << "akonadi_imap_resource";
 }
 
+void AccountConfigurationTest::shouldApplyDetectedSecurity()
+{
+    QFETCH(AccountConfiguration::IncomingProtocol, protocol);
+    QFETCH(QString, result);
+    QFETCH(MailTransport::Transport::EnumEncryption, encryption);
+    QFETCH(uint, port);
+
+    AccountConfiguration configuration(mManager.get());
+    configuration.setIncomingProtocol(protocol);
+    const auto initialEncryption = result == u"unknown"_s             ? encryption
+        : encryption == MailTransport::Transport::EnumEncryption::SSL ? MailTransport::Transport::EnumEncryption::TLS
+                                                                      : MailTransport::Transport::EnumEncryption::SSL;
+    configuration.setIncomingSecurityProtocol(initialEncryption);
+    configuration.setIncomingPort(1234);
+    QSignalSpy securityChanged(&configuration, &AccountConfiguration::incomingSecurityProtocolChanged);
+    QSignalSpy portChanged(&configuration, &AccountConfiguration::incomingPortChanged);
+    QSignalSpy testFinished(&configuration, &AccountConfiguration::serverTestInProgressModeChanged);
+
+    QVERIFY(QMetaObject::invokeMethod(&configuration, "slotTestResult", Qt::DirectConnection, Q_ARG(QString, result)));
+    QCOMPARE(configuration.incomingSecurityProtocol(), encryption);
+    QCOMPARE(configuration.incomingPort(), port);
+    QCOMPARE(securityChanged.count(), encryption == initialEncryption ? 0 : 1);
+    QCOMPARE(portChanged.count(), port == 1234 ? 0 : 1);
+    QCOMPARE(testFinished.count(), 1);
+    QVERIFY(!configuration.property("serverTestInProgress").toBool());
+}
+
+void AccountConfigurationTest::shouldApplyDetectedSecurity_data()
+{
+    using Protocol = AccountConfiguration::IncomingProtocol;
+    using Encryption = MailTransport::Transport::EnumEncryption;
+    QTest::addColumn<Protocol>("protocol");
+    QTest::addColumn<QString>("result");
+    QTest::addColumn<Encryption>("encryption");
+    QTest::addColumn<uint>("port");
+
+    QTest::newRow("imap-ssl") << Protocol::IMAP << u"ssl"_s << Encryption::SSL << uint(993);
+    QTest::newRow("imap-starttls") << Protocol::IMAP << u"tls"_s << Encryption::TLS << uint(143);
+    QTest::newRow("imap-none") << Protocol::IMAP << u"none"_s << Encryption::None << uint(143);
+    QTest::newRow("imap-unknown") << Protocol::IMAP << u"unknown"_s << Encryption::SSL << uint(1234);
+    QTest::newRow("pop3-ssl") << Protocol::POP3 << u"ssl"_s << Encryption::SSL << uint(995);
+    QTest::newRow("pop3-starttls") << Protocol::POP3 << u"tls"_s << Encryption::TLS << uint(110);
+    QTest::newRow("pop3-none") << Protocol::POP3 << u"none"_s << Encryption::None << uint(110);
+    QTest::newRow("pop3-unknown") << Protocol::POP3 << u"unknown"_s << Encryption::SSL << uint(1234);
+}
+
 #include "moc_accountconfigurationtest.cpp"
