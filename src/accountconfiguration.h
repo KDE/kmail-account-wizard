@@ -137,7 +137,7 @@ private:
     [[nodiscard]] Resource::ResourceInfo createGmailResource() const;
     [[nodiscard]] QString generateUniqueAccountName() const;
     void slotTestFail();
-    void slotTestResult(const QString &result);
+    Q_SLOT void slotTestResult(const QString &result);
 
     // Incoming
     QString mIncomingUserName;
