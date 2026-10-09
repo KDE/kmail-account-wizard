@@ -21,6 +21,8 @@ private Q_SLOTS:
     void shouldAssignEmail();
     void createResource();
     void createResource_data();
+    void shouldApplyDetectedSecurity();
+    void shouldApplyDetectedSecurity_data();
 
 private:
     std::unique_ptr<KIdentityManagementCore::IdentityManager> mManager;
