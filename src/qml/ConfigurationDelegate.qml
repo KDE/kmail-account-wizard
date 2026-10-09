@@ -63,7 +63,7 @@ T.RadioDelegate {
             Layout.fillWidth: true
             spacing: Kirigami.Units.smallSpacing
 
-            Behavior on height {
+            Behavior on implicitHeight {
                 NumberAnimation { duration: 400 }
             }
 
