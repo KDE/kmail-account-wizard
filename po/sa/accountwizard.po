@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-05 00:47+0000\n"
+"POT-Creation-Date: 2026-10-10 00:47+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -90,13 +90,13 @@ msgid "Authentication:"
 msgstr "प्रमाणीकरणम् :"
 
 #: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:23
-#: qml/ManualConfigurationPage.qml:89
+#: qml/ManualConfigurationPage.qml:90
 #, kde-format
 msgid "IMAP"
 msgstr "IMAP"
 
 #: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:26
-#: qml/ManualConfigurationPage.qml:90
+#: qml/ManualConfigurationPage.qml:91
 #, kde-format
 msgid "POP3"
 msgstr "POP3"
@@ -121,8 +121,8 @@ msgstr "एस एम टी पी"
 msgid "SSL/TLS"
 msgstr "SSL/TLS इति"
 
-#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:120
-#: qml/ManualConfigurationPage.qml:231
+#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:124
+#: qml/ManualConfigurationPage.qml:241
 #, kde-format
 msgid "StartTLS"
 msgstr "StartTLS इति"
@@ -148,252 +148,252 @@ msgstr "सुप्रसिद्धसञ्चिकायां विन�
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Mozilla FAI Database इत्यत्र विन्यासः प्राप्तः ।"
 
-#: main.cpp:39
+#: main.cpp:38
 #, kde-format
 msgid "Account Assistant"
 msgstr "लेखा सहायक"
 
-#: main.cpp:41
+#: main.cpp:40
 #, kde-format
 msgid "Helps setting up PIM accounts"
 msgstr "PIM खातानां स्थापनायां सहायकं भवति"
 
-#: main.cpp:43
+#: main.cpp:42
 #, fuzzy, kde-format
 #| msgid "(c) 2009-2024 the Akonadi developers"
 msgid "© 2009-2025 the Akonadi developers"
 msgstr "(ग) २००९-२०२४ अकोनाडी विकासकाः"
 
-#: main.cpp:46
+#: main.cpp:45
 #, kde-format
 msgctxt "@info:credit"
 msgid "Volker Krause"
 msgstr "वोल्कर क्राउस"
 
-#: main.cpp:46
+#: main.cpp:45
 #, kde-format
 msgid "Author"
 msgstr "लेखकः"
 
-#: main.cpp:47
+#: main.cpp:46
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "लॉरेण्ट् मोंटेल्"
 
-#: main.cpp:47 main.cpp:48
+#: main.cpp:46 main.cpp:47
 #, kde-format
 msgid "Maintainer"
 msgstr "परिपालकः"
 
-#: main.cpp:48
+#: main.cpp:47
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
 msgstr "कार्ल स्वान्"
 
-#: qml/ConfigurationDelegate.qml:93
+#: qml/ConfigurationDelegate.qml:94
 #, kde-format
 msgid "Incoming"
 msgstr "आगमनम्"
 
-#: qml/ConfigurationDelegate.qml:114
+#: qml/ConfigurationDelegate.qml:115
 #, kde-format
 msgid "Outgoing"
 msgstr "बहिर्गामी"
 
-#: qml/ConfigurationSelectionPage.qml:16
+#: qml/ConfigurationSelectionPage.qml:17
 #, kde-format
 msgctxt "@title:group"
 msgid "Configuration Selection"
 msgstr "विन्यासचयनम्"
 
-#: qml/ConfigurationSelectionPage.qml:39
+#: qml/ConfigurationSelectionPage.qml:40
 #, kde-format
 msgid "Available configurations"
 msgstr "उपलब्धानि विन्यासानि"
 
-#: qml/ConfigurationSelectionPage.qml:56
+#: qml/ConfigurationSelectionPage.qml:59
 #, kde-format
 msgid "No configuration found from the internet for this server."
 msgstr "अस्य सर्वरस्य कृते अन्तर्जालतः कोऽपि विन्यासः न प्राप्तः ।"
 
-#: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
+#: qml/ConfigurationSelectionPage.qml:85 qml/ManualConfigurationPage.qml:16
 #, kde-format
 msgid "Manual Configuration"
 msgstr "मैनुअल विन्यास"
 
-#: qml/ConfigurationSelectionPage.qml:115
+#: qml/ConfigurationSelectionPage.qml:95
 #, kde-format
 msgctxt "@title:group"
 msgid "Calendar and Contacts"
 msgstr "पञ्चाङ्ग एवं सम्पर्क"
 
-#: qml/ConfigurationSelectionPage.qml:126
+#: qml/ConfigurationSelectionPage.qml:106
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable calendar and contact integration"
 msgstr "पञ्चाङ्गं सम्पर्कं च एकीकरणं सक्षमं कुर्वन्तु"
 
-#: qml/DetailsPage.qml:15
+#: qml/DetailsPage.qml:16
 #, kde-format
 msgctxt "@title:group"
 msgid "Details"
 msgstr "वर्णन"
 
-#: qml/DetailsPage.qml:18
+#: qml/DetailsPage.qml:19
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
 msgstr ""
 
-#: qml/DetailsPage.qml:24
+#: qml/DetailsPage.qml:25
 #, kde-format
 msgid "Details"
 msgstr "वर्णन"
 
-#: qml/DetailsPage.qml:61
+#: qml/DetailsPage.qml:52
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
 msgstr "विवरणं उपलब्धं नास्ति।"
 
-#: qml/ManualConfigurationPage.qml:18
+#: qml/ManualConfigurationPage.qml:19
 #, kde-format
 msgid "Recheck"
 msgstr "पुनः परीक्षण करें"
 
-#: qml/ManualConfigurationPage.qml:25
+#: qml/ManualConfigurationPage.qml:26
 #, kde-format
 msgid "Create Account"
 msgstr "खाता रचयन्तु"
 
-#: qml/ManualConfigurationPage.qml:67
+#: qml/ManualConfigurationPage.qml:68
 #, kde-format
 msgid "Incoming Server Parameters"
 msgstr "आगच्छन्तं सर्वर पैरामीटर्"
 
-#: qml/ManualConfigurationPage.qml:73
+#: qml/ManualConfigurationPage.qml:74
 #, kde-format
 msgid "Incoming server:"
 msgstr "आगच्छन् सर्वरः :"
 
-#: qml/ManualConfigurationPage.qml:85
+#: qml/ManualConfigurationPage.qml:86
 #, kde-format
 msgid "Protocol:"
 msgstr "प्रोटोकॉलः :"
 
-#: qml/ManualConfigurationPage.qml:104 qml/ManualConfigurationPage.qml:211
+#: qml/ManualConfigurationPage.qml:108 qml/ManualConfigurationPage.qml:221
 #, kde-format
 msgid "Port:"
 msgstr "पोताश्रय:"
 
-#: qml/ManualConfigurationPage.qml:115 qml/ManualConfigurationPage.qml:225
+#: qml/ManualConfigurationPage.qml:119 qml/ManualConfigurationPage.qml:235
 #, kde-format
 msgid "Security:"
 msgstr "सुरक्षा:"
 
-#: qml/ManualConfigurationPage.qml:119 qml/ManualConfigurationPage.qml:230
+#: qml/ManualConfigurationPage.qml:123 qml/ManualConfigurationPage.qml:240
 #, kde-format
 msgid "SSL/TLS (recommended)"
 msgstr "SSL/TLS (अनुशंसितम्)"
 
-#: qml/ManualConfigurationPage.qml:121 qml/ManualConfigurationPage.qml:229
+#: qml/ManualConfigurationPage.qml:125 qml/ManualConfigurationPage.qml:239
 #, kde-format
 msgid "None"
 msgstr "न कश्चित्"
 
-#: qml/ManualConfigurationPage.qml:135 qml/ManualConfigurationPage.qml:243
+#: qml/ManualConfigurationPage.qml:142 qml/ManualConfigurationPage.qml:258
 #, kde-format
 msgid "Authentication Method:"
 msgstr "प्रमाणीकरणविधिः :"
 
-#: qml/ManualConfigurationPage.qml:141
+#: qml/ManualConfigurationPage.qml:148
 #, kde-format
 msgid "Normal Password"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:142 qml/ManualConfigurationPage.qml:248
+#: qml/ManualConfigurationPage.qml:149 qml/ManualConfigurationPage.qml:263
 #, kde-format
 msgid "PLAIN"
 msgstr "सम"
 
-#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:249
+#: qml/ManualConfigurationPage.qml:150 qml/ManualConfigurationPage.qml:264
 #, kde-format
 msgid "LOGIN"
 msgstr "LOGIN इति"
 
-#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:250
+#: qml/ManualConfigurationPage.qml:151 qml/ManualConfigurationPage.qml:265
 #, kde-format
 msgid "CRAM-MD5"
 msgstr "CRAM-MD5"
 
-#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:251
+#: qml/ManualConfigurationPage.qml:152 qml/ManualConfigurationPage.qml:266
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr "DIGEST-MD5"
 
-#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:252
+#: qml/ManualConfigurationPage.qml:153 qml/ManualConfigurationPage.qml:267
 #, kde-format
 msgid "NTLM"
 msgstr "एनटीएलएम"
 
-#: qml/ManualConfigurationPage.qml:147
+#: qml/ManualConfigurationPage.qml:154
 #, kde-format
 msgid "Kerberos / GSSAPI"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:254
+#: qml/ManualConfigurationPage.qml:155 qml/ManualConfigurationPage.qml:269
 #, kde-format
 msgid "XOAuth (Gmail)"
 msgstr "XOAuth (जीमेल)"
 
-#: qml/ManualConfigurationPage.qml:151
+#: qml/ManualConfigurationPage.qml:158
 #, kde-format
 msgid "APOP"
 msgstr "APOP"
 
-#: qml/ManualConfigurationPage.qml:167 qml/ManualConfigurationPage.qml:267
+#: qml/ManualConfigurationPage.qml:177 qml/ManualConfigurationPage.qml:286
 #, kde-format
 msgid "Username:"
 msgstr "उपयोक्तृनाम :"
 
-#: qml/ManualConfigurationPage.qml:182
+#: qml/ManualConfigurationPage.qml:192
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr "अफलाइन उपयोगाय सर्वान् सन्देशान् डाउनलोड् कुर्वन्तु"
 
-#: qml/ManualConfigurationPage.qml:191
+#: qml/ManualConfigurationPage.qml:201
 #, kde-format
 msgid "Outgoing Server Parameters"
 msgstr "बहिर्गच्छन्तं सर्वर पैरामीटर्"
 
-#: qml/ManualConfigurationPage.qml:198
+#: qml/ManualConfigurationPage.qml:208
 #, kde-format
 msgid "Outgoing server:"
 msgstr "बहिर्गच्छन् सर्वरः :"
 
-#: qml/ManualConfigurationPage.qml:247
+#: qml/ManualConfigurationPage.qml:262
 #, kde-format
 msgid "Clear text"
 msgstr "पाठः स्पष्टः"
 
-#: qml/ManualConfigurationPage.qml:253
+#: qml/ManualConfigurationPage.qml:268
 #, kde-format
 msgid "GSSAPI"
 msgstr "GSSAPI"
 
-#: qml/PersonalDataPage.qml:15
+#: qml/PersonalDataPage.qml:16
 #, kde-format
 msgid "Personal Information"
 msgstr "व्यक्तिगत सूचना"
 
-#: qml/PersonalDataPage.qml:43
+#: qml/PersonalDataPage.qml:44
 #, kde-format
 msgid "Connect your Email Account"
 msgstr "स्वस्य Email खातं संयोजयन्तु"
 
-#: qml/PersonalDataPage.qml:51
+#: qml/PersonalDataPage.qml:52
 #, kde-format
 msgid ""
 "To use your current email address fill in your credentials. This wizard will "
@@ -405,40 +405,40 @@ msgstr ""
 "अनुशंसितं च सर्वर-विन्यासं अन्वेषयिष्यति । केवलं ई-मेल-सङ्केतस्य डोमेन-नामभागः एव "
 "अन्तर्जालमाध्यमेन प्रेषितः भविष्यति ।"
 
-#: qml/PersonalDataPage.qml:57
+#: qml/PersonalDataPage.qml:58
 #, kde-format
 msgid "Full name:"
 msgstr "सम्पूर्ण नाम :"
 
-#: qml/PersonalDataPage.qml:58
+#: qml/PersonalDataPage.qml:59
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
 msgstr "जॉन् स्मिथः"
 
-#: qml/PersonalDataPage.qml:67
+#: qml/PersonalDataPage.qml:68
 #, kde-format
 msgid "E-mail address:"
 msgstr "ई-मेल-सङ्केतः :"
 
-#: qml/PersonalDataPage.qml:68
+#: qml/PersonalDataPage.qml:69
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
 msgstr "boss@example.corp"
 
-#: qml/PersonalDataPage.qml:86
+#: qml/PersonalDataPage.qml:87
 #, kde-format
 msgid "Password (optional):"
 msgstr "गुप्तशब्दः (वैकल्पिकः):"
 
-#: qml/WizardPage.qml:15
+#: qml/WizardPage.qml:16
 #, kde-format
 msgctxt "@action:button"
 msgid "Previous"
 msgstr "पूर्वतनम्‌"
 
-#: qml/WizardPage.qml:22
+#: qml/WizardPage.qml:23
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"

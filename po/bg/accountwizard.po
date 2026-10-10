@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-05 00:47+0000\n"
+"POT-Creation-Date: 2026-10-10 00:47+0000\n"
 "PO-Revision-Date: 2025-08-31 23:45+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -88,13 +88,13 @@ msgid "Authentication:"
 msgstr "Удостоверяване:"
 
 #: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:23
-#: qml/ManualConfigurationPage.qml:89
+#: qml/ManualConfigurationPage.qml:90
 #, kde-format
 msgid "IMAP"
 msgstr "IMAP"
 
 #: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:26
-#: qml/ManualConfigurationPage.qml:90
+#: qml/ManualConfigurationPage.qml:91
 #, kde-format
 msgid "POP3"
 msgstr "POP3"
@@ -120,8 +120,8 @@ msgstr "SMTP"
 msgid "SSL/TLS"
 msgstr "SSL/TLS"
 
-#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:120
-#: qml/ManualConfigurationPage.qml:231
+#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:124
+#: qml/ManualConfigurationPage.qml:241
 #, kde-format
 msgid "StartTLS"
 msgstr "StartTLS"
@@ -147,252 +147,252 @@ msgstr "Открит е добре познат конфигурационен �
 msgid "Configuration found in Mozilla FAI Database."
 msgstr "Намерена е е конфигурация в Mozilla FAI Database."
 
-#: main.cpp:39
+#: main.cpp:38
 #, kde-format
 msgid "Account Assistant"
 msgstr "Помощник за създаване на акаунт"
 
-#: main.cpp:41
+#: main.cpp:40
 #, kde-format
 msgid "Helps setting up PIM accounts"
 msgstr "Помага за настройване на PIM акаунти"
 
-#: main.cpp:43
+#: main.cpp:42
 #, kde-format
 msgid "© 2009-2025 the Akonadi developers"
 msgstr "© 2009-2025 Разработчиците на Akonadi"
 
-#: main.cpp:46
+#: main.cpp:45
 #, kde-format
 msgctxt "@info:credit"
 msgid "Volker Krause"
 msgstr "Volker Krause"
 
-#: main.cpp:46
+#: main.cpp:45
 #, kde-format
 msgid "Author"
 msgstr "Автор"
 
-#: main.cpp:47
+#: main.cpp:46
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:47 main.cpp:48
+#: main.cpp:46 main.cpp:47
 #, kde-format
 msgid "Maintainer"
 msgstr "Поддръжка"
 
-#: main.cpp:48
+#: main.cpp:47
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
 
-#: qml/ConfigurationDelegate.qml:93
+#: qml/ConfigurationDelegate.qml:94
 #, kde-format
 msgid "Incoming"
 msgstr "Входящи"
 
-#: qml/ConfigurationDelegate.qml:114
+#: qml/ConfigurationDelegate.qml:115
 #, kde-format
 msgid "Outgoing"
 msgstr "Изходящи"
 
-#: qml/ConfigurationSelectionPage.qml:16
+#: qml/ConfigurationSelectionPage.qml:17
 #, kde-format
 msgctxt "@title:group"
 msgid "Configuration Selection"
 msgstr "Конфигурация на селекциите"
 
-#: qml/ConfigurationSelectionPage.qml:39
+#: qml/ConfigurationSelectionPage.qml:40
 #, kde-format
 msgid "Available configurations"
 msgstr "Налични конфигурации"
 
-#: qml/ConfigurationSelectionPage.qml:56
+#: qml/ConfigurationSelectionPage.qml:59
 #, kde-format
 msgid "No configuration found from the internet for this server."
 msgstr ""
 "Не е намерен конфигурационен файл за този сървър при търсене в Интернет."
 
-#: qml/ConfigurationSelectionPage.qml:105 qml/ManualConfigurationPage.qml:15
+#: qml/ConfigurationSelectionPage.qml:85 qml/ManualConfigurationPage.qml:16
 #, kde-format
 msgid "Manual Configuration"
 msgstr "Ръчна конфигурация"
 
-#: qml/ConfigurationSelectionPage.qml:115
+#: qml/ConfigurationSelectionPage.qml:95
 #, kde-format
 msgctxt "@title:group"
 msgid "Calendar and Contacts"
 msgstr "Календар и контакти"
 
-#: qml/ConfigurationSelectionPage.qml:126
+#: qml/ConfigurationSelectionPage.qml:106
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable calendar and contact integration"
 msgstr "Активиране на интеграцията на календар и контакти"
 
-#: qml/DetailsPage.qml:15
+#: qml/DetailsPage.qml:16
 #, kde-format
 msgctxt "@title:group"
 msgid "Details"
 msgstr "Подробности"
 
-#: qml/DetailsPage.qml:18
+#: qml/DetailsPage.qml:19
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
 msgstr "Завършване"
 
-#: qml/DetailsPage.qml:24
+#: qml/DetailsPage.qml:25
 #, kde-format
 msgid "Details"
 msgstr "Подробности"
 
-#: qml/DetailsPage.qml:61
+#: qml/DetailsPage.qml:52
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
 msgstr "Не са налични подробности."
 
-#: qml/ManualConfigurationPage.qml:18
+#: qml/ManualConfigurationPage.qml:19
 #, kde-format
 msgid "Recheck"
 msgstr "Повторно проверяване"
 
-#: qml/ManualConfigurationPage.qml:25
+#: qml/ManualConfigurationPage.qml:26
 #, kde-format
 msgid "Create Account"
 msgstr "Създаване на акаунт"
 
-#: qml/ManualConfigurationPage.qml:67
+#: qml/ManualConfigurationPage.qml:68
 #, kde-format
 msgid "Incoming Server Parameters"
 msgstr "Параметри на сървъра за входяща поща"
 
-#: qml/ManualConfigurationPage.qml:73
+#: qml/ManualConfigurationPage.qml:74
 #, kde-format
 msgid "Incoming server:"
 msgstr "Входящ сървър:"
 
-#: qml/ManualConfigurationPage.qml:85
+#: qml/ManualConfigurationPage.qml:86
 #, kde-format
 msgid "Protocol:"
 msgstr "Протокол:"
 
-#: qml/ManualConfigurationPage.qml:104 qml/ManualConfigurationPage.qml:211
+#: qml/ManualConfigurationPage.qml:108 qml/ManualConfigurationPage.qml:221
 #, kde-format
 msgid "Port:"
 msgstr "Порт:"
 
-#: qml/ManualConfigurationPage.qml:115 qml/ManualConfigurationPage.qml:225
+#: qml/ManualConfigurationPage.qml:119 qml/ManualConfigurationPage.qml:235
 #, kde-format
 msgid "Security:"
 msgstr "Сигурност:"
 
-#: qml/ManualConfigurationPage.qml:119 qml/ManualConfigurationPage.qml:230
+#: qml/ManualConfigurationPage.qml:123 qml/ManualConfigurationPage.qml:240
 #, kde-format
 msgid "SSL/TLS (recommended)"
 msgstr "SSL/TLS (препоръчено)"
 
-#: qml/ManualConfigurationPage.qml:121 qml/ManualConfigurationPage.qml:229
+#: qml/ManualConfigurationPage.qml:125 qml/ManualConfigurationPage.qml:239
 #, kde-format
 msgid "None"
 msgstr "Без"
 
-#: qml/ManualConfigurationPage.qml:135 qml/ManualConfigurationPage.qml:243
+#: qml/ManualConfigurationPage.qml:142 qml/ManualConfigurationPage.qml:258
 #, kde-format
 msgid "Authentication Method:"
 msgstr "Метод за удостоверяване:"
 
-#: qml/ManualConfigurationPage.qml:141
+#: qml/ManualConfigurationPage.qml:148
 #, kde-format
 msgid "Normal Password"
 msgstr "Нормална парола"
 
-#: qml/ManualConfigurationPage.qml:142 qml/ManualConfigurationPage.qml:248
+#: qml/ManualConfigurationPage.qml:149 qml/ManualConfigurationPage.qml:263
 #, kde-format
 msgid "PLAIN"
 msgstr "PLAIN"
 
-#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:249
+#: qml/ManualConfigurationPage.qml:150 qml/ManualConfigurationPage.qml:264
 #, kde-format
 msgid "LOGIN"
 msgstr "LOGIN"
 
-#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:250
+#: qml/ManualConfigurationPage.qml:151 qml/ManualConfigurationPage.qml:265
 #, kde-format
 msgid "CRAM-MD5"
 msgstr "CRAM-MD5"
 
-#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:251
+#: qml/ManualConfigurationPage.qml:152 qml/ManualConfigurationPage.qml:266
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr "DIGEST-MD5"
 
-#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:252
+#: qml/ManualConfigurationPage.qml:153 qml/ManualConfigurationPage.qml:267
 #, kde-format
 msgid "NTLM"
 msgstr "NTLM"
 
-#: qml/ManualConfigurationPage.qml:147
+#: qml/ManualConfigurationPage.qml:154
 #, kde-format
 msgid "Kerberos / GSSAPI"
 msgstr "Kerberos / GSSAPI"
 
-#: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:254
+#: qml/ManualConfigurationPage.qml:155 qml/ManualConfigurationPage.qml:269
 #, kde-format
 msgid "XOAuth (Gmail)"
 msgstr "XOAuth (Gmail)"
 
-#: qml/ManualConfigurationPage.qml:151
+#: qml/ManualConfigurationPage.qml:158
 #, kde-format
 msgid "APOP"
 msgstr "APOP"
 
-#: qml/ManualConfigurationPage.qml:167 qml/ManualConfigurationPage.qml:267
+#: qml/ManualConfigurationPage.qml:177 qml/ManualConfigurationPage.qml:286
 #, kde-format
 msgid "Username:"
 msgstr "Потребителско име:"
 
-#: qml/ManualConfigurationPage.qml:182
+#: qml/ManualConfigurationPage.qml:192
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr "Изтегляне на всички писма за четене офлайн"
 
-#: qml/ManualConfigurationPage.qml:191
+#: qml/ManualConfigurationPage.qml:201
 #, kde-format
 msgid "Outgoing Server Parameters"
 msgstr "Параметри на сървъра за изходяща поща"
 
-#: qml/ManualConfigurationPage.qml:198
+#: qml/ManualConfigurationPage.qml:208
 #, kde-format
 msgid "Outgoing server:"
 msgstr "Изходящ сървър:"
 
-#: qml/ManualConfigurationPage.qml:247
+#: qml/ManualConfigurationPage.qml:262
 #, kde-format
 msgid "Clear text"
 msgstr "Изчистване на текста"
 
-#: qml/ManualConfigurationPage.qml:253
+#: qml/ManualConfigurationPage.qml:268
 #, kde-format
 msgid "GSSAPI"
 msgstr "GSSAPI"
 
-#: qml/PersonalDataPage.qml:15
+#: qml/PersonalDataPage.qml:16
 #, kde-format
 msgid "Personal Information"
 msgstr "Лична информация"
 
-#: qml/PersonalDataPage.qml:43
+#: qml/PersonalDataPage.qml:44
 #, kde-format
 msgid "Connect your Email Account"
 msgstr "Свържете вашия пощенски акаунт"
 
-#: qml/PersonalDataPage.qml:51
+#: qml/PersonalDataPage.qml:52
 #, kde-format
 msgid ""
 "To use your current email address fill in your credentials. This wizard will "
@@ -405,40 +405,40 @@ msgstr ""
 "конфигурация на сървъра. Само частта от името на домейна на имейл адреса ще "
 "бъде изпратена по Интернет."
 
-#: qml/PersonalDataPage.qml:57
+#: qml/PersonalDataPage.qml:58
 #, kde-format
 msgid "Full name:"
 msgstr "Цяло име:"
 
-#: qml/PersonalDataPage.qml:58
+#: qml/PersonalDataPage.qml:59
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
 msgstr "John Smith"
 
-#: qml/PersonalDataPage.qml:67
+#: qml/PersonalDataPage.qml:68
 #, kde-format
 msgid "E-mail address:"
 msgstr "Адрес на е-поща:"
 
-#: qml/PersonalDataPage.qml:68
+#: qml/PersonalDataPage.qml:69
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
 msgstr "boss@example.corp"
 
-#: qml/PersonalDataPage.qml:86
+#: qml/PersonalDataPage.qml:87
 #, kde-format
 msgid "Password (optional):"
 msgstr "Парола (незадължително):"
 
-#: qml/WizardPage.qml:15
+#: qml/WizardPage.qml:16
 #, kde-format
 msgctxt "@action:button"
 msgid "Previous"
 msgstr "Предишно"
 
-#: qml/WizardPage.qml:22
+#: qml/WizardPage.qml:23
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"
