@@ -15,6 +15,10 @@ WizardPage {
 
     title: KI18n.i18nc("@title:group", "Details")
 
+    previousAction {
+        visible: false
+    }
+
     nextAction {
         text: KI18n.i18nc("@action:button", "Finish")
         icon.name: 'dialog-ok'
