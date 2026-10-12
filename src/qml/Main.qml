@@ -18,7 +18,8 @@ Kirigami.ApplicationWindow {
 
         globalToolBar {
             style: Kirigami.ApplicationHeaderStyle.ToolBar
-            showNavigationButtons: if (applicationWindow().pageStack.currentIndex > 0) {
+            showNavigationButtons:
+            if (applicationWindow().pageStack.currentIndex > 0 && pageStack.currentItem.previousAction.visible) {
                 Kirigami.ApplicationHeaderStyle.ShowBackButton
             } else {
                 0

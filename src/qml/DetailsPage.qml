@@ -14,6 +14,10 @@ WizardPage {
 
     title: i18nc("@title:group", "Details")
 
+    previousAction {
+        visible: false
+    }
+
     nextAction {
         text: i18nc("@action:button", "Finish")
         icon.name: 'dialog-ok'
