@@ -109,7 +109,9 @@ Resource::ResourceInfo AccountConfiguration::createPop3Resource() const
         {u"Host"_s, mIncomingHostName},
         {u"Login"_s, mIncomingUserName},
         {u"Password"_s, mPassword},
-        {u"UseTLS"_s, true},
+        {u"UseSSL"_s, mIncomingSecurityProtocol == MailTransport::Transport::SSL},
+        {u"UseTLS"_s, mIncomingSecurityProtocol == MailTransport::Transport::TLS},
+        {u"AuthenticationMethod"_s, mIncomingAuthenticationProtocol},
     };
     return info;
 }
