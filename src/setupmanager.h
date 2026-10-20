@@ -38,6 +38,8 @@ public:
 
     Q_INVOKABLE void searchConfiguration();
 
+    Q_INVOKABLE bool isValidAddress(const QString &address);
+
     [[nodiscard]] QString details() const;
 
 Q_SIGNALS:

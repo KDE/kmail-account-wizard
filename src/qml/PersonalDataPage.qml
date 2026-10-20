@@ -14,20 +14,17 @@ WizardPage {
 
     title: i18n("Personal Information")
 
-    function isNotEmptyStr(str) {
-        return str.trim().length > 0;
-    }
-
     nextAction {
         onTriggered: {
+            nameField.text = nameField.text.trim();
+            addressEmailField.text = addressEmailField.text.trim();
             SetupManager.fullName = nameField.text;
             SetupManager.email = addressEmailField.text;
             SetupManager.password = passwordField.text;
-            SetupManager.searchConfiguration()
-
+            SetupManager.searchConfiguration();
             applicationWindow().pageStack.push(Qt.createComponent('org.kde.pim.accountwizard', 'ConfigurationSelectionPage'))
         }
-        enabled: isNotEmptyStr(addressEmailField.text) // Fix trimmed + is real email
+        enabled: SetupManager.isValidAddress(addressEmailField.text.trim())
     }
 
     Kirigami.Icon {
@@ -69,7 +66,7 @@ WizardPage {
             text: SetupManager.email
             onTextChanged: {
                 SetupManager.email = text;
-                if (SetupManager.email.endsWith('@gmail.com')) {
+                if (SetupManager.email.trim().endsWith('@gmail.com')) {
                     passwordField.enabled = false;
                     passwordField.text = '';
                 } else {
