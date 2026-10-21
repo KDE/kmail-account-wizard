@@ -122,7 +122,6 @@ Resource::ResourceInfo AccountConfiguration::createImapResource() const
         {u"Password"_s, mPassword},
         {u"ImapPort"_s, mIncomingPort},
         {u"IntervalCheckTime"_s, 60},
-        {u"SubscriptionEnabled"_s, true},
         {u"UseDefaultIdentity"_s, false},
         {u"AccountIdentity"_s, mIdentity.uoid()},
         {u"Authentication"_s, mIncomingAuthenticationProtocol},
