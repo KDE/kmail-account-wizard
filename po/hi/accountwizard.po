@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-10 00:47+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2024-12-15 17:36+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -27,61 +27,61 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "आपके ईमेल"
 
-#: accountconfiguration.cpp:188 ispdb/configurationmodel.cpp:144
+#: accountconfiguration.cpp:187 ispdb/configurationmodel.cpp:144
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "अज्ञात"
 
-#: accountconfiguration.cpp:199
+#: accountconfiguration.cpp:198
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "ईमेल पहचान बनाएं: %1"
 
-#: accountconfiguration.cpp:202
+#: accountconfiguration.cpp:201
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "पूरा नाम:"
 
-#: accountconfiguration.cpp:203
+#: accountconfiguration.cpp:202
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "प्राथमिक विद्युतडाक पता:"
 
-#: accountconfiguration.cpp:229
+#: accountconfiguration.cpp:228
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "मेल ट्रांसपोर्ट सेटअप पूर्ण: %1"
 
-#: accountconfiguration.cpp:232
+#: accountconfiguration.cpp:231
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "मेज़बान:"
 
-#: accountconfiguration.cpp:233
+#: accountconfiguration.cpp:232
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "पत्तन:"
 
-#: accountconfiguration.cpp:234
+#: accountconfiguration.cpp:233
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "उपयोगकर्ता नाम:"
 
-#: accountconfiguration.cpp:236
+#: accountconfiguration.cpp:235
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "कूटलेखन:"
 
-#: accountconfiguration.cpp:238
+#: accountconfiguration.cpp:237
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
