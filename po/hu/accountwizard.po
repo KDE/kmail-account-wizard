@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-23 02:57+0000\n"
+"POT-Creation-Date: 2026-10-29 03:08+0000\n"
 "PO-Revision-Date: 2025-11-08 22:35+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -29,61 +29,61 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ulysses@fsf.hu"
 
-#: accountconfiguration.cpp:199 ispdb/configurationmodel.cpp:147
+#: accountconfiguration.cpp:190 ispdb/configurationmodel.cpp:147
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Névtelen"
 
-#: accountconfiguration.cpp:210
+#: accountconfiguration.cpp:201
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "E-mail azonosítü létrehozása: %1"
 
-#: accountconfiguration.cpp:213
+#: accountconfiguration.cpp:204
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Teljes név:"
 
-#: accountconfiguration.cpp:214
+#: accountconfiguration.cpp:205
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Elsődleges e-mail cím:"
 
-#: accountconfiguration.cpp:243
+#: accountconfiguration.cpp:231
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Levéltovábbítás beállítása befejezve: %1"
 
-#: accountconfiguration.cpp:246
+#: accountconfiguration.cpp:234
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Gépnév:"
 
-#: accountconfiguration.cpp:247
+#: accountconfiguration.cpp:235
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Port:"
 
-#: accountconfiguration.cpp:248
+#: accountconfiguration.cpp:236
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Felhasználónév:"
 
-#: accountconfiguration.cpp:250
+#: accountconfiguration.cpp:238
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "Titkosítás:"
 
-#: accountconfiguration.cpp:252
+#: accountconfiguration.cpp:240
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
@@ -123,8 +123,8 @@ msgstr "SMTP"
 msgid "SSL/TLS"
 msgstr "SSL/TLS"
 
-#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:121
-#: qml/ManualConfigurationPage.qml:232
+#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:123
+#: qml/ManualConfigurationPage.qml:240
 #, kde-format
 msgid "StartTLS"
 msgstr "StartTLS"
@@ -242,18 +242,18 @@ msgctxt "@title:group"
 msgid "Details"
 msgstr "Részletek"
 
-#: qml/DetailsPage.qml:18
+#: qml/DetailsPage.qml:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
 msgstr "Befejezés"
 
-#: qml/DetailsPage.qml:24
+#: qml/DetailsPage.qml:28
 #, kde-format
 msgid "Details"
 msgstr "Részletek"
 
-#: qml/DetailsPage.qml:61
+#: qml/DetailsPage.qml:65
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
@@ -284,107 +284,102 @@ msgstr "Bejövő kiszolgáló:"
 msgid "Protocol:"
 msgstr "Protokoll:"
 
-#: qml/ManualConfigurationPage.qml:91
-#, kde-format
-msgid "Kolab"
-msgstr "Kolab"
-
-#: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:212
+#: qml/ManualConfigurationPage.qml:107 qml/ManualConfigurationPage.qml:220
 #, kde-format
 msgid "Port:"
 msgstr "Port:"
 
-#: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:226
+#: qml/ManualConfigurationPage.qml:118 qml/ManualConfigurationPage.qml:234
 #, kde-format
 msgid "Security:"
 msgstr "Biztonság:"
 
-#: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:231
+#: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:239
 #, kde-format
 msgid "SSL/TLS (recommended)"
 msgstr "SSL/TLS (ajánlott)"
 
-#: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:230
+#: qml/ManualConfigurationPage.qml:124 qml/ManualConfigurationPage.qml:238
 #, kde-format
 msgid "None"
 msgstr "Nincs"
 
-#: qml/ManualConfigurationPage.qml:136 qml/ManualConfigurationPage.qml:244
+#: qml/ManualConfigurationPage.qml:141 qml/ManualConfigurationPage.qml:257
 #, kde-format
 msgid "Authentication Method:"
 msgstr "Felhasználóazonosítási mód:"
 
-#: qml/ManualConfigurationPage.qml:142
+#: qml/ManualConfigurationPage.qml:147
 #, kde-format
 msgid "Normal Password"
 msgstr "Normál jelszó"
 
-#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:249
+#: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:262
 #, kde-format
 msgid "PLAIN"
 msgstr "PLAIN"
 
-#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:250
+#: qml/ManualConfigurationPage.qml:149 qml/ManualConfigurationPage.qml:263
 #, kde-format
 msgid "LOGIN"
 msgstr "LOGIN"
 
-#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:251
+#: qml/ManualConfigurationPage.qml:150 qml/ManualConfigurationPage.qml:264
 #, kde-format
 msgid "CRAM-MD5"
 msgstr "CRAM-MD5"
 
-#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:252
+#: qml/ManualConfigurationPage.qml:151 qml/ManualConfigurationPage.qml:265
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr "DIGEST-MD5"
 
-#: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:253
+#: qml/ManualConfigurationPage.qml:152 qml/ManualConfigurationPage.qml:266
 #, kde-format
 msgid "NTLM"
 msgstr "NTLM"
 
-#: qml/ManualConfigurationPage.qml:148
+#: qml/ManualConfigurationPage.qml:153
 #, kde-format
 msgid "Kerberos / GSSAPI"
 msgstr "Kerberos / GSSAPI"
 
-#: qml/ManualConfigurationPage.qml:149 qml/ManualConfigurationPage.qml:255
+#: qml/ManualConfigurationPage.qml:154 qml/ManualConfigurationPage.qml:268
 #, kde-format
 msgid "XOAuth (Gmail)"
 msgstr "XOAuth (Gmail)"
 
-#: qml/ManualConfigurationPage.qml:152
+#: qml/ManualConfigurationPage.qml:157
 #, kde-format
 msgid "APOP"
 msgstr "APOP"
 
-#: qml/ManualConfigurationPage.qml:168 qml/ManualConfigurationPage.qml:268
+#: qml/ManualConfigurationPage.qml:176 qml/ManualConfigurationPage.qml:285
 #, kde-format
 msgid "Username:"
 msgstr "Felhasználónév:"
 
-#: qml/ManualConfigurationPage.qml:183
+#: qml/ManualConfigurationPage.qml:191
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr "Összes üzenet letöltése offline használatra"
 
-#: qml/ManualConfigurationPage.qml:192
+#: qml/ManualConfigurationPage.qml:200
 #, kde-format
 msgid "Outgoing Server Parameters"
 msgstr "Kimenő kiszolgáló paraméterei"
 
-#: qml/ManualConfigurationPage.qml:199
+#: qml/ManualConfigurationPage.qml:207
 #, kde-format
 msgid "Outgoing server:"
 msgstr "Kimenő kiszolgáló:"
 
-#: qml/ManualConfigurationPage.qml:248
+#: qml/ManualConfigurationPage.qml:261
 #, kde-format
 msgid "Clear text"
 msgstr "Sima szöveg"
 
-#: qml/ManualConfigurationPage.qml:254
+#: qml/ManualConfigurationPage.qml:267
 #, kde-format
 msgid "GSSAPI"
 msgstr "GSSAPI"
@@ -394,12 +389,12 @@ msgstr "GSSAPI"
 msgid "Personal Information"
 msgstr "Személyes adatok"
 
-#: qml/PersonalDataPage.qml:43
+#: qml/PersonalDataPage.qml:40
 #, kde-format
 msgid "Connect your Email Account"
 msgstr "E-mail fiók csatlakoztatása"
 
-#: qml/PersonalDataPage.qml:51
+#: qml/PersonalDataPage.qml:48
 #, kde-format
 msgid ""
 "To use your current email address fill in your credentials. This wizard will "
@@ -412,29 +407,29 @@ msgstr ""
 "kiszolgálóbeállítást. Az e-mail címből csak a domainnév kerül átküldésre az "
 "interneten keresztül."
 
-#: qml/PersonalDataPage.qml:57
+#: qml/PersonalDataPage.qml:54
 #, kde-format
 msgid "Full name:"
 msgstr "Teljes név:"
 
-#: qml/PersonalDataPage.qml:58
+#: qml/PersonalDataPage.qml:55
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
 msgstr "Kovács István"
 
-#: qml/PersonalDataPage.qml:67
+#: qml/PersonalDataPage.qml:64
 #, kde-format
 msgid "E-mail address:"
 msgstr "E-mail cím:"
 
-#: qml/PersonalDataPage.qml:68
+#: qml/PersonalDataPage.qml:65
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
 msgstr "fonok@pelda.kft"
 
-#: qml/PersonalDataPage.qml:86
+#: qml/PersonalDataPage.qml:83
 #, kde-format
 msgid "Password (optional):"
 msgstr "Jelszó (opcionális):"
@@ -488,39 +483,42 @@ msgid ""
 msgstr ""
 "A(z) %2típusú „%1” beállítás értéke nem konvertálható a szükséges %3 típusra."
 
-#: resource.cpp:144
+#: resource.cpp:145
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Nem sikerült beállítani a(z) „%1” beállítást: %2"
 
-#: resource.cpp:150
+#: resource.cpp:152
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Nem sikerült menteni a beállításokat: %1"
 
-#: resource.cpp:156
+#: resource.cpp:159
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
 msgstr "Erőforrás beállítása befejezve: %1"
 
-#: resource.cpp:159
+#: resource.cpp:162
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
 msgstr "Erőforrástípus:"
 
-#: resource.cpp:169
+#: resource.cpp:172
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
 msgstr "Üres"
 
-#: resource.cpp:174
+#: resource.cpp:177
 #, kde-format
 msgctxt "label"
 msgid "%1:"
 msgstr "%1:"
+
+#~ msgid "Kolab"
+#~ msgstr "Kolab"
 
 #~ msgctxt "@action:button"
 #~ msgid "Quit"

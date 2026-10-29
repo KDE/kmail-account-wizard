@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-23 02:57+0000\n"
+"POT-Creation-Date: 2026-10-29 03:08+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -27,61 +27,61 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-china@kde.org"
 
-#: accountconfiguration.cpp:199 ispdb/configurationmodel.cpp:147
+#: accountconfiguration.cpp:190 ispdb/configurationmodel.cpp:147
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "未命名"
 
-#: accountconfiguration.cpp:210
+#: accountconfiguration.cpp:201
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "创建电子邮件身份： %1"
 
-#: accountconfiguration.cpp:213
+#: accountconfiguration.cpp:204
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "全名："
 
-#: accountconfiguration.cpp:214
+#: accountconfiguration.cpp:205
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "主要电子邮件地址："
 
-#: accountconfiguration.cpp:243
+#: accountconfiguration.cpp:231
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "邮件传输设置完成: %1"
 
-#: accountconfiguration.cpp:246
+#: accountconfiguration.cpp:234
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "主机名："
 
-#: accountconfiguration.cpp:247
+#: accountconfiguration.cpp:235
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "端口："
 
-#: accountconfiguration.cpp:248
+#: accountconfiguration.cpp:236
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "用户名："
 
-#: accountconfiguration.cpp:250
+#: accountconfiguration.cpp:238
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "加密："
 
-#: accountconfiguration.cpp:252
+#: accountconfiguration.cpp:240
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
@@ -119,8 +119,8 @@ msgstr "SMTP"
 msgid "SSL/TLS"
 msgstr "SSL/TLS"
 
-#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:121
-#: qml/ManualConfigurationPage.qml:232
+#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:123
+#: qml/ManualConfigurationPage.qml:240
 #, kde-format
 msgid "StartTLS"
 msgstr "开启 TLS"
@@ -238,18 +238,18 @@ msgctxt "@title:group"
 msgid "Details"
 msgstr "详情"
 
-#: qml/DetailsPage.qml:18
+#: qml/DetailsPage.qml:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
 msgstr "完成"
 
-#: qml/DetailsPage.qml:24
+#: qml/DetailsPage.qml:28
 #, kde-format
 msgid "Details"
 msgstr "详情"
 
-#: qml/DetailsPage.qml:61
+#: qml/DetailsPage.qml:65
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
@@ -280,107 +280,102 @@ msgstr "收件服务器："
 msgid "Protocol:"
 msgstr "协议："
 
-#: qml/ManualConfigurationPage.qml:91
-#, kde-format
-msgid "Kolab"
-msgstr "Kolab"
-
-#: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:212
+#: qml/ManualConfigurationPage.qml:107 qml/ManualConfigurationPage.qml:220
 #, kde-format
 msgid "Port:"
 msgstr "端口："
 
-#: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:226
+#: qml/ManualConfigurationPage.qml:118 qml/ManualConfigurationPage.qml:234
 #, kde-format
 msgid "Security:"
 msgstr "安全性："
 
-#: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:231
+#: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:239
 #, kde-format
 msgid "SSL/TLS (recommended)"
 msgstr "SSL/TLS (推荐)"
 
-#: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:230
+#: qml/ManualConfigurationPage.qml:124 qml/ManualConfigurationPage.qml:238
 #, kde-format
 msgid "None"
 msgstr "空"
 
-#: qml/ManualConfigurationPage.qml:136 qml/ManualConfigurationPage.qml:244
+#: qml/ManualConfigurationPage.qml:141 qml/ManualConfigurationPage.qml:257
 #, kde-format
 msgid "Authentication Method:"
 msgstr "身份认证方式："
 
-#: qml/ManualConfigurationPage.qml:142
+#: qml/ManualConfigurationPage.qml:147
 #, kde-format
 msgid "Normal Password"
 msgstr "普通密码"
 
-#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:249
+#: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:262
 #, kde-format
 msgid "PLAIN"
 msgstr "PLAIN"
 
-#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:250
+#: qml/ManualConfigurationPage.qml:149 qml/ManualConfigurationPage.qml:263
 #, kde-format
 msgid "LOGIN"
 msgstr "登录"
 
-#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:251
+#: qml/ManualConfigurationPage.qml:150 qml/ManualConfigurationPage.qml:264
 #, kde-format
 msgid "CRAM-MD5"
 msgstr "CRAM-MD5"
 
-#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:252
+#: qml/ManualConfigurationPage.qml:151 qml/ManualConfigurationPage.qml:265
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr "DIGEST-MD5"
 
-#: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:253
+#: qml/ManualConfigurationPage.qml:152 qml/ManualConfigurationPage.qml:266
 #, kde-format
 msgid "NTLM"
 msgstr "NTLM"
 
-#: qml/ManualConfigurationPage.qml:148
+#: qml/ManualConfigurationPage.qml:153
 #, kde-format
 msgid "Kerberos / GSSAPI"
 msgstr "Kerberos / GSSAPI"
 
-#: qml/ManualConfigurationPage.qml:149 qml/ManualConfigurationPage.qml:255
+#: qml/ManualConfigurationPage.qml:154 qml/ManualConfigurationPage.qml:268
 #, kde-format
 msgid "XOAuth (Gmail)"
 msgstr "XOAuth (Gmail)"
 
-#: qml/ManualConfigurationPage.qml:152
+#: qml/ManualConfigurationPage.qml:157
 #, kde-format
 msgid "APOP"
 msgstr "APOP"
 
-#: qml/ManualConfigurationPage.qml:168 qml/ManualConfigurationPage.qml:268
+#: qml/ManualConfigurationPage.qml:176 qml/ManualConfigurationPage.qml:285
 #, kde-format
 msgid "Username:"
 msgstr "用户名："
 
-#: qml/ManualConfigurationPage.qml:183
+#: qml/ManualConfigurationPage.qml:191
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr "下载全部邮件以便离线使用"
 
-#: qml/ManualConfigurationPage.qml:192
+#: qml/ManualConfigurationPage.qml:200
 #, kde-format
 msgid "Outgoing Server Parameters"
 msgstr "传出服务器参数"
 
-#: qml/ManualConfigurationPage.qml:199
+#: qml/ManualConfigurationPage.qml:207
 #, kde-format
 msgid "Outgoing server:"
 msgstr "发件服务器："
 
-#: qml/ManualConfigurationPage.qml:248
+#: qml/ManualConfigurationPage.qml:261
 #, kde-format
 msgid "Clear text"
 msgstr "明文"
 
-#: qml/ManualConfigurationPage.qml:254
+#: qml/ManualConfigurationPage.qml:267
 #, kde-format
 msgid "GSSAPI"
 msgstr "GSSAPI"
@@ -390,12 +385,12 @@ msgstr "GSSAPI"
 msgid "Personal Information"
 msgstr "个人信息"
 
-#: qml/PersonalDataPage.qml:43
+#: qml/PersonalDataPage.qml:40
 #, kde-format
 msgid "Connect your Email Account"
 msgstr "连接到您的电子邮件账户"
 
-#: qml/PersonalDataPage.qml:51
+#: qml/PersonalDataPage.qml:48
 #, kde-format
 msgid ""
 "To use your current email address fill in your credentials. This wizard will "
@@ -406,29 +401,29 @@ msgstr ""
 "需要使用您当前的电子邮件地址填写您的凭据。这个向导将自动搜索一个正常工作和推"
 "荐的服务器配置。 只有电子邮件地址的域名部分将通过互联网发送。"
 
-#: qml/PersonalDataPage.qml:57
+#: qml/PersonalDataPage.qml:54
 #, kde-format
 msgid "Full name:"
 msgstr "全名："
 
-#: qml/PersonalDataPage.qml:58
+#: qml/PersonalDataPage.qml:55
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
 msgstr "John Smith"
 
-#: qml/PersonalDataPage.qml:67
+#: qml/PersonalDataPage.qml:64
 #, kde-format
 msgid "E-mail address:"
 msgstr "电子邮件地址："
 
-#: qml/PersonalDataPage.qml:68
+#: qml/PersonalDataPage.qml:65
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
 msgstr "boss@example.corp"
 
-#: qml/PersonalDataPage.qml:86
+#: qml/PersonalDataPage.qml:83
 #, kde-format
 msgid "Password (optional):"
 msgstr "密码 (选填) ："
@@ -481,36 +476,39 @@ msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
 msgstr "无法将类型为 %2 的设置 '%1' 的值转换为所需的类型 %3。"
 
-#: resource.cpp:144
+#: resource.cpp:145
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "无法设置“%1”: %2"
 
-#: resource.cpp:150
+#: resource.cpp:152
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "无法保存设置：%1"
 
-#: resource.cpp:156
+#: resource.cpp:159
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
 msgstr "资源设置完成: %1"
 
-#: resource.cpp:159
+#: resource.cpp:162
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
 msgstr "资源类型："
 
-#: resource.cpp:169
+#: resource.cpp:172
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
 msgstr "空"
 
-#: resource.cpp:174
+#: resource.cpp:177
 #, kde-format
 msgctxt "label"
 msgid "%1:"
 msgstr "%1："
+
+#~ msgid "Kolab"
+#~ msgstr "Kolab"

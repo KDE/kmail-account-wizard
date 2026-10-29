@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-23 02:57+0000\n"
+"POT-Creation-Date: 2026-10-29 03:08+0000\n"
 "PO-Revision-Date: 2021-09-03 10:38+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -29,64 +29,64 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sstavra@gmail.com"
 
-#: accountconfiguration.cpp:199 ispdb/configurationmodel.cpp:147
+#: accountconfiguration.cpp:190 ispdb/configurationmodel.cpp:147
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Ανώνυμο"
 
-#: accountconfiguration.cpp:210
+#: accountconfiguration.cpp:201
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr ""
 
-#: accountconfiguration.cpp:213
+#: accountconfiguration.cpp:204
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Ονοματεπώνυμο:"
 
-#: accountconfiguration.cpp:214
+#: accountconfiguration.cpp:205
 #, fuzzy, kde-format
 #| msgid "E-mail address:"
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Ηλ. ταχυδρομείο:"
 
-#: accountconfiguration.cpp:243
+#: accountconfiguration.cpp:231
 #, fuzzy, kde-format
 #| msgid "Mail transport account deleted."
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Ο λογαριασμός ηλ. ταχυδρομείου έχει διαγραφεί."
 
-#: accountconfiguration.cpp:246
+#: accountconfiguration.cpp:234
 #, fuzzy, kde-format
 #| msgid "Username:"
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Όνομα χρήστη:"
 
-#: accountconfiguration.cpp:247
+#: accountconfiguration.cpp:235
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr ""
 
-#: accountconfiguration.cpp:248
+#: accountconfiguration.cpp:236
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Όνομα χρήστη:"
 
-#: accountconfiguration.cpp:250
+#: accountconfiguration.cpp:238
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr ""
 
-#: accountconfiguration.cpp:252
+#: accountconfiguration.cpp:240
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
@@ -127,8 +127,8 @@ msgstr "SMTP, %1"
 msgid "SSL/TLS"
 msgstr ""
 
-#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:121
-#: qml/ManualConfigurationPage.qml:232
+#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:123
+#: qml/ManualConfigurationPage.qml:240
 #, kde-format
 msgid "StartTLS"
 msgstr ""
@@ -252,18 +252,18 @@ msgctxt "@title:group"
 msgid "Details"
 msgstr "Λεπτομέρειες"
 
-#: qml/DetailsPage.qml:18
+#: qml/DetailsPage.qml:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
 msgstr ""
 
-#: qml/DetailsPage.qml:24
+#: qml/DetailsPage.qml:28
 #, kde-format
 msgid "Details"
 msgstr "Λεπτομέρειες"
 
-#: qml/DetailsPage.qml:61
+#: qml/DetailsPage.qml:65
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
@@ -296,109 +296,104 @@ msgstr "Εισερχόμενα:"
 msgid "Protocol:"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:91
-#, kde-format
-msgid "Kolab"
-msgstr ""
-
-#: qml/ManualConfigurationPage.qml:105 qml/ManualConfigurationPage.qml:212
+#: qml/ManualConfigurationPage.qml:107 qml/ManualConfigurationPage.qml:220
 #, kde-format
 msgid "Port:"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:116 qml/ManualConfigurationPage.qml:226
+#: qml/ManualConfigurationPage.qml:118 qml/ManualConfigurationPage.qml:234
 #, kde-format
 msgid "Security:"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:120 qml/ManualConfigurationPage.qml:231
+#: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:239
 #, kde-format
 msgid "SSL/TLS (recommended)"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:122 qml/ManualConfigurationPage.qml:230
+#: qml/ManualConfigurationPage.qml:124 qml/ManualConfigurationPage.qml:238
 #, kde-format
 msgid "None"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:136 qml/ManualConfigurationPage.qml:244
+#: qml/ManualConfigurationPage.qml:141 qml/ManualConfigurationPage.qml:257
 #, kde-format
 msgid "Authentication Method:"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:142
+#: qml/ManualConfigurationPage.qml:147
 #, kde-format
 msgid "Normal Password"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:143 qml/ManualConfigurationPage.qml:249
+#: qml/ManualConfigurationPage.qml:148 qml/ManualConfigurationPage.qml:262
 #, kde-format
 msgid "PLAIN"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:144 qml/ManualConfigurationPage.qml:250
+#: qml/ManualConfigurationPage.qml:149 qml/ManualConfigurationPage.qml:263
 #, kde-format
 msgid "LOGIN"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:145 qml/ManualConfigurationPage.qml:251
+#: qml/ManualConfigurationPage.qml:150 qml/ManualConfigurationPage.qml:264
 #, kde-format
 msgid "CRAM-MD5"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:146 qml/ManualConfigurationPage.qml:252
+#: qml/ManualConfigurationPage.qml:151 qml/ManualConfigurationPage.qml:265
 #, kde-format
 msgid "DIGEST-MD5"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:147 qml/ManualConfigurationPage.qml:253
+#: qml/ManualConfigurationPage.qml:152 qml/ManualConfigurationPage.qml:266
 #, kde-format
 msgid "NTLM"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:148
+#: qml/ManualConfigurationPage.qml:153
 #, kde-format
 msgid "Kerberos / GSSAPI"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:149 qml/ManualConfigurationPage.qml:255
+#: qml/ManualConfigurationPage.qml:154 qml/ManualConfigurationPage.qml:268
 #, kde-format
 msgid "XOAuth (Gmail)"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:152
+#: qml/ManualConfigurationPage.qml:157
 #, kde-format
 msgid "APOP"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:168 qml/ManualConfigurationPage.qml:268
+#: qml/ManualConfigurationPage.qml:176 qml/ManualConfigurationPage.qml:285
 #, kde-format
 msgid "Username:"
 msgstr "Όνομα χρήστη:"
 
-#: qml/ManualConfigurationPage.qml:183
+#: qml/ManualConfigurationPage.qml:191
 #, kde-format
 msgid "Download all messages for offline use"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:192
+#: qml/ManualConfigurationPage.qml:200
 #, fuzzy, kde-format
 #| msgid "Outgoing:"
 msgid "Outgoing Server Parameters"
 msgstr "Εξερχόμενα:"
 
-#: qml/ManualConfigurationPage.qml:199
+#: qml/ManualConfigurationPage.qml:207
 #, fuzzy, kde-format
 #| msgid "Outgoing:"
 msgid "Outgoing server:"
 msgstr "Εξερχόμενα:"
 
-#: qml/ManualConfigurationPage.qml:248
+#: qml/ManualConfigurationPage.qml:261
 #, kde-format
 msgid "Clear text"
 msgstr ""
 
-#: qml/ManualConfigurationPage.qml:254
+#: qml/ManualConfigurationPage.qml:267
 #, kde-format
 msgid "GSSAPI"
 msgstr ""
@@ -408,12 +403,12 @@ msgstr ""
 msgid "Personal Information"
 msgstr ""
 
-#: qml/PersonalDataPage.qml:43
+#: qml/PersonalDataPage.qml:40
 #, kde-format
 msgid "Connect your Email Account"
 msgstr ""
 
-#: qml/PersonalDataPage.qml:51
+#: qml/PersonalDataPage.qml:48
 #, fuzzy, kde-format
 #| msgid ""
 #| "Check online for the settings needed for this email provider. Only the "
@@ -431,29 +426,29 @@ msgstr ""
 "ιστοχώρου θα αποσταλεί μέσω του διαδικτύου αυτή τη στιγμή. Αν αυτή η επιλογή "
 "δεν έχει ενεργοποιηθεί, ο λογαριασμός μπορεί να προετοιμαστεί χειροκίνητα."
 
-#: qml/PersonalDataPage.qml:57
+#: qml/PersonalDataPage.qml:54
 #, kde-format
 msgid "Full name:"
 msgstr "Ονοματεπώνυμο:"
 
-#: qml/PersonalDataPage.qml:58
+#: qml/PersonalDataPage.qml:55
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
 msgstr ""
 
-#: qml/PersonalDataPage.qml:67
+#: qml/PersonalDataPage.qml:64
 #, kde-format
 msgid "E-mail address:"
 msgstr "Ηλ. ταχυδρομείο:"
 
-#: qml/PersonalDataPage.qml:68
+#: qml/PersonalDataPage.qml:65
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
 msgstr ""
 
-#: qml/PersonalDataPage.qml:86
+#: qml/PersonalDataPage.qml:83
 #, fuzzy, kde-format
 #| msgid "Password:"
 msgid "Password (optional):"
@@ -508,37 +503,37 @@ msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
 msgstr "Αδυναμία μετατροπής της ρύθμισης '%1' στον απαιτούμενο τύπο %2."
 
-#: resource.cpp:144
+#: resource.cpp:145
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Αδυναμία ρύθμισης '%1': %2"
 
-#: resource.cpp:150
+#: resource.cpp:152
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Αδυναμία αποθήκευσης ρυθμίσεων: %1"
 
-#: resource.cpp:156
+#: resource.cpp:159
 #, fuzzy, kde-format
 #| msgid "Resource setup completed."
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
 msgstr "Η προετοιμασία του πόρου ολοκληρώθηκε."
 
-#: resource.cpp:159
+#: resource.cpp:162
 #, fuzzy, kde-format
 #| msgid "Resource setup completed."
 msgctxt "log entry content"
 msgid "Resource type:"
 msgstr "Η προετοιμασία του πόρου ολοκληρώθηκε."
 
-#: resource.cpp:169
+#: resource.cpp:172
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
 msgstr ""
 
-#: resource.cpp:174
+#: resource.cpp:177
 #, kde-format
 msgctxt "label"
 msgid "%1:"
