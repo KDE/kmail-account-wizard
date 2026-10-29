@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-23 00:49+0000\n"
+"POT-Creation-Date: 2026-10-29 00:54+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -27,61 +27,61 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-china@kde.org"
 
-#: accountconfiguration.cpp:187 ispdb/configurationmodel.cpp:144
+#: accountconfiguration.cpp:189 ispdb/configurationmodel.cpp:144
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "未命名"
 
-#: accountconfiguration.cpp:198
+#: accountconfiguration.cpp:200
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "创建电子邮件身份： %1"
 
-#: accountconfiguration.cpp:201
+#: accountconfiguration.cpp:203
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "全名："
 
-#: accountconfiguration.cpp:202
+#: accountconfiguration.cpp:204
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "主要电子邮件地址："
 
-#: accountconfiguration.cpp:228
+#: accountconfiguration.cpp:230
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "邮件传输设置完成: %1"
 
-#: accountconfiguration.cpp:231
+#: accountconfiguration.cpp:233
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "主机名："
 
-#: accountconfiguration.cpp:232
+#: accountconfiguration.cpp:234
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "端口："
 
-#: accountconfiguration.cpp:233
+#: accountconfiguration.cpp:235
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "用户名："
 
-#: accountconfiguration.cpp:235
+#: accountconfiguration.cpp:237
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "加密："
 
-#: accountconfiguration.cpp:237
+#: accountconfiguration.cpp:239
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
@@ -189,12 +189,17 @@ msgctxt "@info:credit"
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
 
-#: qml/ConfigurationDelegate.qml:94
+#: qml/ConfigurationDelegate.qml:97
 #, kde-format
 msgid "Incoming"
 msgstr "传入"
 
-#: qml/ConfigurationDelegate.qml:115
+#: qml/ConfigurationDelegate.qml:118 qml/ConfigurationDelegate.qml:160
+#, kde-format
+msgid "This hostname contains non-ASCII characters."
+msgstr ""
+
+#: qml/ConfigurationDelegate.qml:138
 #, kde-format
 msgid "Outgoing"
 msgstr "传出"
@@ -238,18 +243,18 @@ msgctxt "@title:group"
 msgid "Details"
 msgstr "详情"
 
-#: qml/DetailsPage.qml:19
+#: qml/DetailsPage.qml:23
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
 msgstr "完成"
 
-#: qml/DetailsPage.qml:25
+#: qml/DetailsPage.qml:29
 #, kde-format
 msgid "Details"
 msgstr "详情"
 
-#: qml/DetailsPage.qml:52
+#: qml/DetailsPage.qml:56
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
@@ -385,12 +390,12 @@ msgstr "GSSAPI"
 msgid "Personal Information"
 msgstr "个人信息"
 
-#: qml/PersonalDataPage.qml:44
+#: qml/PersonalDataPage.qml:41
 #, kde-format
 msgid "Connect your Email Account"
 msgstr "连接到您的电子邮件账户"
 
-#: qml/PersonalDataPage.qml:52
+#: qml/PersonalDataPage.qml:49
 #, kde-format
 msgid ""
 "To use your current email address fill in your credentials. This wizard will "
@@ -401,29 +406,29 @@ msgstr ""
 "需要使用您当前的电子邮件地址填写您的凭据。这个向导将自动搜索一个正常工作和推"
 "荐的服务器配置。 只有电子邮件地址的域名部分将通过互联网发送。"
 
-#: qml/PersonalDataPage.qml:58
+#: qml/PersonalDataPage.qml:55
 #, kde-format
 msgid "Full name:"
 msgstr "全名："
 
-#: qml/PersonalDataPage.qml:59
+#: qml/PersonalDataPage.qml:56
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
 msgstr "John Smith"
 
-#: qml/PersonalDataPage.qml:68
+#: qml/PersonalDataPage.qml:65
 #, kde-format
 msgid "E-mail address:"
 msgstr "电子邮件地址："
 
-#: qml/PersonalDataPage.qml:69
+#: qml/PersonalDataPage.qml:66
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
 msgstr "boss@example.corp"
 
-#: qml/PersonalDataPage.qml:87
+#: qml/PersonalDataPage.qml:84
 #, kde-format
 msgid "Password (optional):"
 msgstr "密码 (选填) ："

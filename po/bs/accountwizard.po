@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-23 00:49+0000\n"
+"POT-Creation-Date: 2026-10-29 00:54+0000\n"
 "PO-Revision-Date: 2013-11-03 21:01+0000\n"
 "Last-Translator: Adna Rakić <adna.rakic@gmail.com>\n"
 "Language-Team: bs <bs@kde.org>\n"
@@ -30,66 +30,66 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Samir.ribic@etf.unsa.ba,adna.rakic@gmail.com,nameisoverated@aol.com"
 
-#: accountconfiguration.cpp:187 ispdb/configurationmodel.cpp:144
+#: accountconfiguration.cpp:189 ispdb/configurationmodel.cpp:144
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Neimenovano"
 
-#: accountconfiguration.cpp:198
+#: accountconfiguration.cpp:200
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr ""
 
-#: accountconfiguration.cpp:201
+#: accountconfiguration.cpp:203
 #, fuzzy, kde-format
 #| msgid "Full name:"
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Puno Ime:"
 
-#: accountconfiguration.cpp:202
+#: accountconfiguration.cpp:204
 #, fuzzy, kde-format
 #| msgid "E-mail address:"
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "E-mail adresa:"
 
-#: accountconfiguration.cpp:228
+#: accountconfiguration.cpp:230
 #, fuzzy, kde-format
 #| msgid "Mail transport account deleted."
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Nalog za prenos e‑pošte obrisan."
 
-#: accountconfiguration.cpp:231
+#: accountconfiguration.cpp:233
 #, fuzzy, kde-format
 #| msgid "Username:"
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Korisničko ime:"
 
-#: accountconfiguration.cpp:232
+#: accountconfiguration.cpp:234
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr ""
 
-#: accountconfiguration.cpp:233
+#: accountconfiguration.cpp:235
 #, fuzzy, kde-format
 #| msgid "Username:"
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Korisničko ime:"
 
-#: accountconfiguration.cpp:235
+#: accountconfiguration.cpp:237
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr ""
 
-#: accountconfiguration.cpp:237
+#: accountconfiguration.cpp:239
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
@@ -205,13 +205,18 @@ msgctxt "@info:credit"
 msgid "Carl Schwan"
 msgstr ""
 
-#: qml/ConfigurationDelegate.qml:94
+#: qml/ConfigurationDelegate.qml:97
 #, fuzzy, kde-format
 #| msgid "Incoming:"
 msgid "Incoming"
 msgstr "Dolazni:"
 
-#: qml/ConfigurationDelegate.qml:115
+#: qml/ConfigurationDelegate.qml:118 qml/ConfigurationDelegate.qml:160
+#, kde-format
+msgid "This hostname contains non-ASCII characters."
+msgstr ""
+
+#: qml/ConfigurationDelegate.qml:138
 #, fuzzy, kde-format
 #| msgid "Outgoing:"
 msgid "Outgoing"
@@ -258,19 +263,19 @@ msgctxt "@title:group"
 msgid "Details"
 msgstr "&Detalji..."
 
-#: qml/DetailsPage.qml:19
+#: qml/DetailsPage.qml:23
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
 msgstr ""
 
-#: qml/DetailsPage.qml:25
+#: qml/DetailsPage.qml:29
 #, fuzzy, kde-format
 #| msgid "&Details..."
 msgid "Details"
 msgstr "&Detalji..."
 
-#: qml/DetailsPage.qml:52
+#: qml/DetailsPage.qml:56
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
@@ -410,12 +415,12 @@ msgstr ""
 msgid "Personal Information"
 msgstr ""
 
-#: qml/PersonalDataPage.qml:44
+#: qml/PersonalDataPage.qml:41
 #, kde-format
 msgid "Connect your Email Account"
 msgstr ""
 
-#: qml/PersonalDataPage.qml:52
+#: qml/PersonalDataPage.qml:49
 #, fuzzy, kde-format
 #| msgid ""
 #| "Check online for the settings needed for this email provider. Only the "
@@ -432,29 +437,29 @@ msgstr ""
 "trenutku će samo imenski deo adrese e‑pošte biti poslat preko Interneta. Ako "
 "isključite ovu opciju, moraćete ručno da postavite nalog."
 
-#: qml/PersonalDataPage.qml:58
+#: qml/PersonalDataPage.qml:55
 #, kde-format
 msgid "Full name:"
 msgstr "Puno Ime:"
 
-#: qml/PersonalDataPage.qml:59
+#: qml/PersonalDataPage.qml:56
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
 msgstr ""
 
-#: qml/PersonalDataPage.qml:68
+#: qml/PersonalDataPage.qml:65
 #, kde-format
 msgid "E-mail address:"
 msgstr "E-mail adresa:"
 
-#: qml/PersonalDataPage.qml:69
+#: qml/PersonalDataPage.qml:66
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
 msgstr ""
 
-#: qml/PersonalDataPage.qml:87
+#: qml/PersonalDataPage.qml:84
 #, fuzzy, kde-format
 #| msgid "Password:"
 msgid "Password (optional):"

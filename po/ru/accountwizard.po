@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-23 00:49+0000\n"
+"POT-Creation-Date: 2026-10-29 00:54+0000\n"
 "PO-Revision-Date: 2025-12-11 19:11+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -39,61 +39,61 @@ msgstr ""
 "team@basealt.ru"
 
 # Не "Безымянный", потому что "учётная запись" женского рода, а "профиль" -- мужского. --aspotashev
-#: accountconfiguration.cpp:187 ispdb/configurationmodel.cpp:144
+#: accountconfiguration.cpp:189 ispdb/configurationmodel.cpp:144
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Без имени"
 
-#: accountconfiguration.cpp:198
+#: accountconfiguration.cpp:200
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "Профиль электронной почты: %1"
 
-#: accountconfiguration.cpp:201
+#: accountconfiguration.cpp:203
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Полное имя:"
 
-#: accountconfiguration.cpp:202
+#: accountconfiguration.cpp:204
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Основной адрес электронной почты:"
 
-#: accountconfiguration.cpp:228
+#: accountconfiguration.cpp:230
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Настройка отправки почты завершена: %1"
 
-#: accountconfiguration.cpp:231
+#: accountconfiguration.cpp:233
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Хост:"
 
-#: accountconfiguration.cpp:232
+#: accountconfiguration.cpp:234
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Порт:"
 
-#: accountconfiguration.cpp:233
+#: accountconfiguration.cpp:235
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Имя пользователя:"
 
-#: accountconfiguration.cpp:235
+#: accountconfiguration.cpp:237
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "Шифрование:"
 
-#: accountconfiguration.cpp:237
+#: accountconfiguration.cpp:239
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
@@ -201,12 +201,17 @@ msgctxt "@info:credit"
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
 
-#: qml/ConfigurationDelegate.qml:94
+#: qml/ConfigurationDelegate.qml:97
 #, kde-format
 msgid "Incoming"
 msgstr "Сервер входящей почты"
 
-#: qml/ConfigurationDelegate.qml:115
+#: qml/ConfigurationDelegate.qml:118 qml/ConfigurationDelegate.qml:160
+#, kde-format
+msgid "This hostname contains non-ASCII characters."
+msgstr ""
+
+#: qml/ConfigurationDelegate.qml:138
 #, kde-format
 msgid "Outgoing"
 msgstr "Сервер исходящей почты"
@@ -250,18 +255,18 @@ msgctxt "@title:group"
 msgid "Details"
 msgstr "Подробные сведения"
 
-#: qml/DetailsPage.qml:19
+#: qml/DetailsPage.qml:23
 #, kde-format
 msgctxt "@action:button"
 msgid "Finish"
 msgstr "Завершить"
 
-#: qml/DetailsPage.qml:25
+#: qml/DetailsPage.qml:29
 #, kde-format
 msgid "Details"
 msgstr "Подробнее"
 
-#: qml/DetailsPage.qml:52
+#: qml/DetailsPage.qml:56
 #, kde-format
 msgctxt "Placeholder"
 msgid "No details available."
@@ -397,12 +402,12 @@ msgstr "GSSAPI"
 msgid "Personal Information"
 msgstr "Личные данные"
 
-#: qml/PersonalDataPage.qml:44
+#: qml/PersonalDataPage.qml:41
 #, kde-format
 msgid "Connect your Email Account"
 msgstr "Подключение своей учётной записи"
 
-#: qml/PersonalDataPage.qml:52
+#: qml/PersonalDataPage.qml:49
 #, kde-format
 msgid ""
 "To use your current email address fill in your credentials. This wizard will "
@@ -415,29 +420,29 @@ msgstr ""
 "Через Интернет будет отправлена только доменная часть адреса электронной "
 "почты."
 
-#: qml/PersonalDataPage.qml:58
+#: qml/PersonalDataPage.qml:55
 #, kde-format
 msgid "Full name:"
 msgstr "Полное имя:"
 
-#: qml/PersonalDataPage.qml:59
+#: qml/PersonalDataPage.qml:56
 #, kde-format
 msgctxt "Generic name"
 msgid "John Smith"
 msgstr "Иван Иванов"
 
-#: qml/PersonalDataPage.qml:68
+#: qml/PersonalDataPage.qml:65
 #, kde-format
 msgid "E-mail address:"
 msgstr "Адрес электронной почты:"
 
-#: qml/PersonalDataPage.qml:69
+#: qml/PersonalDataPage.qml:66
 #, kde-format
 msgctxt "Generic email address"
 msgid "boss@example.corp"
 msgstr "boss@example.corp"
 
-#: qml/PersonalDataPage.qml:87
+#: qml/PersonalDataPage.qml:84
 #, kde-format
 msgid "Password (optional):"
 msgstr "Пароль (необязательно):"
