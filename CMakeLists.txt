@@ -148,6 +148,12 @@ find_package(KPim6Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 find_package(KPim6IdentityManagementCore ${IDENTITYMANAGEMENT_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6MailTransport ${KMAILTRANSPORT_LIB_VERSION} CONFIG REQUIRED)
 
+find_package(KF6KirigamiAddons 1.15.0)
+set_package_properties(KF6KirigamiAddons PROPERTIES
+    TYPE REQUIRED
+    PURPOSE "Required application components and runtime dependency"
+)
+
 include_directories(
     ${kmail-account-wizard_SOURCE_DIR}
     ${kmail-account-wizard_BINARY_DIR}
