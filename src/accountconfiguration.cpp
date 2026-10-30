@@ -179,7 +179,7 @@ void AccountConfiguration::save(ConsoleLog *consoleLog)
     // create identity
     QString identityName;
     QString hostName;
-    if (email().split(u'@').count() > 1) {
+    if (email().contains(u'@')) {
         hostName = email().split(u'@')[1];
     } else {
         hostName = mIncomingHostName;
@@ -197,10 +197,10 @@ void AccountConfiguration::save(ConsoleLog *consoleLog)
 
     QString identityLogEntryText = u"<h3>"_s + i18nc("log entry content", "Create email identity: %1", identityName) + u"</h3>"_s;
 
-    identityLogEntryText += u"<ul>"_s;
+    identityLogEntryText += u"<ul>";
     identityLogEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Full name:"), mIdentity.fullName());
     identityLogEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Primary email address:"), email());
-    identityLogEntryText += u"</ul>"_s;
+    identityLogEntryText += u"</ul>";
     consoleLog->success(identityLogEntryText);
 
     // create resource
@@ -227,7 +227,7 @@ void AccountConfiguration::save(ConsoleLog *consoleLog)
 
         QString logEntryText = u"<h3>"_s + i18nc("log entry content", "Mail transport setup completed: %1", mMailTransport->name()) + u"</h3>"_s;
 
-        logEntryText += u"<ul>"_s;
+        logEntryText += u"<ul>";
         logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Host:"), mMailTransport->host());
         logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Port:"), QString::number(mMailTransport->port()));
         logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Username:"), mMailTransport->userName());
@@ -236,7 +236,7 @@ void AccountConfiguration::save(ConsoleLog *consoleLog)
             QLatin1StringView(QMetaEnum::fromType<MailTransport::Transport::EnumEncryption>().key(mMailTransport->encryption())));
         logEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Authentication:"),
                                                        QLatin1StringView(QMetaEnum::fromType<TransportAuth>().key(mMailTransport->authenticationType())));
-        logEntryText += u"</ul>"_s;
+        logEntryText += u"</ul>";
         consoleLog->success(logEntryText);
 
         mIdentity.setTransport(QString::number(mMailTransport->id()));
