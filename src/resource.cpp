@@ -158,7 +158,7 @@ void Resource::instanceCreateResult(KJob *job)
 
     QString resourceLogEntryText = u"<h3>"_s + i18nc("log entry content", "Resource setup completed: %1", mResourceInfo.name) + u"</h3>"_s;
 
-    resourceLogEntryText += u"<ul>"_s;
+    resourceLogEntryText += u"<ul>";
     resourceLogEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("log entry content", "Resource type:"), mResourceInfo.typeIdentifier);
     QMap<QString, QVariant>::const_iterator end(mResourceInfo.settings.constEnd());
     for (QMap<QString, QVariant>::const_iterator it = mResourceInfo.settings.constBegin(); it != end; ++it) {
@@ -176,7 +176,7 @@ void Resource::instanceCreateResult(KJob *job)
         }
         resourceLogEntryText += u"<li><b>%1</b> %2</li>"_s.arg(i18nc("label", "%1:", it.key()), value);
     }
-    resourceLogEntryText += u"</ul>"_s;
+    resourceLogEntryText += u"</ul>";
     mConsoleLog->success(resourceLogEntryText);
 
     deleteLater();
