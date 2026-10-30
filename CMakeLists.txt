@@ -149,9 +149,13 @@ find_package(KPim6IdentityManagementCore ${IDENTITYMANAGEMENT_LIB_VERSION} CONFI
 find_package(KPim6MailTransport ${KMAILTRANSPORT_LIB_VERSION} CONFIG REQUIRED)
 
 find_package(KF6KirigamiAddons 1.15.0)
-set_package_properties(KF6KirigamiAddons PROPERTIES
-    TYPE REQUIRED
-    PURPOSE "Required application components and runtime dependency"
+set_package_properties(
+    KF6KirigamiAddons
+    PROPERTIES
+        TYPE
+            REQUIRED
+        PURPOSE
+            "Required application components and runtime dependency"
 )
 
 include_directories(
@@ -179,7 +183,7 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     # see e.g. https://gcc.gnu.org/bugzilla/show_bug.cgi?id=56556 or https://gcc.gnu.org/bugzilla/show_bug.cgi?id=79328
     string(APPEND CMAKE_CXX_FLAGS " -Wshadow")
 endif()
-ecm_set_disabled_deprecation_versions(QT 6.12.0 KF 6.31.0 )
+ecm_set_disabled_deprecation_versions(QT 6.12.0 KF 6.31.0)
 
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
