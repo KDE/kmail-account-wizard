@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-29 00:54+0000\n"
-"PO-Revision-Date: 2025-12-11 19:11+0300\n"
+"PO-Revision-Date: 2026-10-29 07:44+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -209,7 +209,7 @@ msgstr "Сервер входящей почты"
 #: qml/ConfigurationDelegate.qml:118 qml/ConfigurationDelegate.qml:160
 #, kde-format
 msgid "This hostname contains non-ASCII characters."
-msgstr ""
+msgstr "Имя узла содержит символы, не входящие в набор ASCII."
 
 #: qml/ConfigurationDelegate.qml:138
 #, kde-format

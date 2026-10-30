@@ -1,22 +1,22 @@
 # Spanish translations for accountwizard.po package.
-# Copyright (C) 2010-2025 This file is copyright:
+# Copyright (C) 2010-2026 This file is copyright:
 # This file is distributed under the same license as the kmail-account-wizard package.
 #
-# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2015, 2016, 2017, 2018, 2019 Javier Viñal <fjvinal@gmail.com>
-# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2010-2013, 2015-2019 Javier Viñal <fjvinal@gmail.com>
+# SPDX-FileCopyrightText: 2020-2021, 2023-2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-29 00:54+0000\n"
-"PO-Revision-Date: 2025-08-30 14:31+0100\n"
+"PO-Revision-Date: 2026-10-29 12:34+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 26.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -199,7 +199,7 @@ msgstr "Entrante"
 #: qml/ConfigurationDelegate.qml:118 qml/ConfigurationDelegate.qml:160
 #, kde-format
 msgid "This hostname contains non-ASCII characters."
-msgstr ""
+msgstr "Este nombre de máquina contiene caracteres que no son ASCII."
 
 #: qml/ConfigurationDelegate.qml:138
 #, kde-format
@@ -521,6 +521,3 @@ msgstr "Vacío"
 msgctxt "label"
 msgid "%1:"
 msgstr "%1:"
-
-#~ msgid "Kolab"
-#~ msgstr "Kolab"
