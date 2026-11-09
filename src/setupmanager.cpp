@@ -122,19 +122,15 @@ bool SetupManager::isValidAddress(const QString &address)
     return KEmailAddress::isValidAddress(address) == KEmailAddress::AddressOk;
 }
 
-void SetupManager::setEmailProvider(const EmailProvider &emailProvider, const QString &messageInfo)
+void SetupManager::setEmailProvider(const EmailProvider &emailProvider)
 {
     qCDebug(ACCOUNTWIZARD_LOG) << " emailProvider " << emailProvider;
-    mSearchIspdbFoundMessage = messageInfo;
     mConfigurationModel->setEmailProvider(emailProvider);
-    Q_EMIT searchIspdbFoundMessageChanged();
 }
 
 void SetupManager::clearConfiguration()
 {
     mConfigurationModel->clear();
-    mSearchIspdbFoundMessage.clear();
-    Q_EMIT searchIspdbFoundMessageChanged();
 
     mNoConfigFound = false;
     Q_EMIT noConfigFoundChanged();
