@@ -1,14 +1,14 @@
 # translation of accountwizard.po to Italian
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the accountwizard package.
-# SPDX-FileCopyrightText: 2010, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2025 Luigi Toscano <luigi.toscano@tiscali.it>
+# SPDX-FileCopyrightText: 2010, 2012-2021, 2023-2026 Luigi Toscano <luigi.toscano@tiscali.it>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-29 00:54+0000\n"
-"PO-Revision-Date: 2025-08-31 16:17+0200\n"
+"PO-Revision-Date: 2026-11-04 16:05+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -200,7 +200,7 @@ msgstr "In entrata"
 #: qml/ConfigurationDelegate.qml:118 qml/ConfigurationDelegate.qml:160
 #, kde-format
 msgid "This hostname contains non-ASCII characters."
-msgstr ""
+msgstr "Questo nome di host contiene caratteri non ASCII."
 
 #: qml/ConfigurationDelegate.qml:138
 #, kde-format
