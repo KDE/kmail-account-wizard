@@ -32,8 +32,7 @@ struct Server {
 QDebug operator<<(QDebug d, const Server &t);
 Q_DECLARE_TYPEINFO(Server, Q_RELOCATABLE_TYPE);
 
-struct GMailGroupware {
-};
+struct GMailGroupware { };
 struct DAVGroupware {
     QUrl &server;
 };
