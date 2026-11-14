@@ -7,6 +7,7 @@
 
 #include <KIdentityManagementCore/IdentityManager>
 #include <QObject>
+#include <memory>
 
 class AccountConfigurationTest : public QObject
 {

@@ -8,13 +8,18 @@
 #include "ispdb/serverconfiguration.h"
 #include "resource.h"
 #include <KIdentityManagementCore/Identity>
-#include <KIdentityManagementCore/IdentityManager>
 #include <MailTransport/Transport>
-#include <QDebug>
 #include <QObject>
 #include <QtQmlIntegration/qqmlintegration.h>
+#include <optional>
 
+class ConsoleLog;
+class QDebug;
 class ServerTest;
+namespace KIdentityManagementCore
+{
+class IdentityManager;
+}
 
 class AccountConfiguration : public QObject
 {

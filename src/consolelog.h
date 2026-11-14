@@ -4,7 +4,8 @@
 #pragma once
 
 #include <QAbstractListModel>
-#include <QQmlEngine>
+#include <QtQmlIntegration/qqmlintegration.h>
+#include <vector>
 
 class ConsoleLog : public QAbstractListModel
 {

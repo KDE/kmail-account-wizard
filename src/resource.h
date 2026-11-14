@@ -7,11 +7,12 @@
 #pragma once
 
 #include <Akonadi/AgentInstance>
-#include <QDebug>
 #include <QMap>
 #include <QObject>
+#include <QVariant>
 
 class KJob;
+class QDebug;
 class ConsoleLog;
 
 class Resource : public QObject

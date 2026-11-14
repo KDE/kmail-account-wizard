@@ -7,10 +7,13 @@
 
 #include <KMime/Types>
 #include <MailTransport/Transport>
-#include <QDomElement>
 #include <QList>
 #include <QString>
+#include <QUrl>
 #include <optional>
+#include <variant>
+
+class QDomElement;
 
 struct Server {
     enum Type {

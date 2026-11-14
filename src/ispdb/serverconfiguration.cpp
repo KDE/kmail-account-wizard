@@ -5,6 +5,7 @@
 
 #include "ispdb/serverconfiguration.h"
 #include <KLocalizedString>
+#include <QDomElement>
 
 static QString replacePlaceholders(const QString &in, const KMime::Types::AddrSpec &addrSpec)
 {

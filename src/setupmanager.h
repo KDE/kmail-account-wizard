@@ -4,6 +4,7 @@
 #pragma once
 #include "ispdb/configurationmodel.h"
 #include <QObject>
+#include <QtQmlIntegration/qqmlintegration.h>
 
 class IspdbService;
 

@@ -8,8 +8,11 @@
 #include "accountwizard_debug.h"
 #include "consolelog.h"
 #include "servertest.h"
+#include <KIdentityManagementCore/IdentityManager>
 #include <KLocalizedString>
 #include <MailTransport/TransportManager>
+#include <QDebug>
+#include <QMetaEnum>
 #include <QRegularExpression>
 
 using namespace Qt::Literals::StringLiterals;

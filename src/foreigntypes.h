@@ -5,7 +5,7 @@
 
 #include <MailTransport/Transport>
 
-#include <qqml.h>
+#include <QtQmlIntegration/qqmlintegration.h>
 
 struct Transport {
     Q_GADGET

@@ -14,10 +14,11 @@
 #include <Akonadi/AgentManager>
 #include <Akonadi/AgentType>
 #include <Akonadi/ServerManager>
-#include <MailTransport/TransportManager>
+#include <MailTransport/Transport>
 
 #include <QDBusInterface>
 #include <QDBusReply>
+#include <QDebug>
 #include <QMetaMethod>
 
 using namespace Akonadi;
