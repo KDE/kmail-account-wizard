@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-29 00:54+0000\n"
+"POT-Creation-Date: 2026-11-15 01:07+0000\n"
 "PO-Revision-Date: 2025-09-24 15:19+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -29,73 +29,73 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "einars8@gmail.com, toms.trasuns@posteo.net"
 
-#: accountconfiguration.cpp:189 ispdb/configurationmodel.cpp:144
+#: accountconfiguration.cpp:192 ispdb/configurationmodel.cpp:144
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Nenosaukta"
 
-#: accountconfiguration.cpp:200
+#: accountconfiguration.cpp:203
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "Izveidot e-pasta identitāti: %1"
 
-#: accountconfiguration.cpp:203
+#: accountconfiguration.cpp:206
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Pilns vārds:"
 
-#: accountconfiguration.cpp:204
+#: accountconfiguration.cpp:207
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Galvenā e-pasta adrese:"
 
-#: accountconfiguration.cpp:230
+#: accountconfiguration.cpp:233
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Pasta transporta konta iestatīšana ir pabeigta: %1"
 
-#: accountconfiguration.cpp:233
+#: accountconfiguration.cpp:236
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Saimniekdators:"
 
-#: accountconfiguration.cpp:234
+#: accountconfiguration.cpp:237
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Ports:"
 
-#: accountconfiguration.cpp:235
+#: accountconfiguration.cpp:238
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Lietotājvārds:"
 
-#: accountconfiguration.cpp:237
+#: accountconfiguration.cpp:240
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "Šifrēšana:"
 
-#: accountconfiguration.cpp:239
+#: accountconfiguration.cpp:242
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
 msgstr "Autentifikācija:"
 
-#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:23
+#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:24
 #: qml/ManualConfigurationPage.qml:90
 #, kde-format
 msgid "IMAP"
 msgstr "IMAP"
 
-#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:26
+#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:27
 #: qml/ManualConfigurationPage.qml:91
 #, kde-format
 msgid "POP3"
@@ -111,23 +111,23 @@ msgstr "Paturēt mapes un vēstules sinhronizētas ar serveri"
 msgid "Remove your emails from your server and keep them only on your computer"
 msgstr "Dzēst e-pastus no servera un tos paturēt tikai datorā"
 
-#: ispdb/serverconfiguration.cpp:29
+#: ispdb/serverconfiguration.cpp:30
 #, kde-format
 msgid "SMTP"
 msgstr "SMTP"
 
-#: ispdb/serverconfiguration.cpp:35
+#: ispdb/serverconfiguration.cpp:36
 #, kde-format
 msgid "SSL/TLS"
 msgstr "SSL/TLS"
 
-#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:124
+#: ispdb/serverconfiguration.cpp:39 qml/ManualConfigurationPage.qml:124
 #: qml/ManualConfigurationPage.qml:241
 #, kde-format
 msgid "StartTLS"
 msgstr "StartTLS"
 
-#: ispdb/serverconfiguration.cpp:41
+#: ispdb/serverconfiguration.cpp:42
 #, kde-format
 msgctxt "No security mechanism"
 msgid "None"
@@ -448,37 +448,37 @@ msgctxt "@action:button"
 msgid "Next"
 msgstr "Tālāk"
 
-#: resource.cpp:72
+#: resource.cpp:73
 #, kde-format
 msgid "Resource type '%1' is not available."
 msgstr "Resursa tips „%1“ nav pieejams."
 
-#: resource.cpp:85
+#: resource.cpp:86
 #, kde-format
 msgid "Resource '%1' is already set up."
 msgstr "Resurss „%1“ jau ir iestatīts."
 
-#: resource.cpp:92
+#: resource.cpp:93
 #, kde-format
 msgid "Creating resource instance for '%1'..."
 msgstr "Izveido „%1“ resursa instanci..."
 
-#: resource.cpp:101
+#: resource.cpp:102
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Neizdevās izveidot resursa instanci: %1"
 
-#: resource.cpp:108
+#: resource.cpp:109
 #, kde-format
 msgid "Configuring resource instance..."
 msgstr "Konfigurē resursa instanci..."
 
-#: resource.cpp:112
+#: resource.cpp:113
 #, kde-format
 msgid "Unable to configure resource instance."
 msgstr "Neizdevās konfigurēt resursa instanci."
 
-#: resource.cpp:131
+#: resource.cpp:132
 #, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
@@ -486,35 +486,35 @@ msgstr ""
 "Neizdevās pārveidot iestatījuma „%1“ vērtību ar „%2“ tipu uz pieprasīto „%3“ "
 "tipu."
 
-#: resource.cpp:145
+#: resource.cpp:146
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Neizdevās iestatīt iestatījumu „%1“: %2"
 
-#: resource.cpp:152
+#: resource.cpp:153
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Neizdevās saglabāt iestatījumus: %1"
 
-#: resource.cpp:159
+#: resource.cpp:160
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
 msgstr "Resursa iestatīšana pabeigta: %1"
 
-#: resource.cpp:162
+#: resource.cpp:163
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
 msgstr "Resursa tips:"
 
-#: resource.cpp:172
+#: resource.cpp:173
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
 msgstr "Tukšs"
 
-#: resource.cpp:177
+#: resource.cpp:178
 #, kde-format
 msgctxt "label"
 msgid "%1:"

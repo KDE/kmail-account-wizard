@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-29 00:54+0000\n"
+"POT-Creation-Date: 2026-11-15 01:07+0000\n"
 "PO-Revision-Date: 2026-10-29 07:32+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -34,73 +34,73 @@ msgstr ""
 "jlp@holodeck1.com,andrej.vernekar@gmail.com,andrejm@ubuntu.si,matjaz."
 "jeran@amis.net"
 
-#: accountconfiguration.cpp:189 ispdb/configurationmodel.cpp:144
+#: accountconfiguration.cpp:192 ispdb/configurationmodel.cpp:144
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "Neimenovano"
 
-#: accountconfiguration.cpp:200
+#: accountconfiguration.cpp:203
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "Ustvari identiteto e-pošte: %1"
 
-#: accountconfiguration.cpp:203
+#: accountconfiguration.cpp:206
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "Polno ime:"
 
-#: accountconfiguration.cpp:204
+#: accountconfiguration.cpp:207
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "Primerni naslov e-pošte:"
 
-#: accountconfiguration.cpp:230
+#: accountconfiguration.cpp:233
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "Nastavitev prenosa pošte je končana: %1"
 
-#: accountconfiguration.cpp:233
+#: accountconfiguration.cpp:236
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "Ime gostitelja:"
 
-#: accountconfiguration.cpp:234
+#: accountconfiguration.cpp:237
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "Vrata:"
 
-#: accountconfiguration.cpp:235
+#: accountconfiguration.cpp:238
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "Uporabniško ime:"
 
-#: accountconfiguration.cpp:237
+#: accountconfiguration.cpp:240
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "Šifriranje:"
 
-#: accountconfiguration.cpp:239
+#: accountconfiguration.cpp:242
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
 msgstr "Avtentikacija:"
 
-#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:23
+#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:24
 #: qml/ManualConfigurationPage.qml:90
 #, kde-format
 msgid "IMAP"
 msgstr "IMAP"
 
-#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:26
+#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:27
 #: qml/ManualConfigurationPage.qml:91
 #, kde-format
 msgid "POP3"
@@ -116,23 +116,23 @@ msgstr "Hrani vaše mape in sporočila na strežniku"
 msgid "Remove your emails from your server and keep them only on your computer"
 msgstr "Odstrani svojo e-pošto s strežnika in jo shranjuj samo na računalniku"
 
-#: ispdb/serverconfiguration.cpp:29
+#: ispdb/serverconfiguration.cpp:30
 #, kde-format
 msgid "SMTP"
 msgstr "SMTP"
 
-#: ispdb/serverconfiguration.cpp:35
+#: ispdb/serverconfiguration.cpp:36
 #, kde-format
 msgid "SSL/TLS"
 msgstr "SSL/TLS"
 
-#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:124
+#: ispdb/serverconfiguration.cpp:39 qml/ManualConfigurationPage.qml:124
 #: qml/ManualConfigurationPage.qml:241
 #, kde-format
 msgid "StartTLS"
 msgstr "StartTLS"
 
-#: ispdb/serverconfiguration.cpp:41
+#: ispdb/serverconfiguration.cpp:42
 #, kde-format
 msgctxt "No security mechanism"
 msgid "None"
@@ -454,37 +454,37 @@ msgctxt "@action:button"
 msgid "Next"
 msgstr "Naslednji"
 
-#: resource.cpp:72
+#: resource.cpp:73
 #, kde-format
 msgid "Resource type '%1' is not available."
 msgstr "Vrsta vira '%1' ni na voljo."
 
-#: resource.cpp:85
+#: resource.cpp:86
 #, kde-format
 msgid "Resource '%1' is already set up."
 msgstr "Vir '%1' je že nastavljen."
 
-#: resource.cpp:92
+#: resource.cpp:93
 #, kde-format
 msgid "Creating resource instance for '%1'..."
 msgstr "Ustvarjanje primerka vira za '%1'..."
 
-#: resource.cpp:101
+#: resource.cpp:102
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Ustvaritev primerka vira ni uspela: %1"
 
-#: resource.cpp:108
+#: resource.cpp:109
 #, kde-format
 msgid "Configuring resource instance..."
 msgstr "Nastavljanje primerka vira ..."
 
-#: resource.cpp:112
+#: resource.cpp:113
 #, kde-format
 msgid "Unable to configure resource instance."
 msgstr "Primerka vira ni mogoče nastaviti."
 
-#: resource.cpp:131
+#: resource.cpp:132
 #, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
@@ -492,35 +492,35 @@ msgstr ""
 "Ni bilo mogoče pretvoriti vrednosti nastavitve '%1' z vrsto %2 v zahtevano "
 "vrsto %3."
 
-#: resource.cpp:145
+#: resource.cpp:146
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Nastavitve '%1' ni bilo mogoče nastaviti: %2"
 
-#: resource.cpp:152
+#: resource.cpp:153
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Ni bilo mogoče shraniti nastavitev: %1"
 
-#: resource.cpp:159
+#: resource.cpp:160
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
 msgstr "Nastavitev vira zaključena: %1"
 
-#: resource.cpp:162
+#: resource.cpp:163
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
 msgstr "Vrsta vira:"
 
-#: resource.cpp:172
+#: resource.cpp:173
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
 msgstr "Prazno"
 
-#: resource.cpp:177
+#: resource.cpp:178
 #, kde-format
 msgctxt "label"
 msgid "%1:"

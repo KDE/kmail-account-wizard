@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-account-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-29 00:54+0000\n"
+"POT-Creation-Date: 2026-11-15 01:07+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -29,73 +29,73 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "skkalwar999@gmail.com"
 
-#: accountconfiguration.cpp:189 ispdb/configurationmodel.cpp:144
+#: accountconfiguration.cpp:192 ispdb/configurationmodel.cpp:144
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "अनामिका"
 
-#: accountconfiguration.cpp:200
+#: accountconfiguration.cpp:203
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr "ईमेलपरिचयं रचयन्तु: %1"
 
-#: accountconfiguration.cpp:203
+#: accountconfiguration.cpp:206
 #, kde-format
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "सम्पूर्ण नाम :"
 
-#: accountconfiguration.cpp:204
+#: accountconfiguration.cpp:207
 #, kde-format
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "प्राथमिकं ईमेल-सङ्केतं :"
 
-#: accountconfiguration.cpp:230
+#: accountconfiguration.cpp:233
 #, kde-format
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "मेलपरिवहनव्यवस्थापनं सम्पन्नम्: %1"
 
-#: accountconfiguration.cpp:233
+#: accountconfiguration.cpp:236
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr "निमन्त्रकः:"
 
-#: accountconfiguration.cpp:234
+#: accountconfiguration.cpp:237
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr "पोताश्रय:"
 
-#: accountconfiguration.cpp:235
+#: accountconfiguration.cpp:238
 #, kde-format
 msgctxt "log entry content"
 msgid "Username:"
 msgstr "उपयोक्तृनाम :"
 
-#: accountconfiguration.cpp:237
+#: accountconfiguration.cpp:240
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr "एन्क्रिप्शन :"
 
-#: accountconfiguration.cpp:239
+#: accountconfiguration.cpp:242
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
 msgstr "प्रमाणीकरणम् :"
 
-#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:23
+#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:24
 #: qml/ManualConfigurationPage.qml:90
 #, kde-format
 msgid "IMAP"
 msgstr "IMAP"
 
-#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:26
+#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:27
 #: qml/ManualConfigurationPage.qml:91
 #, kde-format
 msgid "POP3"
@@ -111,23 +111,23 @@ msgstr "भवतः पुटं ईमेल च भवतः सर्वर�
 msgid "Remove your emails from your server and keep them only on your computer"
 msgstr "स्वस्य ईमेल-पत्राणि स्वस्य सर्वरात् निष्कास्य केवलं सङ्गणके एव स्थापयन्तु"
 
-#: ispdb/serverconfiguration.cpp:29
+#: ispdb/serverconfiguration.cpp:30
 #, kde-format
 msgid "SMTP"
 msgstr "एस एम टी पी"
 
-#: ispdb/serverconfiguration.cpp:35
+#: ispdb/serverconfiguration.cpp:36
 #, kde-format
 msgid "SSL/TLS"
 msgstr "SSL/TLS इति"
 
-#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:124
+#: ispdb/serverconfiguration.cpp:39 qml/ManualConfigurationPage.qml:124
 #: qml/ManualConfigurationPage.qml:241
 #, kde-format
 msgid "StartTLS"
 msgstr "StartTLS इति"
 
-#: ispdb/serverconfiguration.cpp:41
+#: ispdb/serverconfiguration.cpp:42
 #, kde-format
 msgctxt "No security mechanism"
 msgid "None"
@@ -449,71 +449,71 @@ msgctxt "@action:button"
 msgid "Next"
 msgstr "अग्रिम"
 
-#: resource.cpp:72
+#: resource.cpp:73
 #, kde-format
 msgid "Resource type '%1' is not available."
 msgstr "संसाधनप्रकारः '%1' उपलब्धः नास्ति ।"
 
-#: resource.cpp:85
+#: resource.cpp:86
 #, kde-format
 msgid "Resource '%1' is already set up."
 msgstr "संसाधनं '%1' पूर्वमेव स्थापितं अस्ति ।"
 
-#: resource.cpp:92
+#: resource.cpp:93
 #, kde-format
 msgid "Creating resource instance for '%1'..."
 msgstr "'%1' कृते संसाधनदृष्टान्तं निर्माय..."
 
-#: resource.cpp:101
+#: resource.cpp:102
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "संसाधनदृष्टान्तं निर्मातुं असफलम्: %1"
 
-#: resource.cpp:108
+#: resource.cpp:109
 #, kde-format
 msgid "Configuring resource instance..."
 msgstr "संसाधनदृष्टान्तं विन्यस्तं..."
 
-#: resource.cpp:112
+#: resource.cpp:113
 #, kde-format
 msgid "Unable to configure resource instance."
 msgstr "संसाधनदृष्टान्तं विन्यस्तुं असमर्थम् ।"
 
-#: resource.cpp:131
+#: resource.cpp:132
 #, kde-format
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
 msgstr "%2 प्रकारेण सह '%1' सेटिङ्ग् इत्यस्य मूल्यं आवश्यकप्रकारं %3 मध्ये परिवर्तयितुं न शक्तम् ।"
 
-#: resource.cpp:145
+#: resource.cpp:146
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "'%1': %2 सेटिङ्ग् सेट् कर्तुं न शक्यते"
 
-#: resource.cpp:152
+#: resource.cpp:153
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "सेटिङ्ग्स् रक्षितुम् न शक्तम्: %1"
 
-#: resource.cpp:159
+#: resource.cpp:160
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
 msgstr "संसाधनस्थापनं सम्पन्नम्: %1"
 
-#: resource.cpp:162
+#: resource.cpp:163
 #, kde-format
 msgctxt "log entry content"
 msgid "Resource type:"
 msgstr "संसाधनप्रकारः :"
 
-#: resource.cpp:172
+#: resource.cpp:173
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
 msgstr "रिक्तम्‌"
 
-#: resource.cpp:177
+#: resource.cpp:178
 #, kde-format
 msgctxt "label"
 msgid "%1:"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-29 00:54+0000\n"
+"POT-Creation-Date: 2026-11-15 01:07+0000\n"
 "PO-Revision-Date: 2010-10-22 23:45-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -25,52 +25,52 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "okushi@kde.gr.jp"
 
-#: accountconfiguration.cpp:189 ispdb/configurationmodel.cpp:144
+#: accountconfiguration.cpp:192 ispdb/configurationmodel.cpp:144
 #, kde-format
 msgctxt "Default name for new email accounts/identities."
 msgid "Unnamed"
 msgstr "無名"
 
-#: accountconfiguration.cpp:200
+#: accountconfiguration.cpp:203
 #, kde-format
 msgctxt "log entry content"
 msgid "Create email identity: %1"
 msgstr ""
 
-#: accountconfiguration.cpp:203
+#: accountconfiguration.cpp:206
 #, fuzzy, kde-format
 #| msgid "Full Name"
 msgctxt "log entry content"
 msgid "Full name:"
 msgstr "氏名"
 
-#: accountconfiguration.cpp:204
+#: accountconfiguration.cpp:207
 #, fuzzy, kde-format
 #| msgid "E-mail address:"
 msgctxt "log entry content"
 msgid "Primary email address:"
 msgstr "メールアドレス:"
 
-#: accountconfiguration.cpp:230
+#: accountconfiguration.cpp:233
 #, fuzzy, kde-format
 #| msgid "Resource setup completed."
 msgctxt "log entry content"
 msgid "Mail transport setup completed: %1"
 msgstr "リソースの設定完了。"
 
-#: accountconfiguration.cpp:233
+#: accountconfiguration.cpp:236
 #, kde-format
 msgctxt "log entry content"
 msgid "Host:"
 msgstr ""
 
-#: accountconfiguration.cpp:234
+#: accountconfiguration.cpp:237
 #, kde-format
 msgctxt "log entry content"
 msgid "Port:"
 msgstr ""
 
-#: accountconfiguration.cpp:235
+#: accountconfiguration.cpp:238
 #, fuzzy, kde-format
 #| msgctxt "Default name for new email accounts/identities."
 #| msgid "Unnamed"
@@ -78,25 +78,25 @@ msgctxt "log entry content"
 msgid "Username:"
 msgstr "無名"
 
-#: accountconfiguration.cpp:237
+#: accountconfiguration.cpp:240
 #, kde-format
 msgctxt "log entry content"
 msgid "Encryption:"
 msgstr ""
 
-#: accountconfiguration.cpp:239
+#: accountconfiguration.cpp:242
 #, kde-format
 msgctxt "log entry content"
 msgid "Authentication:"
 msgstr ""
 
-#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:23
+#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:24
 #: qml/ManualConfigurationPage.qml:90
 #, kde-format
 msgid "IMAP"
 msgstr ""
 
-#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:26
+#: ispdb/configurationmodel.cpp:46 ispdb/serverconfiguration.cpp:27
 #: qml/ManualConfigurationPage.qml:91
 #, kde-format
 msgid "POP3"
@@ -112,23 +112,23 @@ msgstr ""
 msgid "Remove your emails from your server and keep them only on your computer"
 msgstr ""
 
-#: ispdb/serverconfiguration.cpp:29
+#: ispdb/serverconfiguration.cpp:30
 #, kde-format
 msgid "SMTP"
 msgstr ""
 
-#: ispdb/serverconfiguration.cpp:35
+#: ispdb/serverconfiguration.cpp:36
 #, kde-format
 msgid "SSL/TLS"
 msgstr ""
 
-#: ispdb/serverconfiguration.cpp:38 qml/ManualConfigurationPage.qml:124
+#: ispdb/serverconfiguration.cpp:39 qml/ManualConfigurationPage.qml:124
 #: qml/ManualConfigurationPage.qml:241
 #, kde-format
 msgid "StartTLS"
 msgstr ""
 
-#: ispdb/serverconfiguration.cpp:41
+#: ispdb/serverconfiguration.cpp:42
 #, kde-format
 msgctxt "No security mechanism"
 msgid "None"
@@ -463,75 +463,75 @@ msgctxt "@action:button"
 msgid "Next"
 msgstr ""
 
-#: resource.cpp:72
+#: resource.cpp:73
 #, kde-format
 msgid "Resource type '%1' is not available."
 msgstr "リソースタイプ “%1” がありません。"
 
-#: resource.cpp:85
+#: resource.cpp:86
 #, kde-format
 msgid "Resource '%1' is already set up."
 msgstr "リソース “%1” は既に設定されています。"
 
-#: resource.cpp:92
+#: resource.cpp:93
 #, kde-format
 msgid "Creating resource instance for '%1'..."
 msgstr "“%1” のリソースインスタンスを作成中..."
 
-#: resource.cpp:101
+#: resource.cpp:102
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "リソースインスタンスの作成に失敗しました: %1"
 
-#: resource.cpp:108
+#: resource.cpp:109
 #, kde-format
 msgid "Configuring resource instance..."
 msgstr "リソースインスタンスを設定中..."
 
-#: resource.cpp:112
+#: resource.cpp:113
 #, kde-format
 msgid "Unable to configure resource instance."
 msgstr "リソースインスタンスの設定ができませんでした。"
 
-#: resource.cpp:131
+#: resource.cpp:132
 #, fuzzy, kde-format
 #| msgid "Could not convert value of setting '%1' to required type %2."
 msgid ""
 "Could not convert value of setting '%1' with type %2 to required type %3."
 msgstr "設定「%1」の値を必要とされる型「%2」に変換できませんでした。"
 
-#: resource.cpp:145
+#: resource.cpp:146
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "「%1」を設定できませんでした: %2"
 
-#: resource.cpp:152
+#: resource.cpp:153
 #, fuzzy, kde-format
 #| msgid "Could not set setting '%1': %2"
 msgid "Could not save settings: %1"
 msgstr "「%1」を設定できませんでした: %2"
 
-#: resource.cpp:159
+#: resource.cpp:160
 #, fuzzy, kde-format
 #| msgid "Resource setup completed."
 msgctxt "log entry content"
 msgid "Resource setup completed: %1"
 msgstr "リソースの設定完了。"
 
-#: resource.cpp:162
+#: resource.cpp:163
 #, fuzzy, kde-format
 #| msgid "Resource setup completed."
 msgctxt "log entry content"
 msgid "Resource type:"
 msgstr "リソースの設定完了。"
 
-#: resource.cpp:172
+#: resource.cpp:173
 #, kde-format
 msgctxt "Empty password"
 msgid "Empty"
 msgstr ""
 
-#: resource.cpp:177
+#: resource.cpp:178
 #, kde-format
 msgctxt "label"
 msgid "%1:"
