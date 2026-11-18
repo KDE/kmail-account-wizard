@@ -120,6 +120,10 @@
     <p xml:lang="zh-CN">账户向导允许编辑、创建、删除帐户。账户向导支持 IMAP/POP3/Kolab 帐户类型。使用 ispd 服务可以找到帐户信息。</p>
     <p xml:lang="zh-TW">帳號精靈讓您編輯、建立或刪除帳號。它支援 IMAP、POP3、Kolab 帳號類型。帳號資訊可以利用 ispd 服務取得。</p>
   </description>
+  <branding>
+    <color type="primary" scheme_preference="light">#cdecfc</color>
+    <color type="primary" scheme_preference="dark">#135b8a</color>
+  </branding>
   <content_rating type="oars-1.1"/>
   <url type="donation">https://kde.org/fr/community/donations/?app=kmail-account-wizard&amp;source=appdata</url>
   <url type="vcs-browser">https://invent.kde.org/pim/kmail-account-wizard/</url>
