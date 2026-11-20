@@ -197,7 +197,7 @@ msgstr "Prichádzajúci"
 #: qml/ConfigurationDelegate.qml:118 qml/ConfigurationDelegate.qml:160
 #, kde-format
 msgid "This hostname contains non-ASCII characters."
-msgstr ""
+msgstr "Tento názov hostiteľa obsahuje znaky mimo ASCII."
 
 #: qml/ConfigurationDelegate.qml:138
 #, kde-format
